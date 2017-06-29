@@ -525,7 +525,7 @@ def append_exchange(exc, dataset, MD, properties = [],
             property_sel = MD['ElementaryExchanges prop.'].loc[exc['name']]
         else:
             property_sel = pandas.DataFrame()
-        #'classifications': fix me!
+        #'add classifications': issue #1
     #make sure the unit is the same as the MD
     assert exc['unitName'] == sel['unitName']
     
@@ -749,11 +749,11 @@ else:
     d['personId'] =  make_uuid(d['personName'])
     d['personEmail'] = 'person_email@gmail.com'
     d['companyName'] = 'Jurassic consultant Inc.'
-    #add to MD: fix me!
-    #add to userMD: fix me!
+    #add to MD: Issue #2
+    #add to userMD: Issue #2
     if d['companyName'] not in MD['Companies'].index:
-        #add to MD: fix me!
-        #add to userMD: fix me!
+        #add to MD: Issue #2
+        #add to userMD: Issue #2
         pass
 
 dataset[field] = GenericObject(d, object_type)
@@ -869,7 +869,7 @@ for group in ['ReferenceProduct', 'ByProduct', 'FromTechnosphere', 'FromEnvironm
     #groups need to appear in a specific order
     dataset['exchanges'].extend(dataset[group])
 
-#new exchange property in MD? fix me
+#do the new exchange property in MD? Issue #3
 
 dataset['has_userMD'] = False
 for field in ['ActivityNames', 'Sources', 'activityIndexEntry', 'Persons', 'IntermediateExchanges']:
