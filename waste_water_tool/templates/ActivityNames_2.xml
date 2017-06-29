@@ -1,0 +1,3 @@
+<activityName id="{{ id }}">
+    <name xml:lang="en">{{ name }}</name>
+  	</activityName>

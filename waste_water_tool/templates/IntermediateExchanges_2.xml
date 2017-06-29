@@ -1,0 +1,5 @@
+<intermediateExchange id="{{ id }}" unitId="{{ unitId }}">
+    <name xml:lang="en">{{ name }}</name>
+    <unitName xml:lang="en">{{ unitName }}</unitName>
+    <productInformation/>
+  </intermediateExchange>

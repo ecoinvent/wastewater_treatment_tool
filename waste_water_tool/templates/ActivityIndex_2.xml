@@ -1,0 +1,1 @@
+<activityIndexEntry id="{{ id }}" activityNameId="{{ activityNameId }}" geographyId="{{ geographyId }}" startDate="{{ startDate }}" endDate="{{ endDate }}" specialActivityType="{{ specialActivityType }}" systemModelId="{{ systemModelId }}" />

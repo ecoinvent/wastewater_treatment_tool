@@ -1,0 +1,6 @@
+{% for c in comments_original %}
+	  <text xml:lang="en" index="{{ loop.index }}">{{ c }}</text>
+	{% endfor %}
+	{% for variableName in variables %}
+	  <variable xml:lang="en" name="{{ variableName }}">{{ variables[variableName] }}</variable>
+	{% endfor %}
