@@ -15,7 +15,11 @@ HTML_entities = [['&', '&amp;'],
                  ['©', '&copy;'], 
                  ['®', '&#174;'] 
                  ]
+
 tag_prefix = '{http://www.EcoInvent.org/EcoSpold02}'
+
+root_dir = os.path.realpath(__file__)
+
 class GenericObject:
     def __init__(self, d, object_type):
         self.template_name = '%s_2.xml' % object_type
@@ -137,28 +141,51 @@ def find_youngest(files):
             t = copy(t_)
     return youngest, t
 
-def get_current_MD():
-    #find the age of the youngest current MD file
-    master_data_folder = find_current_MD_path()
-    filelist = build_file_list(master_data_folder, extension = 'xml', add_path = True)
+def get_current_MD(master_data_folder=None, pkl_folder=None):
+    '''Generate a dictionary `MD` with keys=names of the master data files and
+       values=pandas dataframes with all elements and attributes
+       Will only generate `MD` if such a dictionary does not already exist
+       or if the existing MD is older than any of the Master data files.
+       If paths to master_data_folder, pkl_folder are not passed as arguments,
+       the function will look for them where it expects them to be found.
+    '''       
+    # Find the age of the youngest current MD file
+    if master_data_folder is None:
+        master_data_folder = find_current_MD_path()
+    filelist = build_file_list(master_data_folder,
+                               extension = 'xml',
+                               add_path = True)
     youngest, t_MD = find_youngest(filelist)
-    #find the age of the pkl
-    pkl_folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'pkl')
+    
+    # Find the age of the pkl
+    if pkl_folder is None:
+        pkl_folder = os.path.join(root_dir, 'pkl')
     filelist = build_file_list(pkl_folder)
+    
+    # Determine whether an update of the existing MD is necessary
     update = True
     if 'MD.pkl' in filelist:
-        filelist = [os.path.join(pkl_folder, 'MD.pkl')]
-        youngest, t_pkl = find_youngest(filelist)
+        existing_MD = os.path.join(pkl_folder, 'MD.pkl')
+        t_pkl = os.path.getmtime(existing_MD)
         update = t_MD > t_pkl
     if update:
-        #current MD more recent or missing: time to update!
-        version = 'CIRAIG'
-        system_model = 'Undefined'
-        dummy = ''
-        folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'documentation')
-        build_MD(folder, version, system_model, dummy, master_data_folder = master_data_folder)
-    MD = pkl_load(pkl_folder, 'MD')
+        # No MD or MD older than current master data: time to update!
+        md_fields_xls = os.path.join(
+                root_dir,
+                'documentation',
+                'MasterData_fields.xlsx')
+        MD = build_MD(md_fields_xls,
+                      master_data_folder,
+                      pickle_dump_folder=pkl_folder,
+                      xls_dump_folder=os.path.join(
+                              root_dir,
+                              'documentation')
+                      )
+    else:
+        MD = pkl_load(pkl_folder, 'MD')
     return MD
+    
+
 def pkl_dump(folder, variable_name, variable, feedback = False):
     '''helper function for saving files in pkl'''
     
@@ -188,22 +215,30 @@ def is_empty(e):
     
     return test
 
-def build_MD(folder, version, system_model, basepath, master_data_folder = ''):
-    print('reading master data from %s' % folder)
+def build_MD(md_fields_xls=None,
+             master_data_folder=None,
+             pickle_dump_folder=False,
+             xls_dump_folder=False):
     MD = {}
-    if master_data_folder == '':
-        master_data_folder = os.path.join(folder, 'MasterData')
-    p = os.path.join(os.path.dirname(os.path.realpath(__file__)), 
-        'documentation', 'MasterData_fields.xlsx')
-    MD_fields = pandas.read_excel(p, 'fields')
-    MD_tags = pandas.read_excel(p, 'tags').set_index('file')
+    if master_data_folder is None:
+        master_data_folder = find_current_MD_path()
+    if md_fields_xls is None:
+        md_fields_xls = os.path.join(
+                root_dir,
+                'documentation',
+                'MasterData_fields.xlsx'
+                )
+    MD_fields = pandas.read_excel(md_fields_xls, 'fields')
+    MD_tags = pandas.read_excel(md_fields_xls, 'tags').set_index('file')
     properties = {}
-    grouped = MD_fields.groupby('file')
-    for filename, group in grouped:
+    for filename, group in MD_fields.groupby('file'):
+        #For ElementaryExchanges and IntermediateExchanges, add properties list
         if 'Exchange' in filename:
             properties[filename] = []
         df = []
-        with open(os.path.join(master_data_folder, '%s.xml' % filename), encoding = 'utf8') as f:
+        with open(
+                os.path.join(master_data_folder, '{}.xml'.format(filename)),
+                encoding = 'utf8') as f:
             root = objectify.parse(f).getroot()
         fields = list(zip(list(group['field type']), list(group['field name'])))
         if filename == 'Classifications':
@@ -268,12 +303,15 @@ def build_MD(folder, version, system_model, basepath, master_data_folder = ''):
                           'startDate', 'endDate']]).reset_index()
         MD['ExchangeActivityIndex'] = df.rename(columns = {'index': 'activityIndexEntryId'})
         
-    MD = to_excel(folder, MD, properties)
-    folder = os.path.join(os.path.dirname(folder), 'pkl')
-    pkl_dump(folder, 'MD', MD)
+    if xls_dump_folder is not None:
+        MD = to_excel(xls_dump_folder, MD, properties)
+    if pickle_dump_folder is not None:
+        pkl_dump(pickle_dump_folder, 'MD', MD)
+    return MD
 
 def list_to_df(l, index_start = 0):
-    '''takes a list of dictionaries, makes a data frame.  Option to start index not at zero.'''
+    '''Takes a list of dictionaries, makes a data frame.
+       Option to start index not at zero.'''
     
     d = {i + index_start: l[i] for i in range(len(l))}
     d = pandas.DataFrame(d).transpose()
@@ -377,7 +415,6 @@ def to_excel(excel_folder, MD, properties = []):
             'ExchangeActivityIndex': ['intermediateExchangeId', 'activityIndexEntryId', 'name', 
                    'activityName', 'geography', 'startDate', 'endDate']
             }
-    print('creating MasterData.xlsx in %s' % excel_folder)
     dfs = []
     for tab, columns in excel_columns.items():
         if 'prop.' not in tab:
@@ -651,6 +688,7 @@ def create_empty_property():
         'sourceIdOverwrittenByChild', 'sourceYear', 'sourceFirstAuthor', 
         'mathematicalRelation', 'variableName', 'uncertainty', 'comment']
     return {field: None for field in empty_fields}
+
 
 """
 What follows commented out to avoid execution
