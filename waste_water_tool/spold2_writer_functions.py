@@ -629,22 +629,38 @@ def new_exchange(dataset, MD, exc):
     return dataset, MD
 
 def create_empty_dataset():
-    dataset = {}
-    #mandatory fixed values
+    ''' Create an empty 'dataset' dictionary with all the right keys.
+    '''    
+    
+    dataset = {}    
+    # Mandatory fixed values
     dataset['activityDataset'] = 'activityDataset'
     dataset['inheritanceDepth'] = 0
     dataset['type'] = 1
     dataset['specialActivityType'] = 0
     dataset['isDataValidForEntirePeriod'] = 'true'
     dataset['macroEconomicScenarioName'] = 'Business-as-Usual'
-    dataset['macroEconomicScenarioId'] = 'd9f57f0a-a01f-42eb-a57b-8f18d6635801'
-    #mandatory values fixed to None (will not show in the rendered template)
-    empty_fields = ['parentActivityId', 'parentActivityContextId', 'energyValues', 
-        'masterAllocationPropertyId', 'masterAllocationPropertyIdOverwrittenByChild', 
-        'activityNameContextId', 'geographyContextId', 'macroEconomicScenarioContextId', 
-        'macroEconomicScenarioContextId', 'originalActivityDataset', 'macroEconomicScenarioComment']
-    dataset.update({f: None for f in empty_fields})
-    for group in ['ReferenceProduct', 'ByProduct', 'FromTechnosphere', 'FromEnvironment', 'ToEnvironment']:
+    dataset['macroEconomicScenarioId'] = 'd9f57f0a-a01f-42eb-a57b-8f18d6635801'    
+    # Mandatory values fixed to None (will not show in the rendered template)
+    empty_fields = ['parentActivityId',
+                    'parentActivityContextId',
+                    'energyValues',
+                    'masterAllocationPropertyId', 
+                    'masterAllocationPropertyIdOverwrittenByChild', 
+                    'activityNameContextId', 'geographyContextId', 
+                    'macroEconomicScenarioContextId', 
+                    'macroEconomicScenarioContextId', 
+                    'originalActivityDataset', 
+                    'macroEconomicScenarioComment',
+                    ]
+    dataset.update({f: None for f in empty_fields})   
+    # Add lists to dict elements that are exchange lists
+    for group in ['ReferenceProduct',
+                  'ByProduct',
+                  'FromTechnosphere',
+                  'FromEnvironment',
+                  'ToEnvironment',
+                  ]:
         dataset[group] = []
     return dataset
 
@@ -691,21 +707,33 @@ def create_empty_property():
     return {field: None for field in empty_fields}
 
 
+def create_WWT_activity_name(WW_type, technology, capacity):
+    if WW_type == 'municipal':
+        WW_type_str = "average"
+    else:
+        WW_type_str = "from {}".format(WW_type)
+    
+    if technology == 'average':
+        technology_str = ""
+    else:
+        technology_str = "{}, ".format(technology)
+    
+    if capacity == 'average':
+        capacity_str = "average capacity"
+    else:
+        capacity_str = "capacity {:.1E}l/year".format\
+                           (capacity).replace('+', '').replace('E0', 'E')
+    
+    return "treatment of wastewater, {}, {}{}".format(
+                                                    WW_type_str,
+                                                    technology_str,
+                                                    capacity_str
+                                                    )
+
+
 """
 What follows commented out to avoid execution
 
-#loading the template environment
-template_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'templates')
-env = Environment(loader=FileSystemLoader(template_path), 
-                  keep_trailing_newline = True, 
-                  lstrip_blocks = True, 
-                  trim_blocks = True)
-
-#loading MD and fix the index
-MD = get_current_MD() 
-MD = fix_MD_index(MD)
-
-#creating a dummy example
 #start by create an empty dataset
 dataset = create_empty_dataset()
 #activityName by user
@@ -922,6 +950,13 @@ for field in ['ActivityNames', 'Sources', 'activityIndexEntry', 'Persons', 'Inte
 result_folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'result_folder')
 result_filename = 'test.spold'
 dataset = GenericObject(dataset, 'Dataset')
+#loading the template environment
+template_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'templates')
+env = Environment(loader=FileSystemLoader(template_path), 
+                  keep_trailing_newline = True, 
+                  lstrip_blocks = True, 
+                  trim_blocks = True)
 rendered = recursive_rendering(dataset, env, result_folder, result_filename)
 """
-print(os.path.realpath(__file__))
+
+
