@@ -303,6 +303,7 @@ def build_MD(md_fields_xls=None,
                           'startDate', 'endDate']]).reset_index()
         MD['ExchangeActivityIndex'] = df.rename(columns = {'index': 'activityIndexEntryId'})
         
+    MD = fix_MD_index(MD)
     if xls_dump_folder is not None:
         MD = to_excel(xls_dump_folder, MD, properties)
     if pickle_dump_folder is not None:
