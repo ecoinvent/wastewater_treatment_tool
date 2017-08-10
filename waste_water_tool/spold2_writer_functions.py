@@ -4,6 +4,9 @@ import os, uuid, numpy, pandas
 from pickle import dump, load
 from lxml import objectify
 from copy import copy
+import pandas.core.indexes
+import sys
+sys.modules['pandas.indexes'] = pandas.core.indexes
 
 HTML_entities = [['&', '&amp;'],
                  ['<', '&lt;'], 
@@ -18,7 +21,7 @@ HTML_entities = [['&', '&amp;'],
 
 tag_prefix = '{http://www.EcoInvent.org/EcoSpold02}'
 
-root_dir = os.path.realpath(__file__)
+root_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)))
 
 class GenericObject:
     def __init__(self, d, object_type):
@@ -141,7 +144,7 @@ def find_youngest(files):
             t = copy(t_)
     return youngest, t
 
-def get_current_MD(master_data_folder=None, pkl_folder=None):
+def get_current_MD(master_data_folder=None, pkl_folder=None, return_MD=False):
     '''Generate a dictionary `MD` with keys=names of the master data files and
        values=pandas dataframes with all elements and attributes
        Will only generate `MD` if such a dictionary does not already exist
@@ -183,7 +186,10 @@ def get_current_MD(master_data_folder=None, pkl_folder=None):
                       )
     else:
         MD = pkl_load(pkl_folder, 'MD')
-    return MD
+    if return_MD:
+        return MD
+    else:
+        return None
     
 
 def pkl_dump(folder, variable_name, variable, feedback = False):
@@ -217,8 +223,8 @@ def is_empty(e):
 
 def build_MD(md_fields_xls=None,
              master_data_folder=None,
-             pickle_dump_folder=False,
-             xls_dump_folder=False):
+             pickle_dump_folder=None,
+             xls_dump_folder=None):
     MD = {}
     if master_data_folder is None:
         master_data_folder = find_current_MD_path()
@@ -231,14 +237,12 @@ def build_MD(md_fields_xls=None,
     MD_fields = pandas.read_excel(md_fields_xls, 'fields')
     MD_tags = pandas.read_excel(md_fields_xls, 'tags').set_index('file')
     properties = {}
-    for filename, group in MD_fields.groupby('file'):
-        #For ElementaryExchanges and IntermediateExchanges, add properties list
+    grouped = MD_fields.groupby('file')
+    for filename, group in grouped:
         if 'Exchange' in filename:
             properties[filename] = []
         df = []
-        with open(
-                os.path.join(master_data_folder, '{}.xml'.format(filename)),
-                encoding = 'utf8') as f:
+        with open(os.path.join(master_data_folder, '%s.xml' % filename), encoding = 'utf8') as f:
             root = objectify.parse(f).getroot()
         fields = list(zip(list(group['field type']), list(group['field name'])))
         if filename == 'Classifications':
@@ -303,9 +307,9 @@ def build_MD(md_fields_xls=None,
                           'startDate', 'endDate']]).reset_index()
         MD['ExchangeActivityIndex'] = df.rename(columns = {'index': 'activityIndexEntryId'})
         
-    MD = fix_MD_index(MD)
+    MD = fix_MD_index(MD, properties)
     if xls_dump_folder is not None:
-        MD = to_excel(xls_dump_folder, MD, properties)
+        to_excel(xls_dump_folder, MD)
     if pickle_dump_folder is not None:
         pkl_dump(pickle_dump_folder, 'MD', MD)
     return MD
@@ -384,7 +388,7 @@ def join_info(MD, properties):
             
     return MD, properties
 
-def to_excel(excel_folder, MD, properties = []):
+def to_excel(excel_folder, MD):
     excel_columns = {
             'ActivityIndex': ['id', 'systemModelName', 'activityName', 'geography', 'startDate', 'endDate', 
                 'systemModelId', 'activityNameId', 'specialActivityType'], 
@@ -418,16 +422,10 @@ def to_excel(excel_folder, MD, properties = []):
             }
     dfs = []
     for tab, columns in excel_columns.items():
-        if 'prop.' not in tab:
-            dfs.append((MD[tab], tab, columns))
-        else:
-            new_tab = tab.replace(' prop.', '')
-            dfs.append((properties[new_tab], tab, excel_columns[tab]))
-            MD[tab] = properties[new_tab].copy()
+        dfs.append((MD[tab], tab, columns))
     filename = 'MasterData.xlsx'
     dataframe_to_excel(excel_folder, filename, dfs, feedback = True)
-    
-    return MD
+    return None
 
 def dataframe_to_excel(folder, filename, dfs, read_me = False, feedback = False):
     '''function to take care of aggregating sheets, freeze pane and meta info'''
@@ -499,7 +497,12 @@ def remove_forbiden_in_tabname(s):
 
     return s
 
-def fix_MD_index(MD):
+def fix_MD_index(MD, properties):
+
+    for field in ['IntermediateExchanges prop.', 'ElementaryExchanges prop.']:
+        new_field = field.replace(' prop.', '')
+        MD[field] = properties[new_field].copy()
+
     indexes = {
         'Geographies': ['shortname'], 
         'Units': ['name'], 
@@ -517,7 +520,9 @@ def fix_MD_index(MD):
     for tab, index in indexes.items():
         if tab == 'Companies':
             MD[tab] = MD[tab][MD[tab]['name'].notnull()]
-        MD[tab] = MD[tab].set_index(index).sortlevel(level=0)
+        MD[tab] = MD[tab].set_index(index, drop=True).sort_index(axis=0)
+        MD[tab] = MD[tab].sort_index(axis=1)
+        MD[tab].reset_index(inplace=True)
     return MD
 
 def append_exchange(exc, dataset, MD, properties = [], 
@@ -709,9 +714,9 @@ def create_empty_property():
 
 def create_WWT_activity_name(WW_type, technology, capacity):
     if WW_type == 'municipal':
-        WW_type_str = "average"
+        WW_type_str = ", average"
     else:
-        WW_type_str = "from {}".format(WW_type)
+        WW_type_str = " from {}".format(WW_type)
     
     if technology == 'average':
         technology_str = ""
@@ -721,37 +726,45 @@ def create_WWT_activity_name(WW_type, technology, capacity):
     if capacity == 'average':
         capacity_str = "average capacity"
     else:
-        capacity_str = "capacity {:.1E}l/year".format\
-                           (capacity).replace('+', '').replace('E0', 'E')
+        capacity_str = "capacity {:.1E}l/year".format(capacity).replace('+', '').replace('E0', 'E').replace('.0', '')
     
-    return "treatment of wastewater, {}, {}{}".format(
-                                                    WW_type_str,
-                                                    technology_str,
-                                                    capacity_str
-                                                    )
+    return "treatment of wastewater{}, {}{}".format(WW_type_str, technology_str, capacity_str)
 
+def generate_WWT_activity_name(dataset, WW_type, technology, capacity):
+    name = create_WWT_activity_name(WW_type, technology, capacity)
+    dataset.update({'activityName': name})
+
+
+def generate_activityNameId(dataset, MD):
+    ''' Return activityNameId from MD or create one
+    '''
+    activity_name_df = MD['ActivityNames'].set_index('name')
+    if dataset['activityName'] in activity_name_df.index:
+        dataset.update({'activityNameId':
+            activity_name_df.loc[dataset['activityName'], 'id']})
+    else:
+        #print("new name {} identified, generating new UUID")
+        dataset_id = make_uuid(dataset['activityName'])
+        #creating a new user masterdata entry
+        d = {'id': dataset['activityNameId'], 
+             'name': dataset['activityName']}
+        dataset.update({'activityNameId' : dataset_id,
+                        'ActivityNames': [GenericObject(d, field)]
+                        })
+
+def generate_geography(dataset, MD, geography):
+    dataset.update({'geography': geography,
+                    'geographyId': MD['Geographies'].loc[
+                            MD['Geographies']['shortname']==geography,
+                            'id'].item()
+                    }
+                   )
+
+
+
+#What follows commented out to avoid execution
 
 """
-What follows commented out to avoid execution
-
-#start by create an empty dataset
-dataset = create_empty_dataset()
-#activityName by user
-dataset['activityName'] = 'treatment of wastewater, from dinosaur zoo'
-#activityNameId in MD or from the activityName
-if dataset['activityName'] in MD['ActivityNames'].index:
-    dataset['activityNameId'] = MD['ActivityNames'].loc[dataset['activityName'], 'id']
-else:
-    dataset['activityNameId'] = make_uuid(dataset['activityName'])
-    field = 'ActivityNames'
-    #creating a new user masterdata entry
-    d = {'id': dataset['activityNameId'], 
-         'name': dataset['activityName']}
-    dataset[field] = [GenericObject(d, field)]
-#geography by user, uuid in MD
-geography = 'GLO'
-dataset.update({'geography': geography, 
-    'geographyId': MD['Geographies'].loc[geography, 'id']})
 #start and end date by user
 dataset['startDate'] = '2014-01-01'
 dataset['endDate'] = '2015-12-31'
@@ -958,5 +971,4 @@ env = Environment(loader=FileSystemLoader(template_path),
                   trim_blocks = True)
 rendered = recursive_rendering(dataset, env, result_folder, result_filename)
 """
-
 
