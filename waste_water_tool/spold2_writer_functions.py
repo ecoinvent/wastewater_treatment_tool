@@ -306,12 +306,19 @@ def build_MD(md_fields_xls=None,
         df = df.set_index('activityIndexEntryId').join(MD[tab].set_index('id')[['activityName', 'geography', 
                           'startDate', 'endDate']]).reset_index()
         MD['ExchangeActivityIndex'] = df.rename(columns = {'index': 'activityIndexEntryId'})
-        
-    MD = fix_MD_index(MD, properties)
+    
+    for field in ['IntermediateExchanges prop.', 'ElementaryExchanges prop.']:
+        new_field = field.replace(' prop.', '')
+        MD[field] = properties[new_field].copy()
+    
+    # Set useful indexes in MD for future queries
+    
     if xls_dump_folder is not None:
         to_excel(xls_dump_folder, MD)
     if pickle_dump_folder is not None:
         pkl_dump(pickle_dump_folder, 'MD', MD)
+    #MD = set_MD_indexes(MD)
+
     return MD
 
 def list_to_df(l, index_start = 0):
@@ -497,11 +504,8 @@ def remove_forbiden_in_tabname(s):
 
     return s
 
-def fix_MD_index(MD, properties):
-
-    for field in ['IntermediateExchanges prop.', 'ElementaryExchanges prop.']:
-        new_field = field.replace(' prop.', '')
-        MD[field] = properties[new_field].copy()
+'''
+def set_MD_indexes(MD):
 
     indexes = {
         'Geographies': ['shortname'], 
@@ -521,9 +525,9 @@ def fix_MD_index(MD, properties):
         if tab == 'Companies':
             MD[tab] = MD[tab][MD[tab]['name'].notnull()]
         MD[tab] = MD[tab].set_index(index, drop=True).sort_index(axis=0)
-        MD[tab] = MD[tab].sort_index(axis=1)
-        MD[tab].reset_index(inplace=True)
+        MD[tab].sort_index(axis=1, inplace=True)
     return MD
+'''
 
 def append_exchange(exc, dataset, MD, properties = [], 
         uncertainty = {}, PV_uncertainty = {}):
@@ -738,27 +742,28 @@ def generate_WWT_activity_name(dataset, WW_type, technology, capacity):
 def generate_activityNameId(dataset, MD):
     ''' Return activityNameId from MD or create one
     '''
-    activity_name_df = MD['ActivityNames'].set_index('name')
-    if dataset['activityName'] in activity_name_df.index:
+    
+    if dataset['activityName'] in MD['ActivityNames']['name'].values:
         dataset.update({'activityNameId':
-            activity_name_df.loc[dataset['activityName'], 'id']})
+            MD['ActivityNames'][MD['ActivityNames']['name']==\
+               dataset['activityName']]['id'].item()
+                        })
     else:
-        #print("new name {} identified, generating new UUID")
+        print("new name {} identified, generating new UUID".format(
+                dataset['activityName']))
         dataset_id = make_uuid(dataset['activityName'])
         #creating a new user masterdata entry
-        d = {'id': dataset['activityNameId'], 
+        d = {'id': dataset_id, 
              'name': dataset['activityName']}
         dataset.update({'activityNameId' : dataset_id,
-                        'ActivityNames': [GenericObject(d, field)]
+                        'ActivityNames': [GenericObject(d, 'ActivityNames')]
                         })
-
+        
 def generate_geography(dataset, MD, geography):
     dataset.update({'geography': geography,
-                    'geographyId': MD['Geographies'].loc[
-                            MD['Geographies']['shortname']==geography,
-                            'id'].item()
-                    }
-                   )
+                    'geographyId': 
+                        MD['Geographies'][MD['Geographies']['shortname']==geography]['id'].item()
+                        })
 
 
 
