@@ -650,6 +650,8 @@ def create_empty_dataset():
     dataset['isDataValidForEntirePeriod'] = 'true'
     dataset['macroEconomicScenarioName'] = 'Business-as-Usual'
     dataset['macroEconomicScenarioId'] = 'd9f57f0a-a01f-42eb-a57b-8f18d6635801'    
+    dataset['tag'] = ['Treatment']
+    
     # Mandatory values fixed to None (will not show in the rendered template)
     empty_fields = ['parentActivityId',
                     'parentActivityContextId',
@@ -671,6 +673,64 @@ def create_empty_dataset():
                   'ToEnvironment',
                   ]:
         dataset[group] = []
+    
+    #TEMP???
+    # mandatory values.  Data entry will be from the current user
+    # and active authorship will have to be accepted.    
+
+    d = {'personContextId': None, 
+         'isActiveAuthor': 'false', 
+         'personId': '788d0176-a69c-4de0-a5d3-259866b6b100', 
+         'personName': '[Current User]', 
+         'personEmail': 'no@email.com'
+         }
+    dataset['dataEntryBy'] = GenericObject(d, 'DataEntryBy')
+
+    # DataGeneratorAndPublication
+    # Assume the author is the tool author
+
+    #mandatory values
+    d = {'isCopyrightProtected': 'true', 
+         'accessRestrictedTo': 1, 
+         'dataPublishedIn': 0}
+    empty_fields = ['personContextId', 'publishedSourceContextId', 'publishedSourceIdOverwrittenByChild', 
+      'companyContextId', 'companyIdOverwrittenByChild', 'publishedSourceId', 'companyCode', 
+      'publishedSourceYear', 'publishedSourceFirstAuthor', 'pageNumbers', 'companyId']
+    d.update({f: None for f in empty_fields})
+    #variable fields: depends on the user - assume constant for now
+    # See original code to deal with case where we want to make this variable
+    d.update({
+            'personName': 'Pascal Lesage',
+            'personId': '788d0176-a69c-4de0-a5d3-259866b6b100',
+            'personEmail': 'pascal.lesage@polymtl.ca',
+            'companyName': 'CIRAIG'
+            })    
+    dataset['dataGeneratorAndPublication'] = GenericObject(
+                                                d,
+                                               'DataGeneratorAndPublication'
+                                               )
+    # File attribute- all default values    
+    #mandatory values
+    d = {'majorRelease': 3, 
+         'minorRelease': 4, 
+         'majorRevision': 0, 
+         'minorRevision': 1, 
+         'defaultLanguage': 'en', 
+         }
+    empty_fields = ['internalSchemaVersion', 'creationTimestamp', 'lastEditTimestamp', 
+      'fileGenerator', 'fileTimestamp', 'contextId', 'contextName', 'requiredContext']
+    d.update({f: None for f in empty_fields})
+    dataset['FileAttributes'] = GenericObject(d, 'FileAttribute')
+
+    # Classifications: all default values
+    #mandatory values
+    d = {'classificationSystem': 'ISIC rev.4 ecoinvent', 
+         'classificationValue': '3700:Sewerage', 
+         'classificationId': 'a84d0ee4-d77c-4905-b876-3ef60873c763',
+         'classificationContextId': None,
+         }
+    dataset['classifications'] = [GenericObject(d, 'TClassification')]
+    
     return dataset
 
 def create_empty_exchange():
@@ -717,10 +777,10 @@ def create_empty_property():
 
 
 def create_WWT_activity_name(WW_type, technology, capacity):
-    if WW_type == 'municipal':
+    if WW_type == 'average':
         WW_type_str = ", average"
     else:
-        WW_type_str = " from {}".format(WW_type)
+        WW_type_str = " {}".format(WW_type)
     
     if technology == 'average':
         technology_str = ""
@@ -736,7 +796,8 @@ def create_WWT_activity_name(WW_type, technology, capacity):
 
 def generate_WWT_activity_name(dataset, WW_type, technology, capacity):
     name = create_WWT_activity_name(WW_type, technology, capacity)
-    dataset.update({'activityName': name})
+    dataset.update({'activityName': name,
+                    'WW_type': WW_type})
 
 
 def generate_activityNameId(dataset, MD):
@@ -751,11 +812,11 @@ def generate_activityNameId(dataset, MD):
     else:
         print("new name {} identified, generating new UUID".format(
                 dataset['activityName']))
-        dataset_id = make_uuid(dataset['activityName'])
+        activityNameId = make_uuid(dataset['activityName'])
         #creating a new user masterdata entry
-        d = {'id': dataset_id, 
+        d = {'id': activityNameId, 
              'name': dataset['activityName']}
-        dataset.update({'activityNameId' : dataset_id,
+        dataset.update({'activityNameId' : activityNameId,
                         'ActivityNames': [GenericObject(d, 'ActivityNames')]
                         })
         
@@ -765,136 +826,123 @@ def generate_geography(dataset, MD, geography):
                         MD['Geographies'][MD['Geographies']['shortname']==geography]['id'].item()
                         })
 
+def generate_time_period(dataset, start, end):
+    dataset.update({'startDate':start,
+                    'endDate':end})
+
+def generate_dataset_id(dataset):
+    '''the activityName, geography, startDate and endDate need to be
+        defined first'''
+    l = [dataset['activityName'], dataset['geography'], dataset['startDate'], dataset['endDate']]
+    dataset.update({'id':make_uuid(l)})
+
+def generate_technology_level(dataset, level_as_string):
+    level_string_to_int = {
+            'Undefined':0,
+            'New':1,
+            'Modern':2,
+            'Current':3,
+            'Old':4,
+            'Outdated':5
+            }
+    dataset.update({
+            'technologyLevel':level_string_to_int[level_as_string],
+            })
+
+def generate_activity_boundary_text(dataset,
+                                    includedActivitiesStartText,
+                                    includedActivitiesEndText_last,
+                                    includedActivitiesEndText_included,
+                                    includedActivitiesEndText_excluded):
+    dataset.update({'includedActivitiesStart': includedActivitiesStartText,
+                    'includedActivitiesEnd': "{} {} {}".format(
+                            includedActivitiesEndText_last,
+                            includedActivitiesEndText_included,
+                            includedActivitiesEndText_excluded)
+                    })
+
+def generate_comment(dataset, comment_type, list_of_string_comments):
+    types_of_comments = [
+            'allocationComment',
+            'generalComment',
+            'geographyComment',
+            'technologyComment',
+            'timePeriodComment'
+            ]
+    assert comment_type in types_of_comments, 'no such comment field'
+    assert isinstance(list_of_string_comments, list),\
+        'list_of_string_comments needs to be a list'
+    for comment in list_of_string_comments:
+        assert isinstance(comment, str),\
+            'Comment should be a string'
+    d = {'comments_original': list_of_string_comments}
+    dataset.update({
+            comment_type:GenericObject(d, 'TTextAndImage')
+            })
+
+def  generate_representativeness(dataset,
+                                 samplingProcedure_text='',
+                                 extrapolations_text='',
+                                 percent=None):
+    assert all([str(percent).isnumeric(), 0<percent<100]),\
+        'Percent needs to be a number between 0 and 100'
+    assert isinstance(samplingProcedure_text, str),\
+        'The sampling procedure text should be a string'
+    assert isinstance(extrapolations_text, str),\
+        'The extrapolation text should be a string'        
+    d = {'systemModelId': '8b738ea0-f89e-4627-8679-433616064e82',
+         'systemModelContextId': None,
+         'systemModelName': 'Undefined', 
+         'reviews': None, 
+         'percent': percent,
+         'samplingProcedure':samplingProcedure_text,
+         'extrapolations':samplingProcedure_text,
+         }
+    dataset['modellingAndValidation'] = GenericObject(d,
+                                            'ModellingAndValidation'
+                                            )
+
+def generate_activityIndex(dataset):
+    d = {'id': dataset['id'], 
+         'activityNameId': dataset['activityNameId'],
+         'geographyId': dataset['geographyId'],
+         'startDate': dataset['startDate'],
+         'endDate': dataset['endDate'],
+         'specialActivityType': dataset['specialActivityType'],
+         'systemModelId': '8b738ea0-f89e-4627-8679-433616064e82',
+         }
+    dataset['ActivityIndex'] = [GenericObject(d, 'ActivityIndex')]
 
 
-#What follows commented out to avoid execution
+def create_reference_exchange(dataset, exc_comment, PV, PV_comment):
+    exc = create_empty_exchange()
+    if dataset['WW_type']=='average':
+        name = 'wastewater, average'
+    else:
+        name = 'wastewater, {}'.format(dataset['WW_type'])
+        
+    exc.update({
+            'group': 'ReferenceProduct',
+            'unitName': 'm3',
+            'amount': -1.,
+            'productionVolumeAmount': PV,
+            'productionVolumeComment': PV_comment, 
+           'comment': exc_comment, 
+           'name': name,
+           })    
+properties = [#(property_name, amount, comment, uncertainty)
+    ('iron content', .002, 'iron comment', {'variance': .006, 'pedigreeMatrix': [1, 2, 3, 5, 4]}), 
+    ('manganese content', .001, 'manganese comment', None), 
+    ('arsenic content', .004, 'arseinc comment', None), 
+    ('cobalt content', .005, 'cobalt comment', None)
+    ]
 
 """
-#start and end date by user
-dataset['startDate'] = '2014-01-01'
-dataset['endDate'] = '2015-12-31'
-#id of the dataset from concat of 4 informations
-l = [dataset['activityName'], dataset['geography'], dataset['startDate'], dataset['endDate']]
-dataset['id'] = make_uuid(l)
-#technology level by user
-dataset['technologyLevel'] = 3
-#facultative values by user
-dataset['synonyms'] = ['Jurassic Park', 'waste water treatment', 'WWT']
-dataset['includedActivitiesStart'] = 'Treatment of waste water, collected from dinosaur cages.'
-dataset['includedActivitiesEnd'] = 'Includes the production of sludge.  '
-dataset['tag'] = ['tag1', 'tag2']
 
-#multiple comment objects, filled by user
-object_type = 'TTextAndImage'
-for field in ['allocationComment', 'generalComment', 'geographyComment', 
-              'technologyComment', 'timePeriodComment']:
-    d = {'comments_original': ['%s%s' % (field, i) for i in range(3)]}
-    dataset[field] = GenericObject(d, object_type)
-
-#administrative info
-field = 'modellingAndValidation'
-object_type = 'ModellingAndValidation'
-#mandatory values
-d = {'systemModelId': '8b738ea0-f89e-4627-8679-433616064e82', 
-     'systemModelContextId': None, 
-     'percent': None, 
-     'systemModelName': 'Undefined', 
-     'reviews': None, 
-     }
-#variable fields filled by user
-d['samplingProcedure'] = 'sampling procedure comment here'
-d['extrapolations'] = 'extrapolations comment here'
-dataset[field] = GenericObject(d, object_type)
-
-field = 'dataEntryBy'
-object_type = 'DataEntryBy'
-#mandatory values.  Data entry will be from the current user and active authorship will have to be accepted.
-d = {'personContextId': None, 
-     'isActiveAuthor': 'false', 
-     'personId': '788d0176-a69c-4de0-a5d3-259866b6b100', 
-     'personName': '[Current User]', 
-     'personEmail': 'no@email.com'
-     }
-dataset[field] = GenericObject(d, object_type)
-
-object_type = 'DataGeneratorAndPublication'
-field = 'dataGeneratorAndPublication'
-#mandatory values
-d = {'isCopyrightProtected': 'true', 
-     'accessRestrictedTo': 1, 
-     'dataPublishedIn': 0}
-empty_fields = ['personContextId', 'publishedSourceContextId', 'publishedSourceIdOverwrittenByChild', 
-  'companyContextId', 'companyIdOverwrittenByChild', 'publishedSourceId', 'companyCode', 
-  'publishedSourceYear', 'publishedSourceFirstAuthor', 'pageNumbers', 'companyId']
-d.update({f: None for f in empty_fields})
-#variable fields: depends on the user
-d['personName'] = 'Pascal Lesage'
-if d['personName'] in MD['Persons'].index:
-    sel = MD['Persons'].loc[d['personName']]
-    d['personId'] = sel['id']
-    d['personEmail'] = sel['email']
-else:
-    d['personId'] =  make_uuid(d['personName'])
-    d['personEmail'] = 'person_email@gmail.com'
-    d['companyName'] = 'Jurassic consultant Inc.'
-    #add to MD: Issue #2
-    #add to userMD: Issue #2
-    if d['companyName'] not in MD['Companies'].index:
-        #add to MD: Issue #2
-        #add to userMD: Issue #2
-        pass
-
-dataset[field] = GenericObject(d, object_type)
-
-object_type = 'FileAttribute'
-field = 'fileAttributes'
-#mandatory values
-d = {'majorRelease': 3, 
-     'minorRelease': 4, 
-     'majorRevision': 0, 
-     'minorRevision': 1, 
-     'defaultLanguage': 'en', 
-     }
-empty_fields = ['internalSchemaVersion', 'creationTimestamp', 'lastEditTimestamp', 
-  'fileGenerator', 'fileTimestamp', 'contextId', 'contextName', 'requiredContext']
-d.update({f: None for f in empty_fields})
-dataset[field] = GenericObject(d, object_type)
-
-object_type = 'TClassification'
-field = 'classifications'
-#mandatory values
-d = {'classificationSystem': 'ISIC rev.4 ecoinvent', 
-     'classificationValue': '3700:Sewerage', 
-     }
-d['classificationId'] = MD['Classifications'].loc[
-    (d['classificationSystem'], d['classificationValue']), 'classificationValueId']
-empty_fields = ['classificationContextId']
-d.update({f: None for f in empty_fields})
-dataset[field] = [GenericObject(d, object_type)]
-
-#new activity index entry for user master data
-field = 'ActivityIndex'
-d = {'id': dataset['id'], 
-     'activityNameId': dataset['activityNameId'], 
-    'geographyId': dataset['geographyId'], 
-    'startDate': dataset['startDate'], 
-    'endDate': dataset['endDate'], 
-    'specialActivityType': dataset['specialActivityType'], 
-    'systemModelId': dataset['modellingAndValidation'].systemModelId, 
-    }
-dataset[field] = [GenericObject(d, field)]
 
 #filling with exchanges
 #ReferenceProduct example
-exc = create_empty_exchange()
-exc.update({'group': 'ReferenceProduct', 
-       'name': 'wastewater, from dinosaur zoo', 
-       'unitName': 'm3', 
-       'amount': -1., 
-       'productionVolumeAmount': 20000., 
-       'productionVolumeComment': 'production volume comment', 
-       'comment': 'exchange comment', 
-       })
+
 properties = [#(property_name, amount, comment, uncertainty)
     ('iron content', .002, 'iron comment', {'variance': .006, 'pedigreeMatrix': [1, 2, 3, 5, 4]}), 
     ('manganese content', .001, 'manganese comment', None), 
