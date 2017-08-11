@@ -4,6 +4,8 @@ import os, uuid, numpy, pandas
 from pickle import dump, load
 from lxml import objectify
 from copy import copy
+
+# Taking care of pandas version issues in unpickling...
 import pandas.core.indexes
 import sys
 sys.modules['pandas.indexes'] = pandas.core.indexes
@@ -317,7 +319,7 @@ def build_MD(md_fields_xls=None,
         to_excel(xls_dump_folder, MD)
     if pickle_dump_folder is not None:
         pkl_dump(pickle_dump_folder, 'MD', MD)
-    #MD = set_MD_indexes(MD)
+    MD = set_MD_indexes(MD)
 
     return MD
 
@@ -504,7 +506,6 @@ def remove_forbiden_in_tabname(s):
 
     return s
 
-'''
 def set_MD_indexes(MD):
 
     indexes = {
@@ -527,7 +528,7 @@ def set_MD_indexes(MD):
         MD[tab] = MD[tab].set_index(index, drop=True).sort_index(axis=0)
         MD[tab].sort_index(axis=1, inplace=True)
     return MD
-'''
+
 
 def append_exchange(exc, dataset, MD, properties = [], 
         uncertainty = {}, PV_uncertainty = {}):
@@ -804,10 +805,9 @@ def generate_activityNameId(dataset, MD):
     ''' Return activityNameId from MD or create one
     '''
     
-    if dataset['activityName'] in MD['ActivityNames']['name'].values:
+    if dataset['activityName'] in MD['ActivityNames'].index:
         dataset.update({'activityNameId':
-            MD['ActivityNames'][MD['ActivityNames']['name']==\
-               dataset['activityName']]['id'].item()
+            MD['ActivityNames'].loc[dataset['activityName'], 'id']
                         })
     else:
         print("new name {} identified, generating new UUID".format(
@@ -823,7 +823,7 @@ def generate_activityNameId(dataset, MD):
 def generate_geography(dataset, MD, geography):
     dataset.update({'geography': geography,
                     'geographyId': 
-                        MD['Geographies'][MD['Geographies']['shortname']==geography]['id'].item()
+                        MD['Geographies'].loc[geography, 'id']
                         })
 
 def generate_time_period(dataset, start, end):
@@ -913,7 +913,30 @@ def generate_activityIndex(dataset):
          }
     dataset['ActivityIndex'] = [GenericObject(d, 'ActivityIndex')]
 
+def get_WW_properties(xls=None):
+    # From excel for now
+    if xls==None:
+        xls = os.path.join(root_dir, 'Documentation', 'WW_properties.xlsx')
+    return pandas.read_excel(xls, sheet_name='Sheet1', index_col=1)
 
+def convert_WW_prop_to_list(df):
+    #(property_name, amount, comment, uncertainty)
+    return [(i,
+             df.loc[i, 'Amount'],
+             df.loc[i, 'comment'],
+             {
+                 'variance': df.loc[i, 'Variance'],
+                 'pedigreeMatrix': [
+                     df.loc[i, 'pedigree1'],
+                     df.loc[i, 'pedigree2'],
+                     df.loc[i, 'pedigree3'],
+                     df.loc[i, 'pedigree4'],
+                     df.loc[i, 'pedigree5'],
+                 ]
+             }
+            ) for i in df.index]
+
+"""
 def create_reference_exchange(dataset, exc_comment, PV, PV_comment):
     exc = create_empty_exchange()
     if dataset['WW_type']=='average':
@@ -937,7 +960,6 @@ properties = [#(property_name, amount, comment, uncertainty)
     ('cobalt content', .005, 'cobalt comment', None)
     ]
 
-"""
 
 
 #filling with exchanges
