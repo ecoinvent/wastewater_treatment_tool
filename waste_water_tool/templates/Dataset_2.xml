@@ -94,6 +94,9 @@
 	{% for e in ActivityNames %}
 	{{ e }}
 	{% endfor %}
+	{% for e in Properties %}
+	{{ e }}
+	{% endfor %}
 	{% for e in IntermediateExchanges %}
 	{{ e }}
 	{% endfor %}
