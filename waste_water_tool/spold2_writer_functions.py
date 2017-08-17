@@ -42,7 +42,6 @@ def make_uuid(l):
 def recursive_rendering(e, env, result_folder, result_filename):
     if type(e) == GenericObject:
         template = env.get_template(e.template_name)
-        print(e.template_name)
         attr_list = set([a for a in dir(e) if '__' not in a])
         attr_list.difference_update(set(['render', 'template_name']))
         rendered = {attribute: recursive_rendering(getattr(e, attribute), 
@@ -1056,6 +1055,44 @@ def generate_reference_exchange(dataset,
                                   uncertainty = None,
                                   PV_uncertainty = PV_uncertainty)
     return dataset, MD
+
+def add_grit(dataset,
+             grit_amount,
+             WW_discharged_without_treatment,
+             grit_plastic_ratio,
+             grit_biomass_ratio,
+             grit_uncertainty,
+             grit_plastics_comment,
+             grit_biomass_comment,
+             PV,
+             MD):
+    # plastic
+    exc = create_empty_exchange()
+    exc.update({'group': 'ByProduct', 
+           'name': 'waste plastic, mixture', 
+           'unitName': 'kg', 
+           'amount': grit_amount * grit_plastic_ratio * (1-WW_discharged_without_treatment), 
+           'productionVolumeAmount': PV*grit_amount * grit_plastic_ratio * (1-WW_discharged_without_treatment), 
+           'productionVolumeComment': 'Calculated based on the amount and the total volume of wastewater discharged', 
+           'comment': grit_plastics_comment, 
+           })
+    uncertainty = grit_uncertainty
+    dataset, MD = append_exchange(exc, dataset, MD, 
+        properties = [], uncertainty = uncertainty)
+    # biomass
+    exc = create_empty_exchange()
+    exc.update({'group': 'ByProduct', 
+           'name': 'waste graphical paper', 
+           'unitName': 'kg',
+           'amount': grit_amount * grit_biomass_ratio * (1-WW_discharged_without_treatment), 
+           'productionVolumeAmount': PV*grit_amount * grit_biomass_ratio * (1-WW_discharged_without_treatment), 
+           'productionVolumeComment': 'Calculated based on the amount and the total volume of wastewater discharged', 
+           'comment': grit_biomass_comment, 
+           })
+    uncertainty = grit_uncertainty
+    dataset, MD = append_exchange(exc, dataset, MD, 
+        properties = [], uncertainty = uncertainty)
+    return dataset
 
 def generate_ecoSpold2(dataset, template_path, filename, dump_folder):
     dataset['has_userMD'] = False
