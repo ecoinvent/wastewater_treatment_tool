@@ -16,6 +16,16 @@
   {% if entry.titleOfAnthology %}titleOfAnthology="{{ entry.titleOfAnthology }}" {% endif %}
   {% if entry.volumeNo %}volumeNo="{{ entry.volumeNo }}"{% endif %}/>
   {% endfor %}
+
+  {% for entry in Properties %}
+  <property id="{{ entry.id }}" 
+    {% if entry.defaultVariableName %}defaultVariableName="{{ entry.defaultVariableName}}" {% endif %}
+    unitId="{{ entry.unitId }}">
+    <name xml:lang="en">{{ entry.name }}</name>
+    <unitName xml:lang="en">{{ entry.unitName }}</unitName>
+  </property>
+  {% endfor %}
+
   {% for entry in ElementaryExchanges %}
   <elementaryExchange id="{{ entry.id }}" unitId="{{ entry.unitId }}" casNumber="{{ entry.casNumber }}">
     <name xml:lang="en">{{ entry.name }}</name>
