@@ -1094,6 +1094,8 @@ def add_grit(dataset,
         properties = [], uncertainty = uncertainty)
     return dataset
 
+
+
 def generate_ecoSpold2(dataset, template_path, filename, dump_folder):
     dataset['has_userMD'] = False
     for field in ['ActivityNames', 'Sources', 'activityIndexEntry', 'Persons', 'IntermediateExchanges']:
