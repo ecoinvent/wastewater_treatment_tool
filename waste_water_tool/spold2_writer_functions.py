@@ -8,7 +8,7 @@ from copy import copy
 # Taking care of pandas version issues in unpickling...
 import pandas
 import sys
-#sys.modules['pandas.indexes'] = pandas.core.indexes
+sys.modules['pandas.indexes'] = pandas.core.indexes
 
 HTML_entities = [['&', '&amp;'],
                  ['<', '&lt;'], 
@@ -42,6 +42,7 @@ def make_uuid(l):
 def recursive_rendering(e, env, result_folder, result_filename):
     if type(e) == GenericObject:
         template = env.get_template(e.template_name)
+        print(template)
         attr_list = set([a for a in dir(e) if '__' not in a])
         attr_list.difference_update(set(['render', 'template_name']))
         rendered = {attribute: recursive_rendering(getattr(e, attribute), 
