@@ -42,6 +42,7 @@ def make_uuid(l):
 def recursive_rendering(e, env, result_folder, result_filename):
     if type(e) == GenericObject:
         template = env.get_template(e.template_name)
+        print(e.template_name)
         attr_list = set([a for a in dir(e) if '__' not in a])
         attr_list.difference_update(set(['render', 'template_name']))
         rendered = {attribute: recursive_rendering(getattr(e, attribute), 
@@ -312,14 +313,13 @@ def build_MD(md_fields_xls=None,
     for field in ['IntermediateExchanges prop.', 'ElementaryExchanges prop.']:
         new_field = field.replace(' prop.', '')
         MD[field] = properties[new_field].copy()
-    
-    # Set useful indexes in MD for future queries
-    
+        
     if xls_dump_folder is not None:
         to_excel(xls_dump_folder, MD)
+    # Set useful indexes in MD for future queries
+    MD = set_MD_indexes(MD)
     if pickle_dump_folder is not None:
         pkl_dump(pickle_dump_folder, 'MD', MD)
-    MD = set_MD_indexes(MD)
 
     return MD
 
@@ -507,7 +507,7 @@ def remove_forbiden_in_tabname(s):
     return s
 
 def set_MD_indexes(MD):
-
+    print('setting MD indices')
     indexes = {
         'Geographies': ['shortname'], 
         'Units': ['name'], 
@@ -530,18 +530,56 @@ def set_MD_indexes(MD):
     return MD
 
 
-def append_exchange(exc, dataset, MD, properties = [], 
-        uncertainty = {}, PV_uncertainty = {}):
+def append_exchange(exc, #exchange dictionary, see detail below
+                    dataset, #dataset to append exchange to
+                    MD, #master data dictionary of dataframes
+                    properties = [], # If relevant. list of tuples with appropriate format.
+                    uncertainty = None, #Uncertainty dict
+                    PV_uncertainty = None #Relevant for exchanges with production volumes only
+                    ):
+    """
+    Exc:All exchanges are passed as dictionaries. 
+        All exchanges shall have the following keys:
+            group, name, comment, unitName, amount
+        Exchanges with group == ReferenceProduct or ByProduct shall also 
+            have a productionVolumeAmount and productionVolumeComment.
+        Exchanges with the group == FromEnvironment of ToEnvironment shall
+            also have a compartment and subcompartment
+    properties: list of tuples with the following data:
+        (property_name, amount, comment, uncertainty)                                                 }
+    `uncertainty` comes as dict with format {'variance': variance,
+                                                 'pedigreeMatrix': [x,x,x,x,x]
+                                                 }
+    PV_uncertainty
+    """
+    # Add unitId to exchange
     exc['unitId'] = MD['Units'].loc[exc['unitName'], 'id']
-    if exc['name'] not in MD['IntermediateExchanges'].index:
-        dataset, MD = new_exchange(dataset, MD, exc)
-    l = [dataset[field] for field in ['activityName', 'geography', 'startDate', 'endDate']]
-    l.extend(str(exc[field]) for field in ['name', 'compartment', 'subcompartment'])
+
+    # Add IntermediateExchange to MD if new:
+    if exc['group'] in ['ReferenceProduct', 'ByProduct', 'FromTechnosphere'] \
+        and exc['name'] not in MD['IntermediateExchanges'].index:
+        dataset, MD = new_intermediate_exchange(dataset, MD, exc)
+    # Generate UUID for exchange. New UUID for each exchange/dataset combination
+    l = [dataset[field] for field in ['activityName',
+                                      'geography',
+                                      'startDate',
+                                      'endDate']
+        ]
+    l.extend(str(exc[field]) for field in ['name',
+                                           'compartment',
+                                           'subcompartment']
+        )
+    
     exc['id'] = make_uuid(l)
+    
+    # assign groupType
     if 'From' in exc['group']:
         exc['groupType'] = 'inputGroup'
     else:
         exc['groupType'] = 'outputGroup'
+
+    # If elementary flow, add some fields.
+    # Note: assumed all elementary flows already in MD
     if 'Environment' in exc['group']:
         ee = (exc['name'], exc['compartment'], exc['subcompartment'])
         sel = MD['ElementaryExchanges'].loc[ee]
@@ -557,9 +595,10 @@ def append_exchange(exc, dataset, MD, properties = [],
             property_sel = MD['ElementaryExchanges prop.'].loc[ee]
         else:
             property_sel = pandas.DataFrame()
-    else:
+   
+    else: # If intermediateExchange
         sel = MD['IntermediateExchanges'].loc[exc['name']]
-        exc['intermediateExchangeId'] = sel['id']
+        exc['intermediateExchangeId'] = sel['id'] # There even if new because added above
         exc['exchangeType'] = 'intermediateExchange'
         if exc['group'] == 'ReferenceProduct':
             exc['groupCode'] = 0
@@ -569,8 +608,8 @@ def append_exchange(exc, dataset, MD, properties = [],
             exc['groupCode'] = 2
         else:
             raise ValueError('"%s" is not a valid group' % exc['group'])
-        if exc['name'] in MD['ElementaryExchanges prop.'].index:
-            property_sel = MD['ElementaryExchanges prop.'].loc[exc['name']]
+        if exc['name'] in MD['IntermediateExchanges prop.'].index:
+            property_sel = MD['IntermediateExchanges prop.'].loc[exc['name']]
         else:
             property_sel = pandas.DataFrame()
         #'add classifications': issue #1
@@ -582,17 +621,22 @@ def append_exchange(exc, dataset, MD, properties = [],
         present_properties = [p[0] for p in properties]
         for i, p in property_sel.iterrows():
             if p['propertyName'] not in present_properties:
-                properties.append((p['propertyName'], p['amount'], '', None))
-    exc = add_property(exc, properties, MD)
+                properties.append(
+                        (p['propertyName'],
+                         p['amount'],
+                         p['unitName'],
+                         "Default value. {}".format(p['comment']),
+                         None)
+                        )
+    dataset, exc = add_property(dataset, exc, properties, MD)
     
-    if len(uncertainty) > 0:
+    if uncertainty:
         exc = add_uncertainty(exc, uncertainty['pedigreeMatrix'], 
             uncertainty['variance'])
-    if len(PV_uncertainty) > 0:
+    if PV_uncertainty:
         exc = add_uncertainty(exc, PV_uncertainty['pedigreeMatrix'], 
             PV_uncertainty['variance'], PV = True)
     dataset[exc['group']].append(GenericObject(exc, 'Exchange'))
-    
     return dataset, MD
 
 def create_empty_uncertainty():
@@ -623,7 +667,7 @@ def add_uncertainty(o, pedigreeMatrix, variance, PV = False):
     o[unc['field']] = GenericObject(unc, 'TUncertainty')
     return o
 
-def new_exchange(dataset, MD, exc):
+def new_intermediate_exchange(dataset, MD, exc):
     fields = ['name', 'unitName', 'casNumber', 'comment', 'unitId']
     to_add = {field: exc[field] for field in fields}
     to_add['id'] = make_uuid(exc['name'])
@@ -667,6 +711,7 @@ def create_empty_dataset():
                     ]
     dataset.update({f: None for f in empty_fields})   
     # Add lists to dict elements that are exchange lists
+    dataset['Properties'] = []
     for group in ['ReferenceProduct',
                   'ByProduct',
                   'FromTechnosphere',
@@ -721,7 +766,7 @@ def create_empty_dataset():
     empty_fields = ['internalSchemaVersion', 'creationTimestamp', 'lastEditTimestamp', 
       'fileGenerator', 'fileTimestamp', 'contextId', 'contextName', 'requiredContext']
     d.update({f: None for f in empty_fields})
-    dataset['FileAttributes'] = GenericObject(d, 'FileAttribute')
+    dataset['fileAttributes'] = GenericObject(d, 'FileAttribute')
 
     # Classifications: all default values
     #mandatory values
@@ -752,22 +797,32 @@ def create_empty_exchange():
         ]
     return {f: None for f in empty_fields}
 
-def add_property(exc, properties, MD):
+def add_property(dataset, exc, properties, MD):
     exc['properties'] = []
-    for property_name, amount, comment, unc in properties:
+    for property_name, amount, unit, comment, unc in properties:
         p = create_empty_property()
         p['name'] = property_name
+        if property_name in MD['Properties'].index:
+            sel = MD['Properties'].loc[property_name]
+            p['propertyId'] = sel['id']
+            if not is_empty(sel['unitName']):
+                assert unit == sel['unitName'], "{}, {}, {}".format(property_name, unit, sel['unitName'])
+                p['unitName'] = unit
+                p['unitId'] = MD['Units'].loc[p['unitName'], 'id']
+        else:
+            p['propertyId'] = make_uuid(property_name)
+            p['unitName'] = unit
+            p['unitId'] = MD['Units'].loc[p['unitName'], 'id']
+            print("going to create new property")
+            dataset['Properties'].append(GenericObject(p,
+                                        'TProperty'
+                                        ))
         p['amount'] = amount
         p['comment'] = comment
-        sel = MD['Properties'].loc[property_name]
-        p['propertyId'] = sel['id']
-        if not is_empty(sel['unitName']):
-            p['unitName'] = sel['unitName']
-            p['unitId'] = MD['Units'].loc[p['unitName'], 'id']
         if not is_empty(unc):
             p = add_uncertainty(p, unc['pedigreeMatrix'], unc['variance'])
         exc['properties'].append(GenericObject(p, 'TProperty'))
-    return exc
+    return dataset, exc
 
 def create_empty_property():
     empty_fields = ['propertyContextId', 'unitContextId', 'isDefiningValue', 
@@ -920,9 +975,10 @@ def get_WW_properties(xls=None):
     return pandas.read_excel(xls, sheet_name='Sheet1', index_col=1)
 
 def convert_WW_prop_to_list(df):
-    #(property_name, amount, comment, uncertainty)
+    #(property_name, amount, unit, comment, uncertainty)
     return [(i,
              df.loc[i, 'Amount'],
+             df.loc[i, 'unitName'],
              df.loc[i, 'comment'],
              {
                  'variance': df.loc[i, 'Variance'],
@@ -936,8 +992,13 @@ def convert_WW_prop_to_list(df):
              }
             ) for i in df.index]
 
-"""
-def create_reference_exchange(dataset, exc_comment, PV, PV_comment):
+        
+def generate_reference_exchange(dataset,
+                              exc_comment,
+                              PV,
+                              PV_comment,
+                              PV_uncertainty,
+                              MD):
     exc = create_empty_exchange()
     if dataset['WW_type']=='average':
         name = 'wastewater, average'
@@ -952,25 +1013,75 @@ def create_reference_exchange(dataset, exc_comment, PV, PV_comment):
             'productionVolumeComment': PV_comment, 
            'comment': exc_comment, 
            'name': name,
-           })    
-properties = [#(property_name, amount, comment, uncertainty)
-    ('iron content', .002, 'iron comment', {'variance': .006, 'pedigreeMatrix': [1, 2, 3, 5, 4]}), 
-    ('manganese content', .001, 'manganese comment', None), 
-    ('arsenic content', .004, 'arseinc comment', None), 
-    ('cobalt content', .005, 'cobalt comment', None)
-    ]
+           })
+    
+    # Replace this by function to retreive properties from tool
+    properties = convert_WW_prop_to_list(get_WW_properties()) 
+    dataset, MD = append_exchange(exc,
+                                  dataset,
+                                  MD,
+                                  properties = properties,
+                                  uncertainty = None,
+                                  PV_uncertainty = PV_uncertainty)
+    return dataset, MD
 
+def generate_reference_exchange(dataset,
+                              exc_comment,
+                              PV,
+                              PV_comment,
+                              PV_uncertainty,
+                              MD):
+    exc = create_empty_exchange()
+    if dataset['WW_type']=='average':
+        name = 'wastewater, average'
+    else:
+        name = 'wastewater, {}'.format(dataset['WW_type'])
+        
+    exc.update({
+            'group': 'ReferenceProduct',
+            'unitName': 'm3',
+            'amount': -1.,
+            'productionVolumeAmount': PV,
+            'productionVolumeComment': PV_comment, 
+           'comment': exc_comment, 
+           'name': name,
+           })
+    
+    # Replace this by function to retreive properties from tool
+    properties = convert_WW_prop_to_list(get_WW_properties()) 
+    dataset, MD = append_exchange(exc,
+                                  dataset,
+                                  MD,
+                                  properties = properties,
+                                  uncertainty = None,
+                                  PV_uncertainty = PV_uncertainty)
+    return dataset, MD
 
+def generate_ecoSpold2(dataset, template_path, filename, dump_folder):
+    dataset['has_userMD'] = False
+    for field in ['ActivityNames', 'Sources', 'activityIndexEntry', 'Persons', 'IntermediateExchanges']:
+        if field in dataset and len(dataset[field]) > 0:
+            dataset['has_userMD'] = True
+            break
+    dataset['exchanges'] = []
+    for group in ['ReferenceProduct', 'ByProduct', 'FromTechnosphere', 'FromEnvironment', 'ToEnvironment']:
+    #groups need to appear in a specific order
+        dataset['exchanges'].extend(dataset[group])
+
+    dataset = GenericObject(dataset, 'Dataset')
+    #loading the template environment
+    
+    env = Environment(loader=FileSystemLoader(template_path), 
+                      keep_trailing_newline = True, 
+                      lstrip_blocks = True, 
+                      trim_blocks = True)
+    rendered = recursive_rendering(dataset, env, dump_folder, filename)
+
+"""
 
 #filling with exchanges
 #ReferenceProduct example
 
-properties = [#(property_name, amount, comment, uncertainty)
-    ('iron content', .002, 'iron comment', {'variance': .006, 'pedigreeMatrix': [1, 2, 3, 5, 4]}), 
-    ('manganese content', .001, 'manganese comment', None), 
-    ('arsenic content', .004, 'arseinc comment', None), 
-    ('cobalt content', .005, 'cobalt comment', None)
-    ]
 PV_uncertainty = {'variance': .003, 'pedigreeMatrix': [1, 2, 1, 1, 1]}
 dataset, MD = append_exchange(exc, dataset, MD, 
     properties = properties, PV_uncertainty = PV_uncertainty)
