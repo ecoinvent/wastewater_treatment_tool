@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ecoSpold xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <activityDataset>
+    <activityDescription>
+	  <activity id="99948add-39df-50bd-8b74-f478abd63712" 
+	  activityNameId="1ec0e569-0949-4b57-8ccd-ebb7ffef9811" 
+	  inheritanceDepth="0" 
+	  type="1" 
+	  specialActivityType="0" 
+>
+        <activityName xml:lang="en">treatment of wastewater from ceramic production, capacity 5E9l/year</activityName>
+        <includedActivitiesStart xml:lang="en">From the discharge of municipal wastewater to the sewer system.</includedActivitiesStart>
+        <includedActivitiesEnd xml:lang="en">This activity ends with the discharge of treated wastewater to the natural environment. This activity includes the transportation to the wastewater treatment plant via the sewer system,and the treatment of the wastewater in the wastewater treatment plant. The amounts of infrastructure and consumables arealso included as inputs to the activity. The dataset does not include overload discharge or other wastewater discharged to the sewer system but ultimately not treated. By definition, wastewater not sent to the sewer system is also excluded. The production of sludge is included, but its treatment is covered by another treatment activity.</includedActivitiesEnd>
+		<generalComment>
+        	  <text xml:lang="en" index="1">This dataset represents the treatment of wastewater discharged to the sewer system from the production of ceramic</text>
+	  <text xml:lang="en" index="2">It includes the transportation of the wastewater to the wastewater treatment plant and the actual treatment</text>
+	  <text xml:lang="en" index="3">It was modelled using XYZ</text>
+
+		</generalComment>
+      </activity>
+	  <classification classificationId="a84d0ee4-d77c-4905-b876-3ef60873c763">
+        <classificationSystem xml:lang="en">ISIC rev.4 ecoinvent</classificationSystem>
+        <classificationValue xml:lang="en">3700:Sewerage</classificationValue>
+      </classification>
+      <geography geographyId="34dbbff8-88ce-11de-ad60-0019e336be3a" 
+>
+        <shortname xml:lang="en">GLO</shortname>
+		<comment>
+        	  <text xml:lang="en" index="1">This is a geography comment</text>
+
+		</comment>
+      </geography>
+      <technology  technologyLevel="3">
+		<comment>
+        	  <text xml:lang="en" index="1">The technologies modelled are x and y</text>
+	  <text xml:lang="en" index="2">They were averaged based on z</text>
+	  <text xml:lang="en" index="3">These technologies rock</text>
+
+		</comment>
+      </technology>
+      <timePeriod startDate="1995-01-31" endDate="2020-12-31" isDataValidForEntirePeriod="true">
+		<comment>
+        	  <text xml:lang="en" index="1">This is a time period comment</text>
+
+		</comment>
+	  </timePeriod>
+	  <macroEconomicScenario macroEconomicScenarioId="d9f57f0a-a01f-42eb-a57b-8f18d6635801"
+>
+        <name xml:lang="en">Business-as-Usual</name>
+      </macroEconomicScenario>
+    </activityDescription>
+	<flowData>
+	<intermediateExchange id="7ec82d5a-9679-5399-a198-f4d04d0de0a4" 
+	  unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5" 
+	  amount="-1.0" 
+intermediateExchangeId="61745944-bd0b-5790-8249-08954a775d59" productionVolumeAmount="1000000" 	  >
+        <name xml:lang="en">wastewater, from ceramic production</name>
+        <unitName xml:lang="en">m3</unitName>
+		<comment xml:lang="en">Refers to the amount of wastewater sent to the sewer system for treatment. Includes fraction (10%) of wastewater sent to sewer system but not treated in a wastewater treatment plant (e.g. overflow).</comment>		
+		<property 
+		propertyId="61745944-bd0b-5790-8249-08954a775d59" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" 		>
+          <name xml:lang="en">NEW DUMMY</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+mu="6.50128967054" varianceWithPedigreeUncertainty="666.0" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+			
+        </uncertainty>
+		
+        <comment xml:lang="en">NEW DUMMY COMMENT</comment>
+        </property>		<productionVolumeComment xml:lang="en">Yearly volume of wastewater, from ceramic production, sent to the sewer system for treatmentIncludes the fraction that is treated (90%) and the fraction that is discharged directly to the environment as overflow (10%).</productionVolumeComment>
+        <productionVolumeUncertainty>
+            <lognormal 
+meanValue="1000000" mu="13.815510558" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+			
+        </productionVolumeUncertainty>
+		
+	  <outputGroup>0</outputGroup>
+    </intermediateExchange>
+		</flowData>
+	<modellingAndValidation>
+      <representativeness 
+	  systemModelId="8b738ea0-f89e-4627-8679-433616064e82"
+percent="80" 	  >
+        <systemModelName xml:lang="en">Undefined</systemModelName>
+        <samplingProcedure xml:lang="en">This is a description of the sampling procedure, and it should be changed by IRCA</samplingProcedure>
+        <extrapolations xml:lang="en">This is a description of the sampling procedure, and it should be changed by IRCA</extrapolations>
+      </representativeness>
+    </modellingAndValidation>
+	<administrativeInformation>
+	<dataEntryBy personId="788d0176-a69c-4de0-a5d3-259866b6b100" isActiveAuthor="false" personName="[Current User]" personEmail="no@email.com"/>
+      
+	<dataGeneratorAndPublication 
+	  personId="788d0176-a69c-4de0-a5d3-259866b6b100" 
+	  personName="Pascal Lesage" 
+	  personEmail="pascal.lesage@polymtl.ca" 
+	  isCopyrightProtected="true" 
+accessRestrictedTo="1" 	  />
+	  
+	<fileAttributes 
+	  majorRelease="3" 
+	  minorRelease="4" 
+	  majorRevision="0" 
+	  minorRevision="1" 
+defaultLanguage="en" 	  >
+      </fileAttributes>
+	</administrativeInformation>
+  </activityDataset>
+	
+<usedUserMasterData xmlns="http://www.EcoInvent.org/UsedUserMasterData">
+	<intermediateExchange id="61745944-bd0b-5790-8249-08954a775d59" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">wastewater, from ceramic production</name>
+    <unitName xml:lang="en">m3</unitName>
+    <productInformation/>
+  </intermediateExchange>
+	<activityIndexEntry id="99948add-39df-50bd-8b74-f478abd63712" activityNameId="1ec0e569-0949-4b57-8ccd-ebb7ffef9811" geographyId="34dbbff8-88ce-11de-ad60-0019e336be3a" startDate="1995-01-31" endDate="2020-12-31" specialActivityType="0" systemModelId="8b738ea0-f89e-4627-8679-433616064e82" />
+</usedUserMasterData>
+</ecoSpold>
