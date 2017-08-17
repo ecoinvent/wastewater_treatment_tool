@@ -411,7 +411,7 @@ def dataframe_to_excel(folder, filename, dfs, read_me = False, feedback = False)
     #save all df with their columns
     for df, sheet_name, columns in dfs:
         #validate the types of elements
-        assert type(df) in [pandas.core.frame.DataFrame, list]
+        assert isinstance(df, pandas.DataFrame) or isinstance(df, list)
         if type(df) == list:
             #in case it was forgotten to transform from list to dataframe
             df = list_to_df(df)
@@ -497,7 +497,7 @@ def append_exchange(exc, dataset, MD, properties = [],
     if 'Environment' in exc['group']:
         ee = (exc['name'], exc['compartment'], exc['subcompartment'])
         sel = MD['ElementaryExchanges'].loc[ee]
-        if type(sel) == pandas.core.frame.DataFrame:
+        if isinstance(sel, pandas.DataFrame):
             if len(sel) > 1:
                 raise ValueError('Multiple MD entries corresponding to %s, %s, %s' % ee)
             sel = sel.iloc[0]

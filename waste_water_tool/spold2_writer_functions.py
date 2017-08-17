@@ -6,9 +6,9 @@ from lxml import objectify
 from copy import copy
 
 # Taking care of pandas version issues in unpickling...
-import pandas.core.indexes
+import pandas
 import sys
-sys.modules['pandas.indexes'] = pandas.core.indexes
+#sys.modules['pandas.indexes'] = pandas.core.indexes
 
 HTML_entities = [['&', '&amp;'],
                  ['<', '&lt;'], 
@@ -455,7 +455,7 @@ def dataframe_to_excel(folder, filename, dfs, read_me = False, feedback = False)
     #save all df with their columns
     for df, sheet_name, columns in dfs:
         #validate the types of elements
-        assert type(df) in [pandas.core.frame.DataFrame, list]
+        assert type(df) in [type(pandas.DataFrame()), list]
         if type(df) == list:
             #in case it was forgotten to transform from list to dataframe
             df = list_to_df(df)
@@ -582,7 +582,7 @@ def append_exchange(exc, #exchange dictionary, see detail below
     if 'Environment' in exc['group']:
         ee = (exc['name'], exc['compartment'], exc['subcompartment'])
         sel = MD['ElementaryExchanges'].loc[ee]
-        if type(sel) == pandas.core.frame.DataFrame:
+        if isinstance(sel, pandas.DataFrame):
             if len(sel) > 1:
                 raise ValueError('Multiple MD entries corresponding to %s, %s, %s' % ee)
             sel = sel.iloc[0]
