@@ -974,25 +974,25 @@ def get_WW_properties(xls=None):
         xls = os.path.join(root_dir, 'Documentation', 'WW_properties.xlsx')
     return pandas.read_excel(xls, sheet_name='Sheet1', index_col=1)
 
-def convert_WW_prop_to_list(df):
+def convert_WW_prop_to_list(df, new_amount_dict):
     #(property_name, amount, unit, comment, uncertainty)
     return [(i,
-             df.loc[i, 'Amount'],
+             new_amount_dict[i],
+             df.loc[i, 'comment'] +\
+                 ". Accounts for mass lost in sewer due to hydraulic overloads.",
              df.loc[i, 'unitName'],
-             df.loc[i, 'comment'],
              {
-                 'variance': df.loc[i, 'Variance'],
+                 'variance': df.loc[i, 'amount_variance'],
                  'pedigreeMatrix': [
-                     df.loc[i, 'pedigree1'],
-                     df.loc[i, 'pedigree2'],
-                     df.loc[i, 'pedigree3'],
-                     df.loc[i, 'pedigree4'],
-                     df.loc[i, 'pedigree5'],
+                     df.loc[i, 'amount_pedigree1'],
+                     df.loc[i, 'amount_pedigree2'],
+                     df.loc[i, 'amount_pedigree3'],
+                     df.loc[i, 'amount_pedigree4'],
+                     df.loc[i, 'amount_pedigree5'],
                  ]
              }
             ) for i in df.index]
 
-        
 def generate_reference_exchange(dataset,
                               exc_comment,
                               PV,
@@ -1048,7 +1048,7 @@ def generate_reference_exchange(dataset,
            })
     
     # Replace this by function to retreive properties from tool
-    properties = convert_WW_prop_to_list(get_WW_properties()) 
+    properties = convert_WW_prop_to_list(get_WW_properties())
     dataset, MD = append_exchange(exc,
                                   dataset,
                                   MD,
