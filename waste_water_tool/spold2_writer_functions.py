@@ -1095,7 +1095,22 @@ def add_grit(dataset,
         properties = [], uncertainty = uncertainty)
     return dataset
 
-
+def generate_consumables(dataset,
+                         exchange_name,
+                         amount,
+                         WW_discharged_without_treatment,
+                         uncertainty,
+                         comment,
+                         MD):
+    exc = create_empty_exchange()
+    exc.update({'group': 'FromTechnosphere',
+                'name': exchange_name,
+                'unitName': MD['IntermediateExchanges'].loc[exchange_name, 'unitName'],
+                'amount': amount * WW_discharged_without_treatment,
+                'comment': comment
+               })
+    dataset, _ = append_exchange(exc, dataset, MD, uncertainty=uncertainty)
+    return dataset
 
 def generate_ecoSpold2(dataset, template_path, filename, dump_folder):
     dataset['has_userMD'] = False
