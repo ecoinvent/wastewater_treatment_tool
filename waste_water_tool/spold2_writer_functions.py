@@ -813,7 +813,6 @@ def add_property(dataset, exc, properties, MD):
             p['propertyId'] = make_uuid(property_name)
             p['unitName'] = unit
             p['unitId'] = MD['Units'].loc[p['unitName'], 'id']
-            print("going to create new property")
             dataset['Properties'].append(GenericObject(p,
                                         'TProperty'
                                         ))
@@ -854,6 +853,7 @@ def generate_WWT_activity_name(dataset, WW_type, technology, capacity):
     name = create_WWT_activity_name(WW_type, technology, capacity)
     dataset.update({'activityName': name,
                     'WW_type': WW_type})
+    return dataset
 
 
 def generate_activityNameId(dataset, MD):
@@ -1059,7 +1059,6 @@ def generate_reference_exchange(dataset,
 
 def add_grit(dataset,
              grit_amount,
-             WW_discharged_without_treatment,
              grit_plastic_ratio,
              grit_biomass_ratio,
              grit_uncertainty,
@@ -1072,9 +1071,9 @@ def add_grit(dataset,
     exc.update({'group': 'ByProduct', 
            'name': 'waste plastic, mixture', 
            'unitName': 'kg', 
-           'amount': grit_amount * grit_plastic_ratio * (1-WW_discharged_without_treatment), 
+           'amount': grit_amount * grit_plastic_ratio, 
            'productionVolumeAmount': PV*grit_amount * grit_plastic_ratio * (1-WW_discharged_without_treatment), 
-           'productionVolumeComment': 'Calculated based on the amount and the total volume of wastewater discharged', 
+           'productionVolumeComment': 'Calculated based on the amount of wastewater treated and the amount of plastic grit per m3 treated', 
            'comment': grit_plastics_comment, 
            })
     uncertainty = grit_uncertainty
@@ -1086,8 +1085,8 @@ def add_grit(dataset,
            'name': 'waste graphical paper', 
            'unitName': 'kg',
            'amount': grit_amount * grit_biomass_ratio * (1-WW_discharged_without_treatment), 
-           'productionVolumeAmount': PV*grit_amount * grit_biomass_ratio * (1-WW_discharged_without_treatment), 
-           'productionVolumeComment': 'Calculated based on the amount and the total volume of wastewater discharged', 
+           'productionVolumeAmount': PV*grit_amount * grit_biomass_ratio, 
+           'productionVolumeComment': 'Calculated based on the amount of wastewater treated and the amount of biomass grit per m3 treated',
            'comment': grit_biomass_comment, 
            })
     uncertainty = grit_uncertainty
