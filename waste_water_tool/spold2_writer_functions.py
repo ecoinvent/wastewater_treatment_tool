@@ -548,8 +548,9 @@ def append_exchange(exc, #exchange dictionary, see detail below
     properties: list of tuples with the following data:
         (property_name, amount, comment, uncertainty)                                                 }
     `uncertainty` comes as dict with format {'variance': variance,
-                                                 'pedigreeMatrix': [x,x,x,x,x]
-                                                 }
+                                             'pedigreeMatrix': [x,x,x,x,x],
+                                             'comment': comment
+                                             }
     PV_uncertainty
     """
     # Add unitId to exchange
@@ -631,19 +632,30 @@ def append_exchange(exc, #exchange dictionary, see detail below
     dataset, exc = add_property(dataset, exc, properties, MD)
     
     if uncertainty:
-        exc = add_uncertainty(exc, uncertainty['pedigreeMatrix'], 
-            uncertainty['variance'])
+        exc = add_uncertainty(exc,
+                              uncertainty['pedigreeMatrix'],
+                              uncertainty['variance'],
+                              uncertainty['comment']
+                              )
     if PV_uncertainty:
-        exc = add_uncertainty(exc, PV_uncertainty['pedigreeMatrix'], 
-            PV_uncertainty['variance'], PV = True)
+        exc = add_uncertainty(exc,
+                              PV_uncertainty['pedigreeMatrix'],
+                              PV_uncertainty['variance'],
+                              PV_uncertainty['comment'],
+                              PV = True)
     dataset[exc['group']].append(GenericObject(exc, 'Exchange'))
     return dataset, MD
 
 def create_empty_uncertainty():
-    empty_fields = ['minValue', 'mostLikelyValue', 'maxValue', 'standardDeviation95', 'comment']
+    empty_fields = ['minValue',
+                    'mostLikelyValue',
+                    'maxValue',
+                    'standardDeviation95',
+                    'comment',
+                    ]
     return {f: None for f in empty_fields}
 
-def add_uncertainty(o, pedigreeMatrix, variance, PV = False):
+def add_uncertainty(o, pedigreeMatrix, variance, comment, PV = False):
     unc = create_empty_uncertainty()
     if PV:
         unc['field'] = 'productionVolumeUncertainty'
@@ -664,6 +676,7 @@ def add_uncertainty(o, pedigreeMatrix, variance, PV = False):
     for i in range(len(pedigreeMatrix)):
         unc['varianceWithPedigreeUncertainty'] += pedigree_factors[i, pedigreeMatrix[i]]
     unc['pedigreeMatrix'] = pedigreeMatrix
+    unc['comment'] = comment
     o[unc['field']] = GenericObject(unc, 'TUncertainty')
     return o
 
@@ -819,7 +832,10 @@ def add_property(dataset, exc, properties, MD):
         p['amount'] = amount
         p['comment'] = comment
         if not is_empty(unc):
-            p = add_uncertainty(p, unc['pedigreeMatrix'], unc['variance'])
+            p = add_uncertainty(p,
+                                unc['pedigreeMatrix'],
+                                unc['variance'],
+                                unc['uncertainty'])
         exc['properties'].append(GenericObject(p, 'TProperty'))
     return dataset, exc
 
@@ -983,13 +999,14 @@ def convert_WW_prop_to_list(df, new_amount_dict):
              df.loc[i, 'unitName'],
              {
                  'variance': df.loc[i, 'amount_variance'],
+                 'comment': df.loc[i, 'amount_uncertainty_comment'],
                  'pedigreeMatrix': [
                      df.loc[i, 'amount_pedigree1'],
                      df.loc[i, 'amount_pedigree2'],
                      df.loc[i, 'amount_pedigree3'],
                      df.loc[i, 'amount_pedigree4'],
                      df.loc[i, 'amount_pedigree5'],
-                 ]
+                 ],
              }
             ) for i in df.index]
 
@@ -1025,43 +1042,12 @@ def generate_reference_exchange(dataset,
                                   PV_uncertainty = PV_uncertainty)
     return dataset, MD
 
-def generate_reference_exchange(dataset,
-                              exc_comment,
-                              PV,
-                              PV_comment,
-                              PV_uncertainty,
-                              MD):
-    exc = create_empty_exchange()
-    if dataset['WW_type']=='average':
-        name = 'wastewater, average'
-    else:
-        name = 'wastewater, {}'.format(dataset['WW_type'])
-        
-    exc.update({
-            'group': 'ReferenceProduct',
-            'unitName': 'm3',
-            'amount': -1.,
-            'productionVolumeAmount': PV,
-            'productionVolumeComment': PV_comment, 
-           'comment': exc_comment, 
-           'name': name,
-           })
-    
-    # Replace this by function to retreive properties from tool
-    properties = convert_WW_prop_to_list(get_WW_properties())
-    dataset, MD = append_exchange(exc,
-                                  dataset,
-                                  MD,
-                                  properties = properties,
-                                  uncertainty = None,
-                                  PV_uncertainty = PV_uncertainty)
-    return dataset, MD
-
 def add_grit(dataset,
              grit_amount,
              grit_plastic_ratio,
              grit_biomass_ratio,
-             grit_uncertainty,
+             grit_platics_uncertainty,
+             grit_biomass_uncertainty,
              grit_plastics_comment,
              grit_biomass_comment,
              PV,
@@ -1076,9 +1062,12 @@ def add_grit(dataset,
            'productionVolumeComment': 'Calculated based on the amount of wastewater treated and the amount of plastic grit per m3 treated', 
            'comment': grit_plastics_comment, 
            })
-    uncertainty = grit_uncertainty
-    dataset, MD = append_exchange(exc, dataset, MD, 
-        properties = [], uncertainty = uncertainty)
+    dataset, MD = append_exchange(exc,
+                                  dataset,
+                                  MD,
+                                  properties = [],
+                                  uncertainty = grit_platics_uncertainty
+                                  )
     # biomass
     exc = create_empty_exchange()
     exc.update({'group': 'ByProduct', 
@@ -1089,9 +1078,12 @@ def add_grit(dataset,
            'productionVolumeComment': 'Calculated based on the amount of wastewater treated and the amount of biomass grit per m3 treated',
            'comment': grit_biomass_comment, 
            })
-    uncertainty = grit_uncertainty
-    dataset, MD = append_exchange(exc, dataset, MD, 
-        properties = [], uncertainty = uncertainty)
+    dataset, MD = append_exchange(exc,
+                                  dataset,
+                                  MD,
+                                  properties = [],
+                                  uncertainty = grit_biomass_uncertainty
+                                  )
     return dataset
 
 def generate_consumables(dataset,
@@ -1113,7 +1105,8 @@ def generate_consumables(dataset,
 def generate_heat_inputs(dataset,
                          total_heat,
                          fraction_from_natural_gas,
-                         heat_uncertainty,
+                         total_heat_uncertainty,
+                         fraction_from_natural_gas_uncertainty,
                          heat_NG_comment,
                          heat_other_comment,
                          MD):
@@ -1134,7 +1127,15 @@ def generate_heat_inputs(dataset,
                     'amount': total_heat * fraction_from_natural_gas,
                     'comment': heat_NG_comment
                })
-    dataset, _ = append_exchange(exc, dataset, MD, uncertainty=heat_uncertainty)
+        heat_natural_gas_uncertainty = dummy_calculate_heat_NG_uncertainty(
+                total_heat_uncertainty,
+                fraction_from_natural_gas_uncertainty
+                )                
+                
+        dataset, _ = append_exchange(exc,
+                                     dataset,
+                                     MD,
+                                     uncertainty=heat_natural_gas_uncertainty)
     
     #Other
     if fraction_from_natural_gas < 1:
@@ -1151,7 +1152,14 @@ def generate_heat_inputs(dataset,
                     'amount': total_heat * (1-fraction_from_natural_gas),
                     'comment': heat_other_comment
                })
-    dataset, _ = append_exchange(exc, dataset, MD, uncertainty=heat_uncertainty)    
+            heat_other_uncertainty = dummy_calculate_heat_NG_uncertainty(
+            total_heat_uncertainty,
+            fraction_from_natural_gas_uncertainty
+            )
+            dataset, _ = append_exchange(exc,
+                                         dataset,
+                                         MD,
+                                         uncertainty=heat_other_uncertainty)    
     return dataset
 
 def generate_ecoSpold2(dataset, template_path, filename, dump_folder):
