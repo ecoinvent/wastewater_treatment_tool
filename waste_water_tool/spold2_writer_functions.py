@@ -1112,6 +1112,61 @@ def generate_consumables(dataset,
     dataset, _ = append_exchange(exc, dataset, MD, uncertainty=uncertainty)
     return dataset
 
+def generate_heat_inputs(dataset,
+                         total_heat,
+                         fraction_from_natural_gas,
+                         WW_discharged_without_treatment,
+                         heat_uncertainty,
+                         heat_NG_comment,
+                         heat_other_comment,
+                         MD):
+    assert 0 <= fraction_from_natural_gas <= 1, "fraction_from_natural_gas must be a number between 0 and 1"
+    
+    # Natural gas
+    if fraction_from_natural_gas > 0:
+        if heat_NG_comment == 'default':
+            heat_NG_comment = "Heat input associated with wastewater treatment."
+            if fraction_from_natural_gas != 1:
+                heat_NG_comment += "Based on total heat requirement ({:2E} MJ, calculated) and an assumed "\
+                                    "split between heat from natural gas ({:2}) and from other sources ({:2})".format(
+                                        total_heat, fraction_from_natural_gas, 1-fraction_from_natural_gas)
+            if WW_discharged_without_treatment > 0:
+                heat_NG_comment += "Accounts for the {:2}% of discharged wastewater assumed not to "\
+                                   "be treated at the wastewater treatment plant".format(WW_discharged_without_treatment*100)
+                
+        exc = create_empty_exchange()
+        exc.update({'group': 'FromTechnosphere',
+                    'name': 'heat, district or industrial, natural gas',
+                    'unitName': 'MJ',
+                    'amount': total_heat * fraction_from_natural_gas * WW_discharged_without_treatment,
+                    'comment': heat_NG_comment
+               })
+    dataset, _ = append_exchange(exc, dataset, MD, uncertainty=heat_uncertainty)
+    
+    #Other
+    if fraction_from_natural_gas < 1:
+        if heat_other_comment == 'default':
+            heat_other_comment = "Heat input associated with wastewater treatment."
+            if fraction_from_natural_gas != 1:
+                heat_other_comment += "Based on total heat requirement ({:2E} MJ, calculated) and an assumed "\
+                                      "split between heat from natural gas ({:2}) and from other sources ({:2})".format(
+                                          total_heat, fraction_from_natural_gas, 1-fraction_from_natural_gas)
+            if WW_discharged_without_treatment > 0:
+                heat_other_comment += "Accounts for the {:2}% of discharged wastewater assumed not to "\
+                                      "be treated at the wastewater treatment plant".format(
+                                          WW_discharged_without_treatment*100)
+                
+        exc = create_empty_exchange()
+        exc.update({'group': 'FromTechnosphere',
+                    'name': 'heat, district or industrial, other than natural gas',
+                    'unitName': 'MJ',
+                    'amount': total_heat * (1-fraction_from_natural_gas) * WW_discharged_without_treatment,
+                    'comment': heat_other_comment
+               })
+    dataset, _ = append_exchange(exc, dataset, MD, uncertainty=heat_uncertainty)
+    
+    return dataset
+
 def generate_ecoSpold2(dataset, template_path, filename, dump_folder):
     dataset['has_userMD'] = False
     for field in ['ActivityNames', 'Sources', 'activityIndexEntry', 'Persons', 'IntermediateExchanges']:
