@@ -1097,7 +1097,6 @@ def add_grit(dataset,
 def generate_consumables(dataset,
                          exchange_name,
                          amount,
-                         WW_discharged_without_treatment,
                          uncertainty,
                          comment,
                          MD):
@@ -1105,7 +1104,7 @@ def generate_consumables(dataset,
     exc.update({'group': 'FromTechnosphere',
                 'name': exchange_name,
                 'unitName': MD['IntermediateExchanges'].loc[exchange_name, 'unitName'],
-                'amount': amount * WW_discharged_without_treatment,
+                'amount': amount,
                 'comment': comment
                })
     dataset, _ = append_exchange(exc, dataset, MD, uncertainty=uncertainty)
@@ -1114,7 +1113,6 @@ def generate_consumables(dataset,
 def generate_heat_inputs(dataset,
                          total_heat,
                          fraction_from_natural_gas,
-                         WW_discharged_without_treatment,
                          heat_uncertainty,
                          heat_NG_comment,
                          heat_other_comment,
@@ -1128,16 +1126,12 @@ def generate_heat_inputs(dataset,
             if fraction_from_natural_gas != 1:
                 heat_NG_comment += "Based on total heat requirement ({:2E} MJ, calculated) and an assumed "\
                                     "split between heat from natural gas ({:2}) and from other sources ({:2})".format(
-                                        total_heat, fraction_from_natural_gas, 1-fraction_from_natural_gas)
-            if WW_discharged_without_treatment > 0:
-                heat_NG_comment += "Accounts for the {:2}% of discharged wastewater assumed not to "\
-                                   "be treated at the wastewater treatment plant".format(WW_discharged_without_treatment*100)
-                
+                                        total_heat, fraction_from_natural_gas, 1-fraction_from_natural_gas)                
         exc = create_empty_exchange()
         exc.update({'group': 'FromTechnosphere',
                     'name': 'heat, district or industrial, natural gas',
                     'unitName': 'MJ',
-                    'amount': total_heat * fraction_from_natural_gas * WW_discharged_without_treatment,
+                    'amount': total_heat * fraction_from_natural_gas,
                     'comment': heat_NG_comment
                })
     dataset, _ = append_exchange(exc, dataset, MD, uncertainty=heat_uncertainty)
@@ -1149,21 +1143,15 @@ def generate_heat_inputs(dataset,
             if fraction_from_natural_gas != 1:
                 heat_other_comment += "Based on total heat requirement ({:2E} MJ, calculated) and an assumed "\
                                       "split between heat from natural gas ({:2}) and from other sources ({:2})".format(
-                                          total_heat, fraction_from_natural_gas, 1-fraction_from_natural_gas)
-            if WW_discharged_without_treatment > 0:
-                heat_other_comment += "Accounts for the {:2}% of discharged wastewater assumed not to "\
-                                      "be treated at the wastewater treatment plant".format(
-                                          WW_discharged_without_treatment*100)
-                
+                                          total_heat, fraction_from_natural_gas, 1-fraction_from_natural_gas)                
         exc = create_empty_exchange()
         exc.update({'group': 'FromTechnosphere',
                     'name': 'heat, district or industrial, other than natural gas',
                     'unitName': 'MJ',
-                    'amount': total_heat * (1-fraction_from_natural_gas) * WW_discharged_without_treatment,
+                    'amount': total_heat * (1-fraction_from_natural_gas),
                     'comment': heat_other_comment
                })
-    dataset, _ = append_exchange(exc, dataset, MD, uncertainty=heat_uncertainty)
-    
+    dataset, _ = append_exchange(exc, dataset, MD, uncertainty=heat_uncertainty)    
     return dataset
 
 def generate_ecoSpold2(dataset, template_path, filename, dump_folder):
