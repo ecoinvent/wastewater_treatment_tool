@@ -592,7 +592,7 @@ def append_exchange(exc, #exchange dictionary, see detail below
         exc['subcompartmentId'] = MD['Compartments'].loc[ee[1:], 'subcompartmentId']
         exc['groupCode'] = 4
         if ee in MD['ElementaryExchanges prop.'].index:
-            property_sel = MD['ElementaryExchanges prop.'].loc[ee]
+            property_sel = MD['ElementaryExchanges prop.'].loc[[ee]]
         else:
             property_sel = pandas.DataFrame()
    
@@ -609,7 +609,7 @@ def append_exchange(exc, #exchange dictionary, see detail below
         else:
             raise ValueError('"%s" is not a valid group' % exc['group'])
         if exc['name'] in MD['IntermediateExchanges prop.'].index:
-            property_sel = MD['IntermediateExchanges prop.'].loc[exc['name']]
+            property_sel = MD['IntermediateExchanges prop.'].loc[[exc['name']]]
         else:
             property_sel = pandas.DataFrame()
         #'add classifications': issue #1
