@@ -835,7 +835,7 @@ def add_property(dataset, exc, properties, MD):
             p = add_uncertainty(p,
                                 unc['pedigreeMatrix'],
                                 unc['variance'],
-                                unc['uncertainty'])
+                                unc['comment'])
         exc['properties'].append(GenericObject(p, 'TProperty'))
     return dataset, exc
 
@@ -990,16 +990,30 @@ def get_WW_properties(xls=None):
         xls = os.path.join(root_dir, 'Documentation', 'WW_properties.xlsx')
     return pandas.read_excel(xls, sheet_name='Sheet1', index_col=1)
 
-def convert_WW_prop_to_list(df, new_amount_dict):
-    #(property_name, amount, unit, comment, uncertainty)
+def calc_overflow_losses_dict(WW_prop_df,
+                              overload_loss_fraction_particulate,
+                              overload_loss_fraction_dissolved):
+    return {prop:WW_prop_df.loc[prop, 'Amount']*(
+        WW_prop_df.loc[prop, 'Particulate_fraction']*overload_loss_fraction_particulate\
+        + WW_prop_df.loc[prop, 'Dissolved_fraction']*overload_loss_fraction_dissolved)
+            for prop in WW_prop_df.index
+           }
+
+def generate_properties_list(df, overflow_loss_dict):
+    # Generate list of properties tuples to append to reference exchange
+    # tuple defined as (property_name, amount, unit, comment, uncertainty)
+    # Amount is corrected for losses to hydraulic overflow
     return [(i,
-             new_amount_dict[i],
+             df.loc[i, 'Amount'] - overflow_loss_dict[i],
+             df.loc[i, 'unitName'],
              df.loc[i, 'comment'] +\
                  ". Accounts for mass lost in sewer due to hydraulic overloads.",
-             df.loc[i, 'unitName'],
              {
                  'variance': df.loc[i, 'amount_variance'],
-                 'comment': df.loc[i, 'amount_uncertainty_comment'],
+                 'comment': "Accounts for the uncertainty of the property "\
+                            "amount only, assuming the contribution to "\
+                            "uncertainty of losses due to hydraulic overflow "\
+                            "are negligible",
                  'pedigreeMatrix': [
                      df.loc[i, 'amount_pedigree1'],
                      df.loc[i, 'amount_pedigree2'],
@@ -1008,13 +1022,20 @@ def convert_WW_prop_to_list(df, new_amount_dict):
                      df.loc[i, 'amount_pedigree5'],
                  ],
              }
-            ) for i in df.index]
+            ) for i in df.index if df.loc[i, 'Amount'] > 0]
+
+
 
 def generate_reference_exchange(dataset,
                               exc_comment,
-                              PV,
+                              total_PV,
+                              total_PV_uncertainty,
+                              untreated_fraction,
+                              untreated_fraction_uncertainty,
                               PV_comment,
-                              PV_uncertainty,
+                              WW_prop_df,
+                              overload_loss_fraction_particulate,
+                              overload_loss_fraction_dissolved,
                               MD):
     exc = create_empty_exchange()
     if dataset['WW_type']=='average':
@@ -1026,18 +1047,28 @@ def generate_reference_exchange(dataset,
             'group': 'ReferenceProduct',
             'unitName': 'm3',
             'amount': -1.,
-            'productionVolumeAmount': PV,
+            'productionVolumeAmount': total_PV * (1 - untreated_fraction),
             'productionVolumeComment': PV_comment, 
            'comment': exc_comment, 
            'name': name,
            })
     
-    # Replace this by function to retreive properties from tool
-    properties = convert_WW_prop_to_list(get_WW_properties()) 
+    #PV_uncertainty
+    PV_uncertainty = dummy_calculate_uncertainty_treatment_PV(total_PV_uncertainty,
+                                                              untreated_fraction_uncertainty
+                                                              )
+    # Properties
+    overflow_losses_dict = calc_overflow_losses_dict(WW_prop_df,
+                                                     overload_loss_fraction_particulate,
+                                                     overload_loss_fraction_dissolved
+                                                     )
+    properties_list = generate_properties_list(WW_prop_df, overflow_losses_dict)
+    
+    # Append exchange to dataset
     dataset, MD = append_exchange(exc,
                                   dataset,
                                   MD,
-                                  properties = properties,
+                                  properties_list,
                                   uncertainty = None,
                                   PV_uncertainty = PV_uncertainty)
     return dataset, MD
@@ -1110,7 +1141,8 @@ def generate_heat_inputs(dataset,
                          heat_NG_comment,
                          heat_other_comment,
                          MD):
-    assert 0 <= fraction_from_natural_gas <= 1, "fraction_from_natural_gas must be a number between 0 and 1"
+    assert 0 <= fraction_from_natural_gas <= 1,\
+        "fraction_from_natural_gas must be a number between 0 and 1"
     
     # Natural gas
     if fraction_from_natural_gas > 0:
@@ -1152,14 +1184,14 @@ def generate_heat_inputs(dataset,
                     'amount': total_heat * (1-fraction_from_natural_gas),
                     'comment': heat_other_comment
                })
-            heat_other_uncertainty = dummy_calculate_heat_NG_uncertainty(
-            total_heat_uncertainty,
-            fraction_from_natural_gas_uncertainty
-            )
-            dataset, _ = append_exchange(exc,
-                                         dataset,
-                                         MD,
-                                         uncertainty=heat_other_uncertainty)    
+        heat_other_uncertainty = dummy_calculate_heat_NG_uncertainty(
+                total_heat_uncertainty,
+                fraction_from_natural_gas_uncertainty
+                )
+        dataset, _ = append_exchange(exc,
+                                     dataset,
+                                     MD,
+                                     uncertainty=heat_other_uncertainty)    
     return dataset
 
 def generate_ecoSpold2(dataset, template_path, filename, dump_folder):
@@ -1262,4 +1294,14 @@ env = Environment(loader=FileSystemLoader(template_path),
                   trim_blocks = True)
 rendered = recursive_rendering(dataset, env, result_folder, result_filename)
 """
-
+def dummy_calculate_uncertainty_treatment_PV(
+    total_PV_uncertainty,
+    untreated_fraction_uncertainty):
+        # CODE TO BE WRITTEN, pending confirmation of approach
+        # Return valid but bogus values for now
+    return {
+        'variance':0.01,
+        'pedigreeMatrix':[2,4,3,2,4],
+        'comment':"Accounts for the uncertainty of total wastewater "\
+                  "discharged and of excluded untreated fraction"
+            }
