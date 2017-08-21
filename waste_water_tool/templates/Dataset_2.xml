@@ -97,6 +97,9 @@
 	{% for e in Properties %}
 	{{ e }}
 	{% endfor %}
+	{% for e in Parameters %}
+	{{ e }}
+	{% endfor %}
 	{% for e in IntermediateExchanges %}
 	{{ e }}
 	{% endfor %}
