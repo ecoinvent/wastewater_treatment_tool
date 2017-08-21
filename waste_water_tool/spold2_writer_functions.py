@@ -42,7 +42,6 @@ def make_uuid(l):
 def recursive_rendering(e, env, result_folder, result_filename):
     if type(e) == GenericObject:
         template = env.get_template(e.template_name)
-        print(template)
         attr_list = set([a for a in dir(e) if '__' not in a])
         attr_list.difference_update(set(['render', 'template_name']))
         rendered = {attribute: recursive_rendering(getattr(e, attribute), 
@@ -1034,6 +1033,7 @@ def generate_reference_exchange(dataset,
                               untreated_fraction_uncertainty,
                               PV_comment,
                               WW_prop_df,
+                              WW_obligatory_properties,
                               overload_loss_fraction_particulate,
                               overload_loss_fraction_dissolved,
                               MD):
@@ -1063,6 +1063,7 @@ def generate_reference_exchange(dataset,
                                                      overload_loss_fraction_dissolved
                                                      )
     properties_list = generate_properties_list(WW_prop_df, overflow_losses_dict)
+    properties_list += WW_obligatory_properties
     
     # Append exchange to dataset
     dataset, MD = append_exchange(exc,
@@ -1077,11 +1078,13 @@ def add_grit(dataset,
              grit_amount,
              grit_plastic_ratio,
              grit_biomass_ratio,
-             grit_platics_uncertainty,
-             grit_biomass_uncertainty,
+             total_grit_uncertainty,
+             grit_plastics_fraction_uncertainty,
+             grit_biomass_fraction_uncertainty,
              grit_plastics_comment,
              grit_biomass_comment,
-             PV,
+             WW_PV,
+             untreated_fraction,
              MD):
     # plastic
     exc = create_empty_exchange()
@@ -1089,32 +1092,64 @@ def add_grit(dataset,
            'name': 'waste plastic, mixture', 
            'unitName': 'kg', 
            'amount': grit_amount * grit_plastic_ratio, 
-           'productionVolumeAmount': PV*grit_amount * grit_plastic_ratio * (1-WW_discharged_without_treatment), 
+           'productionVolumeAmount': WW_PV*grit_amount * grit_plastic_ratio * (1-untreated_fraction), 
            'productionVolumeComment': 'Calculated based on the amount of wastewater treated and the amount of plastic grit per m3 treated', 
            'comment': grit_plastics_comment, 
            })
+    grit_plastics_uncertainty = dummy_grit_uncertainty(total_grit_uncertainty,
+                                                       grit_plastics_fraction_uncertainty)
     dataset, MD = append_exchange(exc,
                                   dataset,
                                   MD,
                                   properties = [],
-                                  uncertainty = grit_platics_uncertainty
+                                  uncertainty = grit_plastics_uncertainty
                                   )
     # biomass
     exc = create_empty_exchange()
     exc.update({'group': 'ByProduct', 
            'name': 'waste graphical paper', 
            'unitName': 'kg',
-           'amount': grit_amount * grit_biomass_ratio * (1-WW_discharged_without_treatment), 
-           'productionVolumeAmount': PV*grit_amount * grit_biomass_ratio, 
+           'amount': grit_amount * grit_biomass_ratio * (1-untreated_fraction), 
+           'productionVolumeAmount': WW_PV*grit_amount * grit_biomass_ratio, 
            'productionVolumeComment': 'Calculated based on the amount of wastewater treated and the amount of biomass grit per m3 treated',
            'comment': grit_biomass_comment, 
            })
+    grit_biomass_uncertainty = dummy_grit_uncertainty(total_grit_uncertainty,
+                                                      grit_biomass_fraction_uncertainty)
+
     dataset, MD = append_exchange(exc,
                                   dataset,
                                   MD,
                                   properties = [],
                                   uncertainty = grit_biomass_uncertainty
                                   )
+    return dataset
+
+def generate_sludge(dataset,
+                    amount,
+                    uncertainty,
+                    comment,
+                    properties,
+                    WW_PV,
+                    untreated_fraction,
+                    PV_uncertainty,
+                    PV_comment,
+                    MD):
+    exc = create_empty_exchange()
+    exc.update({'group': 'ByProduct',
+                'name': "sludge, from the {}".format(dataset['activityName']),
+                'unitName': "kg",
+                'amount': amount,
+                'comment': comment,
+                'productionVolumeAmount': WW_PV * (1-untreated_fraction) * amount, 
+                'productionVolumeComment': PV_comment,
+               })
+    dataset, _ = append_exchange(exc,
+                                 dataset,
+                                 MD,
+                                 properties=properties,
+                                 uncertainty=uncertainty,
+                                 PV_uncertainty = PV_uncertainty)
     return dataset
 
 def generate_consumables(dataset,
@@ -1128,7 +1163,7 @@ def generate_consumables(dataset,
                 'name': exchange_name,
                 'unitName': MD['IntermediateExchanges'].loc[exchange_name, 'unitName'],
                 'amount': amount,
-                'comment': comment
+                'comment': comment,
                })
     dataset, _ = append_exchange(exc, dataset, MD, uncertainty=uncertainty)
     return dataset
@@ -1159,10 +1194,14 @@ def generate_heat_inputs(dataset,
                     'amount': total_heat * fraction_from_natural_gas,
                     'comment': heat_NG_comment
                })
-        heat_natural_gas_uncertainty = dummy_calculate_heat_NG_uncertainty(
-                total_heat_uncertainty,
-                fraction_from_natural_gas_uncertainty
-                )                
+        
+        if fraction_from_natural_gas == 1:
+            heat_natural_gas_uncertainty = total_heat_uncertainty
+        else:
+            heat_natural_gas_uncertainty = dummy_calculate_heat_NG_uncertainty(
+                    total_heat_uncertainty,
+                    fraction_from_natural_gas_uncertainty
+                    )                
                 
         dataset, _ = append_exchange(exc,
                                      dataset,
@@ -1184,15 +1223,95 @@ def generate_heat_inputs(dataset,
                     'amount': total_heat * (1-fraction_from_natural_gas),
                     'comment': heat_other_comment
                })
-        heat_other_uncertainty = dummy_calculate_heat_NG_uncertainty(
-                total_heat_uncertainty,
-                fraction_from_natural_gas_uncertainty
-                )
+        
+        if fraction_from_natural_gas == 0:
+            heat_other_uncertainty = total_heat_uncertainty
+        else:
+            heat_other_uncertainty  = dummy_calculate_heat_NG_uncertainty(
+                    total_heat_uncertainty,
+                    fraction_from_natural_gas_uncertainty
+                    )                        
+
         dataset, _ = append_exchange(exc,
                                      dataset,
                                      MD,
                                      uncertainty=heat_other_uncertainty)    
     return dataset
+
+def generate_electricity_input(dataset,
+                         amount,
+                         uncertainty,
+                         comment,
+                         MD):
+    exc = create_empty_exchange()
+    exc.update({'group': 'FromTechnosphere',
+                'name': 'electricity, low voltage',
+                'unitName': 'kWh',
+                'amount': amount,
+                'comment': comment
+               })
+    dataset, _ = append_exchange(exc, dataset, MD, uncertainty=uncertainty)
+    return dataset
+
+def add_elementary_flow(dataset, 
+                        elementary_flow,
+                        compartment,
+                        subcompartment,
+                        amount,
+                        uncertainty,
+                        comment,
+                        MD):
+    exc = create_empty_exchange()
+    exc.update({'group': 'ToEnvironment', 
+                'name': elementary_flow, 
+               'compartment': compartment, 
+               'subcompartment': subcompartment, 
+               'unitName': MD['ElementaryExchanges'].loc[
+                       (elementary_flow, compartment, subcompartment),
+                       'unitName'
+                       ],
+               'amount': amount, 
+               'comment': comment, 
+               })
+    dataset, MD = append_exchange(exc, dataset, MD, uncertainty=uncertainty)
+    return dataset
+
+def dummy_calculate_uncertainty_treatment_PV(
+    total_PV_uncertainty,
+    untreated_fraction_uncertainty):
+        # CODE TO BE WRITTEN, pending confirmation of approach
+        # Return valid but bogus values for now
+    return {
+        'variance':0.01,
+        'pedigreeMatrix':[2,4,3,2,4],
+        'comment':"Accounts for the uncertainty of total wastewater "\
+                  "discharged and of excluded untreated fraction"
+            }
+def dummy_calculate_heat_NG_uncertainty(
+                total_heat_uncertainty,
+                fraction_from_natural_gas_uncertainty
+                ):
+            # CODE TO BE WRITTEN, pending confirmation of approach
+        # Return valid but bogus values for now
+    return {
+        'variance':0.01,
+        'pedigreeMatrix':[2,4,3,2,4],
+        'comment':"Accounts for the uncertainty of total heat required "\
+                  "and of fraction of that heat coming from natural gas"
+            }
+    
+def dummy_grit_uncertainty(
+                total_grit_uncertainty,
+                grit_fraction_uncertainty
+                ):
+            # CODE TO BE WRITTEN, pending confirmation of approach
+        # Return valid but bogus values for now
+    return {
+        'variance':0.01,
+        'pedigreeMatrix':[2,4,3,2,4],
+        'comment':"Accounts for the uncertainty of total grit "\
+                  "and of the split of this grit that is plastics vs. biomass"
+            }
 
 def generate_ecoSpold2(dataset, template_path, filename, dump_folder):
     dataset['has_userMD'] = False
@@ -1213,95 +1332,4 @@ def generate_ecoSpold2(dataset, template_path, filename, dump_folder):
                       lstrip_blocks = True, 
                       trim_blocks = True)
     rendered = recursive_rendering(dataset, env, dump_folder, filename)
-
-"""
-
-#filling with exchanges
-#ReferenceProduct example
-
-PV_uncertainty = {'variance': .003, 'pedigreeMatrix': [1, 2, 1, 1, 1]}
-dataset, MD = append_exchange(exc, dataset, MD, 
-    properties = properties, PV_uncertainty = PV_uncertainty)
-
-#ByProduct example
-exc = create_empty_exchange()
-exc.update({'group': 'ByProduct', 
-       'name': 'sludge from dinosaur zoo', 
-       'unitName': 'kg', 
-       'amount': 0.4, 
-       'productionVolumeAmount': 8000., 
-       'productionVolumeComment': 'production volume comment', 
-       'comment': 'exchange comment', 
-       })
-uncertainty = {'variance': .005, 'pedigreeMatrix': [1, 2, 1, 1, 5]}
-dataset, MD = append_exchange(exc, dataset, MD, 
-    properties = properties, uncertainty = uncertainty)
-
-#FromEnvironment example
-exc = create_empty_exchange()
-exc.update({'group': 'FromEnvironment', 
-       'name': 'Oxygen', 
-       'compartment': 'natural resource', 
-       'subcompartment': 'in air', 
-       'unitName': 'kg', 
-       'amount': 0.002, 
-       'comment': 'exchange comment', 
-       })
-dataset, MD = append_exchange(exc, dataset, MD)
-
-#ToEnvironment example
-exc = create_empty_exchange()
-exc.update({'group': 'ToEnvironment', 
-       'name': 'Carbon dioxide, fossil', 
-       'compartment': 'air', 
-       'subcompartment': 'unspecified', 
-       'unitName': 'kg', 
-       'amount': 0.02, 
-       'comment': 'exchange comment', 
-       })
-dataset, MD = append_exchange(exc, dataset, MD)
-
-#FromTechnosphere example
-exc = create_empty_exchange()
-exc.update({'group': 'FromTechnosphere', 
-       'name': 'electricity, medium voltage', 
-       'unitName': 'kWh', 
-       'amount': 2.3, 
-       'comment': 'exchange comment', 
-       })
-dataset, MD = append_exchange(exc, dataset, MD)
-dataset['exchanges'] = []
-for group in ['ReferenceProduct', 'ByProduct', 'FromTechnosphere', 'FromEnvironment', 'ToEnvironment']:
-    #groups need to appear in a specific order
-    dataset['exchanges'].extend(dataset[group])
-
-#do the new exchange property in MD? Issue #3
-
-dataset['has_userMD'] = False
-for field in ['ActivityNames', 'Sources', 'activityIndexEntry', 'Persons', 'IntermediateExchanges']:
-    if field in dataset and len(dataset[field]) > 0:
-        dataset['has_userMD'] = 'oui'
-        break
     
-result_folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'result_folder')
-result_filename = 'test.spold'
-dataset = GenericObject(dataset, 'Dataset')
-#loading the template environment
-template_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'templates')
-env = Environment(loader=FileSystemLoader(template_path), 
-                  keep_trailing_newline = True, 
-                  lstrip_blocks = True, 
-                  trim_blocks = True)
-rendered = recursive_rendering(dataset, env, result_folder, result_filename)
-"""
-def dummy_calculate_uncertainty_treatment_PV(
-    total_PV_uncertainty,
-    untreated_fraction_uncertainty):
-        # CODE TO BE WRITTEN, pending confirmation of approach
-        # Return valid but bogus values for now
-    return {
-        'variance':0.01,
-        'pedigreeMatrix':[2,4,3,2,4],
-        'comment':"Accounts for the uncertainty of total wastewater "\
-                  "discharged and of excluded untreated fraction"
-            }
