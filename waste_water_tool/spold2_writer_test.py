@@ -84,6 +84,40 @@ total_PV_uncertainty= {
         'pedigreeMatrix':[2,4,3,2,4]
         }
 
+# Grit
+grit_total_amount = 0.031 #kg/m3 in WWTP
+grit_plastic_ratio = 0.5
+grit_biomass_ratio = 0.5
+total_grit_uncertainty = {'variance':0.0006, 'pedigreeMatrix':[1,3,5,5,1], 'comment': ""}
+fraction_grit_biomass_uncertainty = {'variance':0.0006, 'pedigreeMatrix':[1,3,5,5,1], 'comment': ""}
+grit_plastics_fraction_uncertainty = {'variance':0.0006, 'pedigreeMatrix':[1,3,5,5,1], 'comment': ""}
+
+# Consumables
+treatDS_consumable_exchange_name = 'lime'
+treatDS_consumable_amount = 0.42 #
+treatDS_consumable_uncertainty = {'variance': 0.0006, 'pedigreeMatrix': [2, 4, 3, 3, 1], 'comment':"Comment about the uncertainty"}
+treatDS_consumable_comment = "Calcium hydroxide (Ca(OH)2) used for alkalinity addition and pH adjustment for metals removal. Amount calculated based on technology mix and wastewater properties."
+
+# Heat
+treatDS_total_heat = 10
+treatDS_fraction_from_natural_gas = 0.8
+treatDS_heat_uncertainty = {'variance': 0.0006,
+                            'pedigreeMatrix': [2, 4, 3, 3, 1],
+                            'comment': ""} # Placeholder
+treatDS_heat_from_natrual_gas_uncertainty = {'variance': 0.0006,
+                                             'pedigreeMatrix': [2, 4, 3, 3, 1],
+                                             'comment': ""} # Placeholder
+treatDS_heat_NG_comment = "default" # Automatically generate comment, can be overridden
+treatDS_heat_other_comment = "default" # Automatically generate comment, can be overridden
+
+# Electricity
+treatDS_electricity_amount = 2
+treatDS_electricity_uncertainty = {'variance': 0.0006,
+                                   'pedigreeMatrix': [2, 4, 3, 3, 1],
+                                   'comment':""}
+treatDS_electricity_comment="Electricity consumed by the wastewater treatment plant"
+
+
 
 """
 XXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -123,6 +157,22 @@ if untreated_fraction != 0:
     "directly to the environment ({:.0f}%).".format(
         untreated_fraction*100)
 
+# Grit
+grit_plastics_comment_default = "Amount of plastics removed from wastewater. Based on an assumed {} kg/m3 of grit removed, "\
+                                " and an assumed {:2}% of the grit that is plastics".format(grit_default_total_amount,
+                                                                                grit_default_plastic_ratio*100)
+grit_biomass_comment_default = "Amount of biomass  removed from wastewater. Based on an assumed {} kg/m3 of grit removed, "\
+                                " and an assumed {:2}% of the grit that is biomass. "\
+                                "Biomass waste management modelled as paper waste management".format(
+                                    grit_default_total_amount,
+                                    grit_default_biomass_ratio*100)
+                                
+# Electricity
+treatDS_electricity_amount = 2
+treatDS_electricity_uncertainty = {'variance': 0.0006,
+                                   'pedigreeMatrix': [2, 4, 3, 3, 1],
+                                   'comment':""}
+treatDS_electricity_comment='default'
 
 """
 XXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -212,3 +262,40 @@ treatment_dataset, MD = generate_reference_exchange(treatment_dataset,
                                                     overload_loss_fraction_particulate,
                                                     overload_loss_fraction_dissolved,
                                                     MD)
+
+# Grit
+treatment_dataset = add_grit(treatment_dataset,
+                             grit_total_amount,
+                             grit_plastic_ratio,
+                             grit_biomass_ratio,
+                             total_grit_uncertainty,
+                             fraction_grit_biomass_uncertainty,
+                             grit_plastics_fraction_uncertainty,
+                             grit_plastics_comment,
+                             grit_biomass_comment,
+                             PV,
+                             MD)
+
+# Lime (as a consumable example)
+treatment_dataset = generate_consumables(treatment_dataset,
+                                         consumable_example_exchange_name,
+                                         consumable_example_amount,
+                                         consumable_example_uncertainty,
+                                         consumable_example_comment,
+                                         MD)
+
+# Heat
+treatment_dataset = generate_heat_inputs(treatment_dataset,
+                                         treatDS_total_heat,
+                                         treatDS_fraction_from_natural_gas,
+                                         treatDS_heat_uncertainty,
+                                         treatDS_heat_from_natrual_gas_uncertainty,
+                                         treatDS_heat_NG_comment,
+                                         treatDS_heat_other_comment,
+                                         MD)
+
+treatment_dataset = generate_electricity(treatment_dataset,
+                                         treatDS_electricity_amount,
+                                         treatDS_electricity_uncertainty,
+                                         treatDS_electricity_comment,
+                                         MD)
