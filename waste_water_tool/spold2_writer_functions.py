@@ -50,6 +50,8 @@ def recursive_rendering(e, env, result_folder, result_filename):
         rendered = {attribute: recursive_rendering(getattr(e, attribute), 
              env, result_folder, result_filename) for attribute in attr_list}
         rendered = template.render(**rendered)
+        if '\ufeff' in rendered:
+            rendered = rendered.replace('\ufeff', '')
         if e.template_name == 'Dataset_2.xml':
             writer = open(os.path.join(result_folder, result_filename), 'w', encoding = 'utf-8')
             writer.write(rendered)
@@ -690,7 +692,7 @@ def new_intermediate_exchange(dataset, MD, exc):
     #add entry to user MD
     if tab not in dataset:
         dataset[tab] = []
-    dataset[tab].append(GenericObject(to_add, tab))
+    dataset[tab].append(GenericObject(to_add, 'user_MD_IntermediateExchanges'))
     #add entry to MD
     new_entry = list_to_df([to_add]).set_index('name')
     MD['IntermediateExchanges'] = pandas.concat([MD[tab], new_entry])
@@ -829,7 +831,7 @@ def add_property(dataset, exc, properties, MD):
             p['unitName'] = unit
             p['unitId'] = MD['Units'].loc[p['unitName'], 'id']
             dataset['Properties'].append(GenericObject(p,
-                                        'TProperty'
+                                        'user_MD_Properties'
                                         ))
         p['amount'] = amount
         p['comment'] = comment
@@ -890,7 +892,7 @@ def generate_activityNameId(dataset, MD):
         d = {'id': activityNameId, 
              'name': dataset['activityName']}
         dataset.update({'activityNameId' : activityNameId,
-                        'ActivityNames': [GenericObject(d, 'ActivityNames')]
+                        'ActivityNames': [GenericObject(d, 'user_MD_ActivityNames')]
                         })
         
 def generate_geography(dataset, MD, geography):
@@ -984,7 +986,7 @@ def generate_activityIndex(dataset):
          'specialActivityType': dataset['specialActivityType'],
          'systemModelId': '8b738ea0-f89e-4627-8679-433616064e82',
          }
-    dataset['ActivityIndex'] = [GenericObject(d, 'ActivityIndex')]
+    dataset['ActivityIndex'] = [GenericObject(d, 'user_MD_ActivityIndex')]
 
 def get_WW_properties(xls=None):
     # From excel for now

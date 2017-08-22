@@ -1,0 +1,14 @@
+﻿<elementaryExchange id="{{ id }}" unitId="{{ unitId }}"{% if casNumber %} casNumber="{{ casNumber }}"{% endif %}>
+    <name xml:lang="en">{{ name }}</name>
+    <unitName xml:lang="en">{{ unitName }}</unitName>
+    <compartment subcompartmentId="{{ subcompartmentId }}">
+      <compartment xml:lang="en">{{ compartment }}</compartment>
+      <subcompartment xml:lang="en">{{ subcompartment }}</subcompartment>
+    </compartment>
+    {% if synonym %}{% for s in synonym %}
+    <synonym xml:lang="en">{{ s }}</synonym>
+    {% endfor %}{% endif %}
+    {% if properties %}{% for p in properties %}
+    {{ p }}
+    {% endfor %}{% endif %}
+  </elementaryExchange>
