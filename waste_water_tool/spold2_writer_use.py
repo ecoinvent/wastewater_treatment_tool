@@ -157,7 +157,15 @@ def get_current_MD():
         dummy = ''
         folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'documentation')
         build_MD(folder, version, system_model, dummy, master_data_folder = master_data_folder)
-    MD = pkl_load(pkl_folder, 'MD')
+    try:
+        MD = pkl_load(pkl_folder, 'MD')
+    except ModuleNotFoundError:
+        version = 'CIRAIG'
+        system_model = 'Undefined'
+        dummy = ''
+        folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'documentation')
+        build_MD(folder, version, system_model, dummy, master_data_folder = master_data_folder)
+        MD = pkl_load(pkl_folder, 'MD')
     return MD
 def pkl_dump(folder, variable_name, variable, feedback = False):
     '''helper function for saving files in pkl'''
@@ -879,6 +887,5 @@ for field in ['ActivityNames', 'Sources', 'activityIndexEntry', 'Persons', 'Inte
     
 result_folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'result_folder')
 result_filename = 'test.spold'
-1/0
 dataset = GenericObject(dataset, 'Dataset')
 rendered = recursive_rendering(dataset, env, result_folder, result_filename)

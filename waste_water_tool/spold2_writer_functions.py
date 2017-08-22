@@ -8,7 +8,10 @@ from copy import copy
 # Taking care of pandas version issues in unpickling...
 import pandas
 import sys
-sys.modules['pandas.indexes'] = pandas.core.indexes
+try:
+    sys.modules['pandas.indexes'] = pandas.core.indexes
+except:
+    pass
 
 HTML_entities = [['&', '&amp;'],
                  ['<', '&lt;'], 
