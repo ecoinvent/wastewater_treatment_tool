@@ -1,0 +1,1795 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ecoSpold xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <activityDataset>
+    <activityDescription>
+	  <activity id="99948add-39df-50bd-8b74-f478abd63712" 
+	  activityNameId="1ec0e569-0949-4b57-8ccd-ebb7ffef9811" 
+	  inheritanceDepth="0" 
+	  type="1" 
+	  specialActivityType="0" 
+>
+        <activityName xml:lang="en">treatment of wastewater from ceramic production, capacity 5E9l/year</activityName>
+        <includedActivitiesStart xml:lang="en">From the discharge of municipal wastewater to the sewer grid.</includedActivitiesStart>
+        <includedActivitiesEnd xml:lang="en">This activity ends with the discharge of treated wastewater to the natural environment. This activity includes the transportation of wastewater via the sewer grid, and the treatment of the wastewater in the wastewater treatment plant.The amounts of infrastructure and consumables are also included as inputs to the activity.  By definition, wastewater not sent to the sewer grid is also excluded. The fraction of wastewater discharged to the sewer grid but ultimately not treated because the sewer is unconnected and direct emissions due to hydraulic overload are also excluded. These are included in another dataset specifically covering the discharge of untreated wastewater. The production of sludge is included, but its treatment is covered by another treatment activity.</includedActivitiesEnd>
+		<generalComment>
+        	  <text xml:lang="en" index="1">This dataset represents the treatment of wastewater discharged to the sewer grid from ceramic production</text>
+	  <text xml:lang="en" index="2">It includes the transportation of the wastewater to the wastewater treatment plant and the actual treatment.</text>
+	  <text xml:lang="en" index="3">It was modelled using XYZ</text>
+
+		</generalComment>
+      </activity>
+	  <classification classificationId="a84d0ee4-d77c-4905-b876-3ef60873c763">
+        <classificationSystem xml:lang="en">ISIC rev.4 ecoinvent</classificationSystem>
+        <classificationValue xml:lang="en">3700:Sewerage</classificationValue>
+      </classification>
+      <geography geographyId="34dbbff8-88ce-11de-ad60-0019e336be3a" 
+>
+        <shortname xml:lang="en">GLO</shortname>
+		<comment>
+        	  <text xml:lang="en" index="1"></text>
+
+		</comment>
+      </geography>
+      <technology  technologyLevel="3">
+		<comment>
+        	  <text xml:lang="en" index="1">The technologies modelled are x and y</text>
+	  <text xml:lang="en" index="2">They were averaged based on z</text>
+	  <text xml:lang="en" index="3">These technologies rock</text>
+
+		</comment>
+      </technology>
+      <timePeriod startDate="1995-01-31" endDate="2020-12-31" isDataValidForEntirePeriod="true">
+		<comment>
+        	  <text xml:lang="en" index="1"></text>
+
+		</comment>
+	  </timePeriod>
+	  <macroEconomicScenario macroEconomicScenarioId="d9f57f0a-a01f-42eb-a57b-8f18d6635801"
+>
+        <name xml:lang="en">Business-as-Usual</name>
+      </macroEconomicScenario>
+    </activityDescription>
+	<flowData>
+	<intermediateExchange id="7ec82d5a-9679-5399-a198-f4d04d0de0a4" 
+	  unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5" 
+	  amount="-1.0" 
+intermediateExchangeId="61745944-bd0b-5790-8249-08954a775d59" productionVolumeAmount="700000.0" 	  >
+        <name xml:lang="en">wastewater, from ceramic production</name>
+        <unitName xml:lang="en">m3</unitName>
+		<comment xml:lang="en">Refers to the amount of wastewater treated in the wastewater treatment plant.</comment>		
+		<property 
+		propertyId ="dd13a45c-ddd8-414d-821f-dfe31c7d2868" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.332312692512" 		>
+          <name xml:lang="en">BOD5, mass per volume</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.332312692512" mu="-1.10167890841" variance="0.00439757783531" varianceWithPedigreeUncertainty="0.0509975778353" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="5" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Biological Oxygen Demand BOD5, as O2. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="3f469e9e-267a-4100-9f43-4297441dc726" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.239494391504" 		>
+          <name xml:lang="en">COD, mass per volume</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.239494391504" mu="-1.42922527992" variance="0.00520737856739" varianceWithPedigreeUncertainty="0.0572073785674" />
+			<pedigreeMatrix 
+				reliability="4" 
+				completeness="4" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="5" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Chemical Oxygen Demand as O2. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="efe22a60-b1a3-4b33-a5ba-4bf575e0a889" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.149122515517" 		>
+          <name xml:lang="en">mass concentration, DOC</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.149122515517" mu="-1.90298705911" variance="0.000782943175362" varianceWithPedigreeUncertainty="0.0894829431754" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="5" 
+				temporalCorrelation="5" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Dissolved Organic Carbon. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="a547f885-601d-4d52-9bf9-60f0cef06269" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.408973140706" 		>
+          <name xml:lang="en">mass concentration, TOC</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.408973140706" mu="-0.894105795741" variance="0.00976428401567" varianceWithPedigreeUncertainty="0.132664284016" />
+			<pedigreeMatrix 
+				reliability="3" 
+				completeness="2" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Total Organic Carbon. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="f7fa53fa-ee5f-4a97-bcd8-1b0851afe9a6" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.420037829932" 		>
+          <name xml:lang="en">mass concentration, dissolved ammonia NH4 as N</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.420037829932" mu="-0.867410500495" variance="0.00345680528951" varianceWithPedigreeUncertainty="0.13175680529" />
+			<pedigreeMatrix 
+				reliability="4" 
+				completeness="1" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of dissolved ammonia NH4 (CAS 007664-41-7) as N. Note that dissolved and particulate N are optional yet desirable specifications of total nitrogen.. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="4f461b9d-5a7b-4a46-8803-23f6df0dc522" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.790934714554" 		>
+          <name xml:lang="en">mass concentration, dissolved nitrate NO3 as N</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.790934714554" mu="-0.23453984995" variance="0.00916831205516" varianceWithPedigreeUncertainty="0.131768312055" />
+			<pedigreeMatrix 
+				reliability="3" 
+				completeness="3" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of dissolved nitrate NO3 (CAS 014797-55-8) as N. Note that dissolved and particulate N are optional yet desirable specifications of total nitrogen.. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="c8ebc911-268a-4dfe-a426-73e1e35b587a" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.218704784072" 		>
+          <name xml:lang="en">mass concentration, dissolved nitrite NO2 as N</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.218704784072" mu="-1.5200324765" variance="0.0096989222091" varianceWithPedigreeUncertainty="0.0502989222091" />
+			<pedigreeMatrix 
+				reliability="5" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of dissolved nitrite NO2 (CAS 014797-65-0) as N. Note that dissolved and particulate N are optional yet desirable specifications of total nitrogen.. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="88c9f622-8451-41aa-98b0-c56b191a7e0a" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.204196565201" 		>
+          <name xml:lang="en">mass concentration, particulate nitrogen</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.204196565201" mu="-1.58867219415" variance="0.00728391309642" varianceWithPedigreeUncertainty="0.0558839130964" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="5" 
+				temporalCorrelation="5" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of particulate nitrogen as N. Note that dissolved and particulate N are optional yet desirable specifications of total nitrogen.. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="cbc4a2c2-1710-4e6c-9b90-e1e72819d7b9" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.907845626325" 		>
+          <name xml:lang="en">mass concentration, dissolved organic nitrogen as N</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.907845626325" mu="-0.0966809298961" variance="0.00950411648526" varianceWithPedigreeUncertainty="0.0116291164853" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of dissolved organic nitrogen as N. Note that dissolved and particulate N are optional yet desirable specifications of total nitrogen.. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="f04a971d-f503-4ca0-b2b1-0ecd2e53ea61" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.395105915135" 		>
+          <name xml:lang="en">mass concentration, nitrogen</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.395105915135" mu="-0.928601410441" variance="0.0040130399916" varianceWithPedigreeUncertainty="0.0042130399916" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of nitrogen (Ntot.) as N. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="7fe01cf6-6e7b-487f-b37e-32388640a8a4" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.495721068253" 		>
+          <name xml:lang="en">mass concentration, dissolved phosphate PO4 as P</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.495721068253" mu="-0.701741872834" variance="0.00508460351803" varianceWithPedigreeUncertainty="0.015784603518" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="4" 
+				geographicalCorrelation="5" 
+				furtherTechnologyCorrelation="2"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Dissolved Phosphate PO4 as P. Note that dissolved and particulate P are optional yet desirable specifications of total phosphorous.. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="1e4ef691-c7d3-49fc-9aee-6d77575a7b8a" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.763125061752" 		>
+          <name xml:lang="en">mass concentration, dissolved sulfate SO4 as S</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.763125061752" mu="-0.270333353197" variance="0.00978306331174" varianceWithPedigreeUncertainty="0.0518830633117" />
+			<pedigreeMatrix 
+				reliability="5" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of dissolved sulfate SO4 (CAS 014808-79-8) as S. Note that dissolved and particulate S are optional yet desirable specifications of total sulfur.. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="8175120e-a5b7-4f19-afca-5620e9e4dd8b" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.356260086655" 		>
+          <name xml:lang="en">mass concentration, particulate sulfur</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.356260086655" mu="-1.03209423438" variance="0.00101092772353" varianceWithPedigreeUncertainty="0.0436109277235" />
+			<pedigreeMatrix 
+				reliability="5" 
+				completeness="3" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of particulate sulfur as S. Note that dissolved and particulate S are optional yet desirable specifications of total sulfur.. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="7f3410da-b91e-40d8-9545-ab269ff66900" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.22379061908" 		>
+          <name xml:lang="en">mass concentration, sulfur</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.22379061908" mu="-1.49704440052" variance="0.00947358597209" varianceWithPedigreeUncertainty="0.0216735859721" />
+			<pedigreeMatrix 
+				reliability="3" 
+				completeness="4" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="3"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of sulfur as S (Stot.). (CAS 007704-34-9). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="c0447419-7139-44fe-a855-ea71e2b78585" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.148116700228" 		>
+          <name xml:lang="en">mass concentration, boron</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.148116700228" mu="-1.90975480088" variance="0.000363154431829" varianceWithPedigreeUncertainty="0.0504631544318" />
+			<pedigreeMatrix 
+				reliability="5" 
+				completeness="4" 
+				temporalCorrelation="4" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Boron.    (CAS 007440-42-8). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="468e50e8-1960-4eba-bc1a-a9938a301694" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.709739349676" 		>
+          <name xml:lang="en">mass concentration, chlorine</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.709739349676" mu="-0.342857489481" variance="0.00554698531886" varianceWithPedigreeUncertainty="0.141771985319" />
+			<pedigreeMatrix 
+				reliability="4" 
+				completeness="5" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Chlorine.    (CAS 007782-50-5). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="e4504511-88b5-4b01-a537-e049f056668c" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.906777948003" 		>
+          <name xml:lang="en">mass concentration, bromine</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.906777948003" mu="-0.0978576791242" variance="0.000996706250029" varianceWithPedigreeUncertainty="0.04369670625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="1" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Bromine.    (CAS 007726-95-6). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="763a698f-54d7-4e2a-84a7-9cc8c0271b6a" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.643588127407" 		>
+          <name xml:lang="en">mass concentration, fluorine</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.643588127407" mu="-0.440696311195" variance="0.00288627143244" varianceWithPedigreeUncertainty="0.0135862714324" />
+			<pedigreeMatrix 
+				reliability="4" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Fluorine.    (CAS 007782-41-4). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="e9164ff3-fd2d-4050-895d-0e0a42317be2" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.897436052057" 		>
+          <name xml:lang="en">mass concentration, iodine</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.897436052057" mu="-0.108213412348" variance="0.00177739716872" varianceWithPedigreeUncertainty="0.00597739716872" />
+			<pedigreeMatrix 
+				reliability="3" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Iodine.    (CAS 007553-56-2). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="dcdc6c7b-0b72-4174-bc90-f51ed66426d5" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.572666412838" 		>
+          <name xml:lang="en">mass concentration, silver</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.572666412838" mu="-0.557451908346" variance="0.00873215200554" varianceWithPedigreeUncertainty="0.0219321520055" />
+			<pedigreeMatrix 
+				reliability="3" 
+				completeness="5" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="2"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Silver.    (CAS 007440-22-4). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="b321f120-4db7-4e7c-a196-82a231023052" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.465132321248" 		>
+          <name xml:lang="en">mass concentration, arsenic</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.465132321248" mu="-0.765433352052" variance="0.00186726170774" varianceWithPedigreeUncertainty="0.0121672617077" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="4" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="3"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Arsenic.    (CAS 007440-38-2). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="33976f6b-2575-4410-8f60-d421bdf3e554" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.895839992757" 		>
+          <name xml:lang="en">mass concentration, barium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.895839992757" mu="-0.109993461466" variance="0.00218646025284" varianceWithPedigreeUncertainty="0.0428864602528" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="5" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Barium.    (CAS 007440-39-3). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="1111ac7e-20df-4ab4-9e02-57821894372c" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0648121588046" 		>
+          <name xml:lang="en">mass concentration, cadmium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0648121588046" mu="-2.73626205735" variance="0.00532863955955" varianceWithPedigreeUncertainty="0.00942863955955" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="5" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Cadmium.    (CAS 007440-43-9). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="2f7030b9-bafc-4b43-8504-deb8b5044130" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.63562935412" 		>
+          <name xml:lang="en">mass concentration, cobalt</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.63562935412" mu="-0.453139662063" variance="0.00372772415219" varianceWithPedigreeUncertainty="0.0457277241522" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="4" 
+				temporalCorrelation="5" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Cobalt.    (CAS 007440-48-4). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="bca4bb32-f701-46bb-ba1e-bad477c19f7f" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.198129029244" 		>
+          <name xml:lang="en">mass concentration, chromium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.198129029244" mu="-1.61883679768" variance="0.00343664071832" varianceWithPedigreeUncertainty="0.00433664071832" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="2"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Chromium.    (CAS 007440-47-3). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="e7451d8a-77af-44e0-86cf-ccd17ac84509" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.388193905474" 		>
+          <name xml:lang="en">mass concentration, copper</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.388193905474" mu="-0.946250307818" variance="0.00661311803425" varianceWithPedigreeUncertainty="0.0387131180342" />
+			<pedigreeMatrix 
+				reliability="4" 
+				completeness="5" 
+				temporalCorrelation="4" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="3"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Copper.    (CAS 007440-50-8). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="a102e6f8-ebc7-450b-a39b-794be96558b7" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.138377815761" 		>
+          <name xml:lang="en">mass concentration, mercury</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.138377815761" mu="-1.97776753939" variance="0.00589779308078" varianceWithPedigreeUncertainty="0.0147977930808" />
+			<pedigreeMatrix 
+				reliability="4" 
+				completeness="2" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Mercury.    (CAS 007439-97-6). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="8d27623b-147c-44e8-93cc-2183eac22991" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.260802863085" 		>
+          <name xml:lang="en">mass concentration, manganese</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.260802863085" mu="-1.3439904709" variance="0.00829113064545" varianceWithPedigreeUncertainty="0.0248911306455" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="5" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="3"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Manganese.    (CAS 007439-96-5). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="aa897226-0a91-40e5-aa05-4bae3b9e4213" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.385439938533" 		>
+          <name xml:lang="en">mass concentration, molybdenum</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.385439938533" mu="-0.953369899589" variance="0.00617549620011" varianceWithPedigreeUncertainty="0.1684754962" />
+			<pedigreeMatrix 
+				reliability="5" 
+				completeness="4" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Molybdenum.    (CAS 007439-98-7). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="8b574e85-ff07-46bf-a753-f1271299dcf7" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.699660292124" 		>
+          <name xml:lang="en">mass concentration, nickel</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.699660292124" mu="-0.357160358699" variance="1.28565160449e-05" varianceWithPedigreeUncertainty="0.050112856516" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="5" 
+				geographicalCorrelation="5" 
+				furtherTechnologyCorrelation="3"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Nickel.    (CAS 007440-02-0). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="71bc04b9-abfe-4f30-ab8f-ba654c7ad296" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.184252934664" 		>
+          <name xml:lang="en">mass concentration, lead</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.184252934664" mu="-1.69144582042" variance="0.00880230381859" varianceWithPedigreeUncertainty="0.0489023038186" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Lead.    (CAS 007439-92-1). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="3759d833-560a-4dbb-949e-afc63c0ade26" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.768007538094" 		>
+          <name xml:lang="en">mass concentration, antimony</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.768007538094" mu="-0.263955730656" variance="0.00116172434775" varianceWithPedigreeUncertainty="0.00586172434775" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Antimony.    (CAS 007440-36-0). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="c35265a9-fd3e-468c-af8e-f4e020c38fc0" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.930745419347" 		>
+          <name xml:lang="en">mass concentration, selenium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.930745419347" mu="-0.0717694877053" variance="0.00347749530144" varianceWithPedigreeUncertainty="0.204677495301" />
+			<pedigreeMatrix 
+				reliability="5" 
+				completeness="3" 
+				temporalCorrelation="5" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Selenium.    (CAS 007782-49-2). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="ff888459-10c3-4700-afce-3a024aaf89cf" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.782186271908" 		>
+          <name xml:lang="en">mass concentration, tin</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.782186271908" mu="-0.245662367431" variance="0.00898234331132" varianceWithPedigreeUncertainty="0.135007343311" />
+			<pedigreeMatrix 
+				reliability="3" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Tin.    (CAS 007440-31-5). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="0b686a86-c506-4ad3-81fd-c3f39f05247d" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.207380621596" 		>
+          <name xml:lang="en">mass concentration, vanadium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.207380621596" mu="-1.57319942248" variance="0.00396376261894" varianceWithPedigreeUncertainty="0.0231637626189" />
+			<pedigreeMatrix 
+				reliability="4" 
+				completeness="3" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="3"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Vanadium.    (CAS 007440-62-2). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="6cc518c8-4769-40df-b2cf-03f9fe00b759" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0827885738466" 		>
+          <name xml:lang="en">mass concentration, zinc</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0827885738466" mu="-2.49146522414" variance="0.00636375382193" varianceWithPedigreeUncertainty="0.0158637538219" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="2" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="3"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Zinc.    (CAS 007440-66-6). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="d21c7c5c-b2c2-43ae-8575-c377cc0b0495" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.174531510827" 		>
+          <name xml:lang="en">mass concentration, beryllium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.174531510827" mu="-1.74564997583" variance="0.00373339996545" varianceWithPedigreeUncertainty="0.0858583999655" />
+			<pedigreeMatrix 
+				reliability="5" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Beryllium.    (CAS 007440-41-7). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="1325d7f9-2fe2-4226-9304-ad9e5371e08f" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.188517846935" 		>
+          <name xml:lang="en">mass concentration, scandium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.188517846935" mu="-1.66856259788" variance="0.00572851013976" varianceWithPedigreeUncertainty="0.0869285101398" />
+			<pedigreeMatrix 
+				reliability="5" 
+				completeness="3" 
+				temporalCorrelation="5" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Scandium.    (CAS 007440-20-2). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="d574cc22-07f2-4202-b564-1116ab197692" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0315227408324" 		>
+          <name xml:lang="en">mass concentration, strontium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0315227408324" mu="-3.45704606243" variance="0.00735485955365" varianceWithPedigreeUncertainty="0.0173548595537" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="1" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="3"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Strontium.    (CAS 007440-24-6). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="abc78955-bd5f-4b1a-9607-0448dd75ebf2" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.556330650568" 		>
+          <name xml:lang="en">mass concentration, titanium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.556330650568" mu="-0.586392466226" variance="0.00985700770974" varianceWithPedigreeUncertainty="0.0564570077097" />
+			<pedigreeMatrix 
+				reliability="3" 
+				completeness="3" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="5" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Titanium.    (CAS 007440-32-6). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="79baac3d-9e62-45ef-8f41-440dea32f11f" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.499698919095" 		>
+          <name xml:lang="en">mass concentration, thallium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.499698919095" mu="-0.693749523742" variance="0.00591349988398" varianceWithPedigreeUncertainty="0.018513499884" />
+			<pedigreeMatrix 
+				reliability="3" 
+				completeness="5" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Thallium.    (CAS 007440-28-0). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="058d6d50-172b-4a8a-97da-0cee759eca7d" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.242091236571" 		>
+          <name xml:lang="en">mass concentration, tungsten</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.242091236571" mu="-1.41844061325" variance="0.00906302650628" varianceWithPedigreeUncertainty="0.0112880265063" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="4" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Tungsten.    (CAS 007440-33-7). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="67065577-4705-4ece-a892-6dd1d7ecd1e5" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.353396009582" 		>
+          <name xml:lang="en">mass concentration, silicon</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.353396009582" mu="-1.04016601067" variance="0.00661618611144" varianceWithPedigreeUncertainty="0.00731618611144" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Silicon.    (CAS 007440-21-3). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="ebf21bca-b7cf-45d0-9d82-bfb80519a970" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.288705438387" 		>
+          <name xml:lang="en">mass concentration, iron</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.288705438387" mu="-1.24234835499" variance="0.00855857283593" varianceWithPedigreeUncertainty="0.0605585728359" />
+			<pedigreeMatrix 
+				reliability="3" 
+				completeness="1" 
+				temporalCorrelation="4" 
+				geographicalCorrelation="5" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Iron.    (CAS 007439-89-6). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="ddbab0d1-b156-41bc-98e5-fb680285d7cd" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.8306519256" 		>
+          <name xml:lang="en">mass concentration, calcium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.8306519256" mu="-0.185544433968" variance="0.00803990113692" varianceWithPedigreeUncertainty="0.0340399011369" />
+			<pedigreeMatrix 
+				reliability="4" 
+				completeness="5" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="3"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Calcium.    (CAS 007440-70-2). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="77154d2e-4b05-48f2-a89a-789acd170497" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.148101116464" 		>
+          <name xml:lang="en">mass concentration, aluminium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.148101116464" mu="-1.90986001916" variance="0.00399367788574" varianceWithPedigreeUncertainty="0.0561936778857" />
+			<pedigreeMatrix 
+				reliability="3" 
+				completeness="5" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="5" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Aluminium.    (CAS 007429-90-5). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="8b49eeb7-9caf-4101-b516-eb0aef30d530" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.857208397477" 		>
+          <name xml:lang="en">mass concentration, potassium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.857208397477" mu="-0.154074219028" variance="0.00627733034355" varianceWithPedigreeUncertainty="0.0629773303435" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="5" 
+				temporalCorrelation="5" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="3"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Potassium.    (CAS 007440-09-7). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="d26c0a60-86aa-41c8-80ee-3acabc4a5095" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.22630813109" 		>
+          <name xml:lang="en">mass concentration, magnesium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.22630813109" mu="-1.48585779641" variance="0.00617271473537" varianceWithPedigreeUncertainty="0.0487727147354" />
+			<pedigreeMatrix 
+				reliability="5" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="5" 
+				furtherTechnologyCorrelation="2"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Magnesium.    (CAS 007439-95-4). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="7b656e1b-bc07-41cd-bad4-a5b51b6287da" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0511454471376" 		>
+          <name xml:lang="en">mass concentration, sodium</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0511454471376" mu="-2.97308180056" variance="0.00701486849198" varianceWithPedigreeUncertainty="0.025814868492" />
+			<pedigreeMatrix 
+				reliability="4" 
+				completeness="3" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="5" 
+				furtherTechnologyCorrelation="3"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Sodium.    (CAS 007440-23-5). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="0f205308-d33a-430b-b3ec-b62bef311f2f" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0736659060288" 		>
+          <name xml:lang="en">mass concentration, particulate phophorus</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0736659060288" mu="-2.60821519159" variance="0.00447973829326" varianceWithPedigreeUncertainty="0.0146797382933" />
+			<pedigreeMatrix 
+				reliability="4" 
+				completeness="4" 
+				temporalCorrelation="2" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Particulate Phophorus as P. Note that dissolved and particulate P are optional yet desirable specifications of total phosphorous.. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="8e73d3fb-bb81-4c42-bfa6-8be4ff13125d" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.260107231398" 		>
+          <name xml:lang="en">mass concentration, phophorus</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.260107231398" mu="-1.34666130454" variance="0.00749759605373" varianceWithPedigreeUncertainty="0.0100975960537" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="3" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Phophorus as P (Ptot.). Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="ecbe6cf9-6238-521d-aa3a-f1c4f24786f4" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.707843610409" 		>
+          <name xml:lang="en">mass concentration, dissolved Kjeldahl Nitrogen as N</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.707843610409" mu="-0.345532098941" variance="0.00439800429778" varianceWithPedigreeUncertainty="0.125098004298" />
+			<pedigreeMatrix 
+				reliability="5" 
+				completeness="2" 
+				temporalCorrelation="5" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of dissolved Kjeldahl (SKN) as N. Note that dissolved Kjeldahl Nitrogen is an optional yet desirable specification of total Kjeldahl Nitrogen.. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="3b701f90-2e4a-5717-90fd-fcc578fe60a9" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0326461324499" 		>
+          <name xml:lang="en">mass concentration, Kjeldahl Nitrogen as N</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0326461324499" mu="-3.4220288851" variance="0.00672491716957" varianceWithPedigreeUncertainty="0.0239499171696" />
+			<pedigreeMatrix 
+				reliability="4" 
+				completeness="3" 
+				temporalCorrelation="4" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="2"/>
+            <comment xml:lang="en">Accounts for the uncertainty of the property amount only, assuming the contribution to uncertainty of losses due to hydraulic overflow are negligible</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of total Kjeldahl (TKN) as N. Note that dissolved Kjeldahl Nitrogen is an optional yet desirable specification of total Kjeldahl Nitrogen.. Accounts for mass lost in sewer due to hydraulic overloads.</comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.01" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.01" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">ICRA comment</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.01" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.6" varianceWithPedigreeUncertainty="0.644625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">ICRA comment</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.01" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">ICRA comment</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="999.99" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>           <uncertainty>
+            <lognormal 
+meanValue="999.99" mu="6.90774527893" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">ICRA comment</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1000" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>           <uncertainty>
+            <lognormal 
+meanValue="1000" mu="6.90775527898" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">ICRA comment</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<productionVolumeComment xml:lang="en">Yearly volume of wastewater treated. Excludes the fraction that is discharged directly to the environment (30%).</productionVolumeComment>
+        <productionVolumeUncertainty>
+            <lognormal 
+meanValue="700000.0" mu="13.458835614" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of total wastewater discharged and of excluded untreated fraction</comment>			
+        </productionVolumeUncertainty>
+		
+	  <outputGroup>0</outputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="0be175c1-f054-5015-87c8-38dc5a76af1f" 
+	  unitId="487df68b-4994-4027-8fdc-a4dc298257b7" 
+	  amount="300" 
+intermediateExchangeId="e3f57e02-c681-51d9-bf73-51a4c35703d6" productionVolumeAmount="210000000.0" 	  >
+        <name xml:lang="en">sludge, from the treatment of wastewater from ceramic production, capacity 5E9l/year</name>
+        <unitName xml:lang="en">kg</unitName>
+		<comment xml:lang="en">ICRA COMMENT</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="300" mu="5.70378247466" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER ESTIMATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.01" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER CALCULATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.01" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER CALCULATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.01" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.6" varianceWithPedigreeUncertainty="0.644625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER CALCULATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.01" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER CALCULATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.01" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER CALCULATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.01" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER CALCULATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<property 
+		propertyId ="d8364dfc-5753-4585-bf50-4d42b126f72d" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.01" 		>
+          <name xml:lang="en">iron content</name>
+<unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER CALCULATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<property 
+		propertyId ="0132d97c-5f19-4397-9197-59ab801b10cf" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.01" 		>
+          <name xml:lang="en">copper content</name>
+<unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER CALCULATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">ICRA comment</comment>
+        </property>		<productionVolumeComment xml:lang="en">Calculated on the basis of the total amount of wastewater treated and the amount of sludge per m3 treated.</productionVolumeComment>
+        <productionVolumeUncertainty>
+            <lognormal 
+meanValue="210000000.0" mu="19.1626180887" variance="0.0006" varianceWithPedigreeUncertainty="0.045225" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER CALCULATED UNCERTAINTY</comment>			
+        </productionVolumeUncertainty>
+		
+	  <outputGroup>2</outputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="5471af63-db4f-5d1d-aac1-4b01a955f416" 
+	  unitId="487df68b-4994-4027-8fdc-a4dc298257b7" 
+	  amount="0.0155" 
+intermediateExchangeId="88afd721-07ec-4910-a004-fa3fecb6bf70" productionVolumeAmount="10850.0" 	  >
+        <name xml:lang="en">waste plastic, mixture</name>
+        <unitName xml:lang="en">kg</unitName>
+		<comment xml:lang="en">Amount of plastics removed from wastewater. Based on an assumed 0.031 kg/m3 of grit removed,  and an assumed 50.0% of the grit that is plastics</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="0.0155" mu="-4.16691525506" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of total grit and of the split of this grit that is plastics vs. biomass</comment>			
+        </uncertainty>
+		
+		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.847" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.153" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.747343565525384" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.180637544273908" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<productionVolumeComment xml:lang="en">Calculated based on the amount of wastewater treated and the amount of plastic grit per m3 treated</productionVolumeComment>
+	  <outputGroup>2</outputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="3c233c35-d59c-5be8-b07e-11795751b5e0" 
+	  unitId="487df68b-4994-4027-8fdc-a4dc298257b7" 
+	  amount="0.010849999999999999" 
+intermediateExchangeId="d51e5a32-c20a-4da6-8d58-31f344b50c00" productionVolumeAmount="15500.0" 	  >
+        <name xml:lang="en">waste graphical paper</name>
+        <unitName xml:lang="en">kg</unitName>
+		<comment xml:lang="en">Amount of biomass  removed from wastewater. Based on an assumed 0.031 kg/m3 of grit removed,  and an assumed 50.0% of the grit that is biomass. Biomass waste management modelled as paper waste management</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="0.010849999999999999" mu="-4.523590199" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of total grit and of the split of this grit that is plastics vs. biomass</comment>			
+        </uncertainty>
+		
+		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.126126126126126" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.454954954954955" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.112" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.888" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<productionVolumeComment xml:lang="en">Calculated based on the amount of wastewater treated and the amount of biomass grit per m3 treated</productionVolumeComment>
+	  <outputGroup>2</outputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="4335e8a9-0730-5e48-8868-48a0e6990086" 
+	  unitId="487df68b-4994-4027-8fdc-a4dc298257b7" 
+	  amount="0.42" 
+intermediateExchangeId="a00b7e35-1bc7-4b73-9df8-05f3dd07ffdb" 	  >
+        <name xml:lang="en">lime</name>
+        <unitName xml:lang="en">kg</unitName>
+		<comment xml:lang="en">Calcium hydroxide (Ca(OH)2) used for alkalinity addition and pH adjustment for metals removal. Amount calculated based on technology mix and wastewater properties.</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="0.42" mu="-0.867500567705" variance="0.0006" varianceWithPedigreeUncertainty="0.0053" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="3" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">PLACEHOLDER ESTIMATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.120005355330152" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>	  <inputGroup>5</inputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="d6cd9ce8-f39d-5b13-abac-513605ebc138" 
+	  unitId="980b811e-3905-4797-82a5-173f5568bc7e" 
+	  amount="8.0" 
+intermediateExchangeId="1125e767-7b5d-442e-81d6-9b0d3e1919ac" 	  >
+        <name xml:lang="en">heat, district or industrial, natural gas</name>
+        <unitName xml:lang="en">MJ</unitName>
+		<comment xml:lang="en">Heat input associated with wastewater treatment.Based on total heat requirement (1.000000E+01 MJ, calculated) and an assumed split between heat from natural gas (0.8) and from other sources (0.19999999999999996)</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="8.0" mu="2.07944154168" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of total heat required and of fraction of that heat coming from natural gas</comment>			
+        </uncertainty>
+		
+		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.120005355330152" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>	  <inputGroup>5</inputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="a9173352-f68a-54b0-9aa6-8878ea53792c" 
+	  unitId="980b811e-3905-4797-82a5-173f5568bc7e" 
+	  amount="1.9999999999999996" 
+intermediateExchangeId="71e2f1db-a2c5-44d0-8337-dfff15be974d" 	  >
+        <name xml:lang="en">heat, district or industrial, other than natural gas</name>
+        <unitName xml:lang="en">MJ</unitName>
+		<comment xml:lang="en">Heat input associated with wastewater treatment.Based on total heat requirement (1.000000E+01 MJ, calculated) and an assumed split between heat from natural gas (0.8) and from other sources (0.19999999999999996)</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="1.9999999999999996" mu="0.69314718056" variance="0.01" varianceWithPedigreeUncertainty="0.054625" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">Accounts for the uncertainty of total heat required and of fraction of that heat coming from natural gas</comment>			
+        </uncertainty>
+		
+		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.120005355330152" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="09345cd3-5275-4440-8046-3ae837e4fcaf" 
+unitId="980b811e-3905-4797-82a5-173f5568bc7e" amount="0.0" 		>
+          <name xml:lang="en">corresponding fuel use, propane, furnace &gt;100kW</name>
+<unitName xml:lang="en">MJ</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>	  <inputGroup>5</inputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="2b2d2908-9a16-563c-865a-7d8e7f52ad23" 
+	  unitId="77ae64fa-7e74-4252-9c3b-889c1cd20bfc" 
+	  amount="2" 
+intermediateExchangeId="d69294d7-8d64-4915-a896-9996a014c410" 	  >
+        <name xml:lang="en">electricity, low voltage</name>
+        <unitName xml:lang="en">kWh</unitName>
+		<comment xml:lang="en">default</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="2" mu="0.69314718056" variance="0.0006" varianceWithPedigreeUncertainty="0.045225" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER ESTIMATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.120005355330152" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="09345cd3-5275-4440-8046-3ae837e4fcaf" 
+unitId="980b811e-3905-4797-82a5-173f5568bc7e" amount="0.0" 		>
+          <name xml:lang="en">corresponding fuel use, propane, furnace &gt;100kW</name>
+<unitName xml:lang="en">MJ</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>	  <inputGroup>5</inputGroup>
+    </intermediateExchange>
+		<elementaryExchange id="b675376d-f978-5e71-961a-6cfa6239ab59" 
+	  unitId="487df68b-4994-4027-8fdc-a4dc298257b7" 
+	  amount="0.1" 
+elementaryExchangeId="70d467b6-115e-43c5-add2-441de9411348" 	  >
+        <name xml:lang="en">BOD5, Biological Oxygen Demand</name>
+        <unitName xml:lang="en">kg</unitName>
+		<comment xml:lang="en">Calculated via XYZ</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="0.1" mu="-2.30258509299" variance="0.0006" varianceWithPedigreeUncertainty="0.045225" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER CALCULATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.120005355330152" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="09345cd3-5275-4440-8046-3ae837e4fcaf" 
+unitId="980b811e-3905-4797-82a5-173f5568bc7e" amount="0.0" 		>
+          <name xml:lang="en">corresponding fuel use, propane, furnace &gt;100kW</name>
+<unitName xml:lang="en">MJ</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<compartment subcompartmentId="963f8022-3e2e-4be9-ad4d-b3b7a2282099">
+          <compartment xml:lang="en">water</compartment>
+          <subcompartment xml:lang="en">surface water</subcompartment>
+        </compartment>
+	  <outputGroup>4</outputGroup>
+    </elementaryExchange>
+		<elementaryExchange id="d192ed34-4e4b-515e-8267-76de2128fc8a" 
+	  unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5" 
+	  amount="0.8" 
+elementaryExchangeId="db4566b1-bd88-427d-92da-2d25879063b9" 	  >
+        <name xml:lang="en">Water</name>
+        <unitName xml:lang="en">m3</unitName>
+		<comment xml:lang="en">Total amount of treated water discharged to surface water</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="0.8" mu="-0.223143551314" variance="0.0006" varianceWithPedigreeUncertainty="0.045225" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER ESTIMATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.120005355330152" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="09345cd3-5275-4440-8046-3ae837e4fcaf" 
+unitId="980b811e-3905-4797-82a5-173f5568bc7e" amount="0.0" 		>
+          <name xml:lang="en">corresponding fuel use, propane, furnace &gt;100kW</name>
+<unitName xml:lang="en">MJ</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<compartment subcompartmentId="963f8022-3e2e-4be9-ad4d-b3b7a2282099">
+          <compartment xml:lang="en">water</compartment>
+          <subcompartment xml:lang="en">surface water</subcompartment>
+        </compartment>
+	  <outputGroup>4</outputGroup>
+    </elementaryExchange>
+		<elementaryExchange id="a98dfa24-c685-5f99-a562-7f8d98747e7a" 
+	  unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5" 
+	  amount="0.05" 
+elementaryExchangeId="075e433b-4be4-448e-9510-9a5029c1ce94" 	  >
+        <name xml:lang="en">Water</name>
+        <unitName xml:lang="en">m3</unitName>
+		<comment xml:lang="en">Water evaporated during treatment</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="0.05" mu="-2.99573227355" variance="0.0006" varianceWithPedigreeUncertainty="0.045225" />
+			<pedigreeMatrix 
+				reliability="2" 
+				completeness="4" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="2" 
+				furtherTechnologyCorrelation="4"/>
+            <comment xml:lang="en">PLACEHOLDER ESTIMATED UNCERTAINTY</comment>			
+        </uncertainty>
+		
+		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.120005355330152" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="09345cd3-5275-4440-8046-3ae837e4fcaf" 
+unitId="980b811e-3905-4797-82a5-173f5568bc7e" amount="0.0" 		>
+          <name xml:lang="en">corresponding fuel use, propane, furnace &gt;100kW</name>
+<unitName xml:lang="en">MJ</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<compartment subcompartmentId="7011f0aa-f5f9-4901-8c10-884ad8296812">
+          <compartment xml:lang="en">air</compartment>
+          <subcompartment xml:lang="en">unspecified</subcompartment>
+        </compartment>
+	  <outputGroup>4</outputGroup>
+    </elementaryExchange>
+		</flowData>
+	<modellingAndValidation>
+      <representativeness 
+	  systemModelId="8b738ea0-f89e-4627-8679-433616064e82"
+percent="80" 	  >
+        <systemModelName xml:lang="en">Undefined</systemModelName>
+        <samplingProcedure xml:lang="en">This is a description of the sampling procedure, and it should be changed by IRCA</samplingProcedure>
+        <extrapolations xml:lang="en">This is a description of the sampling procedure, and it should be changed by IRCA</extrapolations>
+      </representativeness>
+    </modellingAndValidation>
+	<administrativeInformation>
+	<dataEntryBy personId="788d0176-a69c-4de0-a5d3-259866b6b100" isActiveAuthor="false" personName="[Current User]" personEmail="no@email.com"/>
+      
+	<dataGeneratorAndPublication 
+	  personId="788d0176-a69c-4de0-a5d3-259866b6b100" 
+	  personName="Pascal Lesage" 
+	  personEmail="pascal.lesage@polymtl.ca" 
+	  isCopyrightProtected="true" 
+accessRestrictedTo="1" 	  />
+	  
+	<fileAttributes 
+	  majorRelease="3" 
+	  minorRelease="4" 
+	  majorRevision="0" 
+	  minorRevision="1" 
+defaultLanguage="en" 	  >
+      </fileAttributes>
+	</administrativeInformation>
+  </activityDataset>
+	
+<usedUserMasterData xmlns="http://www.EcoInvent.org/UsedUserMasterData">
+<property id="ecbe6cf9-6238-521d-aa3a-f1c4f24786f4" unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839">
+    <name xml:lang="en">mass concentration, dissolved Kjeldahl Nitrogen as N</name>
+    <unitName xml:lang="en">kg/m3</unitName>
+    </property>
+<property id="3b701f90-2e4a-5717-90fd-fcc578fe60a9" unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839">
+    <name xml:lang="en">mass concentration, Kjeldahl Nitrogen as N</name>
+    <unitName xml:lang="en">kg/m3</unitName>
+    </property>
+<intermediateExchange id="61745944-bd0b-5790-8249-08954a775d59" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">wastewater, from ceramic production</name>
+    <unitName xml:lang="en">m3</unitName>
+<comment xml:lang="en">Refers to the amount of wastewater treated in the wastewater treatment plant.</comment>  </intermediateExchange>
+<intermediateExchange id="e3f57e02-c681-51d9-bf73-51a4c35703d6" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">sludge, from the treatment of wastewater from ceramic production, capacity 5E9l/year</name>
+    <unitName xml:lang="en">kg</unitName>
+<comment xml:lang="en">ICRA COMMENT</comment>  </intermediateExchange>
+<activityIndexEntry id="99948add-39df-50bd-8b74-f478abd63712" activityNameId="1ec0e569-0949-4b57-8ccd-ebb7ffef9811" geographyId="34dbbff8-88ce-11de-ad60-0019e336be3a" startDate="1995-01-31" endDate="2020-12-31" specialActivityType="0" systemModelId="8b738ea0-f89e-4627-8679-433616064e82"/>
+</usedUserMasterData>
+</ecoSpold>
