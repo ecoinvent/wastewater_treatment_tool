@@ -1,5 +1,5 @@
 <property 
-		propertyId="{{ propertyId }}" 
+		propertyId ="{{ propertyId }}" 
 		{% if unitId %}unitId="{{ unitId }}" {% endif %}
 		{% if amount is number%}amount="{{ amount }}" {% endif %}
 		{% if propertyContextId %}propertyContextId="{{ propertyContextId }}" {% endif %}

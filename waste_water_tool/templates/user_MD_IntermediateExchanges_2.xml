@@ -1,0 +1,16 @@
+﻿<intermediateExchange id="{{ id }}" unitId="{{ unitId }}">
+    <name xml:lang="en">{{ name }}</name>
+    <unitName xml:lang="en">{{ unitName }}</unitName>
+    {% if synonym %}
+    {% for s in synonym %}
+    <synonym xml:lang="en">{{ s }}</synonym>
+    {% endfor %}{% endif %}
+    {% if classifications %}{% for c in classifications %}
+    {{ c }}
+    {% endfor %}{% endif %}
+    {% if comment %}<comment xml:lang="en">{{ comment }}</comment>{% endif %}
+    {% if productInformation %}<productInformation xml:lang="en">{{ productInformation }}</productInformation>{% endif %}
+    {% for p in properties %}
+    {{ p }}
+    {% endfor %}
+  </intermediateExchange>

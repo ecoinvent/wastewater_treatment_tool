@@ -157,7 +157,15 @@ def get_current_MD():
         dummy = ''
         folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'documentation')
         build_MD(folder, version, system_model, dummy, master_data_folder = master_data_folder)
-    MD = pkl_load(pkl_folder, 'MD')
+    try:
+        MD = pkl_load(pkl_folder, 'MD')
+    except ModuleNotFoundError:
+        version = 'CIRAIG'
+        system_model = 'Undefined'
+        dummy = ''
+        folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'documentation')
+        build_MD(folder, version, system_model, dummy, master_data_folder = master_data_folder)
+        MD = pkl_load(pkl_folder, 'MD')
     return MD
 def pkl_dump(folder, variable_name, variable, feedback = False):
     '''helper function for saving files in pkl'''
@@ -411,7 +419,7 @@ def dataframe_to_excel(folder, filename, dfs, read_me = False, feedback = False)
     #save all df with their columns
     for df, sheet_name, columns in dfs:
         #validate the types of elements
-        assert type(df) in [pandas.core.frame.DataFrame, list]
+        assert isinstance(df, pandas.DataFrame) or isinstance(df, list)
         if type(df) == list:
             #in case it was forgotten to transform from list to dataframe
             df = list_to_df(df)
@@ -497,7 +505,7 @@ def append_exchange(exc, dataset, MD, properties = [],
     if 'Environment' in exc['group']:
         ee = (exc['name'], exc['compartment'], exc['subcompartment'])
         sel = MD['ElementaryExchanges'].loc[ee]
-        if type(sel) == pandas.core.frame.DataFrame:
+        if isinstance(sel, pandas.DataFrame):
             if len(sel) > 1:
                 raise ValueError('Multiple MD entries corresponding to %s, %s, %s' % ee)
             sel = sel.iloc[0]

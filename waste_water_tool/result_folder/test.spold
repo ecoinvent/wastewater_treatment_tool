@@ -71,7 +71,7 @@ intermediateExchangeId="07a312f3-4531-51fc-91df-ac6e1c634489" productionVolumeAm
         <unitName xml:lang="en">m3</unitName>
 		<comment xml:lang="en">exchange comment</comment>		
 		<property 
-		propertyId="d8364dfc-5753-4585-bf50-4d42b126f72d" 
+		propertyId ="d8364dfc-5753-4585-bf50-4d42b126f72d" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.002" 		>
           <name xml:lang="en">iron content</name>
 <unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
@@ -88,17 +88,17 @@ meanValue="0.002" mu="-6.21460809842" variance="0.006" varianceWithPedigreeUncer
 		
         <comment xml:lang="en">iron comment</comment>
         </property>		<property 
-		propertyId="2bc683e4-3780-4f00-8c1d-fd53e05cfde7" 
+		propertyId ="2bc683e4-3780-4f00-8c1d-fd53e05cfde7" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.001" 		>
           <name xml:lang="en">manganese content</name>
 <unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">manganese comment</comment>
         </property>		<property 
-		propertyId="30f0aa15-2d50-4f09-af94-683b6dd68adc" 
+		propertyId ="30f0aa15-2d50-4f09-af94-683b6dd68adc" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.004" 		>
           <name xml:lang="en">arsenic content</name>
 <unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">arseinc comment</comment>
         </property>		<property 
-		propertyId="66e996b5-5f7b-449f-8893-0b787af21d7e" 
+		propertyId ="66e996b5-5f7b-449f-8893-0b787af21d7e" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.005" 		>
           <name xml:lang="en">cobalt content</name>
 <unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">cobalt comment</comment>
@@ -137,7 +137,7 @@ meanValue="0.4" mu="-0.916290731874" variance="0.005" varianceWithPedigreeUncert
         </uncertainty>
 		
 		<property 
-		propertyId="d8364dfc-5753-4585-bf50-4d42b126f72d" 
+		propertyId ="d8364dfc-5753-4585-bf50-4d42b126f72d" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.002" 		>
           <name xml:lang="en">iron content</name>
 <unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
@@ -154,17 +154,17 @@ meanValue="0.002" mu="-6.21460809842" variance="0.006" varianceWithPedigreeUncer
 		
         <comment xml:lang="en">iron comment</comment>
         </property>		<property 
-		propertyId="2bc683e4-3780-4f00-8c1d-fd53e05cfde7" 
+		propertyId ="2bc683e4-3780-4f00-8c1d-fd53e05cfde7" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.001" 		>
           <name xml:lang="en">manganese content</name>
 <unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">manganese comment</comment>
         </property>		<property 
-		propertyId="30f0aa15-2d50-4f09-af94-683b6dd68adc" 
+		propertyId ="30f0aa15-2d50-4f09-af94-683b6dd68adc" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.004" 		>
           <name xml:lang="en">arsenic content</name>
 <unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">arseinc comment</comment>
         </property>		<property 
-		propertyId="66e996b5-5f7b-449f-8893-0b787af21d7e" 
+		propertyId ="66e996b5-5f7b-449f-8893-0b787af21d7e" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.005" 		>
           <name xml:lang="en">cobalt content</name>
 <unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">cobalt comment</comment>
@@ -179,27 +179,27 @@ intermediateExchangeId="759b89bd-3aa6-42ad-b767-5bb9ef5d331d" 	  >
         <unitName xml:lang="en">kWh</unitName>
 		<comment xml:lang="en">exchange comment</comment>		
 		<property 
-		propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
 unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
           <name xml:lang="en">dry mass</name>
 <unitName xml:lang="en">kg</unitName>         </property>		<property 
-		propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
           <name xml:lang="en">carbon content, non-fossil</name>
 <unitName xml:lang="en">dimensionless</unitName>         </property>		<property 
-		propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
 unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
           <name xml:lang="en">wet mass</name>
 <unitName xml:lang="en">kg</unitName>         </property>		<property 
-		propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
 unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
           <name xml:lang="en">water in wet mass</name>
 <unitName xml:lang="en">kg</unitName>         </property>		<property 
-		propertyId="a9358458-9724-4f03-b622-106eda248916" 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
           <name xml:lang="en">water content</name>
 <unitName xml:lang="en">dimensionless</unitName>         </property>		<property 
-		propertyId="c74c3729-e577-4081-b572-a283d2561a75" 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
           <name xml:lang="en">carbon content, fossil</name>
 <unitName xml:lang="en">dimensionless</unitName>         </property>	  <inputGroup>5</inputGroup>
@@ -212,27 +212,27 @@ elementaryExchangeId="af01e564-f816-4906-bd4f-b7c932f926b9" 	  >
         <unitName xml:lang="en">kg</unitName>
 		<comment xml:lang="en">exchange comment</comment>		
 		<property 
-		propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
 unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
           <name xml:lang="en">dry mass</name>
 <unitName xml:lang="en">kg</unitName>         </property>		<property 
-		propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
           <name xml:lang="en">carbon content, non-fossil</name>
 <unitName xml:lang="en">dimensionless</unitName>         </property>		<property 
-		propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
 unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
           <name xml:lang="en">wet mass</name>
 <unitName xml:lang="en">kg</unitName>         </property>		<property 
-		propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
 unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
           <name xml:lang="en">water in wet mass</name>
 <unitName xml:lang="en">kg</unitName>         </property>		<property 
-		propertyId="a9358458-9724-4f03-b622-106eda248916" 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
           <name xml:lang="en">water content</name>
 <unitName xml:lang="en">dimensionless</unitName>         </property>		<property 
-		propertyId="c74c3729-e577-4081-b572-a283d2561a75" 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
           <name xml:lang="en">carbon content, fossil</name>
 <unitName xml:lang="en">dimensionless</unitName>         </property>		<compartment subcompartmentId="45bb416c-a63b-429f-8754-b3f76a069c43">
@@ -249,27 +249,27 @@ elementaryExchangeId="349b29d1-3e58-4c66-98b9-9d1a076efd2e" 	  >
         <unitName xml:lang="en">kg</unitName>
 		<comment xml:lang="en">exchange comment</comment>		
 		<property 
-		propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
 unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
           <name xml:lang="en">dry mass</name>
 <unitName xml:lang="en">kg</unitName>         </property>		<property 
-		propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
           <name xml:lang="en">carbon content, non-fossil</name>
 <unitName xml:lang="en">dimensionless</unitName>         </property>		<property 
-		propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
 unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
           <name xml:lang="en">wet mass</name>
 <unitName xml:lang="en">kg</unitName>         </property>		<property 
-		propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
 unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
           <name xml:lang="en">water in wet mass</name>
 <unitName xml:lang="en">kg</unitName>         </property>		<property 
-		propertyId="a9358458-9724-4f03-b622-106eda248916" 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
           <name xml:lang="en">water content</name>
 <unitName xml:lang="en">dimensionless</unitName>         </property>		<property 
-		propertyId="c74c3729-e577-4081-b572-a283d2561a75" 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
 unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
           <name xml:lang="en">carbon content, fossil</name>
 <unitName xml:lang="en">dimensionless</unitName>         </property>		<compartment subcompartmentId="7011f0aa-f5f9-4901-8c10-884ad8296812">

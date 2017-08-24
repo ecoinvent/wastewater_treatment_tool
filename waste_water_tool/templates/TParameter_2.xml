@@ -1,4 +1,4 @@
-<parameter parameterId="{{ parameterId }}" 
+<parameter parameterId="{{ id }}" 
 	  {% if variableName %}variableName="{{ variableName }}" {% endif %}
 	  {% if mathematicalRelation is string %}mathematicalRelation="{{ mathematicalRelation }}" {% endif %}
 	  {% if isCalculatedAmount %}isCalculatedAmount="{{ isCalculatedAmount }}" {% endif %}

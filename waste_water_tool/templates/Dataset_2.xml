@@ -91,15 +91,21 @@
 	
 {% if has_userMD %}
 <usedUserMasterData xmlns="http://www.EcoInvent.org/UsedUserMasterData">
-	{% for e in ActivityNames %}
-	{{ e }}
-	{% endfor %}
-	{% for e in IntermediateExchanges %}
-	{{ e }}
-	{% endfor %}
-    {% for e in ActivityIndex %}
-	{{ e }}
-	{% endfor %}
+{% for e in ActivityNames %}
+{{ e }}
+{% endfor %}
+{% for e in Properties %}
+{{ e }}
+{% endfor %}
+{% for e in Parameters %}
+{{ e }}
+{% endfor %}
+{% for e in IntermediateExchanges %}
+{{ e }}
+{% endfor %}
+{% for e in ActivityIndex %}
+{{ e }}
+{% endfor %}
 </usedUserMasterData>
 {% endif %}
 </ecoSpold>
