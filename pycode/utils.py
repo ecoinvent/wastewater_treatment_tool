@@ -3,8 +3,14 @@ from pickle import dump, load
 import pandas as pd
 import numpy as np
 from copy import copy
-    
-    
+import uuid
+
+NO_UNCERTAINTY = {
+    'variance':0, 
+    'pedigreeMatrix':[1,1,1,1,1],
+    'comment': "Uncertainty not considered"
+    }
+
 def pkl_dump(dump_dir, obj_name, obj, feedback = False):
     '''helper function for saving files in pickle'''
     
@@ -134,3 +140,10 @@ def find_youngest(files):
     
 def add_path_in_list(l, path):
     return [os.path.join(path, filename) for filename in l]
+
+def make_uuid(l):
+    if type(l) == str:
+        l = [l]
+    else:
+        assert type(l) in [list, set, tuple]
+    return str(uuid.uuid5(uuid.NAMESPACE_DNS, ''.join(l)))
