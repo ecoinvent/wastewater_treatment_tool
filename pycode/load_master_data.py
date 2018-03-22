@@ -5,23 +5,27 @@ from copy import copy
 from .utils import pkl_dump, pkl_load, list_to_df, is_empty, build_file_list, dataframe_to_excel, find_youngest
 
 
-def load_MD(MD_pkl_dir, MD_xml_dir, MD_fields_xls=None, 
-            MD_xls_dump_dir=None, return_MD=False):
+def load_MD(root_dir):
     '''Load pickled master data dictionary MD.
+    
     Dictionary `MD` keys=names of the master data files and
     values=pandas dataframes with all elements and attributes.'''
     
-    # Update pickle MD if necessary
-    update_MD_if_needed(MD_pkl_dir, MD_xml_dir, MD_fields_xls, return_MD)
-    
+    MD_pkl_dir = os.path.join(root_dir, 'MasterData')
+    update_MD_if_needed(root_dir)
     return pkl_load(MD_pkl_dir, 'MD')
     
-def update_MD_if_needed(MD_pkl_dir, MD_xml_dir, MD_fields_xls=None, return_MD=False):
+def update_MD_if_needed(root_dir):
     '''Generate a dictionary `MD` with keys=names of the master data files and
        values=pandas dataframes with all elements and attributes
        Will only generate `MD` if such a dictionary does not already exist
        or if the existing MD is older than any of the Master data files.
     '''       
+    MD_pkl_dir = os.path.join(root_dir, 'MasterData')
+    MD_xml_dir = os.path.join(root_dir, 'MasterData', 'XML')
+    MD_fields_xls = os.path.join(root_dir, 'MasterData', 'xlsx', 'MasterData_fields.xlsx')
+    MD_xls_dump_dir=os.path.join(root_dir, 'MasterData', 'xlsx')
+
     # Find the age of the youngest current MD file
     filelist = build_file_list(MD_xml_dir,
                                extension = 'xml',
@@ -42,10 +46,7 @@ def update_MD_if_needed(MD_pkl_dir, MD_xml_dir, MD_fields_xls=None, return_MD=Fa
                       pickle_dump_dir=MD_pkl_dir,
                       MD_xls_dump_dir=None
                       )
-    if return_MD:
-        return MD
-    else:
-        return None
+    return None
 
 
 def build_MD(MD_xml_dir, MD_fields_xls, pickle_dump_dir, MD_xls_dump_dir=None):
