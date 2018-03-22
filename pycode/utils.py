@@ -2,7 +2,7 @@ import os
 from pickle import dump, load
 import pandas as pd
 import numpy as np
-
+from copy import copy
     
     
 def pkl_dump(dump_dir, obj_name, obj, feedback = False):
@@ -131,3 +131,6 @@ def find_youngest(files):
             youngest = copy(f)
             t = copy(t_)
     return youngest, t
+    
+def add_path_in_list(l, path):
+    return [os.path.join(path, filename) for filename in l]
