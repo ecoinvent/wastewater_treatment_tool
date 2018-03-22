@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<validIntermediateExchanges majorRelease="0" minorRelease="0" xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <intermediateExchange id="61745944-bd0b-5790-8249-08954a775d59" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">wastewater, from ceramic production</name>
+    <unitName xml:lang="en">m3</unitName>
+    <productInformation />
+  </intermediateExchange>
+</validIntermediateExchanges>

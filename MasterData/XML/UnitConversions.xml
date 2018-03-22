@@ -1,0 +1,3880 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The contents of this file are subject to the EcoSpold Public License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.ecoinvent.ch.
+Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.
+The Original Code consists of the EcoSpold data format and EcoSpold Access.
+The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
+-->
+<validUnitConversions majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="3097" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <contextName xml:lang="en">ecoinvent</contextName>
+  <unitConversion id="f7da4b67-01f9-4c78-955f-62f78db81284" factor="0.0227">
+    <unitFromName xml:lang="en">PKR2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="804b7be9-665b-4381-a9e2-bdd04261129a" factor="1E-09">
+    <unitFromName xml:lang="en">micron</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="55266d8c-feb1-4e84-a3f4-d6c21333a15c" factor="0.0283495231">
+    <unitFromName xml:lang="en">ounce avoirdupois</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="90eccce3-3849-4621-9bf3-2a282ad3e140" factor="0.18">
+    <unitFromName xml:lang="en">AED2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ca32c70b-46ec-4f96-9c46-410e8718152e" factor="0.000356">
+    <unitFromName xml:lang="en">COP2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="4aff4cc0-5b73-434c-9af7-167474f5d1f9" factor="0.0036">
+    <unitFromName xml:lang="en">Wh</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="b4e8d315-2777-4d21-b395-f4f74ad460c4" factor="0.111">
+    <unitFromName xml:lang="en">SEK2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="4ae03573-befb-41d8-965e-8bb1c18743ba" factor="0.123">
+    <unitFromName xml:lang="en">DKK2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="eede1800-4ffc-40f8-a71a-6618a549b739" factor="0.00751">
+    <unitFromName xml:lang="en">ISK2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ce514805-230e-4053-ae2f-41da67d9d034" factor="0.656">
+    <unitFromName xml:lang="en">AUD2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="eff59f1d-bedf-4f01-b0ab-12903ef2c3df" factor="0.0362">
+    <unitFromName xml:lang="en">CZK2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="634b6470-6307-4013-9f0e-c7802c803cda" factor="0.32">
+    <unitFromName xml:lang="en">AED2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2cb8bea7-9ed0-4d38-910b-90421c753695" factor="3">
+    <unitFromName xml:lang="en">KWD2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f439eec7-c1da-4fb1-bb2d-cfa8165e3631" factor="1609.344">
+    <unitFromName xml:lang="en">mile*year</unitFromName>
+    <unitToName xml:lang="en">m*year</unitToName>
+    <unitType xml:lang="en">length-time</unitType>
+  </unitConversion>
+  <unitConversion id="dceb0e9c-2a2a-4d0d-81f6-01c8657ee41c" factor="0.00926">
+    <unitFromName xml:lang="en">LKR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2abd1756-a5fa-4540-8e04-c206ff4e4b06" factor="81.6466266">
+    <unitFromName xml:lang="en">barrel lime small mass equivalent</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="2f5fb020-2f7a-467f-ab98-bbbe0400097f" factor="0.0117">
+    <unitFromName xml:lang="en">NPR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7a8817f9-a356-45e3-93e6-b67a1718d5fd" factor="0.0044">
+    <unitFromName xml:lang="en">KZT2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="82f1d87e-c754-4a17-a5aa-a1b2ac721cef" factor="0.532">
+    <unitFromName xml:lang="en">AUD2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="1d627fab-bd4e-431e-a335-441bde737226" factor="0.321">
+    <unitFromName xml:lang="en">PLN2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="49ea460a-dc53-410b-9bb9-3da9dc6810b8" factor="0.000356">
+    <unitFromName xml:lang="en">COP2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b647d83b-e03b-41f4-ad41-5095a03e8f3f" factor="0.188">
+    <unitFromName xml:lang="en">MYR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2de40aa9-df41-4dce-a64c-7f60d2081c6c" factor="0.00105435">
+    <unitFromName xml:lang="en">British thermal unit thermochemical</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="972a44c2-fad4-4803-a47d-18f846027ffc" factor="0.0273">
+    <unitFromName xml:lang="en">INR2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="aa33cb52-4577-46b2-a6e3-73a59d337618" factor="0.0656">
+    <unitFromName xml:lang="en">MXN2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="dc385831-66f6-4b3e-b7a2-2a2c2bf07a94" factor="3.785411784">
+    <unitFromName xml:lang="en">gallon fluid US</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="18cc0de1-fc64-494b-a6b9-8f32da8de40f" factor="1E-32">
+    <unitFromName xml:lang="en">barn</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="559256a4-a89f-4ce9-9cce-1db0934c168f" factor="0.666">
+    <unitFromName xml:lang="en">CAD2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e1df0685-91b6-4e1b-9074-a51fce988b09" factor="7.61E-05">
+    <unitFromName xml:lang="en">IRR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="64ea9a56-807f-4488-bc22-8b97bb42a745" factor="0.129">
+    <unitFromName xml:lang="en">DKK2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="103463b5-8941-4043-9e83-25d6cea70750" factor="0.0223">
+    <unitFromName xml:lang="en">MUR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="526f1545-a042-4767-a240-38e4a07f9ea5" factor="0.768">
+    <unitFromName xml:lang="en">USD2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3bc6481e-2e3e-4859-9441-a5774c1b1840" factor="0.00059">
+    <unitFromName xml:lang="en">KRW2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ad559a52-6c6d-42a9-a02f-8ac0d814a0e0" factor="0.0288">
+    <unitFromName xml:lang="en">RUB2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a883cdfe-0826-4704-92cd-c43252ee8136" factor="1.88">
+    <unitFromName xml:lang="en">BHD2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="1b640a36-4a87-4c68-a230-b862479853ab" factor="0.000518">
+    <unitFromName xml:lang="en">KRW2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f603485a-bd26-4b89-b654-d5182fb7f634" factor="0.0966">
+    <unitFromName xml:lang="en">BWP2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3e6e3b42-7030-419b-bf8c-c9abb9b35afb" factor="0.00813">
+    <unitFromName xml:lang="en">PKR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0a870319-419d-4b6e-a656-613d31966851" factor="0.193">
+    <unitFromName xml:lang="en">ILS2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b6a4e329-9289-46b2-8d38-345a95695c41" factor="0.00623602328594462">
+    <unitFromName xml:lang="en">ounce avoirdupois per gallon Imperial</unitFromName>
+    <unitToName xml:lang="en">kg/l</unitToName>
+    <unitType xml:lang="en">density</unitType>
+  </unitConversion>
+  <unitConversion id="330778b1-51e9-4a4b-b7c9-34db03af9f88" factor="1.12">
+    <unitFromName xml:lang="en">GBP2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="901c4470-5f1e-4c14-a6f5-bfb5caab59d2" factor="0.000593276421257783">
+    <unitFromName xml:lang="en">pound per cubic yard</unitFromName>
+    <unitToName xml:lang="en">kg/l</unitToName>
+    <unitType xml:lang="en">density</unitType>
+  </unitConversion>
+  <unitConversion id="6c4b3a7d-33db-4d6d-91cf-8b65354b732d" factor="0.0103">
+    <unitFromName xml:lang="en">JPY2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0f25ea58-0791-4fb0-b7b8-e0becb6f89e3" factor="2.04">
+    <unitFromName xml:lang="en">BHD2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b014d30f-c0ba-49bb-b5ad-98b661b6000d" factor="0.0001">
+    <unitFromName xml:lang="en">cm2*year</unitFromName>
+    <unitToName xml:lang="en">m2*year</unitToName>
+    <unitType xml:lang="en">area-time</unitType>
+  </unitConversion>
+  <unitConversion id="0f2344bf-b633-41dc-b45a-e439197fcdba" factor="0.205">
+    <unitFromName xml:lang="en">AED2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9eb6051b-7f6b-4020-b5c5-e8e4fb66d3a1" factor="0.224">
+    <unitFromName xml:lang="en">SAR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b6bd4fe7-984f-4537-a0f4-cdc80b1f4030" factor="0.462">
+    <unitFromName xml:lang="en">TND2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="cc4e38bc-d264-4b2b-bce9-26871cb9b367" factor="1000">
+    <unitFromName xml:lang="en">GJ</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="09f2069f-bb2b-4d6c-8e4f-258012bd76a5" factor="0.19">
+    <unitFromName xml:lang="en">ARS2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="21cd80c3-2977-45d2-a128-443f510b62a3" factor="0.00433">
+    <unitFromName xml:lang="en">KZT2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7cf73057-2170-4489-9977-c3af3733c719" factor="1000000000000">
+    <unitFromName xml:lang="en">km3</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="2264a388-9b2f-40a3-a1e5-e3b17a468a4d" factor="1.609344">
+    <unitFromName xml:lang="en">mile</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="2f7637b0-26a2-47e5-9ed7-6cc3d445871f" factor="0.126">
+    <unitFromName xml:lang="en">DKK2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="563e8635-b764-419a-8334-7d722fca35c0" factor="2589998">
+    <unitFromName xml:lang="en">square survey mile</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="daa2c218-4be2-408e-a586-968cb9fa892a" factor="0.118">
+    <unitFromName xml:lang="en">NOK2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="718a99cb-27cc-486f-86bc-2cbb94759bb3" factor="0.625">
+    <unitFromName xml:lang="en">CAD2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="938ae6b3-e847-429f-9749-b6f9e11c3380" factor="0.221">
+    <unitFromName xml:lang="en">SAR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="24613434-7c21-4cb3-a94b-1611862c7f3b" factor="0.146">
+    <unitFromName xml:lang="en">DKK2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="58f0cddb-630e-48a4-8965-e200eb4242d9" factor="0.087">
+    <unitFromName xml:lang="en">CNY2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d87760ae-3b1f-4380-a5ed-115797153826" factor="0.0144">
+    <unitFromName xml:lang="en">PKR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="615c0f81-0d52-4077-b1a6-6568af51376c" factor="0.265">
+    <unitFromName xml:lang="en">ARS2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0844dca6-ba74-4455-8ede-72b34b9416c1" factor="0.0041">
+    <unitFromName xml:lang="en">SIT2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="4eadf432-937e-4f83-9359-c7194a09e737" factor="9.290304E-06">
+    <unitFromName xml:lang="en">square foot</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="0e72d2ab-5b2d-431c-9ce4-d14fa0e97ec5" factor="0.000393">
+    <unitFromName xml:lang="en">COP2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9cb88f76-7498-4773-8a7b-17f1ab0cfab5" factor="0.187">
+    <unitFromName xml:lang="en">ILS2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="8fa897b2-2e8b-471c-aa2f-6b443dbb3a18" factor="0.3048">
+    <unitFromName xml:lang="en">foot</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="6d1fe42c-67da-45a3-b949-299cacb8ad6f" factor="1000">
+    <unitFromName xml:lang="en">metric ton</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="1e39a9ab-cbc1-4901-a97f-fda23a4aff10" factor="0.00883">
+    <unitFromName xml:lang="en">NPR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a2b445db-adab-4154-a724-f3eff9254a02" factor="7.37E-05">
+    <unitFromName xml:lang="en">IDR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="318918d2-7c80-47c9-a3cf-8d467744134b" factor="0.115627123584">
+    <unitFromName xml:lang="en">barrel dry</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="faedbdab-a550-4b67-8435-8346ddb5449a" factor="0.462">
+    <unitFromName xml:lang="en">SGD2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a1073c08-c6eb-4bc8-9333-b81a9b1f1ca5" factor="0.313">
+    <unitFromName xml:lang="en">BRL2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="18ef453a-3d82-4cdb-9ca7-405ea9a11653" factor="1.59">
+    <unitFromName xml:lang="en">BHD2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="756e0608-2d8f-49d6-9e1f-f58e5059e72a" factor="1055056000000">
+    <unitFromName xml:lang="en">quad</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="0a45a902-2969-4a8b-a6da-541f19d2ef12" factor="0.0127">
+    <unitFromName xml:lang="en">ISK2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="cad3eb66-a2b9-4db1-a50e-f2030db46978" factor="0.679">
+    <unitFromName xml:lang="en">BND2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="8d62d09f-1135-4bbb-8f89-a838f67b2dcb" factor="1000000000">
+    <unitFromName xml:lang="en">hm3</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="645e3e5e-39d3-44ea-9778-64767ae137ae" factor="0.21">
+    <unitFromName xml:lang="en">MYR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="85972b2c-194a-4d89-b4f5-5c89158e81d7" factor="0.00509">
+    <unitFromName xml:lang="en">KZT2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="87d4a35c-694e-4bcd-84cd-acd38b051b8e" factor="604800">
+    <unitFromName xml:lang="en">week</unitFromName>
+    <unitToName xml:lang="en">s</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="8734ea51-3421-4c82-9e74-7fdccb703b42" factor="0.001">
+    <unitFromName xml:lang="en">kJ</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="5f8a9d04-86cc-40ad-a94e-8ecfe07dd183" factor="1.07">
+    <unitFromName xml:lang="en">USD2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="053c76d3-7fb6-4b77-a36d-d824072cea6a" factor="0.282">
+    <unitFromName xml:lang="en">MYR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5ed7d499-fc10-4196-99fe-703aad4c0671" factor="0.946352946">
+    <unitFromName xml:lang="en">quart fluid US</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="8d77cc77-2979-4392-bb15-6c7a162e1f07" factor="7.16E-05">
+    <unitFromName xml:lang="en">IRR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c39dce64-072e-423e-afc3-bbf105e3185a" factor="0.0334">
+    <unitFromName xml:lang="en">CZK2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="51710c5c-e6ce-4550-bc0c-6ba5da8e92a9" factor="0.121">
+    <unitFromName xml:lang="en">ZAR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="cc0db2a3-f6e9-4c7e-ae55-4c73a10f1078" factor="0.704">
+    <unitFromName xml:lang="en">CAD2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2b3c4a21-93e4-41b7-b04e-eb74264db163" factor="0.00735">
+    <unitFromName xml:lang="en">PKR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="8c565196-56a5-405c-bbb7-dec809e4f080" factor="0.00399">
+    <unitFromName xml:lang="en">HUF2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0d7c9f30-0f7a-43fc-87e2-f1c5e029277d" factor="3.12">
+    <unitFromName xml:lang="en">BHD2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e90b3078-73c5-4bc9-b49e-99835ef83924" factor="8.37E-05">
+    <unitFromName xml:lang="en">IRR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a66796f3-6158-4cec-b0e6-3eb5605d01b2" factor="0.000734">
+    <unitFromName xml:lang="en">IRR2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7891b253-8873-4d16-85f0-9ae33c0d4ff8" factor="0.00661">
+    <unitFromName xml:lang="en">LKR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e4763812-1c96-496e-91d2-ba05e065951e" factor="0.0111">
+    <unitFromName xml:lang="en">JPY2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="53c1ffa1-b28e-4be9-9e1b-e38a00b4e59b" factor="2.54">
+    <unitFromName xml:lang="en">MUR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3265dd17-c5f9-4251-9587-dff710c92434" factor="4.54609">
+    <unitFromName xml:lang="en">gallon Imperial</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="0ec42259-de10-4433-b164-affa21560421" factor="8.26E-05">
+    <unitFromName xml:lang="en">IDR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ccd8154a-5c76-4fea-b72e-97b6a5c6b8d5" factor="0.247">
+    <unitFromName xml:lang="en">QAR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2f29f364-b1be-48d3-83c1-976245855b29" factor="2.54E-05">
+    <unitFromName xml:lang="en">mil</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="22dd372a-08e9-4092-a799-19ae3ecc9527" factor="0.926">
+    <unitFromName xml:lang="en">EUR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="74b3c646-f5c0-4dac-bbde-7db188738d35" factor="0.0771">
+    <unitFromName xml:lang="en">MXN2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="edf61bf8-1cd5-44c9-8896-dafd7fe6e1bf" factor="1000000000">
+    <unitFromName xml:lang="en">Tg</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="76f8bc15-a5ac-453a-ab5e-caed26d72e55" factor="0.205">
+    <unitFromName xml:lang="en">SAR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d75e8f73-0ec8-43a0-909c-8d63523c729d" factor="0.679">
+    <unitFromName xml:lang="en">SGD2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="74c7a145-5757-491e-a90c-2b269e474c10" factor="100">
+    <unitFromName xml:lang="en">hl</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="ede767a9-4f4f-411d-ab5c-2c9d22eab511" factor="4046.8564224">
+    <unitFromName xml:lang="en">acre</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="133cb0dc-01a0-487f-860f-feab2bef3681" factor="0.00648">
+    <unitFromName xml:lang="en">KZT2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="53c916ea-5248-47b4-9ccd-f19b162ae4c0" factor="0.0915">
+    <unitFromName xml:lang="en">BWP2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d2051429-cd87-4a2b-95f3-e07f0a19f692" factor="0.662">
+    <unitFromName xml:lang="en">USD2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6b58b3e2-a68b-4236-a62b-27cc251beaf5" factor="0.69">
+    <unitFromName xml:lang="en">CAD2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="754a098b-a727-4a92-850f-c8a9aaea0448" factor="0.227">
+    <unitFromName xml:lang="en">BWP2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5d9526e3-002a-4a2b-abc5-6d0f7e272767" factor="2.25">
+    <unitFromName xml:lang="en">KWD2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c97438b9-b80a-4e12-9cfb-d521d96e80d0" factor="0.225">
+    <unitFromName xml:lang="en">ILS2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="09599a88-0927-4110-ab19-04057bac1615" factor="0.173">
+    <unitFromName xml:lang="en">ZAR2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6e101919-c04a-4977-8e8c-65f3eb0ca969" factor="0.00684">
+    <unitFromName xml:lang="en">JPY2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ed3903ef-65b0-4f82-baa9-335d0d5ea2a8" factor="0.0138">
+    <unitFromName xml:lang="en">INR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b9ccb251-bfec-4579-933e-60786a1a52a9" factor="0.706">
+    <unitFromName xml:lang="en">SGD2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9b34eebc-080b-42c0-bf45-b76a13ef6325" factor="2">
+    <unitFromName xml:lang="en">BHD2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="34c1d312-37d3-4498-9648-a453986b729f" factor="1E-06">
+    <unitFromName xml:lang="en">mm2</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="75bb038f-4f0c-475f-a6dd-ee2db44610ab" factor="0.79">
+    <unitFromName xml:lang="en">CAD2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9513da50-578a-438e-a89f-1d1e2bb66e95" factor="2.72">
+    <unitFromName xml:lang="en">MUR2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9c0c667c-4635-47a9-a9da-688d2384e109" factor="907.18474">
+    <unitFromName xml:lang="en">short ton</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="32db3b06-3afe-4527-9eca-5de014053f43" factor="0.00494">
+    <unitFromName xml:lang="en">KZT2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c172c383-c637-4465-b7cb-5d44a381c66f" factor="0.101">
+    <unitFromName xml:lang="en">CNY2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="4ce11688-8fad-4893-bf5b-1bf05d70f14d" factor="0.279">
+    <unitFromName xml:lang="en">VEF2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6db41662-5103-4eb5-ac3f-dcc1f100f221" factor="0.328">
+    <unitFromName xml:lang="en">ARS2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d7809f6a-9743-4856-8125-0f624fb7d2a7" factor="0.0964">
+    <unitFromName xml:lang="en">TTD2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="25f0c336-9520-431d-99d3-e01d6e278248" factor="1.77">
+    <unitFromName xml:lang="en">GBP2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="53a128d1-f779-4611-9215-424bee68f063" factor="0.02">
+    <unitFromName xml:lang="en">THB2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="219c0f61-f2ed-4311-a730-67258169c4a8" factor="0.218">
+    <unitFromName xml:lang="en">MYR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="be0c3da3-8e99-4840-b0fe-479a5fbc24eb" factor="0.57">
+    <unitFromName xml:lang="en">AUD2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="782c0e06-336a-4b0e-a662-408ee6fd022a" factor="1">
+    <unitFromName xml:lang="en">hm2</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="207b50b6-dd47-4184-8546-7b42b6cc2fae" factor="0.576">
+    <unitFromName xml:lang="en">LYD2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="cfffb759-370a-4b18-85de-e2afda849188" factor="0.308">
+    <unitFromName xml:lang="en">ILS2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3d3b6138-4589-49cd-9ab3-bffb78f6e16c" factor="0.0263">
+    <unitFromName xml:lang="en">INR2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d16feb31-0522-4b40-a2d8-34afb6d65ede" factor="8.3612736E-05">
+    <unitFromName xml:lang="en">square yard</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="a4c97c7e-2c97-4486-95f4-b32789efe538" factor="0.571">
+    <unitFromName xml:lang="en">CAD2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ed8e0bea-eb4c-4070-a559-f4a8c704c92d" factor="0.225">
+    <unitFromName xml:lang="en">AED2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b51dc671-b5d1-4918-bcec-c4c3ad6d91f3" factor="1000000">
+    <unitFromName xml:lang="en">km2*year</unitFromName>
+    <unitToName xml:lang="en">m2*year</unitToName>
+    <unitType xml:lang="en">area-time</unitType>
+  </unitConversion>
+  <unitConversion id="eeff5aea-32fb-484a-a570-f9935ea3e7ac" factor="0.00142">
+    <unitFromName xml:lang="en">CLP2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3aeeea57-c3ee-4c2a-ad61-01141d8fec3e" factor="0.0288">
+    <unitFromName xml:lang="en">RUB2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="fcc52321-315e-436f-92fa-1dc7268e7a07" factor="0.505">
+    <unitFromName xml:lang="en">LYD2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2304e242-7a2b-450d-a85f-149c0ec3defa" factor="168">
+    <unitFromName xml:lang="en">week</unitFromName>
+    <unitToName xml:lang="en">hour</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="a500a1ec-d31c-402c-bd7e-7b734a156094" factor="0.112">
+    <unitFromName xml:lang="en">TTD2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="cc8ae01c-1484-492e-8f03-4fb196cf9f6c" factor="0.514">
+    <unitFromName xml:lang="en">SGD2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7838f71d-229a-48ab-96f4-d6fcc1444503" factor="0.0001">
+    <unitFromName xml:lang="en">dm</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="c9744b7c-c96f-4ba6-a6ec-3c7fefdfa6a3" factor="0.746">
+    <unitFromName xml:lang="en">CHF2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="507d1088-b3c7-4eb7-8f87-d4b3466b1282" factor="0.627">
+    <unitFromName xml:lang="en">AUD2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="efd8bfa6-f1c2-4442-99e1-2003551c34f3" factor="0.0298">
+    <unitFromName xml:lang="en">MUR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c52de6a5-407f-45d7-af02-a7dc4ed9a8e1" factor="0.0227">
+    <unitFromName xml:lang="en">RUB2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d4404b35-1d5d-469f-96f8-02facc7df976" factor="0.163">
+    <unitFromName xml:lang="en">AED2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a0be64a2-c7e0-467e-b277-852313246df9" factor="0.247">
+    <unitFromName xml:lang="en">PLN2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b9f94e53-c7f4-462c-a507-f9c531ff8551" factor="0.0322">
+    <unitFromName xml:lang="en">CZK2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="52f0b788-0f41-46b7-9810-20212ac413e6" factor="0.9">
+    <unitFromName xml:lang="en">USD2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c514bed6-8b4a-4333-8344-9f1dbfff9c16" factor="0.1">
+    <unitFromName xml:lang="en">dm</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="9690600c-1a77-4ce4-a3c5-0cb539220895" factor="0.29">
+    <unitFromName xml:lang="en">VEF2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2de65878-b914-4e60-90cc-66e7a359575d" factor="0.00774">
+    <unitFromName xml:lang="en">JPY2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7204dfc7-2682-4a68-92d8-436e1b63e18a" factor="0.676">
+    <unitFromName xml:lang="en">AUD2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6dffb22e-5132-45c7-a973-9ad0cda95fc9" factor="7.83E-05">
+    <unitFromName xml:lang="en">IDR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ca0e597b-bf44-448d-8385-bfafeb96a253" factor="0.0223">
+    <unitFromName xml:lang="en">MUR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e8e10a2c-03da-4805-afb3-4236c7ba8e01" factor="0.00134">
+    <unitFromName xml:lang="en">CLP2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a71739bf-b349-4f42-aa96-da7222f32762" factor="0.671">
+    <unitFromName xml:lang="en">CHF2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d7fdb9ec-73a6-40a7-b03b-0c108857eac3" factor="1.1365225">
+    <unitFromName xml:lang="en">quart Imperial</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="232cb643-8a1e-4584-8cc4-aec44c014d24" factor="1.49">
+    <unitFromName xml:lang="en">GBP2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0a41f2b7-0c0a-4152-a4f0-4df783bbae4f" factor="0.376">
+    <unitFromName xml:lang="en">BRL2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="23bea162-7c9f-4b8f-9f68-4fcbf97b3c91" factor="0.0395">
+    <unitFromName xml:lang="en">CZK2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9b8bc2d3-72a0-4a42-b542-42c8c284d7c7" factor="6.46E-05">
+    <unitFromName xml:lang="en">IDR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="495c0ae2-f575-4325-b8a2-d33bb78abb9f" factor="0.00671">
+    <unitFromName xml:lang="en">JPY2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3f647567-b3c0-41c8-a0e6-9a3bd7449dc4" factor="0.00867">
+    <unitFromName xml:lang="en">NPR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="18ff7392-37a3-4416-943f-ea23222d7f1f" factor="0.00522">
+    <unitFromName xml:lang="en">ISK2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3c725087-d686-47bd-880a-4aa98405e13b" factor="0.115">
+    <unitFromName xml:lang="en">NOK2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5c01bfcc-102a-445c-aedd-42c1237f3c61" factor="0.001">
+    <unitFromName xml:lang="en">g</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="7cf0f489-dcfb-4208-a9d4-96e6f58287fd" factor="0.439">
+    <unitFromName xml:lang="en">SGD2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="1d913247-ee31-42a2-82ab-b6f590123e22" factor="0.55">
+    <unitFromName xml:lang="en">NZD2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0a676b1a-b1a1-40e4-ac84-2cd377bba3ed" factor="0.00745">
+    <unitFromName xml:lang="en">JPY2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b3644ddc-7b7d-4914-b3cf-ca5f107d1499" factor="0.188">
+    <unitFromName xml:lang="en">SAR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9707f8bd-d836-4443-b6d6-16e0aa31491f" factor="0.000807">
+    <unitFromName xml:lang="en">KRW2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c9590c8a-8235-4d06-a99a-195248a7054e" factor="1609.347">
+    <unitFromName xml:lang="en">survey mile</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="ab656f75-0fdd-4a31-8074-3b9b1a4a4c1f" factor="1000000">
+    <unitFromName xml:lang="en">Gg</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="b0e903f8-6960-450e-b42a-5ba130893809" factor="0.0138">
+    <unitFromName xml:lang="en">INR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="1b400023-6302-44ea-9658-c2931c7d7f03" factor="0.182">
+    <unitFromName xml:lang="en">QAR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ca72b061-6783-4026-8604-eb7b9bd9abda" factor="0.00031">
+    <unitFromName xml:lang="en">COP2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7c96dbb5-4c2d-465f-af9a-4fe65e6d0d36" factor="0.511">
+    <unitFromName xml:lang="en">SGD2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6c68b9e3-7b43-43cd-aba3-6e39cf0e2ac7" factor="1.76">
+    <unitFromName xml:lang="en">BHD2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f98c894c-bb92-4051-aee8-ca749f5f2a82" factor="0.0165">
+    <unitFromName xml:lang="en">PHP2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="36bc5d82-5a55-45e7-9738-7cc5b2e4244c" factor="0.159">
+    <unitFromName xml:lang="en">SAR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="44710752-7c85-4aa8-89a4-b926f328e755" factor="0.00347">
+    <unitFromName xml:lang="en">HUF2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="277e943d-76b8-496f-a571-bdaf0ba3f32f" factor="1E-13">
+    <unitFromName xml:lang="en">ångström</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="d6b24b72-d522-4c6c-888b-3de9081beb65" factor="0.0254">
+    <unitFromName xml:lang="en">inch</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="e05d92d3-91e6-441e-9c1b-3ac64059865c" factor="0.514">
+    <unitFromName xml:lang="en">NZD2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="91b1b309-3ce3-4628-b92b-4d28f4fb575c" factor="86400">
+    <unitFromName xml:lang="en">day</unitFromName>
+    <unitToName xml:lang="en">s</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="25506424-5919-408b-9e03-8b2ee235429b" factor="0.0194">
+    <unitFromName xml:lang="en">INR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="919d11e9-74f1-4817-9a9d-3502f6c100bc" factor="0.405">
+    <unitFromName xml:lang="en">BRL2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="070704eb-02bc-45de-a64e-c767e4795202" factor="0.127">
+    <unitFromName xml:lang="en">BWP2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a1be753d-16a3-4039-bccb-ecf5c2aac369" factor="3.624556363776">
+    <unitFromName xml:lang="en">cord</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="57421159-4ba7-4b56-9da0-9e2ef0d92491" factor="0.19">
+    <unitFromName xml:lang="en">ARS2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e372e3cf-17d8-4f8e-86ca-3a2259301558" factor="0.136">
+    <unitFromName xml:lang="en">NOK2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ea65c8d6-3ce8-4414-a011-f7b2451e1df4" factor="2.18">
+    <unitFromName xml:lang="en">OMR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="8a47eb6b-03eb-4580-9f0b-535eee042c27" factor="3600000000000">
+    <unitFromName xml:lang="en">PWh</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="7aa4538b-72c4-4307-9e3b-09832b55ff51" factor="0.45359237">
+    <unitFromName xml:lang="en">pound avoirdupois</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="ff4fa930-8406-4406-b144-f6599e370bc9" factor="2.58">
+    <unitFromName xml:lang="en">KWD2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="87265287-7dff-4a5f-b2e0-29961a4a21c2" factor="0.000753">
+    <unitFromName xml:lang="en">KRW2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6a7db835-f57f-484c-86b8-9f536a1d6b49" factor="0.0757">
+    <unitFromName xml:lang="en">ZAR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="550ff223-17b4-41c4-99f3-9ae558d60590" factor="0.57">
+    <unitFromName xml:lang="en">AUD2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ea17c9d9-7117-42e2-be75-7b5d0a11eb9c" factor="0.286">
+    <unitFromName xml:lang="en">ARS2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7b782f0d-c63d-40b7-ba1d-7d089254c8d7" factor="1.18">
+    <unitFromName xml:lang="en">ARS2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5925f1d1-7a4a-4025-8221-d09d76e5ef82" factor="0.173">
+    <unitFromName xml:lang="en">BWP2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="718b6267-a320-40a6-a67e-3d1bed47ca14" factor="0.179">
+    <unitFromName xml:lang="en">ILS2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="53f872e3-a5a5-4a09-8900-01ae34886716" factor="0.637">
+    <unitFromName xml:lang="en">LYD2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5011ce83-21eb-4e91-b9c1-e8a2602043cc" factor="0.0299">
+    <unitFromName xml:lang="en">THB2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="1681701d-0452-46c6-9c9b-adca798fdad8" factor="0.0344">
+    <unitFromName xml:lang="en">UYU2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="31914774-cf80-4229-a8ee-32d38d5a9249" factor="0.862">
+    <unitFromName xml:lang="en">LYD2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c12d49ad-e568-4e77-92bb-b64d41c3f1b4" factor="0.00781">
+    <unitFromName xml:lang="en">JPY2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5559b97f-8f87-4838-9809-4da60c171bb8" factor="1E+15">
+    <unitFromName xml:lang="en">Pl</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="8c555ae7-8eb5-46ed-bd72-e64d6663bd65" factor="0.0219">
+    <unitFromName xml:lang="en">INR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7c880c90-f4f4-468e-9e6d-8c288f2f537a" factor="0.309">
+    <unitFromName xml:lang="en">VEF2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3320035b-c874-4fef-bc70-c16d76942a71" factor="0.0183">
+    <unitFromName xml:lang="en">INR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3bd38b52-57ca-48d0-97d4-a1340a8f93bf" factor="158.987294928">
+    <unitFromName xml:lang="en">barrel oil</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="9a154a67-30ed-4393-99f6-9034cf5ca8fc" factor="0.23">
+    <unitFromName xml:lang="en">QAR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="cffe5055-06d6-4ec1-85e7-2240e4ad0ecb" factor="0.1">
+    <unitFromName xml:lang="en">hm</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="19ba1018-8021-496a-8437-1808904a2f5b" factor="1000000000">
+    <unitFromName xml:lang="en">TWh</unitFromName>
+    <unitToName xml:lang="en">kWh</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="a0c71773-9f28-40f6-9e14-f5ff341b309b" factor="0.028316846592">
+    <unitFromName xml:lang="en">cubic foot</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="fd80385e-2edd-434b-8a76-1aa330c43c97" factor="0.0115">
+    <unitFromName xml:lang="en">ISK2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="628de887-2bd8-4c07-adce-56e3aa55604e" factor="2.78">
+    <unitFromName xml:lang="en">OMR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0a049dd9-b184-4481-a1cb-b92041cea815" factor="1000000000">
+    <unitFromName xml:lang="en">km3</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="80330609-12ba-4c1b-a657-46262b8ee8a2" factor="0.0043">
+    <unitFromName xml:lang="en">HUF2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2862493f-477b-4536-a9d0-5b62ad769fc2" factor="0.0124">
+    <unitFromName xml:lang="en">ISK2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3b3ca4c1-3002-4d06-a15d-d8ed72918913" factor="0.0376">
+    <unitFromName xml:lang="en">CZK2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5c783ea1-b1e3-4916-bc08-2a8b809f8606" factor="0.0976">
+    <unitFromName xml:lang="en">CNY2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7e3985d3-b8d8-44fa-ba0d-7b64f73556c0" factor="0.176110184">
+    <unitFromName xml:lang="en">square feet*degree F*hour/British thermal unit ISO IT</unitFromName>
+    <unitToName xml:lang="en">m2*K/W</unitToName>
+    <unitType xml:lang="en">thermal insulance</unitType>
+  </unitConversion>
+  <unitConversion id="ca48f2aa-7d7f-4a67-8c51-4a1492e37d21" factor="0.103">
+    <unitFromName xml:lang="en">SEK2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b633c615-bf0a-4f04-a41d-7977b59ef7df" factor="258.9998">
+    <unitFromName xml:lang="en">square survey mile</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="cda895af-03be-443f-9f2b-9bcfd7f721d2" factor="1000">
+    <unitFromName xml:lang="en">km</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="bd703d4a-8f80-4494-9ef4-cd7fbb4a55b0" factor="0.231">
+    <unitFromName xml:lang="en">PLN2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="be67db2b-077b-4b18-b818-5759593c73e2" factor="0.177">
+    <unitFromName xml:lang="en">SAR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7724463f-f1f1-4163-bbc0-f3cdc4c1f1c1" factor="0.0156">
+    <unitFromName xml:lang="en">PKR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="50cda149-44c6-42ed-b663-cdd268033827" factor="0.00999">
+    <unitFromName xml:lang="en">DZD2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="389e4f06-fabd-4614-a3ae-2daadb41d783" factor="0.00738">
+    <unitFromName xml:lang="en">LKR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6b7ee953-8406-43cc-8e0f-a52c6d659555" factor="0.0254">
+    <unitFromName xml:lang="en">RUB2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6878350c-1713-4de3-abdb-d60e23f5c881" factor="1E-06">
+    <unitFromName xml:lang="en">cm3</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="d96a3c4b-8280-4091-bf59-5c92368e0296" factor="0.0205">
+    <unitFromName xml:lang="en">THB2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b2420bb1-770a-49a0-a966-5f0cc93fa263" factor="0.175">
+    <unitFromName xml:lang="en">TTD2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9a964410-ce50-435f-816d-a996e7110ffd" factor="0.291">
+    <unitFromName xml:lang="en">ARS2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0988962e-0d77-49f7-b794-0991bf3087a8" factor="0.914">
+    <unitFromName xml:lang="en">EUR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d5387f81-a048-42e7-98d2-67a0c971de7a" factor="0.0861">
+    <unitFromName xml:lang="en">MXN2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="393fcb42-d54d-431d-8c90-b36f7e0825a2" factor="0.0934">
+    <unitFromName xml:lang="en">ZAR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="fe544d6a-9091-4d32-bea6-1ba417020b72" factor="0.606">
+    <unitFromName xml:lang="en">SGD2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="50f9b397-9be5-4701-b8d7-1f3bbde6be53" factor="0.00155517384">
+    <unitFromName xml:lang="en">pennyweight</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="4920930a-1e04-4385-b69b-e1fa488d72eb" factor="0.524">
+    <unitFromName xml:lang="en">NZD2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3e79f069-a709-4602-b81d-5e2ff3e7f1c8" factor="0.631">
+    <unitFromName xml:lang="en">USD2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="be15bfc7-c238-4e3a-9dcc-433a692145df" factor="0.0146">
+    <unitFromName xml:lang="en">PHP2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="54ffae1f-f283-42c9-9591-30a5b579fe0b" factor="0.112">
+    <unitFromName xml:lang="en">SEK2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7e613b17-0e45-4a70-bd7e-b35a21040577" factor="0.16">
+    <unitFromName xml:lang="en">ZAR2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3f7d5402-cefe-4714-af1b-bd1201637194" factor="0.226">
+    <unitFromName xml:lang="en">PLN2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="144e0fb6-2b1c-4704-ad26-816dc9f6d3f2" factor="0.174">
+    <unitFromName xml:lang="en">ILS2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6040d9af-5541-4b16-8fb1-9ef4656a00f4" factor="0.536">
+    <unitFromName xml:lang="en">SGD2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="edaee7b2-749a-49bf-9eca-55f60268a53f" factor="0.124">
+    <unitFromName xml:lang="en">DKK2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f6c7ed78-a746-47ae-a22a-dad46528e541" factor="0.000446">
+    <unitFromName xml:lang="en">COP2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="974c2bfa-b41c-40e6-beb4-a6d30f0f9184" factor="1.96">
+    <unitFromName xml:lang="en">LYD2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f4138835-640e-4dd4-aaee-35b3bb72670f" factor="0.521">
+    <unitFromName xml:lang="en">NZD2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6f46ff03-7a08-462d-b0b7-49ca5e7ad0f6" factor="2.23">
+    <unitFromName xml:lang="en">BHD2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="372dfa09-2ac6-42fb-ad63-f5bd4708fbc1" factor="0.00137">
+    <unitFromName xml:lang="en">CLP2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="4f0a40c7-8bc6-4237-b6e4-fb8dfbce547f" factor="0.309">
+    <unitFromName xml:lang="en">MYR2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7fe19160-4301-4d90-b0f5-c539cc06ca9e" factor="0.168">
+    <unitFromName xml:lang="en">SAR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="21d54fca-9cd3-4032-9df7-69a8fa1f814f" factor="0.9144">
+    <unitFromName xml:lang="en">yard</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="ae31de20-3f89-4ec3-bccc-ffbd538ecc6d" factor="0.653">
+    <unitFromName xml:lang="en">BRL2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f72a190a-85a4-456a-af12-84375bb189fd" factor="1.68">
+    <unitFromName xml:lang="en">BHD2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6d8af3d2-1338-44dc-86fd-827d85006d99" factor="1.852">
+    <unitFromName xml:lang="en">nautical mile</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="51314199-7767-4e85-9e6b-5d21772418bf" factor="0.485">
+    <unitFromName xml:lang="en">BND2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="132f1c6e-e94a-4274-82fc-d1810365b921" factor="0.143">
+    <unitFromName xml:lang="en">NOK2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="08a9bd43-2610-4820-83b3-3cfdaae49807" factor="0.127">
+    <unitFromName xml:lang="en">NOK2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f62307d4-5c00-4544-952c-c853006bcc48" factor="0.457">
+    <unitFromName xml:lang="en">SGD2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="06785ffb-dabc-4d03-a992-da65faa8b24a" factor="2.66">
+    <unitFromName xml:lang="en">KWD2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9e1d6b9f-d3ba-4714-a812-8b0a7161360d" factor="0.3732417216">
+    <unitFromName xml:lang="en">troy pound</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="4fe72e85-c2dc-4bc2-abd6-08e8746ba2cd" factor="0.0575">
+    <unitFromName xml:lang="en">MXN2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="cd0dc6d2-49d6-4830-88c4-38bd767158df" factor="100">
+    <unitFromName xml:lang="en">hm</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="0ec1b227-e098-44cb-ba3e-51fc9aba19f6" factor="0.27">
+    <unitFromName xml:lang="en">BRL2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="47e721cb-e832-46ac-a3f2-f016a2acaa48" factor="0.155">
+    <unitFromName xml:lang="en">clo</unitFromName>
+    <unitToName xml:lang="en">m2*K/W</unitToName>
+    <unitType xml:lang="en">thermal insulance</unitType>
+  </unitConversion>
+  <unitConversion id="b701814a-992f-467e-bb83-5d7740115293" factor="0.12">
+    <unitFromName xml:lang="en">NOK2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="96689d73-2613-4177-bd4f-0895f9ebf733" factor="0.655">
+    <unitFromName xml:lang="en">LYD2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0a2f844a-1b66-4fa5-a635-809e015dcb04" factor="0.0003048">
+    <unitFromName xml:lang="en">foot</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="819e8314-001d-454a-913f-d19864c0ae26" factor="50.802345">
+    <unitFromName xml:lang="en">long hundredweight</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="a891dbc4-e647-4a3c-8efc-dbd5915567fa" factor="0.0160184633739601">
+    <unitFromName xml:lang="en">pound per cubic foot</unitFromName>
+    <unitToName xml:lang="en">kg/l</unitToName>
+    <unitType xml:lang="en">density</unitType>
+  </unitConversion>
+  <unitConversion id="9f91c2fa-a7c8-46a1-952b-d9f009d34856" factor="0.0255">
+    <unitFromName xml:lang="en">SKK2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="eb63d007-84e3-4366-aa9a-f94fcdd77b8b" factor="3600000">
+    <unitFromName xml:lang="en">GWh</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="60e467d1-9151-4064-82d5-bc9897172820" factor="0.589">
+    <unitFromName xml:lang="en">LYD2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="4b1d61f9-52f7-4a13-9fe7-3cf74c1182af" factor="0.096">
+    <unitFromName xml:lang="en">SEK2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="8ba5bbc2-2a6b-4a26-b651-b78c6d5c2da8" factor="0.0212">
+    <unitFromName xml:lang="en">RUB2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f0b75339-dd79-4e14-bc78-b766c7c30797" factor="1E-06">
+    <unitFromName xml:lang="en">ml</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="838422d6-b633-4f66-955b-5696fac05e21" factor="1016.04691">
+    <unitFromName xml:lang="en">long ton</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="87019d99-bf1f-486b-ba02-f93e236d6990" factor="3.42">
+    <unitFromName xml:lang="en">BHD2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c3a60245-9f9b-46f5-a803-d50abda3e157" factor="0.559">
+    <unitFromName xml:lang="en">BRL2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="bfc30277-7a0e-456f-8ae0-8d6d55ec8688" factor="3600000000">
+    <unitFromName xml:lang="en">TWh</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="2c345baf-5673-4f78-94f2-c97b98d38a2f" factor="1.45997231821056">
+    <unitFromName xml:lang="en">short ton*mile</unitFromName>
+    <unitToName xml:lang="en">metric ton*km</unitToName>
+    <unitType xml:lang="en">freight-transport-work</unitType>
+  </unitConversion>
+  <unitConversion id="be2232d4-f032-46a9-a12a-feae394d61ac" factor="1000000000">
+    <unitFromName xml:lang="en">Tl</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="0633fc0d-4482-46ae-8d73-403c91ae66c9" factor="0.000134">
+    <unitFromName xml:lang="en">IRR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="74f1597d-3cf6-4f16-95e5-0379238ae8b5" factor="1.64">
+    <unitFromName xml:lang="en">OMR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2e55418f-2ea9-418a-bd9b-b557af6b56eb" factor="0.0166666666666667">
+    <unitFromName xml:lang="en">minute</unitFromName>
+    <unitToName xml:lang="en">hour</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="d922b33b-6e2d-4021-839c-7064ce711e0c" factor="0.004184">
+    <unitFromName xml:lang="en">kilocalorie thermochemical</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="f0475ea4-21e2-4b5c-8c3d-da7844615113" factor="0.00238">
+    <unitFromName xml:lang="en">CLP2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d196be2f-978a-466f-a777-683d5b164819" factor="0.001101220943">
+    <unitFromName xml:lang="en">quart dry US</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="272a790b-82be-4293-841b-b6fd71daeffd" factor="0.491">
+    <unitFromName xml:lang="en">SGD2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3eefb6d4-abf6-45ba-ac52-f88235dadee0" factor="0.001">
+    <unitFromName xml:lang="en">mm</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="b429e11f-8e65-4c09-af61-92eeb6af2970" factor="1000">
+    <unitFromName xml:lang="en">MWh</unitFromName>
+    <unitToName xml:lang="en">kWh</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="ad0df0c3-b49d-44df-95ad-eed9695ed6bb" factor="105.506">
+    <unitFromName xml:lang="en">therm EC</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="9a010b84-652e-4b82-9bb0-581900c29ba0" factor="0.0239">
+    <unitFromName xml:lang="en">RUB2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="094325b1-c0a8-4a9b-b589-5eb0bf0a3a7e" factor="0.0275">
+    <unitFromName xml:lang="en">RUB2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e16afeb5-bc74-4ef0-a682-2bc5dd5f4f1a" factor="0.591">
+    <unitFromName xml:lang="en">CAD2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="710f4905-84d3-4d3e-8371-085cd3368065" factor="0.255">
+    <unitFromName xml:lang="en">PLN2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5532f2bd-6c22-4986-acad-defb6dcb15ae" factor="0.1">
+    <unitFromName xml:lang="en">SEK2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c7aabf49-a9d8-4523-a5f0-452e789536c7" factor="119.240471196">
+    <unitFromName xml:lang="en">barrel fluid US</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="9479c1b3-2313-48c9-8be2-32291ed46792" factor="0.173">
+    <unitFromName xml:lang="en">QAR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e3de8116-9a38-4279-82e3-9cf9ac163e1f" factor="0.17">
+    <unitFromName xml:lang="en">ILS2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7215b8ed-e234-4aba-8bae-b0e0f7d16688" factor="0.0214">
+    <unitFromName xml:lang="en">THB2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="18118637-36ed-4fbc-a7ec-da7d736f1983" factor="0.675">
+    <unitFromName xml:lang="en">CAD2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f63c5a94-dc17-42e2-8da3-c8af14a233a5" factor="0.314">
+    <unitFromName xml:lang="en">SAR2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3d90b6ce-5739-4c34-964b-cb80d191b4f1" factor="0.00129">
+    <unitFromName xml:lang="en">CLP2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="50b3ab83-8414-4a67-b8d8-b9cbf2485d02" factor="0.233">
+    <unitFromName xml:lang="en">PLN2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="950d3652-dec3-45f6-b0fb-052882bf3b53" factor="0.228">
+    <unitFromName xml:lang="en">ARS2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f9047fc4-613a-4c5e-a60d-c8cfeb0e825b" factor="1.29">
+    <unitFromName xml:lang="en">ARS2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="80a58228-df4f-4650-a3c0-febcf09f2286" factor="6.479891E-05">
+    <unitFromName xml:lang="en">troy grain</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="4599b3e9-e1c3-45a2-ad6a-ca646adf7c45" factor="0.439">
+    <unitFromName xml:lang="en">BND2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="794d2266-88d5-40a9-ac62-e7b5735437f4" factor="0.0104">
+    <unitFromName xml:lang="en">NPR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="1f7c81e1-f6aa-428e-b446-a7e264765563" factor="0.211">
+    <unitFromName xml:lang="en">PLN2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="73d23ba5-4c67-44f1-a77a-860dc4a89fab" factor="0.000894">
+    <unitFromName xml:lang="en">KRW2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="8bc5c84f-caba-46e5-95c3-a8279b174f1c" factor="0.0039">
+    <unitFromName xml:lang="en">HUF2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c273124e-40e3-4950-a77b-a73145cc4af7" factor="0.143">
+    <unitFromName xml:lang="en">TTD2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c60081b3-2435-473c-8377-afafd3486564" factor="1000000000000">
+    <unitFromName xml:lang="en">Pg</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="3028b5de-a2fc-4c1d-94b2-49cd88686669" factor="0.523">
+    <unitFromName xml:lang="en">LYD2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f5128f96-797d-48ca-bd72-34a2ef9f0440" factor="0.101">
+    <unitFromName xml:lang="en">ZAR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a0227f6c-e176-4109-a28a-fd766cdf86a6" factor="4.1858E-06">
+    <unitFromName xml:lang="en">calorie 59 degree F</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="b13987d1-6987-4fea-99e7-bc906fa45607" factor="0.00229">
+    <unitFromName xml:lang="en">CLP2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5e99698c-7fa2-44ea-a5f1-4fd63b2a1a73" factor="0.606">
+    <unitFromName xml:lang="en">BND2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ccd763a1-2d2c-4252-933a-1b92fc430282" factor="0.229">
+    <unitFromName xml:lang="en">BWP2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="567e7830-b068-4de1-88a1-a60d4b071d47" factor="0.181">
+    <unitFromName xml:lang="en">ILS2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="326d9ac8-49f0-4e34-a8ad-e7b5a1dd8573" factor="0.036">
+    <unitFromName xml:lang="en">CZK2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d57ce59b-0bb0-4c76-8721-6ad479a2aa5b" factor="0.242">
+    <unitFromName xml:lang="en">PLN2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="61f04bf0-8bb7-45bc-aeba-8f9200a86922" factor="0.00125">
+    <unitFromName xml:lang="en">CLP2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0b6c9475-bfa7-4303-87f6-9481876c3a43" factor="0.0166">
+    <unitFromName xml:lang="en">NPR2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="82d849a3-9851-4e56-980e-115cefec346a" factor="0.016">
+    <unitFromName xml:lang="en">INR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b1a79999-5239-4051-80f4-15adf718825f" factor="0.655">
+    <unitFromName xml:lang="en">CAD2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="65bd975c-3949-48af-9ad0-547fc1704c95" factor="0.0992">
+    <unitFromName xml:lang="en">SEK2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="51989fbb-4616-4354-970c-af32667a6d37" factor="0.455">
+    <unitFromName xml:lang="en">NZD2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="66049806-f08c-4f1d-a8f6-51bbb82eac66" factor="0.222">
+    <unitFromName xml:lang="en">PLN2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f8ab8769-a373-40ed-9f23-bd3447d2a235" factor="0.0178">
+    <unitFromName xml:lang="en">PKR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0aa5cd9f-1be5-4ef9-8ee7-8d44fc84c68f" factor="0.24">
+    <unitFromName xml:lang="en">SAR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e8bacf5e-7830-4b92-b1e5-a45c67690670" factor="0.0009144">
+    <unitFromName xml:lang="en">yard</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="45d12ac8-57b5-4e53-807f-5bf0e79770e2" factor="0.121">
+    <unitFromName xml:lang="en">TTD2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="57fa0358-1089-4707-8d66-ba207fb5d1d9" factor="0.000309">
+    <unitFromName xml:lang="en">COP2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5286413d-56a0-4fe8-8efa-91dee3e68695" factor="0.117">
+    <unitFromName xml:lang="en">SEK2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b1bae736-80db-4747-93ff-f21f482608a0" factor="4046.87261">
+    <unitFromName xml:lang="en">survey acre</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="b84197a9-0da6-4b04-897d-b23232dce2af" factor="1609.344">
+    <unitFromName xml:lang="en">mile</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="1ea56145-8b40-4e2c-8aa0-4334826a8d91" factor="0.0002">
+    <unitFromName xml:lang="en">carat</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="1f34b1de-f465-4b86-889c-6e3474d56347" factor="3.84">
+    <unitFromName xml:lang="en">KWD2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e4ebdcc6-a50b-4907-aedb-6fa4eac42065" factor="0.6">
+    <unitFromName xml:lang="en">AUD2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d5f92b4d-ed98-4156-8b19-b7987c0b839d" factor="1.06">
+    <unitFromName xml:lang="en">EUR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="32456d41-4d1d-4b67-a7bd-e909d566676d" factor="0.01">
+    <unitFromName xml:lang="en">cm</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="ea75df51-8195-431e-a154-3b94e93fcd02" factor="0.354">
+    <unitFromName xml:lang="en">QAR2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d5eb328f-c507-4251-81f5-f80c8af08cb8" factor="0.7">
+    <unitFromName xml:lang="en">CAD2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9de81a79-8f3f-4edc-bd02-49c02c75427d" factor="1.90258751902588E-06">
+    <unitFromName xml:lang="en">minute</unitFromName>
+    <unitToName xml:lang="en">year</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="af861303-1e8a-4d30-90ab-1dbd1a598fc7" factor="0.125">
+    <unitFromName xml:lang="en">NOK2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9cec39b9-91fe-4af2-8511-c7df36046c6d" factor="0.000572">
+    <unitFromName xml:lang="en">KRW2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="4631912b-dfb2-4d3b-b126-5390e8348b18" factor="0.0178">
+    <unitFromName xml:lang="en">THB2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="88cc2e9a-268b-41d6-8221-455e0faea175" factor="3.35">
+    <unitFromName xml:lang="en">OMR2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e4afd95f-1b5a-4978-99b1-279bd51d1f4e" factor="0.00576">
+    <unitFromName xml:lang="en">LKR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="107e4506-094b-4ca6-9b2f-9d1c9fde5115" factor="0.22">
+    <unitFromName xml:lang="en">MYR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e2f08853-d587-4ab8-832e-d29560e79244" factor="44768.8">
+    <unitFromName xml:lang="en">ton of oil energy equivalent thermochemical</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="8df84622-6ae1-42ff-aa76-3926a84d92eb" factor="0.0172">
+    <unitFromName xml:lang="en">NPR2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e4fa0136-1df1-415b-b1e4-742c285ac1f9" factor="1000000">
+    <unitFromName xml:lang="en">Gl</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="7c064cb7-d922-4fbe-a574-c51e8046a9ed" factor="1000000000000">
+    <unitFromName xml:lang="en">Pl</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="d814644c-9441-4a3f-85d2-1f11218ecb20" factor="0.0115">
+    <unitFromName xml:lang="en">ISK2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7a46f7f7-28f0-4406-8a0f-a29fddf844fb" factor="0.556">
+    <unitFromName xml:lang="en">LYD2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c787cdc6-821b-4417-87f7-1ab3c770d09c" factor="0.0005506104713575">
+    <unitFromName xml:lang="en">pint dry US</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="a7136190-7ecc-44c0-94f9-cd56cfdb9889" factor="0.00818">
+    <unitFromName xml:lang="en">LKR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f23648f0-0fce-46f3-8350-3de5036c2417" factor="1">
+    <unitFromName xml:lang="en">EUR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="63c300d6-13e7-4877-8c4e-cee98d5af636" factor="0.107">
+    <unitFromName xml:lang="en">SEK2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="04668054-6e62-4702-9a25-bf7731dc5cf8" factor="2.36">
+    <unitFromName xml:lang="en">LYD2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="801ebe9b-7ed7-4b26-820a-90fec92f8951" factor="0.227">
+    <unitFromName xml:lang="en">QAR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9ca9f1a2-a76a-44cb-90ac-26b4c36f12d6" factor="0.764554857984">
+    <unitFromName xml:lang="en">cubic yard</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="9b8de7f3-aed2-40a1-8d06-fb42fea05fd3" factor="0.111">
+    <unitFromName xml:lang="en">CNY2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="303804b0-5347-4be0-9e2d-73bc66c6f0e5" factor="0.0153">
+    <unitFromName xml:lang="en">ISK2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="79e1e89b-2403-4d3e-b186-642ed2d3ec5a" factor="6.65E-05">
+    <unitFromName xml:lang="en">IRR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b5817bc2-84e6-439a-9a57-b014470f637b" factor="0.000727">
+    <unitFromName xml:lang="en">KRW2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0f31b0ca-1b5f-462c-853d-bdb52841cbef" factor="2.54E-05">
+    <unitFromName xml:lang="en">inch</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="6cd77dea-df41-49ce-b6fa-7bf7ca0f7ac8" factor="0.0729">
+    <unitFromName xml:lang="en">MXN2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="bc10d52f-d607-4808-81c2-d1b5353f62ac" factor="0.0206">
+    <unitFromName xml:lang="en">THB2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0798d0ec-4483-465e-b192-d449a278d43a" factor="0.134">
+    <unitFromName xml:lang="en">DKK2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ebf2b1e7-1364-4812-b9b7-10a69bbd6091" factor="0.404687261">
+    <unitFromName xml:lang="en">survey acre</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="861f6506-d445-40d7-bc81-24030215fb8a" factor="35.23907016688">
+    <unitFromName xml:lang="en">bushel US</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="14407010-7b6d-4f4b-bbdd-14b4b81b8bdf" factor="1000000000">
+    <unitFromName xml:lang="en">PJ</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="f04ee789-a0dd-487d-8636-b06f3747e678" factor="0.115">
+    <unitFromName xml:lang="en">BWP2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="45678875-8f0c-4543-a648-96f3139f47a4" factor="0.0203">
+    <unitFromName xml:lang="en">PKR2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9e9a1e2d-363c-4bd5-97f9-273b44cba8d4" factor="0.0284">
+    <unitFromName xml:lang="en">THB2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f580ef05-4b3f-42c7-b071-53b7dfe4b6de" factor="5E-05">
+    <unitFromName xml:lang="en">metric grain</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="7ff79441-e1a4-418e-af3f-61a3296b295d" factor="0.721">
+    <unitFromName xml:lang="en">CHF2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="17339f2c-c4e7-47db-ba7d-93d8e720dffb" factor="0.706">
+    <unitFromName xml:lang="en">USD2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="fb02b27a-d4d3-4629-adba-df4a1f108e43" factor="0.0291666666666667">
+    <unitFromName xml:lang="en">short assay ton</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="d3b1e045-e178-4b51-8958-f6857b0e8338" factor="0.851">
+    <unitFromName xml:lang="en">CAD2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7897593b-fb9c-4aa9-a160-672cef2d5b87" factor="6.4516E-08">
+    <unitFromName xml:lang="en">square inch</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="525a7436-3b37-42ce-b732-f4ef5afe5f0a" factor="0.132">
+    <unitFromName xml:lang="en">TTD2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5748bed3-f799-4622-a433-49f961f016e9" factor="1000">
+    <unitFromName xml:lang="en">km*year</unitFromName>
+    <unitToName xml:lang="en">m*year</unitToName>
+    <unitType xml:lang="en">length-time</unitType>
+  </unitConversion>
+  <unitConversion id="30920d05-152c-4761-bdcf-13dc2ec64730" factor="0.00873">
+    <unitFromName xml:lang="en">PKR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="663ec1eb-0389-4239-957e-14cb758d30ed" factor="0.40468564224">
+    <unitFromName xml:lang="en">acre</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="8055571c-76a6-4c5d-8fd6-cb68ab6c035b" factor="1.3558179483314E-06">
+    <unitFromName xml:lang="en">foot-pound force</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="9588661e-30c6-4b27-83ed-7798c981024e" factor="1.04">
+    <unitFromName xml:lang="en">EUR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="833bfee2-bfb0-4d60-8f03-ab4b283632d5" factor="10000">
+    <unitFromName xml:lang="en">hm2</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="87b5961d-8acc-477c-89ec-6627b2fc992a" factor="2589988.11">
+    <unitFromName xml:lang="en">square mile</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="e652f8ba-0f7d-4a8e-97e0-9b5455688ccb" factor="1.52">
+    <unitFromName xml:lang="en">GBP2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d1ca17e9-3729-4523-ac47-daf0ecd89971" factor="1.09">
+    <unitFromName xml:lang="en">GBP2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="25e3db90-137e-46a7-a985-58e27c5dec41" factor="0.107">
+    <unitFromName xml:lang="en">ZAR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5e40ceec-8f87-49a2-b62c-ef563bdf1f7f" factor="0.00135">
+    <unitFromName xml:lang="en">CLP2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0bc88319-5c47-4e40-9966-ceea958860b4" factor="0.0345">
+    <unitFromName xml:lang="en">CZK2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="84aec9e0-a65d-497e-a56d-704875701963" factor="2.54E-11">
+    <unitFromName xml:lang="en">microinch</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="5ed778c9-ae79-4f8e-ae3b-be8730b1955a" factor="0.00426">
+    <unitFromName xml:lang="en">SIT2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="79a4ddf4-1501-4a9c-be28-803015e44534" factor="0.355">
+    <unitFromName xml:lang="en">BRL2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="701a721a-3df9-4316-bf3e-8dfdf3b4324e" factor="0.673">
+    <unitFromName xml:lang="en">CAD2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="56f76e97-ebdd-40da-9322-62fa67d2f5d1" factor="45.359237">
+    <unitFromName xml:lang="en">short hundredweight</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="d8e0e25f-b759-4372-a9aa-7d88f4387821" factor="0.108">
+    <unitFromName xml:lang="en">ZAR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6f8b5470-820e-487c-b0a0-421318f700fb" factor="0.0236">
+    <unitFromName xml:lang="en">MUR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="527da70d-150b-47e2-9d4b-7f26ceafd1ca" factor="1.84">
+    <unitFromName xml:lang="en">OMR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="83fa9a19-0501-4f39-bb7d-5b55c144df52" factor="1000000">
+    <unitFromName xml:lang="en">hm3</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="3b0d1fab-f9fb-4b24-bf42-7b79319539c3" factor="0.00634">
+    <unitFromName xml:lang="en">LKR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ff8b0a13-d8b5-4f35-ab43-7d29b38c2a16" factor="1.72">
+    <unitFromName xml:lang="en">OMR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="816c8cb9-9f5b-423f-9a92-9942be278b8a" factor="9.7E-05">
+    <unitFromName xml:lang="en">IRR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="083e11e8-7a97-4997-8405-3ed66f2b6c45" factor="277.777777777778">
+    <unitFromName xml:lang="en">GJ</unitFromName>
+    <unitToName xml:lang="en">kWh</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="d457aff2-2fbe-447e-bc15-e790debce8d2" factor="0.575">
+    <unitFromName xml:lang="en">NZD2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b942d6d8-3988-42b7-9c07-5dd0926f4159" factor="0.000292">
+    <unitFromName xml:lang="en">COP2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e69e9c3c-701e-4049-a27d-3c0f3586c58f" factor="0.0101">
+    <unitFromName xml:lang="en">NPR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6b84ae82-cacf-44ef-9846-436265d955f0" factor="0.00574">
+    <unitFromName xml:lang="en">JPY2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="bcd6d3c6-5c0c-49e1-852e-7a84322e02b2" factor="1">
+    <unitFromName xml:lang="en">g/cm3</unitFromName>
+    <unitToName xml:lang="en">kg/l</unitToName>
+    <unitType xml:lang="en">density</unitType>
+  </unitConversion>
+  <unitConversion id="697ceeff-a311-4b21-aecf-7a512c7b9238" factor="0.00826">
+    <unitFromName xml:lang="en">LKR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="471cf4c0-4528-4a50-99c6-a9543fa4da56" factor="0.603">
+    <unitFromName xml:lang="en">AUD2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="54ee30c4-5964-49e5-85b4-758a38a32ca9" factor="0.0102">
+    <unitFromName xml:lang="en">ISK2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0b0b8828-1a22-45d5-b62e-e4afb837306d" factor="0.00143">
+    <unitFromName xml:lang="en">CLP2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="046ca572-b95a-439e-a85e-fbd37c523878" factor="0.00501">
+    <unitFromName xml:lang="en">SIT2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="410cfe00-7758-4994-9d8b-00a8435a0fed" factor="277777777.777778">
+    <unitFromName xml:lang="en">PJ</unitFromName>
+    <unitToName xml:lang="en">kWh</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="2b991d83-c139-4a70-980c-0e53e2f73fa1" factor="0.00036">
+    <unitFromName xml:lang="en">COP2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="968866fc-1cea-4a52-845a-eb43b087c382" factor="41868000000">
+    <unitFromName xml:lang="en">megaton of oil energy equivalent ISO IT</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="c71e7ffe-a548-46e0-999a-8a3039dd1e94" factor="1E-12">
+    <unitFromName xml:lang="en">ng</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="b35b41b5-0df4-4fc5-84bf-7f95e5557ebc" factor="0.019">
+    <unitFromName xml:lang="en">INR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2670202e-9bd1-4d67-ba72-1c679da99e25" factor="0.211">
+    <unitFromName xml:lang="en">QAR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="52b6039e-cc29-41e6-953c-de3ca4507793" factor="0.582">
+    <unitFromName xml:lang="en">CHF2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="760b50e5-7388-4660-a9de-1af95482b6db" factor="0.285">
+    <unitFromName xml:lang="en">SAR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c5987b65-8620-45e5-87c3-188bd84e73af" factor="0.0112">
+    <unitFromName xml:lang="en">NPR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e540e451-c8a9-40eb-ade5-cf8d2989a0b9" factor="0.627">
+    <unitFromName xml:lang="en">CHF2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6d139e5d-3a23-4433-a023-a0b011aaf006" factor="0.122">
+    <unitFromName xml:lang="en">ZAR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="dd6f0708-96a5-4717-9e3e-a54c2e5144b8" factor="1.609344">
+    <unitFromName xml:lang="en">person*mile</unitFromName>
+    <unitToName xml:lang="en">person*km</unitToName>
+    <unitType xml:lang="en">person-transport-work</unitType>
+  </unitConversion>
+  <unitConversion id="a57c5b61-3d94-4bb9-8e86-a4a22c19de64" factor="1000">
+    <unitFromName xml:lang="en">m3</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="fda9157f-5264-4cf4-9e0b-be7fd867ce26" factor="0.001">
+    <unitFromName xml:lang="en">m</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="039b1138-4fb8-4a85-97ba-6206f137c87a" factor="0.0111">
+    <unitFromName xml:lang="en">LKR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="02d86357-d49c-48ea-bb4a-0735124330aa" factor="105.4804">
+    <unitFromName xml:lang="en">therm US</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="f3fe0a54-edcd-41cd-8112-71aa3cd6fcd3" factor="0.00105505585262">
+    <unitFromName xml:lang="en">British thermal unit ISO IT</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="86d68585-2257-4e5e-9899-3eb388d10c3d" factor="0.194">
+    <unitFromName xml:lang="en">QAR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="bab86f03-a680-4697-b528-90e6c0e8f679" factor="2.3">
+    <unitFromName xml:lang="en">KWD2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ae33a368-6959-46b0-9224-c0901499959a" factor="0.0001">
+    <unitFromName xml:lang="en">m2</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="a31ac6a3-ad11-444a-b051-f6de83b93b5b" factor="0.0041868">
+    <unitFromName xml:lang="en">kilocalorie ISO IT</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="3a543b5b-8212-4dde-b72b-c38606e1e61e" factor="2.39">
+    <unitFromName xml:lang="en">BHD2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7cb22eb4-810b-4537-b16c-7aff2fb2f7c2" factor="2.54E-08">
+    <unitFromName xml:lang="en">microinch</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="87bd1c71-07c2-45f0-8d83-472e8580360d" factor="0.0137">
+    <unitFromName xml:lang="en">NPR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="439ed1dc-a691-4c88-b329-e3ae429f982c" factor="2.15">
+    <unitFromName xml:lang="en">OMR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="41c2a537-9743-43f7-8e16-0ae596115ce3" factor="0.623">
+    <unitFromName xml:lang="en">LYD2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="392e4727-b0f8-432a-97fb-65fc0b013c2c" factor="2.95735295625E-05">
+    <unitFromName xml:lang="en">ounce fluid US</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="e0450d8d-4697-4c62-a853-780bd8e9141a" factor="2.54E-08">
+    <unitFromName xml:lang="en">mil</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="311a07ea-6d59-482a-ae21-be931190950e" factor="0.206">
+    <unitFromName xml:lang="en">QAR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c4b5bf98-9825-4860-8bc1-91df165966d1" factor="2.3">
+    <unitFromName xml:lang="en">KWD2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="8e05e9a2-602f-485f-a99e-26722eb4fb4e" factor="1000">
+    <unitFromName xml:lang="en">Mg</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="3089b6c6-50c9-4e10-95a1-0982688388ff" factor="1000">
+    <unitFromName xml:lang="en">kl</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="4cb89b86-d0e2-413f-9843-367dfc976086" factor="0.0142">
+    <unitFromName xml:lang="en">INR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="efc86e9a-85d5-4f45-a1eb-92d98a268194" factor="0.000611">
+    <unitFromName xml:lang="en">KRW2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b5410572-3497-44dd-bc5d-c1d6aa7391c8" factor="2.85">
+    <unitFromName xml:lang="en">KWD2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d4bd5a2d-b158-46cc-97a5-b632a26b3a2b" factor="0.533">
+    <unitFromName xml:lang="en">NZD2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="14770b4f-e47c-43ca-9a61-62f5700be054" factor="1233.489238">
+    <unitFromName xml:lang="en">survey acre-foot</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="aa8e157b-c9a8-4fde-b8ef-a61e419bd806" factor="0.00113">
+    <unitFromName xml:lang="en">CLP2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="cff4e127-b88e-4f28-9c64-560482837328" factor="8.38E-05">
+    <unitFromName xml:lang="en">IDR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2f1fef75-76d6-4c20-abaf-c5269776f5fd" factor="0.183">
+    <unitFromName xml:lang="en">MYR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="cf27a1cd-5a09-4c86-85ff-b454e0e50b60" factor="1.29">
+    <unitFromName xml:lang="en">USD2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="33760fc8-d7c9-4fb3-9472-a64e73d48c0f" factor="1E-28">
+    <unitFromName xml:lang="en">barn</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="81516863-b6ee-4b55-9156-40c910ded21e" factor="0.069">
+    <unitFromName xml:lang="en">MXN2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="760b316d-9a85-4b3a-b4b4-30242a401b81" factor="0.611">
+    <unitFromName xml:lang="en">CHF2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f6133781-8388-4cf5-9dee-56f5acdd7aec" factor="0.528">
+    <unitFromName xml:lang="en">NZD2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="49b0a355-1363-4711-a9bb-6240c3c0b6f8" factor="0.511">
+    <unitFromName xml:lang="en">BND2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2a983547-2852-43ed-a5c0-1ee18a4c1663" factor="0.118">
+    <unitFromName xml:lang="en">TTD2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a86e98ca-237e-4d63-9c9b-1ad6adbfd8de" factor="0.417">
+    <unitFromName xml:lang="en">BRL2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e3ac42a0-c394-40a1-83be-1f7e066841aa" factor="0.237">
+    <unitFromName xml:lang="en">MYR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="34ac424e-e250-4c11-9f4c-e4eab82fee94" factor="0.351">
+    <unitFromName xml:lang="en">BRL2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5d5d9eef-222a-44bb-a9be-b4e02e95687a" factor="0.0542">
+    <unitFromName xml:lang="en">MXN2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e960ceda-a746-4db9-b0bf-2dbf1141cd0e" factor="27.6799047102031">
+    <unitFromName xml:lang="en">pound per cubic inch</unitFromName>
+    <unitToName xml:lang="en">kg/l</unitToName>
+    <unitType xml:lang="en">density</unitType>
+  </unitConversion>
+  <unitConversion id="f3279ce0-a206-4042-9253-d7cfc4b25805" factor="1000000">
+    <unitFromName xml:lang="en">km2</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="7ed0cf1b-8c0c-4233-8d0f-c23ca3955f02" factor="0.18">
+    <unitFromName xml:lang="en">BWP2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f3643d06-4a6e-4231-a20d-59c28ed7f6bd" factor="0.245">
+    <unitFromName xml:lang="en">AED2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="cd42ce34-eb33-4d24-a855-8268c4a57487" factor="0.00348">
+    <unitFromName xml:lang="en">HUF2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="af15d178-b6c7-4bd5-bbd1-51a184547c57" factor="0.0003048006">
+    <unitFromName xml:lang="en">survey foot</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="ff3c9b5e-171e-470f-a703-2795887c09aa" factor="0.109">
+    <unitFromName xml:lang="en">CNY2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="8117bc35-1e60-4dd9-b05a-f6b35e4efa38" factor="0.001">
+    <unitFromName xml:lang="en">dm3</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="051c07fe-17ed-4c2d-bcfd-e4fb61ee1c1b" factor="0.0333">
+    <unitFromName xml:lang="en">CZK2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c91a9516-488b-4159-b199-aa950586cee9" factor="1E-15">
+    <unitFromName xml:lang="en">pg</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="644e1632-6f23-4795-8866-ae72c000b21c" factor="0.0117">
+    <unitFromName xml:lang="en">PKR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="910a6edb-826e-4186-8d00-6a5c4c9b1cad" factor="0.0963">
+    <unitFromName xml:lang="en">CNY2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a4924f52-cf4f-4312-b201-07e2025fd845" factor="0.586">
+    <unitFromName xml:lang="en">AUD2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ca9969e9-ac46-4a31-9bea-4dc15cc5e2c7" factor="0.231">
+    <unitFromName xml:lang="en">MYR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3db21e58-79e3-4240-93aa-087e2a875933" factor="0.0202">
+    <unitFromName xml:lang="en">THB2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="fdb99137-dccf-4201-ae68-dc8755d9646d" factor="1.7299940428621">
+    <unitFromName xml:lang="en">ounce avoirdupois per cubic inch</unitFromName>
+    <unitToName xml:lang="en">kg/l</unitToName>
+    <unitType xml:lang="en">density</unitType>
+  </unitConversion>
+  <unitConversion id="3d7d91c7-de7c-42e9-95ac-17473d8939eb" factor="0.125">
+    <unitFromName xml:lang="en">DKK2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e2bd755d-9b3c-45d6-9dd9-7c9c1216171d" factor="1000000">
+    <unitFromName xml:lang="en">Mm</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="b5dc78a2-3d98-4c29-a8ff-aba3ed965170" factor="1000000000000">
+    <unitFromName xml:lang="en">PWh</unitFromName>
+    <unitToName xml:lang="en">kWh</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="8b2df0f2-9041-4338-bcb0-e65455966732" factor="0.123">
+    <unitFromName xml:lang="en">NOK2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="dfd9b9c3-265e-4085-9ac3-045f2129810f" factor="0.00611784">
+    <unitFromName xml:lang="en">barrel of oil energy equivalent 59 degree F</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="8cc1df42-dc6c-42ca-a5d5-d329267e01a5" factor="2.77">
+    <unitFromName xml:lang="en">MUR2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="883fe863-1ea0-4015-9aa6-0514067a3366" factor="8.92E-05">
+    <unitFromName xml:lang="en">IDR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="601dcfb4-72e3-49f4-8824-3241dd83274b" factor="0.167">
+    <unitFromName xml:lang="en">ILS2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e9c520fa-c5ef-431f-a89c-00005ad8325c" factor="0.706">
+    <unitFromName xml:lang="en">AUD2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0202b00a-e574-4f56-a22a-77be75b23e1e" factor="0.1">
+    <unitFromName xml:lang="en">hl</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="7a36f22e-8034-458c-91d1-caa3e4b33c0e" factor="0.00896">
+    <unitFromName xml:lang="en">JPY2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="543cc212-93ec-4c67-97df-e5a88eb07db4" factor="0.209">
+    <unitFromName xml:lang="en">ILS2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2fb37451-8f37-4060-8fb1-5601e2c92752" factor="0.751">
+    <unitFromName xml:lang="en">USD2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c6b3a85b-cd83-44e0-b677-4d4db0c1c6fb" factor="0.00064516">
+    <unitFromName xml:lang="en">square inch</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="4cec8b78-e2af-4bca-b669-1970879f0d57" factor="0.428">
+    <unitFromName xml:lang="en">NZD2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="56d0107c-c75f-4082-bfe9-90faca055d3b" factor="0.121">
+    <unitFromName xml:lang="en">NOK2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="dc6f7e66-8ae4-448e-acab-49dd0401f84c" factor="0.667">
+    <unitFromName xml:lang="en">CHF2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d87a070f-9e2a-4f54-9967-5de087569f00" factor="1852">
+    <unitFromName xml:lang="en">nautical mile</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="243642bc-d353-4a79-9190-2fd443587b5e" factor="6.48E-05">
+    <unitFromName xml:lang="en">IDR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="1fcc0507-f224-4128-bc2a-5c0873fba31f" factor="0.0151">
+    <unitFromName xml:lang="en">LKR2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a030f29b-2bcc-419e-a11a-6ecf65b97400" factor="0.000546">
+    <unitFromName xml:lang="en">COP2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="aa1917ac-4d90-426c-ab82-c182f5490fa2" factor="1E-06">
+    <unitFromName xml:lang="en">mm</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="b6c8e379-241c-4c8f-b210-0d51db9029c0" factor="0.00323">
+    <unitFromName xml:lang="en">HUF2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d0651234-fe10-4760-b1d3-e28e8328d4bc" factor="0.000763">
+    <unitFromName xml:lang="en">KRW2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5590349b-6a82-4037-af48-e5a16244ee18" factor="0.01">
+    <unitFromName xml:lang="en">dm2</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="20546dfd-3733-411a-bf6e-89d790e70040" factor="0.0969">
+    <unitFromName xml:lang="en">CNY2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="af4c3091-a416-4e2e-a439-7d3890788bc0" factor="0.0259">
+    <unitFromName xml:lang="en">SKK2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="72c14b47-714d-4833-9f1c-a36b5dd2ddf4" factor="0.228">
+    <unitFromName xml:lang="en">AED2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="959d1847-9a37-4af5-9a82-a88072ae0d43" factor="60">
+    <unitFromName xml:lang="en">minute</unitFromName>
+    <unitToName xml:lang="en">s</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="f03e8084-e2f5-4318-b87e-e9b1c5e0e9db" factor="0.546">
+    <unitFromName xml:lang="en">NZD2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9f1d18a3-7e77-4c8b-9ee4-ebfae99ad388" factor="0.488">
+    <unitFromName xml:lang="en">BND2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6d2a510b-b93f-4985-a543-58b044a74374" factor="0.35">
+    <unitFromName xml:lang="en">AED2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2b8f2124-1aa9-437b-b8b0-293938a235c5" factor="0.0174">
+    <unitFromName xml:lang="en">INR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="925e62fd-b1b1-4c63-a178-e810b0e0883a" factor="0.118">
+    <unitFromName xml:lang="en">SEK2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9f13c4ba-f286-441f-abcf-cf3f817c4ccc" factor="0.132">
+    <unitFromName xml:lang="en">DKK2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="093ccf2e-847b-46e5-acbb-8c5a9a7eb829" factor="0.00849">
+    <unitFromName xml:lang="en">JPY2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0d499a9e-d60a-423c-9150-ee341a77f5c6" factor="0.001">
+    <unitFromName xml:lang="en">kgkm</unitFromName>
+    <unitToName xml:lang="en">metric ton*km</unitToName>
+    <unitType xml:lang="en">freight-transport-work</unitType>
+  </unitConversion>
+  <unitConversion id="ac7df559-b769-467b-ba3f-193a241138b2" factor="0.136">
+    <unitFromName xml:lang="en">ZAR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="51184acb-dc66-41f6-85dc-4fad497db914" factor="1E-06">
+    <unitFromName xml:lang="en">micron</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="8677ecb3-5f83-4a35-8f6c-83ee3fb83b78" factor="0.186">
+    <unitFromName xml:lang="en">ILS2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="1494682d-47f7-4b1d-b401-435f92f92536" factor="0.16365924">
+    <unitFromName xml:lang="en">barrel fluid Imperial</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="e456536a-bac8-4d3e-8c3f-74fd06bb7659" factor="0.492">
+    <unitFromName xml:lang="en">TND2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a55e3b3b-6743-4379-b1bc-bbe2f1f45214" factor="0.104">
+    <unitFromName xml:lang="en">NOK2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="10a35b60-cb24-485d-aa10-426cb07d4de2" factor="0.183">
+    <unitFromName xml:lang="en">BWP2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7312f317-3aea-4b8f-861c-3a21f42359f4" factor="0.00553">
+    <unitFromName xml:lang="en">ISK2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="8c777396-d128-4675-9975-41bca35d2b53" factor="100">
+    <unitFromName xml:lang="en">km2</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="a7b5c6cf-1084-44a3-82c8-1badf16a300f" factor="0.0282">
+    <unitFromName xml:lang="en">MUR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="4858b16f-4814-4a0b-bb43-64aab378534b" factor="0.09290304">
+    <unitFromName xml:lang="en">square foot</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="fd0ca644-3480-414d-bbde-400a218f0a18" factor="0.0195">
+    <unitFromName xml:lang="en">THB2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a4e0ed30-a72f-4ffb-8d8b-aab34bb68c70" factor="0.0232">
+    <unitFromName xml:lang="en">THB2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="baeefb9a-93b0-4065-992d-423c14326e25" factor="1">
+    <unitFromName xml:lang="en">kl</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="8f552806-7363-425d-a6a0-3146d8e81067" factor="0.717">
+    <unitFromName xml:lang="en">CHF2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="bcf2565b-1265-4fb8-8e53-2d889ddc4e0c" factor="1.18655284251557">
+    <unitFromName xml:lang="en">short ton per cubic yard</unitFromName>
+    <unitToName xml:lang="en">kg/l</unitToName>
+    <unitType xml:lang="en">density</unitType>
+  </unitConversion>
+  <unitConversion id="f6a0882c-c4c5-44d8-8717-333890b45caa" factor="1.64">
+    <unitFromName xml:lang="en">GBP2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3c7dddd5-804e-429d-8632-4df8a36a742f" factor="0.155">
+    <unitFromName xml:lang="en">CNY2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5b6b7f49-a36d-44d9-aec1-92ff2645edf8" factor="0.0286">
+    <unitFromName xml:lang="en">RUB2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b8e4984e-45b4-4c6d-bd26-452bf38ef5e8" factor="0.933">
+    <unitFromName xml:lang="en">EUR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a679166c-e6f3-47c4-90c6-5de3b8b2ae08" factor="0.133">
+    <unitFromName xml:lang="en">SEK2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="995fe503-037f-46f6-b053-758d08b20073" factor="0.147">
+    <unitFromName xml:lang="en">VEF2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9bdf0d2a-644e-4a7c-a155-84d8155d9207" factor="0.00393">
+    <unitFromName xml:lang="en">HUF2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="46e2a356-90f8-4ce7-93b5-0c893b2af761" factor="1000000">
+    <unitFromName xml:lang="en">TJ</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="01298051-ccde-4bed-b635-6dc6873ac9e3" factor="0.0123">
+    <unitFromName xml:lang="en">ISK2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="91f682c5-f4c9-4d4e-b851-7d2de21ea57a" factor="0.0356">
+    <unitFromName xml:lang="en">UYU2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="25744844-881e-4ea7-a2f6-a616f5302bdf" factor="10000">
+    <unitFromName xml:lang="en">ha*year</unitFromName>
+    <unitToName xml:lang="en">m2*year</unitToName>
+    <unitType xml:lang="en">area-time</unitType>
+  </unitConversion>
+  <unitConversion id="cf9bf8e5-d490-4b31-bc58-e2b02fe3e068" factor="8.48E-05">
+    <unitFromName xml:lang="en">IDR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0801558c-7f48-40f9-9452-89619d69a228" factor="0.000806">
+    <unitFromName xml:lang="en">KRW2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6f36df1c-a434-445d-ab66-f695d606ac87" factor="1.55">
+    <unitFromName xml:lang="en">OMR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="04ffd086-7180-4e95-ba0b-d9bf204cff61" factor="1000000">
+    <unitFromName xml:lang="en">GWh</unitFromName>
+    <unitToName xml:lang="en">kWh</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="699daebd-93fc-4152-a1af-ea86791749a6" factor="1E-09">
+    <unitFromName xml:lang="en">micro-gram</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="5ef53973-117c-4a03-9e20-9ac4ee1199b5" factor="0.0108">
+    <unitFromName xml:lang="en">NPR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="399ec6cc-e71e-4666-8e37-28442896e222" factor="0.000319">
+    <unitFromName xml:lang="en">COP2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3edbc00e-5a5d-4697-bc4c-6e12cfa52a71" factor="0.827">
+    <unitFromName xml:lang="en">USD2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="230ecb86-be03-4c88-9300-b073c5a86ee3" factor="1.47">
+    <unitFromName xml:lang="en">GBP2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="cd9ffe06-5ff9-4f82-b9e7-54635e018120" factor="0.209">
+    <unitFromName xml:lang="en">MYR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e7b07958-6eb6-441e-9655-0e3d08658a16" factor="4.21401100938048E-08">
+    <unitFromName xml:lang="en">foot poundal</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="b65cf186-31fe-42d8-9cef-a9f7353eb11c" factor="0.0297">
+    <unitFromName xml:lang="en">RUB2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="75e5e612-07f9-46e0-baeb-eca8cdd1f58e" factor="1.17">
+    <unitFromName xml:lang="en">USD2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="63f752d8-5522-4484-82fb-f10f8395c330" factor="0.522">
+    <unitFromName xml:lang="en">NZD2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="51a680d8-a447-4e89-84a4-e1d3797b1240" factor="1E-06">
+    <unitFromName xml:lang="en">mm2*year</unitFromName>
+    <unitToName xml:lang="en">m2*year</unitToName>
+    <unitType xml:lang="en">area-time</unitType>
+  </unitConversion>
+  <unitConversion id="22ccc9aa-8ff2-4b73-bf25-ca88af73d108" factor="0.467">
+    <unitFromName xml:lang="en">NZD2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="28b3363d-9847-44d3-8a6e-afb9d8658ae9" factor="3.55">
+    <unitFromName xml:lang="en">KWD2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="79629c9e-8470-47a2-a22c-f46fede3c0ea" factor="0.53">
+    <unitFromName xml:lang="en">LYD2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d98c5075-894d-44a0-92f0-977f239bcd6c" factor="0.129">
+    <unitFromName xml:lang="en">CNY2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="54c18e05-6d0e-4bc4-914e-f260fed5e6b3" factor="0.000946352946">
+    <unitFromName xml:lang="en">quart fluid US</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="835faf33-c8fa-4456-8fe9-75a5d1f311c3" factor="0.00405">
+    <unitFromName xml:lang="en">HUF2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7d105770-eb1e-4d79-a19e-c0b5d3edd615" factor="3600">
+    <unitFromName xml:lang="en">MWh</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="84a55eec-b6b6-4965-8d32-ff3ea026ce10" factor="0.105">
+    <unitFromName xml:lang="en">SEK2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ae7b3e53-d5b0-4914-9ae1-d4145db91eb6" factor="0.2">
+    <unitFromName xml:lang="en">SAR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e86cedc9-be77-46d0-ae7a-c18b9d09dc2a" factor="1000000000000">
+    <unitFromName xml:lang="en">Tl</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="0db29654-97cb-4116-91a5-d383f3bc10a8" factor="10000">
+    <unitFromName xml:lang="en">ha</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="368c1a6c-5930-44f6-ba4d-47f2d65a2c80" factor="0.0142">
+    <unitFromName xml:lang="en">LKR2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="254694f8-95eb-4751-b136-94e9aa29e5b9" factor="0.00752">
+    <unitFromName xml:lang="en">JPY2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="de1968fa-f1bb-41aa-8757-7c52266aa082" factor="0.000989">
+    <unitFromName xml:lang="en">KRW2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c1715853-e3ad-4eb1-964d-7bbc2d0db181" factor="0.597">
+    <unitFromName xml:lang="en">USD2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7f414beb-14e7-46ae-a751-70d08a2cc805" factor="0.606">
+    <unitFromName xml:lang="en">AUD2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2b865ae8-b33f-4719-b8db-1e6c7be27a38" factor="258.998811">
+    <unitFromName xml:lang="en">square mile</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="d7f6285a-f1da-4ea0-939d-52302946cd7b" factor="0.205">
+    <unitFromName xml:lang="en">MYR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5f6d057a-fc02-414f-b8bb-2482549a44af" factor="0.0997763726631017">
+    <unitFromName xml:lang="en">pound per gallon Imperial</unitFromName>
+    <unitToName xml:lang="en">kg/l</unitToName>
+    <unitType xml:lang="en">density</unitType>
+  </unitConversion>
+  <unitConversion id="25534535-2da5-4223-afc3-cfba6250e451" factor="0.00545">
+    <unitFromName xml:lang="en">SIT2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="27d5dee5-8bd9-43a9-b736-e02e137784ca" factor="2.34">
+    <unitFromName xml:lang="en">OMR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9f09037b-cc5d-4f3a-85e5-fbd7b3218a7e" factor="0.1">
+    <unitFromName xml:lang="en">CNY2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="56d29c45-f1d6-4e3d-b8b3-d5f49f7e4b61" factor="1E-06">
+    <unitFromName xml:lang="en">mg</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="13d6c2ff-63bf-468a-a810-c0dacb05ba39" factor="0.0982">
+    <unitFromName xml:lang="en">TTD2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="cc0b6127-50fe-418d-a277-4d75208f8d1f" factor="0.375">
+    <unitFromName xml:lang="en">BRL2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ee6e877c-a50b-41b4-b26d-da736da1db6b" factor="0.0967">
+    <unitFromName xml:lang="en">ZAR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="999d07b3-02b7-4726-be2b-2dc77399dbe0" factor="0.628">
+    <unitFromName xml:lang="en">AUD2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="00057942-d6f3-42da-b3ef-520ae46ca09f" factor="0.266">
+    <unitFromName xml:lang="en">PEN2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="79c92923-755b-43d4-8ec1-6988b873ed35" factor="1.02">
+    <unitFromName xml:lang="en">EUR2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f4f5357f-dbfd-47d7-ac09-3636bafbdd3f" factor="0.00577">
+    <unitFromName xml:lang="en">KZT2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="edf0f270-4ad1-490b-946c-6a5d26379670" factor="0.00554">
+    <unitFromName xml:lang="en">LKR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ee8bf063-d0f9-48ca-88ca-1f30c9879091" factor="9.21E-05">
+    <unitFromName xml:lang="en">IRR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="53585735-03ce-4adc-b3e6-12bf8308012a" factor="0.589">
+    <unitFromName xml:lang="en">CHF2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f773e268-ad50-4a07-9e35-334688b51293" factor="0.0001">
+    <unitFromName xml:lang="en">cm2</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="52a477fe-ca86-4986-8c34-e4f7e5ab92e4" factor="5.067075E-10">
+    <unitFromName xml:lang="en">circular mil</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="dccbb25b-fb77-4f2f-abb9-cc57f1f96d34" factor="0.0259">
+    <unitFromName xml:lang="en">THB2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="085c2907-d3ee-43c3-abcc-081a6bd384e0" factor="1.6387064E-05">
+    <unitFromName xml:lang="en">cubic inch</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="e6436207-38ef-4c44-ad21-a395408bfad8" factor="0.00591">
+    <unitFromName xml:lang="en">ISK2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="1896a8dd-5ef6-4f51-8b42-9a04aa05f9fd" factor="0.00132">
+    <unitFromName xml:lang="en">CLP2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="4dd686ba-046e-44f9-9d0d-aac00c97dabd" factor="0.00417">
+    <unitFromName xml:lang="en">SIT2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0a9e56a4-2756-4489-8034-a73aabe20299" factor="1.09">
+    <unitFromName xml:lang="en">EUR2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5538d356-bb89-4d7b-a160-b9a7393203a1" factor="0.982">
+    <unitFromName xml:lang="en">EUR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="75592e42-e4d6-4b9a-9a95-5c543edefa04" factor="0.001">
+    <unitFromName xml:lang="en">l</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="427bf74c-c9eb-4e2b-83f4-a1a45c2f4409" factor="1.82">
+    <unitFromName xml:lang="en">GBP2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="57d9fb47-d9d2-43c0-9038-3ffd451f9da3" factor="0.15">
+    <unitFromName xml:lang="en">BWP2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="707fd19d-e632-480a-9202-9c24232b64fa" factor="0.03523907016688">
+    <unitFromName xml:lang="en">bushel US</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="5d86145e-f4ac-4c2d-9771-dfe7283d3716" factor="100">
+    <unitFromName xml:lang="en">a</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="c049c7c7-565b-40cd-a190-c38547b28fdf" factor="1E-05">
+    <unitFromName xml:lang="en">cm</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="413ea34f-1d91-4c97-b87b-4b901455f4d4" factor="31536000">
+    <unitFromName xml:lang="en">year</unitFromName>
+    <unitToName xml:lang="en">s</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="61c1d031-ad8c-41e7-ade1-5465a6ddf13a" factor="0.514">
+    <unitFromName xml:lang="en">BND2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6619635f-377e-42fb-83ef-71dfd1c29a76" factor="0.000114155251141553">
+    <unitFromName xml:lang="en">hour</unitFromName>
+    <unitToName xml:lang="en">year</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="a9e54bbb-efe0-44d8-bedd-eca4cd7c33e9" factor="0.00056">
+    <unitFromName xml:lang="en">COP2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5d7fa077-4a85-4e7f-af80-124924ffacf1" factor="0.96">
+    <unitFromName xml:lang="en">EUR2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5a2e0c42-2cdf-4ab0-a5e0-3492d7a24713" factor="0.0363">
+    <unitFromName xml:lang="en">CZK2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6b9472a2-e6e0-4674-90a7-979c67cb3009" factor="0.108">
+    <unitFromName xml:lang="en">MXN2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3dee95ee-c034-49d3-9a73-a8daedb78854" factor="0.1">
+    <unitFromName xml:lang="en">tog</unitFromName>
+    <unitToName xml:lang="en">m2*K/W</unitToName>
+    <unitType xml:lang="en">thermal insulance</unitType>
+  </unitConversion>
+  <unitConversion id="374bdd21-50a2-4e4e-9cc7-efd14498c1cf" factor="0.0311034768">
+    <unitFromName xml:lang="en">troy ounce</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="0e755ce3-92f1-432a-bd98-65d4f2c57ffd" factor="0.323">
+    <unitFromName xml:lang="en">QAR2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="35cda5f2-5655-4f02-b95b-487045a8f903" factor="0.00444">
+    <unitFromName xml:lang="en">SIT2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="946648f5-a490-4569-a4a9-254fdf7c3f9a" factor="0.0311">
+    <unitFromName xml:lang="en">MUR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="2541f616-aedb-44f5-8066-ac6a5c8e8750" factor="1.32893918518697">
+    <unitFromName xml:lang="en">long ton per cubic yard</unitFromName>
+    <unitToName xml:lang="en">kg/l</unitToName>
+    <unitType xml:lang="en">density</unitType>
+  </unitConversion>
+  <unitConversion id="d292c12a-2e68-4bd9-8dba-cc0bb537f199" factor="0.292">
+    <unitFromName xml:lang="en">AED2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5cdb0ba1-1a30-47ec-9f73-79544218c554" factor="1">
+    <unitFromName xml:lang="en">stere</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="0c064faa-cc15-4f5d-8668-b450b21001fd" factor="0.0249">
+    <unitFromName xml:lang="en">MUR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="87eefff8-ba7e-41cd-a5ea-da312dd01e93" factor="2.83">
+    <unitFromName xml:lang="en">KWD2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="90cc9f3a-3d53-4e56-ba48-13270d7221c5" factor="0.119240471196">
+    <unitFromName xml:lang="en">barrel fluid US</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="d0fe5478-818b-43b7-8d9b-25be20b715dd" factor="0.00862">
+    <unitFromName xml:lang="en">NPR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9957d99e-8824-49d6-8f62-bf3ad651ba54" factor="4.1868E-06">
+    <unitFromName xml:lang="en">calorie ISO IT</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="891f260b-20a1-49f9-aa05-380f109b68f7" factor="0.0284">
+    <unitFromName xml:lang="en">SKK2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="dbd49a21-db07-43a9-9447-7f5e2d93e0c4" factor="0.286">
+    <unitFromName xml:lang="en">ARS2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a07b2bdb-586d-47ed-bb96-c86ffa28c390" factor="5.93E-05">
+    <unitFromName xml:lang="en">IRR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="4840591d-da90-473f-80a6-51c3d56a1dd9" factor="0.141">
+    <unitFromName xml:lang="en">CNY2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ff8c5b42-28c0-4f50-91df-bc4d17f6b524" factor="1.19">
+    <unitFromName xml:lang="en">GBP2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="929eaa3c-b9e6-47ff-939e-b73943707576" factor="0.3048006">
+    <unitFromName xml:lang="en">survey foot</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="93c06e89-f8dd-43c1-a968-1bf81e29cc27" factor="2.85">
+    <unitFromName xml:lang="en">BHD2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="50950cfb-0801-491e-beab-bdcca2497c9a" factor="5.067075E-14">
+    <unitFromName xml:lang="en">circular mil</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="fdccbdbe-f7f2-4f45-9d94-6b7df8a685ca" factor="1E-10">
+    <unitFromName xml:lang="en">ångström</unitFromName>
+    <unitToName xml:lang="en">m</unitToName>
+    <unitType xml:lang="en">lenght</unitType>
+  </unitConversion>
+  <unitConversion id="41855cf7-dcad-4063-afd9-8e7cc1bdf34a" factor="2">
+    <unitFromName xml:lang="en">OMR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c64f9051-866a-4a18-a984-52ee806889fb" factor="0.00404">
+    <unitFromName xml:lang="en">HUF2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="6b99cda6-5320-4cbc-8393-a5403d8b5006" factor="0.942">
+    <unitFromName xml:lang="en">EUR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c18cf87e-a950-42c1-a384-2bf4d4b1aad3" factor="2628000">
+    <unitFromName xml:lang="en">month</unitFromName>
+    <unitToName xml:lang="en">s</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="6e46a10d-4ce4-421e-987b-5ff2df0c81f1" factor="0.01">
+    <unitFromName xml:lang="en">a</unitFromName>
+    <unitToName xml:lang="en">ha</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="24c69103-6503-4802-8dca-133e5950e0bb" factor="0.00440488377086">
+    <unitFromName xml:lang="en">gallon dry US</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="e3182941-db8e-4814-a384-5102a25b8717" factor="0.0167">
+    <unitFromName xml:lang="en">INR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="73310e17-29e1-4e26-883e-a5f91dc0b1e6" factor="0.137">
+    <unitFromName xml:lang="en">NOK2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="48116011-0921-4559-877c-55d08495440b" factor="0.00011">
+    <unitFromName xml:lang="en">IRR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="4d6a27d8-3be7-4260-b69a-09ad24ee4768" factor="0.837">
+    <unitFromName xml:lang="en">USD2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e2c7ff3b-0755-49c6-acbd-a69ccd1c8899" factor="0.536">
+    <unitFromName xml:lang="en">BND2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7be026e2-5eb9-41fe-8b7e-4808d4526688" factor="0.264">
+    <unitFromName xml:lang="en">PLN2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="dafb72ce-9a7e-4aee-9292-2230697b54cc" factor="0.0010548">
+    <unitFromName xml:lang="en">British thermal unit 59 degree F</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="ee5cffd5-b755-40a7-a88f-8cdad8c9b0f3" factor="1.01">
+    <unitFromName xml:lang="en">GBP2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="271482b9-d9e4-4013-98f6-d8969fbc3468" factor="1.11">
+    <unitFromName xml:lang="en">EUR2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="7f6f5e1d-3590-44b7-bfea-177cd9bf7d43" factor="1000000">
+    <unitFromName xml:lang="en">Ml</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="45f56344-e928-44a4-a143-2d7bb7e12b5b" factor="0.000473176473">
+    <unitFromName xml:lang="en">pint fluid US</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="88822bdf-3837-4320-8201-e578fc017332" factor="0.000109">
+    <unitFromName xml:lang="en">IDR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="4943c05d-cd66-45df-b1f2-06a5f3ad8fbf" factor="127.0058636">
+    <unitFromName xml:lang="en">barrel lime large mass equivalent</unitFromName>
+    <unitToName xml:lang="en">kg</unitToName>
+    <unitType xml:lang="en">mass</unitType>
+  </unitConversion>
+  <unitConversion id="d6b1d94c-7715-4548-b1b5-f2af9d2d1017" factor="0.192">
+    <unitFromName xml:lang="en">AED2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="13eed919-b5bd-4513-8727-05967fcd2add" factor="0.00156">
+    <unitFromName xml:lang="en">CLP2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c997f234-529b-4023-aef7-be498171f96a" factor="117.347765304">
+    <unitFromName xml:lang="en">barrel beer US</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="d89da3d0-f813-46f1-97ab-1c92a9f98f42" factor="0.000123">
+    <unitFromName xml:lang="en">IDR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e61a9a90-4b28-443b-ad32-4ae0e623d8bb" factor="2.2">
+    <unitFromName xml:lang="en">BHD2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b7dccb42-3ac8-4ad5-b9ed-ed4e395b2ea7" factor="0.0857">
+    <unitFromName xml:lang="en">ZAR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e86f28eb-def0-4f04-bfad-fa14a531a640" factor="0.28">
+    <unitFromName xml:lang="en">PLN2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="24de1ec0-a669-4d36-a1aa-31e5b19d4f2e" factor="6.5E-05">
+    <unitFromName xml:lang="en">IRR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="78ae6ddf-fc08-4a77-8b67-0425ce8e533c" factor="0.164">
+    <unitFromName xml:lang="en">QAR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="3d49fcb3-ab9d-4958-9c41-57df62f56e59" factor="0.17">
+    <unitFromName xml:lang="en">ARS2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e8f3370a-5bbd-4314-8c8b-65889e04e882" factor="3.05">
+    <unitFromName xml:lang="en">OMR2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d463f0f6-ceec-49f7-9e1c-dde87c5d6018" factor="0.716">
+    <unitFromName xml:lang="en">CHF2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="dc3ca815-e0e1-4711-94ee-d104e122419f" factor="0.644">
+    <unitFromName xml:lang="en">CHF2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f3eed381-2590-4a0e-b7c8-6753ad9ab7e9" factor="0.0204">
+    <unitFromName xml:lang="en">THB2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e2ab9377-8b1d-4324-bad8-9835aeba2121" factor="0.0206">
+    <unitFromName xml:lang="en">MUR2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="95ae9e18-d0ca-45c6-839e-2eeb00008a85" factor="0.343">
+    <unitFromName xml:lang="en">SAR2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ea6a24b9-c30a-4099-a6f9-9e9279ebfdeb" factor="1000">
+    <unitFromName xml:lang="en">Ml</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="bd23144c-611a-4401-98b0-8deb55bf719c" factor="0.00344">
+    <unitFromName xml:lang="en">HUF2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="e1c6306f-bd17-47f1-8bb7-4014b169134d" factor="0.339">
+    <unitFromName xml:lang="en">BRL2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9312afce-04c9-495d-b48e-696c3833ec3b" factor="0.014">
+    <unitFromName xml:lang="en">PKR2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="605d450a-2ab6-4c3e-82a0-248f8045164e" factor="0.0128">
+    <unitFromName xml:lang="en">PKR2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d78c6076-cc95-4b6c-a087-d84aa8c0b749" factor="0.003785411784">
+    <unitFromName xml:lang="en">gallon fluid US</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="e59455eb-d8c0-444f-b9b5-29ddbd32dca3" factor="0.15">
+    <unitFromName xml:lang="en">DKK2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="37b22451-3579-4ff0-8571-0df94948f923" factor="1.95">
+    <unitFromName xml:lang="en">OMR2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="71d2a35b-12a5-4ec8-84d0-204cfc1c31ed" factor="163.65924">
+    <unitFromName xml:lang="en">barrel fluid Imperial</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="1a334ad8-0220-42d2-8dfe-3ddab3633e0a" factor="0.00576">
+    <unitFromName xml:lang="en">LKR2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="493d4df4-c1cf-4b6e-b39f-30d4babaf67e" factor="1.42">
+    <unitFromName xml:lang="en">GBP2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a72b473a-f586-45f3-8332-ee19fe30bdc2" factor="0.83612736">
+    <unitFromName xml:lang="en">square yard</unitFromName>
+    <unitToName xml:lang="en">m2</unitToName>
+    <unitType xml:lang="en">area</unitType>
+  </unitConversion>
+  <unitConversion id="64fd768f-5a04-4faa-aca0-3c6810779809" factor="0.0506">
+    <unitFromName xml:lang="en">MXN2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f8484861-b620-405d-b921-9a9b6468a16a" factor="4.184E-06">
+    <unitFromName xml:lang="en">calorie thermochemical</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="ed96affd-4cb9-4a6b-a694-90b19fd33260" factor="0.187">
+    <unitFromName xml:lang="en">TTD2000</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="71535a4a-ef77-4f96-abc1-1fbbb17b3c21" factor="2.45">
+    <unitFromName xml:lang="en">KWD2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ea7b5cb2-d07b-4107-9dc8-d479375775f5" factor="0.367">
+    <unitFromName xml:lang="en">BRL2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="07eac8f6-2b61-40e7-8e74-39515ea2fe72" factor="0.491">
+    <unitFromName xml:lang="en">BND2005</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ae2e2e1b-a9d4-4ee6-952c-f399622b807c" factor="0.00435">
+    <unitFromName xml:lang="en">HUF2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="629f31e3-ebf8-4669-99bd-2aeb0a2e0551" factor="0.0576">
+    <unitFromName xml:lang="en">MXN2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="21106f3c-970f-43ca-acba-2717ac0f2b73" factor="0.56826125">
+    <unitFromName xml:lang="en">pint Imperial</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="1708e313-057e-4b36-ae53-701f03502b81" factor="41868000000000">
+    <unitFromName xml:lang="en">gigaton of oil energy equivalent ISO IT</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="c90983b0-8187-4b8a-a1e5-07cce91232ad" factor="0.485">
+    <unitFromName xml:lang="en">SGD2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="1b256f63-7bb1-4d6d-a1b2-a236a9f4fd93" factor="0.209">
+    <unitFromName xml:lang="en">AED2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="68037115-1e16-4004-9ec7-0e494088baa1" factor="0.473176473">
+    <unitFromName xml:lang="en">pint fluid US</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="f5723462-ca80-4dd7-bdbb-f47465cd213f" factor="8760">
+    <unitFromName xml:lang="en">year</unitFromName>
+    <unitToName xml:lang="en">hour</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="af4214d6-f26f-4b5b-90a2-cea168405186" factor="0.0119">
+    <unitFromName xml:lang="en">NPR2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="33d41354-15ab-406c-b843-87216fb6d753" factor="0.105">
+    <unitFromName xml:lang="en">TTD2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c99a63b8-abb2-4a6c-8087-2bc61c3e34b1" factor="24">
+    <unitFromName xml:lang="en">day</unitFromName>
+    <unitToName xml:lang="en">hour</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="25c2b90f-b3c0-4a2b-976c-00398515520d" factor="0.208">
+    <unitFromName xml:lang="en">TTD2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9daa51fe-0580-425a-b57b-4b059736b81c" factor="41868">
+    <unitFromName xml:lang="en">ton of oil energy equivalent ISO IT</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="546e3717-6935-4cd9-b19e-7954bdb03d40" factor="0.0928">
+    <unitFromName xml:lang="en">CNY2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c2f47871-c522-41ba-8d8e-34d79b0b6205" factor="4.18">
+    <unitFromName xml:lang="en">KWD2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a0d1b13f-8ace-4907-a3b0-9063085d679c" factor="277777.777777778">
+    <unitFromName xml:lang="en">TJ</unitFromName>
+    <unitToName xml:lang="en">kWh</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="e65f320f-0664-4930-ae6a-48df24e45f91" factor="0.277777777777778">
+    <unitFromName xml:lang="en">MJ</unitFromName>
+    <unitToName xml:lang="en">kWh</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="1ea68876-eeb5-4218-a1be-7107dc85f2ec" factor="0.703">
+    <unitFromName xml:lang="en">CHF2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="1756a504-5cac-47e1-a7f8-d6abba5760ca" factor="0.0118">
+    <unitFromName xml:lang="en">ISK2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="5a73b7f7-7c0f-4df9-82ca-d17dd710d39c" factor="3600">
+    <unitFromName xml:lang="en">hour</unitFromName>
+    <unitToName xml:lang="en">s</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="e46f11a7-0ed6-4aca-8b3c-d9bc3ce42ebe" factor="0.488">
+    <unitFromName xml:lang="en">SGD2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="8b18d6c2-5876-4ed8-9864-fa92e7b12518" factor="10.7639104167097">
+    <unitFromName xml:lang="en">foot-candle</unitFromName>
+    <unitToName xml:lang="en">lux</unitToName>
+    <unitType xml:lang="en">illuminance</unitType>
+  </unitConversion>
+  <unitConversion id="b36f4b3a-82e6-4258-b367-26858564724b" factor="0.0087">
+    <unitFromName xml:lang="en">PKR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="631b0340-c612-4c6b-a037-abdd10121cda" factor="0.00447">
+    <unitFromName xml:lang="en">HUF2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="68130b35-a996-4ffe-87e3-a9a27b88a57e" factor="0.00562">
+    <unitFromName xml:lang="en">JPY2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="9d7ea0a5-c5b4-4bf5-9d0e-3894a3ed3577" factor="730">
+    <unitFromName xml:lang="en">month</unitFromName>
+    <unitToName xml:lang="en">hour</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="049a5176-0ef1-430c-9dd9-50edf929569d" factor="0.117">
+    <unitFromName xml:lang="en">NOK2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="47a7fd43-28aa-45cd-9ca3-9b8d107ed447" factor="0.022">
+    <unitFromName xml:lang="en">MUR2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="04475a97-a20d-4e7e-9428-8a596ac627db" factor="0.106">
+    <unitFromName xml:lang="en">BWP2010</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="a5bcd4a6-9f6d-4f3a-901a-3623b357a9df" factor="1000">
+    <unitFromName xml:lang="en">Mm</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="e41611bc-0694-42dc-82a9-575ae25cf8ca" factor="0.00468">
+    <unitFromName xml:lang="en">SIT2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="d2f5718c-c0db-49d4-985c-f491dcab34ca" factor="0.095471034864">
+    <unitFromName xml:lang="en">barrel cranberry</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="f9753ee5-ca24-4d68-850d-287686e52555" factor="0.462">
+    <unitFromName xml:lang="en">BND2007</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0a4208b6-0ab6-4848-9c32-811720a9ac45" factor="1.42">
+    <unitFromName xml:lang="en">GBP2006</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="71dbaca0-823e-4047-8536-c9eead9ade64" factor="0.032">
+    <unitFromName xml:lang="en">CZK2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b02ebdac-a69b-4ea4-97c7-56daf3a8f78b" factor="0.0191780821917808">
+    <unitFromName xml:lang="en">week</unitFromName>
+    <unitToName xml:lang="en">year</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="fa53023a-6656-4dee-83a2-dcf42a59fbbd" factor="1000">
+    <unitFromName xml:lang="en">stere</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="1d46d80e-3ac1-496e-a843-950ff21fb6c0" factor="0.0868">
+    <unitFromName xml:lang="en">SEK2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="23712017-e85e-4d77-b9bd-93ff32e26cce" factor="1000000000">
+    <unitFromName xml:lang="en">Gl</unitFromName>
+    <unitToName xml:lang="en">l</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="edd1b954-99a2-4e92-9341-33ad16a324c1" factor="0.339">
+    <unitFromName xml:lang="en">MYR2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ad910710-7dba-451d-bfb8-0f729ec63756" factor="0.133">
+    <unitFromName xml:lang="en">TTD2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="32478ffd-e8ea-4de1-9b22-9a4019891c61" factor="0.00273972602739726">
+    <unitFromName xml:lang="en">day</unitFromName>
+    <unitToName xml:lang="en">year</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="47da3e2b-ac78-4900-92f5-faa986bf53e1" factor="0.137">
+    <unitFromName xml:lang="en">DKK2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="516fc579-6bfc-42e5-a2c2-4c62a1952df2" factor="3.6">
+    <unitFromName xml:lang="en">kWh</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="da8ddc7f-84c5-43e9-bfb5-f84c05d3cba1" factor="1E-09">
+    <unitFromName xml:lang="en">mm3</unitFromName>
+    <unitToName xml:lang="en">m3</unitToName>
+    <unitType xml:lang="en">volume</unitType>
+  </unitConversion>
+  <unitConversion id="cbb77089-5033-4cd9-8cfb-41ae3c2c2420" factor="0.706">
+    <unitFromName xml:lang="en">BND2001</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="61a43dc2-154a-4c88-907b-9b319f190278" factor="1E-06">
+    <unitFromName xml:lang="en">J</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="3cb47fe3-db46-451b-910f-645e9f40c0ad" factor="0.0311">
+    <unitFromName xml:lang="en">SKK2008</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="fea381e1-c11a-45a7-a576-147255d4cd52" factor="0.0969">
+    <unitFromName xml:lang="en">BWP2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="bfd210db-b0a5-4594-aafb-13df6f57be09" factor="0.143">
+    <unitFromName xml:lang="en">DKK2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="0feae76d-419f-44a0-b2fd-342f3fc95c50" factor="0.294">
+    <unitFromName xml:lang="en">QAR2002</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b9f7fb94-92e2-482b-8341-a629019a1704" factor="0.0833333333333333">
+    <unitFromName xml:lang="en">month</unitFromName>
+    <unitToName xml:lang="en">year</unitToName>
+    <unitType xml:lang="en">time</unitType>
+  </unitConversion>
+  <unitConversion id="59d30170-ef8c-44af-af7c-44f035347283" factor="0.457">
+    <unitFromName xml:lang="en">BND2009</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="b22bedc8-cf7a-4190-b822-0b027d9c018f" factor="6119.323945196">
+    <unitFromName xml:lang="en">barrel of oil energy equivalent ISO IT</unitFromName>
+    <unitToName xml:lang="en">MJ</unitToName>
+    <unitType xml:lang="en">energy</unitType>
+  </unitConversion>
+  <unitConversion id="1a626a07-9de1-45f9-af53-45872dd9fd30" factor="1.609347">
+    <unitFromName xml:lang="en">survey mile</unitFromName>
+    <unitToName xml:lang="en">km</unitToName>
+    <unitType xml:lang="en">length</unitType>
+  </unitConversion>
+  <unitConversion id="12d2ec38-2170-4859-9800-caf1bc13a202" factor="0.172">
+    <unitFromName xml:lang="en">AED2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="ed18d71d-4df9-4914-97ae-ebe0ba0464ac" factor="0.0329">
+    <unitFromName xml:lang="en">CZK2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="f54c6c87-1428-4b7b-b5ad-58383bd5fcbe" factor="0.000311">
+    <unitFromName xml:lang="en">COP2004</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="c640c780-89ad-46db-bd72-1a94c8aa13e5" factor="0.23">
+    <unitFromName xml:lang="en">PEN2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="685fbbda-d110-42e1-a3cc-4f6407fe0d58" factor="0.0088">
+    <unitFromName xml:lang="en">DZD2011</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+  <unitConversion id="19e63e3b-e72f-4dd6-b9a3-e2f707b08b9b" factor="0.14">
+    <unitFromName xml:lang="en">DKK2003</unitFromName>
+    <unitToName xml:lang="en">EUR2005</unitToName>
+    <unitType xml:lang="en">currency</unitType>
+  </unitConversion>
+</validUnitConversions>

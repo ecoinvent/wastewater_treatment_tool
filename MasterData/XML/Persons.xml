@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The contents of this file are subject to the EcoSpold Public License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.ecoinvent.ch.
+Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.
+The Original Code consists of the EcoSpold data format and EcoSpold Access.
+The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
+-->
+<validPersons majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="1127" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <contextName xml:lang="en">ecoinvent</contextName>
+  <person id="8d3d328e-d82f-4246-ab1d-6dd28b3f46c8" name="Charlotte Petiot" address="France" email="charlotte.petiot@biois.com" companyId="dc1bfe46-07ee-4da0-8360-77c1a9fd10f8">
+    <companyName xml:lang="en">Bio Intelligence Service</companyName>
+  </person>
+  <person id="253759c9-c631-44cc-b293-955a2f6d4cba" name="Caroline Gaudreault" address="Canada, Canada" telephone="" telefax="" email="cgaudreault@ncasi.org" companyId="7a4044a8-e22b-4f23-aa56-26a32749ee9a">
+    <companyName xml:lang="en">National Council for Air &amp; Stream Improvement</companyName>
+  </person>
+  <person id="dcf72317-d4c7-41f7-ada0-5fe7989d4900" name="Rachel Muigai" address="Auckland Park Campus , +27 Johannesburg, South Africa" telephone="" telefax="" email="rmuigai@uj.ac.za" companyId="4597a1dc-75fb-4428-8f68-1999338af6e5">
+    <companyName xml:lang="en">University of Johannesburg </companyName>
+  </person>
+  <person id="a35d6e99-19d3-4784-b54a-3585ba03431c" name="Michael Elias Boesch" address="" telephone="" telefax="" email="michael.boesch@aveny.ch" companyId="67a3ac5d-9e62-4498-8daf-485d8920375b">
+    <companyName xml:lang="en">Aveny</companyName>
+  </person>
+  <person id="f26a24c3-ce55-4662-9720-be53c4cd3fc6" name="Rosina Lohmeyer" address="Sven Hultins Gata 8, 41296 Göteborg, Sweden" telephone="" telefax="" email="rosina@student.chalmers.se" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="6eee06de-ed9b-45f3-b4f0-6b7f9a89a093" name="Matthias Stucki" address="Grüental, 8820 Wädenswil, Switzerland" telephone="+41 58 934 57 19" telefax="" email="matthias.stucki@zhaw.ch" companyId="68a518b1-d870-46e4-8f0b-46e67c9d1152">
+    <companyName xml:lang="en">ZHAW</companyName>
+  </person>
+  <person id="ad744c36-f552-4b78-b856-8a30ff944b7f" name="Cristian Emhart" address="Avenida Parque Antonio Rabat 6165, Vitacura, 7660118 Santiago, Chile" telephone="+56222400614" telefax="" email="cristian.emhart@fch.cl" companyId="c9655dad-e540-470e-9a84-067d4dd83785">
+    <companyName xml:lang="en">Fundación Chile</companyName>
+  </person>
+  <person id="b623d26a-e58f-465d-bf6e-a42a6fc72ae8" name="Angel Avadi" address="Avenue Agropolis, TA B-78/01, 34398 Montpellier cédex 5, France" telephone="" telefax="" email="angel.avadi@cirad.fr" companyId="8b5d0b44-0b93-4882-a511-3717c8c5bb6f">
+    <companyName xml:lang="en">Centre de coopération Internationale en Recherche Agronomique pour le Développement</companyName>
+  </person>
+  <person id="4e412379-4901-477d-bbc1-3e2797ab9350" name="Jürgen Sutter" address="ETH Hönggerberg, HCI, 8093 Zuerich" telephone="0041 44 633 44 73" telefax="0041 44 632 11 89" email="eth.s-u@ecoinvent.org" companyId="4df9d47a-5fbc-40f4-a534-b2edfb725b8e">
+    <companyName xml:lang="en">Ecological Systems Design, ETH Zürich (obsolete)</companyName>
+  </person>
+  <person id="2e525e29-8843-4e0d-b6c1-54b5035ee7a0" name="Michele Bounous" address="" telephone="" telefax="" email="michele.bounous@gmail.com" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="1e846792-317a-499e-bb40-6dbcc4966fe0" name="Asher Kiperstok" address="Escola Politécnica da UFBa TECLIM (DEA, 4º andar) Rua Aristides Novis,02 - Federação., 40210-630 Salvador, Bahia, Brazil" telephone="+55 71 3283-9892" telefax="+55 71 3283-9798" email="asher@ufba.br" companyId="ee0f093b-8180-4cae-a509-1aee524e3d30">
+    <companyName xml:lang="en">Federal University of Bahia</companyName>
+  </person>
+  <person id="a9ca9708-7fc4-4ec9-9e24-6d5671ef1a7f" name="Carles Martinez" address="UAB research park, 08348 Bellaterra (Barcelona), Spain" telephone="" telefax="" email="carles@ineditinnova.com" companyId="fc9772f0-d238-430c-b567-451aed2aec38">
+    <companyName xml:lang="en">Inèdit Innovation S.L.</companyName>
+  </person>
+  <person id="5f688ebe-099a-44f7-98e7-c32b526b31fa" name="Erik Alsema" address="Utrecht University, Heidelberglaan 2, NL-3584 CS Utrecht, The Netherlands" telephone="0031 30 253 7618" telefax="0031 30 253 7601" email="e.a.alsema@chem.uu.nl" companyId="cfdf340c-2e6c-4ba7-a8f5-b9e599aad975">
+    <companyName xml:lang="en">Utrecht University</companyName>
+  </person>
+  <person id="f053f89f-f485-49a7-ae33-56b6aaa64b68" name="Sigma Das" address="Noida , 201307 Noida, India" telephone="" telefax="" email="ilcm@ficci.com." companyId="f135ebe3-680b-4635-ad03-7b86773caf85">
+    <companyName xml:lang="en">FICCI Quality Forum</companyName>
+  </person>
+  <person id="20d13b40-bcc4-45ce-aff6-d64823ac880b" name="Martin Lehmann" address="Lerchenfeldstrasse 5, 9014 St. Gallen" telephone="0041 71 274 7852" telefax="0041 71 274 7862" email="empa@ecoinvent.org" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="847a56f5-d9e5-4a65-ab51-b056e0039130" name="Avraam Symeonidis" address="Technoparkstrasse 1, 8005 Zürich, Switzerland" telephone="" telefax="" email="Symeonidis@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="d94fc0f8-968e-4190-9583-0f73a91b1a28" name="Andrew Simons" address="OVGA, 5232 Villigen PSI" telephone="0041 56 310 2007" telefax="0041 56 310 2199" email="psi@ecoinvent.org" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="4f804c15-2e22-48b9-bf4d-0ed70c67c8bb" name="Nicolas Denz" address="" telephone="" telefax="" email="n.denz@ifu.com" companyId="0dafd880-5a70-4f92-b4d5-8eedc73cf898">
+    <companyName xml:lang="en">Institut für Umweltinformatik</companyName>
+  </person>
+  <person id="39dcadb1-48b6-433a-b123-36a3028dfa51" name="Park Sur" address="suBest Lab. 2F Structural Laboratory B/D, Hanyang University, KS009 Ansan, Korea, Republic of" telephone="" telefax="" email="sincalyp@hanyang.ac.kr" companyId="a4be09c6-43c2-428d-913e-44e5c5d69d05">
+    <companyName xml:lang="en">Hanyang Univ. suBest Lab.</companyName>
+  </person>
+  <person id="19fd67c5-a1f9-43cc-ac2c-a45863ba3f60" name="Philippa Notten" address="Rosmead Avenue, 7708 Cape Town, South Africa" telephone="" telefax="" email="pippa@tgh.co.za" companyId="8ae66377-73b6-4a64-abe6-129d7a52c718">
+    <companyName xml:lang="en">The Green House</companyName>
+  </person>
+  <person id="7f185a26-9e2b-45ce-9c74-fe6d6cfc8947" name="Marcella Ruschi Mendes Saade" address="Rua Dr Claudio Dias da Silva, 120, 13083460 Campinas, Brazil" telephone="55 19 981733331" telefax="" email="rms.marcella@gmail.com" companyId="8a279b2c-f0da-4afb-8356-5830552fba73">
+    <companyName xml:lang="en">University of Campinas’ School of Civil Engineering, Architecture and Urbanism</companyName>
+  </person>
+  <person id="1bd1c9a0-1fba-4bb3-ac28-b30bbc2b2388" name="Pablo Tirado " address="" telephone="" telefax="" email="pablo.tirado-seco@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="35d091e9-38c2-4037-9efe-a73673c57123" name="Emilia Moreno Ruiz" address="Technoparkstrasse 1, 8005 Zürich, Switzerland" telephone="" telefax="" email="moreno@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="d3586b9d-cb02-4270-9b3a-94694bc592fe" name="Anette Köhler (obsolete)" address="ETH Hönggerberg, HIL, 8093 Zuerich" telephone="0041 44 633 49 92" telefax="0041 44 633 10 61" email="eth.esd@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="a0bf18d2-648a-40fa-8d8b-118676df1e35" name="Sébastien Humbert" address="Switzerland" telephone="" telefax="" email="sebastien.humbert@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="54d72f10-4731-483e-b175-550700c41302" name="Ettore Settanni" address="Italy" email="ettoresettanni@hotmail.com" companyId="9eb9641e-0c3f-4f6c-89b0-13bcfade0f14">
+    <companyName xml:lang="en">University of Bari</companyName>
+  </person>
+  <person id="de36d234-5cf7-4580-955f-41cd03a402f4" name="Edgard  Gnansounou" address="., . ., Switzerland" telephone="" telefax="" email="edgard.gnansounou@epfl.ch" companyId="950fd121-d3a7-40dd-8f18-84c4f7e5cf71">
+    <companyName xml:lang="en">Ecole Polytechnique Federale de Lausanne</companyName>
+  </person>
+  <person id="526a4e4e-d857-4397-b57b-9ee507b23f26" name="Sébastien Humbert" address="EPFL-ENAC-GECOS, 1015 Lausanne" telephone="0041 21 693 2710" telefax="0041 21 693 5760" email="epfl@ecoinvent.org" companyId="950fd121-d3a7-40dd-8f18-84c4f7e5cf71">
+    <companyName xml:lang="en">Ecole Polytechnique Federale de Lausanne</companyName>
+  </person>
+  <person id="133c583d-7161-48db-a05a-7296b668243c" name="Thomas Köllner" address="Germany" email="thomas.koellner@uni-bayreuth.de" companyId="bbe98747-8bda-4617-bf54-4904a25c8935">
+    <companyName xml:lang="en">University Bayreuth</companyName>
+  </person>
+  <person id="4306be76-15cc-426b-8ee1-0cfe672e3bd9" name="Simon Gmunder" address="Calle 69 # 6-20, - Bogota, Colombia" telephone="" telefax="" email="simon.gmuender@gmail.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="4c279cfd-47f1-47ac-b801-7c0be9a016aa" name="Laura de Baan" address="Switzerland" email="laura.debaan@env.ethz.ch" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="b05f6f5a-d4f6-48e5-88bc-38c98a05048d" name="Gabor Doka (obsolete)" address="Stationsstr. 32, 8003 Zürich" telephone="0041 44 463 16 08" email="doka@ecoinvent.org" companyId="068c5950-c33b-4f82-9d38-97fcd67b14f8">
+    <companyName xml:lang="en">Doka Life Cycle Assessments</companyName>
+  </person>
+  <person id="2e8231fd-5b0d-423c-b656-50718a0540b6" name="Eric Johnson" address="Switzerland, Switzerland" telephone="" telefax="" email="Atlantic@ecosite.co.uk" companyId="58969e52-c68d-4a90-8334-e69a5672fe30">
+    <companyName xml:lang="en">Atlantic Consulting</companyName>
+  </person>
+  <person id="d8f5bd0b-dcde-41a3-a370-4fd9f721d536" name="Hans-Jörg Althaus" address="Überlandstrasse 129, 8600 Dübendorf" telephone="0041 44 823 44 94" telefax="0041 44 823 4042" email="empa@ecoinvent.org" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="9b6182f3-33ac-4ecf-8fae-e658375dde64" name="Robert Kutter" address="PO Box 878009 / Tempe AZ  85287-8009" telephone="+1.480.965.1770 x 79016" telefax="" email="kutter.tsc@asue.du" companyId="9f022e15-6478-40e7-b613-68e22c7f7fe6">
+    <companyName xml:lang="en">Arizona State University, The Sustainability Consortium</companyName>
+  </person>
+  <person id="96770571-53f9-4cab-a137-d5004ccf09ce" name="Philippe Loubet" address="Université de Bordeaux - Bâtiment A12 - 351 Cours de la Libération, 33400 Talence, France" telephone="" telefax="" email="philippe.loubet@u-bordeaux.fr" companyId="19694d64-54aa-4071-86fd-44120057941d">
+    <companyName xml:lang="en">ENSCBP - Bordeaux INP</companyName>
+  </person>
+  <person id="75d9b93b-fe90-47c2-b337-aa8848c78bdb" name="Alex Primas" address="Basler und Hofmann AG, 8032 Zuerich" telephone="0041 44 387 11 22" telefax="0041 44 387 11 00" email="alex.primas@bhz.ch" companyId="e85a173e-4484-4a65-b5f1-d4c1edbbfc4a">
+    <companyName xml:lang="en">Basler und Hofmann</companyName>
+  </person>
+  <person id="bce42dbf-7ee6-4482-a3fd-d41b7fc9b1bc" name="Martin Lehmann" address="Switzerland" telephone="" telefax="" email="martin.lehmann@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="f86c02d3-2c12-4c25-ad03-33af05bcfe63" name="Tereza Levova" address="Technoparkstr. 1, 8005  Zurich, Switzerland" telephone="" telefax="" email="levova@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="b5801258-d40a-4c9b-b4ab-a7b523037516" name="Mehul Tatia" address="Survey No 64 , Kothaguda Post , Near Kothaguda Post , RR district, 500084 Hyderabad, India" telephone="9849909666" telefax="" email="mehul.tatia@cii.in" companyId="90e9fdba-7932-4f43-ad64-e6fefbf92e53">
+    <companyName xml:lang="en">Confederation of Indian Industry</companyName>
+  </person>
+  <person id="be8b74a4-163f-432f-8650-1d50928177d8" name="Daniel Kellenberger" address="Dufourstrasse 105, 8008 Zürich, Switzerland" telephone="" telefax="" email="kellenberger@intep.com" companyId="d02341df-4e92-458a-ae91-c41240da0004">
+    <companyName xml:lang="en">Intep Integrale Planung GmbH</companyName>
+  </person>
+  <person id="03fc815f-122a-4300-afda-f21b141999d2" name="Sirje Vares" address="Tekniikantie 4A, 02044 Espoo, Finland" telephone="+358505207946" telefax="" email="sirje.vares@vtt.fi" companyId="553ab078-fe09-415f-93fe-752ae2a4fafe">
+    <companyName xml:lang="en">VTT Technical Research Centre</companyName>
+  </person>
+  <person id="413d3653-ce85-4750-bd57-f6e696b289d6" name="Heiko Kunst" address="Jagowstr. 21, D-10555 Berlin" telephone="0049 30 3921550" telefax="0041 44 632 11 89" email="eth.s-u@ecoinvent.org" companyId="4df9d47a-5fbc-40f4-a534-b2edfb725b8e">
+    <companyName xml:lang="en">Ecological Systems Design, ETH Zürich (obsolete)</companyName>
+  </person>
+  <person id="dd1cbd50-eae2-4a14-8f1e-c278175ab90e" name="Marianne Leuenberger" address="Margrit-Rainer-Str. 11c, 8050 Zurich, Switzerland" telephone="0041 44 940 61 38" telefax="0041 44 544 57 94" email="esu@esu-services.ch" companyId="47b248b7-d191-4e53-921b-8bfb4692ebef">
+    <companyName xml:lang="en">ESU-services</companyName>
+  </person>
+  <person id="56593aef-04a1-43c5-b48d-55a84cc5c11f" name="Yolanda Núñez" address="Spain" email="yolandanunez@ctme.es" companyId="6e8315b5-8281-48b9-a170-6f03e5aaac3d">
+    <companyName xml:lang="en">Technological Centre of Miranda de Ebro</companyName>
+  </person>
+  <person id="7c293dd1-65fe-4f45-bcf5-a6e8aab3b54c" name="Ingo Meinshausen" address="Max Brauer Allee 50, 22765 Hamburg, Germany" telephone="" telefax="" email="i.meinshausen@ifu.com" companyId="0dafd880-5a70-4f92-b4d5-8eedc73cf898">
+    <companyName xml:lang="en">Institut für Umweltinformatik</companyName>
+  </person>
+  <person id="a7bfdeb7-32da-428a-9be3-12e2dbdcd1fc" name="Marion Sié" address="5 quai Victor Augagneur, 69003 Lyon, France" telephone="" telefax="" email="marion.sie@gmail.com" companyId="e0fc526a-f962-4937-820e-ea46be8e6594">
+    <companyName xml:lang="en">Sié</companyName>
+  </person>
+  <person id="b0246ba6-3b1d-4dc2-b66a-cccbd1b004f6" name="Zuhlke Engineering" address="Wiesenstrasse 10a, CH-8952 Schlieren" telephone="+41 44 733 6796" telefax="" email="mbs@zuhlke.com" companyId="e7864012-d383-4169-a50d-285ca9160670">
+    <companyName xml:lang="en">Zuhlke Engineering</companyName>
+  </person>
+  <person id="224b9ce2-d95d-415f-aebf-fe6534baba97" name="Stefan Erzinger" address="Tänikon, 8356 Ettenhausen" telephone="0041 44 377 71 54" telefax="0041 44 377 72 01" email="art@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="6a323da3-c12a-4bb6-8f08-34b50bd1d25f" name="Fernanda Silva" address="Av. Prof. Almeida Prado 532, 05508901 São Paulo, Brazil" telephone="+551137674981" telefax="[null]" email="fbsilva@ipt.br" companyId="d3a7b63c-8b8a-45bd-b499-8f886154b29f">
+    <companyName xml:lang="en">Institute for Technological Research</companyName>
+  </person>
+  <person id="54ebede8-0eb8-4ab3-8ef9-f8bff7e403cf" name="Patrik Mouron" address="Reckenholzstrasse 1919, 8046 Zürich, Switzerland" telephone="" telefax="" email="lca@agroscope.admin.ch" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
+    <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
+  </person>
+  <person id="cde2ac11-5e4c-4144-aa74-572a7cbb0845" name="F. Habermacher" address="Life Cycle Assessment and Modelling Group" email="fabienne.habermacher@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="544e59e5-2463-4b74-9f92-b329d23dc27b" name="Jerome Payet" address="Switzerland" telephone="" telefax="" email="jerome.payet@epfl.ch" companyId="950fd121-d3a7-40dd-8f18-84c4f7e5cf71">
+    <companyName xml:lang="en">Ecole Polytechnique Federale de Lausanne</companyName>
+  </person>
+  <person id="a7b17163-0c31-4d85-ac46-29ff63f44bbd" name="Sebastiano Meier" address="Reckenholzstr.191, 8046 Zürich" telephone="0041 44 377 71 54" telefax="0041 44 377 72 01" email="art@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="a4e8c21b-214b-4d1d-8e0d-f0c46c11eaaf" name="Fredy Dinkel" address="Carbotech, Eulerstrasse 68, 4051 Basel" telephone="0041 61 206 95 22" telefax="0041 61 206 95 26" email="f.dinkel@carbotech.ch" companyId="10aa5c2c-bf78-4737-b9a5-e9f3ad530b74">
+    <companyName xml:lang="en">Carbotech AG</companyName>
+  </person>
+  <person id="6c6190ab-0686-4b8d-af88-185d7efe3147" name="Luíza Santana Franca" address="Horácio Macedo, 2030 - 101 - University City, 21941-450 Rio de Janeiro, Brazil" telephone="+5521998063252" telefax="" email="luizasfranca@poli.ufrj.br" companyId="7518ecb8-47ee-423c-84b7-327e40ab0a5b">
+    <companyName xml:lang="en">UFRJ</companyName>
+  </person>
+  <person id="17d57aa1-b0c1-4ed8-979e-75ad2db0c629" name="Frank Wellenreuther" address="Wilckensstr. 3" telephone="+496221476744" telefax="+496221476719" email="frank.wellenreuther@ifeu.de" companyId="55302d03-856a-4b9d-bf3c-e63fa7211160">
+    <companyName xml:lang="en">IFEU GmbH</companyName>
+  </person>
+  <person id="600b92bc-353d-482d-8007-0836c349513f" name="John Jewell" address="344 Boylston, 02116 Boston, United States" telephone="" telefax="" email="j.jewell@pe-international.com" companyId="e2541f85-6438-4040-8057-91e2f9090f89">
+    <companyName xml:lang="en">PE International</companyName>
+  </person>
+  <person id="2e6539f1-2242-48e7-a84c-98fda79a84be" name="Marcela Valles Lange" address="" telephone="" telefax="" email="Marcela.Lange@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="da8e99ae-325e-45d8-9aec-b06476b6d9ff" name="Jörg Schweinle" address="Germany, Germany" telephone="" telefax="" email="joerg.schweinle@vti.bund.de" companyId="7233e523-7005-43e5-afcb-ea507b8cca18">
+    <companyName xml:lang="en">Johann Heinrich von Thünen Institut</companyName>
+  </person>
+  <person id="5538aba5-3384-41a5-9484-818443e49bff" name="Sangwon Suh" address="USA" email="suh@bren.ucsb.edu" companyId="a7d7e41e-2693-4dd7-b05f-f1196543676c">
+    <companyName xml:lang="en">Bren School of Environmental Science &amp; Management, University of California Santa Barbara</companyName>
+  </person>
+  <person id="ab02256c-6edc-4164-b7ae-2910b8fcb2eb" name="John Erik Hermansen" address="Denmark" email="John.Hermansen@agrsci.dk" companyId="cf735038-eb44-4c9c-bd65-3f66a4487641">
+    <companyName xml:lang="en">Aarhus University</companyName>
+  </person>
+  <person id="a376a75d-b24a-467d-83f9-fe8d960496be" name="Jane Anderson" address="., . ., United Kingdom" telephone="" telefax="" email="j.anderson@pe-international.com" companyId="e2541f85-6438-4040-8057-91e2f9090f89">
+    <companyName xml:lang="en">PE International</companyName>
+  </person>
+  <person id="8eccf3fe-5531-43de-ae57-61564ca77b5a" name="Guillaume Bourgault" address="Uberlandstrasse 129, CH-8600 Dubendorf, Switzerland" telephone="+41587656116" telefax="" email="bourgault@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="f0d8b853-e040-4d03-a6fd-ad279d931721" name="Dominique Maxime" address="" telephone="" telefax="" email="dominique.maxime@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="a837722c-b672-48a8-b628-6ca67e086298" name="Dunja Dux" address="Tänikon, 8356 Ettenhausen" telephone="0041 52 368 32 45" telefax="0041 52 365 11 90" email="art@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="ebf45305-b87c-4d3d-b74f-fbc6677bca1b" name="Lucia Valsasina" address="Technoparkstrasse 1, 8005 Zurich, Switzerland" telephone="" telefax="" email="valsasina@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="3d871453-ed2e-4747-8980-5405821cc044" name="Alex Primas" address="ETH Hönggerberg, HCI, 8093 Zuerich" telephone="0041 44 387 11 22" telefax="0041 44 632 11 89" email="eth.s-u@ecoinvent.org" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="9fd99e18-26da-48ae-966c-e6ba9e9f7c1b" name="Matthias Tuchschmid" address="Hochschulstr. 6, 3000 Bern 65" telephone="0041 51 220 56 46" telefax="0041 51 220 44 75" email="matthias.tuchschmid@sbb.ch" companyId="a55e3aaa-ccee-4a14-bdb8-46e9c2a39af8">
+    <companyName xml:lang="en">SBB</companyName>
+  </person>
+  <person id="5f07f259-e551-4ee3-b16e-4510f9e3811e" name="James Salazar" address="119 Ross Avenue, Ottawa, K1Y 0N6" email="james.salazar@athenasmi.org" companyId="12b0857b-7a23-418d-960b-3c0bfffc11d7">
+    <companyName xml:lang="en">Athena Sustainable Materials Institute</companyName>
+  </person>
+  <person id="e9ca7fbe-dea5-4107-a7f1-1a5ed10b961e" name="Alexander Röder" address="OVGA, 5232 Villigen PSI" telephone="0041 56 310 2007" telefax="0041 56 310 2199" email="psi@ecoinvent.org" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="bb0b715c-3173-41e5-8e93-c5f1d70fc493" name="Christian Capello" address="ETH Hönggerberg, HCI, 8093 Zuerich" telephone="0041 44 633 44 01" telefax="0041 44 632 11 89" email="eth.s-u@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="ab2a5a32-7e0d-431a-9f6c-9011ff140de7" name="Florentine Brunner" address="Technoparkstrasse 1, 8005 Zürich, Switzerland" telephone="" telefax="" email="Brunner@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="5a5966c4-0f38-44b7-8dee-982677578260" name="Esther Sanye Mengual" address="" telephone="" telefax="" email="Ester.Sanye@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="4eeae778-a869-4ad7-bb69-2472212513f1" name="Fausto Freire" address="Portugal, Portugal" telephone="" telefax="" email="fausto.freire@dem.uc.pt" companyId="89945d34-8841-4b76-b3b1-0864129ae2bd">
+    <companyName xml:lang="en">Technical University of Lisbon</companyName>
+  </person>
+  <person id="8718a9ce-8692-4776-aec4-71733dc21805" name="Ana Cláudia Dias" address="Portugal" email="acdias@ua.pt" companyId="758b7bfd-1e55-4bb5-b39c-f2334078923f">
+    <companyName xml:lang="en">University of Aveiro</companyName>
+  </person>
+  <person id="cb2a55cb-5170-46a5-819d-75173b1914e9" name="Thomas Nemecek" address="Reckenholzstrasse 191, 8046 Zurich, Switzerland" telephone="" telefax="" email="thomas.nemecek@agroscope.admin.ch" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
+    <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
+  </person>
+  <person id="0f6f5f48-6e8e-4b3f-aca9-c3ee173af4e8" name="Parag Mundada" address="Survey No 64, Near Hitech City, Kothaguda Post, 500084 Hyderabad, India" telephone="040-44185143" telefax="" email="mundada.parag@cii.in" companyId="67aaeed4-6ef3-4766-b360-38fe7080d6eb">
+    <companyName xml:lang="en">CII Green Business Centre</companyName>
+  </person>
+  <person id="235b75f8-e517-48b2-8f45-d22958d3497d" name="Matthias Tuchschmid (obsolete)" address="Margrit-Rainer-Str. 11c, 8050 Zurich, Switzerland" telephone="0041 44 940 67 94" telefax="0041 44 544 57 94" email="esu-services@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="aee89a09-42c7-4b39-b9c1-f6470ba9e789" name="Julian Schnetzer" address="" telephone="" telefax="" email="julian.schnetzer@art.admin.ch" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
+    <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
+  </person>
+  <person id="3f229bba-9b55-490c-b0c3-92121ff1b8cb" name="Geneviève Martineau" address="C.P.6079, succ. Centre-ville, H3C 3A7 Montreal, Qc, Canada" telephone="514-340-4711#3346" telefax="" email="genevieve.martineau@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="ac27db9e-1020-4a92-a17f-af65ac76a284" name="ecoinvent ecoinvent" address="strasse, 6666 Mariehamn, Åland Islands" telephone="" telefax="" email="tereza.levova@empa.ch" companyId="b068dca8-6e73-4b8b-a66e-871f77b0c6ab">
+    <companyName xml:lang="en">dummy</companyName>
+  </person>
+  <person id="e5461143-594a-4a42-a9cd-6bb758ee66a4" name="Simon Gmünder" address="Überlandstrasse 129, 8600 Dübendorf, Switzerland" telephone="+41 44 823 49 37" telefax="" email="simon.gmuender@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="0d906c8f-85ae-44f5-b4ed-570e06a5c4d7" name="Eduardo Sugawara" address="Estrada Ribeirao do Soldado, 230, 09822010 Sao Bernardo do Campo, Brazil" telephone="" telefax="" email="eduardo.toshio@basf.com" companyId="d150e0aa-cd0e-4e9b-81c0-c7368517534a">
+    <companyName xml:lang="en">Fundação Espaço Eco</companyName>
+  </person>
+  <person id="d9cf7a3a-8807-41af-b749-853b12261458" name="Cássia Maria Lie Ugaya" address="Brazil" email="cassiaugaya@utfpr.edu.br" companyId="4efaf62a-9844-4edd-803c-2bd2a4ad78c1">
+    <companyName xml:lang="en">Universidade Tecnológica Federal do Paraná</companyName>
+  </person>
+  <person id="208dac77-3be4-4272-9c63-431747e425dc" name="Simone Ehrenberger" address="Pfaffenwaldring 38-40, 70569 Stuttgart, Germany" email="simone.ehrenberger@dlr.de" companyId="de101c85-1c43-4843-91fd-b4e011db92fa">
+    <companyName xml:lang="en">German Aerospace Centre</companyName>
+  </person>
+  <person id="2c7f180e-9527-43f0-8969-94bb38a7091c" name="Timothy Grant" address="Australia, 3000 Melbourne, Australia" telephone="+61408104977" telefax="" email="Tim@lifecycles.com.au" companyId="91ba92dd-3c30-4ac7-a831-d52b6b6fbc0b">
+    <companyName xml:lang="en">Life Cycle Strategies</companyName>
+  </person>
+  <person id="547e34ec-4633-4302-8394-cbc2f234764c" name="Alba Canovas" address="" telephone="" telefax="" email="alba.canovas@estudiant.upc.edu" companyId="75e8d59a-919a-4339-ab04-b1d35fd617a7">
+    <companyName xml:lang="en">Universitat Politècnica de Catalunya</companyName>
+  </person>
+  <person id="a84d170e-e428-4103-b895-7574b28536b4" name="Hugues Imbeault-Tétreault" address="2500 chemin de Polytechnique, H2V 4G7 Montréal, Canada" telephone="" telefax="" email="hugues.imbeault@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="a38da037-17c4-4985-9e76-92561b53feb0" name="Christine Chen" address="" telephone="" telefax="" email="chschen@iersweb.com" companyId="4961460e-b59c-4657-8b33-71647f93013b">
+    <companyName xml:lang="en">IERS, LLC</companyName>
+  </person>
+  <person id="44a0bdd8-6624-4a73-a661-7190ddf070b3" name="David FitzGerald" address="Technoparkstrasse 1, 8005 Zürich, Switzerland" telephone="" telefax="" email="fitzgerald@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="096e0dbf-0e23-4b59-84fe-59d5e5ef6cad" name="Shiny Samuel" address="CII - Green Business Centre, Hyderabad" telephone="914044195179" email="shiny.samuel@cii.in" companyId="67aaeed4-6ef3-4766-b360-38fe7080d6eb">
+    <companyName xml:lang="en">CII Green Business Centre</companyName>
+  </person>
+  <person id="cd7a0fa2-e839-4d2b-a2e1-86526988d950" name="Olaf Tietje" address="ETH-Zentrum HAD, 8092 Zürich" telephone="0041 44 632 58 94" telefax="0041 44 632 10 29" email="eth.uns@ecoinvent.org" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="125522ae-7935-493f-be91-258062b10392" name="Laura Peano" address="" telephone="+41 21 693 91 92" telefax="" email="laura.peano@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="ce563038-95a9-4cd6-a7a1-313112eabcaa" name="Frank Werner (obsolete)" address="Überlandstrasse 129, 8600 Dübendorf" telephone="0041 44 823 44 94" telefax="0041 44 823 40 09" email="empa@ecoinvent.org" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="4b68102d-2b7f-4185-a65c-49a65bbb3dca" name="Jürgen Sutter" address="" telephone="" telefax="" email="sutter.juergen@gmail.com" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="5ccabe2c-aa6b-4c10-9cd7-77074bee0c03" name="Christian Bauer" address="OVGA, 5232 Villigen PSI" telephone="0041 56 310 2391" telefax="0041 56 310 2199" email="psi@ecoinvent.org" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="66681112-91e4-4579-a67a-7c9fc5e69dff" name="Mike Chudacoff" address="Quellenstrasse 31, 8005 Zürich" telephone="0041 44 271 68 05" telefax="0041 44 273 15 50" email="chudacoff@oekoscience.ch" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="9270a112-07cb-455b-b0c9-ab7e11d57b54" name="Amit Kapur" address="124 La Trobe St, VIC 3000 Melbourne, Australia" telephone="" telefax="" email="amitkapur@hotmail.com" companyId="d5564944-38e9-4a8f-82e5-996002a6f2a8">
+    <companyName xml:lang="en">RMIT University</companyName>
+  </person>
+  <person id="1d58d247-a8f0-494d-a863-55cf46fbd449" name="Christoffer Krewer" address="Frans Perssons väg 6, Delsjömotet, 41276 Göteborg, Sweden" telephone="010-5166717" telefax="" email="christoffer.krewer@sp.se" companyId="09dce163-59db-422d-8623-f6aee7aa52b3">
+    <companyName xml:lang="en">SIK - Swedish Institute for Food and Biotechnology</companyName>
+  </person>
+  <person id="44b3c31e-fbbd-4acf-be05-4ac5c8a3d82f" name="Bárbara Civit" address="Bondad 1045, 5505 Chacras de Coria, Argentina" telephone="+542615244693" telefax="" email="bcivit@mendoza-conicet.gob.ar" />
+  <person id="070a70ac-1f1f-4ff1-b7d8-de9f07c95e86" name="Sebastien Thomassey" address="2, allée Louise et Victor Champier, 59056 Roubaix, France" telephone="" telefax="" email="sebastien.thomassey@ensait.fr" companyId="92370528-2301-44fd-9d27-92f6db93c703">
+    <companyName xml:lang="en">Ecole Nationale Supérieure des Arts et Indutries Textiles</companyName>
+  </person>
+  <person id="000f2ba7-53bc-4ad8-aba2-d41b0adadac6" name="Dominik Saner" address="Schafmattstrasse 6, Switzerland" telephone="+41 44 633 68 40" telefax="+41 44 633 10 61" email="dominik.saner@ifu.baug.ethz.ch" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="49452253-b703-478f-9110-a8dbdbe03a74" name="Kenza Benabderrazik" address="1, rue du Vuache, CP 2091, 1211 Genève, Switzerland" telephone="" telefax="" email="kenza.benabderrazik@sofiesonline.com" companyId="f458382e-3cf7-4bef-9b68-ff5cfde9289d">
+    <companyName xml:lang="en">Sofies</companyName>
+  </person>
+  <person id="e049b5f5-4742-4486-add7-d5fc2bf19c4d" name="Louis Brimacombe" address="4 Harrison Lane, S10 4PA Sheffield, United Kingdom" telephone="" telefax="" email="louis.brimacombe@gmail.com" companyId="18060291-7bdd-4a1e-84ff-c108e164818e">
+    <companyName xml:lang="en"></companyName>
+  </person>
+  <person id="cb4a3f95-41a1-4c51-a35e-f863c4e469c9" name="Konrad Schleiss" address="Weinbergstr. 46, 2540 Grenchen" telephone="+41 32 653 29 20" telefax="+41 32 653 29 22" email="k.schleiss@bluewin.ch" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="e1be882f-7d0d-4e97-972b-f0c1ab1f3f51" name="Jenna Watson" address="Passeig Pujades 1, 08003 Barcelona, Spain" telephone="34600255180" telefax="" email="jw@lca-net.com" companyId="a7712b38-b404-4020-b484-eb40c0624a82">
+    <companyName xml:lang="en">2.-0 LCA consultants</companyName>
+  </person>
+  <person id="1c9d06b2-453f-4380-affe-5a351f77c93d" name="Jungbluth Niels" address="Margrit-Rainer-Str. 11c, 8050 Zurich, Switzerland" telephone="" telefax="" email="info@esu-services.ch" companyId="47b248b7-d191-4e53-921b-8bfb4692ebef">
+    <companyName xml:lang="en">ESU-services</companyName>
+  </person>
+  <person id="6083ef2d-50bc-415c-bfd2-592c8d160778" name="Thomas Heck" address="OVGA, 5232 Villigen PSI" telephone="0041 56 310 2651" telefax="0041 56 310 2199" email="psi@ecoinvent.org" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="63eace01-5789-4faa-b4a7-30ee7bab41b3" name="Assumpció ANTON" address="ctra Cabrils km 2, 08348 Cabrils, Barcelona, Spain" telephone="" telefax="" email="aantonvallejo@hotmail.com" companyId="f93340e9-5136-498c-8bb3-61d99252f201">
+    <companyName xml:lang="en">Institut de Reserca i Technologica Agroalimentaries</companyName>
+  </person>
+  <person id="0ce4975c-bfb8-4ca1-a199-8fa7b02976c1" name="Roland Steiner" address="Margrit-Rainer-Str. 11c, 8050 Zurich, Switzerland" telephone="0041 44 940 67 94" telefax="0041 44 544 57 94" email="esu-services@ecoinvent.org" companyId="47b248b7-d191-4e53-921b-8bfb4692ebef">
+    <companyName xml:lang="en">ESU-services</companyName>
+  </person>
+  <person id="b46b4b20-c857-4080-8a67-46e2642a4fd7" name="Jürgen Reinhard" address="" email="juergen.reinhard@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="e36cf256-faeb-47ab-89e8-998e46b849b7" name="Cecile Guignard" address="Parc scientifique EPFL, Bat D, 1015 Lausanne, Switzerland" telephone="" telefax="" email="cecile.guignard@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="79574269-fb4b-4b1e-b64c-d86e30829015" name="Niels Jungbluth" address="Margrit-Rainer-Strasse 11c, 8050 Zürich, Switzerland" telephone="+41 44 940 61 32" telefax="+41 44 940 67 94" email="jungbluth@esu-services.ch" companyId="47b248b7-d191-4e53-921b-8bfb4692ebef">
+    <companyName xml:lang="en">ESU-services</companyName>
+  </person>
+  <person id="6e93b935-74dd-4cb6-b503-d424a411aff3" name="Kuch" address="185 avenue Charles de Gaulle, 92200 Neuilly-sur-Seine, France" telephone="" telefax="" email="pkuch@bio.deloitte.fr" companyId="dc1bfe46-07ee-4da0-8360-77c1a9fd10f8">
+    <companyName xml:lang="en">Bio Intelligence Service</companyName>
+  </person>
+  <person id="725942b9-cd77-4359-a564-8500b92d9dc4" name="Mireille Faist Emmenegger" address="Reitergasse 11, 8004 Zürich, Switzerland" telephone="" telefax="" email="Mireille.Faist@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="57378f6b-a790-4b8d-a730-80f891d77e94" name="Marisa Vieira" address="The Netherlands" email="vieira@pre.nl" companyId="d62f5701-e740-47ef-b76d-c92ffa2e8745">
+    <companyName xml:lang="en">PRé Consultants</companyName>
+  </person>
+  <person id="89ae408f-f095-4276-96ca-c871888cf632" name="Roland Hischier" address="Lerchenfeldstrasse 5, 9014 St-Gallen, Switzerland" telephone="" telefax="" email="roland.hischier@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="5abb3327-fe29-4be8-b538-df61743070e6" name="Thierry Boulard" address="" telephone="+33 4 32 72 22 85" telefax="" email="boulard@sophia.inra.fr" companyId="6e5ab197-fef5-4a0a-a50c-5fe9d49e2cf4">
+    <companyName xml:lang="en">INRA</companyName>
+  </person>
+  <person id="50ac01f8-b922-47bf-91a3-e0b6949ce0b2" name="Marco Mina" address="., . ., Switzerland" telephone="0563105743" telefax="„Disabled/Christian Bauer/11/09/14“ " email="marco.mina@psi.ch" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="ec67c6be-71e2-4212-b1dc-473046b88fb2" name="Gerald Rebitzer (obsolete)" address="EPFL-ENAC-GECOS, 1015 Lausanne" telephone="0041 21 693 5526" telefax="0041 21 693 5760" email="epfl@ecoinvent.org" companyId="950fd121-d3a7-40dd-8f18-84c4f7e5cf71">
+    <companyName xml:lang="en">Ecole Polytechnique Federale de Lausanne</companyName>
+  </person>
+  <person id="1f74459d-88b7-4842-9492-16700a6f0d46" name="Diogo Silva" address="Nove de Julho Street, 2488, Luftalla Garden, 13560560 São Carlos, Brazil" telephone="" telefax="" email="diogo.apls@gmail.com" companyId="0d50c8bf-2d81-4f34-9703-0f60c3e9e693">
+    <companyName xml:lang="en">Universidade de São Paulo</companyName>
+  </person>
+  <person id="9ba56945-505c-4ff1-ae35-17eef1031be6" name="Philipp Stadler" address="ETH-Zentrum HAD, 8092 Zürich" telephone="0041 44 632 58 94" telefax="0041 44 632 10 29" email="eth.uns@ecoinvent.org" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="571d9e03-6533-4bb7-bc19-724bd850f44f" name="Sybille Büsser" address="Margrit-Rainer-Str. 11c, 8050 Zurich, Switzerland" telephone="0041 44 940 61 35" telefax="0041 44 940 61 94" email="buesser@esu-services.ch" companyId="47b248b7-d191-4e53-921b-8bfb4692ebef">
+    <companyName xml:lang="en">ESU-services</companyName>
+  </person>
+  <person id="8d9ec4d2-bb82-4e33-b3b7-3b8da648908c" name="Vincent Rossi" address="Quantis sarl, EPFL, PSE-A, 1015 Lausanne" telephone="0041 21 550 02 43" telefax="0041 91 968 10 93" email="vincent.rossi@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="9eb39d77-e323-44b0-a04a-8eaf132b7c04" name="Eylem Kilic" address="Turkey" email="eylemkilic@gmail.com" companyId="e55639d9-7d5e-4b22-a7a1-559d33a513c1">
+    <companyName xml:lang="en">Usak University</companyName>
+  </person>
+  <person id="2fc189a4-d150-4611-a61e-3e8dde5f0bb8" name="Viviane Barros" address="Rua Mauro Freire nº 200 apt 1901, 60834-030 Fortaleza, Brazil" telephone="55 85 88793512" telefax="" email="vivianebarros1@hotmail.com" companyId="b253062c-19e5-412b-be98-75a2f0f78b98">
+    <companyName xml:lang="en">Embrapa - Agroindustria Tropical</companyName>
+  </person>
+  <person id="a0c29817-13fa-4a48-a605-db1af635fbfe" name="David  Porras" address="Sant Antoni Maria Claret, 08025 barcelona, Spain" telephone="" telefax="" email="david.porras@gencat.cat" companyId="66cbabb6-1f6b-4506-b2b6-ba01e3309e11">
+    <companyName xml:lang="en">Centre de la Propietat Forestal de Catalunya </companyName>
+  </person>
+  <person id="0f1fb4bd-eda6-4e9f-8175-454f698ac1f2" name="Raul Lamas Bregante" address="., . ., Switzerland" telephone="" telefax="" email="raulraul81@hotmail.com" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="d22dadb2-46a8-46c3-8c0c-1c85205a3f65" name="Venkee Ratnam" address="Noida sector 62, 201307 Noida, India" telephone="" telefax="" email="ilcm@ficci.com" companyId="f135ebe3-680b-4635-ad03-7b86773caf85">
+    <companyName xml:lang="en">FICCI Quality Forum</companyName>
+  </person>
+  <person id="6550da0e-0f05-40c0-b0c6-08837f5aa735" name="Diogo Aparecido Lopes Silva" email="diogo.apls@gmail.com" companyId="0d50c8bf-2d81-4f34-9703-0f60c3e9e693">
+    <companyName xml:lang="en">Universidade de São Paulo</companyName>
+  </person>
+  <person id="00a8a76b-3d74-4cba-bc5f-b07ec201d4b5" name="Claudine Basset-Mens" address="[null], [null] [null], France" telephone="" telefax="" email="claudine.basset-mens@cirad.fr" companyId="8b5d0b44-0b93-4882-a511-3717c8c5bb6f">
+    <companyName xml:lang="en">Centre de coopération Internationale en Recherche Agronomique pour le Développement</companyName>
+  </person>
+  <person id="2aa462d9-aaff-49d6-8eb7-bf489c3dc8dd" name="Leo Breedveld" address="via chiesa campocorce 4, 31021 mogliano veneto, Italy" telephone="" telefax="" email="info@to-be.it" companyId="c9fb9106-e13c-4752-a7d5-da14c764ba8f">
+    <companyName xml:lang="en">2B Consulenza Ambientale</companyName>
+  </person>
+  <person id="56b7f5f8-e7da-44bc-84ed-7a37976ad8d6" name="Prasad Gangane" address="CII, 500084 Hyderabad, India" telephone="" telefax="" email="prasad.gangane@cii.in" companyId="67aaeed4-6ef3-4766-b360-38fe7080d6eb">
+    <companyName xml:lang="en">CII Green Business Centre</companyName>
+  </person>
+  <person id="b53baac4-ba96-471f-b444-e407bdd4bbaf" name="Klaus Richter" address="Überlandstrasse 129, 8600 Dübendorf" telephone="0041 44 823 41 15" telefax="0041 44 823 4042" email="empa@ecoinvent.org" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="f6c00074-2f5c-4d60-862f-55336e001531" name="Michael Spielmann (obsolete)" address="OVGA, 5232 Villigen PSI" telephone="0041 56 310 4706" telefax="0041 56 310 2199" email="psi@ecoinvent.org" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="91fa149b-ae69-4eb6-b8cd-43f4e560246a" name="Daniel Kellenberger (obsolete)" address="Überlandstrasse 129, 8600 Dübendorf" telephone="0041 44 823 44 94" telefax="0041 44 823 4042" email="empa@ecoinvent.org" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="70cdb5df-1d77-439c-a939-095f0a7b5ae8" name="Germán  Santa María" address="Calle 32 B sur # 47 - 06 Barrio El Portal, Envigado , 055421 Medellín, Colombia" telephone="" telefax="" email="gsantamaria@gaiasa.com" companyId="05b301b7-2698-4c4a-84e0-09e0dbb99054">
+    <companyName xml:lang="en">Gaia Servicios Ambientales</companyName>
+  </person>
+  <person id="6d5f52bb-4958-4cd3-ac87-c5d1567d7733" name="Thomas Hofstetter" address="EAWAG" telephone="0041 44 823 55 11" telefax="0041 44 823 50 28" email="eth.s-u@ecoinvent.org" companyId="d68a32e1-2fe5-43fb-96f9-8746b09b9afc">
+    <companyName xml:lang="en">Eidg. Anstalt für Wasserversorgung, Abwasserreinigung und Gewässerschutz</companyName>
+  </person>
+  <person id="37ab7339-e76e-4698-afbe-bfc4cacfdee8" name="MIchael Spielmann" address="Immanuelkirchstrasse 34, 10405 Berlin, Germany" telephone="" telefax="" email="michael.spielmann@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="5c477382-e72a-4a18-95db-321453898bf7" name="Marylène Dussault" address="C.P. 6079, succ. Centre-Ville, H3C 3A7 Montréal (Qc), Canada" telephone="" telefax="" email="marylene.dussault@gmail.com" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="72999df6-e381-4c80-92a8-8baabfcaba88" name="Lindita Bushi" address="119 Ross Avenue, Ottawa, K1Y 0N6" email="lindita.bushi@athenasmi.org" companyId="12b0857b-7a23-418d-960b-3c0bfffc11d7">
+    <companyName xml:lang="en">Athena Sustainable Materials Institute</companyName>
+  </person>
+  <person id="c8fa709d-f7ac-494d-b94e-5878a818de6e" name="Marília I. S. Folegatti Matsuura" address="Rodovia SP 340, KM 127,5, S/N - Tanquinho Velho, Jaguariúna, São Paulo - Brazil, CEP 13820-000" telephone="+55 (19) 3311-2731" email="marilia.folegatti@embrapa.br" companyId="76e3c5a9-b90d-4175-a46f-7436823b06f1">
+    <companyName xml:lang="en">Embrapa - Meio Ambiente</companyName>
+  </person>
+  <person id="2128bcc1-8b20-4aa3-9c2f-21d14ff8ce3d" name="Anne Greig" address="" telephone="" telefax="" email="anne@fourelementsllc.com" companyId="54b5cd68-ce23-4c09-8fa2-a7922f348785">
+    <companyName xml:lang="en">Four Elements Consulting, LLC</companyName>
+  </person>
+  <person id="88a883c4-ad96-4494-b1bc-64ff567e31db" name="Bastian Burger" address="OVGA, 5232 Villigen PSI" telephone="0041 56 310 2007" telefax="0041 56 310 2199" email="psi@ecoinvent.org" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="93058481-c5d7-4b0b-bf90-43878190c58d" name="Dominic Notter" address="Ueberlandstrasse 129, 8600 Duebendorf, Switzerland" telephone="" telefax="" email="Dominic.Notter@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="dd2d63ec-f0bb-415f-bed6-641ad695fb9a" name="Veronica Munyongani" address="Seidenstrasse 18, 8304 Wallisellen, Switzerland" telephone="" telefax="" email="mnyver002@myuct.ac.za" />
+  <person id="788d0176-a69c-4de0-a5d3-259866b6b100" name="[Current User]" email="no@email.com" />
+  <person id="c64d4a37-9bb9-4617-8cd7-a130958fd5c6" name="Angelika Heil" address="Reckenholzstr.191, 8046 Zürich" telephone="0041 44 377 71 54" telefax="0041 44 377 72 01" email="art@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="642d2979-ab88-423b-a8d5-92a476ff4b7e" name="Angeline de Beaufort" address="Graeterweg 13, 6071 ND Swalmen, Netherlands" telephone="" telefax="" email="beaulang@planet.nl" companyId="26c315c4-a32b-41d0-a326-7464b9f32312">
+    <companyName xml:lang="en">De Beaufort-Langeveld</companyName>
+  </person>
+  <person id="c57afe9d-30e8-46fe-a7af-208c0486af15" name="Rita Rita de Cássia Monteiro Marzullo" address="Avenida Professor Luciano Gualberto, 1289 - Cidade Universitária CEP , 05508-010 Butanta, São Paulo, Brazil" telephone="" telefax="" email="rita.monteiro@gmail.com" companyId="a5d7ecbc-46d0-48ac-a51e-fe78bf24703f">
+    <companyName xml:lang="en">Agência Cérebro Tecnologia da Informação Ltda</companyName>
+  </person>
+  <person id="1db3a71d-dcf4-4266-9721-025ec9783105" name="Fernanda Belizario Silva" address="Av. Prof. Almeida Prado 532 - Cidade Universitária - São Paulo - SP - Brazil. 05508-901" telephone="+551137674981" email="fbsilva@ipt.br" companyId="d3a7b63c-8b8a-45bd-b499-8f886154b29f">
+    <companyName xml:lang="en">Institute for Technological Research</companyName>
+  </person>
+  <person id="2f4e8677-9711-48be-a513-b7ba58307f3c" name="Jun Kono" address="Chalmers University of Technology, 41296 Göteborg, Sweden" telephone="+46317721919" telefax="" email="jun.kono@chalmers.se" companyId="ceeb9299-fb47-4c75-afa7-4863d6621dfe">
+    <companyName xml:lang="en">Chalmers University of Technology</companyName>
+  </person>
+  <person id="9bc33ba0-2d86-4277-9093-1366f7a2a614" name="Marcel Gómez" address="Spain" email="marcel614@gmail.com" companyId="83cb6cd0-2946-4a3b-9089-6faa236f87c0">
+    <companyName xml:lang="en">JG Proyectos, El Masnou Marcel Gómez Consultoria Ambiental SL</companyName>
+  </person>
+  <person id="549081a0-cf0f-4a5f-b020-c52a9725a523" name="Liliane Klemann" address="" telephone="" telefax="" email="liliane_kl@hotmail.com" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="b22bdd87-5a72-487e-a28f-3efb50aa7c91" name="Luisa Paolotti" address="Italy" email="luisa.paolotti@gmail.com" companyId="ec77ba21-4f5d-4544-aac0-f3f412fe4c18">
+    <companyName xml:lang="en">Università degli Studi di Perugia</companyName>
+  </person>
+  <person id="8663c5cd-561f-4ddb-b884-82d3f1812aa1" name="Hongtao Wang" address="R306, No.99, Kehuabei Road, 610065 Chengdu, China" telephone="+8613880262609" telefax="" email="wanghongtao@outlook.com" companyId="0c900c38-0177-4eaa-9033-a14feafa53e3">
+    <companyName xml:lang="en">Sichuan University</companyName>
+  </person>
+  <person id="fb0e4bc2-6d48-4df3-9015-ab56bacd8393" name="Mischa Zschokke-Gohl" address="Gasometerstrasse 9, 8005 Zürich, Switzerland" telephone="" telefax="" email="m.zschokke@carbotech.ch" companyId="10aa5c2c-bf78-4737-b9a5-e9f3ad530b74">
+    <companyName xml:lang="en">Carbotech AG</companyName>
+  </person>
+  <person id="f04a411e-5096-44dc-ab57-5e2bf62443c0" name="Mark Huijbregts" address="The Netherlands" email="M.Huijbregts@science.ru.nl" companyId="67add2e1-d92f-415f-a59f-fe39f4897334">
+    <companyName xml:lang="en">Radboud University Nijmegen</companyName>
+  </person>
+  <person id="cbe02a0d-9502-44f6-a266-a83100ce794e" name="Axel Liebich" address="Wilckensstr. 3" telephone="4906221476729" email="axel.liebich@ifeu.de" companyId="55302d03-856a-4b9d-bf3c-e63fa7211160">
+    <companyName xml:lang="en">IFEU GmbH</companyName>
+  </person>
+  <person id="37cc4296-1529-4587-9d00-4107455be7d7" name="François Saunier" address="CIRAIG, CP 6079, succ. centre ville, H3C3A7 Montréal, Canada" telephone="+1 514 340 4711 #4273" telefax="" email="francois.saunier@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="a05b9cea-1fad-465b-a97c-be62a7b64ab8" name="Matthias Klingler" address="Schaffhauserstrasse 21" telephone="043 300 50 40" telefax="" email="m.klingler@umweltchemie.ch" companyId="a6b2a2ce-48c1-497d-b12b-67107ad24fb3">
+    <companyName xml:lang="en">Büro für Umweltchemie</companyName>
+  </person>
+  <person id="6ba83b26-25ab-4984-90ad-cafd9a873db0" name="Andrii Gritsevskyi" address="Wagramerstrasse 5, PO Box 100, A-1400 Vienna, Austria" telephone="+431260022772" telefax="" email="a.gritsevskyi@iaea.org" companyId="b88fd575-8462-42aa-ac9f-23ab73d8312d">
+    <companyName xml:lang="en">International Atomic Energy Agency</companyName>
+  </person>
+  <person id="9ac858e0-0f13-4102-8f06-0600ba26f49d" name="Thomas Köllner" address="ETH-Zentrum HAD, 8092 Zürich" telephone="0041 44 632 63 11" telefax="0041 44 632 10 29" email="eth.uns@ecoinvent.org" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="3d4f5456-7aa5-4158-9b55-837a02a6857a" name="Fanny Lebailly" address="5710 Avenue de Darlington, h3s2h7 Montréal, Canada" telephone="" telefax="" email="fanny.lebailly@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="13365919-8270-4b06-af15-21b71d229865" name="Mischa Classen" address="Überlandstrasse 129, 8600 Dübendorf" telephone="0041 44 823 4937" telefax="0041 44 823 4042" email="empa@ecoinvent.org" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="29ed0f55-cd8e-4551-afe9-ce3bae43ca91" name="Juliana Picoli" address="Rodovia SP 340, KM 127,5, S/N - Tanquinho Velho, 13820-000 Jaguariúna, Brazil" telephone="" telefax="" email="juliana.picoli@colaborador.embrapa.br" companyId="76e3c5a9-b90d-4175-a46f-7436823b06f1">
+    <companyName xml:lang="en">Embrapa - Meio Ambiente</companyName>
+  </person>
+  <person id="8fbf5a63-e0e2-4035-a35a-1d72f98e7ec3" name="Niels Jungbluth" address="Margrit-Rainer-Strasse 11c, 8050 Zürich, Switzerland" telephone="+41 44 940 61 32" telefax="+41 44 940 67 94" email="info@esu-services.ch" companyId="47b248b7-d191-4e53-921b-8bfb4692ebef">
+    <companyName xml:lang="en">ESU-services</companyName>
+  </person>
+  <person id="22904cda-1af1-46b7-a5c9-a871d6d0976f" name="Edivan Cherubini" address="Campus Universitário, Mailbox 476, 88040-970 Florianopolis, Brazil" telephone="" telefax="" email="edivan.cherubini@posgrad.ufsc.br" companyId="e8e2c79e-f65c-45dd-a3f8-30eb0367d9b6">
+    <companyName xml:lang="en">EnCiclo Soluções Sustentáveis</companyName>
+  </person>
+  <person id="eed8009e-62ea-4c9b-8b91-057e413f1aa5" name="Manuele Margni" address="Quantis sarl, EPFL, PSE-A, 1015 Lausanne" telephone="0041 21 550 02 43" telefax="0041 91 968 10 93" email="manuele.margni@quantis-intl.com" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="a19d680f-2f3a-4389-bdb8-d00dcf690f74" name="Marcela Valles Lange" address="Rua Ângelo Dallarmi, 350, 82015750 Curitiba, Brazil" telephone="" telefax="" email="marcela_lange@yahoo.com.br" companyId="4efaf62a-9844-4edd-803c-2bd2a4ad78c1">
+    <companyName xml:lang="en">Universidade Tecnológica Federal do Paraná</companyName>
+  </person>
+  <person id="b77154e9-578d-458d-b577-bf75ae26696f" name="Arthur Braunschweig" address="Switzerland" email="abraunschweig@e2mc.com" companyId="f1423bcc-aa33-4f34-8bb6-f7c6bdfaf261">
+    <companyName xml:lang="en">E2 Management Consulting AG</companyName>
+  </person>
+  <person id="1ef173e3-4c48-4135-b20e-b46c13cb169d" name="Michael Lettenmeier" address="Germany" email="michael.lettenmeier@wupperinst.org" companyId="d5024fa4-604b-4afc-a8ba-73becb08392f">
+    <companyName xml:lang="en">Wuppertal Institute for Climate, Environment and Energy</companyName>
+  </person>
+  <person id="f3a4297b-f198-41c4-b8cf-ad5c28a5d074" name="Mariska J. de Wild-Scholten" address="Energy research Centre of the Netherlands ECN, Unit Solar Energy, Westerduinweg 3, P.O. Box 1, NL-1755 ZG Petten" telephone="0031 224 564736" telefax="0031 224 568214" email="m.dewild@ecn.nl" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="45c451d7-4616-4650-8ade-ef251a378ef4" name="Adrien Beton" address="France, France" telephone="" telefax="" email="adrien.beton@weave-air.eu" companyId="dc1bfe46-07ee-4da0-8360-77c1a9fd10f8">
+    <companyName xml:lang="en">Bio Intelligence Service</companyName>
+  </person>
+  <person id="b6f1b07e-821b-446d-8200-6c6de4e90403" name="Maria Enroth" address="Sweden" email="maria.enroth@msgab.se" companyId="e4db2e0c-d8cc-4452-a252-408939ee4135">
+    <companyName xml:lang="en">MSG Management System Group AB</companyName>
+  </person>
+  <person id="ec4f0ca9-4253-4af8-baad-3e3f9487fe64" name="Katsuyuki Nakano" address="Kaji-cho, 1010044 Tokyo, Japan" telephone="" telefax="" email="nakano@jemai.or.jp" companyId="af4c86f3-1253-46b1-9f8f-ccd67229ca7f">
+    <companyName xml:lang="en">JEMAI</companyName>
+  </person>
+  <person id="0a0b2b9a-de70-430c-bfae-d50730714aec" name="Rita Schulze" address="" telephone="+41 58 468 71 11" telefax="" email="rita.schulze@art.admin.ch" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
+    <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
+  </person>
+  <person id="102a578d-d4a1-4bf9-9272-b57249532af9" name="Yves Loerincik" address="EPFL-STI-ISE-LENI,  1015 Lausanne" telephone="0041 79 453 59 52" telefax="0041 21 693 35 02" email="yves.loerincik@epfl.ch" companyId="950fd121-d3a7-40dd-8f18-84c4f7e5cf71">
+    <companyName xml:lang="en">Ecole Polytechnique Federale de Lausanne</companyName>
+  </person>
+  <person id="2efbdcfe-b456-4557-a210-927ee6742f7b" name="Andreas Schiffleitner" address="" telephone="" telefax="" email="andreas.schiffleitner@kerp.at" companyId="b80adab6-341c-4aa2-9309-5cd3b0fd14d9">
+    <companyName xml:lang="en">KERP Research GmbH</companyName>
+  </person>
+  <person id="6c483d26-c3df-4519-b0bc-ca084209f2b7" name="Laurent" address="555, ave de universite, g7h2b1,  Chicoutimi, Canada" email="achillebenjamin.laurent@uqac.ca" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="d0042658-e937-4dee-8ce1-e70f9b94b28b" name="Thomas Kägi" email="cms_info@myclimate.org" companyId="3e3bd3c4-4d55-4ed8-8142-58ec81f948cc">
+    <companyName xml:lang="en">Stiftung myclimate - The Climate Protection Partnership</companyName>
+  </person>
+  <person id="fc848521-7e46-403c-a763-df47ef6b52fc" name="Sandra Roos" address="PO Box 104, SE-431 22 Molndal, Sweden" telephone="" telefax="" email="sandra.roos@swerea.se" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="8a301190-706e-41dc-9a81-629a17d72774" name="Stefano Castelanelli" address="" telephone="" telefax="" email="stefanoc@student.ethz.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="3645a080-7a28-4dc2-80ea-7bd61a11b4ad" name="Franziska Stössel" address="Schafmattstrasse 6, 8093 ZH " telephone="" telefax="" email="stoessel@ifu.baug.ethz.ch" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="b16174e6-9e73-4221-9d84-2277d5a0129d" name="Florian Suter" address="ETH Zürich, IfU, HPZ G32.2, John-von-Neumann-Weg 9, 8093 Zürich, Switzerland" telephone="" telefax="" email="suter@ifu.baug.ethz.ch" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="9a963412-20a7-428b-8740-3582e217c4b6" name="Carl Vadenbo" address="Institute for Environmental Engineering" telephone="HIF C13, Schafmattstrasse 6" telefax="CH-8093 Zurich" email="vadenbo@ifu.baug.ethz.ch" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="4b1317c3-be44-42b5-a847-78fcde5e098f" name="Sarah McLaren" address="New Zealand" email="S.McLaren@massey.ac.nz" companyId="e01cc883-b52b-463f-87f0-0718e33230df">
+    <companyName xml:lang="en">Massey University</companyName>
+  </person>
+  <person id="aeed1c9e-cd03-4f7f-b7b4-ae1aa7baafe4" name="Pierre-Olivier P.O." address="2500, chemin de Polytechnique, H3C 3A7 Montreal, Canada" telephone="" telefax="" email="pierre-olivier-3.roy@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="74edccc8-78d6-45c2-b5ce-74729a4b02e1" name="Karen Muir" address="Grüentalstrasse 14, 8820 Wädenswil" telephone="+41589345456" email="muir@zhaw.ch" companyId="951a90ab-93bc-4a3f-909a-de06cef0656b">
+    <companyName xml:lang="en">ZHAWIUNR</companyName>
+  </person>
+  <person id="f0048abe-db4e-451a-8acb-9935d3400c56" name="Henrique Rogerio Antunes de Souza Junior" address="Lauro Linhares, 88036001 Florianópolis, Brazil" telephone="" telefax="" email="henrique_hjr@hotmail.com" />
+  <person id="ffc5469b-548a-4a0e-9614-7106eeea4bca" name="Hans-Jörg Althaus" address="Reitergasse 11, 8000 Zürich, Switzerland" telephone="" telefax="" email="hja.privat@gmail.com" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="e7eaa5da-0428-4d05-879a-e3fc3966d789" name="Albert Zimmermann" address="Tänikon, 8356 Ettenhausen" telephone="0041 52 368 32 39" telefax="0041 52 365 11 90" email="art@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="33d4d633-d019-42fa-8584-be63f4ac20df" name="Jürgen Reinhard" address="Switzerland, Switzerland" telephone="" telefax="" email="Juergen.Reinhard@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="0fe9b0e3-fb0c-4ebb-82da-a80b90537fbf" name="Claudia Peña" email="cpena@addere.cl" companyId="6765ebf6-4a18-40fa-a0aa-c0ef12627241">
+    <companyName xml:lang="en">Addere Investigación y Tecnología.</companyName>
+  </person>
+  <person id="610bd1b2-fec3-4e8e-84a6-76fef8b6b7b8" name="Karin Treyer" address="., . ., Switzerland" telephone="" telefax="" email="karin.treyer@psi.ch" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="183edfff-d98c-410a-b3c0-481b35ebfa0a" name="Muhammed Noor Hossain" address="Road#01, House#04, Halishahar Housing Estate, 4226 Chittagong, Bangladesh" telephone="" telefax="" email="noorhossain28@gmail.com" />
+  <person id="a13876cf-fe17-45a3-a7fd-f6b7dc437e44" name="Jürgen Sutter" address="Rheinstrasse 95" telephone="0049-6151-8191152" email="j.sutter@oeko.de" companyId="f3ed705a-eb4a-47d3-a982-e0259d8e55e9">
+    <companyName xml:lang="en">Öko-Institut e. V.</companyName>
+  </person>
+  <person id="72ebd45e-1785-4031-a5ae-a702d0cf1093" name="Germán Santa María Restrepo" email="gsantamaria@gaiasa.com" companyId="05b301b7-2698-4c4a-84e0-09e0dbb99054">
+    <companyName xml:lang="en">Gaia Servicios Ambientales</companyName>
+  </person>
+  <person id="697566ba-02bf-4170-8d49-85bc82e1fa71" name="Laura Rubio" address="Calle 69 # 6 - 20 , 101000 Bogota, Colombia" telephone="" telefax="" email="laura.rubio@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="c69691d9-f8ab-40f4-a00e-72e5024c924d" name="Fernando Dias" address="Rua 21 de Setembro, 1880, 79320-900 Corumba, MS, Brazil" telephone="+556791299204" telefax="" email="fernando.dias@embrapa.br" companyId="ff32f686-3f1b-4372-bccc-839090c729c1">
+    <companyName xml:lang="en">Embrapa Pantanal</companyName>
+  </person>
+  <person id="f06ef1d1-61e8-4c26-8ad0-de2193c430ff" name="Marina Santa Rosa Rocha" address="Rua Raimundo Correa, 60/507, 22040042 Rio de Janeiro, Brazil" telephone="" telefax="" email="marinasrr@poli.ufrj.br" companyId="0ff3fe4d-c614-4eb5-a756-5768b5f7262f">
+    <companyName xml:lang="en">Centre de Ressources des Technologies pour l'Environnement, CRP Henri Tudor</companyName>
+  </person>
+  <person id="fc70bc59-790e-4d56-9e39-709762472826" name="Silvio Blaser" address="Überlandstrasse 129, 8600 Dübendorf" telephone="0041 44 823 44 94" telefax="0041 44 823 40 09" email="empa@ecoinvent.org" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="7f5f9cad-1f78-481b-b3c2-62af1b55ac44" name="Anne Perwuelz" address="2, allée Louise et Victor Champier, 59056 Roubaix, France" telephone="" telefax="" email="anne.perwuelz@ensait.fr" companyId="92370528-2301-44fd-9d27-92f6db93c703">
+    <companyName xml:lang="en">Ecole Nationale Supérieure des Arts et Indutries Textiles</companyName>
+  </person>
+  <person id="01d7c60d-4def-4cfa-83df-f88985e4fb53" name="Pierre-Olivier Roy" email="pierre-olivier-3.roy@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="1e0b7429-0c70-47c2-9bf1-d797cfa423ca" name="Bruno Peuportier" address="60 Bd St Michel, 75272 Paris Cedex 06, France" telephone="" telefax="" email="bruno.peuportier@mines-paristech.fr" companyId="a32b9141-2845-4069-9715-ad2921b366f7">
+    <companyName xml:lang="en">Mines ParisTech</companyName>
+  </person>
+  <person id="167b2cd0-d5a9-492e-9c26-9616ba70d19c" name="Mireille Faist Emmenegger (obsolete)" address="Margrit-Rainer-Str. 11c, 8050 Zurich, Switzerland" telephone="0041 44 940 61 35" telefax="0041 44 544 57 94" email="esu-services@ecoinvent.org" companyId="47b248b7-d191-4e53-921b-8bfb4692ebef">
+    <companyName xml:lang="en">ESU-services</companyName>
+  </person>
+  <person id="4b6edbc8-1970-47e8-9cc1-39311a223fa3" name="Default Database Administrator User" address="" telephone="" telefax="" email="ecoinvent.workflow@ifu-hh.de" companyId="c9fb9106-e13c-4752-a7d5-da14c764ba8f">
+    <companyName xml:lang="en">2B Consulenza Ambientale</companyName>
+  </person>
+  <person id="9a959688-1aa8-4d9a-a709-885731a204d3" name="Linlin Wu" address="10 Charles II Street, SW1Y 4AA London, United Kingdom" telephone="02079300528" telefax="" email="wu@world-aluminium.org" companyId="0c6f9ad8-5a12-4dc8-ae57-46df1116d972">
+    <companyName xml:lang="en">International Aluminium Institute</companyName>
+  </person>
+  <person id="2416d4b6-cdf2-4d8e-ab65-6527b06d319a" name="Antonio C.I. Pizzigallo" address="Italy" email="pizzigallo@unisi.it" companyId="40d1707f-1333-4a10-86e4-557ac6aacaef">
+    <companyName xml:lang="en">Università degli Studi di Siena</companyName>
+  </person>
+  <person id="39d3970f-c9df-41d7-8738-3d0d6b1bf7c7" name="Jens Borken-Kleefeld" address="Austria" telephone="" telefax="" email="borken@iiasa.ac.at" companyId="5c2c844e-8a68-425d-b6aa-052564660e7c">
+    <companyName xml:lang="en">International Institute for Applied Systems Analysis</companyName>
+  </person>
+  <person id="1feb3028-8f86-49ba-96c9-6eec3ffc4229" name="Gabrielle van Durme" address="C.P. 6079, succ. Centre-Ville, H3C 3A7 Montreal, Canada" telephone="" telefax="" email="gabrielle.van-durme@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="52ab8e4f-bf71-4bf3-bdba-6113adff0f9e" name="Thomas Nemecek" address="Reckenholzstr.191, 8046 Zürich" telephone="0041 44 377 72 54" telefax="0041 44 377 72 01" email="art@ecoinvent.org" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
+    <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
+  </person>
+  <person id="f0da557a-bce4-401a-adba-894f06ead31b" name="Rainer Zah" address="Lerchenfeldstrasse 5, 9014 St. Gallen" telephone="0041 71 274 78 49" telefax="0041 71 274 78 62" email="empa@ecoinvent.org" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="c1e4ce1a-549f-4e15-9025-b49f5e334207" name="Shirley Fagnen" address="" telephone="" telefax="" email="shirley.fagnen@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="a55ea4cf-a20f-41b3-879d-504eb49639ee" name="Xavier Bengoa" address="EPFL Innovation Park, Bât D, 1015 Lausanne, Switzerland" telephone="+41216939193" telefax="[null]" email="xavier.bengoa@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="c0c866ac-ead0-4351-a0ea-6ff79da56c74" name="Amir Safaei" address="Technoparkstrasses , 8005 Zurich, Switzerland" telephone="" telefax="" email="safaei@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="739fa09d-503b-4d5f-bf9d-43376a0ff5b3" name="Mikkel Thrane" address="Denmark, Denmark" telephone="" telefax="" email="mikkel.thrane@danisco.com" companyId="6a55e2ca-c9e8-44ec-abbb-f3de306d8acc">
+    <companyName xml:lang="en">Danisco A/S</companyName>
+  </person>
+  <person id="3c07b849-2849-4526-9633-5c913867f299" name="trine henriksen" address="" telephone="" telefax="" email="trinehenriksen1@gmail.com" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="43cc2a96-adc1-4ca0-ad8d-941271e7d9eb" name="Thomas Kägi" address="Reckenholzstr.191, 8046 Zürich" telephone="0041 44 377 72 95" telefax="0041 44 377 72 01" email="art@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="2f75b50e-66d1-4869-9423-a2ec934570be" name="Aurélie Wilfart" address="France" email="Aurelie.Wilfart@rennes.inra.fr" companyId="6e5ab197-fef5-4a0a-a50c-5fe9d49e2cf4">
+    <companyName xml:lang="en">INRA</companyName>
+  </person>
+  <person id="227117a7-4335-43cd-b22d-7fd3461f4a92" name="Martin Kilga" address="Switzerland, Switzerland" telephone="" telefax="" email="martin.kilga@sinum.com" companyId="55f06a13-f32a-4a71-a512-acd6f5b54aa1">
+    <companyName xml:lang="en">Sinum AG</companyName>
+  </person>
+  <person id="a0d9a8b9-af8c-4e82-9c18-5d1d92c82338" name="Matthias Stucki (obsolete but e-mail OK)" address="" telephone="" telefax="" email="matthias.stucki@esu-services.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="72eb63a1-eb06-4ca6-9a99-08eab0d2d36d" name="Gregor Wernet" address="Switzerland" email="gregor.wernet@chem.ethz.ch" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="1b7d18d1-9d1a-4fbd-a965-89e0f2a8e8cd" name="Georg Geissler" address="ETH Hönggerberg, HCI, 8093 Zuerich" telephone="0041 44 632 09 75" telefax="0041 44 632 11 89" email="eth.s-u@ecoinvent.org" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="61cb2b57-0a48-4ec8-9bfe-5f5d28a8fa9f" name="Ana Passuello" address="Oswaldo Aranha 99 - 3 andar, 90035190 Porto Alegre, Brazil" telephone="+55 51 3308-3353" telefax="" email="anapaula.k@ufrgs.br" companyId="a8a9e6f2-ffc0-4fdf-9e70-b547be2966e0">
+    <companyName xml:lang="en">Universidade Federal do Rio Grande do Sul</companyName>
+  </person>
+  <person id="f7495ea8-83b8-4047-9da0-e9803f7e6425" name="Christopher Oberschelp" address="John-von-Neumann-Weg 9, 8083 Zurich, Switzerland" telephone="" telefax="" email="oberschelp@ifu.baug.ethz.ch" companyId="4df9d47a-5fbc-40f4-a534-b2edfb725b8e">
+    <companyName xml:lang="en">Ecological Systems Design, ETH Zürich (obsolete)</companyName>
+  </person>
+  <person id="6631bee9-6e0a-4bf0-954e-ccdfd7dafaa0" name="GreenDelta" address="Germany, 13349 Berlin, Germany" telephone="" telefax="" email="it@greendeltatc.com" companyId="652a0849-bdfa-4de5-87a4-a25564acebd7">
+    <companyName xml:lang="en">GreenDeltaTC</companyName>
+  </person>
+  <person id="cf8304ae-442a-4544-988a-cc1a68683b6c" name="Dhanesh Chandra" address="noida , 201307 Noida, India" telephone="" telefax="" email="ilcm@ficci.com. " companyId="f135ebe3-680b-4635-ad03-7b86773caf85">
+    <companyName xml:lang="en">FICCI Quality Forum</companyName>
+  </person>
+  <person id="43d43d56-7a5c-4ca4-a5c3-a9cc53e92a87" name="Jorrit Leijting" address="Printerweg 18, 3821 AD Amersfoort, Netherlands" telephone="" telefax="" email="leijting@pre.nl" companyId="d62f5701-e740-47ef-b76d-c92ffa2e8745">
+    <companyName xml:lang="en">PRé Consultants</companyName>
+  </person>
+  <person id="205021aa-948a-4821-af4f-c1ad8f8c8bd1" name="Ifu Test" address="Max Brauer Allee 2, 22222 Hamburg, Germany" telephone="" telefax="" email="technical-support@ecoinvent.org" companyId="0dafd880-5a70-4f92-b4d5-8eedc73cf898">
+    <companyName xml:lang="en">Institut für Umweltinformatik</companyName>
+  </person>
+  <person id="e8d6ebac-c6d1-4f98-b4db-6613e1520289" name="Gabor Doka" address="Stationsstr 32, 8003 Zurich, Switzerland" telephone="" telefax="" email="gabor@doka.ch" companyId="068c5950-c33b-4f82-9d38-97fcd67b14f8">
+    <companyName xml:lang="en">Doka Life Cycle Assessments</companyName>
+  </person>
+  <person id="6333253c-5fcc-4554-a238-a5ea58e549b6" name="Sander Hegger" address="Printerweg 18, 3821 AD Amersfoort " telephone="0031 33 455 50 22" telefax="0031 33 455 50 24" email="Support@pre.nl" companyId="d62f5701-e740-47ef-b76d-c92ffa2e8745">
+    <companyName xml:lang="en">PRé Consultants</companyName>
+  </person>
+  <person id="00c7a068-1730-48bf-a7b3-275340049de5" name="Frank Werner" address="Idaplatz 3, 8003 Zurich, Switzerland" telephone="" telefax="" email="frank@frankwerner.ch" companyId="10112009-bd5e-47e4-afb3-a568462ed08a">
+    <companyName xml:lang="en">Werner Umwelt &amp; Entwicklung</companyName>
+  </person>
+  <person id="cb542ecd-922e-425f-962c-398b3c6efc3a" name="Maggie Osses" address="Lerchenfeldstrasse 5, 9014 St. Gallen" telephone="0041 71 274 78 79" telefax="0041 71 274 78 62" email="empa@ecoinvent.org" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="c7feabf9-c594-4ad6-964a-46a881282f10" name="Katharina Meyer" address="Bitzistrasse 3, 9000 St.Gallen, Switzerland" telephone="078 828 30 90" telefax="" email="katharina.meyer@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="6c7accd1-b33a-4f55-bc6b-0b3e69c1f13d" name="Tina Künniger" address="Überlandstrasse 129, 8600 Dübendorf" telephone="0041 44 823 44 37" telefax="0041 44 823 40 07" email="empa@ecoinvent.org" companyId="bf9b2678-8335-48ca-a741-e63f4ab4a5e6">
+    <companyName xml:lang="en">Empa Dübendorf (obsolete)</companyName>
+  </person>
+  <person id="bba830ea-698b-4ee2-9e36-a2ecf6eafd6f" name="Filippo Sessa" email="sessa@studiolce.it" companyId="382ac484-3b32-4741-9d38-e906c971545b">
+    <companyName xml:lang="en">Life Cycle Engineering</companyName>
+  </person>
+  <person id="62bc659d-bd54-40ef-b53b-53401a6591fd" name="Hisko Baas" address="" telephone="+41 58 468 75 74" telefax="" email="hisko.baas@agroscope.admin.ch" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
+    <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
+  </person>
+  <person id="7a36237a-feca-4caf-b996-b45acae29474" name="Wolfram Scharnhorst" address="Ueberlandstrasse 129, 8600 Duebendorf" telephone="0041 44 823 4830" telefax="0041 44 823 4042" email="empa@ecoinvent.org" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="65af3b98-d01b-45e0-b1a3-09cd28d0331b" name="Alexis Lozano Medina" address="Culantrillo, 34 vda 11, 35212 Telde, Spain" telephone="precon2147" telefax="" email="alexis.lozano@ulpgc.es" companyId="e43ddfaf-bcc4-41d3-8f08-7eeb7e8e345a">
+    <companyName xml:lang="en">Universidad de Las Palmas de Gran Canaria</companyName>
+  </person>
+  <person id="baa322cd-d8c1-4256-bc17-0c93acb261f0" name="Russo" address="corner of Ring Road and South lane, 7708 Rondebosch, South Africa" telephone="" telefax="" email="v.russo@uct.ac.za" companyId="d2016da7-bbef-4059-ba1b-cdff2810e08f">
+    <companyName xml:lang="en">University of Cape Town</companyName>
+  </person>
+  <person id="50d9d3b9-313f-43bb-ba08-8a498d208034" name="Andrew Simons" address="Regenhaldenstr. 35, 3365 Grasswil, Switzerland" telephone="" telefax="" email="andrew.simons@3sp.ch" companyId="bcf5e989-b58d-4c42-9310-9ac9bcfd847e">
+    <companyName xml:lang="en">Simons Stotz &amp; Co. Sustainable Practices</companyName>
+  </person>
+  <person id="76d64cef-c356-4a6c-b5ce-bd5ac0fa4fb1" name="Enzi Claudia" address="5232" telephone="" telefax="„Disabled/Christian Bauer/11/09/14“ " email="claudia.enzi@psi.ch" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="c4597934-ecac-422c-b431-382e85fdcb83" name="[System]" email="support@ecoinvent.org" />
+  <person id="925f1d55-562e-4c1b-898f-28c334016c72" name="Silvio Blaser" address="Reckenholzstr.191, 8046 Zürich" telephone="0041 44 377 75 73" telefax="0041 44 377 72 01" email="art@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="a6fc9149-663c-4569-a80e-1efcd74ca2ba" name="im" address="" telephone="" telefax="" email="i.meinshausen@ifu.com" companyId="0dafd880-5a70-4f92-b4d5-8eedc73cf898">
+    <companyName xml:lang="en">Institut für Umweltinformatik</companyName>
+  </person>
+  <person id="f2f7629c-bae5-4362-bdd1-7b8747c10b8f" name="Harshita Soni" address="CII - Green Business Centre, Hyderabad" telephone="91-040-4418-5149" email="harshita.soni@cii.in" companyId="67aaeed4-6ef3-4766-b360-38fe7080d6eb">
+    <companyName xml:lang="en">CII Green Business Centre</companyName>
+  </person>
+  <person id="19b1e9a7-7870-4b27-b9d5-e25e074f378e" name="P V Kiran Ananth" address="CII Sohrabji Godrej Green Business Centre, Hyderabad - 500084 " email="kiran.ananth@cii.in" companyId="67aaeed4-6ef3-4766-b360-38fe7080d6eb">
+    <companyName xml:lang="en">CII Green Business Centre</companyName>
+  </person>
+  <person id="680ea8c4-332e-4183-9be3-6a56439e16f3" name="Gaia Lu" address="Rm.303A, Bldg.64, No.195, Sec 4, Chung Hsing Rd., Chutung, 31040 Hsinchu, Taiwan, Province of China" telephone="" telefax="" email="gaialu@itri.org.tw" companyId="dcd2eff2-639e-4d49-ba7f-9bd66f1174f6">
+    <companyName xml:lang="en">ITRI</companyName>
+  </person>
+  <person id="41f6c41a-42b0-4ecd-808d-0600bcfadb14" name="Dominic Notter" address="Überlandstrasse 129, 8600 Dübendorf" telephone="0041 44 823 47 60" email="empa@ecoinvent.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="b6146e9f-8b34-4a69-8c4c-4cd45c157c8f" name="Giovanna Chiumento" address="Santa Bernadethe, 81010200 Curitiba, Brazil" telephone="" telefax="" email="giovannachiumento@hotmail.com" companyId="4efaf62a-9844-4edd-803c-2bd2a4ad78c1">
+    <companyName xml:lang="en">Universidade Tecnológica Federal do Paraná</companyName>
+  </person>
+  <person id="43545e4b-5990-4a45-9a2b-52e85e7a7bdc" name="Friederike Ziegler" address="., . ., Sweden" telephone="" telefax="" email="Friederike.Ziegler@sik.se" companyId="09dce163-59db-422d-8623-f6aee7aa52b3">
+    <companyName xml:lang="en">SIK - Swedish Institute for Food and Biotechnology</companyName>
+  </person>
+  <person id="e0ebe843-ca7a-465b-9468-6ca9151bad90" name="Violaine Magaud" address="" telephone="+41 21 693 91 92" telefax="" email="violaine.magaud@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="a3b96a53-954b-4c46-bb2b-1f7a0c048bdb" name="Amon" address="Box 857, 50115 Boras, Sweden" telephone="" telefax="" email="francine.amon@sp.se" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="d5ef5759-87f1-4ab1-a090-9e14b3f6b1ee" name="Valentina Castellani" address="Enrico Fermi, 20127 Ispra, Italy" telephone="" telefax="" email="Valentina.CASTELLANI@ec.europa.eu" companyId="eb788a81-56ce-4187-9b41-c3d7154d1ed9">
+    <companyName xml:lang="en">Joint Research Centre</companyName>
+  </person>
+  <person id="674d5956-bdca-4606-9193-3f4ee2c4ab49" name="Katherine Matos" address="Universitaria 1801, lima 01 Lima, Peru" telephone="944899888" telefax="" email="k.matos@pucp.pe" />
+  <person id="fffe1db8-a402-4881-bfa2-c2b85ddef3a5" name="Eliane Riedener" address="" telephone=" +41 58 468 71 11" telefax="" email="eliane.riedener@agroscope.admin.ch" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
+    <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
+  </person>
+  <person id="24a052e7-6601-40ee-96d4-6aa083679a29" name="Gustavo Moraga" address="Osvaldo Aranha, 99 / NORIE, 90040-020 Porto Alegre, Brazil" telephone="+5551992499782" telefax="" email="g.longaray@gmail.com" companyId="a8a9e6f2-ffc0-4fdf-9e70-b547be2966e0">
+    <companyName xml:lang="en">Universidade Federal do Rio Grande do Sul</companyName>
+  </person>
+  <person id="61ec0829-9bd6-4288-8866-2cf16ff44ca2" name="Archana Datta" address="Federation House, Tansen Marg, 110001 Delhi, India" telephone="911123487211" telefax="911123320714" email="archana.datta@ficci.com" companyId="f6fa170b-ad1c-451c-ac9b-d0bb9052b320">
+    <companyName xml:lang="en">Federation of Indian Chambers of Commerce and Industry </companyName>
+  </person>
+  <person id="7d294b43-1017-4989-a6c4-58bc94ef2984" name="Roberto Dones" address="OVGA, 5232 Villigen PSI" telephone="0041 56 310 2007" telefax="0041 56 310 2199" email="psi@ecoinvent.org" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="339e3f45-2694-46aa-a14d-23e9923d7b3f" name="Achille-B. Laurent" address="Québec" email="achille-benjamin.laurent.1@ulaval.ca" companyId="1ed6172a-e261-420c-80c0-c08198664a4d">
+    <companyName xml:lang="en">CEGEP de St Felicien</companyName>
+  </person>
+  <person id="940b1299-bacb-490a-9f79-5690fea8c223" name="Arnaud Dauriat" address="ENERS Energy Concept, Case postale 56, 1015 Lausanne" telephone="0041 76 425 99 77" telefax="0041 21 693 28 63" email="arnaud.dauriat@eners.ch" companyId="4c8a9f72-24df-456c-80f3-c4297a2359a6">
+    <companyName xml:lang="en">ENERS Energy Concept</companyName>
+  </person>
+  <person id="3860cfbd-a932-45c0-90c7-658d5bea9ea3" name="Thomas Kägi" address="Postfach, 4002 Basel, Switzerland" telephone="" telefax="" email="t.kaegi@carbotech.ch" companyId="10aa5c2c-bf78-4737-b9a5-e9f3ad530b74">
+    <companyName xml:lang="en">Carbotech AG</companyName>
+  </person>
+  <person id="e2b24680-9cff-4af9-86f2-f9a97ec91fc6" name="Daniel Kellenberger (obsolete)" address="Talackerstrasse 28B, 8610 Uster" telephone="0041 43 466 93 64" email="daniel@tuch.ch" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="1fba8d25-6c39-48e5-9fe9-9f72f3ba4d89" name="Tuija Waldvogel" address="" telephone="+41 58 468 71 92" telefax="" email="tuija.waldvogel@agroscope.admin.ch" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
+    <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
+  </person>
+  <person id="e06b03d5-14bc-4255-9fc3-a67d55e6536c" name="Juha Matti Katajajuuri" address="...., .... ...., Finland" telephone="" telefax="" email="juha-matti.katajajuuri@mtt.fi" companyId="3f7bc4bb-4a28-4d34-b834-ac0a865e58bc">
+    <companyName xml:lang="en">MTT Agrifood Research</companyName>
+  </person>
+  <person id="597e66fe-84dd-42a9-91e5-686e48a81061" name="Bo Weidema" address="1, 1 1, Spain" telephone="" telefax="" email="bo@ilca.es" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="dd720a14-6e1f-499e-bc2a-c0e9c5a4f16a" name="Frédéric Gindroz" address="Überlandstrasse 129, 8600 Dübendorf, Switzerland" telephone="" telefax="" email="fgindroz@ethz.ch" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="33c7a67b-390d-4590-9beb-0f61ed24407e" name="Mateus Chagas" address="Rua Guigeppe Máximo Scolfaro, 10.000, 13083-970 Campinas, Brazil" telephone="+55 19 3517 5031" telefax="" email="mateusvarginha@gmail.com" companyId="b4ca531a-4036-4ee4-ab73-b30e52a55960">
+    <companyName xml:lang="en">Brazilian Center of Research in Energy and Materials</companyName>
+  </person>
+  <person id="e2d6e90a-4ffa-41d1-b2b5-65d68bd67955" name="Etienne LEES-PERASSO" address="170 rue de Chatagnon ZI Centr'Alp, 38340 Moirans, France" telephone="33 04 76 07 36 43" telefax="33 04 76 37 44 30" email="etienne.lees-perasso@fr.bureauveritas.com" companyId="46709dbd-8366-4af1-bbc8-4743ff47572d">
+    <companyName xml:lang="en">Bureau Veritas CODDE</companyName>
+  </person>
+  <person id="b78864b1-71cc-438c-adb0-eefb01e45c87" name="Florian Gschösser" address="Wolfgang-Pauli-Strasse 15, HIL F 27.3, 8093 Zurich, Switzerland" telephone="" telefax="" email="gschoesser@ibi.baug.ethz.ch" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="e1abe6c4-1214-4fff-b68b-bb34c7d0b7da" name="Michael Spielmann (obsolete)" address="ETH-Zentrum HAD, 8092 Zürich" telephone="0041 44 632 49 83" telefax="0041 44 632 10 29" email="eth.uns@ecoinvent.org" companyId="4df9d47a-5fbc-40f4-a534-b2edfb725b8e">
+    <companyName xml:lang="en">Ecological Systems Design, ETH Zürich (obsolete)</companyName>
+  </person>
+  <person id="87296ea5-2149-44c3-8e36-b1256c92666a" name="Gregor Wernet" address="Technoparkstrasse 1, 8005 Zürich, Switzerland" telephone="" telefax="" email="wernet@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="59b8233f-9241-4154-b55f-b9e818857d3d" name="Carine Grossrieder" address="E1-Høgskoleringen 5, 7491 Trondheim, Norway" telephone="0047.735.98.955" telefax="" email="carine.grossrieder@ntnu.no" companyId="3586fcf5-3eae-4a35-a395-92099f50ce3a">
+    <companyName xml:lang="en">Norwegian University of Science and Technology</companyName>
+  </person>
+  <person id="a025a249-57de-4c05-b865-c5133f7a943d" name="Maria Hecher" address="., . ., Switzerland" telephone="" telefax="„Disabled/Christian Bauer/11/09/14“ " email="maria.hecher@psi.ch" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="cafc6caa-02b0-4a1f-a7bf-63faef0f97de" name="Yannick Le Guern" address="France, France" telephone="" telefax="" email="yannick.leguern@biois.com" companyId="dc1bfe46-07ee-4da0-8360-77c1a9fd10f8">
+    <companyName xml:lang="en">Bio Intelligence Service</companyName>
+  </person>
+  <person id="3385ef50-7534-4ba8-b599-461d60eb7635" name="Nawshad Haque" address="Gate 1 Normanby Road, 3168 Clayton, Australia" telephone="" telefax="" email="Nawshad.Haque@csiro.au" companyId="d98e1d2f-ddca-4f30-9086-24f50e326a2b">
+    <companyName xml:lang="en">CSIRO</companyName>
+  </person>
+  <person id="9011fbce-fc4b-4755-890b-96728c23c4d3" name="Bo Weidema" address="Skibbrogade 5, 1, 9000  Aalborg, Denmark" telephone="" telefax="" email="bow@lca-net.com" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="1b11366d-47b7-40d4-b85d-7d7063b22209" name="Sofia Parada Tur" address="empa, 8600 empa, Switzerland" telephone="" telefax="" email="parada@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="7771deb8-4a40-4409-8bc4-df0882e8dde6" name="Niels Jungbluth" address="Margrit Rainer-Strasse 11c, 8050 Zürich, Switzerland" telephone="0449406132" telefax="" email="ecoinvent@esu-services.ch" companyId="47b248b7-d191-4e53-921b-8bfb4692ebef">
+    <companyName xml:lang="en">ESU-services</companyName>
+  </person>
+  <person id="f71dbb1a-b0e0-4c18-95b6-00d07492b33f" name="Annette Köhler" address="Switzerland" email="a.koehler@pe-international.com" companyId="e2541f85-6438-4040-8057-91e2f9090f89">
+    <companyName xml:lang="en">PE International</companyName>
+  </person>
+  <person id="6bd446ce-1cc4-4f80-b942-eb43808f5b39" name="Nydia Suppen Reynaga" address="Bosques de Bohemia 2 No.9, Bosques del Lago, Cuautitlan Izcalli, 54766 Estado de México, Mexico" telephone="+525526029694" telefax="" email="nsuppen@centroacv.com.mx" companyId="58f6bcab-f960-420d-8c21-31fea7e8bf2b">
+    <companyName xml:lang="en">Center for LCA and Sustainable Design</companyName>
+  </person>
+  <person id="418dccaf-e72b-44bb-a7ba-06f8e0d6487e" name="Marcial Vargas" address="" telephone="+33 9 63 23 04 67" telefax="" email="marcial.vargas@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="9401e975-96cc-4917-8286-eb26d0a6125b" name="Philpp Thalmann" address="Leutholdstrasse 12, CH-8037 Zürich" telephone="0041 1 440 72 11" telefax="0041 1 440 72 13" email="philipp.thalmann@raumlufthygiene.ch" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="eb535839-8520-4498-ad6c-371a41f13bef" name="Ilhaam Patel" address="70 Rosmead Avenue Kenilworth, 7780 Cape Town, South Africa" telephone="0216712161" telefax="" email="ilhaam@tgh.co.za" companyId="8ae66377-73b6-4a64-abe6-129d7a52c718">
+    <companyName xml:lang="en">The Green House</companyName>
+  </person>
+  <person id="157cf758-899d-48c3-9cec-96082aa3c658" name="Catherine Reid" address="C.P. 6079, succ. Centre-ville, H3C 3A7 Montréal, Canada" telephone="" telefax="" email="catherine-2.reid@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="3323767e-fc23-40bd-9d80-d9ee04a6fb35" name="Enrico Benetto" address="29 av. JF Kennedy, 1855 Luxembourg-Kirchberg, Luxembourg" telephone="" telefax="" email="enrico.benetto@list.lu" companyId="0ff3fe4d-c614-4eb5-a756-5768b5f7262f">
+    <companyName xml:lang="en">Centre de Ressources des Technologies pour l'Environnement, CRP Henri Tudor</companyName>
+  </person>
+  <person id="330df524-e5a6-46a1-8d92-2e14415a04f6" name="Christopher Mutel" address="Switzerland" telephone="" telefax="" email="cmutel@gmail.com" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="daa0c503-6952-4702-a3c0-b475e34ad15f" name="Eric Johnson" address="Obstgartenstrasse 14" telephone="+41 44 772 1079" email="ejohnson@ecosite.co.uk" companyId="58969e52-c68d-4a90-8334-e69a5672fe30">
+    <companyName xml:lang="en">Atlantic Consulting</companyName>
+  </person>
+  <person id="7c3b694a-24fa-41b8-b34c-5021d4fb0362" name="Jannick H. Schmidt" address="., . ., Denmark" telephone="" telefax="" email="js@lca-net.com" companyId="a7712b38-b404-4020-b484-eb40c0624a82">
+    <companyName xml:lang="en">2.-0 LCA consultants</companyName>
+  </person>
+  <person id="f2bb9b6d-0f7b-47dc-ac26-8bda20f91ff3" name="Christian Bauer" address="Switzerland, 5232 Villigen, Switzerland" telephone="" telefax="" email="christian.bauer@psi.ch" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="28a981b7-f331-4ae8-b76b-1f20e68ee737" name="Cirilo" address="Teodoro de Beaurepaire, 04279030 São Paulo, Brazil" telephone="" telefax="" email="fabio.cirilo@basf.com" companyId="d150e0aa-cd0e-4e9b-81c0-c7368517534a">
+    <companyName xml:lang="en">Fundação Espaço Eco</companyName>
+  </person>
+  <person id="0223069a-b3cb-475c-84a2-2e0a9eaaeb07" name="Alba Canovas Creus" address="" telephone="" telefax="" email="alba.canovas@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="df294a6d-3fed-4c6e-8482-bf45ea65c9d0" name="Andrea Del Duce" address="x, x x, Switzerland" telephone="" telefax="" email="andrea.delduce@quantis-intl.com" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="c75786e1-4f99-4021-94f3-3c57b16ea0b1" name="Simon Gmünder" email="simon.gmuender@gmail.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="2627a3ea-6f73-4824-bc88-a56d463a929e" name="M. Gauch" address="Life Cycle Assessment and Modelling Group" email="marcel.gauch@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="1b10cab2-2384-45ca-93e8-db47450e3394" name="Cornelia Stettler" address="Carbotech, Eulerstrasse 68, 4051 Basel" telephone="0041 61 206 95 33" telefax="0041 61 206 95 26" email="c.stettler@carbotech.ch" companyId="10aa5c2c-bf78-4737-b9a5-e9f3ad530b74">
+    <companyName xml:lang="en">Carbotech AG</companyName>
+  </person>
+  <person id="41bd135e-11be-43ad-9530-6f1309a3764c" name="Marcial Vargas-Gonzalez" address="42 boulevard Sébastopol, 75003 Paris, France" telephone="+33 9 63 23 04 67" telefax="" email="marcial.vargas-gonzalez@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="b96d0acc-8482-4c83-8be5-f00a58b8925f" name="Stephan Pfister" address="Switzerland" telephone="" telefax="" email="stephan.pfister@ifu.baug.ethz.ch" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="720873f7-5a35-4425-a5d7-ebebca7c3e22" name="Anette Köhler (obsolete)" address="ETH Hönggerberg, HCI, 8093 Zuerich" telephone="0041 44 633 44 87" telefax="0041 44 632 11 89" email="eth.s-u@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="f48a446f-c675-4da4-a835-637f2eb8250f" name="Jens Lansche" address="Reckenholzstr. 191, 8046 Zurich, Switzerland" telephone="+41 44 377 7157" telefax="+41 44 377 72 01 " email="jens.lansche@art.admin.ch" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
+    <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
+  </person>
+  <person id="e4de3332-2c72-47a8-a50b-c9e42f5e251d" name="Pascal Lesage" address="Canada, Canada" telephone="" telefax="" email="pascal.lesage@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="b4ec49df-e656-49e0-aa03-b672213f0cf6" name="Chris Goemans" address="119 Ross Avenue, K1Y 0N6 Ottawa, Canada" telephone="1-613-729-9996" telefax="1-613-729-9997" email="chris.goemans@athenasmi.org" companyId="12b0857b-7a23-418d-960b-3c0bfffc11d7">
+    <companyName xml:lang="en">Athena Sustainable Materials Institute</companyName>
+  </person>
+  <person id="27d0c610-bd9a-4cb3-9489-b163f991b69e" name="workshop_participant" address="Technoparkstrasse 1, 8005 Zurich, Switzerland" telephone="" telefax="" email="support@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="b1044326-7336-48b3-a7aa-73b2bced8a95" name="Anne Landfield Greig" email="anne@fourelementsllc.com" companyId="54b5cd68-ce23-4c09-8fa2-a7922f348785">
+    <companyName xml:lang="en">Four Elements Consulting, LLC</companyName>
+  </person>
+  <person id="15be7cb7-28ff-42a7-af00-0ec8e669b0d3" name="Stefanie Hellweg" address="ETH Hönggerberg, HCI, 8093 Zuerich" telephone="0041 44 633 43 37" telefax="0041 44 632 11 89" email="eth.s-u@ecoinvent.org" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="727fb9f1-2fcc-4ab4-b82e-1ae10170c792" name="David Nerjes" address="MBA 50, 22765 Hamburg, Germany" telephone="" telefax="" email="d.nerjes@ifu.com" companyId="0dafd880-5a70-4f92-b4d5-8eedc73cf898">
+    <companyName xml:lang="en">Institut für Umweltinformatik</companyName>
+  </person>
+  <person id="467977f9-f45b-49c5-9450-539ef68fa283" name="Jean-Baptiste Bayart" address="France, . ., France" telephone="" telefax="" email="Jean-Baptiste.BAYART@veolia.com" companyId="ec912006-a30a-43e6-92fa-83954da09492">
+    <companyName xml:lang="en">Veolia</companyName>
+  </person>
+  <person id="3f4f5ddb-8201-4b95-ab81-223282a3f990" name="Ruth Freiermuth Knuchel" address="., . ., Switzerland" telephone="" telefax="" email="ruth.freiermuth@art.admin.ch" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
+    <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
+  </person>
+  <person id="81981f75-d673-499e-a20c-48ec485fe97c" name="Angel Avadí" address="Avenue Agropolis, TA B-78/01, 34398 Montpellier cédex 5, France" telephone="+33 4 67 61 59 67" email="angel.avadi@cirad.fr" companyId="8b5d0b44-0b93-4882-a511-3717c8c5bb6f">
+    <companyName xml:lang="en">Centre de coopération Internationale en Recherche Agronomique pour le Développement</companyName>
+  </person>
+  <person id="9d276fa9-83c2-4b60-9bc7-596c0f17650f" name="Jean-Francois Menard" address="" telephone="" telefax="" email="jean-francois.menard@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  </person>
+  <person id="3901f510-8e3e-42da-b812-eed99f6aa894" name="Bernhard Steubing" address="Schafmattstr. 6, 8093 Zürich, Switzerland" telephone="" telefax="" email="steubing.bernhard@gmail.com" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="461cfa8e-6a35-4f4b-9474-ff7880b93300" name="Djibril René" email="rene@eaa.be" companyId="09bd74d8-4647-43c7-8824-e9a0ff75367a">
+    <companyName xml:lang="en">European Aluminium Association</companyName>
+  </person>
+  <person id="023a09e1-71e0-4572-98dc-0e1779ab0c50" name="Xiaojin Zhang" address="OHSA/D17, 5232 Villigen, Switzerland" telephone="" telefax="" email="xiaojin.zhang@psi.ch" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="6c79bd02-63ca-4f63-9a1c-5ba5fc9a9bff" name="Sebastian Rüter" address="Germany" email="sebastian.rueter@vti.bund.de" companyId="7233e523-7005-43e5-afcb-ea507b8cca18">
+    <companyName xml:lang="en">Johann Heinrich von Thünen Institut</companyName>
+  </person>
+  <person id="a787c9ff-7ff8-4c7e-ab4a-e6699fd487e3" name="Damien Giurco" address="15 Broadway, Ultimo, NSW 2007 Sydney, Australia" telephone="" telefax="" email="damien.giurco@uts.edu.au" companyId="21911f8c-77c0-449d-9651-7e4d4935f871">
+    <companyName xml:lang="en">University of Technology Sydney</companyName>
+  </person>
+  <person id="81f775a2-be91-48fa-bdff-d0435178a472" name="Caroline Wildbolz" address="Sternenstrasse 12" telephone="044 500 43 50" telefax="044 500 43 51" email="caroline.wildbolz@myclimate.org" companyId="3e3bd3c4-4d55-4ed8-8142-58ec81f948cc">
+    <companyName xml:lang="en">Stiftung myclimate - The Climate Protection Partnership</companyName>
+  </person>
+  <person id="1dcc665d-e779-46d0-b354-87b56e4f5f25" name="Andrea Del Duce" address="Life Cycle Assessment and Modelling Group" email="andrea.delduce@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="66109d31-fb99-4a5f-aedd-5424b4a57ebc" name="Ivan Muñoz Ortiz" address="., . Barcelona, Spain" telephone="" telefax="" email=" im@lca-net.com" companyId="a7712b38-b404-4020-b484-eb40c0624a82">
+    <companyName xml:lang="en">2.-0 LCA consultants</companyName>
+  </person>
+  <person id="55b093c6-58f6-4adf-8dcd-91bce8c4bdc7" name="Rolf Frischknecht" address="Margrit-Rainer-Str. 11c, 8050 Zurich, Switzerland" telephone="0041 44 940 61 91" telefax="0041 44 544 57 94" email="esu-services@ecoinvent.org" companyId="47b248b7-d191-4e53-921b-8bfb4692ebef">
+    <companyName xml:lang="en">ESU-services</companyName>
+  </person>
+  <person id="4fa3439d-a0d2-4eb8-9492-bf55d56fa076" name="François Charron" address="Canada" telephone="" telefax="" email="francois.charron@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="6d6177e6-c6ae-4757-82fe-7410924208ad" name="Martina Alig" address="Reckenholzstrasse 191; 8046 Zürich" telephone="044 377 71 71" telefax="" email="martina.alig@art.admin.ch" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
+    <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
+  </person>
+  <person id="2e635ac3-1634-43b9-814b-6aa753d87fac" name="Edwin Zea Escamilla" address="" telephone="" telefax="" email="zea@ibi.baug.ethz.ch" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="02051bd1-9c60-4437-9aa5-6b4de2b6a94b" name="Rolf Frischknecht" address="Switzerland, 8610 Uster, Switzerland" telephone="044 940 61 91" telefax="044 940 61 94" email="frischknecht@treeze.ch" companyId="4cc03c52-145e-403d-aa84-22d6cb5e15e4">
+    <companyName xml:lang="en">treeze</companyName>
+  </person>
+  <person id="d05172ed-3f6d-483f-b075-24d4ec6deeb2" name="Manuele Margni (obsolete)" address="EPFL-ENAC-GECOS, 1015 Lausanne" telephone="0041 21 693 3729" telefax="0041 21 693 5760" email="epfl@ecoinvent.org" companyId="950fd121-d3a7-40dd-8f18-84c4f7e5cf71">
+    <companyName xml:lang="en">Ecole Polytechnique Federale de Lausanne</companyName>
+  </person>
+  <person id="ac2c911d-b460-4156-bbd0-ddcea87b0e43" name="Leticia De Santi Barrantes" address="Technoparkstrasse 1, 8005 Zurich, Switzerland" telephone="" telefax="" email="leticia.desantib@gmail.com" companyId="4efaf62a-9844-4edd-803c-2bd2a4ad78c1">
+    <companyName xml:lang="en">Universidade Tecnológica Federal do Paraná</companyName>
+  </person>
+  <person id="16a59585-3379-48c1-bfcb-705137fef7a2" name="Natascha Kljun" address="INFRAS, Muehlemattstrasse 45, 3007 Bern" telephone="0041 31 370 19 14" telefax="0041 31 370 19 10" email="natascha.kljun@infras.ch" companyId="13e92627-0323-4a5b-8ea0-ef5497f5ec1d">
+    <companyName xml:lang="en">Infras</companyName>
+  </person>
+  <person id="9666ced4-9b2d-4c93-b8c3-e3e527ee77eb" name="Jorrit Leijting" address="Printerweg 18, 3821 AD Amersfoort " telephone="0031 33 455 50 22" telefax="0031 33 455 50 24" email="Support@pre.nl" companyId="d62f5701-e740-47ef-b76d-c92ffa2e8745">
+    <companyName xml:lang="en">PRé Consultants</companyName>
+  </person>
+  <person id="7c85babd-8225-40c6-9b1c-140550ace17b" name="David Cornell" address="USA" telephone="" telefax="" email="dcornell@usit.net" companyId="00c0dbac-3979-466f-a799-a677838619ba">
+    <companyName xml:lang="en">Association of Postconsumer Plastic Recyclers</companyName>
+  </person>
+  <person id="1091dd5e-992d-48bc-b971-596433993bff" name="Stefanie Hellweg" address="ETH Hönggerberg, HIL, 8093 Zuerich" telephone="0041 44 633 43 37" telefax="0041 44 633 10 61" email="eth.esd@ecoinvent.org" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="b4acbc68-0edc-47c7-8ada-6520926d28d5" name="Philippe Stolz" address="Kanzleistrasse 4, 8610 Uster" telephone="0041 44 940 61 93" telefax="0041 44 544 57 94" email="stolz@treeze.ch" companyId="4cc03c52-145e-403d-aa84-22d6cb5e15e4">
+    <companyName xml:lang="en">treeze</companyName>
+  </person>
+  <person id="7418f45d-28aa-4080-a813-e4d599fc8f2d" name="Gregor Wernet" address="1, 1 1, Switzerland" telephone="" telefax="" email="gregor.wernet@empa.ch" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="7e22251a-fc46-4607-b32a-59b86ccd9577" name="Helen Ann Hamilton" address="" telephone="" telefax="" email="helen.hamilton62@gmail.com" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="1b9c6401-ddeb-4ce8-9c57-21664fbc3e90" name="Annelore Kleijer" address="HEIG-VD , IGT, LESBAT, 1400 Yverdon-les-Bains" telephone="0041 24 557 63 53" telefax="0041 24 557 75 79" email="annelore.kleijer@heig-vd.ch" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="0486b102-bfbc-4ba1-8e7d-0f72255b3caf" name="Viachaslau Filimonau" address="Fern Barrow, BH12 5BB Bournemouth, United Kingdom" telephone="" telefax="" email="vfilimonau@bournemouth.ac.uk" companyId="6d914590-e54c-4d9f-ad9d-1d63d060214a">
+    <companyName xml:lang="en">Bournemouth University</companyName>
+  </person>
+  <person id="09c3557a-1cb4-4c5a-8fdc-299b275c9c12" name="Rita Bolliger" address="OVGA, 5232 Villigen PSI" telephone="0041 56 310 2007" telefax="0041 56 310 2199" email="psi@ecoinvent.org" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
+    <companyName xml:lang="en">Paul Scherrer Institute</companyName>
+  </person>
+  <person id="4a2beadf-855e-43fe-86d6-7cad1d7a8576" name="Sanjeevan Bajaj" address="Tansen Marg, 110001 New Delhi, India" telephone="" telefax="" email="s.bajaj@ficci.com" companyId="f6fa170b-ad1c-451c-ac9b-d0bb9052b320">
+    <companyName xml:lang="en">Federation of Indian Chambers of Commerce and Industry </companyName>
+  </person>
+  <person id="ecf24deb-3740-42ed-8254-7de6868736e9" name="Djibril RENE" address="12 avenue de Broqueville, 1150 Brussels, Belgium" telephone="" telefax="" email="rene@eaa.be" companyId="09bd74d8-4647-43c7-8824-e9a0ff75367a">
+    <companyName xml:lang="en">European Aluminium Association</companyName>
+  </person>
+  <person id="c5cc9aef-e28e-4f21-b5b5-6cda1d46a3cb" name="Ian Vázquez-Rowe" address="Avenida Universitaria 1801 San Miguel 15088 Lima" telephone="+51947214811" email="ian.vazquez@pucp.pe" companyId="8ac2dbe0-5308-43f0-8ed8-eafe78776b13">
+    <companyName xml:lang="en">Pontificia Universidad Católica del Perú</companyName>
+  </person>
+  <person id="2cef9fc5-f86d-49c1-9bdd-3fbe1d988b53" name="Miguel F. Astudillo" address="2500, boul. de l'Université, J1K 2R1 Sherbrooke, Canada" telephone="0018195805872" telefax="" email="miguel@astudillo.com" companyId="3ea11cdd-b60c-474a-9b96-f53a1dea9135">
+    <companyName xml:lang="en">University of Sherbrooke</companyName>
+  </person>
+  <person id="42ab17b2-379f-45db-9ea1-5e43393293db" name="Medeiros Diego Lima" address="" telephone="" telefax="" email="Diego.Medeiros@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="210ee764-ea57-478e-a0f7-9dab5bb4f767" name="Fabienne Habermacher" email="fabienne@empa" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  </person>
+  <person id="8bbb08d2-d40a-4a8f-beca-838e21ea3dca" name="Niko Heeren" address="Schafmattstr. 6, 8093 Zürich, Switzerland" telephone="044 633 49 92" telefax="" email="nheeren@ethz.ch" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
+    <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="146b9724-969b-4397-91f1-fe8d49a47559" name="Jade Müller Carneiro" email="jademullerc@gmail.com" companyId="b253062c-19e5-412b-be98-75a2f0f78b98">
+    <companyName xml:lang="en">Embrapa - Agroindustria Tropical</companyName>
+  </person>
+  <person id="555f4a57-e063-4c4b-8f39-f0c9032d13dc" name="Michael Boesch (obsolete)" address="ETH Hönggerberg, HIF, 8093 Zuerich" telephone="0041 44 633 61 08" telefax="0041 44 633 10 61" email="eth.esd@ecoinvent.org" companyId="4df9d47a-5fbc-40f4-a534-b2edfb725b8e">
+    <companyName xml:lang="en">Ecological Systems Design, ETH Zürich (obsolete)</companyName>
+  </person>
+  <person id="0bdd7d40-7663-41b6-b182-be1626270408" name="trainee ecoinvent" address="Ueberlandstrasse 129, 8600 Duebendorf, Switzerland" telephone="" telefax="" email="emilia.moreno@empa.ch" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="35d1edf5-ec28-46e2-bdf5-a2661eb61435" name="Carl Vadenbo" address="Technoparkstrasse 1, 8005 Zürich, Switzerland" telephone="" telefax="" email="vadenbo@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="8a0ca22d-27ea-4ad7-afdb-d2a62c626951" name="Reinout Heijungs" address="The Netherlands" email="Heijungs@cml.leidenuniv.nl" companyId="c06a0d84-3d1b-4955-b635-069acb9fb9ab">
+    <companyName xml:lang="en">Universiteit Leiden</companyName>
+  </person>
+  <person id="e0bec437-217c-4e23-a627-a5ef239fe1a1" name="Jeroen Guinée" address="The Netherlands" email="guinee@cml.leidenuniv.nl" companyId="c06a0d84-3d1b-4955-b635-069acb9fb9ab">
+    <companyName xml:lang="en">Universiteit Leiden</companyName>
+  </person>
+</validPersons>

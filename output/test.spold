@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ecoSpold xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <activityDataset>
+    <activityDescription>
+	  <activity id="4bcdefa3-7ced-5138-8800-b51d533f9843" 
+	  activityNameId="f2810466-9dde-581e-be28-7d06e9038d88" 
+	  inheritanceDepth="0" 
+	  type="1" 
+	  specialActivityType="0" 
+>
+        <activityName xml:lang="en">treatment of wastewater, from dinosaur zoo</activityName>
+		<synonym xml:lang="en">Jurassic Park</synonym>
+		<synonym xml:lang="en">waste water treatment</synonym>
+		<synonym xml:lang="en">WWT</synonym>
+        <includedActivitiesStart xml:lang="en">Treatment of waste water, collected from dinosaur cages.</includedActivitiesStart>
+        <includedActivitiesEnd xml:lang="en">Includes the production of sludge.  </includedActivitiesEnd>
+		<allocationComment>
+        	  <text xml:lang="en" index="1">allocationComment0</text>
+	  <text xml:lang="en" index="2">allocationComment1</text>
+	  <text xml:lang="en" index="3">allocationComment2</text>
+
+    	</allocationComment>
+		<generalComment>
+        	  <text xml:lang="en" index="1">generalComment0</text>
+	  <text xml:lang="en" index="2">generalComment1</text>
+	  <text xml:lang="en" index="3">generalComment2</text>
+
+		</generalComment>
+      </activity>
+	  <classification classificationId="a84d0ee4-d77c-4905-b876-3ef60873c763">
+        <classificationSystem xml:lang="en">ISIC rev.4 ecoinvent</classificationSystem>
+        <classificationValue xml:lang="en">3700:Sewerage</classificationValue>
+      </classification>
+      <geography geographyId="34dbbff8-88ce-11de-ad60-0019e336be3a" 
+>
+        <shortname xml:lang="en">GLO</shortname>
+		<comment>
+        	  <text xml:lang="en" index="1">geographyComment0</text>
+	  <text xml:lang="en" index="2">geographyComment1</text>
+	  <text xml:lang="en" index="3">geographyComment2</text>
+
+		</comment>
+      </geography>
+      <technology  technologyLevel="3">
+		<comment>
+        	  <text xml:lang="en" index="1">technologyComment0</text>
+	  <text xml:lang="en" index="2">technologyComment1</text>
+	  <text xml:lang="en" index="3">technologyComment2</text>
+
+		</comment>
+      </technology>
+      <timePeriod startDate="2014-01-01" endDate="2015-12-31" isDataValidForEntirePeriod="true">
+		<comment>
+        	  <text xml:lang="en" index="1">timePeriodComment0</text>
+	  <text xml:lang="en" index="2">timePeriodComment1</text>
+	  <text xml:lang="en" index="3">timePeriodComment2</text>
+
+		</comment>
+	  </timePeriod>
+	  <macroEconomicScenario macroEconomicScenarioId="d9f57f0a-a01f-42eb-a57b-8f18d6635801"
+>
+        <name xml:lang="en">Business-as-Usual</name>
+      </macroEconomicScenario>
+    </activityDescription>
+	<flowData>
+	<intermediateExchange id="c1c72812-fade-5106-9437-b16f96e9b012" 
+	  unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5" 
+	  amount="-1.0" 
+intermediateExchangeId="07a312f3-4531-51fc-91df-ac6e1c634489" productionVolumeAmount="20000.0" 	  >
+        <name xml:lang="en">wastewater, from dinosaur zoo</name>
+        <unitName xml:lang="en">m3</unitName>
+		<comment xml:lang="en">exchange comment</comment>		
+		<property 
+		propertyId ="d8364dfc-5753-4585-bf50-4d42b126f72d" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.002" 		>
+          <name xml:lang="en">iron content</name>
+<unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.002" mu="-6.21460809842" variance="0.006" varianceWithPedigreeUncertainty="0.0501" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="5" 
+				furtherTechnologyCorrelation="4"/>
+			
+        </uncertainty>
+		
+        <comment xml:lang="en">iron comment</comment>
+        </property>		<property 
+		propertyId ="2bc683e4-3780-4f00-8c1d-fd53e05cfde7" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.001" 		>
+          <name xml:lang="en">manganese content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">manganese comment</comment>
+        </property>		<property 
+		propertyId ="30f0aa15-2d50-4f09-af94-683b6dd68adc" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.004" 		>
+          <name xml:lang="en">arsenic content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">arseinc comment</comment>
+        </property>		<property 
+		propertyId ="66e996b5-5f7b-449f-8893-0b787af21d7e" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.005" 		>
+          <name xml:lang="en">cobalt content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">cobalt comment</comment>
+        </property>		<productionVolumeComment xml:lang="en">production volume comment</productionVolumeComment>
+        <productionVolumeUncertainty>
+            <lognormal 
+meanValue="20000.0" mu="9.90348755254" variance="0.003" varianceWithPedigreeUncertainty="0.0031" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+			
+        </productionVolumeUncertainty>
+		
+	  <outputGroup>0</outputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="926f4aff-a45b-52d4-ac3a-f74cbdd9094b" 
+	  unitId="487df68b-4994-4027-8fdc-a4dc298257b7" 
+	  amount="0.4" 
+intermediateExchangeId="d12737a8-b6ed-5c88-a1ed-b3aa3f67a065" productionVolumeAmount="8000.0" 	  >
+        <name xml:lang="en">sludge from dinosaur zoo</name>
+        <unitName xml:lang="en">kg</unitName>
+		<comment xml:lang="en">exchange comment</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="0.4" mu="-0.916290731874" variance="0.005" varianceWithPedigreeUncertainty="0.1251" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="5"/>
+			
+        </uncertainty>
+		
+		<property 
+		propertyId ="d8364dfc-5753-4585-bf50-4d42b126f72d" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.002" 		>
+          <name xml:lang="en">iron content</name>
+<unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.002" mu="-6.21460809842" variance="0.006" varianceWithPedigreeUncertainty="0.0501" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="5" 
+				furtherTechnologyCorrelation="4"/>
+			
+        </uncertainty>
+		
+        <comment xml:lang="en">iron comment</comment>
+        </property>		<property 
+		propertyId ="2bc683e4-3780-4f00-8c1d-fd53e05cfde7" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.001" 		>
+          <name xml:lang="en">manganese content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">manganese comment</comment>
+        </property>		<property 
+		propertyId ="30f0aa15-2d50-4f09-af94-683b6dd68adc" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.004" 		>
+          <name xml:lang="en">arsenic content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">arseinc comment</comment>
+        </property>		<property 
+		propertyId ="66e996b5-5f7b-449f-8893-0b787af21d7e" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.005" 		>
+          <name xml:lang="en">cobalt content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">cobalt comment</comment>
+        </property>		<productionVolumeComment xml:lang="en">production volume comment</productionVolumeComment>
+	  <outputGroup>2</outputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="141d194b-9a76-5ff8-89dd-607b3c2f255a" 
+	  unitId="77ae64fa-7e74-4252-9c3b-889c1cd20bfc" 
+	  amount="2.3" 
+intermediateExchangeId="759b89bd-3aa6-42ad-b767-5bb9ef5d331d" 	  >
+        <name xml:lang="en">electricity, medium voltage</name>
+        <unitName xml:lang="en">kWh</unitName>
+		<comment xml:lang="en">exchange comment</comment>		
+		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         </property>		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         </property>	  <inputGroup>5</inputGroup>
+    </intermediateExchange>
+		<elementaryExchange id="4f8620e2-2fdd-55b9-b997-4f46f92fb7c9" 
+	  unitId="487df68b-4994-4027-8fdc-a4dc298257b7" 
+	  amount="0.002" 
+elementaryExchangeId="af01e564-f816-4906-bd4f-b7c932f926b9" 	  >
+        <name xml:lang="en">Oxygen</name>
+        <unitName xml:lang="en">kg</unitName>
+		<comment xml:lang="en">exchange comment</comment>		
+		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         </property>		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         </property>		<compartment subcompartmentId="45bb416c-a63b-429f-8754-b3f76a069c43">
+          <compartment xml:lang="en">natural resource</compartment>
+          <subcompartment xml:lang="en">in air</subcompartment>
+        </compartment>
+	  <inputGroup>4</inputGroup>
+    </elementaryExchange>
+		<elementaryExchange id="a8480d47-bb24-5c5f-b5f2-5462b0d02203" 
+	  unitId="487df68b-4994-4027-8fdc-a4dc298257b7" 
+	  amount="0.02" 
+elementaryExchangeId="349b29d1-3e58-4c66-98b9-9d1a076efd2e" 	  >
+        <name xml:lang="en">Carbon dioxide, fossil</name>
+        <unitName xml:lang="en">kg</unitName>
+		<comment xml:lang="en">exchange comment</comment>		
+		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         </property>		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         </property>		<compartment subcompartmentId="7011f0aa-f5f9-4901-8c10-884ad8296812">
+          <compartment xml:lang="en">air</compartment>
+          <subcompartment xml:lang="en">unspecified</subcompartment>
+        </compartment>
+	  <outputGroup>4</outputGroup>
+    </elementaryExchange>
+		</flowData>
+	<modellingAndValidation>
+      <representativeness 
+	  systemModelId="8b738ea0-f89e-4627-8679-433616064e82"
+	  >
+        <systemModelName xml:lang="en">Undefined</systemModelName>
+        <samplingProcedure xml:lang="en">sampling procedure comment here</samplingProcedure>
+        <extrapolations xml:lang="en">extrapolations comment here</extrapolations>
+      </representativeness>
+    </modellingAndValidation>
+	<administrativeInformation>
+	<dataEntryBy personId="788d0176-a69c-4de0-a5d3-259866b6b100" isActiveAuthor="false" personName="[Current User]" personEmail="no@email.com"/>
+      
+	<dataGeneratorAndPublication 
+	  personId="e4de3332-2c72-47a8-a50b-c9e42f5e251d" 
+	  personName="Pascal Lesage" 
+	  personEmail="pascal.lesage@polymtl.ca" 
+	  isCopyrightProtected="true" 
+accessRestrictedTo="1" 	  />
+	  
+	<fileAttributes 
+	  majorRelease="3" 
+	  minorRelease="4" 
+	  majorRevision="0" 
+	  minorRevision="1" 
+defaultLanguage="en" 	  >
+      </fileAttributes>
+	</administrativeInformation>
+  </activityDataset>
+	
+<usedUserMasterData xmlns="http://www.EcoInvent.org/UsedUserMasterData">
+	<activityName id="f2810466-9dde-581e-be28-7d06e9038d88">
+    <name xml:lang="en">treatment of wastewater, from dinosaur zoo</name>
+  	</activityName>
+	<intermediateExchange id="07a312f3-4531-51fc-91df-ac6e1c634489" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">wastewater, from dinosaur zoo</name>
+    <unitName xml:lang="en">m3</unitName>
+    <productInformation/>
+  </intermediateExchange>
+	<intermediateExchange id="d12737a8-b6ed-5c88-a1ed-b3aa3f67a065" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">sludge from dinosaur zoo</name>
+    <unitName xml:lang="en">kg</unitName>
+    <productInformation/>
+  </intermediateExchange>
+	<intermediateExchange id="fffcaf9f-7932-5af5-98a6-0c03932f87b6" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">Oxygen</name>
+    <unitName xml:lang="en">kg</unitName>
+    <productInformation/>
+  </intermediateExchange>
+	<intermediateExchange id="71b69965-ecc9-5204-a00d-b9c40c134291" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">Carbon dioxide, fossil</name>
+    <unitName xml:lang="en">kg</unitName>
+    <productInformation/>
+  </intermediateExchange>
+	<activityIndexEntry id="4bcdefa3-7ced-5138-8800-b51d533f9843" activityNameId="f2810466-9dde-581e-be28-7d06e9038d88" geographyId="34dbbff8-88ce-11de-ad60-0019e336be3a" startDate="2014-01-01" endDate="2015-12-31" specialActivityType="0" systemModelId="8b738ea0-f89e-4627-8679-433616064e82" />
+</usedUserMasterData>
+</ecoSpold>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The contents of this file are subject to the EcoSpold Public License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.ecoinvent.ch.
+Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.
+The Original Code consists of the EcoSpold data format and EcoSpold Access.
+The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
+-->
+<validCompartments majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="90" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <contextName xml:lang="en">ecoinvent</contextName>
+  <compartment id="269f1973-46b4-4092-aaa7-36b5b8eb7b3e">
+    <name xml:lang="en">soil</name>
+    <subcompartment id="dbeb0ac7-0dec-439e-887a-9924cc8005dd">
+      <name xml:lang="en">unspecified</name>
+      <comment xml:lang="en">Only used if no specific information available.</comment>
+    </subcompartment>
+    <subcompartment id="15f47463-77ea-40d0-bfe8-ca632819f556">
+      <name xml:lang="en">forestry</name>
+      <comment xml:lang="en">Emission to soil that is used for plant production (wood, renewable raw materials), but which is not used or suitable for production of agricultural products that enter the human food chain (permanent forest land, marginal lands). Forestry.</comment>
+    </subcompartment>
+    <subcompartment id="e1bc9a16-5b6a-494f-98ef-49f461b1a11e">
+      <name xml:lang="en">agricultural</name>
+      <comment xml:lang="en">Emission to soil that is used for or is suitable for the production of agricultural products that enter the human food chain. Agriculture, agricultural biomass production.</comment>
+    </subcompartment>
+    <subcompartment id="912f1ae3-734e-4cc6-bbf7-0f36843cd7de">
+      <name xml:lang="en">industrial</name>
+      <comment xml:lang="en">Emission to soil used for industry, manufacturing, waste management and infrastructure. Industry, landfarming of wastes, built-up land.</comment>
+    </subcompartment>
+  </compartment>
+  <compartment id="9ee6ba06-4401-409c-ac4e-e8ec188aa512">
+    <name xml:lang="en">natural resource</name>
+    <subcompartment id="45bb416c-a63b-429f-8754-b3f76a069c43">
+      <name xml:lang="en">in air</name>
+      <comment xml:lang="en">Natural resources in air, e.g. argon, carbon dioxide. Used for carbon uptake in biomass and gases produced by air separation.</comment>
+    </subcompartment>
+    <subcompartment id="7d704b6f-d455-4f41-9c28-50b4f372f315">
+      <name xml:lang="en">land</name>
+      <comment xml:lang="en">Land occupation and transformation.</comment>
+    </subcompartment>
+    <subcompartment id="6a098164-9f04-4f65-8104-ffab7f2677f3">
+      <name xml:lang="en">in ground</name>
+      <comment xml:lang="en">Natural resource in soil e.g. ores; landfill volume.</comment>
+    </subcompartment>
+    <subcompartment id="30347aef-a90b-46ba-8746-b53741aa779d">
+      <name xml:lang="en">in water</name>
+      <comment xml:lang="en">Natural resource in water, e.g. magnesium, water.</comment>
+    </subcompartment>
+    <subcompartment id="2d0acbd3-2083-4011-9a29-20c626b23dc3">
+      <name xml:lang="en">biotic</name>
+      <comment xml:lang="en">Biogenic resource, e.g. wood</comment>
+    </subcompartment>
+  </compartment>
+  <compartment id="cc6b14b8-9e1c-423e-afc8-3ec5fbe5230c">
+    <name xml:lang="en">economic</name>
+    <subcompartment id="afa7ae6d-bbd9-4d9d-8d5a-a55f815c2d05">
+      <name xml:lang="en">primary production factor</name>
+      <comment xml:lang="en">Labour cost, net tax, net operating surplus, rent. All net expenditures except those paid for goods and services purchased</comment>
+    </subcompartment>
+  </compartment>
+  <compartment id="7bfbc057-73fa-4c4c-aaff-9d3696a9c4f5">
+    <name xml:lang="en">air</name>
+    <subcompartment id="be7e06e9-0bf5-462e-99dc-fe4aee383c48">
+      <name xml:lang="en">non-urban air or from high stacks</name>
+      <comment xml:lang="en">Emission in areas with a population density below 400 persons per km2 or from stacks higher than 100 m. Resource extraction, forestry, agriculture, hydro energy, wind power, coal and nu-clear power plants, municipal landfills, wastewater treatment, long-distance transports, shipping.</comment>
+    </subcompartment>
+    <subcompartment id="e8d7772c-55ca-4dd7-b605-fee5ae764578">
+      <name xml:lang="en">urban air close to ground</name>
+      <comment xml:lang="en">Emission below 100 metres in areas with a population density above 400 persons per km2. Industry, oil and gas power plants, manufacturing, households, municipal waste incineration, local traffic, construction activities.</comment>
+    </subcompartment>
+    <subcompartment id="23dbff79-8037-43e7-b270-5a3da416a284">
+      <name xml:lang="en">low population density, long-term</name>
+      <comment xml:lang="en">Emission which take place in the future, &gt;100 years after the start of the activity. Emissions from uranium mill tailings</comment>
+    </subcompartment>
+    <subcompartment id="6890faa1-312e-427d-9ca8-42309afc8866">
+      <name xml:lang="en">indoor</name>
+      <comment xml:lang="en">Emission inside closed buildings and outside of dedicated fume hoods with intake speed &gt; 0,5 m/s. Use stage of products for indoor use</comment>
+    </subcompartment>
+    <subcompartment id="f335ce0e-b830-475a-adab-03858d9cbdaf">
+      <name xml:lang="en">lower stratosphere + upper troposphere</name>
+      <comment xml:lang="en">Emissions from airplanes. Air transport, cruising.</comment>
+    </subcompartment>
+    <subcompartment id="7011f0aa-f5f9-4901-8c10-884ad8296812">
+      <name xml:lang="en">unspecified</name>
+      <comment xml:lang="en">Only used if no specific information available.</comment>
+    </subcompartment>
+  </compartment>
+  <compartment id="b96b47eb-598e-4335-ae7c-b59123e8e729">
+    <name xml:lang="en">direct human uptake</name>
+    <subcompartment id="3be13d01-8c34-4181-8fd3-298a6a8239b1">
+      <name xml:lang="en">unspecified</name>
+      <comment xml:lang="en">Contamination in products used for oral intake or with skin contact. Food products and medicine at the point of human intake, hygiene products and clothing at the use stage. </comment>
+    </subcompartment>
+  </compartment>
+  <compartment id="58bd922f-3e28-4ae2-bafe-ab5ef5bdfc2d">
+    <name xml:lang="en">social</name>
+    <subcompartment id="b12abab8-fee7-49c6-851e-965d0abad96f">
+      <name xml:lang="en">unspecified</name>
+      <comment xml:lang="en">Changes in social conditions. All externalities affecting human welfare and/or productivity, not elsewhere covered.</comment>
+    </subcompartment>
+  </compartment>
+  <compartment id="ad5c1ad3-29c6-413e-a498-dcfc061f314c">
+    <name xml:lang="en">water</name>
+    <subcompartment id="a119c440-7e83-4655-a874-97fe1468315a">
+      <name xml:lang="en">ground-</name>
+      <comment xml:lang="en">Ground water which will get in contact with the biosphere after some time. </comment>
+    </subcompartment>
+    <subcompartment id="e47f0a6c-3be8-4027-9eee-de251784f708">
+      <name xml:lang="en">unspecified</name>
+      <comment xml:lang="en">Only used if no specific information available.</comment>
+    </subcompartment>
+    <subcompartment id="963f8022-3e2e-4be9-ad4d-b3b7a2282099">
+      <name xml:lang="en">surface water</name>
+      <comment xml:lang="en">Rivers and lakes. Discharge of effluents from wastewater treatment facilities.</comment>
+    </subcompartment>
+    <subcompartment id="aa4362e0-b20a-448b-b2a0-261f4510deb5">
+      <name xml:lang="en">ground-, long-term</name>
+      <comment xml:lang="en">Emissions which take place in the future, 100 years after the start of the activity. Long-term emissions from landfills.</comment>
+    </subcompartment>
+    <subcompartment id="65f8d2a1-63ed-479c-b86c-3bcf38e86320">
+      <name xml:lang="en">ocean</name>
+      <comment xml:lang="en">Ocean, sea and salty lakes. Offshore works, overseas ship transports.</comment>
+    </subcompartment>
+  </compartment>
+</validCompartments>

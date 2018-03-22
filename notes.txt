@@ -1,0 +1,58 @@
+
+
+  |-- root   
+  |   |-- MasterData # Only MD.pkl used by tool, the rest is used to build MD.pkl
+  |   |   |-- MD.pkl   
+  |   |   |-- XLM   
+  |   |   |   |-- 22 files/folders required to build MD.pkl, gets updated from time to time by ecoinvent
+  |   |   |-- xlsx  
+  |   |   |   |-- MasterData_fields.xlsx # Required to build MD.pkl
+  |   |   |   |-- (Optional) MasterData.xlsx # To better see what is in MD
+  |   |-- pycode # Actual Python code
+  |   |   |-- __init__ #Package initializing. Not directly called.
+  |   |   |-- WWecoSpoldGenerator.py # File that will contain the functions you actually need.
+  |   |   |-- update_master_data.py #Generate or update MD.pkl
+  |   |   |-- utils.py # Small utils used by rest of code
+  |   |   |-- _* # All files that start with an _ are temporary and will be deleted before the end  
+  |   |-- templates
+  |   |   |-- 18 files necessary for ecoSpold generation.
+  |   |-- resources
+  |   |   |-- Useful files that may not make it to the end of the project.
+  |   |-- notebooks
+  |   |   |-- Jupyter notebooks, internal. Not used.
+  |   |-- output
+  |   |   |-- Dump directory for ecoSPold files
+
+  |   |   |   |   |-- Iteration_0
+  |   |   |   |   |   |-- Matrices
+  |   |   |   |   |   |   |-- A_matrix.npz  
+  |   |   |   |   |   |   |-- B_matrix.npz
+  |   |   |   |   |   |-- Inventory
+  |   |   |   |   |   |   |-- UUID_1.npy
+  |   |   |   |   |   |   |-- UUID_2.npy  
+  |   |   |   |   |   |   |-- ...
+  |   |   |   |   |   |   |-- UUID_n.npy    
+  |   |   |   |   |   |-- Supply
+  |   |   |   |   |   |   |-- UUID_1.npy
+  |   |   |   |   |   |   |-- UUID_2.npy  
+  |   |   |   |   |   |   |-- ...
+  |   |   |   |   |   |   |-- UUID_n.npy    
+...
+  |   |   |   |   |-- Iteration_m
+  |   |   |   |   |   |...
+  |   |   |   |-- job_2  
+  |   |   |   |   |-- common_files  
+  |   |   |   |   |   |-- ...11 common files described above
+  |   |   |   |   |-- Iteration_0
+  |   |   |   |   |   |...
+  |   |   |   |   |-- Iteration_m
+
+- **MD_pickle_fp**: Filepath to pickled Master Data dictionary
+    Can be created if it doesn't exist or if it is not up to date: use `generate_new_MD_pickle`
+
+    
+
+
+
+"""
+

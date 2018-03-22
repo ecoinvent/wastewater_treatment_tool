@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<validProperties majorRelease="0" minorRelease="0" xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <property id="ec14df67-ec04-4620-961a-3faf85569758" unitId="c4d1b1ec-1ddb-4800-87db-ffbfbb29d94f">
+    <name xml:lang="en">test_dummy</name>
+    <unitName xml:lang="en">BTU/kg</unitName>
+  </property>
+  <property id="00000000-0000-0000-0000-000000000000" unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839">
+    <name xml:lang="en">NEW DUMMY</name>
+    <unitName xml:lang="en">kg/m3</unitName>
+  </property>
+</validProperties>
