@@ -1,4 +1,4 @@
-
+proposed root_dir structure:
 
   |-- root   
   |   |-- MasterData # Only MD.pkl used by tool, the rest is used to build MD.pkl
@@ -11,8 +11,10 @@
   |   |-- pycode # Actual Python code
   |   |   |-- __init__ #Package initializing. Not directly called.
   |   |   |-- WWecoSpoldGenerator.py # File that will contain the functions you actually need.
-  |   |   |-- update_master_data.py #Generate or update MD.pkl
+  |   |   |-- load_master_data.py #Generate or update MD.pkl
   |   |   |-- utils.py # Small utils used by rest of code
+  |   |   |-- defaults.py # default text and values
+  |   |   |-- arguments.py # list of argument expected from the tool
   |   |   |-- _* # All files that start with an _ are temporary and will be deleted before the end  
   |   |-- templates
   |   |   |-- 18 files necessary for ecoSpold generation.
@@ -23,36 +25,20 @@
   |   |-- output
   |   |   |-- Dump directory for ecoSPold files
 
-  |   |   |   |   |-- Iteration_0
-  |   |   |   |   |   |-- Matrices
-  |   |   |   |   |   |   |-- A_matrix.npz  
-  |   |   |   |   |   |   |-- B_matrix.npz
-  |   |   |   |   |   |-- Inventory
-  |   |   |   |   |   |   |-- UUID_1.npy
-  |   |   |   |   |   |   |-- UUID_2.npy  
-  |   |   |   |   |   |   |-- ...
-  |   |   |   |   |   |   |-- UUID_n.npy    
-  |   |   |   |   |   |-- Supply
-  |   |   |   |   |   |   |-- UUID_1.npy
-  |   |   |   |   |   |   |-- UUID_2.npy  
-  |   |   |   |   |   |   |-- ...
-  |   |   |   |   |   |   |-- UUID_n.npy    
-...
-  |   |   |   |   |-- Iteration_m
-  |   |   |   |   |   |...
-  |   |   |   |-- job_2  
-  |   |   |   |   |-- common_files  
-  |   |   |   |   |   |-- ...11 common files described above
-  |   |   |   |   |-- Iteration_0
-  |   |   |   |   |   |...
-  |   |   |   |   |-- Iteration_m
-
-- **MD_pickle_fp**: Filepath to pickled Master Data dictionary
-    Can be created if it doesn't exist or if it is not up to date: use `generate_new_MD_pickle`
-
-    
-
-
-
-"""
+TODO:
+    http://84.89.61.64:8030/ecoinvent/simplified_data_entry.php
+        Change title (1) from "Wastewater source (activity name)" to "Wastewater source"
+        Change help for (1) to:
+            "
+            If the wastewater originates from an activity within the ecoinvent database, you should use the name of this activity here. 
+            For example, for wastewater originating from "lime production", you would write "from lime production".
+            This will generate the first part of the name of the wastewater treatment datasets. 
+            In the example, it would be "treatment of wastewater from lime production".
+            If the wastewater is the average municipal wastewater, then enter the name "average municipal".
+            This will generate a name starting with "treatment of wastewater, average municipal"
+            The second part of the name will be based on the treatment type.
+            "
+        Change title (2) from "Country" to "Location"
+        
+        
 
