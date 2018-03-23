@@ -24,8 +24,8 @@ no_uncertainty = {
     }
 
 default_technology_level = "Current"
-default_timePeriodStarts = "01-01-1995" #TODO - I'm not sure what makes sense here, or if this value should be location-specific
-default_timePeriodEnds = "31-12-2025" #TODO - I'm not sure what makes sense here, or if this value should be location-specific
+default_timePeriodStarts = "1995-01-01" #TODO - I'm not sure what makes sense here, or if this value should be location-specific
+default_timePeriodEnds = "2025-12-31" #TODO - I'm not sure what makes sense here, or if this value should be location-specific
 
 default_tech_descr_avg = \
 "The treatment dataset represents a weighted average of multiple models of wastewater treatment plants. "+\

@@ -187,38 +187,8 @@ def create_empty_uncertainty():
                     'comment',
                     ]
     return {f: None for f in empty_fields}
-        
-
-def add_property(exc, properties):
-    exc['properties'] = []
-    for property_name, amount, unit, comment, unc in properties:
-        p = create_empty_property()
-        p['name'] = property_name
-        if property_name in self.MD['Properties'].index:
-            sel = self.MD['Properties'].loc[property_name]
-            p['propertyId'] = sel['id']
-            if not is_empty(sel['unitName']):
-                assert unit == sel['unitName'], "{}, {}, {}".format(property_name, unit, sel['unitName'])
-                p['unitName'] = unit
-                p['unitId'] = self.MD['Units'].loc[p['unitName'], 'id']
-        else:
-            p['propertyId'] = make_uuid(property_name)
-            p['unitName'] = unit
-            p['unitId'] = self.MD['Units'].loc[p['unitName'], 'id']
-            self.dataset['Properties'].append(GenericObject(p,
-                                        'user_MD_Properties'
-                                        ))
-        p['amount'] = amount
-        p['comment'] = comment
-        if not is_empty(unc):
-            p = self.add_uncertainty(p,
-                                unc['pedigreeMatrix'],
-                                unc['variance'],
-                                unc['comment'])
-        exc['properties'].append(GenericObject(p, 'TProperty'))
-    return exc
     
-def add_uncertainty(o, pedigreeMatrix, variance, comment, PV = False):
+def add_uncertainty(o, uncertainty_dict, PV=False):
     unc = create_empty_uncertainty()
     if PV:
         unc['field'] = 'productionVolumeUncertainty'
@@ -228,18 +198,31 @@ def add_uncertainty(o, pedigreeMatrix, variance, comment, PV = False):
         unc['meanValue'] = o['amount']
     unc['type'] = 'lognormal'
     unc['mu'] = np.log(unc['meanValue'])
-    unc['variance'] = variance
-    assert set(pedigreeMatrix).issubset(set([1, 2, 3, 4, 5, 1., 2., 3., 4., 5.]))
-    pedigree_factors = np.array([[0, 0., .0006, .002, .008, .04], 
-                    [0, 0., .0001, .0006, .002, .008], 
-                    [0, 0., .0002, .002, .008, .04], 
-                    [0, 0., 2.5e-5, .0001, .0006, .002], 
-                    [0, 0., .0006, .008, .04, .12]])
-    unc['varianceWithPedigreeUncertainty'] = copy(variance)
-    for i in range(len(pedigreeMatrix)):
-        unc['varianceWithPedigreeUncertainty'] += pedigree_factors[i, pedigreeMatrix[i]]
-    unc['pedigreeMatrix'] = pedigreeMatrix
-    unc['comment'] = comment
-    o[unc['field']] = GenericObject(unc, 'TUncertainty')
+    unc['variance'] = uncertainty_dict['variance']
+    if uncertainty_dict['pedigreeMatrix'] is not None:
+        assert set(uncertainty_dict['pedigreeMatrix']).issubset(set([1, 2, 3, 4, 5, 1., 2., 3., 4., 5.]))
+        pedigree_factors = np.array(
+                    [
+                        [0, 0., .0006, .002, .008, .04], 
+                        [0, 0., .0001, .0006, .002, .008], 
+                        [0, 0., .0002, .002, .008, .04], 
+                        [0, 0., 2.5e-5, .0001, .0006, .002], 
+                        [0, 0., .0006, .008, .04, .12]
+                    ]
+                        )
+        unc['varianceWithPedigreeUncertainty'] = copy(uncertainty_dict['variance'])
+        for i in range(len(uncertainty_dict['pedigreeMatrix'])):
+            unc['varianceWithPedigreeUncertainty'] += pedigree_factors[i, uncertainty_dict['pedigreeMatrix'][i]]
+        unc['pedigreeMatrix'] = uncertainty_dict['pedigreeMatrix']
+    else:
+        unc['varianceWithPedigreeUncertainty'] = uncertainty_dict['variance']
+        unc['comment'] = uncertainty_dict['comment']
+        o[unc['field']] = GenericObject(unc, 'TUncertainty')
     return o
     
+def create_empty_property():
+    empty_fields = ['propertyContextId', 'unitContextId', 'isDefiningValue', 
+    'isCalculatedAmount', 'sourceId', 'sourceContextId', 
+    'sourceIdOverwrittenByChild', 'sourceYear', 'sourceFirstAuthor', 
+    'mathematicalRelation', 'variableName', 'uncertainty', 'comment']
+    return {field: None for field in empty_fields}

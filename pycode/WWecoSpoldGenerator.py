@@ -25,6 +25,8 @@ class WWecoSpoldGenerator(object):
     #def __init__(self, root_dir, untreated_fraction, overload_loss_fraction_particulate,
     #             overload_loss_fraction_dissolved, WW_type, technology, capacity):
     def __init__(self, **kwargs):
+        os.chdir(r'..')
+        self.root_dir = os.getcwd()
         check_for_missing_args(required_arguments, kwargs)
         for k, v in kwargs.items():
             setattr(self, k, v)        
@@ -40,7 +42,7 @@ class WWecoSpoldGenerator(object):
         self.generate_activityIndex()
         self.generate_technology_level()
     
-    def generate_ecoSpold2(self):
+    def generate_ecoSpold2(self, name=None):
         self.dataset['has_userMD'] = False
         for field in ['ActivityNames', 'Sources', 'activityIndexEntry', 'Persons', 'IntermediateExchanges']:
             if field in self.dataset and len(self.dataset[field]) > 0:
@@ -51,22 +53,23 @@ class WWecoSpoldGenerator(object):
         #groups need to appear in a specific order
             self.dataset['exchanges'].extend(self.dataset[group])
 
-        self.GO_dataset = GenericObject(self.dataset, 'Dataset')
+        dataset = GenericObject(self.dataset, 'Dataset')
         #loading the template environment
         template_path = os.path.join(self.root_dir, 'templates')
         env = Environment(loader=FileSystemLoader(template_path), 
                           keep_trailing_newline = True, 
                           lstrip_blocks = True, 
                           trim_blocks = True)
-        rendered = recursive_rendering(self.GO_dataset, env, os.path.join(self.root_dir, 'output'), "{}.spold".format(self.dataset['id']))
+        if name is None:
+            name = "{}.spold".format(self.dataset['id'])
+        rendered = recursive_rendering(dataset, env, os.path.join(self.root_dir, 'output'), name)
     
-    def append_exchange(self, exc, #exchange dictionary, see detail below
-                        properties = [], # If relevant. list of tuples with appropriate format.
-                        uncertainty = None, #Uncertainty dict
+    def append_exchange(self, exc, properties, uncertainty,
                         PV_uncertainty = None #Relevant for exchanges with production volumes only
                         ):
         """
-        Exc:All exchanges are passed as dictionaries. 
+        Exc: All exchanges are passed as dictionaries.
+             
             All exchanges shall have the following keys:
                 group, name, comment, unitName, amount
             Exchanges with group == ReferenceProduct or ByProduct shall also 
@@ -149,40 +152,52 @@ class WWecoSpoldGenerator(object):
         
         #use MD properties for the properties not specified by the user
         if len(property_sel) > 0:
-            present_properties = [p[0] for p in properties]
+            present_properties = [p['name'] for p in properties]
             for i, p in property_sel.iterrows():
                 if p['propertyName'] not in present_properties:
-                    properties.append(
+                    exc_dict['properties'].append(
                             (p['propertyName'],
                              p['amount'],
                              p['unitName'],
                              "Default value. {}".format(p['comment']),
                              None)
                             )
-        exc = add_property(exc, properties)
+        exc = self.add_property(exc, properties)
         
-        if uncertainty:
-            exc = add_uncertainty(exc,
-                                  uncertainty['pedigreeMatrix'],
-                                  uncertainty['variance'],
-                                  uncertainty['comment']
-                                  )
+        if uncertainty is not None:
+            exc = add_uncertainty(exc, uncertainty)
         if PV_uncertainty:
-            exc = add_uncertainty(exc,
-                                  PV_uncertainty['pedigreeMatrix'],
-                                  PV_uncertainty['variance'],
-                                  PV_uncertainty['comment'],
-                                  PV = True)
+            exc = add_uncertainty(exc, PV_uncertainty, PV = True)
         self.dataset[exc['group']].append(GenericObject(exc, 'Exchange'))
         return None
 
-
-    def create_empty_property():
-        empty_fields = ['propertyContextId', 'unitContextId', 'isDefiningValue', 
-        'isCalculatedAmount', 'sourceId', 'sourceContextId', 
-        'sourceIdOverwrittenByChild', 'sourceYear', 'sourceFirstAuthor', 
-        'mathematicalRelation', 'variableName', 'uncertainty', 'comment']
-        return {field: None for field in empty_fields}
+    def add_property(self, exc, properties):
+        # properties is a list of property_dicts
+        exc['properties'] = []
+        #for property_name, amount, unit, comment, unc in properties:
+        for prop_dict in properties:
+            p = create_empty_property()
+            p['name'] = prop_dict['name']
+            if p['name'] in self.MD['Properties'].index:
+                sel = self.MD['Properties'].loc[p['name']]
+                p['propertyId'] = sel['id']
+                if not is_empty(sel['unitName']):
+                    assert prop_dict['unit'] == sel['unitName'], "{}, {}, {}".format(prop_dict['name'], prop_dict['unit'], sel['unitName'])
+                    p['unitName'] = prop_dict['unit']
+                    p['unitId'] = self.MD['Units'].loc[p['unitName'], 'id']
+            else:
+                p['propertyId'] = make_uuid(prop_dict['name'])
+                p['unitName'] = prop_dict['unit']
+                p['unitId'] = self.MD['Units'].loc[p['unitName'], 'id']
+                self.dataset['Properties'].append(GenericObject(p,
+                                            'user_MD_Properties'
+                                            ))
+            p['amount'] = prop_dict['amount']
+            p['comment'] = prop_dict['comment']
+            if 'uncertainty' in prop_dict:
+                p = add_uncertainty(p, prop_dict['uncertainty'])
+            exc['properties'].append(GenericObject(p, 'TProperty'))
+        return exc
 
     def new_intermediate_exchange(self, exc):
         fields = ['name', 'unitName', 'casNumber', 'comment', 'unitId']
@@ -200,14 +215,7 @@ class WWecoSpoldGenerator(object):
 
     def generate_reference_exchange(
                               self,
-                              exc_comment,
-                              PV,
-                              PV_uncertainty,
-                              PV_comment,
-                              #WW_prop_df, TODO
-                              WW_obligatory_properties,
-                              #overload_loss_fraction_particulate,
-                              #overload_loss_fraction_dissolved,
+                              ref_exc_dict,
                               ):
         exc = create_empty_exchange()
         if self.WW_type=='municipal average':
@@ -219,26 +227,18 @@ class WWecoSpoldGenerator(object):
                 'group': 'ReferenceProduct',
                 'unitName': 'm3',
                 'amount': -1.,
-                'productionVolumeAmount': PV,
-                'productionVolumeComment': PV_comment, 
-                'comment': exc_comment, 
+                'productionVolumeAmount': ref_exc_dict['PV']['amount'],
+                'productionVolumeComment': ref_exc_dict['PV']['comment'], 
+                'comment': ref_exc_dict['data']['comment'], 
                 'name': name,
                })
-        
-        #PV_uncertainty
-        PV_uncertainty = PV_uncertainty
-        # Properties
-        """
-        overflow_losses_dict = calc_overflow_losses_dict(WW_prop_df,
-                                                         overload_loss_fraction_particulate,
-                                                         overload_loss_fraction_dissolved
-                                                         )
-        properties_list = generate_properties_list(WW_prop_df, overflow_losses_dict)
-        properties_list += WW_obligatory_properties
-        """
+               
         # Append exchange to dataset
-        self.append_exchange(exc, properties=[], 
-                            uncertainty = None, PV_uncertainty = PV_uncertainty
+        self.append_exchange(
+            exc,
+            properties=ref_exc_dict['properties'],
+            uncertainty = ref_exc_dict['uncertainty'],
+            PV_uncertainty = ref_exc_dict['PV']['uncertainty']
                             )
         return None
     def generate_activity_name(self):
@@ -443,13 +443,15 @@ class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
         self.generate_comment('timePeriodComment', [""])
         self.generate_comment('geographyComment', ["TODO"])
         self.generate_representativeness("", "", 100)
-        self.generate_reference_exchange(exc_comment="TODO",
-                                        PV=self.PV * self.untreated_fraction,
-                                        PV_uncertainty=self.PV_uncertainty,
-                                        PV_comment=self.PV_comment,
-                                        #WW_prop_df, TODO
-                                        WW_obligatory_properties=None, #TODO
-                                        #overload_loss_fraction_particulate,
-                                        #overload_loss_fraction_dissolved,
-                                        )
+        ref_exc_dict = {
+            'data': {'comment': 'TODO',},
+            'PV':{
+              'amount': self.PV,
+              'uncertainty': self.PV_uncertainty,
+              'comment': self.PV_comment,
+                },
+            'uncertainty': None,
+            'properties': temp_obligatory_properties,
+            }
+        self.generate_reference_exchange(ref_exc_dict)
         self.generate_ecoSpold2()

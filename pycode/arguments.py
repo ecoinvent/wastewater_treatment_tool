@@ -2,15 +2,15 @@
 
 # Always required args
 required_arguments = [
-    "root_dir", # Root directory of data and code
+    #"root_dir", # Root directory of data and code-->No longer needed, relative paths now.
     "tool_use_type", # "average" or specific
     "untreated_fraction", #float, [0, 1]
-    "overload_loss_fraction_particulate", #float, [0, 1]
-    "overload_loss_fraction_dissolved", #float, [0, 1]
+    "CSO_particulate", #float, [0, 1]
+    "CSO_dissolved", #float, [0, 1]
     "WW_type", #str, from (1) in http://84.89.61.64:8030/ecoinvent/simplified_data_entry.php
     "geography", #str
     "PV", #float,
-    "WW_obligatory_properties",
+    "WW_properties",
 ]
 
 # args depending on whether we have a specific or average "tool_use_type"
@@ -39,28 +39,44 @@ optional_args = [
 ###########################################
 
 technosphere_exchange_format = {
-    'name':'valid_name_from_MD',
-    'amount':'float',
-    'comment':'str',
-    'properties': ['prop_dit_1', 'prop_dict_2',  'prop_dict_3'], #...
-    'uncertainty': 'uncertainty_dict'
+    'data': {
+        'name':'valid_name_from_MD',
+        'amount':'float',
+        'comment':'str',
+        },
+    'properties': [
+        'prop_dit_1',
+        'prop_dict_2',
+        'prop_dict_3'
+        ],
+    'uncertainty': {
+        'variance':'float', 
+        'pedigreeMatrix':['int','int', 'int','int','int'], #all ints in [1, 2, 3 4, 5]
+        'comment': "str"
+        }
 }    
 
 elementary_flow_exchange_format = {
-    'name':'valid_name_from_MD',
-    'compartment': 'compartment_name_from_MD',
-    'subcompartment': 'subcompartment_name_from_MD',
-    'amount':'float',
-    'uncertainty': 'uncertainty_dict',
-    'comment':'str',
+    'data': {
+        'name':'valid_name_from_MD',
+        'compartment': 'compartment_name_from_MD',
+        'subcompartment': 'subcompartment_name_from_MD',
+        'amount':'float',
+        'comment':'str',
+        },
+    'uncertainty': {
+        'variance':'float', 
+        'pedigreeMatrix':['int','int', 'int','int','int'], #all ints in [1, 2, 3 4, 5]
+        'comment': "str"
+        }
 }
 
 property_dict_format = {
-    'property_name':'name property1, from MD',\
+    'name':'name property1, from MD',\
     'amount': 'amount property1, from tool, in proper units',\
     'unit': 'unit property1, from MD',\
     'comment':'str property1',\
-    'uncertainty_dict': 'uncertainty_dict property1'
+    'uncertainty': 'uncertainty_dict property1'
 }
 
 uncertainty_dict = {

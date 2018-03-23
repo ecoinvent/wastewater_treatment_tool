@@ -1,7 +1,22 @@
 """Some placeholder values while we wait for tool to generate the right input"""
 
-# Root directory of data and code
-temp_root_dir = r'C:\mypy\code\wastewater_treatment_tool'
+# CSO dict
+"""A list of dicts that quantify the losses due to combined sewer overflow (CSO)
+"""
+CSO_dict = [
+    {'name':'valid_name_from_MD', 'amount':'float',}, 
+    {'name':'valid_name_from_MD', 'amount':'float',}, 
+    {'name':'valid_name_from_MD', 'amount':'float',}, 
+    ]
+
+
+temp_uncertainty = {
+    'variance':0, 
+    'pedigreeMatrix':[1,1,1,1,1],
+    'comment': "TODO"
+    }
+
+
 
 # Technology descriptions for average
 temp_technologies_averaged = {
@@ -55,41 +70,46 @@ temp_loc='GLO'
 
 
 # Properties format needs to change to dict!
-temp_WW_obligatory_properties = [
-    ('carbon content, fossil',
-     0.01,
-     'dimensionless',
-     'ICRA comment',
-     {'variance':0.01, 'pedigreeMatrix':[2,4,3,2,4],'comment':""}
-    ),
-    ('carbon content, non-fossil',
-     0.01,
-     'dimensionless',
-     'ICRA comment',
-     {'variance':0.01, 'pedigreeMatrix':[2,4,3,2,4],'comment':"ICRA comment"}
-    ),
-    ('dry mass',
-     0.01,
-     'kg',
-     'ICRA comment',
-     {'variance':0.6, 'pedigreeMatrix':[2,4,3,2,4],'comment':"ICRA comment"}
-    ),
-    ('water content',
-     0.01,
-     'dimensionless',
-     'ICRA comment',
-     {'variance':0.01, 'pedigreeMatrix':[2,4,3,2,4],'comment':"ICRA comment"}
-    ),
-    ('water in wet mass',
-     999.99,
-     'kg',
-     'ICRA comment',
-     {'variance':0.01, 'pedigreeMatrix':[2,4,3,2,4],'comment':"ICRA comment"}
-    ),
-    ('wet mass',
-     1000,
-     'kg',
-     'ICRA comment',
-     {'variance':0.01, 'pedigreeMatrix':[2,4,3,2,4],'comment':"ICRA comment"}
-    )    
+temp_obligatory_properties = [
+    {
+        'name':'carbon content, fossil',
+        'amount': 0.01, #TODO: calculate from WW properties!
+        'unit': 'dimensionless',
+        'comment': 'TODO_calcualte fraction Fossil',
+        'uncertainty': {
+            'variance':0.5, 
+            'pedigreeMatrix':[1, 2, 3, 4, 5],
+            'comment': "TODO"
+            },
+    },
+    {
+        'name':'carbon content, non-fossil',
+        'amount': 0.01,
+        'unit': 'dimensionless',
+        'comment': 'TODO_test no uncertainty',
+    },
+    {
+        'name':'dry mass',
+        'amount': 0.01,
+        'unit': 'kg',
+        'comment': 'TODO_Calculate dry mass',
+    },
+    {
+        'name':'water content',
+        'amount': 0.01,
+        'unit': 'dimensionless',
+        'comment': 'TODO_calculate water content',
+    },    
+    {
+        'name':'water in wet mass',
+        'amount': 0.01,
+        'unit': 'kg',
+        'comment': 'TODO_calculate water content',
+    },    
+    {
+        'name':'wet mass',
+        'amount': 0.01,
+        'unit': 'kg',
+        'comment': 'TODO_calculate water content',
+    },
 ]
