@@ -8,7 +8,7 @@ import pandas as pd
 from lxml import objectify
 from copy import copy
 from pickle import dump, load
-from .utils import pkl_dump, make_uuid
+from .utils import pkl_dump, make_uuid, check_for_missing_args
 from .load_master_data import load_MD
 
 class GenericObject:
@@ -27,21 +27,14 @@ class WWecoSpoldGenerator(object):
     
     #def __init__(self, root_dir, untreated_fraction, overload_loss_fraction_particulate,
     #             overload_loss_fraction_dissolved, WW_type, technology, capacity):
-    def __init__(self, root_dir, tool_use_type, untreated_fraction, overload_loss_fraction_particulate,
-                 overload_loss_fraction_dissolved, WW_type, technology, capacity,
-                 geography, timePeriodStart, timePeriodEnd):
+    def __init__(self, **kwargs):
+        check_for_missing_args(required_arguments, kwargs)
+        for k, v in kwargs.iteritems():
+            setattr(self, k, v)        
+        assert self.tool_use_type in ('average', 'specific'), "tool_use_type should be average or specific"
+        check_for_missing_args(other_args[self.tool_use_type], kwargs)
         self.dataset = self.create_empty_dataset()
-        self.MD = load_MD(root_dir)
-        self.tool_use_type = tool_use_type
-        self.untreated_fraction = untreated_fraction
-        self.overload_loss_fraction_particulate = overload_loss_fraction_particulate
-        self.overload_loss_fraction_dissolved = overload_loss_fraction_dissolved
-        self.WW_type = WW_type
-        self.technology = technology
-        self.capacity = capacity
-        self.geography = geography
-        self.timePeriodStart = timePeriodStart
-        self.timePeriodEnd = timePeriodEnd
+        self.MD = load_MD(self.root_dir)
         
     @staticmethod
     def create_empty_dataset():
@@ -135,7 +128,16 @@ class WWecoSpoldGenerator(object):
         dataset['classifications'] = [GenericObject(d, 'TClassification')]
         
         return dataset
-        
+
+    def generate_other_meta(self)
+        self.generate_activityNameId()
+        self.generate_time_period()
+        self.generate_geography()
+        self.generate_dataset_id()
+        self.generate_activityIndex()
+        self.generate_activity_boundary_text(default_activity_ends_treatment)
+        self.generate_technology_level(self, technology_level)
+
     def generate_activityNameId(self):
         ''' Return activityNameId from MD or create one.'''
 
@@ -214,75 +216,34 @@ class WWecoSpoldGenerator(object):
             
 class WWT_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to WWT dataset""" 
-    def __init__(self, root_dir, tool_use_type, untreated_fraction, overload_loss_fraction_particulate,
-                 overload_loss_fraction_dissolved, WW_type, technology, capacity,
-                 geography, timePeriodStart, timePeriodEnd):
-        super().__init__(root_dir, tool_use_type, untreated_fraction, overload_loss_fraction_particulate,
-                 overload_loss_fraction_dissolved, WW_type, technology, capacity,
-                 geography, timePeriodStart, timePeriodEnd)
-        self.dataset.update({'activityName': self.create_WWT_activity_name()})
-        self.generate_activityNameId()
-        self.generate_time_period()
-        self.generate_geography()
-        self.generate_dataset_id()
-        self.generate_activityIndex()
-        self.generate_activity_boundary_text(default_activity_ends_treatment)
-        self.generate_technology_level(self, technology_level)
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.dataset.update({'activityName': self.create_WWT_activity_name()})       
 
-        
     def create_WWT_activity_name(self):
-        if self.WW_type == "municipal":
-            
+        if self.WW_type = "municipal average":
+            WW_type_name = ", municipal average"
+        else:
+            WW_type_name = " {}".format(self.WW_type)
         if self.tool_use_type == "average":
             return "treatment of wastewater{}, average treatment".format()
+        else:
+            return "treatment of wastewater{}, {}, {}".format(WW_type_name, self.technology, self.capacity)
 
-        elif self.technology == 'average':
-            tech_descr = "average technology, capacity {:.1E}l/year".format(self.capacity).replace('+', '').replace('E0', 'E').replace('.0', '')
-        elif self.capacity == 'average':        
-            tech_descr = "{}, average capacity".format(self.technology)
-        else:
-            tech_descr = "{}, capacity {:.1E}l/year".format(self.technology, self.capacity).replace('+', '').replace('E0', 'E').replace('.0', '')
-        if self.WW_type == 'average':
-            WW_type_str = ", average"
-        else:
-            WW_type_str = " from {}".format(self.WW_type)
-        if self.technology == 'average':
-            technology_str = ""
-        else:
-            technology_str = "{}, ".format(self.technology)
-        if self.capacity == 'average':
-            capacity_str = "average capacity"
-        else:
-            capacity_str = "capacity {:.1E}l/year".format(self.capacity).replace('+', '').replace('E0', 'E').replace('.0', '')
-        return "treatment of wastewater{}, {}{}".format(WW_type_str, technology_str, capacity_str)     
 
 class DirectDischarge_ecoSold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to untreated fraction""" 
-    def __init__(self, root_dir, tool_use_type, untreated_fraction, overload_loss_fraction_particulate,
-                 overload_loss_fraction_dissolved, WW_type, technology, capacity,
-                 geography, timePeriodStart, timePeriodEnd):
-        super().__init__(root_dir, tool_use_type, untreated_fraction, overload_loss_fraction_particulate,
-                 overload_loss_fraction_dissolved, WW_type, technology, capacity, geography,
-                 timePeriodStart, timePeriodEnd)
-        self.dataset.update({'activityName': self.create_untreated_activity_name()})
-        self.generate_activityNameId()
-        self.generate_time_period()
-        self.generate_geography()
-        self.generate_dataset_id()
-        self.generate_activityIndex()
-        self.generate_activity_boundary_text(default_activity_ends_no_treatment)
-        self.generate_technology_level(self, technology_level)
-        
-    def create_untreated_activity_name(self):
-        if self.WW_type == 'average':
-            WW_type_str = ", average"
-        else:
-            WW_type_str = " from {}".format(self.WW_type)
-        return "direct discharge of wastewater{}".format(WW_type_str)
-        
-if __name__ == '__main__':
-    my_MD_dir = r'C:\Users\Pascal Lesage\Documents\ecoinvent\EcoEditor\xml\MasterData\Production'
-    wwgen = WWecoSpoldGenerator(MD_dir=my_MD_dir)
-    print(wwgen.MD_dir)
-
     
+    def __init__(self, **kwargs):
+        super().__init__(root_dir, **kwargs)
+        self.dataset.update({'activityName': self.create_untreated_activity_name()})
+        self.generate_other_meta()
+                
+    def create_untreated_activity_name(self):
+        if self.WW_type = "municipal average":
+            WW_type_name = ", municipal average"
+        else:
+            WW_type_name = " {}".format(self.WW_type)
+        return "direct discharge of wastewater{}".format(WW_type_name)
+        
+
