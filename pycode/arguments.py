@@ -7,25 +7,26 @@ required_arguments = [
     "overload_loss_fraction_dissolved", #float, [0, 1]
     "WW_type", #str, from (1) in http://84.89.61.64:8030/ecoinvent/simplified_data_entry.php
     "geography", #str
-    "timePeriodStart", #TODO --> Should we use defaults (which?) or ask for this data in tool?
-    "timePeriodEnd", #TODO --> Should we use defaults (which?) or ask for this data in tool?
+]
     
-other_args = {
+other_required_args = {
     'specific': [
-        "technology", # str, TODO
+        "technology_level_1", # str, ["aerobic, intensive", "aerobic, extensive", "anaerobic"]
+        "technology_level_2", # str, built from "binary string", see LB email
         "capacity", # Class1, Class2, etc.
+        "tech_description_specific_0", # See below
+        "tech_description_specific_1", # See below
+
     ],
     'average': [
+        "technologies_averaged", # Dict of the type {0:{fraction:x, technology_str:y, capacity:z, location:location}, 1:{...}}
     ]
 }
-        
 
-required_arguments_specific_use = [
-    "technology", # str, TODO
-    "capacity", # Class1, Class2, etc.
-    
-
-    
+optional_args = [
+    "timePeriodStart", #TODO --> Should we use defaults (which?) or ask for this data in tool?
+    "timePeriodEnd", #TODO --> Should we use defaults (which?) or ask for this data in tool?
+]
 
 ########################################################################
 # General
@@ -55,8 +56,9 @@ WW_type = 'lime production'
 technology = 'average'
 capacity = 'average'
 geography = 'GLO'
-timePeriodStart = '1995-01-01'
-timePeriodEnd = '2025-12-31'
+
+default_tech_description_specific_1 = "Some automatic text here to describe technology" #TODO
+default_tech_description_specific_2 = "Some automatic text here provide some details on parameters used" #TODO
 
 
 
