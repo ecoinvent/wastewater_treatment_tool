@@ -8,7 +8,7 @@ import pandas as pd
 from lxml import objectify
 from copy import copy
 from pickle import dump, load
-from .utils import pkl_dump, make_uuid, check_for_missing_args
+from .utils import *
 from .load_master_data import load_MD
 from .defaults import *
 from .placeholders import *
@@ -46,7 +46,69 @@ class WWecoSpoldGenerator(object):
         self.generate_dataset_id()
         self.generate_activityIndex()
         self.generate_technology_level()
-       
+    
+    def generate_ecoSpold2(self):
+        self.dataset['has_userMD'] = False
+        for field in ['ActivityNames', 'Sources', 'activityIndexEntry', 'Persons', 'IntermediateExchanges']:
+            if field in self.dataset and len(self.dataset[field]) > 0:
+                self.dataset['has_userMD'] = True
+                break
+        self.dataset['exchanges'] = []
+        for group in ['ReferenceProduct', 'ByProduct', 'FromTechnosphere', 'FromEnvironment', 'ToEnvironment']:
+        #groups need to appear in a specific order
+            self.dataset['exchanges'].extend(self.dataset[group])
+
+        self.dataset = GenericObject(self.dataset, 'Dataset')
+        #loading the template environment
+        template_path = os.path.join(self.root_dir, 'templates')
+        env = Environment(loader=FileSystemLoader(template_path), 
+                          keep_trailing_newline = True, 
+                          lstrip_blocks = True, 
+                          trim_blocks = True)
+        rendered = self.recursive_rendering(self.dataset, env, os.path.join(self.root_dir, 'output'), "{}.spold".format(self.dataset['id']))
+    
+    @staticmethod
+    def recursive_rendering(e, env, result_folder, result_filename):
+        if type(e) == GenericObject:
+            template = env.get_template(e.template_name)
+            attr_list = set([a for a in dir(e) if '__' not in a])
+            attr_list.difference_update(set(['render', 'template_name']))
+            rendered = {attribute: recursive_rendering(getattr(e, attribute), 
+                 env, result_folder, result_filename) for attribute in attr_list}
+            rendered = template.render(**rendered)
+            if '\ufeff' in rendered:
+                rendered = rendered.replace('\ufeff', '')
+            if e.template_name == 'Dataset_2.xml':
+                writer = open(os.path.join(result_folder, result_filename), 'w', encoding = 'utf-8')
+                writer.write(rendered)
+                writer.close()
+                print('file "%s" successfully created in folder %s' % (result_filename, result_folder))
+        elif type(e) in [list, tuple, set]:
+            rendered = [recursive_rendering(ee, env, result_folder, result_filename) for ee in e]
+        elif type(e) == str:
+            rendered = replace_HTML_entities(e)
+        elif type(e) in [int, float, numpy.float64, bool, numpy.bool_, 
+                 numpy.int64, numpy.long, type(None)]:
+            rendered = copy(e)
+        else: 
+            raise ValueError('rendering for type "%s" not implemented' % type(e))
+        return rendered    
+    
+    @staticmethod
+    def replace_HTML_entities(s):
+        #replace HTML entities in a character string
+        if s != None and type(s) == str:
+            #test if replacement has already occured
+            do_it = True
+            for before, after in HTML_entities:
+                if after in s:
+                    do_it = False
+            if do_it:
+                for before, after in HTML_entities:
+                    s = s.replace(before, after)
+            s = s.replace('"', "'") # the character " creates problems in attributes
+        return s
+    
     @staticmethod
     def create_empty_dataset():
         ''' Create an empty 'dataset' dictionary with all the right keys.'''    
@@ -159,6 +221,253 @@ class WWecoSpoldGenerator(object):
             ]
         return {f: None for f in empty_fields}
 
+    def append_exchange(self, exc, #exchange dictionary, see detail below
+                        properties = [], # If relevant. list of tuples with appropriate format.
+                        uncertainty = None, #Uncertainty dict
+                        PV_uncertainty = None #Relevant for exchanges with production volumes only
+                        ):
+        """
+        Exc:All exchanges are passed as dictionaries. 
+            All exchanges shall have the following keys:
+                group, name, comment, unitName, amount
+            Exchanges with group == ReferenceProduct or ByProduct shall also 
+                have a productionVolumeAmount and productionVolumeComment.
+            Exchanges with the group == FromEnvironment of ToEnvironment shall
+                also have a compartment and subcompartment
+        properties: list of tuples with the following data:
+            (property_name, amount, comment, uncertainty)                                                 }
+        `uncertainty` comes as dict with format {'variance': variance,
+                                                 'pedigreeMatrix': [x,x,x,x,x],
+                                                 'comment': comment
+                                                 }
+        PV_uncertainty
+        """
+        # Add unitId to exchange
+        exc['unitId'] = self.MD['Units'].loc[exc['unitName'], 'id']
+
+        # Add IntermediateExchange to MD if new:
+        if exc['group'] in ['ReferenceProduct', 'ByProduct', 'FromTechnosphere'] \
+            and exc['name'] not in self.MD['IntermediateExchanges'].index:
+            self.new_intermediate_exchange(exc)
+        # Generate UUID for exchange. New UUID for each exchange/dataset combination
+        l = [self.dataset[field] for field in [
+                                        'activityName',
+                                        'geography',
+                                        'startDate',
+                                        'endDate'
+                                        ]
+            ]
+        l.extend(str(exc[field]) for field in ['name',
+                                               'compartment',
+                                               'subcompartment']
+            )
+        
+        exc['id'] = make_uuid(l)
+        
+        # assign groupType
+        if 'From' in exc['group']:
+            exc['groupType'] = 'inputGroup'
+        else:
+            exc['groupType'] = 'outputGroup'
+
+        # If elementary flow, add some fields.
+        # Note: assumed all elementary flows already in MD
+        if 'Environment' in exc['group']:
+            ee = (exc['name'], exc['compartment'], exc['subcompartment'])
+            sel = self.MD['ElementaryExchanges'].loc[ee]
+            if isinstance(sel, pd.DataFrame):
+                if len(sel) > 1:
+                    raise ValueError('Multiple MD entries corresponding to %s, %s, %s' % ee)
+                sel = sel.iloc[0]
+            exc['elementaryExchangeId'] = sel['id']
+            exc['exchangeType'] = 'elementaryExchange'
+            exc['subcompartmentId'] = self.MD['Compartments'].loc[ee[1:], 'subcompartmentId']
+            exc['groupCode'] = 4
+            if ee in self.MD['ElementaryExchanges prop.'].index:
+                property_sel = self.MD['ElementaryExchanges prop.'].loc[[ee]]
+            else:
+                property_sel = pd.DataFrame()
+       
+        else: # If intermediateExchange
+            sel = self.MD['IntermediateExchanges'].loc[exc['name']]
+            exc['intermediateExchangeId'] = sel['id'] # There even if new because added above
+            exc['exchangeType'] = 'intermediateExchange'
+            if exc['group'] == 'ReferenceProduct':
+                exc['groupCode'] = 0
+            elif exc['group'] == 'FromTechnosphere':
+                exc['groupCode'] = 5
+            elif exc['group'] == 'ByProduct':
+                exc['groupCode'] = 2
+            else:
+                raise ValueError('"%s" is not a valid group' % exc['group'])
+            if exc['name'] in self.MD['IntermediateExchanges prop.'].index:
+                property_sel = self.MD['IntermediateExchanges prop.'].loc[[exc['name']]]
+            else:
+                property_sel = pd.DataFrame()
+            #'add classifications': issue #1
+        #make sure the unit is the same as the MD
+        assert exc['unitName'] == sel['unitName']
+        
+        #use MD properties for the properties not specified by the user
+        if len(property_sel) > 0:
+            present_properties = [p[0] for p in properties]
+            for i, p in property_sel.iterrows():
+                if p['propertyName'] not in present_properties:
+                    properties.append(
+                            (p['propertyName'],
+                             p['amount'],
+                             p['unitName'],
+                             "Default value. {}".format(p['comment']),
+                             None)
+                            )
+        exc = self.add_property(exc, properties)
+        
+        if uncertainty:
+            exc = self.add_uncertainty(exc,
+                                  uncertainty['pedigreeMatrix'],
+                                  uncertainty['variance'],
+                                  uncertainty['comment']
+                                  )
+        if PV_uncertainty:
+            exc = self.add_uncertainty(exc,
+                                  PV_uncertainty['pedigreeMatrix'],
+                                  PV_uncertainty['variance'],
+                                  PV_uncertainty['comment'],
+                                  PV = True)
+        self.dataset[exc['group']].append(GenericObject(exc, 'Exchange'))
+        return None
+
+    @staticmethod
+    def create_empty_uncertainty():
+        empty_fields = ['minValue',
+                        'mostLikelyValue',
+                        'maxValue',
+                        'standardDeviation95',
+                        'comment',
+                        ]
+        return {f: None for f in empty_fields}
+        
+    @staticmethod
+    def add_property(exc, properties):
+        exc['properties'] = []
+        for property_name, amount, unit, comment, unc in properties:
+            p = create_empty_property()
+            p['name'] = property_name
+            if property_name in self.MD['Properties'].index:
+                sel = self.MD['Properties'].loc[property_name]
+                p['propertyId'] = sel['id']
+                if not is_empty(sel['unitName']):
+                    assert unit == sel['unitName'], "{}, {}, {}".format(property_name, unit, sel['unitName'])
+                    p['unitName'] = unit
+                    p['unitId'] = self.MD['Units'].loc[p['unitName'], 'id']
+            else:
+                p['propertyId'] = make_uuid(property_name)
+                p['unitName'] = unit
+                p['unitId'] = self.MD['Units'].loc[p['unitName'], 'id']
+                self.dataset['Properties'].append(GenericObject(p,
+                                            'user_MD_Properties'
+                                            ))
+            p['amount'] = amount
+            p['comment'] = comment
+            if not is_empty(unc):
+                p = self.add_uncertainty(p,
+                                    unc['pedigreeMatrix'],
+                                    unc['variance'],
+                                    unc['comment'])
+            exc['properties'].append(GenericObject(p, 'TProperty'))
+        return exc
+    
+
+    def create_empty_property():
+        empty_fields = ['propertyContextId', 'unitContextId', 'isDefiningValue', 
+        'isCalculatedAmount', 'sourceId', 'sourceContextId', 
+        'sourceIdOverwrittenByChild', 'sourceYear', 'sourceFirstAuthor', 
+        'mathematicalRelation', 'variableName', 'uncertainty', 'comment']
+        return {field: None for field in empty_fields}
+
+    @staticmethod
+    def add_uncertainty(o, pedigreeMatrix, variance, comment, PV = False):
+        unc = create_empty_uncertainty()
+        if PV:
+            unc['field'] = 'productionVolumeUncertainty'
+            unc['meanValue'] = o['productionVolumeAmount']
+        else:
+            unc['field'] = 'uncertainty'
+            unc['meanValue'] = o['amount']
+        unc['type'] = 'lognormal'
+        unc['mu'] = numpy.log(unc['meanValue'])
+        unc['variance'] = variance
+        assert set(pedigreeMatrix).issubset(set([1, 2, 3, 4, 5, 1., 2., 3., 4., 5.]))
+        pedigree_factors = numpy.array([[0, 0., .0006, .002, .008, .04], 
+                        [0, 0., .0001, .0006, .002, .008], 
+                        [0, 0., .0002, .002, .008, .04], 
+                        [0, 0., 2.5e-5, .0001, .0006, .002], 
+                        [0, 0., .0006, .008, .04, .12]])
+        unc['varianceWithPedigreeUncertainty'] = copy(variance)
+        for i in range(len(pedigreeMatrix)):
+            unc['varianceWithPedigreeUncertainty'] += pedigree_factors[i, pedigreeMatrix[i]]
+        unc['pedigreeMatrix'] = pedigreeMatrix
+        unc['comment'] = comment
+        o[unc['field']] = GenericObject(unc, 'TUncertainty')
+        return o
+    
+    def new_intermediate_exchange(self, exc):
+        fields = ['name', 'unitName', 'casNumber', 'comment', 'unitId']
+        to_add = {field: exc[field] for field in fields}
+        to_add['id'] = make_uuid(exc['name'])
+        tab = 'IntermediateExchanges'
+        #add entry to user MD
+        if tab not in self.dataset:
+            self.dataset[tab] = []
+        self.dataset[tab].append(GenericObject(to_add, 'user_MD_IntermediateExchanges'))
+        #add entry to MD
+        new_entry = list_to_df([to_add]).set_index('name')
+        self.MD['IntermediateExchanges'] = pd.concat([self.MD[tab], new_entry])
+        return None
+
+    def generate_reference_exchange(
+                              self,
+                              exc_comment,
+                              PV,
+                              PV_uncertainty,
+                              PV_comment,
+                              #WW_prop_df, TODO
+                              WW_obligatory_properties,
+                              #overload_loss_fraction_particulate,
+                              #overload_loss_fraction_dissolved,
+                              ):
+        exc = self.create_empty_exchange()
+        if self.WW_type=='municipal average':
+            name = 'wastewater, municipal average'
+        else:
+            name = 'wastewater, {}'.format(self.WW_type)
+            
+        exc.update({
+                'group': 'ReferenceProduct',
+                'unitName': 'm3',
+                'amount': -1.,
+                'productionVolumeAmount': PV,
+                'productionVolumeComment': PV_comment, 
+                'comment': exc_comment, 
+                'name': name,
+               })
+        
+        #PV_uncertainty
+        PV_uncertainty = PV_uncertainty
+        # Properties
+        """
+        overflow_losses_dict = calc_overflow_losses_dict(WW_prop_df,
+                                                         overload_loss_fraction_particulate,
+                                                         overload_loss_fraction_dissolved
+                                                         )
+        properties_list = generate_properties_list(WW_prop_df, overflow_losses_dict)
+        properties_list += WW_obligatory_properties
+        """
+        # Append exchange to dataset
+        self.append_exchange(exc, properties=[], 
+                            uncertainty = None, PV_uncertainty = PV_uncertainty
+                            )
+        return None
     def generate_activity_name(self):
         if self.WW_type == "municipal average":
             WW_type_name = ", municipal average"
@@ -361,3 +670,12 @@ class DirectDischarge_ecoSold(WWecoSpoldGenerator):
         self.generate_comment('timePeriodComment', [""])
         self.generate_comment('geographyComment', ["TODO"])
         self.generate_representativeness("", "", 100)
+        self.generate_reference_exchange(exc_comment="TODO",
+                                        PV=self.PV * self.untreated_fraction,
+                                        PV_uncertainty=no_uncertainty,
+                                        PV_comment="TODO",
+                                        #WW_prop_df, TODO
+                                        WW_obligatory_properties=None, #TODO
+                                        #overload_loss_fraction_particulate,
+                                        #overload_loss_fraction_dissolved,
+                                        )

@@ -7,6 +7,7 @@ required_arguments = [
     "overload_loss_fraction_dissolved", #float, [0, 1]
     "WW_type", #str, from (1) in http://84.89.61.64:8030/ecoinvent/simplified_data_entry.php
     "geography", #str
+    "PV", #float
 ]
     
 other_required_args = {
@@ -60,5 +61,8 @@ geography = 'GLO'
 default_tech_description_specific_1 = "Some automatic text here to describe technology" #TODO
 default_tech_description_specific_2 = "Some automatic text here provide some details on parameters used" #TODO
 
-
+########################################################################
+# Reference flow
+########################################################################
+PV = 1000000
 
