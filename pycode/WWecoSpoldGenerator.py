@@ -445,8 +445,8 @@ class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
         self.generate_representativeness("", "", 100)
         self.generate_reference_exchange(exc_comment="TODO",
                                         PV=self.PV * self.untreated_fraction,
-                                        PV_uncertainty=no_uncertainty,
-                                        PV_comment="TODO",
+                                        PV_uncertainty=self.PV_uncertainty,
+                                        PV_comment=self.PV_comment,
                                         #WW_prop_df, TODO
                                         WW_obligatory_properties=None, #TODO
                                         #overload_loss_fraction_particulate,
