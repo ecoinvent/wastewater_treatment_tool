@@ -147,3 +147,8 @@ def make_uuid(l):
     else:
         assert type(l) in [list, set, tuple]
     return str(uuid.uuid5(uuid.NAMESPACE_DNS, ''.join(l)))
+    
+def check_for_missing_args(required, passed):
+    missing_args = [arg for arg in required if arg not in passed]
+    assert not missing_args, "kwargs missing: {}".format(missing_args)
+    
