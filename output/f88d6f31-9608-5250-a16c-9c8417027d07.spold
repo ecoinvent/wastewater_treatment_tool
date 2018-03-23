@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ecoSpold xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <activityDataset>
+    <activityDescription>
+	  <activity id="f88d6f31-9608-5250-a16c-9c8417027d07" 
+	  activityNameId="5c296bfc-61c8-5fa1-be94-87ce42424cad" 
+	  inheritanceDepth="0" 
+	  type="1" 
+	  specialActivityType="0" 
+>
+        <activityName xml:lang="en">direct discharge of wastewater average municipal</activityName>
+        <includedActivitiesStart xml:lang="en">From the discharge of wastewater to the sewer grid.</includedActivitiesStart>
+        <includedActivitiesEnd xml:lang="en">This activity ends with the discharge of untreated wastewater to the natural environment.</includedActivitiesEnd>
+		<generalComment>
+        	  <text xml:lang="en" index="1">Based on statistical data about #TODO</text>
+
+		</generalComment>
+      </activity>
+	  <classification classificationId="a84d0ee4-d77c-4905-b876-3ef60873c763">
+        <classificationSystem xml:lang="en">ISIC rev.4 ecoinvent</classificationSystem>
+        <classificationValue xml:lang="en">3700:Sewerage</classificationValue>
+      </classification>
+      <geography geographyId="34dbbff8-88ce-11de-ad60-0019e336be3a" 
+>
+        <shortname xml:lang="en">GLO</shortname>
+		<comment>
+        	  <text xml:lang="en" index="1">TODO</text>
+
+		</comment>
+      </geography>
+      <technology  technologyLevel="3">
+		<comment>
+        	  <text xml:lang="en" index="1">No technology modeled: direct discharge.</text>
+
+		</comment>
+      </technology>
+      <timePeriod startDate="01-01-1995" endDate="31-12-2025" isDataValidForEntirePeriod="true">
+		<comment>
+        	  <text xml:lang="en" index="1"></text>
+
+		</comment>
+	  </timePeriod>
+	  <macroEconomicScenario macroEconomicScenarioId="d9f57f0a-a01f-42eb-a57b-8f18d6635801"
+>
+        <name xml:lang="en">Business-as-Usual</name>
+      </macroEconomicScenario>
+    </activityDescription>
+	<flowData>
+	<intermediateExchange id="f8ac705d-1b69-5e1f-aaa9-a7d7ba05d168" 
+	  unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5" 
+	  amount="-1.0" 
+intermediateExchangeId="89594f7d-e828-58ad-b0a4-d0af8ca1c108" productionVolumeAmount="20000.0" 	  >
+        <name xml:lang="en">wastewater, average municipal</name>
+        <unitName xml:lang="en">m3</unitName>
+		<comment xml:lang="en">TODO</comment>		
+		<productionVolumeComment xml:lang="en">TODO</productionVolumeComment>
+        <productionVolumeUncertainty>
+            <lognormal 
+meanValue="20000.0" mu="9.90348755254" variance="0" varianceWithPedigreeUncertainty="0.0" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Uncertainty not considered</comment>			
+        </productionVolumeUncertainty>
+		
+	  <outputGroup>0</outputGroup>
+    </intermediateExchange>
+		</flowData>
+	<modellingAndValidation>
+      <representativeness 
+	  systemModelId="8b738ea0-f89e-4627-8679-433616064e82"
+percent="100" 	  >
+        <systemModelName xml:lang="en">Undefined</systemModelName>
+      </representativeness>
+    </modellingAndValidation>
+	<administrativeInformation>
+	<dataEntryBy personId="788d0176-a69c-4de0-a5d3-259866b6b100" isActiveAuthor="false" personName="[Current User]" personEmail="no@email.com"/>
+      
+	<dataGeneratorAndPublication 
+	  personId="788d0176-a69c-4de0-a5d3-259866b6b100" 
+	  personName="Pascal Lesage" 
+	  personEmail="pascal.lesage@polymtl.ca" 
+	  isCopyrightProtected="true" 
+accessRestrictedTo="1" 	  />
+	  
+	<fileAttributes 
+	  majorRelease="3" 
+	  minorRelease="4" 
+	  majorRevision="0" 
+	  minorRevision="1" 
+defaultLanguage="en" 	  >
+      </fileAttributes>
+	</administrativeInformation>
+  </activityDataset>
+	
+<usedUserMasterData xmlns="http://www.EcoInvent.org/UsedUserMasterData">
+<activityName id="5c296bfc-61c8-5fa1-be94-87ce42424cad">
+    <name xml:lang="en">direct discharge of wastewater average municipal</name>
+</activityName>
+<intermediateExchange id="89594f7d-e828-58ad-b0a4-d0af8ca1c108" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">wastewater, average municipal</name>
+    <unitName xml:lang="en">m3</unitName>
+<comment xml:lang="en">TODO</comment>  </intermediateExchange>
+<activityIndexEntry id="f88d6f31-9608-5250-a16c-9c8417027d07" activityNameId="5c296bfc-61c8-5fa1-be94-87ce42424cad" geographyId="34dbbff8-88ce-11de-ad60-0019e336be3a" startDate="01-01-1995" endDate="31-12-2025" specialActivityType="0" systemModelId="8b738ea0-f89e-4627-8679-433616064e82"/>
+</usedUserMasterData>
+</ecoSpold>

@@ -1,3 +1,6 @@
+"""Default arguments, to be validated bi ICRA"""
+
+
 default_activity_ends_treatment =\
 "This activity ends with the discharge of treated wastewater to the natural environment."\
 "This activity includes the transportation of wastewater via the sewer grid, "\
@@ -56,3 +59,6 @@ list_countries_with_specific_data = [ #TODO when we have the data!!!
 default_avg_good_geo_comment = "The data used to model and average the different WWTP is based on country-specific data."
 default__avg_bad_geo_comment = "TODO - DEPENDS N HOW WE GLOBALLY AVERAGE"
 default_spec_geo_comment =  "The data used to model the WWTP is specific to the location."
+
+default_tech_description_specific_1 = "Some automatic text here to describe technology" #TODO
+default_tech_description_specific_2 = "Some automatic text here provide some details on parameters used" #TODO

@@ -431,7 +431,7 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
 
 
 
-class DirectDischarge_ecoSold(WWecoSpoldGenerator):
+class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to untreated fraction""" 
     
     def __init__(self, **kwargs):

@@ -1,4 +1,6 @@
 """ List of arguments that must be passed by the ICRA tool"""
+
+# Always required args
 required_arguments = [
     "root_dir", # Root directory of data and code
     "tool_use_type", # "average" or specific
@@ -9,7 +11,8 @@ required_arguments = [
     "geography", #str
     "PV", #float
 ]
-    
+
+# args depending on whether we have a specific or average "tool_use_type"
 other_required_args = {
     'specific': [
         "technology_level_1", # str, ["aerobic, intensive", "aerobic, extensive", "anaerobic"]
@@ -24,45 +27,44 @@ other_required_args = {
     ]
 }
 
+# Ars that have defaults, but that we may want to inform based on data from user
 optional_args = [
     "timePeriodStart", #TODO --> Should we use defaults (which?) or ask for this data in tool?
     "timePeriodEnd", #TODO --> Should we use defaults (which?) or ask for this data in tool?
 ]
 
-########################################################################
-# General
-########################################################################
+###########################################
+############Argument format: ##############
+###########################################
 
-# Root directory of data and code
-root_dir = r'C:\mypy\code\wastewater_treatment_tool'
+technosphere_exchange_format = {
+    'name':'valid_name_from_MD',
+    'amount':'float',
+    'comment':'str',
+    'properties': ['prop_dit_1', 'prop_dict_2',  'prop_dict_3'] #...
+    'uncertainty': 'uncertainty_dict'
+}    
 
-########################################################################
-# Loading master data
-########################################################################
-# None if we stick to the proposed directory structure 
+elementary_flow_exchange_format = {
+    'name':'valid_name_from_MD',
+    'compartment': 'compartment_name_from_MD',
+    'subcompartment': 'subcompartment_name_from_MD',
+    'amount':'float',
+    'uncertainty': 'uncertainty_dict',
+    'comment':'str',
+}
 
-########################################################################
-# High-level parameters
-########################################################################
-tool_use_type = "average" # or specific. 
+property_dict_format = {
+    'property_name':'name property1, from MD',\
+    'amount': 'amount property1, from tool, in proper units',\
+    'unit': 'unit property1, from MD',\
+    'comment':'str property1',\
+    'uncertainty_dict': 'uncertainty_dict property1'
+}
 
-untreated_fraction = 0.2 # float, represents the fraction emitted directly to the environment
-overload_loss_fraction_particulate = 0.01 # float
-overload_loss_fraction_dissolved = 0.02 # float
-
-########################################################################
-# Metadata
-########################################################################
-WW_type = 'lime production'
-technology = 'average'
-capacity = 'average'
-geography = 'GLO'
-
-default_tech_description_specific_1 = "Some automatic text here to describe technology" #TODO
-default_tech_description_specific_2 = "Some automatic text here provide some details on parameters used" #TODO
-
-########################################################################
-# Reference flow
-########################################################################
-PV = 1000000
+uncertainty_dict = {
+    'variance':'float', 
+    'pedigreeMatrix':['int','int', 'int','int','int'], #all ints in [1, 2, 3 4, 5]
+    'comment': "str"
+    }
 
