@@ -9,7 +9,8 @@ required_arguments = [
     "overload_loss_fraction_dissolved", #float, [0, 1]
     "WW_type", #str, from (1) in http://84.89.61.64:8030/ecoinvent/simplified_data_entry.php
     "geography", #str
-    "PV", #float
+    "PV", #float,
+    "WW_obligatory_properties",
 ]
 
 # args depending on whether we have a specific or average "tool_use_type"
@@ -41,7 +42,7 @@ technosphere_exchange_format = {
     'name':'valid_name_from_MD',
     'amount':'float',
     'comment':'str',
-    'properties': ['prop_dit_1', 'prop_dict_2',  'prop_dict_3'] #...
+    'properties': ['prop_dit_1', 'prop_dict_2',  'prop_dict_3'], #...
     'uncertainty': 'uncertainty_dict'
 }    
 

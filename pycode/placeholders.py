@@ -51,6 +51,45 @@ temp_overload_loss_fraction_particulates =0.02# float
 temp_MW_type='average',
 #technology = 'average'
 #capacity = 'average'
-temp_loc='GLO,
+temp_loc='GLO'
 
-    
+
+# Properties format needs to change to dict!
+temp_WW_obligatory_properties = [
+    ('carbon content, fossil',
+     0.01,
+     'dimensionless',
+     'ICRA comment',
+     {'variance':0.01, 'pedigreeMatrix':[2,4,3,2,4],'comment':""}
+    ),
+    ('carbon content, non-fossil',
+     0.01,
+     'dimensionless',
+     'ICRA comment',
+     {'variance':0.01, 'pedigreeMatrix':[2,4,3,2,4],'comment':"ICRA comment"}
+    ),
+    ('dry mass',
+     0.01,
+     'kg',
+     'ICRA comment',
+     {'variance':0.6, 'pedigreeMatrix':[2,4,3,2,4],'comment':"ICRA comment"}
+    ),
+    ('water content',
+     0.01,
+     'dimensionless',
+     'ICRA comment',
+     {'variance':0.01, 'pedigreeMatrix':[2,4,3,2,4],'comment':"ICRA comment"}
+    ),
+    ('water in wet mass',
+     999.99,
+     'kg',
+     'ICRA comment',
+     {'variance':0.01, 'pedigreeMatrix':[2,4,3,2,4],'comment':"ICRA comment"}
+    ),
+    ('wet mass',
+     1000,
+     'kg',
+     'ICRA comment',
+     {'variance':0.01, 'pedigreeMatrix':[2,4,3,2,4],'comment':"ICRA comment"}
+    )    
+]

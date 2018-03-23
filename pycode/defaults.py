@@ -1,6 +1,5 @@
 """Default arguments, to be validated bi ICRA"""
 
-
 default_activity_ends_treatment =\
 "This activity ends with the discharge of treated wastewater to the natural environment."\
 "This activity includes the transportation of wastewater via the sewer grid, "\
