@@ -27,11 +27,11 @@ class WWecoSpoldGenerator(object):
     def __init__(self, **kwargs):
         os.chdir(r'..')
         self.root_dir = os.getcwd()
-        check_for_missing_args(required_arguments, kwargs)
+        check_for_missing_args(always_required_arguments, kwargs)
         for k, v in kwargs.items():
             setattr(self, k, v)        
         assert self.tool_use_type in ('average', 'specific'), "tool_use_type should be average or specific"
-        check_for_missing_args(other_required_args[self.tool_use_type], kwargs)
+        check_for_missing_args(specific_required_args[self.tool_use_type], kwargs)
         self.dataset = create_empty_dataset()
         self.MD = load_MD(self.root_dir)
         self.dataset['activityName']=self.generate_activity_name()
