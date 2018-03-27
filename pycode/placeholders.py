@@ -58,7 +58,7 @@ temp_PV_uncertainty = {
     'pedigreeMatrix':[1,1,1,1,1],
     'comment': "TODO_temp  uncertainty"
     }
-
+    
 temp_tool_use_type = 'average' # or specific
 temp_untreated_fraction = 0.2 # float, represents the fraction emitted directly to the environment
 temps_overload_loss_fraction_dissolved=0.01 # float
@@ -113,3 +113,10 @@ temp_obligatory_properties = [
         'comment': 'TODO_calculate water content',
     },
 ]
+
+temp_properties_untreated_comment = "TODO"
+temp_properties_untreated_uncertainty = {
+    'variance': 0.5,
+    'pedigreeMatrix':[1,2,3,5,4],
+    'comment': "TODO"
+    }

@@ -61,3 +61,15 @@ default_spec_geo_comment =  "The data used to model the WWTP is specific to the 
 
 default_tech_description_specific_1 = "Some automatic text here to describe technology" #TODO
 default_tech_description_specific_2 = "Some automatic text here provide some details on parameters used" #TODO
+
+default_PV_uncertainty = {
+    'variance':0.0006, 
+    'pedigreeMatrix':[1,2,3,4,5], #all ints in [1, 2, 3 4, 5]
+    'comment': "TODO"
+    }
+
+def generate_default_WWT_PV_comment(PV, untreated_fraction):
+    return "TODO PV comment. Initial PV={}, Untreated fraction: {}".format(PV, untreated_fraction)
+
+def generate_default_untreated_PV_comment(PV, untreated_fraction):
+    return "TODO PV comment. Initial PV={}, Untreated fraction: {}".format(PV, untreated_fraction)

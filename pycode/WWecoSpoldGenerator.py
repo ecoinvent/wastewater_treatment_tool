@@ -86,7 +86,6 @@ class WWecoSpoldGenerator(object):
         """
         # Add unitId to exchange
         exc['unitId'] = self.MD['Units'].loc[exc['unitName'], 'id']
-
         # Add IntermediateExchange to MD if new:
         if exc['group'] in ['ReferenceProduct', 'ByProduct', 'FromTechnosphere'] \
             and exc['name'] not in self.MD['IntermediateExchanges'].index:
@@ -149,22 +148,24 @@ class WWecoSpoldGenerator(object):
             #'add classifications': issue #1
         #make sure the unit is the same as the MD
         assert exc['unitName'] == sel['unitName']
-        
         #use MD properties for the properties not specified by the user
         if len(property_sel) > 0:
             present_properties = [p['name'] for p in properties]
             for i, p in property_sel.iterrows():
                 if p['propertyName'] not in present_properties:
-                    exc_dict['properties'].append(
-                            (p['propertyName'],
-                             p['amount'],
-                             p['unitName'],
-                             "Default value. {}".format(p['comment']),
-                             None)
+                    properties.append(
+                        {
+                            'name':p['propertyName'],
+                            'amount':p['amount'],
+                            'unit': p['unitName'],
+                            'comment': "Default value. {}".format(p['comment']),
+                            'uncertainty': None
+                        }
                             )
         exc = self.add_property(exc, properties)
-        
+        print('and now for uncertainty')
         if uncertainty is not None:
+            print('and now for uncertainty')
             exc = add_uncertainty(exc, uncertainty)
         if PV_uncertainty:
             exc = add_uncertainty(exc, PV_uncertainty, PV = True)
@@ -175,7 +176,7 @@ class WWecoSpoldGenerator(object):
         # properties is a list of property_dicts
         exc['properties'] = []
         #for property_name, amount, unit, comment, unc in properties:
-        for prop_dict in properties:
+        for prop_dict in properties:            
             p = create_empty_property()
             p['name'] = prop_dict['name']
             if p['name'] in self.MD['Properties'].index:
@@ -185,6 +186,7 @@ class WWecoSpoldGenerator(object):
                     assert prop_dict['unit'] == sel['unitName'], "{}, {}, {}".format(prop_dict['name'], prop_dict['unit'], sel['unitName'])
                     p['unitName'] = prop_dict['unit']
                     p['unitId'] = self.MD['Units'].loc[p['unitName'], 'id']
+                    print('and everything was fine')
             else:
                 p['propertyId'] = make_uuid(prop_dict['name'])
                 p['unitName'] = prop_dict['unit']
@@ -194,9 +196,12 @@ class WWecoSpoldGenerator(object):
                                             ))
             p['amount'] = prop_dict['amount']
             p['comment'] = prop_dict['comment']
-            if 'uncertainty' in prop_dict:
+            if 'uncertainty' in prop_dict and prop_dict['uncertainty'] is not None:
                 p = add_uncertainty(p, prop_dict['uncertainty'])
             exc['properties'].append(GenericObject(p, 'TProperty'))
+            #print('alls good....')
+            #print(type(exc))
+            #print("all's still good")
         return exc
 
     def new_intermediate_exchange(self, exc):
@@ -232,8 +237,11 @@ class WWecoSpoldGenerator(object):
                 'comment': ref_exc_dict['data']['comment'], 
                 'name': name,
                })
-               
         # Append exchange to dataset
+        #print(exc)
+        print(ref_exc_dict['properties'])
+        #print(uncertainty)
+        #print(PV_uncertainty)
         self.append_exchange(
             exc,
             properties=ref_exc_dict['properties'],
@@ -241,6 +249,7 @@ class WWecoSpoldGenerator(object):
             PV_uncertainty = ref_exc_dict['PV']['uncertainty']
                             )
         return None
+        
     def generate_activity_name(self):
         if self.WW_type == "municipal average":
             WW_type_name = ", municipal average"
@@ -387,8 +396,22 @@ class WWecoSpoldGenerator(object):
         self.dataset['modellingAndValidation'] = GenericObject(d,
                                                 'ModellingAndValidation'
                                                 )
+    def get_prop_name(self, prop_id):
+        return self.MD['Properties'][self.MD['Properties']['id']==prop_id].index.tolist()[0]
 
- 
+    def get_prop_unit(self, prop_id):
+        return self.MD['Properties'][self.MD['Properties']['id']==prop_id]['unitName'].values[0]
+
+    # def convert_WW_prop_dict(self, prop_dict, comment, uncertainty):
+        # d = {}
+        # for k, v in prop_dict.items():
+            # d.append({'name': get_prop_name(k)}
+            # d.append({'amount': v}
+            # d.append({'unit': get_prop_unit(k)}
+            # d.append({'comment': },
+            # d.append({'uncertainty': k['uncertainty']})
+        # return d
+        
 class WWT_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to WWT dataset""" 
     def __init__(self, **kwargs):
@@ -428,9 +451,6 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
             percent=0 #TODO: how to estimate this
             )
         
-
-
-
 class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to untreated fraction""" 
     
@@ -447,11 +467,29 @@ class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
             'data': {'comment': 'TODO',},
             'PV':{
               'amount': self.PV,
-              'uncertainty': self.PV_uncertainty,
-              'comment': self.PV_comment,
+              'uncertainty': default_PV_uncertainty,
+              'comment': self.generate_default_untreated_PV_comment(),
                 },
-            'uncertainty': None,
-            'properties': temp_obligatory_properties,
+            'uncertainty': temp_PV_uncertainty,
+            'properties': self.generate_untreated_properties(),
             }
         self.generate_reference_exchange(ref_exc_dict)
         self.generate_ecoSpold2()
+        
+    def generate_untreated_properties(self):
+        print(self.WW_properties)
+        new = [
+                {
+                    'name': self.get_prop_name(k),
+                    'amount': v,
+                    'unit': self.get_prop_unit(k),
+                    'comment': temp_properties_untreated_comment,
+                    'uncertainty': temp_properties_untreated_uncertainty,
+                }
+            for k, v in self.WW_properties.items()
+]
+        print(new)
+        return new
+
+    def generate_default_untreated_PV_comment(self):
+        return "TODO PV comment. Initial PV={}, Untreated fraction: {}".format(self.PV, self.untreated_fraction)

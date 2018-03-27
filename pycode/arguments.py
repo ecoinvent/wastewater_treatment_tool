@@ -20,8 +20,8 @@ always_required_arguments = [
     "tool_use_type", # "average" or "specific". 
     "untreated_fraction", #float, [0, 1]
     "CSO_particulate", #float, [0, 1]
-    "CSO_dissolved", #float, [0, 1]
-    "CSO_amounts", #dict, see below for format
+    "CSO_dissolved", #float, [0, 1],
+    "CSO_amounts",
     "WW_type", #str, from (1) in http://84.89.61.64:8030/ecoinvent/simplified_data_entry.php
     "geography", #str id, see below
     "PV", #float,
@@ -67,30 +67,36 @@ optional_args = [
     calculated emissions from CSO.
     emission_to_water_x are expressed as the `id` of the elementary flows.
     See either wastewater_treatment_tool\resources\emissions_to_water.json 
-    your emissions to the required id"""
+    your emissions to the required id
 
 CSO_amounts = {
     "emission_to_water_1_id": "amount_1",
     "emission_to_water_2_id": "amount_2",
     ...
     }
-"""
+
 
 
     ############## WW_properties ################
     Amounts as entered by user AND as calculated by fractionation.
-    The ids are found wastewater_treatment_tool\resources\WW_properties.json"""
+    The ids are found wastewater_treatment_tool\resources\WW_properties.json
 
 WW_properties = {
     "prop_id_1": "amount_1",
     "prop_id_2": "amount_2",
-    ...
+ #   ...
     }
-"""
+
     ############## WWTP_influent_properties ################
     Amounts of WW pollutants in wastewater as it enters the WWTP.
     This is equal to the amount entered by the user (and adjusted with fractionation)
     minus CSO losses. The ids are the same as those found wastewater_treatment_tool\resources\properties.json
+WWTP_influent_properties = {
+    "prop_id_1": "amount_1",
+    "prop_id_2": "amount_2",
+ #   ...
+    }
+    
 
 
     ############## WWTP_emissions_water ################
