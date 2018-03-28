@@ -163,9 +163,7 @@ class WWecoSpoldGenerator(object):
                         }
                             )
         exc = self.add_property(exc, properties)
-        print('and now for uncertainty')
         if uncertainty is not None:
-            print('and now for uncertainty')
             exc = add_uncertainty(exc, uncertainty)
         if PV_uncertainty:
             exc = add_uncertainty(exc, PV_uncertainty, PV = True)
@@ -186,7 +184,6 @@ class WWecoSpoldGenerator(object):
                     assert prop_dict['unit'] == sel['unitName'], "{}, {}, {}".format(prop_dict['name'], prop_dict['unit'], sel['unitName'])
                     p['unitName'] = prop_dict['unit']
                     p['unitId'] = self.MD['Units'].loc[p['unitName'], 'id']
-                    print('and everything was fine')
             else:
                 p['propertyId'] = make_uuid(prop_dict['name'])
                 p['unitName'] = prop_dict['unit']
@@ -199,9 +196,6 @@ class WWecoSpoldGenerator(object):
             if 'uncertainty' in prop_dict and prop_dict['uncertainty'] is not None:
                 p = add_uncertainty(p, prop_dict['uncertainty'])
             exc['properties'].append(GenericObject(p, 'TProperty'))
-            #print('alls good....')
-            #print(type(exc))
-            #print("all's still good")
         return exc
 
     def new_intermediate_exchange(self, exc):
@@ -227,7 +221,6 @@ class WWecoSpoldGenerator(object):
             name = 'wastewater, municipal average'
         else:
             name = 'wastewater, {}'.format(self.WW_type)
-            
         exc.update({
                 'group': 'ReferenceProduct',
                 'unitName': 'm3',
@@ -238,14 +231,10 @@ class WWecoSpoldGenerator(object):
                 'name': name,
                })
         # Append exchange to dataset
-        #print(exc)
-        print(ref_exc_dict['properties'])
-        #print(uncertainty)
-        #print(PV_uncertainty)
         self.append_exchange(
             exc,
             properties=ref_exc_dict['properties'],
-            uncertainty = ref_exc_dict['uncertainty'],
+            uncertainty = None,
             PV_uncertainty = ref_exc_dict['PV']['uncertainty']
                             )
         return None
@@ -470,14 +459,12 @@ class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
               'uncertainty': default_PV_uncertainty,
               'comment': self.generate_default_untreated_PV_comment(),
                 },
-            'uncertainty': temp_PV_uncertainty,
             'properties': self.generate_untreated_properties(),
             }
         self.generate_reference_exchange(ref_exc_dict)
         self.generate_ecoSpold2()
         
     def generate_untreated_properties(self):
-        print(self.WW_properties)
         new = [
                 {
                     'name': self.get_prop_name(k),
@@ -487,8 +474,7 @@ class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
                     'uncertainty': temp_properties_untreated_uncertainty,
                 }
             for k, v in self.WW_properties.items()
-]
-        print(new)
+            ]
         return new
 
     def generate_default_untreated_PV_comment(self):
