@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/generating_ecoSPold_files_simple-checkpoint.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/Generating ecoSPold files for WWT.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Generating ecoSPold files for WWT.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/generating_ecoSPold_files_simple.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WWecoSpoldGenerator.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WWecoSpoldGenerator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -47,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/pycode/arguments.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
-              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+              <caret line="36" column="21" lean-forward="true" selection-start-line="33" selection-end-line="36" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -64,8 +64,8 @@
       <file leaf-file-name="direct_discharge_ecospold_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="25" selection-start-line="17" selection-end-line="20" selection-end-column="25" />
+            <state relative-caret-position="306">
+              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
               <folding>
                 <element signature="e#264#273#0" expanded="true" />
               </folding>
@@ -73,13 +73,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generate_two_ecoSpolds.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="generate_two_ecoSpolds.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <caret line="51" selection-start-line="51" selection-end-line="76" selection-end-column="29" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generate_untreated_ecoSpold.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pycode/generate_untreated_ecoSpold.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="100" column="71" lean-forward="true" selection-end-line="100" selection-end-column="71" />
+              <folding>
+                <element signature="e#23#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,7 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Properties</find>
       <find>name</find>
       <find>,</find>
       <find>reformat on paste</find>
@@ -153,6 +164,7 @@
       <find>electricity</find>
       <find>append_exc</find>
       <find>appen</find>
+      <find>xlrd</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;,&quot;</replace>
@@ -177,8 +189,8 @@
         <option value="$PROJECT_DIR$/pycode/arguments.py" />
         <option value="$PROJECT_DIR$/pycode/defaults.py" />
         <option value="$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py" />
-        <option value="$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py" />
         <option value="$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py" />
+        <option value="$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py" />
       </list>
     </option>
   </component>
@@ -386,16 +398,6 @@
           <line>328</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py</url>
-          <line>407</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py</url>
-          <line>402</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -597,13 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pycode/generate_untreated_ecoSpold.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="44" lean-forward="true" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notebooks/Generating ecoSPold files for WWT.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -723,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pycode/arguments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pycode/defaults.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1547">
@@ -750,32 +738,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="25" selection-start-line="17" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <element signature="e#264#273#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="385" column="32" lean-forward="true" selection-start-line="385" selection-start-column="32" selection-end-line="385" selection-end-column="32" />
           <folding>
             <element signature="e#25#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/generate_untreated_ecoSpold.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="100" column="71" lean-forward="true" selection-end-line="100" selection-end-column="71" />
+          <folding>
+            <element signature="e#23#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding>
+            <element signature="e#264#273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/arguments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="21" lean-forward="true" selection-start-line="33" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="51" selection-start-line="51" selection-end-line="76" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
