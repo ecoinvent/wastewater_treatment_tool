@@ -382,7 +382,8 @@ class WWecoSpoldGenerator(object):
 
 class WWT_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to WWT dataset""" 
-    def __init__(self, **kwargs):
+    def __init__(self, root_dir, **kwargs):
+        self.root_dir = root_dir
         self.act_type = 'treatment'
         super().__init__(**kwargs)
         self.dataset['activityName']=self.generate_activity_name()
@@ -492,7 +493,8 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
 class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to untreated fraction"""
 
-    def __init__(self, **kwargs):
+    def __init__(self, root_dir, **kwargs):
+        self.root_dir = root_dir
         self.act_type = 'untreated discharge'
         super().__init__(**kwargs)
         self.dataset['activityName']=self.generate_activity_name()

@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a29a4acd-3ec5-40fe-8534-da2e1fa8eee8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/implementation_tests/generate_some_placeholder_args.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pycode/Team_TODO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/generating_ecoSPold_files_simple-checkpoint.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/Generating ecoSPold files for WWT.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Generating ecoSPold files for WWT.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/generating_ecoSPold_files_simple.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/f88d6f31-9608-5250-a16c-9c8417027d07.spold" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test.spold" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_Mon Aug 21 134731 2017.spold" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_Mon Aug 21 140606 2017.spold" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_NewProperties.spold" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_NoNewProperties.spold" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 112839 2017.spold" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 152247 2017.spold" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 152553 2017.spold" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 170011 2017.spold" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 170631 2017.spold" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 170922 2017.spold" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 171628 2017.spold" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycode/_spold2_writer_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/_spold2_writer_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycode/arguments.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/arguments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycode/defaults.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/defaults.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycode/spold_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/spold_utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WWecoSpoldGenerator.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WWecoSpoldGenerator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="51">
+              <caret line="385" column="32" lean-forward="true" selection-start-line="385" selection-start-column="32" selection-end-line="385" selection-end-column="32" />
               <folding>
                 <element signature="e#25#73#0" expanded="true" />
               </folding>
@@ -85,8 +64,8 @@
       <file leaf-file-name="direct_discharge_ecospold_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="25" lean-forward="true" selection-start-line="17" selection-end-line="20" selection-end-column="25" />
+            <state relative-caret-position="289">
+              <caret line="20" column="25" selection-start-line="17" selection-end-line="20" selection-end-column="25" />
               <folding>
                 <element signature="e#264#273#0" expanded="true" />
               </folding>
@@ -94,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generate_two_ecoSpolds.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="generate_two_ecoSpolds.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="187">
+              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -197,9 +176,9 @@
         <option value="$PROJECT_DIR$/pycode/notes.txt" />
         <option value="$PROJECT_DIR$/pycode/arguments.py" />
         <option value="$PROJECT_DIR$/pycode/defaults.py" />
-        <option value="$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py" />
         <option value="$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py" />
         <option value="$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py" />
+        <option value="$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py" />
       </list>
     </option>
   </component>
@@ -213,7 +192,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -235,6 +213,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,13 +311,13 @@
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4862259" visible="true" weight="0.22576448" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4848485" visible="true" weight="0.22576448" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292011" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50162655" side_tool="true" weight="0.3292011" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3292011" />
       <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.49967468" weight="0.3292011" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49837345" weight="0.35261708" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5137741" side_tool="true" visible="true" weight="0.22576448" />
+      <window_info id="Structure" order="1" sideWeight="0.5151515" side_tool="true" visible="true" weight="0.22576448" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3292011" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49967468" weight="0.39944905" />
@@ -353,21 +332,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24983734" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49075976" visible="true" weight="0.22576448" />
       <window_info id="Structure" order="1" sideWeight="0.50924027" side_tool="true" visible="true" weight="0.22576448" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292011" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3292011" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49837345" visible="true" weight="0.3292011" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292011" />
+      <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.49967468" weight="0.3292011" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49967468" weight="0.39944905" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3292011" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50162655" side_tool="true" weight="0.3292011" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3292011" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3292011" />
-      <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.49967468" weight="0.3292011" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -409,12 +388,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py</url>
-          <line>406</line>
+          <line>407</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py</url>
-          <line>401</line>
+          <line>402</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
@@ -771,20 +750,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#25#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="17" selection-end-line="20" selection-end-column="25" />
+        <state relative-caret-position="289">
+          <caret line="20" column="25" selection-start-line="17" selection-end-line="20" selection-end-column="25" />
           <folding>
             <element signature="e#264#273#0" expanded="true" />
           </folding>
@@ -793,10 +762,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="187">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="385" column="32" lean-forward="true" selection-start-line="385" selection-start-column="32" selection-end-line="385" selection-end-column="32" />
+          <folding>
+            <element signature="e#25#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
