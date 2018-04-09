@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ecoSpold xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <activityDataset>
+    <activityDescription>
+	  <activity id="cd46a3c9-ab95-55aa-8528-82f4eee066b9" 
+	  activityNameId="6ef86ce2-c1f5-5789-9ad2-c4d016554662" 
+	  inheritanceDepth="0" 
+	  type="1" 
+	  specialActivityType="0" 
+>
+        <activityName xml:lang="en">treatment of wastewater average, average treatment</activityName>
+        <includedActivitiesStart xml:lang="en">From the discharge of wastewater to the sewer grid.</includedActivitiesStart>
+        <includedActivitiesEnd xml:lang="en">This activity ends with the discharge of treated wastewater to the natural environment.This activity includes the transportation of wastewater via the sewer grid, and the treatment of the wastewater in the wastewater treatment plant.The amounts of infrastructure and consumables are also included as inputs to the activity. By definition, wastewater not sent to the sewer grid is also excluded. The fraction of wastewater discharged to the sewer grid but ultimately not treated because the sewer is unconnected and direct emissions due to combined sewer overflow are also excluded. These are included in another dataset specifically covering the discharge of untreated wastewater. The production of sludge is included, but its treatment is covered by another treatment activity.</includedActivitiesEnd>
+		<generalComment>
+        	  <text xml:lang="en" index="1">The inventory for most exchanges based on a marginal approach. The TODO model was run twice: once with the contribution of the wastewater of interest, and once without. The inputs and outputs attributed to the wastewater of interest were determined based on the difference between these two model runs. For more information, see the documentation on the tool's website, URL</text>
+	  <text xml:lang="en" index="2">Exchanges not based on the marginal approach include X (based on y) and z (based on w)</text>
+	  <text xml:lang="en" index="3">TODO a comment about averaging</text>
+
+		</generalComment>
+      </activity>
+	  <classification classificationId="a84d0ee4-d77c-4905-b876-3ef60873c763">
+        <classificationSystem xml:lang="en">ISIC rev.4 ecoinvent</classificationSystem>
+        <classificationValue xml:lang="en">3700:Sewerage</classificationValue>
+      </classification>
+      <geography geographyId="34dbbff8-88ce-11de-ad60-0019e336be3a" 
+>
+        <shortname xml:lang="en">GLO</shortname>
+		<comment>
+        	  <text xml:lang="en" index="1">TODO - DEPENDS N HOW WE GLOBALLY AVERAGE</text>
+
+		</comment>
+      </geography>
+      <technology  technologyLevel="3">
+		<comment>
+        	  <text xml:lang="en" index="1">The treatment dataset represents a weighted average of multiple models of wastewater treatment plants. TODO Some more text</text>
+	  <text xml:lang="en" index="2">0%: The auto_generated string representing tech 0, Class 1 (over 100,000 per-capita equivalents), Spain1%: The auto_generated string representing tech 1, Class 2 ( 50,000 to 100,000 per-capita equivalents), Spain</text>
+
+		</comment>
+      </technology>
+      <timePeriod startDate="1995-01-01" endDate="2025-12-31" isDataValidForEntirePeriod="true">
+		<comment>
+        	  <text xml:lang="en" index="1">TODO, descr: additional explanations concerning the temporal validity of the flow data reported.</text>
+
+		</comment>
+	  </timePeriod>
+	  <macroEconomicScenario macroEconomicScenarioId="d9f57f0a-a01f-42eb-a57b-8f18d6635801"
+>
+        <name xml:lang="en">Business-as-Usual</name>
+      </macroEconomicScenario>
+    </activityDescription>
+	<flowData>
+	<intermediateExchange id="cf6b601b-17bb-5b5b-ab87-e608513e4d84" 
+	  unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5" 
+	  amount="-1.0" 
+intermediateExchangeId="e8a51ec1-60cb-4ead-a948-ad1142c61918" productionVolumeAmount="7000.0" 	  >
+        <name xml:lang="en">wastewater, average</name>
+        <unitName xml:lang="en">m3</unitName>
+		<comment xml:lang="en">Wastewater emitted to the sewer system and treated. Wastewater properties differ from those of wastewater actually sent to the sewer system in that they account for losses due to combined sewer overflow (CSO)</comment>		
+		<property 
+		propertyId ="a547f885-601d-4d52-9bf9-60f0cef06269" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.01" 		>
+          <name xml:lang="en">mass concentration, TOC</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Total Organic Carbon</comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1000.01" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>           <uncertainty>
+            <lognormal 
+meanValue="1000.01" mu="6.90776527893" variance="0" varianceWithPedigreeUncertainty="0.0" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Uncertainty not considered</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Based on the mass of 1m3 of water + mass of all constituents of wastewater. Assumes the volume of constituents other than water is negligible.</comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1000" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>           <uncertainty>
+            <lognormal 
+meanValue="1000" mu="6.90775527898" variance="0" varianceWithPedigreeUncertainty="0.0" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Uncertainty not considered</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Based on the mass of 1m3 of water</comment>
+        </property>		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="1.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
+            <lognormal 
+meanValue="1.0" mu="0.0" variance="0" varianceWithPedigreeUncertainty="0.0" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Uncertainty not considered</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Based on the mass of 1m3 of water</comment>
+        </property>		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.01" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.01" mu="-4.60517018599" variance="0" varianceWithPedigreeUncertainty="0.0" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Uncertainty not considered</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Estimated by summing all constituents of wastewater. Uncertainties due to some parameters expressed as constituents (e.g. particulate nitrogen expressed as N)</comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">TODO</comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">TODO</comment>
+        </property>		<productionVolumeComment xml:lang="en">Calculated based on total amount of wastewater set to the sewer system (10000), as determined from the amount of wastewater and the production volume of the generating activity and the fraction of wastewater sent to sewers not connected to a wastewater treatment plant (0.3). Only the fraction sent to a wastewater treatment pland included in production volume</productionVolumeComment>
+        <productionVolumeUncertainty>
+            <lognormal 
+meanValue="7000.0" mu="8.85366542804" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </productionVolumeUncertainty>
+		
+	  <outputGroup>0</outputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="0e07f5ef-1f05-5c58-98bb-a7b89d5ea0fa" 
+	  unitId="77ae64fa-7e74-4252-9c3b-889c1cd20bfc" 
+	  amount="42" 
+intermediateExchangeId="d69294d7-8d64-4915-a896-9996a014c410" 	  >
+        <name xml:lang="en">electricity, low voltage</name>
+        <unitName xml:lang="en">kWh</unitName>
+		<comment xml:lang="en">How is this calculated?</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="42" mu="3.73766961828" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+	  <inputGroup>5</inputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="7882e3ba-5b34-55f1-82e4-37096a71c470" 
+	  unitId="487df68b-4994-4027-8fdc-a4dc298257b7" 
+	  amount="12" 
+intermediateExchangeId="049d291a-4b32-5ed9-b7fe-b6df06068211" 	  >
+        <name xml:lang="en">iron (III) chloride</name>
+        <unitName xml:lang="en">kg</unitName>
+		<comment xml:lang="en">Used for chemical removal of P</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="12" mu="2.48490664979" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+	  <inputGroup>5</inputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="cd11f373-f34c-511e-94db-6f73fbb8faee" 
+	  unitId="487df68b-4994-4027-8fdc-a4dc298257b7" 
+	  amount="99" 
+intermediateExchangeId="29f75a6a-e5cd-40f6-8f84-797deb0ef98c" 	  >
+        <name xml:lang="en">polyacrylamide</name>
+        <unitName xml:lang="en">kg</unitName>
+		<comment xml:lang="en">Used for sludge dewatering</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="99" mu="4.59511985013" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1.0" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.0" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="467149c7-9a5f-4947-ad45-2f87fee2a9a4" 
+unitId="f271f103-ec6d-428b-bbc7-f0f2adf91d4f" amount="0.0" 		>
+          <name xml:lang="en">molecular weight</name>
+<unitName xml:lang="en">g/mol</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0.51" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">Default value. </comment>
+        </property>	  <inputGroup>5</inputGroup>
+    </intermediateExchange>
+		<intermediateExchange id="1280ba75-5a19-55da-94e3-9c284e1406f3" 
+	  unitId="487df68b-4994-4027-8fdc-a4dc298257b7" 
+	  amount="666" 
+intermediateExchangeId="70b3bc3b-214d-553d-8756-cdc4a2dd6702" 	  >
+        <name xml:lang="en">sodium bicarbonate</name>
+        <unitName xml:lang="en">kg</unitName>
+		<comment xml:lang="en">Used to maintain alkalinity</comment>		
+        <uncertainty>
+            <lognormal 
+meanValue="666" mu="6.50128967054" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+	  <inputGroup>5</inputGroup>
+    </intermediateExchange>
+		</flowData>
+	<modellingAndValidation>
+      <representativeness 
+	  systemModelId="8b738ea0-f89e-4627-8679-433616064e82"
+	  >
+        <systemModelName xml:lang="en">Undefined</systemModelName>
+        <samplingProcedure xml:lang="en">TODO</samplingProcedure>
+        <extrapolations xml:lang="en">TODO</extrapolations>
+      </representativeness>
+    </modellingAndValidation>
+	<administrativeInformation>
+	<dataEntryBy personId="788d0176-a69c-4de0-a5d3-259866b6b100" isActiveAuthor="false" personName="[Current User]" personEmail="no@email.com"/>
+      
+	<dataGeneratorAndPublication 
+	  personId="788d0176-a69c-4de0-a5d3-259866b6b100" 
+	  personName="Pascal Lesage" 
+	  personEmail="pascal.lesage@polymtl.ca" 
+	  isCopyrightProtected="true" 
+accessRestrictedTo="1" 	  />
+	  
+	<fileAttributes 
+	  majorRelease="3" 
+	  minorRelease="4" 
+	  majorRevision="0" 
+	  minorRevision="1" 
+defaultLanguage="en" 	  >
+      </fileAttributes>
+	</administrativeInformation>
+  </activityDataset>
+	
+<usedUserMasterData xmlns="http://www.EcoInvent.org/UsedUserMasterData">
+<activityName id="6ef86ce2-c1f5-5789-9ad2-c4d016554662">
+    <name xml:lang="en">treatment of wastewater average, average treatment</name>
+</activityName>
+<intermediateExchange id="049d291a-4b32-5ed9-b7fe-b6df06068211" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">iron (III) chloride</name>
+    <unitName xml:lang="en">kg</unitName>
+<comment xml:lang="en">Used for chemical removal of P</comment>  </intermediateExchange>
+<intermediateExchange id="70b3bc3b-214d-553d-8756-cdc4a2dd6702" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">sodium bicarbonate</name>
+    <unitName xml:lang="en">kg</unitName>
+<comment xml:lang="en">Used to maintain alkalinity</comment>  </intermediateExchange>
+<activityIndexEntry id="cd46a3c9-ab95-55aa-8528-82f4eee066b9" activityNameId="6ef86ce2-c1f5-5789-9ad2-c4d016554662" geographyId="34dbbff8-88ce-11de-ad60-0019e336be3a" startDate="1995-01-01" endDate="2025-12-31" specialActivityType="0" systemModelId="8b738ea0-f89e-4627-8679-433616064e82"/>
+</usedUserMasterData>
+</ecoSpold>

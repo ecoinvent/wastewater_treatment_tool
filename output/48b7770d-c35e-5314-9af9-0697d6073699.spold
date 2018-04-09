@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ecoSpold xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <activityDataset>
+    <activityDescription>
+	  <activity id="48b7770d-c35e-5314-9af9-0697d6073699" 
+	  activityNameId="7ef9fd84-9150-55a0-85a2-7705b7155e2e" 
+	  inheritanceDepth="0" 
+	  type="1" 
+	  specialActivityType="0" 
+>
+        <activityName xml:lang="en">direct discharge of wastewater average</activityName>
+        <includedActivitiesStart xml:lang="en">From the discharge of wastewater to the sewer grid.</includedActivitiesStart>
+        <includedActivitiesEnd xml:lang="en">This activity ends with the discharge of untreated wastewater to the natural environment. This includes discharge of wastewater from sewers not connected to wastewater treatment plants and discharge due to combined sewer overflow (CSO), which are direct discharges of wastewater to the environment during episodes (e.g. heavy rainfall, snow melt) where wastewater volume exceeds the capacity of the sewer system or treatment plant.</includedActivitiesEnd>
+		<generalComment>
+        	  <text xml:lang="en" index="1">Based on statistical data about #TODO</text>
+
+		</generalComment>
+      </activity>
+	  <classification classificationId="a84d0ee4-d77c-4905-b876-3ef60873c763">
+        <classificationSystem xml:lang="en">ISIC rev.4 ecoinvent</classificationSystem>
+        <classificationValue xml:lang="en">3700:Sewerage</classificationValue>
+      </classification>
+      <geography geographyId="34dbbff8-88ce-11de-ad60-0019e336be3a" 
+>
+        <shortname xml:lang="en">GLO</shortname>
+		<comment>
+        	  <text xml:lang="en" index="1">TODO</text>
+
+		</comment>
+      </geography>
+      <technology  technologyLevel="3">
+		<comment>
+        	  <text xml:lang="en" index="1">No technology modelled: direct discharge.</text>
+
+		</comment>
+      </technology>
+      <timePeriod startDate="1995-01-01" endDate="2025-12-31" isDataValidForEntirePeriod="true">
+		<comment>
+        	  <text xml:lang="en" index="1">Untreated fraction based on country-specific data for 2015</text>
+	  <text xml:lang="en" index="2">Combined sewer overflow data based on TODO</text>
+
+		</comment>
+	  </timePeriod>
+	  <macroEconomicScenario macroEconomicScenarioId="d9f57f0a-a01f-42eb-a57b-8f18d6635801"
+>
+        <name xml:lang="en">Business-as-Usual</name>
+      </macroEconomicScenario>
+    </activityDescription>
+	<flowData>
+	<intermediateExchange id="8a401ab9-c550-50cb-bb1f-3d2e4dda89a2" 
+	  unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5" 
+	  amount="-1.0" 
+intermediateExchangeId="e8a51ec1-60cb-4ead-a948-ad1142c61918" productionVolumeAmount="3000.0" 	  >
+        <name xml:lang="en">wastewater, average</name>
+        <unitName xml:lang="en">m3</unitName>
+		<comment xml:lang="en">Wastewater sent to sewer system and directly emitted to environment</comment>		
+		<property 
+		propertyId ="dd13a45c-ddd8-414d-821f-dfe31c7d2868" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0006950881210075167" 		>
+          <name xml:lang="en">BOD5, mass per volume</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0006950881210075167" mu="-7.27147192762" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Biological Oxygen Demand BOD5, as O2</comment>
+        </property>		<property 
+		propertyId ="3f469e9e-267a-4100-9f43-4297441dc726" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.00039705575632341893" 		>
+          <name xml:lang="en">COD, mass per volume</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.00039705575632341893" mu="-7.831433843" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Chemical Oxygen Demand as O2</comment>
+        </property>		<property 
+		propertyId ="efe22a60-b1a3-4b33-a5ba-4bf575e0a889" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.00010407157626042784" 		>
+          <name xml:lang="en">mass concentration, DOC</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.00010407157626042784" mu="-9.17043166227" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Dissolved Organic Carbon</comment>
+        </property>		<property 
+		propertyId ="a547f885-601d-4d52-9bf9-60f0cef06269" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.00019404032071619403" 		>
+          <name xml:lang="en">mass concentration, TOC</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.00019404032071619403" mu="-8.54744458175" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Total Organic Carbon</comment>
+        </property>		<property 
+		propertyId ="f7fa53fa-ee5f-4a97-bcd8-1b0851afe9a6" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.00010573692724599181" 		>
+          <name xml:lang="en">mass concentration, dissolved ammonia NH4 as N</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.00010573692724599181" mu="-9.1545563671" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of dissolved ammonia NH4 (CAS 007664-41-7) as N. Note that dissolved and particulate N are optional yet desirable specifications of total nitrogen.</comment>
+        </property>		<property 
+		propertyId ="4f461b9d-5a7b-4a46-8803-23f6df0dc522" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0002752476374165145" 		>
+          <name xml:lang="en">mass concentration, dissolved nitrate NO3 as N</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0002752476374165145" mu="-8.19783936581" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of dissolved nitrate NO3 (CAS 014797-55-8) as N. Note that dissolved and particulate N are optional yet desirable specifications of total nitrogen.</comment>
+        </property>		<property 
+		propertyId ="c8ebc911-268a-4dfe-a426-73e1e35b587a" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0009628960051219199" 		>
+          <name xml:lang="en">mass concentration, dissolved nitrite NO2 as N</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0009628960051219199" mu="-6.94556514253" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of dissolved nitrite NO2 (CAS 014797-65-0) as N. Note that dissolved and particulate N are optional yet desirable specifications of total nitrogen.</comment>
+        </property>		<property 
+		propertyId ="88c9f622-8451-41aa-98b0-c56b191a7e0a" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0006513361223486207" 		>
+          <name xml:lang="en">mass concentration, particulate nitrogen</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0006513361223486207" mu="-7.33648473203" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of particulate nitrogen as N. Note that dissolved and particulate N are optional yet desirable specifications of total nitrogen.</comment>
+        </property>		<property 
+		propertyId ="cbc4a2c2-1710-4e6c-9b90-e1e72819d7b9" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.00099982944144738" 		>
+          <name xml:lang="en">mass concentration, dissolved organic nitrogen as N</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.00099982944144738" mu="-6.90792585208" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of dissolved organic nitrogen as N. Note that dissolved and particulate N are optional yet desirable specifications of total nitrogen.</comment>
+        </property>		<property 
+		propertyId ="f04a971d-f503-4ca0-b2b1-0ecd2e53ea61" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="3.6652735422261216e-05" 		>
+          <name xml:lang="en">mass concentration, nitrogen</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="3.6652735422261216e-05" mu="-10.2140224961" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of nitrogen (Ntot.) as N</comment>
+        </property>		<property 
+		propertyId ="7fe01cf6-6e7b-487f-b37e-32388640a8a4" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0006562458014476974" 		>
+          <name xml:lang="en">mass concentration, dissolved phosphate PO4 as P</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0006562458014476974" mu="-7.32897514187" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Dissolved Phosphate PO4 as P. Note that dissolved and particulate P are optional yet desirable specifications of total phosphorous.</comment>
+        </property>		<property 
+		propertyId ="1e4ef691-c7d3-49fc-9aee-6d77575a7b8a" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0006622034342957929" 		>
+          <name xml:lang="en">mass concentration, dissolved sulfate SO4 as S</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0006622034342957929" mu="-7.31993774667" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of dissolved sulfate SO4 (CAS 014808-79-8) as S. Note that dissolved and particulate S are optional yet desirable specifications of total sulfur.</comment>
+        </property>		<property 
+		propertyId ="8175120e-a5b7-4f19-afca-5620e9e4dd8b" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0003309085411166807" 		>
+          <name xml:lang="en">mass concentration, particulate sulfur</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0003309085411166807" mu="-8.01366853159" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of particulate sulfur as S. Note that dissolved and particulate S are optional yet desirable specifications of total sulfur.</comment>
+        </property>		<property 
+		propertyId ="7f3410da-b91e-40d8-9545-ab269ff66900" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0007137440867422037" 		>
+          <name xml:lang="en">mass concentration, sulfur</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0007137440867422037" mu="-7.2449860818" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of sulfur as S (Stot.). (CAS 007704-34-9)</comment>
+        </property>		<property 
+		propertyId ="c0447419-7139-44fe-a855-ea71e2b78585" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0009501836807688239" 		>
+          <name xml:lang="en">mass concentration, boron</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0009501836807688239" mu="-6.95885524388" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Boron.    (CAS 007440-42-8)</comment>
+        </property>		<property 
+		propertyId ="0f205308-d33a-430b-b3ec-b62bef311f2f" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0009428764195810917" 		>
+          <name xml:lang="en">mass concentration, particulate phophorus</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0009428764195810917" mu="-6.9665753342" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Particulate Phophorus as P. Note that dissolved and particulate P are optional yet desirable specifications of total phosphorous.</comment>
+        </property>		<property 
+		propertyId ="8e73d3fb-bb81-4c42-bfa6-8be4ff13125d" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0005734478654127366" 		>
+          <name xml:lang="en">mass concentration, phophorus</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0005734478654127366" mu="-7.46384353152" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of Phophorus as P (Ptot.)</comment>
+        </property>		<property 
+		propertyId ="4d60d7ca-8f4b-4d14-b137-3670858e48ca" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="9.255780037230077e-05" 		>
+          <name xml:lang="en">mass concentration, dissolved Kjeldahl Nitrogen as N</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="9.255780037230077e-05" mu="-9.28767723971" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of dissolved Kjeldahl (SKN) as N. Note that dissolved Kjeldahl Nitrogen is an optional yet desirable specification of total Kjeldahl Nitrogen.</comment>
+        </property>		<property 
+		propertyId ="98549452-463c-463d-abee-a95c2e01ade3" 
+unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839" amount="0.0009804561211974557" 		>
+          <name xml:lang="en">mass concentration, Kjeldahl Nitrogen as N</name>
+<unitName xml:lang="en">kg/m3</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.0009804561211974557" mu="-6.92749266479" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Mass concentration of total Kjeldahl (TKN) as N. Note that dissolved Kjeldahl Nitrogen is an optional yet desirable specification of total Kjeldahl Nitrogen.
+</comment>
+        </property>		<property 
+		propertyId ="67f102e2-9cb6-4d20-aa16-bf74d8a03326" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1000.0125855631325" 		>
+          <name xml:lang="en">wet mass</name>
+<unitName xml:lang="en">kg</unitName>           <uncertainty>
+            <lognormal 
+meanValue="1000.0125855631325" mu="6.90776786447" variance="0" varianceWithPedigreeUncertainty="0.0" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Uncertainty not considered</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Based on the mass of 1m3 of water + mass of all constituents of wastewater. Assumes the volume of constituents other than water is negligible.</comment>
+        </property>		<property 
+		propertyId ="6d9e1462-80e3-4f10-b3f4-71febd6f1168" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="1000" 		>
+          <name xml:lang="en">water in wet mass</name>
+<unitName xml:lang="en">kg</unitName>           <uncertainty>
+            <lognormal 
+meanValue="1000" mu="6.90775527898" variance="0" varianceWithPedigreeUncertainty="0.0" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Uncertainty not considered</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Based on the mass of 1m3 of water</comment>
+        </property>		<property 
+		propertyId ="a9358458-9724-4f03-b622-106eda248916" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="1.0" 		>
+          <name xml:lang="en">water content</name>
+<unitName xml:lang="en">dimensionless</unitName>           <uncertainty>
+            <lognormal 
+meanValue="1.0" mu="0.0" variance="0" varianceWithPedigreeUncertainty="0.0" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Uncertainty not considered</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Based on the mass of 1m3 of water</comment>
+        </property>		<property 
+		propertyId ="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" 
+unitId="487df68b-4994-4027-8fdc-a4dc298257b7" amount="0.012585563132430914" 		>
+          <name xml:lang="en">dry mass</name>
+<unitName xml:lang="en">kg</unitName>           <uncertainty>
+            <lognormal 
+meanValue="0.012585563132430914" mu="-4.37520490508" variance="0" varianceWithPedigreeUncertainty="0.0" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="1" 
+				temporalCorrelation="1" 
+				geographicalCorrelation="1" 
+				furtherTechnologyCorrelation="1"/>
+            <comment xml:lang="en">Uncertainty not considered</comment>			
+        </uncertainty>
+		
+        <comment xml:lang="en">Estimated by summing all constituents of wastewater. Uncertainties due to some parameters expressed as constituents (e.g. particulate nitrogen expressed as N)</comment>
+        </property>		<property 
+		propertyId ="c74c3729-e577-4081-b572-a283d2561a75" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0" 		>
+          <name xml:lang="en">carbon content, fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">TODO</comment>
+        </property>		<property 
+		propertyId ="6393c14b-db78-445d-a47b-c0cb866a1b25" 
+unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45" amount="0" 		>
+          <name xml:lang="en">carbon content, non-fossil</name>
+<unitName xml:lang="en">dimensionless</unitName>         <comment xml:lang="en">TODO</comment>
+        </property>		<productionVolumeComment xml:lang="en">Calculated based on total amount of wastewater set to the sewer system (10000), as determined from the amount of wastewater and the production volume of the generating activity and the fraction of wastewater sent to sewers not connected to a wastewater treatment plant (0.3)</productionVolumeComment>
+        <productionVolumeUncertainty>
+            <lognormal 
+meanValue="3000.0" mu="8.00636756765" variance="0.0006" varianceWithPedigreeUncertainty="0.1233" />
+			<pedigreeMatrix 
+				reliability="1" 
+				completeness="2" 
+				temporalCorrelation="3" 
+				geographicalCorrelation="4" 
+				furtherTechnologyCorrelation="5"/>
+            <comment xml:lang="en">TODO</comment>			
+        </productionVolumeUncertainty>
+		
+	  <outputGroup>0</outputGroup>
+    </intermediateExchange>
+		</flowData>
+	<modellingAndValidation>
+      <representativeness 
+	  systemModelId="8b738ea0-f89e-4627-8679-433616064e82"
+percent="100" 	  >
+        <systemModelName xml:lang="en">Undefined</systemModelName>
+      </representativeness>
+    </modellingAndValidation>
+	<administrativeInformation>
+	<dataEntryBy personId="788d0176-a69c-4de0-a5d3-259866b6b100" isActiveAuthor="false" personName="[Current User]" personEmail="no@email.com"/>
+      
+	<dataGeneratorAndPublication 
+	  personId="788d0176-a69c-4de0-a5d3-259866b6b100" 
+	  personName="Pascal Lesage" 
+	  personEmail="pascal.lesage@polymtl.ca" 
+	  isCopyrightProtected="true" 
+accessRestrictedTo="1" 	  />
+	  
+	<fileAttributes 
+	  majorRelease="3" 
+	  minorRelease="4" 
+	  majorRevision="0" 
+	  minorRevision="1" 
+defaultLanguage="en" 	  >
+      </fileAttributes>
+	</administrativeInformation>
+  </activityDataset>
+	
+<usedUserMasterData xmlns="http://www.EcoInvent.org/UsedUserMasterData">
+<activityName id="7ef9fd84-9150-55a0-85a2-7705b7155e2e">
+    <name xml:lang="en">direct discharge of wastewater average</name>
+</activityName>
+<activityIndexEntry id="48b7770d-c35e-5314-9af9-0697d6073699" activityNameId="7ef9fd84-9150-55a0-85a2-7705b7155e2e" geographyId="34dbbff8-88ce-11de-ad60-0019e336be3a" startDate="1995-01-01" endDate="2025-12-31" specialActivityType="0" systemModelId="8b738ea0-f89e-4627-8679-433616064e82"/>
+</usedUserMasterData>
+</ecoSpold>

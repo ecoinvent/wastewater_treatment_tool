@@ -1,0 +1,40 @@
+Order:
+    WWecoSPoldGenerator.__init__:
+        create_empty_dataset
+        load MD
+
+    DirectDischarge.__init__
+        WWecoSPoldGenerator.__init__
+        generate activity name
+        generate_activityNameId
+        generate_time_period
+        generate_geography
+        generate_dataset_id
+        generate_activityIndex
+        generate_technology_level
+        generate_activity_boundary_text-->Done
+        generate_comment(technology_comment)-->Done
+        generate_comment(general_comment)-->TODO - not sure how to document CSO until CSO data becomes available
+        generate_comment(timePeriod_comment)-->TODO - not sure how to document CSO until CSO data becomes available
+        generate_comment(geography_comment)-->TODO -  not sure how to document CSO until CSO data becomes available
+        generate_representativeness-->TODO -
+        generate_reference_exchange-->TODO (mostly done, but defaults remain)
+        TODO emissions from CSO
+        TODO emissions from untreated
+
+    WWT_ecoSpold.__init__
+        generate activity name
+        generate_activityNameId
+        generate_time_period
+        generate_geography
+        generate_dataset_id
+        generate_activityIndex
+        generate_technology_level
+        generate_activity_boundary_text-->Done
+        technologyComment-->TODO depends on multiple inputs from Lluis...
+        generalComment -->TODO URL, identify exchanges not determined by marginal apporach
+        timePeriodComment-->TODO time period
+        geography_comment-->TODO: depends on list of specific countries, use of a GLO, etc.
+        generate_representativeness
+
+

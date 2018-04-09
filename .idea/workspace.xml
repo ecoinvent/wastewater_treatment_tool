@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a29a4acd-3ec5-40fe-8534-da2e1fa8eee8" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/implementation_tests/generate_some_placeholder_args.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pycode/Team_TODO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/generating_ecoSPold_files_simple-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/Generating ecoSPold files for WWT.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Generating ecoSPold files for WWT.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/generating_ecoSPold_files_simple.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/f88d6f31-9608-5250-a16c-9c8417027d07.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_Mon Aug 21 134731 2017.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_Mon Aug 21 140606 2017.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_NewProperties.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_NoNewProperties.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 112839 2017.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 152247 2017.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 152553 2017.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 170011 2017.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 170631 2017.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 170922 2017.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_Tue Aug 22 171628 2017.spold" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycode/_spold2_writer_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/_spold2_writer_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycode/arguments.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/arguments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycode/defaults.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/defaults.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycode/spold_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/spold_utils.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="WWecoSpoldGenerator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+              <folding>
+                <element signature="e#25#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="defaults.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pycode/defaults.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1547">
+              <caret line="106" column="19" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
+              <folding>
+                <element signature="e#469#946#0" />
+                <element signature="e#1185#1341#0" />
+                <element signature="e#1380#1486#0" />
+                <element signature="e#2440#2613#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arguments.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pycode/arguments.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_spold2_writer_functions.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pycode/_spold2_writer_functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12036">
+              <caret line="716" column="22" selection-start-line="716" selection-start-column="17" selection-end-line="716" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="direct_discharge_ecospold_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="25" lean-forward="true" selection-start-line="17" selection-end-line="20" selection-end-column="25" />
+              <folding>
+                <element signature="e#264#273#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generate_two_ecoSpolds.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="codecs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../anaconda/Lib/codecs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4522">
+              <caret line="266" selection-start-line="266" selection-end-line="266" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pycode/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1003">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="load_master_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pycode/load_master_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Properties</find>
+      <find>name</find>
+      <find>,</find>
+      <find>reformat on paste</find>
+      <find>\n</find>
+      <find>sel</find>
+      <find>pd</find>
+      <find>get_pro</find>
+      <find>get_prop</find>
+      <find>default_WW_property_uncertainty</find>
+      <find>successfully created in folder</find>
+      <find>uncertainty</find>
+      <find>generate_reference_exchange</find>
+      <find>PV</find>
+      <find>append_</find>
+      <find>add_un</find>
+      <find>add_uncertainty</find>
+      <find>default_timePeriodComment</find>
+      <find>ref_exchange_comment</find>
+      <find>default_PV_unce</find>
+      <find>technolo</find>
+      <find>temp_technologies_averaged</find>
+      <find>default_timePeriodComment_treatment</find>
+      <find>default_avg_bad_geo_comment</find>
+      <find>averaged</find>
+      <find>subcompartment</find>
+      <find>append_exchange</find>
+      <find>electricity</find>
+      <find>append_exc</find>
+      <find>appen</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>&quot;,&quot;</replace>
+      <replace>,\n</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pycode/_spold2_writer_functions.py" />
+        <option value="$PROJECT_DIR$/tests/test_directDischarge_ecoSpold.py" />
+        <option value="$PROJECT_DIR$/pycode/generate_untreated_ecoSpold.py" />
+        <option value="$PROJECT_DIR$/pycode/utils.py" />
+        <option value="$PROJECT_DIR$/pycode/Team_TODO" />
+        <option value="$PROJECT_DIR$/notebooks/Generating ecoSPold files for WWT.ipynb" />
+        <option value="$PROJECT_DIR$/implementation_tests/generate_some_placeholder_args.py" />
+        <option value="$PROJECT_DIR$/pycode/spold_utils.py" />
+        <option value="$PROJECT_DIR$/pycode/notes.txt" />
+        <option value="$PROJECT_DIR$/pycode/arguments.py" />
+        <option value="$PROJECT_DIR$/pycode/defaults.py" />
+        <option value="$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py" />
+        <option value="$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py" />
+        <option value="$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1905" />
+    <option name="width" value="1950" />
+    <option name="height" value="2075" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="wastewater_treatment_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wastewater_treatment_tool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wastewater_treatment_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wastewater_treatment_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="implementation_tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wastewater_treatment_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wastewater_treatment_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="pycode" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\mypy\code\wastewater_treatment_tool\pycode" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.direct_discharge_ecospold_test">
+    <configuration name="direct_discharge_ecospold_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="wastewater_treatment_tool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/implementation_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="generate_some_placeholder_args" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="wastewater_treatment_tool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/implementation_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/implementation_tests/generate_some_placeholder_args.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.direct_discharge_ecospold_test" />
+      <item itemvalue="Python.generate_some_placeholder_args" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.direct_discharge_ecospold_test" />
+        <item itemvalue="Python.generate_some_placeholder_args" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a29a4acd-3ec5-40fe-8534-da2e1fa8eee8" name="Default" comment="" />
+      <created>1522978213853</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1522978213853</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4862259" visible="true" weight="0.22576448" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3292011" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50162655" side_tool="true" weight="0.3292011" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3292011" />
+      <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.49967468" weight="0.3292011" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49837345" weight="0.35261708" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5137741" side_tool="true" visible="true" weight="0.22576448" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3292011" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49967468" weight="0.39944905" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24983734" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292011" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24983734" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49075976" visible="true" weight="0.22576448" />
+      <window_info id="Structure" order="1" sideWeight="0.50924027" side_tool="true" visible="true" weight="0.22576448" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3292011" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3292011" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49837345" visible="true" weight="0.3292011" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49967468" weight="0.39944905" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3292011" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50162655" side_tool="true" weight="0.3292011" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292011" />
+      <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.49967468" weight="0.3292011" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py</url>
+          <line>328</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py</url>
+          <line>406</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py</url>
+          <line>401</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="16" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/implementation_tests/generate_some_placeholder_args.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementation_tests/MD_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/Team_TODO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/notes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/arguments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2516">
+          <caret line="153" column="4" selection-start-line="153" selection-start-column="4" selection-end-line="153" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/defaults.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="43" selection-start-line="34" selection-end-line="35" />
+          <folding>
+            <element signature="e#469#946#0" />
+            <element signature="e#1185#1341#0" />
+            <element signature="e#1380#1486#0" />
+            <element signature="e#2440#2613#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9809">
+          <caret line="577" selection-start-line="577" selection-end-line="577" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="90" column="42" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/placeholders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/defaults.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-end-line="49" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/Team_TODO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/notes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/arguments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="21" lean-forward="true" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2516">
+          <caret line="153" column="4" selection-start-line="153" selection-start-column="4" selection-end-line="153" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/_spold2_writer_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14059">
+          <caret line="835" column="27" lean-forward="true" selection-start-line="835" selection-start-column="27" selection-end-line="835" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7548">
+          <caret line="444" column="1" lean-forward="true" selection-start-line="444" selection-start-column="1" selection-end-line="444" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="11" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/_spold2_writer_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14280">
+          <caret line="840" selection-start-line="840" selection-end-line="840" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="19" lean-forward="true" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/_spold2_writer_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14144">
+          <caret line="840" lean-forward="true" selection-start-line="840" selection-end-line="840" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6579">
+          <caret line="387" column="8" selection-start-line="387" selection-start-column="8" selection-end-line="387" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/_spold2_writer_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17544">
+          <caret line="1032" column="29" selection-start-line="1032" selection-start-column="29" selection-end-line="1032" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_directDischarge_ecoSpold.py" />
+    <entry file="file://$PROJECT_DIR$/../CAFE3/tool/GUI/scenario_definition_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1249466562/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="827" column="4" selection-start-line="827" selection-start-column="4" selection-end-line="827" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/generate_untreated_ecoSpold.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="82" column="44" lean-forward="true" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/Generating ecoSPold files for WWT.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementation_tests/MD_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/placeholders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/Team_TODO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementation_tests/generate_some_placeholder_args.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="69" column="5" selection-start-line="49" selection-end-line="69" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../anaconda/Lib/site-packages/jinja2/loaders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="160" selection-start-line="160" selection-end-line="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../anaconda/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../anaconda/Lib/site-packages/pandas/core/indexes/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="1695" column="38" lean-forward="true" selection-start-line="1695" selection-start-column="38" selection-end-line="1698" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../anaconda/Lib/site-packages/pandas/core/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="475" selection-start-line="475" selection-end-line="475" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../anaconda/Lib/site-packages/pandas/core/indexing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1371" selection-start-line="1371" selection-end-line="1371" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/spold_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="224" column="8" selection-start-line="224" selection-start-column="8" selection-end-line="224" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../anaconda/Lib/copy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../anaconda/Lib/site-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1808" selection-start-line="1808" selection-end-line="1808" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/notes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/load_master_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../anaconda/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4522">
+          <caret line="266" selection-start-line="266" selection-end-line="266" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/arguments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/defaults.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="106" column="19" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
+          <folding>
+            <element signature="e#469#946#0" />
+            <element signature="e#1185#1341#0" />
+            <element signature="e#1380#1486#0" />
+            <element signature="e#2440#2613#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/_spold2_writer_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12036">
+          <caret line="716" column="22" selection-start-line="716" selection-start-column="17" selection-end-line="716" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/WWecoSpoldGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="e#25#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementation_tests/direct_discharge_ecospold_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="17" selection-end-line="20" selection-end-column="25" />
+          <folding>
+            <element signature="e#264#273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycode/generate_two_ecoSpolds.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

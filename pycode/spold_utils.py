@@ -2,6 +2,7 @@
 import numpy as np
 import os
 from copy import copy
+from pycode.defaults import *
 
 HTML_entities = [['&', '&amp;'],
                  ['<', '&lt;'], 
@@ -24,7 +25,6 @@ class GenericObject:
         for key, value in d.items():
             setattr(self, key, value)
             
-
 
 def recursive_rendering(e, env, result_folder, result_filename):
     if type(e) == GenericObject:
@@ -179,6 +179,7 @@ def create_empty_exchange():
         ]
     return {f: None for f in empty_fields}
 
+
 def create_empty_uncertainty():
     empty_fields = ['minValue',
                     'mostLikelyValue',
@@ -188,41 +189,172 @@ def create_empty_uncertainty():
                     ]
     return {f: None for f in empty_fields}
     
+
 def add_uncertainty(o, uncertainty_dict, PV=False):
-    unc = create_empty_uncertainty()
-    if PV:
-        unc['field'] = 'productionVolumeUncertainty'
-        unc['meanValue'] = o['productionVolumeAmount']
+    if PV==False and o['amount'] <= 0:
+        pass
     else:
-        unc['field'] = 'uncertainty'
-        unc['meanValue'] = o['amount']
-    unc['type'] = 'lognormal'
-    unc['mu'] = np.log(unc['meanValue'])
-    unc['variance'] = uncertainty_dict['variance']
-    if uncertainty_dict['pedigreeMatrix'] is not None:
-        assert set(uncertainty_dict['pedigreeMatrix']).issubset(set([1, 2, 3, 4, 5, 1., 2., 3., 4., 5.]))
-        pedigree_factors = np.array(
-                    [
-                        [0, 0., .0006, .002, .008, .04], 
-                        [0, 0., .0001, .0006, .002, .008], 
-                        [0, 0., .0002, .002, .008, .04], 
-                        [0, 0., 2.5e-5, .0001, .0006, .002], 
-                        [0, 0., .0006, .008, .04, .12]
-                    ]
-                        )
-        unc['varianceWithPedigreeUncertainty'] = copy(uncertainty_dict['variance'])
-        for i in range(len(uncertainty_dict['pedigreeMatrix'])):
-            unc['varianceWithPedigreeUncertainty'] += pedigree_factors[i, uncertainty_dict['pedigreeMatrix'][i]]
-        unc['pedigreeMatrix'] = uncertainty_dict['pedigreeMatrix']
-    else:
-        unc['varianceWithPedigreeUncertainty'] = uncertainty_dict['variance']
+        unc = create_empty_uncertainty()
+        if PV:
+            unc['field'] = 'productionVolumeUncertainty'
+            unc['meanValue'] = o['productionVolumeAmount']
+        else:
+            unc['field'] = 'uncertainty'
+            unc['meanValue'] = o['amount']
+        unc['type'] = 'lognormal'
+        unc['mu'] = np.log(unc['meanValue'])
+        unc['variance'] = uncertainty_dict['variance']
+        if uncertainty_dict['pedigreeMatrix'] is not None:
+            assert set(uncertainty_dict['pedigreeMatrix']).issubset(set([1, 2, 3, 4, 5, 1., 2., 3., 4., 5.]))
+            pedigree_factors = np.array(
+                        [
+                            [0, 0., .0006, .002, .008, .04],
+                            [0, 0., .0001, .0006, .002, .008],
+                            [0, 0., .0002, .002, .008, .04],
+                            [0, 0., 2.5e-5, .0001, .0006, .002],
+                            [0, 0., .0006, .008, .04, .12]
+                        ]
+                            )
+            unc['varianceWithPedigreeUncertainty'] = copy(uncertainty_dict['variance'])
+            for i in range(len(uncertainty_dict['pedigreeMatrix'])):
+                unc['varianceWithPedigreeUncertainty'] += pedigree_factors[i, uncertainty_dict['pedigreeMatrix'][i]]
+            unc['pedigreeMatrix'] = uncertainty_dict['pedigreeMatrix']
+        else:
+            unc['varianceWithPedigreeUncertainty'] = uncertainty_dict['variance']
         unc['comment'] = uncertainty_dict['comment']
         o[unc['field']] = GenericObject(unc, 'TUncertainty')
     return o
     
+
 def create_empty_property():
     empty_fields = ['propertyContextId', 'unitContextId', 'isDefiningValue', 
     'isCalculatedAmount', 'sourceId', 'sourceContextId', 
     'sourceIdOverwrittenByChild', 'sourceYear', 'sourceFirstAuthor', 
     'mathematicalRelation', 'variableName', 'uncertainty', 'comment']
     return {field: None for field in empty_fields}
+
+
+def get_prop_name(MD, prop_id):
+    return MD['Properties'][MD['Properties']['id']==prop_id].index.tolist()[0]
+
+
+def get_prop_unit(MD, prop_id):
+    return MD['Properties'][MD['Properties']['id']==prop_id]['unitName'].values[0]
+
+
+def get_prop_comment(MD, prop_id):
+    return MD['Properties'][MD['Properties']['id']==prop_id]['comment'].values[0]
+
+
+def get_prop_id(MD, prop_name):
+    return MD['Properties'].loc[prop_name, 'id'].values[0]
+
+
+def generate_WW_properties(MD, passed_props):
+    required = [
+        'water in wet mass',
+        'water content',
+        'dry mass',
+        'carbon content, fossil',
+        'carbon content, non-fossil',
+        'wet mass',
+    ]
+
+    reported = [
+            {
+                'name': get_prop_name(MD, k),
+                'amount': v,
+                'unit': get_prop_unit(MD, k),
+                'comment': get_prop_comment(MD, k),
+                'uncertainty': default_WW_property_uncertainty,
+            }
+        for k, v in passed_props.items()
+        ]
+
+    ignore_in_mass_balance = [
+        'BOD5, mass per volume',  # Expressed as O2
+        'COD, mass per volume',  # Expressed as O2
+        'mass concentration, DOC',  # Included in TOC
+        'mass concentration, nitrogen',  # Sum parameter, already accounting for constituents
+        'mass concentration, sulfur', # Sum parameter, already accounting for constituents
+        'mass concentration, phophorus',  # Sum parameter, already accounting for constituents
+        'mass concentration, dissolved Kjeldahl Nitrogen as N',  # Already accounting for N
+        'mass concentration, Kjeldahl Nitrogen as N'  # Already accounting for N
+    ]
+
+    # Assumption: volume of substances in water is negligible
+    wet_mass = 1000  # Mass of 1m3 of water
+    dry_mass = 0
+    for prop in reported:
+        if prop['name'] in ignore_in_mass_balance:
+            pass
+        elif prop['name'] == "mass concentration, dissolved ammonia NH4 as N":
+            dry_mass+=prop['amount']* 18/14
+        elif prop['name'] == "mass concentration, dissolved nitrate NO3 as N":
+            dry_mass+=prop['amount']* (14+3*16)/14
+        elif prop['name'] == "mass concentration, dissolved nitrite NO2 as N":
+            dry_mass+=prop['amount']* (14+2*16)/14
+        elif prop['name'] == "mass concentration, particulate nitrogen":
+            dry_mass+=prop['amount']* (14)/14 #TODO --> missing deafult N content of particulate nitrogen
+        elif prop['name'] == "mass concentration, dissolved organic nitrogen as N":
+            dry_mass+=prop['amount']* (14)/14 #TODO --> missing deafult N content of dissolved nitrogen, also check if NH4, NO3 and NO2 are included...
+        elif prop['name'] == "mass concentration, dissolved phosphate PO4 as P":
+            dry_mass+=prop['amount']* (31+4*16)/31
+        elif prop['name'] == "mass concentration, particulate phophorus":
+            dry_mass+=prop['amount']* (31)/31  #TODO-->missing default P content of dissolved nitrogen, also check if NH4, NO3 and NO2 are included...
+        elif prop['name'] == "mass concentration, dissolved sulfate SO4 as S":
+            dry_mass+=prop['amount']* (32+4*16)/32
+        elif prop['name'] == "mass concentration, particulate sulfur":
+            dry_mass+=prop['amount']* (32)/32  #TODO-->missing S content of particulate sulfur
+        else:
+            dry_mass += prop['amount']
+
+    obligatory = [
+        {
+            'name': 'wet mass',
+            'amount': 1000 + dry_mass,
+            'comment': "Based on the mass of 1m3 of water + mass of all constituents of wastewater. "\
+                       "Assumes the volume of constituents other than water is negligible.",
+            'uncertainty': no_uncertainty,
+            'unit': 'kg'
+        },
+        {
+            'name': 'water in wet mass',
+            'amount': 1000,
+            'comment': "Based on the mass of 1m3 of water",
+            'uncertainty': no_uncertainty,
+            'unit': 'kg'
+        },
+        {
+            'name': 'water content',
+            'amount': 1000/wet_mass,
+            'comment': "Based on the mass of 1m3 of water",
+            'unit': 'dimensionless',
+            'uncertainty': no_uncertainty,
+        },
+        {
+            'name': 'dry mass',
+            'amount': dry_mass,
+            'comment': "Estimated by summing all constituents of wastewater."\
+                       " Uncertainties due to some parameters expressed as constituents "\
+                       "(e.g. particulate nitrogen expressed as N)",
+            'uncertainty': no_uncertainty,
+            'unit': 'kg',
+        },
+        {
+            'name': 'carbon content, fossil',
+            'amount': 0,  #TODO-->Estimate C content based on TOC??
+            'comment': "TODO",
+            'uncertainty': no_uncertainty, #TODO,
+            'unit': 'dimensionless',
+        },
+        {
+            'name': 'carbon content, non-fossil',
+            'amount': 0,  # TODO-->Estimate C content based on TOC??
+            'comment': "TODO",
+            'uncertainty': no_uncertainty,  # TODO
+            'unit': 'dimensionless',
+        }
+    ]
+
+    return [prop for prop in [*reported, *obligatory]]

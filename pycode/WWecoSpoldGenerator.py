@@ -2,12 +2,7 @@
 
 from jinja2 import Environment, FileSystemLoader
 import os
-import uuid
-import numpy as np
 import pandas as pd
-from lxml import objectify
-from copy import copy
-from pickle import dump, load
 from .utils import *
 from .load_master_data import load_MD
 from .defaults import *
@@ -25,8 +20,8 @@ class WWecoSpoldGenerator(object):
     #def __init__(self, root_dir, untreated_fraction, overload_loss_fraction_particulate,
     #             overload_loss_fraction_dissolved, WW_type, technology, capacity):
     def __init__(self, **kwargs):
-        os.chdir(r'..')
-        self.root_dir = os.getcwd()
+        #os.chdir(r'..')
+        #self.root_dir = os.getcwd()
         check_for_missing_args(always_required_arguments, kwargs)
         for k, v in kwargs.items():
             setattr(self, k, v)        
@@ -34,14 +29,7 @@ class WWecoSpoldGenerator(object):
         check_for_missing_args(specific_required_args[self.tool_use_type], kwargs)
         self.dataset = create_empty_dataset()
         self.MD = load_MD(self.root_dir)
-        self.dataset['activityName']=self.generate_activity_name()
-        self.generate_activityNameId()
-        self.generate_time_period()
-        self.generate_geography()
-        self.generate_dataset_id()
-        self.generate_activityIndex()
-        self.generate_technology_level()
-    
+
     def generate_ecoSpold2(self, name=None):
         self.dataset['has_userMD'] = False
         for field in ['ActivityNames', 'Sources', 'activityIndexEntry', 'Persons', 'IntermediateExchanges']:
@@ -49,7 +37,13 @@ class WWecoSpoldGenerator(object):
                 self.dataset['has_userMD'] = True
                 break
         self.dataset['exchanges'] = []
-        for group in ['ReferenceProduct', 'ByProduct', 'FromTechnosphere', 'FromEnvironment', 'ToEnvironment']:
+        for group in [
+            'ReferenceProduct',
+            'ByProduct',
+            'FromTechnosphere',
+            'FromEnvironment',
+            'ToEnvironment'
+        ]:
         #groups need to appear in a specific order
             self.dataset['exchanges'].extend(self.dataset[group])
 
@@ -63,7 +57,8 @@ class WWecoSpoldGenerator(object):
         if name is None:
             name = "{}.spold".format(self.dataset['id'])
         rendered = recursive_rendering(dataset, env, os.path.join(self.root_dir, 'output'), name)
-    
+        return (os.path.join(self.root_dir, 'output'), name)
+
     def append_exchange(self, exc, properties, uncertainty,
                         PV_uncertainty = None #Relevant for exchanges with production volumes only
                         ):
@@ -212,10 +207,7 @@ class WWecoSpoldGenerator(object):
         self.MD['IntermediateExchanges'] = pd.concat([self.MD[tab], new_entry])
         return None
 
-    def generate_reference_exchange(
-                              self,
-                              ref_exc_dict,
-                              ):
+    def generate_reference_exchange(self, ref_exc_dict):
         exc = create_empty_exchange()
         if self.WW_type=='municipal average':
             name = 'wastewater, municipal average'
@@ -238,7 +230,7 @@ class WWecoSpoldGenerator(object):
             PV_uncertainty = ref_exc_dict['PV']['uncertainty']
                             )
         return None
-        
+
     def generate_activity_name(self):
         if self.WW_type == "municipal average":
             WW_type_name = ", municipal average"
@@ -253,7 +245,7 @@ class WWecoSpoldGenerator(object):
                 return "treatment of wastewater{}, average treatment".format(WW_type_name)
             else:
                 return "treatment of wastewater{}, {}, {}".format(WW_type_name, self.technology, self.capacity)
-        
+
     def generate_activityNameId(self):
         ''' Return activityNameId from MD or create one.'''
 
@@ -274,7 +266,7 @@ class WWecoSpoldGenerator(object):
                         'ActivityNames': [GenericObject(d, 'user_MD_ActivityNames')]
                        }
                     )
-                    
+
     def generate_geography(self):
         self.dataset.update(
             {
@@ -283,15 +275,13 @@ class WWecoSpoldGenerator(object):
                         
             }
         )
-        
-    def generate_time_period(self):
-        if not hasattr(self, 'timePeriodStart'):
-            self.timePeriodStart = default_timePeriodStarts
-        if not hasattr(self, 'timePeriodEnds'):
-            self.timePeriodEnd = default_timePeriodEnds
+
+    def generate_time_period(self, timePeriodStart, timePeriodEnd):
+        self.timePeriodStart = timePeriodStart
+        self.timePeriodEnd = timePeriodEnd
         self.dataset.update({'startDate':self.timePeriodStart,
                         'endDate':self.timePeriodEnd})
-   
+
     def generate_dataset_id(self):
         '''the activityName, geography, startDate and endDate need to be
             defined first'''
@@ -333,18 +323,19 @@ class WWecoSpoldGenerator(object):
         self.dataset.update({
                 'technologyLevel':level_string_to_int[self.technology_level],
                 })
-            
-    def technology_mix_constructor(self):
-        return [
-            "{0:.0f}%: {}, {}, {}".format(
-                d[k]['fraction'],
-                d[k]['technology_str'],
-                d[k]['capacity'],
-                d[k]['location']
-                )
-        for k in self.technologies_averaged.keys()
-        ]
-    
+
+    def technology_mix_constructor(self):  #TODO --> Get from Lluis B.
+        tech_mix = ""
+        for k, v in self.technologies_averaged.items():
+
+            tech_mix += "{:.0f}%: {}, {}, {}".format(
+                v['fraction'],
+                v['technology_str'],
+                v['capacity'],
+                v['location']
+            )
+        return tech_mix
+
     def generate_comment(self, comment_type, list_of_string_comments):
         types_of_comments = [
                 'allocationComment',
@@ -363,6 +354,7 @@ class WWecoSpoldGenerator(object):
         self.dataset.update({
                 comment_type:GenericObject(d, 'TTextAndImage')
                 })
+
 
     def  generate_representativeness(self,
                                      samplingProcedure_text,
@@ -385,28 +377,22 @@ class WWecoSpoldGenerator(object):
         self.dataset['modellingAndValidation'] = GenericObject(d,
                                                 'ModellingAndValidation'
                                                 )
-    def get_prop_name(self, prop_id):
-        return self.MD['Properties'][self.MD['Properties']['id']==prop_id].index.tolist()[0]
 
-    def get_prop_unit(self, prop_id):
-        return self.MD['Properties'][self.MD['Properties']['id']==prop_id]['unitName'].values[0]
 
-    # def convert_WW_prop_dict(self, prop_dict, comment, uncertainty):
-        # d = {}
-        # for k, v in prop_dict.items():
-            # d.append({'name': get_prop_name(k)}
-            # d.append({'amount': v}
-            # d.append({'unit': get_prop_unit(k)}
-            # d.append({'comment': },
-            # d.append({'uncertainty': k['uncertainty']})
-        # return d
-        
+
 class WWT_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to WWT dataset""" 
     def __init__(self, **kwargs):
         self.act_type = 'treatment'
         super().__init__(**kwargs)
-        self.generate_activity_boundary_text(default_activity_ends_treatment)            
+        self.dataset['activityName']=self.generate_activity_name()
+        self.generate_activityNameId()
+        self.generate_time_period(default_timePeriodStarts_treated, default_timePeriodEnds_treated)
+        self.generate_geography()
+        self.generate_dataset_id()
+        self.generate_activityIndex()
+        self.generate_technology_level()
+        self.generate_activity_boundary_text(default_activity_ends_treatment)
         if self.tool_use_type == 'average':
             self.tech_description = [
                 default_tech_descr_avg,
@@ -426,56 +412,112 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
         if self.tool_use_type == 'average':
             self.generalComment.append(model_description_avg)
         self.generate_comment('generalComment', self.generalComment)
-        self.generate_comment('timePeriodComment', default_timePeriodComment)
+        self.generate_comment('timePeriodComment', default_timePeriodComment_treatment)
         if self.tool_use_type == 'average':
-            if self.location in list_countries_with_specific_data:
+            if self.geography in list_countries_with_specific_data:
                 self.generate_comment('geographyComment', default_avg_good_geo_comment)
             else:
                 self.generate_comment('geographyComment', default_avg_bad_geo_comment)
         else:
             self.generate_comment('geographyComment', default_spec_geo_comment)
         self.generate_representativeness(
-            placeholder_samplingProcedure_text_treat,
-            placeholder_extrapolations_text_treat,
-            percent=0 #TODO: how to estimate this
+            default_samplingProcedure_text_treat,
+            default_extrapolations_text_treat,
+            percent=0
+            ) #TODO representativeness for treatment
+        ref_exc_dict = {
+            'data': {'comment': ref_exchange_comment_treat,},
+            'PV':{
+              'amount': self.PV * (1-self.untreated_fraction),
+              'uncertainty': default_PV_uncertainty_treat,
+              'comment': generate_default_PV_comment_treated(self.PV, self.untreated_fraction),
+                },
+            'properties': generate_WW_properties(self.MD, self.WWTP_influent_properties),
+            }
+        self.generate_reference_exchange(ref_exc_dict)
+        technosphere_inputs = []
+        # Electricity demand
+        electricity = create_empty_exchange()
+        electricity.update(
+            {
+                'group': 'FromTechnosphere',
+                'name': 'electricity, low voltage',
+                'unitName': 'kWh',
+                'amount': self.electricity,
+                'comment': default_electricity_comment,
+            }
+        )
+        self.append_exchange(electricity, [], default_electricity_uncertainty)
+
+        # FeCl3
+        if hasattr(self, 'FeCl3') and self.FeCl3 != 0:
+            FeCl3 = create_empty_exchange()
+            FeCl3.update(
+                {
+                    'group': 'FromTechnosphere',
+                    'name': 'iron (III) chloride',
+                    'unitName': 'kg',
+                    'amount': self.FeCl3,
+                    'comment': "Used for chemical removal of P",
+                }
             )
-        
+            self.append_exchange(FeCl3, [], default_FeCl3_uncertainty)
+
+        if hasattr(self, 'acrylamide') and self.acrylamide != 0:
+            acrylamide = create_empty_exchange()
+            acrylamide.update(
+                {
+                    'group': 'FromTechnosphere',
+                    'name': 'polyacrylamide',
+                    'unitName': 'kg',
+                    'amount': self.acrylamide,
+                    'comment': "Used for sludge dewatering",
+                }
+            )
+        self.append_exchange(acrylamide, [], default_acrylamide_uncertainty)
+
+        if hasattr(self, 'NaHCO3') and self.NaHCO3 != 0:
+            NaHCO3 = create_empty_exchange()
+            NaHCO3.update(
+                {
+                    'group': 'FromTechnosphere',
+                    'name': 'sodium bicarbonate',
+                    'unitName': 'kg',
+                    'amount': self.NaHCO3,
+                    'comment': "Used to maintain alkalinity",
+                }
+            )
+        self.append_exchange(NaHCO3, [], default_NaHCO3_uncertainty)
+
 class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
-    """WWecoSpoldGenerator specific to untreated fraction""" 
-    
+    """WWecoSpoldGenerator specific to untreated fraction"""
+
     def __init__(self, **kwargs):
         self.act_type = 'untreated discharge'
         super().__init__(**kwargs)
-        self.generate_activity_boundary_text(default_activity_ends_no_treatment)            
-        self.generate_comment('technologyComment', ["No technology modeled: direct discharge."])
-        self.generate_comment('generalComment', ["Based on statistical data about #TODO"])
-        self.generate_comment('timePeriodComment', [""])
+        self.dataset['activityName']=self.generate_activity_name()
+        self.generate_activityNameId()
+        self.generate_time_period(default_timePeriodStarts_untreated, default_timePeriodEnds_untreated)
+        self.generate_geography()
+        self.generate_dataset_id()
+        self.generate_activityIndex()
+        self.generate_technology_level()
+        self.generate_activity_boundary_text(default_activity_ends_untreated)
+        self.generate_comment('technologyComment', default_technology_comment_untreated)
+        self.generate_comment('generalComment', default_general_comment_untreated )
+        self.generate_comment('timePeriodComment', default_time_period_comment_untreated)
         self.generate_comment('geographyComment', ["TODO"])
-        self.generate_representativeness("", "", 100)
+        self.generate_representativeness(default_representativeness_untreated_1, default_representativeness_untreated_2, 100)
         ref_exc_dict = {
-            'data': {'comment': 'TODO',},
+            'data': {'comment': ref_exchange_comment_untreated,},
             'PV':{
-              'amount': self.PV,
-              'uncertainty': default_PV_uncertainty,
-              'comment': self.generate_default_untreated_PV_comment(),
+              'amount': self.PV * self.untreated_fraction,
+              'uncertainty': default_PV_uncertainty_untreated,
+              'comment': generate_default_PV_comment_untreated(self.PV, self.untreated_fraction),
                 },
-            'properties': self.generate_untreated_properties(),
+            'properties': generate_WW_properties(self.MD, self.WW_properties),
             }
-        self.generate_reference_exchange(ref_exc_dict)
-        self.generate_ecoSpold2()
-        
-    def generate_untreated_properties(self):
-        new = [
-                {
-                    'name': self.get_prop_name(k),
-                    'amount': v,
-                    'unit': self.get_prop_unit(k),
-                    'comment': temp_properties_untreated_comment,
-                    'uncertainty': temp_properties_untreated_uncertainty,
-                }
-            for k, v in self.WW_properties.items()
-            ]
-        return new
 
-    def generate_default_untreated_PV_comment(self):
-        return "TODO PV comment. Initial PV={}, Untreated fraction: {}".format(self.PV, self.untreated_fraction)
+        self.generate_reference_exchange(ref_exc_dict)
+        #self.generate_ecoSpold2()
+        

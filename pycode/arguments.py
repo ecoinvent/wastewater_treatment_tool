@@ -30,8 +30,13 @@ always_required_arguments = [
     "WWTP_emissions_water", #dict, see below,
     "WWTP_emissions_air", #dict, see below,
     "sludge_amount", #float,
-    "sludge_properties", #dict, see below
+    "sludge_properties", #dict, see below,
+    "electricity", #amount
+    "FeCl3", #"amount"
+    "acrylamide", #amount
+    "NaHCO3", #amount
 ]
+
 
 # args depending on whether we have a specific or average "tool_use_type"
 specific_required_args = {
