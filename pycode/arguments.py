@@ -34,7 +34,8 @@ always_required_arguments = [
     "electricity", #amount
     "FeCl3", #"amount"
     "acrylamide", #amount
-    "NaHCO3", #amount
+    "NaHCO3", #amount,
+    "fraction_C_fossil"
 ]
 
 
@@ -48,7 +49,7 @@ specific_required_args = {
         "tech_description_specific_1", # See below
     ],
     'average': [
-        "technologies_averaged", # Dict of the type {0:{fraction:x, technology_str:y, capacity:z, location:location}, 1:{...}}
+        "technologies_averaged", # list of dicts {fraction:float[0,1], technology_str:bit_string, capacity:string, location:location}
     ]
 }
 

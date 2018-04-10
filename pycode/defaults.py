@@ -80,14 +80,27 @@ default_activity_ends_treatment = "This activity ends "\
     with metals and other elements,
 '''
 
+
+def technology_mix_constructor(technologies_averaged):  # TODO --> test when tool runs n times
+    """ Generate string representing technology mix from a technology mix dict"""
+    tech_mix = "Averaged technologies:"
+    for tech in technologies_averaged:
+        tech_mix += "\nShare: {:.0f}%; {}; Capacity: {}; Location: {}".format(
+            tech['fraction']*100,
+            decode_tech_bitstring(tech['technology_str'])[0:-1],
+            tech['capacity'],
+            tech['location']
+        )
+    return tech_mix
+
 def decode_tech_bitstring(bit_string): #i.e "1110001"
     tecs=[
     'Primary settler',
     'Aerobic BOD removal',
     'Nitrification',
     'Denitrification',
-    'Bio P removal',
-    'Chem P removal',
+    'Biological P removal',
+    'Chemical P removal',
     'Metals and other elements',
     ]
 

@@ -29,6 +29,7 @@ class WWecoSpoldGenerator(object):
         check_for_missing_args(specific_required_args[self.tool_use_type], kwargs)
         self.dataset = create_empty_dataset()
         self.MD = load_MD(self.root_dir)
+        # TODO include sewer system!
 
     def generate_ecoSpold2(self, name=None):
         self.dataset['has_userMD'] = False
@@ -324,18 +325,6 @@ class WWecoSpoldGenerator(object):
                 'technologyLevel':level_string_to_int[self.technology_level],
                 })
 
-    def technology_mix_constructor(self):  #TODO --> Get from Lluis B.
-        tech_mix = ""
-        for k, v in self.technologies_averaged.items():
-
-            tech_mix += "{:.0f}%: {}, {}, {}".format(
-                v['fraction'],
-                v['technology_str'],
-                v['capacity'],
-                v['location']
-            )
-        return tech_mix
-
     def generate_comment(self, comment_type, list_of_string_comments):
         types_of_comments = [
                 'allocationComment',
@@ -379,7 +368,6 @@ class WWecoSpoldGenerator(object):
                                                 )
 
 
-
 class WWT_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to WWT dataset""" 
     def __init__(self, root_dir, **kwargs):
@@ -397,7 +385,7 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
         if self.tool_use_type == 'average':
             self.tech_description = [
                 default_tech_descr_avg,
-                self.technology_mix_constructor()
+                technology_mix_constructor(self.technologies_averaged)
             ]
         else:
             self.tech_description = [
