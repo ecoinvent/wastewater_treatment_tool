@@ -57,6 +57,20 @@ default_activity_ends_treatment = "This activity ends "\
     "These are included in another dataset specifically covering the discharge of untreated wastewater. " \
     "The production of sludge is included, but its treatment is covered by another treatment activity."
 
+
+def technology_mix_constructor(technologies_averaged):  # TODO --> test when tool runs n times
+    """ Generate string representing technology mix from a technology mix dict"""
+    tech_mix = "Averaged technologies:"
+    for tech in technologies_averaged:
+        tech_mix += "\nShare: {:.0f}%; {}; Capacity: {}; Location: {}".format(
+            tech['fraction']*100,
+            decode_tech_bitstring(tech['technology_str'])[0:-1],
+            tech['capacity'],
+            tech['location']
+        )
+    return tech_mix
+
+def decode_tech_bitstring(bit_string): #i.e "1110001"
 '''
   decode a technology mix description based on 7 bits packed into a string
   bit position | technology
@@ -79,21 +93,6 @@ default_activity_ends_treatment = "This activity ends "\
     without chem P removal,
     with metals and other elements,
 '''
-
-
-def technology_mix_constructor(technologies_averaged):  # TODO --> test when tool runs n times
-    """ Generate string representing technology mix from a technology mix dict"""
-    tech_mix = "Averaged technologies:"
-    for tech in technologies_averaged:
-        tech_mix += "\nShare: {:.0f}%; {}; Capacity: {}; Location: {}".format(
-            tech['fraction']*100,
-            decode_tech_bitstring(tech['technology_str'])[0:-1],
-            tech['capacity'],
-            tech['location']
-        )
-    return tech_mix
-
-def decode_tech_bitstring(bit_string): #i.e "1110001"
     tecs=[
     'Primary settler',
     'Aerobic BOD removal',
