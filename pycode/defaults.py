@@ -56,6 +56,58 @@ default_activity_ends_treatment = "This activity ends "\
     "unconnected and direct emissions due to combined sewer overflow are also excluded. " \
     "These are included in another dataset specifically covering the discharge of untreated wastewater. " \
     "The production of sludge is included, but its treatment is covered by another treatment activity."
+
+'''
+  decode a technology mix description based on 7 bits packed into a string
+  bit position | technology
+  -------------+--------------------------
+  0            | primary settler
+  1            | bod removal
+  2            | nitrification
+  3            | denitrification
+  4            | bio P removal
+  5            | chem P removal
+  6            | metals and other elements
+  -------------+--------------------------
+  example: "1110001"
+  means:
+    treatment with primary settler,
+    with bod removal,
+    with nitrification,
+    without denitrification,
+    without bio P removal,
+    without chem P removal,
+    with metals and other elements,
+'''
+
+def decode_tech_bitstring(bit_string): #i.e "1110001"
+    tecs=[
+    'Primary settler',
+    'Aerobic BOD removal',
+    'Nitrification',
+    'Denitrification',
+    'Bio P removal',
+    'Chem P removal',
+    'Metals and other elements',
+    ]
+
+    #check if length of bit string is too large
+    if(len(bit_string)>len(tecs)):
+        raise ValueError('bit string has more characters than existing wwt technologies')
+    #check that there is at least some information
+    if(len(bit_string)==0 or all([bit_string[i]=="0" for i in range(len(bit_string))])):
+        raise ValueError('no information on technologies')
+    if not all([bit_string[i] in ["0", "1"] for i in range(len(bit_string))]):
+        raise ValueError('bit string had a character which is not 0 or 1')
+
+    #loop bit_string characters
+    tech_list = [tecs[i] for i in range(len(bit_string)) if bit_string[i]=="1"]
+
+    rv=', '.join(map(str, tech_list))
+    rv="Technology summary: "+rv+"."
+    return(rv)
+
+
 default_tech_descr_avg = "The treatment dataset represents a "\
     "weighted average of multiple models of wastewater treatment plants. " + \
     "TODO Some more text" #TODO text to describe weighted average approach
