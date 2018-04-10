@@ -57,6 +57,7 @@ default_activity_ends_treatment = "This activity ends "\
     "These are included in another dataset specifically covering the discharge of untreated wastewater. " \
     "The production of sludge is included, but its treatment is covered by another treatment activity."
 
+def decode_tech_bitstring(bit_string): #i.e "1110001"
 '''
   decode a technology mix description based on 7 bits packed into a string
   bit position | technology
@@ -79,8 +80,6 @@ default_activity_ends_treatment = "This activity ends "\
     without chem P removal,
     with metals and other elements,
 '''
-
-def decode_tech_bitstring(bit_string): #i.e "1110001"
     tecs=[
     'Primary settler',
     'Aerobic BOD removal',
