@@ -1,0 +1,31 @@
+NOTE: these are todos to discuss between Lluis and I.
+My list of todos for ecoSpold (uncertainty, comments, etc.) is elsewhere.
+
+**New arguments**
+- "untreated_source_regions": The regions from the UNICEF file that the ecoinvent region maps.
+    Part of these are in the "region_mapping.xlsx" I sent you on April 4
+    The rest, you were able to map directly I think.
+    The value I refer to here is found in the Data_clean sheet, column "untreated_source_regions"
+    The values should be passed as a dict:
+        {ecoinvent_region: untreated_source_region}
+    For single WWTP models, there will only be one k:v
+    For mixes, there will be many.
+- carbon_content, or a procedure for me to estimate this based on inputs
+    See email carbon content of WW, fossil vs. non-fossil, COD emissions to air?
+- fraction_C_fossil (See email carbon content of WW, fossil vs. non-fossil, COD emissions to air?)
+
+
+**Data**
+- Integrate Peter's data in tool.
+- Determine what data to use for GLO
+- Fix "untreated" amounts based on new data sent by Pascal
+
+**Tool**
+- Force the BOD removal to be selected in the technology description?
+- Disactivate ecoSPold generation if BOD removal is not selected.
+- Figure out the whole N to environment issue
+    see email Re: Missing ecoinvent ids for some items, April 10 7:37
+- Figure out what to do with TP emissions to water
+    see email Re: Missing ecoinvent ids for some items, April 10 7:37
+- Determine where the conversion of amounts of e.g. "NH4 as N" to "NH4" occurs (tool or ecSPold generator)
+
