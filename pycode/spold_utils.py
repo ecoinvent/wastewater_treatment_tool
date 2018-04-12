@@ -358,3 +358,4 @@ def generate_WW_properties(MD, passed_props):
     ]
 
     return [prop for prop in [*reported, *obligatory]]
+

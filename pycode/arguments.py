@@ -53,12 +53,6 @@ specific_required_args = {
     ]
 }
 
-# Ars that have defaults, but that we may want to inform based on data from user
-optional_args = [
-    "timePeriodStart", #TODO --> Should we use defaults (which?) or ask for this data in tool?
-    "timePeriodEnd", #TODO --> Should we use defaults (which?) or ask for this data in tool?
-]
-
 ############################################
 #Some details on more complicated arguments#
 ############################################
@@ -119,8 +113,24 @@ WWTP_influent_properties = {
     
     ############## sludge_properties ################
     Sludge properties
-    Use the 
-    The format is the same as for CSO_amounts (see wastewater_treatment_tool\resources\emissions_to_air.json for id)
+    **ALL REPORTED PER 1 KG OF SLUDGE, WET MASS BASIS**
+    
+    The required properties are:
+        'wet mass', 67f102e2-9cb6-4d20-aa16-bf74d8a03326
+            1 (by definition)
+        'water in wet mass', 6d9e1462-80e3-4f10-b3f4-71febd6f1168
+            kg of water/kg sludge
+        From this, I can calculate:        
+            'dry mass', 3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa
+                (1 - kg water/kg sludge)
+            'water content', a9358458-9724-4f03-b622-106eda248916 
+                reported on a dry mass basis, 
+                i.e. 'water in wet mass'/'dry mass'
+        'carbon content, fossil', c74c3729-e577-4081-b572-a283d2561a75
+            kg C/kg sludge * fraction_C_fossil
+        'carbon content, non-fossil', 6393c14b-db78-445d-a47b-c0cb866a1b25
+            kg C/kg sludge * (1-fraction_C_fossil)
+        and all properties that the WW had, again per kg sludge
     
         
     

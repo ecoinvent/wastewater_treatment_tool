@@ -3,6 +3,7 @@
 from jinja2 import Environment, FileSystemLoader
 import os
 import pandas as pd
+from collections import defaultdict
 from .utils import *
 from .load_master_data import load_MD
 from .defaults import *
@@ -367,6 +368,62 @@ class WWecoSpoldGenerator(object):
                                                 'ModellingAndValidation'
                                                 )
 
+    def get_infrastructure_class_mix(self):
+        if self.tool_use_type == 'specific':
+            self.infrastructure_mix = {self.capacity:100}
+        else:
+            self.infrastructure_mix = defaultdict(float)
+            for d in self.technologies_averaged():
+                self.infrastructure_mix[d['capacity']]+=d['fraction']
+
+    def calculate_sewer_amounts(self):
+        doka_sewer_estimates = {
+            'class 1': 0.1238e-6,
+            'class 2': 0.1683e-6,
+            'class 3': 0.2178e-6,
+            'class 4': 0.2822e-6,
+            'class 5': 0.3762e-6,
+        }
+        self.sewer_amounts = {k: doka_sewer_estimates[k]*self.infrastructure_mix[k]
+                              for k in doka_sewer_estimates.keys()
+                              }
+
+    def calculate_infrastructure_amounts(self):
+        lifetime = 30
+        m3_per_PCE = 202 #TODO validate this number
+        PCE_per_class = {
+            'class 1': 200000, #todo validate
+            'class 2': 75000,
+            'class 3': 30000,
+            'class 4': 6000,
+            'class 5': 1015,
+        }
+    self.infrastructure_amounts = {k: 1 / (lifetime * m3_per_PCE * PCE_per_class[k])
+                                   for k in self.infrastructure_mix.keys()
+    }
+
+
+    def add_sewer_exchanges(self):
+        sewer_name_mapping = {
+            'class 1': 'sewer grid, 4.7E10l/year, 583 km',
+            'class 2': 'sewer grid, 1.1E10l/year, 242 km',
+            'class 3': 'sewer grid, 5E9l/year, 110 km',
+            'class 4': 'sewer grid, 1E9l/year, 30 km',
+            'class 5': 'sewer grid, 1.6E8l/year, 6 km',
+        }
+        for sewer_class, sewer_amount in self.sewer_amounts:
+            sewer = create_empty_exchange()
+            sewer.update(
+                {
+                    'group': 'FromTechnosphere',
+                    'name': sewer_name_mapping[sewer_class],
+                    'unitName': 'km',
+                    'amount': sewer_amount,
+                    'comment': "Rough estimate based on Swiss data, based on WWTP capacity classes in the region",
+                }
+            )
+            self.append_exchange(sewer, [], default_sewer_uncertainty)
+
 
 class WWT_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to WWT dataset""" 
@@ -494,10 +551,25 @@ class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
         self.generate_technology_level()
         self.generate_activity_boundary_text(default_activity_ends_untreated)
         self.generate_comment('technologyComment', default_technology_comment_untreated)
-        self.generate_comment('generalComment', default_general_comment_untreated )
+        self.generate_comment(
+            'generalComment',
+            (
+                    default_general_comment_untreated_0 \
+                    +  sewer_estimation_text(self.tool_use_type)
+            )
+        )
         self.generate_comment('timePeriodComment', default_time_period_comment_untreated)
-        self.generate_comment('geographyComment', ["TODO"])
-        self.generate_representativeness(default_representativeness_untreated_1, default_representativeness_untreated_2, 100)
+        self.generate_comment('geographyComment', default_geography_comment_untreated)
+        self.generate_representativeness(
+            default_representativeness_untreated_1
+            default_representativeness_untreated_2(
+                self.untreated_source_regions,
+                self.MD,
+                self.geography,
+                self.tool_use_type
+            ),
+            ""
+        )
         ref_exc_dict = {
             'data': {'comment': ref_exchange_comment_untreated,},
             'PV':{
@@ -509,5 +581,7 @@ class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
             }
 
         self.generate_reference_exchange(ref_exc_dict)
+        # EMISSIONS!!
+        self.add_sewer_exchanges()
         #self.generate_ecoSpold2()
         

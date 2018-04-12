@@ -2,8 +2,8 @@
 
 # Untreated fraction
 
-default_timePeriodStarts_untreated = "1995-01-01"  # TODO - what makes sense as a valid time period for untreated fraction?
-default_timePeriodEnds_untreated = "2025-12-31"  # TODO - what makes sense as a valid time period for untreated fraction?
+default_timePeriodStarts_untreated = "2000-01-01"
+default_timePeriodEnds_untreated = "2025-12-31"
 default_technology_level = "Current"
 default_activity_starts = "From the discharge of wastewater to the sewer grid."
 default_activity_ends_untreated = "This activity ends "\
@@ -13,17 +13,70 @@ default_activity_ends_untreated = "This activity ends "\
     "to the environment during episodes (e.g. heavy rainfall, snow melt) where wastewater volume exceeds " \
     "the capacity of the sewer system or treatment plant."
 default_technology_comment_untreated = ["No technology modelled: direct discharge."]
-default_general_comment_untreated = ["Based on statistical data about #TODO"]  #TODO - General comment untreated
+default_general_comment_untreated_0 = [
+    "This dataset accounts for wastewater sent to the sewer system but ultimately "\
+    "not treated in a wastewater treatment plant. It accounts for three things: "\
+    "(1) The wastewater that is directly discharged to the environment because it "\
+    "is not connected to a wastewater treatment plant; "
+    "(2) Wastewater pollutants emitted to the environment due to combined "\
+    "sewer overflow (CSO); and (3) the sewer system itself. ",
+    "The direct discharge (1) is modelled by simply transferring the wastewater "\
+    "pollutants as direct emissions to surface water. The volume of directly "\
+    "discharged water is based on the World Health Organization's Progress on "\
+    "Drinking Water, Sanitation and Hygiene 2017 update",
+    "Pollutants lost to CSO (2) are estimated using Swiss data, as used in ecoinvent "\
+    "v2 data based on Doka (2009). This is a rough estimate at best when applied "\
+    "to other countries.",
+    ""
+    ]
+
+def sewer_estimation_text(tool_use_type):
+    if tool_use_type == "average":
+        return "The amount of sewers per m3 is based on Swiss data, as used in ecoinvent "\
+        "v2 data based on Doka (2009). This data provides estimations of sewer "\
+        "infrastructure per m3 of water for different WWTP capacities. This dataset "\
+        "creates a weighted average of capacity classes of the wastewater treatment "\
+        "plants that are used in the treatment dataset for the same wastewater. "\
+        "This is a rough estimation at best, which is reflected in the uncertainty."
+    else:
+        return "The amount of sewers per m3 is based on Swiss data, as used in ecoinvent "\
+        "v2 data based on Doka (2009). This data provides estimations of sewer "\
+        "infrastructure per m3 of water for different WWTP capacities. "\
+        "This is a rough estimation at best, which is reflected in the uncertainty."
+
 default_time_period_comment_untreated = [
-    "Untreated fraction based on country-specific data for 2015",
-    "Combined sewer overflow data based on TODO"  # TODO - CSO comment for time period
+    "The discharge of wastewater to the environment without treatment is an atemporal process: it does not have a time period per se.",
+    "The untreated fraction, which is used to determine the production volume, is based on 2015 data.",
+    "Combined sewer overflow and sewer infrastructure data based on estimates for Swiss condition in the "\
+    "1990s, taken from Doka (2009)."
 ]
+
 default_geography_comment_untreated = [
-    "Untreated fraction based on country-specific data",
-    "CSO",  #TODO - CSO comment for geography
+    "This relates to the geography that the LCI dataset aims to be valid for, "\
+    "and not the geography of the data that was used to populate it. For geographical "\
+    "representativeness, see Representativeness/Extrapolations field."
 ]
-default_representativeness_untreated_1 = "" # TODO --> representativeness comment 1
-default_representativeness_untreated_2 = ""# TODO --> representativeness comment 2
+
+default_representativeness_untreated_1 = "No sampled data."
+
+def default_representativeness_untreated_2(untreated_source_regions, MD, geography, tool_use_type):
+    if tool_use_type == "specific":
+        discharge_extrapolation =  "The data used to estimate the amount of direct discharge is based on data from {}".format(
+            untreated_source_regions[MD['geography'].loc[geography, 'name']]
+        )
+    else:
+        discharge_extrapolation ="The data used to estimate the amount of direct "\
+            "discharge is based on data from the following regions"
+        for i, (k, v) in enumerate(untreated_source_regions.items()):
+            if i = 0:
+                discharge_extrapolation += "{}: {}"
+            else:
+                discharge_extrapolation += "; {}: {}"
+            discharge_extrapolation = discharge_extrapolation+"."
+        discharge_extrapolation += "The data for combined sewer overflow and sewer "\
+            "infrastructure is based on Swiss data (Doka, 2009)."
+    return discharge_extrapolation
+
 ref_exchange_comment_untreated = "Wastewater sent to sewer system and directly emitted to environment"
 def generate_default_PV_comment_untreated(PV, untreated_fraction):
     return  "Calculated based on total amount of wastewater set to the "\
@@ -33,15 +86,83 @@ def generate_default_PV_comment_untreated(PV, untreated_fraction):
             "to a wastewater treatment plant ({})".format(PV, untreated_fraction)
 default_PV_uncertainty_untreated = {
     'variance': 0.0006,
-    'pedigreeMatrix': [1, 2, 3, 4, 5],  # TODO - pedigree matrix for PV, untreated
-    'comment': "TODO"  #TODO --> PV uncertainty comment
+    'pedigreeMatrix': [4, 5, 1, 1, 1],
+    'comment': "Pedigree scores associated with quality of WHO data on fraction of "\
+    "wastewater discharged to sewer that is connected to a wastewater treatment plant."
 }
-default_WW_property_uncertainty = {
-    'variance': 0.0006,
-    'pedigreeMatrix': [1, 2, 3, 4, 5],  # TODO - pedigree matrix for WW properties
+
+def direct_emission_uncertainty(pollutant,
+                                untreated_fraction,
+                                CSO_particulate,
+                                CSO_dissolved,
+                                basic_pollutant_list,
+                                MD):
+    """Uncertainty depends on whether direct discharge or CSO is dominant"""
+    avg_CSO = (CSO_dissolved + CSO_particulate)/2
+    if avg_CSO >= untreated_fraction:
+        if MD['property'].loc[pollutant, 'name'] in basic_pollutant_list:
+            return {
+        'variance': 0.04,
+        'pedigreeMatrix': [5, 5, 5, 5, 1],
+        'comment': "Uncertainty represents the that of the wastewater composition."
+    }
+        else:
+            return {
+                'variance': 0.65,
+                'pedigreeMatrix': [5, 5, 5, 5, 1],
+                'comment': "Uncertainty represents the that of the wastewater composition."
+            }
+    else:
+        if MD['property'].loc[pollutant, 'name'] in basic_pollutant_list:
+            return {
+        'variance': 0.04,
+        'pedigreeMatrix': [1, 1, 1, 1, 1],
+        'comment': "Uncertainty represents the that of the wastewater composition."
+            }
+        else:
+            return {
+                'variance': 0.65,
+                'pedigreeMatrix': [1, 1, 1, 1, 1],
+                'comment': "Uncertainty represents the that of the wastewater composition."
+            }
+
+basic_pollutants = [
+    "BOD5, mass per volume",
+    "COD, mass per volume",
+    "mass concentration, DOC",
+    "mass concentration, TOC",
+    "mass concentration, dissolved ammonia NH4 as N",
+    "mass concentration, dissolved nitrate NO3 as N",
+    "mass concentration, dissolved nitrite NO2 as N",
+    "mass concentration, particulate nitrogen",
+    "mass concentration, dissolved organic nitrogen as N",
+    "mass concentration, nitrogen",
+    "mass concentration, dissolved Kjeldahl Nitrogen as N",
+    "mass concentration, Kjeldahl Nitrogen as N",
+    "mass concentration, potassium",
+    "mass concentration, magnesium",
+    "mass concentration, sodium",
+    "mass concentration, dissolved phosphate PO4 as P",
+    "mass concentration, particulate phophorus",
+    "mass concentration, phophorus",
+    "mass concentration, dissolved sulfate SO4 as S",
+    "mass concentration, particulate sulfur",
+    "mass concentration, sulfur",
+]
+
+default_WW_property_uncertainty_basic = {
+    'variance': 0.04,
+    'pedigreeMatrix': [1, 1, 1, 1, 1],  # TODO - pedigree matrix for WW properties
     'comment': "TODO"  # TODO --> property uncertainty comment
 }
 
+default_sewer_uncertainty = {
+    'variance': 0.3,
+    'pedigreeMatrix': [5, 5, 5, 5, 5],
+    'comment': "Rough estimate based on Swiss data, as reported in Doka 2009"
+}
+
+# ************************************
 # Treatment defaults
 
 default_timePeriodStarts_treated = "1995-01-01"  # TODO - what makes sense as a valid time period for untreated fraction?
@@ -62,7 +183,7 @@ def technology_mix_constructor(technologies_averaged):  # TODO --> test when too
     """ Generate string representing technology mix from a technology mix dict"""
     tech_mix = "Averaged technologies:"
     for tech in technologies_averaged:
-        tech_mix += "\nShare: {:.0f}%; {}; Capacity: {}; Location: {}".format(
+        tech_mix += "\n\tShare: {:.0f}%; \n\t\t{}; \n\t\tCapacity: {}; \n\t\tLocation: {}".format(
             tech['fraction']*100,
             decode_tech_bitstring(tech['technology_str'])[0:-1],
             tech['capacity'],
@@ -71,28 +192,28 @@ def technology_mix_constructor(technologies_averaged):  # TODO --> test when too
     return tech_mix
 
 def decode_tech_bitstring(bit_string): #i.e "1110001"
-'''
-  decode a technology mix description based on 7 bits packed into a string
-  bit position | technology
-  -------------+--------------------------
-  0            | primary settler
-  1            | bod removal
-  2            | nitrification
-  3            | denitrification
-  4            | bio P removal
-  5            | chem P removal
-  6            | metals and other elements
-  -------------+--------------------------
-  example: "1110001"
-  means:
-    treatment with primary settler,
-    with bod removal,
-    with nitrification,
-    without denitrification,
-    without bio P removal,
-    without chem P removal,
-    with metals and other elements,
-'''
+    '''
+      decode a technology mix description based on 7 bits packed into a string
+      bit position | technology
+      -------------+--------------------------
+      0            | primary settler
+      1            | bod removal
+      2            | nitrification
+      3            | denitrification
+      4            | bio P removal
+      5            | chem P removal
+      6            | metals and other elements
+      -------------+--------------------------
+      example: "1110001"
+      means:
+        treatment with primary settler,
+        with bod removal,
+        with nitrification,
+        without denitrification,
+        without bio P removal,
+        without chem P removal,
+        with metals and other elements,
+    '''
     tecs=[
     'Primary settler',
     'Aerobic BOD removal',
@@ -146,7 +267,7 @@ list_countries_with_specific_data = [  # TODO when we have the data!!!
 ]
 
 default_avg_good_geo_comment = ["The data used to model and average the different WWTP is based on country-specific data."]
-default_avg_bad_geo_comment = ["TODO - DEPENDS N HOW WE GLOBALLY AVERAGE"] #TODO depends on n-model approach
+default_avg_bad_geo_comment = ["No data was available for the region. A rough global "] #TODO depends on n-model approach
 default_spec_geo_comment = ["The data used to model the WWTP is specific to the location."]#TODO get info on countries used to model vs. country required
 
 default_samplingProcedure_text_treat = "TODO"  #TODO
