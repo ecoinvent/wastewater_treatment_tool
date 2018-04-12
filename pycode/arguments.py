@@ -19,6 +19,7 @@ THe arguments are listed here. Some are detailed below in the section
 always_required_arguments = [
     "tool_use_type", # "average" or "specific". 
     "untreated_fraction", #float, [0, 1]
+    "untreated_as_emissions", # Same as CSO, with 100% for both particulates and dissolved
     "CSO_particulate", #float, [0, 1]
     "CSO_dissolved", #float, [0, 1],
     "CSO_amounts",
