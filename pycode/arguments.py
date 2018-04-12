@@ -35,7 +35,8 @@ always_required_arguments = [
     "FeCl3", #"amount"
     "acrylamide", #amount
     "NaHCO3", #amount,
-    "fraction_C_fossil"
+    "fraction_C_fossil",
+    "carbon_content"
 ]
 
 
