@@ -32,6 +32,7 @@ always_required_arguments = [
     "WWTP_emissions_air", #dict, see below,
     "sludge_amount", #float,
     "sludge_properties", #dict, see below,
+    "sludge_water_content", #fraction of wet mass that is water.
     "electricity", #amount
     "FeCl3", #"amount"
     "acrylamide", #amount
