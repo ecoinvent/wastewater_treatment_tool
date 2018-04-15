@@ -47,8 +47,6 @@ specific_required_args = {
         "technology_level_1", # str, ["aerobic, intensive", "aerobic, extensive", "anaerobic"]
         "technology_level_2", # str, built from "binary string", see LB email
         "capacity", # Class1, Class2, etc.
-        "tech_description_specific_0", # See below
-        "tech_description_specific_1", # See below
     ],
     'average': [
         "technologies_averaged", # list of dicts {fraction:float[0,1], technology_str:bit_string, capacity:string, location:location}
