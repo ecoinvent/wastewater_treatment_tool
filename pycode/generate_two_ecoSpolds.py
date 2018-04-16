@@ -53,6 +53,7 @@ WWTP_influent_properties = { } #properties after CSO
 tool_use_type      = 'average'
 WW_type            = 'average'
 PV_comment         = 'Some PV comment'
+
 technologies_averaged = {
   0: {
       'fraction':0.4,

@@ -210,8 +210,8 @@ def build_MD(MD_xml_dir, MD_fields_xls, pickle_dump_dir, MD_xls_dump_dir=None):
     
     def set_MD_indexes(MD):
         indices = {
-            'Geographies': ['shortname'], 
-            'Units': ['name'], 
+            'Geographies': ['name'],
+            'Units': ['name'],
             'IntermediateExchanges': ['name'], 
             'ElementaryExchanges': ['name', 'compartment', 'subcompartment'], 
             'Compartments': ['compartmentName', 'subcompartmentName'], 

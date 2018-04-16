@@ -10,6 +10,8 @@ from .defaults import *
 from .placeholders import *
 from .arguments import *
 from .spold_utils import *
+#from .direct_emissions import total_untreated_release
+from .properties import all_ww_props
 
 
 class WWecoSpoldGenerator(object):
@@ -18,11 +20,7 @@ class WWecoSpoldGenerator(object):
     Is instantiated with data passed from the JavaScript wastewater treatment tool.
     """
     
-    #def __init__(self, root_dir, untreated_fraction, overload_loss_fraction_particulate,
-    #             overload_loss_fraction_dissolved, WW_type, technology, capacity):
     def __init__(self, **kwargs):
-        #os.chdir(r'..')
-        #self.root_dir = os.getcwd()
         check_for_missing_args(always_required_arguments, kwargs)
         for k, v in kwargs.items():
             setattr(self, k, v)        
@@ -30,7 +28,7 @@ class WWecoSpoldGenerator(object):
         check_for_missing_args(specific_required_args[self.tool_use_type], kwargs)
         self.dataset = create_empty_dataset()
         self.MD = load_MD(self.root_dir)
-        # TODO include sewer system!
+        self.get_infrastructure_class_mix()
 
     def generate_ecoSpold2(self, name=None):
         self.dataset['has_userMD'] = False
@@ -274,7 +272,6 @@ class WWecoSpoldGenerator(object):
             {
                 'geography': self.geography,
                 'geographyId': self.MD['Geographies'].loc[self.geography, 'id']
-                        
             }
         )
 
@@ -345,7 +342,6 @@ class WWecoSpoldGenerator(object):
                 comment_type:GenericObject(d, 'TTextAndImage')
                 })
 
-
     def  generate_representativeness(self,
                                      samplingProcedure_text,
                                      extrapolations_text,
@@ -373,58 +369,168 @@ class WWecoSpoldGenerator(object):
             self.infrastructure_mix = {self.capacity:100}
         else:
             self.infrastructure_mix = defaultdict(float)
-            for d in self.technologies_averaged():
+            for d in self.technologies_averaged.values():
                 self.infrastructure_mix[d['capacity']]+=d['fraction']
-
-    def calculate_sewer_amounts(self):
-        doka_sewer_estimates = {
-            'class 1': 0.1238e-6,
-            'class 2': 0.1683e-6,
-            'class 3': 0.2178e-6,
-            'class 4': 0.2822e-6,
-            'class 5': 0.3762e-6,
-        }
-        self.sewer_amounts = {k: doka_sewer_estimates[k]*self.infrastructure_mix[k]
-                              for k in doka_sewer_estimates.keys()
-                              }
-
-    def calculate_infrastructure_amounts(self):
-        lifetime = 30
-        m3_per_PCE = 202 #TODO validate this number
-        PCE_per_class = {
-            'class 1': 200000, #todo validate
-            'class 2': 75000,
-            'class 3': 30000,
-            'class 4': 6000,
-            'class 5': 1015,
-        }
-    self.infrastructure_amounts = {k: 1 / (lifetime * m3_per_PCE * PCE_per_class[k])
-                                   for k in self.infrastructure_mix.keys()
-    }
-
 
     def add_sewer_exchanges(self):
         sewer_name_mapping = {
-            'class 1': 'sewer grid, 4.7E10l/year, 583 km',
-            'class 2': 'sewer grid, 1.1E10l/year, 242 km',
+            'Class 1 (over 100,000 per-capita equivalents)': 'sewer grid, 4.7E10l/year, 583 km',
+            'Class 2 (50,000 to 100,000 per-capita equivalents)': 'sewer grid, 1.1E10l/year, 242 km',
             'class 3': 'sewer grid, 5E9l/year, 110 km',
             'class 4': 'sewer grid, 1E9l/year, 30 km',
             'class 5': 'sewer grid, 1.6E8l/year, 6 km',
         }
-        for sewer_class, sewer_amount in self.sewer_amounts:
+        sewer_amounts = {
+            k: infrastructure_dict['km_sewer_per_m3'][k] * self.infrastructure_mix[k]
+            for k in self.infrastructure_mix.keys()
+        }
+        for sewer_item in sewer_amounts:
             sewer = create_empty_exchange()
             sewer.update(
                 {
                     'group': 'FromTechnosphere',
-                    'name': sewer_name_mapping[sewer_class],
+                    'name': sewer_name_mapping[sewer_item],
                     'unitName': 'km',
-                    'amount': sewer_amount,
-                    'comment': "Rough estimate based on Swiss data, based on WWTP capacity classes in the region",
+                    'amount': sewer_amounts[sewer_item],
+                    'comment': "Rough estimate based on Swiss data for sewer length per person equivalent. " \
+                               "The length per person equivalent is given per WWTP capacity class." \
+                               "This value is converted to m3 transported using capacity and treated volume amounts from " \
+                               "sample Spanish wastewater treatment plants. The same relations are assumed to " \
+                               "hold whether the water sent to the sewer is ultimately discharged to the environment "\
+                               "or treated."
                 }
             )
             self.append_exchange(sewer, [], default_sewer_uncertainty)
 
+    def add_WWTP_exchanges(self):
+        infrastructure_amounts = {
+            k: 1 / infrastructure_dict['m3_over_life_WWTP'][k]
+            for k in self.infrastructure_mix.keys()
+        }
+        for wwtp in infrastructure_amounts.keys():
+            infra = create_empty_exchange()
+            infra.update(
+                {
+                    'group': 'FromTechnosphere',
+                    'name': infrastructure_dict['name'][wwtp],
+                    'unitName': 'km',
+                    'amount': infrastructure_amounts[wwtp],
+                    'comment': "Rough estimate based on Spanish data for one WWTP of this class." \
+                               "The expected lifetime is 40 years." \
+                               "The conversion from PE to m3 treated is based on observed values " \
+                               "({} m3/year / PE).".format(infrastructure_dict['sample_m3_per_year_WWTP'][wwtp] \
+                                                             / infrastructure_dict['sample_cap_WWTP'][wwtp])
+                }
+            )
+            self.append_exchange(infra, [], default_infrastructure_uncertainty)
 
+    def add_sludge(self):
+        sludge = create_empty_exchange()
+        sludge.update(
+            {
+                'group': 'ByProduct',
+                'name': "sludge, from wastewater treatment", #todo get name for sludge
+                'unitName': 'kg',
+                'amount': self.sludge_amount/(1-temp_sludge_water_content)
+                'comment': "sludge comment"#todo sludge comment
+            }
+        )
+        properties = get_sludge_properties(self.sludge_properties)
+        pass
+
+    def total_untreated_release(self):
+        """ Sum direct discharge and CSO. WIll fail if untreated_fraction == 0!
+
+        Because of this problem, CSO emissions should ideally be placed in another dataset (market, treatment DS)"""
+
+        efs = []
+        for direct_discharge in self.untreated_as_emissions:
+            ef_id = direct_discharge['ecoinvent_id']
+            CSO_amount = [cso_amount['value'] for cso_amount in self.CSO_amounts if cso_amount['ecoinvent_id']==ef_id][0]
+            scaled_CSO_amount = CSO_amount*(1-self.untreated_fraction)/(self.untreated_fraction)
+            total_emission = scaled_CSO_amount + direct_discharge['value']
+            fraction_CSO = scaled_CSO_amount/total_emission
+            sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id']==ef_id]
+            ef = create_empty_exchange()
+            ef.update(
+                {
+                    'group': 'ToEnvironment',
+                    'name': sel.index[0][0],
+                    'compartment': sel.index[0][1],
+                    'subcompartment': sel.index[0][2],
+                    'unitName': 'kg',
+                    'amount': total_emission,
+                }
+            )
+            if fraction_CSO != 0:
+                ef.update(
+                    {
+                        'comment': "Based on direct release to environment of wastewater " \
+                                 "discharged to sewers not connected to wastewater treatment plants {:.4}% " \
+                                 "and compounds lost due to combined sewer overflow {:.4}%".format(
+                            (1 - fraction_CSO)*100, fraction_CSO*100
+                        )
+                    }
+                )
+            else:
+                ef.update(
+                    {
+                        comment: "Based on direct release to environment of wastewater " \
+                                 "discharged to sewers not connected to wastewater treatment plants"
+                    }
+                )
+            uncertainty = self.direct_emission_uncertainty(
+                ef_id, direct_discharge['value'], scaled_CSO_amount, basic_pollutants)
+            efs.append([ef, [], uncertainty])
+        return efs
+
+    def direct_emission_uncertainty(self, pollutant_name,
+                                    untreated_release,
+                                    scaled_CSO_amounts,
+                                    basic_pollutant_list):
+        """Uncertainty depends on whether direct discharge or CSO is dominant"""
+        if untreated_release < scaled_CSO_amounts:  # Mostly CSO
+            if pollutant_name in basic_pollutant_list:
+                return {
+                    'variance': 0.04,
+                    'pedigreeMatrix': [5, 5, 4, 5, 1],
+                    'comment': "Uncertainty represents that of the wastewater composition, " \
+                               "and the pedigree scores are for the releases due to combined sewer overflow, " \
+                               "which represent a greater share of emissions ({:.4}% of amount).".format(
+                        100*scaled_CSO_amounts / (scaled_CSO_amounts+ untreated_release)
+                    )
+                }
+            else:
+                return {
+                    'variance': 0.65,
+                    'pedigreeMatrix': [5, 5, 4, 5, 1],
+                    'comment': "Uncertainty represents that of the wastewater composition, " \
+                               "and the pedigree scores are for the releases due to combined sewer overflow, " \
+                               "which represent a greater share of emissions ({:.4}% of total amount).".format(
+                        100*scaled_CSO_amounts / (scaled_CSO_amounts+ untreated_release)
+                    )
+                }
+        else:  # Mostly direct discharge
+            if pollutant_name in basic_pollutant_list:
+                return {
+                    'variance': 0.04,
+                    'pedigreeMatrix': [1, 1, 1, 1, 1],
+                    'comment': "Uncertainty represents that of the wastewater composition only. "\
+                    "The uncertainty of the releases due to combined sewer overflow {} are "\
+                    "not considered in the pedigree scores.".format(
+                        scaled_CSO_amounts / (scaled_CSO_amounts+ untreated_release)
+                    )
+                }
+            else:
+                return {
+                    'variance': 0.65,
+                    'pedigreeMatrix': [1, 1, 1, 1, 1],
+                    'comment': "Uncertainty represents that of the wastewater composition only. " \
+                               "The uncertainty of the releases due to combined sewer overflow {} are " \
+                               "not considered in the pedigree scores.".format(
+                        scaled_CSO_amounts / (scaled_CSO_amounts + untreated_release)
+                    )
+                }
 class WWT_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to WWT dataset""" 
     def __init__(self, root_dir, **kwargs):
@@ -472,30 +578,36 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
             percent=0
             ) #TODO representativeness for treatment
         ref_exc_dict = {
-            'data': {'comment': ref_exchange_comment_treat,},
-            'PV':{
-              'amount': self.PV * (1-self.untreated_fraction),
-              'uncertainty': default_PV_uncertainty_treat,
-              'comment': generate_default_PV_comment_treated(self.PV, self.untreated_fraction),
-                },
-            'properties': generate_WW_properties(self.MD, self.WWTP_influent_properties),
+            'data': {'comment': ref_exchange_comment_treat, },
+            'PV': {
+                'amount': self.PV * (1 - self.untreated_fraction),
+                'uncertainty': default_PV_uncertainty_treat,
+                'comment': generate_default_PV_comment_treated(self.PV,
+                                                               self.untreated_fraction
+                                                               ),
+            },
+            'properties': all_ww_props(self.WWTP_influent_properties,
+                                       self.COD_TOC_ratio,
+                                       self.fraction_C_fossil,
+                                       self.MD
+                                       )
             }
         self.generate_reference_exchange(ref_exc_dict)
-        technosphere_inputs = []
-        # Electricity demand
-        electricity = create_empty_exchange()
-        electricity.update(
-            {
-                'group': 'FromTechnosphere',
-                'name': 'electricity, low voltage',
-                'unitName': 'kWh',
-                'amount': self.electricity,
-                'comment': default_electricity_comment,
-            }
-        )
-        self.append_exchange(electricity, [], default_electricity_uncertainty)
 
-        # FeCl3
+        # Electricity demand
+        if hasattr(self, 'electricity') and self.electricity != 0:
+            electricity = create_empty_exchange()
+            electricity.update(
+                {
+                    'group': 'FromTechnosphere',
+                    'name': 'electricity, low voltage',
+                    'unitName': 'kWh',
+                    'amount': self.electricity,
+                    'comment': default_electricity_comment,
+                }
+            )
+            self.append_exchange(electricity, [], default_electricity_uncertainty)
+
         if hasattr(self, 'FeCl3') and self.FeCl3 != 0:
             FeCl3 = create_empty_exchange()
             FeCl3.update(
@@ -504,7 +616,7 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
                     'name': 'iron (III) chloride',
                     'unitName': 'kg',
                     'amount': self.FeCl3,
-                    'comment': "Used for chemical removal of P",
+                    'comment': "Used for chemical precipitation of P",
                 }
             )
             self.append_exchange(FeCl3, [], default_FeCl3_uncertainty)
@@ -517,10 +629,10 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
                     'name': 'polyacrylamide',
                     'unitName': 'kg',
                     'amount': self.acrylamide,
-                    'comment': "Used for sludge dewatering",
+                    'comment': "Polyelectrolyte for thickening",
                 }
             )
-        self.append_exchange(acrylamide, [], default_acrylamide_uncertainty)
+            self.append_exchange(acrylamide, [], default_acrylamide_uncertainty)
 
         if hasattr(self, 'NaHCO3') and self.NaHCO3 != 0:
             NaHCO3 = create_empty_exchange()
@@ -530,10 +642,16 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
                     'name': 'sodium bicarbonate',
                     'unitName': 'kg',
                     'amount': self.NaHCO3,
-                    'comment': "Used to maintain alkalinity",
+                    'comment': "Used to maintain alkalinity for nitrification."\
+                    "Calculated based on alkalinity consumed during nitrification, and"\
+                    "an assumed residual alkalinity requirement (70 g CaCO3/m3).",
                 }
             )
-        self.append_exchange(NaHCO3, [], default_NaHCO3_uncertainty)
+            self.append_exchange(NaHCO3, [], default_NaHCO3_uncertainty)
+
+        self.add_sewer_exchanges()
+        self.add_WWTP_exchanges()
+        self.add_sludge()
 
 class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to untreated fraction"""
@@ -554,21 +672,19 @@ class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
         self.generate_comment(
             'generalComment',
             (
-                    default_general_comment_untreated_0 \
-                    +  sewer_estimation_text(self.tool_use_type)
+                    default_general_comment_untreated_0 +  sewer_estimation_text(self.tool_use_type)
             )
         )
         self.generate_comment('timePeriodComment', default_time_period_comment_untreated)
         self.generate_comment('geographyComment', default_geography_comment_untreated)
+        if not hasattr(self, 'used_WHO_region'):
+            xls = os.path.join(self.root_dir, 'resources', 'untreated_fraction.xlsx')
+            direct_discharge_df = pd.read_excel(xls, sheet_name="ecoinvent", header=0, index_col=0)
+            self.used_WHO_region = direct_discharge_df.loc[self.geography, 'used_WHO_region']
         self.generate_representativeness(
-            default_representativeness_untreated_1
-            default_representativeness_untreated_2(
-                self.untreated_source_regions,
-                self.MD,
-                self.geography,
-                self.tool_use_type
-            ),
-            ""
+            default_representativeness_untreated_1,
+            default_representativeness_untreated_2(self.used_WHO_region),
+            100,
         )
         ref_exc_dict = {
             'data': {'comment': ref_exchange_comment_untreated,},
@@ -577,11 +693,13 @@ class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
               'uncertainty': default_PV_uncertainty_untreated,
               'comment': generate_default_PV_comment_untreated(self.PV, self.untreated_fraction),
                 },
-            'properties': generate_WW_properties(self.MD, self.WW_properties),
+            'properties': all_ww_props(self.WW_properties, self.COD_TOC_ratio, self.fraction_C_fossil, self.MD),
             }
 
         self.generate_reference_exchange(ref_exc_dict)
-        # EMISSIONS!!
+        total_untreated_release_data = self.total_untreated_release()
+
+        for ef in total_untreated_release_data:
+            self.append_exchange(ef[0], ef[1], ef[2])
         self.add_sewer_exchanges()
         #self.generate_ecoSpold2()
-        
