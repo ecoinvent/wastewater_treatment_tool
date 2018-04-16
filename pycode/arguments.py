@@ -38,7 +38,7 @@ always_required_arguments = [
     "acrylamide", #amount
     "NaHCO3", #amount,
     "fraction_C_fossil",
-    "carbon_content"
+    "COD_TOC_ratio"
 ]
 
 
