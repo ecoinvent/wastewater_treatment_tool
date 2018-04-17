@@ -425,18 +425,45 @@ class WWecoSpoldGenerator(object):
             self.append_exchange(infra, [], default_infrastructure_uncertainty)
 
     def add_sludge(self):
+        pass
+        """
+        settlers = []
+        if self.sludge_composition['PRIMARY']['AMOUNT'] != 0:
+            settles.append('primary')
+        if self.sludge_composition['SECONDARY']['AMOUNT'] != 0:
+            settles.append('secondary')
+        if self.sludge_composition['TERTIARY']['AMOUNT'] != 0:
+            settles.append('tertiary')
+
+        total_sludge = 100 #todo
+
+        sludge_comment = ""
+        if "primary" in settlers:
+            pass
+        if "secondary" in settlers:
+            pass
+        if "tertiary" in settlers:
+            pass
+
+        if self.WW_type == "municipal average":
+            sludge_name = "sludge, from the treatment of average municipal wastewater"
+        else:
+            sludge_name = "sludge, from the treatment of wastewater from {}".format(self.WW_type)
+
         sludge = create_empty_exchange()
         sludge.update(
             {
                 'group': 'ByProduct',
-                'name': "sludge, from wastewater treatment", #todo get name for sludge
+                'name': sludge_name,
                 'unitName': 'kg',
-                'amount': self.sludge_amount/(1-temp_sludge_water_content)
-                'comment': "sludge comment"#todo sludge comment
+                'amount': self.sludge_amount/(1-temp_sludge_water_content),
+                'comment': sludge_comment
             }
         )
-        properties = get_sludge_properties(self.sludge_properties)
+        sludge_properties = get_sludge_properties(self.sludge_properties)
+        self.append_exchange(sludge, sludge_properties, sludge_uncertainty)
         pass
+    """
 
     def total_untreated_release(self):
         """ Sum direct discharge and CSO. WIll fail if untreated_fraction == 0!
@@ -552,18 +579,58 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
             ]
         else:
             self.tech_description = [
-                default_tech_description_specific_0, #See defaults
-                default_tech_description_specific_1, #See arguments
-                default_tech_description_specific_2, #See arguments,
+                default_tech_description_specific.format(
+                    self.technology_level_1,
+                    decode_tech_bitstring(self.technology_level_2),
+                    self.capacity
+                ),
         ]
         self.generate_comment('technologyComment', self.tech_description)
-        self.generalComment = [
-            model_description_0,
-            model_description_1
-            ]
-        if self.tool_use_type == 'average':
-            self.generalComment.append(model_description_avg)
-        self.generate_comment('generalComment', self.generalComment)
+
+        # Treatment general comment
+        if self.WW_type == 'municipal average':
+            if self.tool_use_type == 'average':
+                self.general_treat_comment = [
+                    treat_common_general_product,
+                    treat_general_comment_avg_municipal.format(
+                        len(self.technologies_averaged),
+                    ),
+                    treat_general_comment_final_note.format(
+                        self.URL,
+                    )
+                ]
+            else:
+                self.general_treat_comment = [
+                    treat_common_general_product,
+                    treat_general_comment_specific_municipal,
+                    treat_general_comment_final_note.format(
+                        self.URL,
+                    )
+                ]
+        else:
+            if self.tool_use_type == 'average':
+                self.general_treat_comment = [
+                    treat_common_general_product,
+                    treat_general_comment_avg_not_municipal.format(
+                        self.WW_type,
+                        len(self.technologies_averaged)
+                    ),
+                    treat_general_comment_final_note.format(
+                        self.URL,
+                    ),
+                ]
+            else:
+                self.general_treat_comment = [
+                    treat_common_general_product,
+                    treat_general_comment_specific_not_municipal.format(
+                        self.WW_type,
+                    ),
+                    treat_general_comment_final_note.format(
+                        self.URL,
+                    )
+                ]
+
+        self.generate_comment('generalComment', self.general_treat_comment)
         self.generate_comment('timePeriodComment', default_timePeriodComment_treatment)
         if self.tool_use_type == 'average':
             if self.geography in list_countries_with_specific_data:
@@ -574,9 +641,9 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
             self.generate_comment('geographyComment', default_spec_geo_comment)
         self.generate_representativeness(
             default_samplingProcedure_text_treat,
-            default_extrapolations_text_treat,
+            default_extrapolations_text_treat_avg(self.technologies_averaged),
             percent=0
-            ) #TODO representativeness for treatment
+            )
         ref_exc_dict = {
             'data': {'comment': ref_exchange_comment_treat, },
             'PV': {

@@ -246,7 +246,6 @@ def validate_master_data_dir(MD_xml_dir):
     assert os.path.isdir(MD_xml_dir),\
         "Master data folder not present or not correctly defined."
     files_present = os.listdir(MD_xml_dir)
-    # Todo - check which files are actually required in code
     required_files = [
             'ActivityIndex.xml',
             'ActivityNames.xml',

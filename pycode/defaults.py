@@ -213,20 +213,55 @@ def decode_tech_bitstring(bit_string):  # i.e "1110001"
 default_tech_descr_avg = "The treatment dataset represents a " \
                          "weighted average of multiple models of wastewater treatment plants."
 
-default_tech_description_specific_0 = "SOME INTRO SENTENCE ON THE FACT THAT THE USER MODELED THIS HIMSELF"  # TODO - user modelled himself...
-default_tech_description_specific_1 = "Some automatic text here to describe technology"  # TODO
-default_tech_description_specific_2 = "Some automatic text here provide some details on parameters used"  # TODO
+default_tech_description_specific = "The parameter values used in the tool to generate this dataset "\
+    "were adapted to model a specific wastewater treatment plant configuration. "\
+    "The modelled wastewater treatment plant uses {}. {} Its capacity is {}."
 
-model_description_0 = "The inventory for most exchanges based on a " \
-                      "marginal approach. The TODO model " \
-                      "was run twice: once with the contribution of the wastewater of interest, " \
-                      "and once without. The inputs and outputs attributed to the wastewater " \
-                      "of interest were determined based on the difference between these two model " \
-                      "runs. For more information, see the documentation on the tool's website, URL"  # TODO add URL
+treat_common_general_product = "The inventory is mostly based on activated sludge " \
+                               "process guidelines typically known as Metcalf and Eddy " \
+                               "(Tchobanoglous et al., 2014) that comprise a set of equations " \
+                               "that, computed in a sequential manner, are used to quantify a " \
+                               "number of design outputs as a function of design inputs. The design " \
+                               "inputs include influent characteristics (e.g. flow, concentration of pollutants), " \
+                               "operational settings (e.g. oxygen concentration in the biological reactor), safety " \
+                               "factors, kinetic and stoichiometric parameters and effluent requirements (e.g. target " \
+                               "ammonia concentration in the effluent of the WWTP). The design outputs comprise " \
+                               "aerobic, anoxic, anaerobic volumes, dissolved oxygen demand; internal and external " \
+                               "recycle flow-rates, settling areas and dosage of chemicals (external carbon source, " \
+                               "metal salts, and alkalinity)."
 
-model_description_1 = "Exchanges not based on the marginal approach include " \
-                      "X (based on y) and z (based on w)"  # TODO exchanges not based on marginal approach
-model_description_avg = "TODO a comment about averaging"  # TODO add description of averaging
+treat_general_comment_avg_municipal = "The treatment of municipal wastewater was modelled in {} WWTP models" \
+                                      "These models represent different types of wastewater treatment plants " \
+                                      "from this region. The results for each plant are expressed as exchange amount/m3 " \
+                                      "of treated wastewater, and a weighted average is calculated based on the " \
+                                      "market share of each of the plants."
+treat_general_comment_specific_municipal = "The treatment of municipal wastewater was modelled in WWTP model" \
+                                           "whose design parameters were adapted by the data provider. "
+treat_general_comment_avg_not_municipal = "The treatment of wastewater from {0} was modelled in {1} WWTP models" \
+                                          ". The relation of inputs and outputs " \
+                                          "to 1m3 of treated wastewater from {0} is based on a marginal approach: " \
+                                          "for each of the WWTP models, the model is first run " \
+                                          "supposing that the WWTP does not treat the wastewater from {0}, " \
+                                          "and then a second time with an additional 1m3 of wastewater from " \
+                                          "{0}. Then, the difference between the two sets of results is calculated, " \
+                                          "and normalized to 1m3. " \
+                                          "A weighted average of these results is then calculated based on the " \
+                                          "market share of each of the plants."
+treat_general_comment_specific_not_municipal = "The treatment of wastewater from {0} was modelled in a WWTP model " \
+                                               "whose design parameters were adapted by the data provider." \
+                                               "The relation of inputs and outputs " \
+                                               "to 1m3 of treated wastewater from {0} is based on a marginal approach: " \
+                                               "for each of the WWTP models, the model is first run " \
+                                               "supposing that the WWTP does not treat the wastewater from {}, " \
+                                               "and then a second time with an additional 1m3 of wastewater from " \
+                                               "{}. Then, the difference between the two sets of results is calculated, " \
+                                               "and normalized to 1m3."
+treat_general_comment_final_note = "Some exchanges are actually not specifically based on the " \
+                                   "design guidelines (electricity demand, infrastructure). These are " \
+                                   "identified in exchange comments. For more information on the model, " \
+    "see the tool's website at {}"
+
+
 default_timePeriodComment_treatment = [
     "TODO, descr: additional explanations concerning the temporal validity of the flow data reported."]
 
@@ -240,8 +275,22 @@ default_avg_bad_geo_comment = [
     "No data was available for the region. Based on a rough approximation of the global data."]
 default_spec_geo_comment = ["The data used to model the WWTP is specific to the location."]
 
-default_samplingProcedure_text_treat = "TODO"  # TODO
-default_extrapolations_text_treat = "TODO"  # TODO
+default_samplingProcedure_text_treat = "Most exchanges based on a model built from "\
+    "activated sludge process guidelines."
+
+def default_extrapolations_text_treat_avg(technologies_averaged):
+    list_regions = list(set([d['location'] for d in technologies_averaged.values()]))
+    regions_string = ""
+    for region in list_regions:
+        regions_string += str(region)
+    regions_string += "."
+    if len(technologies_averaged)==1:
+        return "The region used to model the wastewater treatment plant is {}".format(regions_string)
+    else:
+        return "The regions used to model the wastewater treatment plant are {}".format(regions_string)
+
+default_extrapolations_text_treat_spec = "The model parameters were adapted for "\
+    "the specific wastewater treatment plant modelled in this dataset."
 ref_exchange_comment_treat = "Wastewater emitted to the sewer " \
                              "system and treated. Wastewater properties differ from those of " \
                              "wastewater actually sent to the sewer system in that they account for " \
@@ -270,24 +319,24 @@ default_electricity_comment = "Electricity consumption considers energy "\
 
 default_electricity_uncertainty = {
     'variance': 0.0006,
-    'pedigreeMatrix': [4, 5, 1, 5, 4],
-    'comment': "Calculations based on design parameters and assumptions."
+    'pedigreeMatrix': [3, 5, 1, 5, 4],
+    'comment': "Default pedigree scores for technosphere exchanges calculated with the ecoinvent wastewater tool"
 }
 default_FeCl3_uncertainty = {
     'variance': 0.0006,
-    'pedigreeMatrix': [4, 5, 1, 5, 4],
-    'comment': "Calculations based on design parameters and assumptions."
+    'pedigreeMatrix': [3, 5, 1, 5, 4],
+    'comment': "Default pedigree scores for technosphere exchanges calculated with the ecoinvent wastewater tool"
 }
 default_acrylamide_uncertainty = {
     'variance': 0.0006,
-    'pedigreeMatrix': [4, 5, 1, 5, 4],
-    'comment': "Calculations based on design parameters and assumptions."
+    'pedigreeMatrix': [3, 5, 1, 5, 4],
+    'comment': "Default pedigree scores for technosphere exchanges calculated with the ecoinvent wastewater tool"
 }
 
 default_NaHCO3_uncertainty = {
     'variance': 0.0006,
-    'pedigreeMatrix': [4, 5, 1, 5, 4],
-    'comment': "Calculations based on design parameters and assumptions."
+    'pedigreeMatrix': [3, 5, 1, 5, 4],
+    'comment': "Default pedigree scores for technosphere exchanges calculated with the ecoinvent wastewater tool"
 }
 
 no_uncertainty = {
@@ -505,4 +554,10 @@ infrastructure_dict = {
         'Class 4 (2000 to 10,000 per-capita equivalents)': 34.2,
         'Class 5 (30 to 2000 per-capita equivalents)': 7.714
     }
+}
+
+sludge_uncertainty = {
+    'variance': 0.0006,
+    'pedigreeMatrix': [3, 5, 1, 5, 4],
+    'comment': "Default pedigree scores for technosphere exchanges calculated with the ecoinvent wastewater tool"
 }
