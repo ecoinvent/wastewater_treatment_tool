@@ -126,8 +126,8 @@ default_sewer_uncertainty = {
 
 default_infrastructure_uncertainty = {
     'variance': 0.3,
-    'pedigreeMatrix': [5, 5, 1, 5, 1],
-    'comment': "Very rough estimate based on a single Spanish plant and an estimated lifetime of 40 years"
+    'pedigreeMatrix': [5, 5, 1, 5, 5],
+    'comment': "Very rough estimate based on a single Spanish plant and an estimated lifetime of 30 years"
 }
 
 # ************************************
@@ -346,213 +346,214 @@ no_uncertainty = {
 }
 
 # ******* DATA *********#
+#TODO update infrastructure
 infrastructure_dict = {
     'Lifetime_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Lifetime of the WWTP (years)',
-        'Class 1 (over 100,000 per-capita equivalents)': 40,
-        'Class 2 (50,000 to 100,000 per-capita equivalents)': 40,
-        'Class 3 (10,000 to 50,000 per-capita equivalents)': 40,
-        'Class 4 (2000 to 10,000 per-capita equivalents)': 40,
-        'Class 5 (30 to 2000 per-capita equivalents)': 40
+        'Class 1 (over 100,000 per-capita equivalents)': 30,
+        'Class 2 (50,000 to 100,000 per-capita equivalents)': 30,
+        'Class 3 (10,000 to 50,000 per-capita equivalents)': 30,
+        'Class 4 (2000 to 10,000 per-capita equivalents)': 30,
+        'Class 5 (30 to 2000 per-capita equivalents)': 30,
+        'Description': 'Lifetime of the WWTP (years)'
     },
     'diff_PE_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Difference between our median and Doka (PE) ((ours-Doka)/ours)',
         'Class 1 (over 100,000 per-capita equivalents)': -0.166125,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 0.05156,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 0.17116666666666666,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 0.11316666666666667,
-        'Class 5 (30 to 2000 per-capita equivalents)': 0.20591133004926107
+        'Class 5 (30 to 2000 per-capita equivalents)': 0.20591133004926107,
+        'Description': 'Difference between our median and Doka (PE) ((ours-Doka)/ours)'
     },
     'diff_km_sewer_per_m3': {
         'Category': 'Sewers',
-        'Description': 'Difference between our value and Doka (PE) ((ours-Doka)/ours)',
         'Class 1 (over 100,000 per-capita equivalents)': 0.5029429999999999,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 0.49411000000000005,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 0.13276000000000004,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 0.3264309210526316,
-        'Class 5 (30 to 2000 per-capita equivalents)': 0.12133134560539283
+        'Class 5 (30 to 2000 per-capita equivalents)': 0.12133134560539283,
+        'Description': 'Difference between our value and Doka (PE) ((ours-Doka)/ours)'
     },
     'diff_m3_over_life_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Difference between our value and Doka (m3/lifetime) ((ours-Doka)/ours)',
-        'Class 1 (over 100,000 per-capita equivalents)': -0.7600790784557908,
-        'Class 2 (50,000 to 100,000 per-capita equivalents)': -0.4059621656881931,
-        'Class 3 (10,000 to 50,000 per-capita equivalents)': 0.2832982543759513,
-        'Class 4 (2000 to 10,000 per-capita equivalents)': 0.41108856621004564,
-        'Class 5 (30 to 2000 per-capita equivalents)': -0.9125485388127854
+        'Class 1 (over 100,000 per-capita equivalents)': -1.346772104607721,
+        'Class 2 (50,000 to 100,000 per-capita equivalents)': -0.8746162209175907,
+        'Class 3 (10,000 to 50,000 per-capita equivalents)': 0.044397672501268394,
+        'Class 4 (2000 to 10,000 per-capita equivalents)': 0.21478475494672755,
+        'Class 5 (30 to 2000 per-capita equivalents)': -1.5500647184170473,
+        'Description': 'Difference between our value and Doka (m3/lifetime) ((ours-Doka)/ours)'
     },
     'diff_m3_per_year_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Difference between our value and Doka (m3/year) ((ours-Doka)/ours)',
         'Class 1 (over 100,000 per-capita equivalents)': -1.346772104607721,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': -0.8746074363992172,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 0.04438165905631659,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 0.21472730593607306,
-        'Class 5 (30 to 2000 per-capita equivalents)': 0.7026264840182649
+        'Class 5 (30 to 2000 per-capita equivalents)': 0.7026264840182649,
+        'Description': 'Difference between our value and Doka (m3/year) ((ours-Doka)/ours)'
     },
     'doka_m3_per_year_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Doka yearly capacity (m3/year)',
         'Class 1 (over 100,000 per-capita equivalents)': 47111450,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 14368866,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 5022730,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 1074842,
-        'Class 5 (30 to 2000 per-capita equivalents)': 162812
+        'Class 5 (30 to 2000 per-capita equivalents)': 162812,
+        'Description': 'Doka yearly capacity (m3/year)'
     },
     'km_sewer_per_m3': {
         'Category': 'Sewers',
-        'Description': 'kilometer sewers per m3 over lifetime (km/m3)',
         'Class 1 (over 100,000 per-capita equivalents)': 2.4906600249066003e-07,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 3.326810176125245e-07,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 2.5114155251141555e-07,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 2.4986301369863014e-07,
-        'Class 5 (30 to 2000 per-capita equivalents)': 1.408949771689498e-07
+        'Class 5 (30 to 2000 per-capita equivalents)': 1.408949771689498e-07,
+        'Description': 'kilometer sewers per m3 over lifetime (km/m3)'
     },
     'km_sewer_per_m3_doka': {
         'Category': 'Sewers',
-        'Description': 'kilometer sewers per m3 over lifetime, Doka 2009 (km/m3)',
         'Class 1 (over 100,000 per-capita equivalents)': 1.238e-07,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 1.683e-07,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 2.178e-07,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 1.683e-07,
-        'Class 5 (30 to 2000 per-capita equivalents)': 1.238e-07
+        'Class 5 (30 to 2000 per-capita equivalents)': 1.238e-07,
+        'Description': 'kilometer sewers per m3 over lifetime, Doka 2009 (km/m3)'
     },
     'lifetime_sewer': {
         'Category': 'Sewers',
-        'Description': 'Lifetime of sewer system (years)',
         'Class 1 (over 100,000 per-capita equivalents)': 100,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 100,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 100,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 100,
-        'Class 5 (30 to 2000 per-capita equivalents)': 100
+        'Class 5 (30 to 2000 per-capita equivalents)': 100,
+        'Description': 'Lifetime of sewer system (years)'
     },
     'm3_over_life_WWTP': {
         'Category': 'WWTP',
-        'Description': 'm3 treated over lifetime of WWTP',
-        'Class 1 (over 100,000 per-capita equivalents)': 803000000,
-        'Class 2 (50,000 to 100,000 per-capita equivalents)': 306600000,
-        'Class 3 (10,000 to 50,000 per-capita equivalents)': 210240000,
-        'Class 4 (2000 to 10,000 per-capita equivalents)': 54750000,
-        'Class 5 (30 to 2000 per-capita equivalents)': 21900000
+        'Class 1 (over 100,000 per-capita equivalents)': 602250000,
+        'Class 2 (50,000 to 100,000 per-capita equivalents)': 229950000,
+        'Class 3 (10,000 to 50,000 per-capita equivalents)': 157680000,
+        'Class 4 (2000 to 10,000 per-capita equivalents)': 41062500,
+        'Class 5 (30 to 2000 per-capita equivalents)': 16425000,
+        'Description': 'm3 treated over lifetime of WWTP'
     },
     'm3_over_life_WWTP_Doka': {
         'Category': 'WWTP',
-        'Description': 'm3 treated over lifetime of WWTP, Doka 2009',
         'Class 1 (over 100,000 per-capita equivalents)': 1413343500,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 431068000,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 150679375,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 32242901,
-        'Class 5 (30 to 2000 per-capita equivalents)': 41884813
+        'Class 5 (30 to 2000 per-capita equivalents)': 41884813,
+        'Description': 'm3 treated over lifetime of WWTP, Doka 2009'
     },
     'm3_over_life_sewers': {
         'Category': 'Sewers',
-        'Description': 'Total m3 ww transported by sewer gid over lifetime',
         'Class 1 (over 100,000 per-capita equivalents)': 2007500000,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 766500000,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 525600000,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 136875000,
-        'Class 5 (30 to 2000 per-capita equivalents)': 54750000
+        'Class 5 (30 to 2000 per-capita equivalents)': 54750000,
+        'Description': 'Total m3 ww transported by sewer gid over lifetime'
     },
     'm_sewers_per_capita': {
         'Category': 'Sewers',
-        'Description': 'Meters per capita of sewers, Doka 2009',
         'Class 1 (over 100,000 per-capita equivalents)': 2.5,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 3.4,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 4.4,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 5.7,
-        'Class 5 (30 to 2000 per-capita equivalents)': 7.6
+        'Class 5 (30 to 2000 per-capita equivalents)': 7.6,
+        'Description': 'Meters per capita of sewers, Doka 2009'
     },
     'name': {
         'Category': 'WWTP',
-        'Description': 'Name of the intermediate exchange',
-        'Class 1 (over 100,000 per-capita equivalents)': 'wastewater treatment facility construction, capacity Class 1 (over 100,000 per-capita equivalents), 2.01E10 l/year',
-        'Class 2 (50,000 to 100,000 per-capita equivalents)': 'wastewater treatment facility construction, capacity Class 2 (50,000 to 100,000 per-capita equivalents), 7.67E9 l/year',
-        'Class 3 (10,000 to 50,000 per-capita equivalents)': 'wastewater treatment facility construction, capacity Class 3 (10,000 to 50,000 per-capita equivalents), 5.26E9 l/year',
-        'Class 4 (2000 to 10,000 per-capita equivalents)': 'wastewater treatment facility construction, capacity Class 4 (2000 to 10,000 per-capita equivalents), 1.37E9 l/year',
-        'Class 5 (30 to 2000 per-capita equivalents)': 'wastewater treatment facility construction, capacity Class 5 (30 to 2000 per-capita equivalents), 5.48E8 l/year'
+        'Class 1 (over 100,000 per-capita equivalents)': 'wastewater treatment facility construction, capacity class 1, 2.01E10 l/year',
+        'Class 2 (50,000 to 100,000 per-capita equivalents)': 'wastewater treatment facility construction, capacity class 2, 7.67E9 l/year',
+        'Class 3 (10,000 to 50,000 per-capita equivalents)': 'wastewater treatment facility construction, capacity class 3, 5.26E9 l/year',
+        'Class 4 (2000 to 10,000 per-capita equivalents)': 'wastewater treatment facility construction, capacity class 4, 1.37E9 l/year',
+        'Class 5 (30 to 2000 per-capita equivalents)': 'wastewater treatment facility construction, capacity class 5, 5.48E8 l/year',
+        'Description': 'Name of the intermediate exchange'
     },
     'nom_cap_Doka_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Nominal capacity range in Doka (PE)',
         'Class 1 (over 100,000 per-capita equivalents)': 233225,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 71133,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 24865,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 5321,
-        'Class 5 (30 to 2000 per-capita equivalents)': 806
+        'Class 5 (30 to 2000 per-capita equivalents)': 806,
+        'Description': 'Nominal capacity range in Doka (PE)'
     },
     'nom_cap_max_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Nominal capacity range maximum (PE)',
         'Class 1 (over 100,000 per-capita equivalents)': '+',
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 100000,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 50000,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 10000,
-        'Class 5 (30 to 2000 per-capita equivalents)': 2000
+        'Class 5 (30 to 2000 per-capita equivalents)': 2000,
+        'Description': 'Nominal capacity range maximum (PE)'
     },
     'nom_cap_median_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Nominal capacity median (PE)',
         'Class 1 (over 100,000 per-capita equivalents)': 200000,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 75000,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 30000,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 6000,
-        'Class 5 (30 to 2000 per-capita equivalents)': 1015
+        'Class 5 (30 to 2000 per-capita equivalents)': 1015,
+        'Description': 'Nominal capacity median (PE)'
     },
     'nom_cap_min_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Nominal capacity range minimum (PE)',
         'Class 1 (over 100,000 per-capita equivalents)': 100000,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 50000,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 10000,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 2000,
-        'Class 5 (30 to 2000 per-capita equivalents)': 30
+        'Class 5 (30 to 2000 per-capita equivalents)': 30,
+        'Description': 'Nominal capacity range minimum (PE)'
     },
     'sample_cap_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Sample capacity (PE)',
         'Class 1 (over 100,000 per-capita equivalents)': 206250,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 105000,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 44153,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 18750,
-        'Class 5 (30 to 2000 per-capita equivalents)': 8750
+        'Class 5 (30 to 2000 per-capita equivalents)': 8750,
+        'Description': 'Sample capacity (PE)'
     },
     'sample_m3_per_d_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Daily capacity\xa0 (m3/d)',
         'Class 1 (over 100,000 per-capita equivalents)': 55000,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 21000,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 14400,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 3750,
-        'Class 5 (30 to 2000 per-capita equivalents)': 1500
+        'Class 5 (30 to 2000 per-capita equivalents)': 1500,
+        'Description': 'Daily capacity\xa0 (m3/d)'
     },
     'sample_m3_per_year_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Annula capacity\xa0 (m3/year)',
         'Class 1 (over 100,000 per-capita equivalents)': 20075000,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 7665000,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 5256000,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 1368750,
-        'Class 5 (30 to 2000 per-capita equivalents)': 547500
+        'Class 5 (30 to 2000 per-capita equivalents)': 547500,
+        'Description': 'Annula capacity\xa0 (m3/year)'
     },
     'sample_name_WWTP': {
         'Category': 'WWTP',
-        'Description': 'Sample WWTP name',
         'Class 1 (over 100,000 per-capita equivalents)': 'Girona',
         'Class 2 (50,000 to 100,000 per-capita equivalents)': "L'Escala",
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 'Manlleu',
         'Class 4 (2000 to 10,000 per-capita equivalents)': 'Balaguer',
-        'Class 5 (30 to 2000 per-capita equivalents)': 'Navàs'
+        'Class 5 (30 to 2000 per-capita equivalents)': 'Navàs',
+        'Description': 'Sample WWTP name'
     },
     'sewer_length': {
         'Category': 'Sewers',
-        'Description': 'Sewer grid length, calculated (km)',
         'Class 1 (over 100,000 per-capita equivalents)': 500,
         'Class 2 (50,000 to 100,000 per-capita equivalents)': 255,
         'Class 3 (10,000 to 50,000 per-capita equivalents)': 132,
         'Class 4 (2000 to 10,000 per-capita equivalents)': 34.2,
-        'Class 5 (30 to 2000 per-capita equivalents)': 7.714
+        'Class 5 (30 to 2000 per-capita equivalents)': 7.714,
+        'Description': 'Sewer grid length, calculated (km)'
     }
 }
 

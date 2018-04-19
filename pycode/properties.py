@@ -129,7 +129,7 @@ def mass_properties(prop_dicts, COD_TOC_ratio):
         },
         {
             'name': 'water content',
-            'amount': 1000 / wet_mass,
+            'amount': 1000 / dry_mass,
             'comment': "Based on the mass of 1m3 of water",
             'unit': 'dimensionless',
             'uncertainty': {

@@ -68,7 +68,20 @@ def build_file_list(dirpath, extension = None, add_path = False):
     if add_path:
         filelist = add_path_in_list(filelist, dirpath)
     return filelist
-    
+
+def remove_forbiden_in_tabname(s):
+    #truncates tab names in excel sheet if too long and removes forbiden characters
+
+    limit = 31
+    for before, after in [
+        ('/', '_'),
+        ('<', 'smaller than'),
+        ('>', 'larger than')
+    ]:
+        s = s.replace(before, after)
+    if len(s) > limit:
+        s = s[:limit]
+    return s
     
 def dataframe_to_excel(folder, filename, dfs, read_me=False, feedback=False):
     '''function to take care of aggregating sheets, freeze pane and meta info'''

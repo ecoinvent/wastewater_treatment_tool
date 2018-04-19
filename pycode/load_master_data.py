@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from lxml import objectify
 from copy import copy
-from .utils import pkl_dump, pkl_load, list_to_df, is_empty, build_file_list, dataframe_to_excel, find_youngest
+from .utils import *
 
 
 def load_MD(root_dir):
@@ -37,6 +37,9 @@ def update_MD_if_needed(root_dir):
         update = True
     else:
         t_pkl = os.path.getmtime(existing_MD)
+        print(t_pkl)
+        print(os.path.getmtime(existing_MD))
+        print(t_MD > t_pkl)
         update = t_MD > t_pkl
     if update:
         assert MD_fields_xls, "MD.pkl file outdated, pass argument MD_fields_xls to regenerate"
@@ -44,7 +47,7 @@ def update_MD_if_needed(root_dir):
         MD = build_MD(MD_xml_dir,
                       MD_fields_xls,
                       pickle_dump_dir=MD_pkl_dir,
-                      MD_xls_dump_dir=None
+                      MD_xls_dump_dir=MD_xls_dump_dir
                       )
     return None
 
@@ -56,7 +59,7 @@ def build_MD(MD_xml_dir, MD_fields_xls, pickle_dump_dir, MD_xls_dump_dir=None):
     **MD_xml_dir**: path to directory with new master data (set of xlm files)
     **MD_fields_xls**: path to MasterData_fields.xlsx
     **pickle_dump_dir**: path to dir where pickled master data dict will be dumped
-    **MD_xls_dump_dir**: path to dir where xls version of master data is dumped. Not used, default=None
+    **MD_xls_dump_dir**: path to dir where xls version of master data is dumped.
     """
     tag_prefix = '{http://www.EcoInvent.org/EcoSpold02}'
     MD = {}
@@ -204,6 +207,7 @@ def build_MD(MD_xml_dir, MD_fields_xls, pickle_dump_dir, MD_xls_dump_dir=None):
         MD[field] = properties[new_field].copy()
         
     if MD_xls_dump_dir is not None:
+        print("Making xlsx version of MasterData in {}".format(MD_xls_dump_dir))
         MD_to_excel(MD_xls_dump_dir, MD)
     
     # Set useful indexes in MD for future queries

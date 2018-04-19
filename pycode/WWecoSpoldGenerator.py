@@ -209,10 +209,10 @@ class WWecoSpoldGenerator(object):
 
     def generate_reference_exchange(self, ref_exc_dict):
         exc = create_empty_exchange()
-        if self.WW_type=='municipal average':
+        if self.activity_name=='municipal average':
             name = 'wastewater, municipal average'
         else:
-            name = 'wastewater, {}'.format(self.WW_type)
+            name = 'wastewater, {}'.format(self.activity_name)
         exc.update({
                 'group': 'ReferenceProduct',
                 'unitName': 'm3',
@@ -232,19 +232,19 @@ class WWecoSpoldGenerator(object):
         return None
 
     def generate_activity_name(self):
-        if self.WW_type == "municipal average":
-            WW_type_name = ", municipal average"
+        if self.activity_name == "municipal average":
+            activity_name_name = ", municipal average"
         else:
-            WW_type_name = " {}".format(self.WW_type)
+            activity_name_name = " {}".format(self.activity_name)
         
         if self.act_type == 'untreated discharge':
-            return "direct discharge of wastewater{}".format(WW_type_name)
+            return "direct discharge of wastewater{}".format(activity_name_name)
             
         else:
             if self.tool_use_type == "average":
-                return "treatment of wastewater{}, average treatment".format(WW_type_name)
+                return "treatment of wastewater{}, average treatment".format(activity_name_name)
             else:
-                return "treatment of wastewater{}, {}, {}".format(WW_type_name, self.technology, self.capacity)
+                return "treatment of wastewater{}, {}, {}".format(activity_name_name, self.technology, self.capacity)
 
     def generate_activityNameId(self):
         ''' Return activityNameId from MD or create one.'''
@@ -416,7 +416,7 @@ class WWecoSpoldGenerator(object):
                     'unitName': 'km',
                     'amount': infrastructure_amounts[wwtp],
                     'comment': "Rough estimate based on Spanish data for one WWTP of this class." \
-                               "The expected lifetime is 40 years." \
+                               "The expected lifetime is 30 years." \
                                "The conversion from PE to m3 treated is based on observed values " \
                                "({} m3/year / PE).".format(infrastructure_dict['sample_m3_per_year_WWTP'][wwtp] \
                                                              / infrastructure_dict['sample_cap_WWTP'][wwtp])
@@ -445,10 +445,10 @@ class WWecoSpoldGenerator(object):
         if "tertiary" in settlers:
             pass
 
-        if self.WW_type == "municipal average":
+        if self.activity_name == "municipal average":
             sludge_name = "sludge, from the treatment of average municipal wastewater"
         else:
-            sludge_name = "sludge, from the treatment of wastewater from {}".format(self.WW_type)
+            sludge_name = "sludge, from the treatment of wastewater from {}".format(self.activity_name)
 
         sludge = create_empty_exchange()
         sludge.update(
@@ -588,7 +588,7 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
         self.generate_comment('technologyComment', self.tech_description)
 
         # Treatment general comment
-        if self.WW_type == 'municipal average':
+        if self.activity_name == 'municipal average':
             if self.tool_use_type == 'average':
                 self.general_treat_comment = [
                     treat_common_general_product,
@@ -612,7 +612,7 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
                 self.general_treat_comment = [
                     treat_common_general_product,
                     treat_general_comment_avg_not_municipal.format(
-                        self.WW_type,
+                        self.activity_name,
                         len(self.technologies_averaged)
                     ),
                     treat_general_comment_final_note.format(
@@ -623,7 +623,7 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
                 self.general_treat_comment = [
                     treat_common_general_product,
                     treat_general_comment_specific_not_municipal.format(
-                        self.WW_type,
+                        self.activity_name,
                     ),
                     treat_general_comment_final_note.format(
                         self.URL,
@@ -719,6 +719,7 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
         self.add_sewer_exchanges()
         self.add_WWTP_exchanges()
         self.add_sludge()
+        # TODO Add grit
 
 class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to untreated fraction"""
@@ -769,4 +770,4 @@ class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
         for ef in total_untreated_release_data:
             self.append_exchange(ef[0], ef[1], ef[2])
         self.add_sewer_exchanges()
-        #self.generate_ecoSpold2()
+

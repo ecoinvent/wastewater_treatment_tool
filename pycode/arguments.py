@@ -21,9 +21,9 @@ always_required_arguments = [
     "untreated_fraction", #float, [0, 1]
     "untreated_as_emissions", # Same as CSO, with 100% for both particulates and dissolved
     "CSO_particulate", #float, [0, 1]
-    "CSO_dissolved", #float, [0, 1],
+    "CSO_soluble", #float, [0, 1],
     "CSO_amounts",
-    "WW_type", #str, from (1) in http://84.89.61.64:8030/ecoinvent/simplified_data_entry.php
+    "activity_name", #str, from (1) in http://84.89.61.64:8030/ecoinvent/simplified_data_entry.php
     "geography", #str id, see below
     "PV", #float,
     "WW_properties", #dict, see below
@@ -188,4 +188,3 @@ uncertainty_dict = {
     'pedigreeMatrix':['int','int', 'int','int','int'], #all ints in [1, 2, 3 4, 5]
     'comment': "str"
     }
-

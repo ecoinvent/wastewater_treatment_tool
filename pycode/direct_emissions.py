@@ -44,6 +44,7 @@ def total_untreated_release(CSO_amounts, untreated_as_emissions, untreated_fract
         uncertainty = direct_emission_uncertainty(
             ef_id, untreated_as_emissions[ef_id]['value'], scaled_CSO_amount, basic_pollutants, MD)
         efs.append([ef, [], direct_emission_uncertainty])
+
     return efs
 
 def direct_emission_uncertainty(pollutant_id,
