@@ -5,7 +5,7 @@ Software distributed under the License is distributed on an "AS IS" basis, WITHO
 The Original Code consists of the EcoSpold data format and EcoSpold Access.
 The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
 -->
-<validParameters majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="3167" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+<validParameters majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="3301" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
   <contextName xml:lang="en">ecoinvent</contextName>
   <parameter id="fb875f92-eb72-4c30-bf52-d80be1e83e9f" defaultVariableName="H2_MW" unitId="f271f103-ec6d-428b-bbc7-f0f2adf91d4f">
     <name xml:lang="en">molecular weight, H2</name>
@@ -70,6 +70,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">Water included</comment>
   </parameter>
+  <parameter id="bc9ba1dc-7934-5c1a-9477-bde717bb3ca2" defaultVariableName="SOCdif">
+    <name xml:lang="en">SOCdif</name>
+  </parameter>
   <parameter id="1f695ce4-afe7-4ff3-83ae-c65b01e5fc8e" unitId="65876125-e153-4f27-9e2d-8d6edfde9ab6">
     <name xml:lang="en">operation_time</name>
     <unitName xml:lang="en">hour/ha</unitName>
@@ -95,6 +98,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <parameter id="2b443064-4d30-4e3f-9a5a-a7738c607374" defaultVariableName="T4N_thc_750php" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">total hydrocarbon emissions tier T4N for hp &gt;= 750</name>
     <unitName xml:lang="en">kg/hp*h</unitName>
+  </parameter>
+  <parameter id="7f62f607-ec74-4e62-8edd-ca63d7032ee9" defaultVariableName="yield">
+    <name xml:lang="en">yield</name>
   </parameter>
   <parameter id="90ebda27-7fe1-40b3-be84-710a4ae13fce" defaultVariableName="Na2CO3_to_Na4P2O7" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">sodium carbonate-to-sodium pyrophosphate chemical reaction molar ratio</name>
@@ -189,6 +195,10 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <unitName xml:lang="en">dimensionless</unitName>
     <comment xml:lang="en">Share of chips processed at forest road of total amount of chips processed in the forest; share_chips_at _forest_road+share_chips_in_stand = 100% chips from forestry</comment>
   </parameter>
+  <parameter id="6a8a14c6-e775-4802-bb97-dd7365fa62cd" defaultVariableName="EF_amm_ammonia" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">emission factor ammoniumnitrate_ammonia</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
   <parameter id="40391184-2414-455e-a2ec-f54d2d84c8b0" defaultVariableName="PAM_50p" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">polyamine solution 50%</name>
     <unitName xml:lang="en">kg</unitName>
@@ -212,6 +222,10 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   </parameter>
   <parameter id="4f707892-25cd-4341-a3a6-c98aedef2b4f" defaultVariableName="extrapolation_factor" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">extrapolation factor</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
+  <parameter id="ce5cb868-4486-4a1d-8f89-7cbb6b6587f9" defaultVariableName="DeathRatePig" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">death rate pig in finishing</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="ae377649-ca30-4f6f-9f8a-481ce096edc5" defaultVariableName="C_2_CO2" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
@@ -248,10 +262,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <name xml:lang="en">liter per kg</name>
     <unitName xml:lang="en">l/kg</unitName>
   </parameter>
-  <parameter id="90e2de3b-6080-4a13-8023-f815fe7899b2" defaultVariableName="SL_Vol_Sow_yr" unitId="6c73afda-7131-4e3c-93f4-b3fa847f3571">
-    <name xml:lang="en">slurry volume production rate for sow</name>
-    <unitName xml:lang="en">m3/head/yr</unitName>
-    <comment xml:lang="en">(m3/head.yr) Slurry volume generated per sow in nursery; annual volume per head  (CRAAQ, 2007). Dilution by servicing water and precipitation is accounted for. Dry matter (dm) content (%): 2,7%, N content (% dm): 10,7%, P2O5 content (% dm): 7,4% and K2O content (% dm): 5,6%.</comment>
+  <parameter id="6e1a9870-da53-4b5d-833f-ecce22215ff8" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">occupation time</name>
+    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="2d48abc4-449c-4144-9f34-017891edf54d" defaultVariableName="CO2_DOM" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">CO2 emissions DOM</name>
@@ -266,9 +279,10 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">kg of ingredient per head</comment>
   </parameter>
-  <parameter id="a70bdd5a-1553-440d-9845-f954e387730e" defaultVariableName="T_f_f" unitId="1017f68a-f818-4f9d-a34d-a31e7386f628">
-    <name xml:lang="en">Transformation from primary forest</name>
-    <unitName xml:lang="en">m2</unitName>
+  <parameter id="72cb0620-4ec3-4347-b560-9ff4d63ec050" defaultVariableName="waste_dust_collector" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">waste dust collector</name>
+    <unitName xml:lang="en">kg</unitName>
+    <comment xml:lang="en"></comment>
   </parameter>
   <parameter id="238451b8-7b7b-4bc5-a4ca-4c4fde8a6dd8" defaultVariableName="yield_softwood">
     <name xml:lang="en">yield, softwood</name>
@@ -282,9 +296,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <unitName xml:lang="en">kg/kg</unitName>
     <comment xml:lang="en">kg LW of piglet to breed to satisfy the production of 1 kg LW of finished pig.</comment>
   </parameter>
-  <parameter id="e63913c3-4741-4b1d-a4bf-fbb9e0d6a0d8" defaultVariableName="SH_AGB_B" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">share of above ground biomass which is burned</name>
-    <unitName xml:lang="en">dimensionless</unitName>
+  <parameter id="fcea1e27-5bfe-4151-90e2-97bf12bc14c1" defaultVariableName="benzene" unitId="c182d036-038d-4c66-86ba-280c8a624ddf">
+    <name xml:lang="en">emission of benzene</name>
+    <unitName xml:lang="en">kg/MJ</unitName>
   </parameter>
   <parameter id="17889148-55e3-46b3-9ed8-57276adc118e" defaultVariableName="lifetime_electric_installation" unitId="2cf92850-0f92-4004-9dba-a6ceb6a414c2">
     <name xml:lang="en">lifetime of the electric installation</name>
@@ -413,6 +427,11 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <unitName xml:lang="en">kg/m</unitName>
     <comment xml:lang="en"></comment>
   </parameter>
+  <parameter id="0ffe7ba5-9c92-4e15-9fe4-381236963e6c" defaultVariableName="N2O_feedlot" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">dinitrogen monoxide from manure in feedlot</name>
+    <unitName xml:lang="en">kg</unitName>
+    <comment xml:lang="en">N2O from manure management in feedlot, direct and indirect emissions.</comment>
+  </parameter>
   <parameter id="52030929-8acf-4573-8f46-04b8d6872fc2" defaultVariableName="moisture_board" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">moisture content board</name>
     <unitName xml:lang="en">dimensionless</unitName>
@@ -492,6 +511,10 @@ The estimated average load is 1620 kg and the estimated weight of a passengeris 
     <name xml:lang="en">evaporation capacity</name>
     <unitName xml:lang="en">kg/hour</unitName>
   </parameter>
+  <parameter id="b2a31d64-0a09-4a2c-9a65-aabc51bf5d0a" defaultVariableName="harvest_residues" unitId="fc5f66f9-d510-4bdb-9ee2-ae54736546ca">
+    <name xml:lang="en">harvest residues</name>
+    <unitName xml:lang="en">metric ton/ha</unitName>
+  </parameter>
   <parameter id="d6dfa75e-c04d-48ec-ab98-d3b011a9242e" defaultVariableName="water_withdrawal" unitId="15a259d2-4417-45e8-9f67-7459326c5eb2">
     <name xml:lang="en">water withdrawal, per kg of clinker</name>
     <unitName xml:lang="en">m3/kg</unitName>
@@ -523,6 +546,10 @@ The estimated average load is 1620 kg and the estimated weight of a passengeris 
   <parameter id="375dfe39-0028-4d93-87b4-5dbe111dc2c4" defaultVariableName="T44N_thc_100hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">total hydrocarbon emissions tier T4-T4N for hp &lt; 100</name>
     <unitName xml:lang="en">kg/hp*h</unitName>
+  </parameter>
+  <parameter id="6f0305ba-f1fd-4c55-b647-378a17531b0d" defaultVariableName="EF_N_ammonia" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">emission factor Nfertilizer_ammonia</name>
+    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="42d9a8c5-3bcb-4ffa-b041-d3f5e0c5c198" defaultVariableName="dairy_herd_size_LU" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">dairy farm herd size</name>
@@ -592,9 +619,9 @@ The estimated average load is 1620 kg and the estimated weight of a passengeris 
     <name xml:lang="en">lead content</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
-  <parameter id="c5fc8756-6a94-442c-b312-e06a254181ee" defaultVariableName="A_bronze" unitId="d88a3aae-805d-4ba4-ab0e-586ec008305c">
-    <name xml:lang="en">factor A_bronze</name>
-    <unitName xml:lang="en">kg/(m3/d)^2</unitName>
+  <parameter id="609bd1f4-c643-428a-9b7b-338f202dcc27" defaultVariableName="EF_urea_ammonia" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">emission factor urea_ammonia</name>
+    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="b65cd582-5d01-453b-ac7a-9398e6445d0d" defaultVariableName="share_kiln_dried" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">share of kiln dried wood</name>
@@ -629,16 +656,8 @@ The estimated average load is 1620 kg and the estimated weight of a passengeris 
     <unitName xml:lang="en">dimensionless</unitName>
     <comment xml:lang="en">as m3 bulked / m3 solid</comment>
   </parameter>
-  <parameter id="07826f2d-a7de-4df1-bd76-7f6d6ef564c1" defaultVariableName="straw_per_ha" unitId="395f1718-3067-449c-ad6a-b96e876eebd4">
-    <name xml:lang="en">straw for dry restoration</name>
-    <unitName xml:lang="en">kg/ha</unitName>
-  </parameter>
   <parameter id="5333b656-e915-44a8-947f-6dd7d0415c0d">
     <name xml:lang="en">share of fraction A</name>
-  </parameter>
-  <parameter id="60961d25-cf02-4513-a485-e76acfad2305" defaultVariableName="losses" unitId="22dd5d20-97ab-471f-aa89-fdb38e46f802">
-    <name xml:lang="en">losses during supply</name>
-    <unitName xml:lang="en">% (obsolete)</unitName>
   </parameter>
   <parameter id="084a3967-98b1-4d93-94ae-3aa1cb42c5b6" defaultVariableName="waste_steel_grit" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">waste steel grit</name>
@@ -774,6 +793,10 @@ The estimated average load is 1620 kg and the estimated weight of a passengeris 
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">kg of ingredient per head</comment>
   </parameter>
+  <parameter id="528800d7-2703-45a7-ac76-252b23a912e9" defaultVariableName="cropping_system_ratio" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">ratio of cropping system production</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
   <parameter id="89d64158-4ffd-4e8a-9917-90c15a2314f2" defaultVariableName="pressur_kWh" unitId="77ae64fa-7e74-4252-9c3b-889c1cd20bfc">
     <name xml:lang="en">pressurization electricity</name>
     <unitName xml:lang="en">kWh</unitName>
@@ -789,12 +812,20 @@ The estimated average load is 1620 kg and the estimated weight of a passengeris 
   <parameter id="89634284-5719-4746-a5c8-813a98a0f71f" defaultVariableName="concrete">
     <name xml:lang="en">concrete use</name>
   </parameter>
+  <parameter id="96516c3b-eca6-405b-ab39-07dfec3c0e76" defaultVariableName="practice_factor_erosion" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">practice factor for anti-erosion practice</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
   <parameter id="adc5b880-e140-4d09-a180-3dc9a4627bcb">
     <name xml:lang="en">fraction_iw_to_surface_water</name>
   </parameter>
   <parameter id="5a993cf8-1f8a-4425-b144-55950934adfa" defaultVariableName="cadmium" unitId="c182d036-038d-4c66-86ba-280c8a624ddf">
     <name xml:lang="en">emission of cadmium</name>
     <unitName xml:lang="en">kg/MJ</unitName>
+  </parameter>
+  <parameter id="8a1957f7-66e9-4fd9-9815-faf070548777" defaultVariableName="T4N_thc_100hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
+    <name xml:lang="en">total hydrocarbon emissions tier T4N for hp &lt; 100</name>
+    <unitName xml:lang="en">kg/hp*h</unitName>
   </parameter>
   <parameter id="4ea64744-a89f-4bbd-9ad1-2ac75f0e644e" defaultVariableName="T1_kW" unitId="7de7e78f-ccf0-46b4-a549-20b04f4b1421">
     <name xml:lang="en">power tier T1</name>
@@ -823,6 +854,10 @@ The estimated average load is 1620 kg and the estimated weight of a passengeris 
   <parameter id="4ac62a81-5fee-4c34-a5c7-de8fc1a5ae64" defaultVariableName="dens_mine_oil" unitId="b06bab82-f0e8-426d-849a-ebdb5b553519">
     <name xml:lang="en">mineral oil, density</name>
     <unitName xml:lang="en">kg/l</unitName>
+  </parameter>
+  <parameter id="c80112c6-201c-4cc4-845a-5bca285daac6" defaultVariableName="validation_non_positive">
+    <name xml:lang="en">Validation: Value must be non-positive</name>
+    <comment xml:lang="en">Upon submit, validates that the amount calculated in the mathematical relation of this parameter is non-positive; i.e. 0 or less. Results can be seen along with other validation results at "Modelling and Administrative".</comment>
   </parameter>
   <parameter id="7a560ee4-7bc6-486d-93c9-c475f9cf630a" defaultVariableName="co" unitId="c182d036-038d-4c66-86ba-280c8a624ddf">
     <name xml:lang="en">emission of carbon monoxide, non-fossil</name>
@@ -910,6 +945,10 @@ The estimated average load is 1620 kg and the estimated weight of a passengeris 
     <name xml:lang="en">steel use, for photovoltaic open ground mounting system</name>
     <unitName xml:lang="en">kg</unitName>
   </parameter>
+  <parameter id="d3a524f4-512d-4770-afb7-04cf59b6712f" defaultVariableName="mangowash" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">amount mangowash</name>
+    <unitName xml:lang="en">kg</unitName>
+  </parameter>
   <parameter id="d86d34a2-e69c-4c61-ad0b-9e0fdc6067b3" defaultVariableName="waste_caustic_soda" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">waste caustic soda</name>
     <unitName xml:lang="en">kg</unitName>
@@ -943,6 +982,9 @@ The estimated average load is 1620 kg and the estimated weight of a passengeris 
   <parameter id="6352b880-794b-4df9-a267-14341d98a59d" defaultVariableName="T4N_PM10_750php" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">particulates &lt;= 10 um emissions tier T4N for hp &gt;= 750</name>
     <unitName xml:lang="en">kg/hp*h</unitName>
+  </parameter>
+  <parameter id="76e36c44-5ac3-413a-9277-fb83c70cb547" defaultVariableName="fraction_diesel">
+    <name xml:lang="en">fraction of diesel pumps</name>
   </parameter>
   <parameter id="bcc8deff-c67e-49ed-aec8-9817154bf922" defaultVariableName="diesel_consumption_10MW" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">diesel consumption in disel, burned in d-e genset, 10MW</name>
@@ -1006,10 +1048,9 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">emissions calculated based on average losses and english gas composition, referred to 1m3</comment>
   </parameter>
-  <parameter id="abe3e104-cb2e-40ba-891e-f27270f80013" defaultVariableName="water_for_steam" unitId="83ecd334-1b5b-4784-8938-6a0d0a9d8954">
-    <name xml:lang="en">water for steam</name>
-    <unitName xml:lang="en">kg/kg</unitName>
-    <comment xml:lang="en">kg of water for production of 1 kg of steam</comment>
+  <parameter id="25a2b75b-a77d-442e-a2be-c0cf5ea15b04" defaultVariableName="EF_CO1" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">emission factor CO (biomass burning)</name>
+    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="16450fc6-85cc-4077-b93a-274e1c21f0ad" defaultVariableName="T01_thc_100php" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">total hydrocarbon emissions tier T0-T1 for hp &gt;= 100</name>
@@ -1065,6 +1106,11 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="3dce430c-9c14-453e-b90b-352fdecc8043" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">methane emission, natural</name>
     <unitName xml:lang="en">kg</unitName>
+  </parameter>
+  <parameter id="03c9c83d-4db3-4287-b837-9be862222c73" defaultVariableName="urea_as_N" unitId="18b6bdfc-1ccd-4a48-9080-0b26782e165c">
+    <name xml:lang="en">amount of N from urea</name>
+    <unitName xml:lang="en">kg N/ha</unitName>
+    <comment xml:lang="en">Input of urea (45%N) as nitrogen </comment>
   </parameter>
   <parameter id="2542e949-b46d-4b5f-bf96-a2bf82a13c3c" defaultVariableName="silver_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">silver content</name>
@@ -1163,6 +1209,11 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">share of tropical reservoir hydropower plants</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
+  <parameter id="03cd2f5a-c105-4f5e-9406-efcbd184a957" defaultVariableName="NH4NO3_as_N" unitId="18b6bdfc-1ccd-4a48-9080-0b26782e165c">
+    <name xml:lang="en">nitrogen from NH4NO3</name>
+    <unitName xml:lang="en">kg N/ha</unitName>
+    <comment xml:lang="en">Nitrogen from Ammonium nitrate and Calcium ammonium nitrate</comment>
+  </parameter>
   <parameter id="5b1c2352-6194-4202-a0fe-1bdd3304f1cc" defaultVariableName="epoxy" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">outer wrap_epoxy</name>
     <unitName xml:lang="en">kg</unitName>
@@ -1184,13 +1235,18 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">speed</name>
     <unitName xml:lang="en">km/hour</unitName>
   </parameter>
-  <parameter id="352b8d5a-bff9-4acb-bac0-10a4ea44b3a1" defaultVariableName="diesel_transport" unitId="86b0e4a2-57e5-48b8-a43d-22c7f8490dca">
-    <name xml:lang="en">diesel consumption for transport operation</name>
-    <unitName xml:lang="en">l</unitName>
+  <parameter id="c5fc8756-6a94-442c-b312-e06a254181ee" defaultVariableName="A_bronze" unitId="d88a3aae-805d-4ba4-ab0e-586ec008305c">
+    <name xml:lang="en">factor A_bronze</name>
+    <unitName xml:lang="en">kg/(m3/d)^2</unitName>
   </parameter>
   <parameter id="16aa4f41-5159-440f-8148-e3cf5a875e4d" defaultVariableName="WWithdrawal_EP_NG_recirculating_CS" unitId="d8c254d2-9ad0-4e1f-a220-58d1db66c21c">
     <name xml:lang="en">water withdrawal, electricity production from NG, recirculating CS</name>
     <unitName xml:lang="en">m3/kWh</unitName>
+  </parameter>
+  <parameter id="90e2de3b-6080-4a13-8023-f815fe7899b2" defaultVariableName="SL_Vol_Sow_yr" unitId="6c73afda-7131-4e3c-93f4-b3fa847f3571">
+    <name xml:lang="en">slurry volume production rate for sow</name>
+    <unitName xml:lang="en">m3/head/yr</unitName>
+    <comment xml:lang="en">(m3/head.yr) Slurry volume generated per sow in nursery; annual volume per head  (CRAAQ, 2007). Dilution by servicing water and precipitation is accounted for. Dry matter (dm) content (%): 2,7%, N content (% dm): 10,7%, P2O5 content (% dm): 7,4% and K2O content (% dm): 5,6%.</comment>
   </parameter>
   <parameter id="352f7e4e-cd23-43cd-84a3-f6b928783b60" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">fraction of 35 MPa concrete to overall concrete production</name>
@@ -1270,10 +1326,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">hexavalent chromium air emissions post-abatment</name>
     <unitName xml:lang="en">kg</unitName>
   </parameter>
-  <parameter id="312e7fd7-0ce3-45e3-bd81-f1cead6901c0" defaultVariableName="PressV_fglass" unitId="06477fb5-7177-491d-8383-aa6c81614c5c">
-    <name xml:lang="en">pressure vessel, glass fibre mass per module</name>
-    <unitName xml:lang="en">kg/unit</unitName>
-    <comment xml:lang="en">Kilogramme per module unit</comment>
+  <parameter id="c4bfb0fa-57b0-4836-8959-2e32496c4384" defaultVariableName="Al_OH_3_for_Al2O3" unitId="22dd5d20-97ab-471f-aa89-fdb38e46f802">
+    <name xml:lang="en">Aluminium hydroxide used in alumina production</name>
+    <unitName xml:lang="en">% (obsolete)</unitName>
+    <comment xml:lang="en">Used to estimate global production volumes, readily available for Al2O3 but not for Al(OH)3.</comment>
   </parameter>
   <parameter id="98dc0405-4798-4187-9de2-c44b188cfa27" defaultVariableName="T2_PM10_100hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">particulates &lt;= 10 um emissions tier T2 for hp &lt; 100</name>
@@ -1330,6 +1386,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">quebec diesel consumption (kg/kg)</name>
     <unitName xml:lang="en">kg/kg</unitName>
     <comment xml:lang="en">Diesel consumption of tractor and machinery within the Québec context; kg diesel/kg</comment>
+  </parameter>
+  <parameter id="1233f853-88c2-4a63-af7f-3cf01219a810" defaultVariableName="disinf_t_s" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">disinfectant troclosene sodium</name>
+    <unitName xml:lang="en">kg</unitName>
   </parameter>
   <parameter id="fb56edfc-6599-4dac-b6f8-3bf2f194cb48" defaultVariableName="corr">
     <name xml:lang="en">correction factor</name>
@@ -1404,6 +1464,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">fraction, water to river</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
+  <parameter id="517d8564-2391-4541-82d7-43138269d4aa" defaultVariableName="soil_loss" unitId="c1520f88-5ae0-4670-b39a-aff30e984b0b">
+    <name xml:lang="en">soil loss due to erosion</name>
+    <unitName xml:lang="en">metric ton/(ha*year)</unitName>
+  </parameter>
   <parameter id="2a5b7645-c53c-4593-8bf2-84882ffd25f4" defaultVariableName="thickness_new_gravel" unitId="f2aaa4ba-fb58-49a7-a552-e7f64366f379">
     <name xml:lang="en">thickness of new gravel layer</name>
     <unitName xml:lang="en">m</unitName>
@@ -1458,11 +1522,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">Quantity of pesticide applied (kg/kg maize)</comment>
   </parameter>
-  <parameter id="c4bfb0fa-57b0-4836-8959-2e32496c4384" defaultVariableName="Al_OH_3_for_Al2O3" unitId="22dd5d20-97ab-471f-aa89-fdb38e46f802">
-    <name xml:lang="en">Aluminium hydroxide used in alumina production</name>
-    <unitName xml:lang="en">% (obsolete)</unitName>
-    <comment xml:lang="en">Used to estimate global production volumes, readily available for Al2O3 but not for Al(OH)3.</comment>
-  </parameter>
   <parameter id="75536dd5-3343-460d-9921-ea7455a39f5e" defaultVariableName="T_t" unitId="35dc944d-443f-48a5-a2fd-e310c3e11cf5">
     <name xml:lang="en">land transformation to</name>
     <unitName xml:lang="en">m2/kg</unitName>
@@ -1479,6 +1538,11 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="73ea7e73-7bc0-4bda-8191-1fc017f03ac2" defaultVariableName="PM10" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">total particulates &lt;= 10 um emissions</name>
     <unitName xml:lang="en">kg</unitName>
+  </parameter>
+  <parameter id="1827f822-2dcb-4c5a-add2-b19bcd0d997d" defaultVariableName="annual_eu_car_km" unitId="ae252091-811b-461b-8e89-8f3075639eb1">
+    <name xml:lang="en">annual european passenger car km</name>
+    <unitName xml:lang="en">km</unitName>
+    <comment xml:lang="en">Annual total passenger car vehicle km, taken from TREMOVE model 2.7b (2009)</comment>
   </parameter>
   <parameter id="138a6523-dbc1-4793-85c3-51a715837aad" defaultVariableName="dairy_cows_productivity" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">milk productivity of Quebec dairy cows</name>
@@ -1550,6 +1614,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   </parameter>
   <parameter id="80707236-8a12-45cd-b079-f3e17bbdd1a4" defaultVariableName="VOC" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">total volatile organic compound emissions</name>
+    <unitName xml:lang="en">kg</unitName>
+  </parameter>
+  <parameter id="c9f92fe1-a520-4489-91d0-c8b7d09b0075" defaultVariableName="disinf_ca_cl" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">disinfectant calcium cl</name>
     <unitName xml:lang="en">kg</unitName>
   </parameter>
   <parameter id="946f3d85-eb4b-4616-9fca-aed231bc4467" defaultVariableName="capacity_inverter" unitId="7de7e78f-ccf0-46b4-a549-20b04f4b1421">
@@ -1655,6 +1723,11 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">methane emission rate during occupation of the peat bog</name>
     <unitName xml:lang="en">kg/ha.yr</unitName>
   </parameter>
+  <parameter id="1515fc60-b269-49e1-9cd1-c005d6bacfe6" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">south africa concrete prod</name>
+    <unitName xml:lang="en">m3</unitName>
+    <comment xml:lang="en">Annual concrete production in south africa </comment>
+  </parameter>
   <parameter id="ab06c5f7-ed7a-46ee-9feb-d8473ddff12d" defaultVariableName="weight" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">weight</name>
     <unitName xml:lang="en">kg</unitName>
@@ -1696,9 +1769,17 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">kg of ingredient per head</comment>
   </parameter>
+  <parameter id="ab8436ff-7a1c-4923-8bdf-044dd286f109" defaultVariableName="N_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">nitrogen content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
   <parameter id="4220aa61-fa9e-44c3-a62e-ccee298ca55c" defaultVariableName="CO2_density" unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839">
     <name xml:lang="en">carbon dioxide density (ntp)</name>
     <unitName xml:lang="en">kg/m3</unitName>
+  </parameter>
+  <parameter id="331a59ec-aff1-440f-bead-4d85ed45e5d7" defaultVariableName="water_consumption_boiler" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">water consumption in boiler</name>
+    <unitName xml:lang="en">kg</unitName>
   </parameter>
   <parameter id="922f0b48-4565-4e22-956e-3321c15ad425" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">electrical efficiency, global</name>
@@ -1733,6 +1814,11 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <unitName xml:lang="en">kg/(head.d)</unitName>
     <comment xml:lang="en">PM less than 10 micrometers</comment>
   </parameter>
+  <parameter id="712abcec-3f48-474b-9dbf-80dd79c24a75" defaultVariableName="erodibility_factor_k" unitId="e3e78ccf-8743-4939-8c33-25d4ee488cd1">
+    <name xml:lang="en">erodibility factor</name>
+    <unitName xml:lang="en">t*h/(MJ*mm)</unitName>
+    <comment xml:lang="en">Erodibility factor for soils</comment>
+  </parameter>
   <parameter id="b63527d3-bc62-4f91-bdc4-fde9a42ae310" defaultVariableName="oily_ww" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">amount of oily wastewater_emulsion</name>
     <unitName xml:lang="en">kg</unitName>
@@ -1752,6 +1838,11 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   </parameter>
   <parameter id="29db582f-122a-43ab-be50-341a271209d1" defaultVariableName="share_1400000m3">
     <name xml:lang="en">share of size class 14E5 m3</name>
+  </parameter>
+  <parameter id="d7d655f2-2c83-426a-bc42-31bcd0bcc872" defaultVariableName="N_fert" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">nitrogen fertilizer, as N</name>
+    <unitName xml:lang="en">kg</unitName>
+    <comment xml:lang="en">Nitrogen fertilizer (not urea) for fertilization.</comment>
   </parameter>
   <parameter id="c32e6b5f-84df-4a02-9da9-c0b0f484d548" defaultVariableName="rec_f_Plastic">
     <name xml:lang="en">plastic fraction recovery</name>
@@ -1811,9 +1902,9 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">particulates &lt;= 10 um emissions tier T0 for hp &lt; 11</name>
     <unitName xml:lang="en">kg/hp*h</unitName>
   </parameter>
-  <parameter id="0ec37efe-31c2-4410-94ba-37f5bee7adcf" defaultVariableName="T1_PM10_300hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
-    <name xml:lang="en">particulates &lt;= 10 um emissions tier T1 for hp &lt; 300</name>
-    <unitName xml:lang="en">kg/hp*h</unitName>
+  <parameter id="8511df4d-feb5-4f8a-8912-73009f5efe87" defaultVariableName="share_extensive" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">share of wood chips cogeneration with extensive emissions control</name>
+    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="aaa1ef76-1d69-42b1-b531-f4c7ac1833aa" defaultVariableName="A_concrete" unitId="92e2242b-3241-44cd-907e-651d6e9ffc87">
     <name xml:lang="en">factor A_concrete</name>
@@ -1874,6 +1965,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">fraction of peat bog to wet restoration at closure</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
+  <parameter id="a70bdd5a-1553-440d-9845-f954e387730e" defaultVariableName="T_f_f" unitId="1017f68a-f818-4f9d-a34d-a31e7386f628">
+    <name xml:lang="en">Transformation from primary forest</name>
+    <unitName xml:lang="en">m2</unitName>
+  </parameter>
   <parameter id="20683b52-0c87-4001-b03d-e0225817301c" defaultVariableName="fosthiazate" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">fosthiazate</name>
     <unitName xml:lang="en">kg</unitName>
@@ -1894,10 +1989,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="eb87eaae-8d3a-4024-8211-3b145a635662" defaultVariableName="no_computer_desktop_sold_4years">
     <name xml:lang="en">number of computers (desktop) sold in 4 years</name>
     <comment xml:lang="en">Number of computers (desktop) sold in 4 years (from 2002 - 2005 included).</comment>
-  </parameter>
-  <parameter id="50b63602-a154-41ef-9012-1bb511b0e97b" defaultVariableName="T1_PM10_100hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
-    <name xml:lang="en">particulates &lt;= 10 um emissions tier T1 for hp &lt; 100</name>
-    <unitName xml:lang="en">kg/hp*h</unitName>
   </parameter>
   <parameter id="ef6087f5-b704-4028-a4bb-af16bbe87322" defaultVariableName="CO2rate_pre_restoration" unitId="1eb913ab-3676-4615-bb13-2bcfc37e5e85">
     <name xml:lang="en">carbon dioxide emission rate during temporary abandonment prior to restoration</name>
@@ -2053,10 +2144,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">fuel consumption of basis vehicle</name>
     <comment xml:lang="en">using kg or m3 depending on the fuel</comment>
   </parameter>
-  <parameter id="2fb34c7a-9c21-4802-95df-f71866f6fb5f" defaultVariableName="T01_thc_50hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
-    <name xml:lang="en">total hydrocarbon emissions tier T0-T1 for hp &lt; 50</name>
-    <unitName xml:lang="en">kg/hp*h</unitName>
-  </parameter>
   <parameter id="373d1fb9-db80-4839-84da-cd421df3b8a7" defaultVariableName="b_wc" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">biomass water content</name>
     <unitName xml:lang="en">dimensionless</unitName>
@@ -2123,6 +2210,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">mass soymeal</name>
     <unitName xml:lang="en">kg</unitName>
   </parameter>
+  <parameter id="0a01f4e4-6d3f-4ee0-9bd6-4be5856cb734" defaultVariableName="stocking_density">
+    <name xml:lang="en">stocking density</name>
+    <comment xml:lang="en">Final stocking density of aquaculture systems, expressed in kg/m3 or kg/unit of cage/pond/raceway/water body with a known holding capacity</comment>
+  </parameter>
   <parameter id="0968e9b8-eda0-41f1-bc05-596dabaa49a9" defaultVariableName="EURO_IIIb" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">share of EURO IIIb</name>
     <unitName xml:lang="en">dimensionless</unitName>
@@ -2141,6 +2232,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   </parameter>
   <parameter id="0ab6a875-a7f8-4519-b11e-2054f9a9f1f7" defaultVariableName="rw_r_agb" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">roundwood ratio at AGB</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
+  <parameter id="5fceb27c-e5b9-4b62-91de-3f14d6978d6f" defaultVariableName="fraction_soil_Ferw" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">fraction loss soil to river</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="a3ea8a2f-1e5a-497d-ba65-59aa333d663b" defaultVariableName="SowCullRate" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
@@ -2171,10 +2266,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="bbcdc385-2ddc-4f70-a03a-6c38feb19f91" defaultVariableName="amount_HDR" unitId="4bb29a33-6641-498f-8db7-28ff21dd2a1f">
     <name xml:lang="en">amount of Hot-Dry-Rock plant needed</name>
     <unitName xml:lang="en">unit/kWh</unitName>
-  </parameter>
-  <parameter id="25a2b75b-a77d-442e-a2be-c0cf5ea15b04" defaultVariableName="EF_CO1" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">emission factor CO (biomass burning)</name>
-    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="9e2b8782-4454-4c34-8b0c-3d191ad1a4b6" defaultVariableName="SOP" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">sorted office paper</name>
@@ -2215,13 +2306,19 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">waste citric acid</name>
     <unitName xml:lang="en">kg</unitName>
   </parameter>
-  <parameter id="ce5cb868-4486-4a1d-8f89-7cbb6b6587f9" defaultVariableName="DeathRatePig" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">death rate pig in finishing</name>
+  <parameter id="a7997d4b-a353-4963-9d8b-a243167f2a96" defaultVariableName="crop_factor_c1" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">crop factor</name>
     <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">According to Ontario Ministry of Agriculture (http://www.omafra.gov.on.ca/english/engineer/facts/12-051.htm):
+- Fruit trees = 0.1</comment>
   </parameter>
   <parameter id="dd63d46a-c8ed-4e41-9625-edcdb736643a" defaultVariableName="sum_RP_m3" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">sum of reference products in volume</name>
     <unitName xml:lang="en">m3</unitName>
+  </parameter>
+  <parameter id="b2a06582-165d-405e-8b5d-430d4fb11f2f" defaultVariableName="burning_efficiency" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">pre-harvest burning efficiency</name>
+    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="3fd3d199-5dfc-4a3e-916e-e9fc29ea106a" defaultVariableName="T4N_thc_100php" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">total hydrocarbon emissions tier T4N for hp &gt;= 100</name>
@@ -2231,6 +2328,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">copper wire use</name>
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">Use of copper wire for construction/maintenance</comment>
+  </parameter>
+  <parameter id="f5b851be-b663-4c11-93fe-707fe48afc35" defaultVariableName="EF_SO21" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">emission factor sulfur dioxide</name>
+    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="c20777c4-a93b-44b0-8402-1f1d086f873f" defaultVariableName="fraction_CW_OT_to_air">
     <name xml:lang="en">fraction of cooling water which evaporates to air, once-through cooling system</name>
@@ -2295,10 +2396,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">feed, per sow, wheat shorts</name>
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">kg of ingredient per head</comment>
-  </parameter>
-  <parameter id="9f5b3983-1c4c-42aa-9a8b-e661f81bd714" defaultVariableName="moisture_sawlogs" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">moisture content sawlogs and veneer logs</name>
-    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="b498c32d-a340-4d7c-afb2-3ca89d111a6c" defaultVariableName="delimbing_excavator" unitId="a25a4cee-1cc6-4046-bf44-eaf5d424930b">
     <name xml:lang="en">delimbing/sorging with excavator based processor per m3</name>
@@ -2436,6 +2533,11 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">particulates &lt;= 10 um emissions tier T1 for hp &lt; 175</name>
     <unitName xml:lang="en">kg/hp*h</unitName>
   </parameter>
+  <parameter id="16478960-1ed8-4ba7-abf4-d21553e75223" defaultVariableName="grow_period" unitId="11910f25-70a2-4150-a6a8-37e481c22e12">
+    <name xml:lang="en">Plant growing period</name>
+    <unitName xml:lang="en">month</unitName>
+    <comment xml:lang="en">Duration of growing season of plants (in months)</comment>
+  </parameter>
   <parameter id="c9acb6e6-dc1e-48af-b294-8618077aabb7" defaultVariableName="A_iron" unitId="d88a3aae-805d-4ba4-ab0e-586ec008305c">
     <name xml:lang="en">factor A_iron</name>
     <unitName xml:lang="en">kg/(m3/d)^2</unitName>
@@ -2504,6 +2606,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">Transformation from peat land</name>
     <unitName xml:lang="en">m2</unitName>
   </parameter>
+  <parameter id="352b8d5a-bff9-4acb-bac0-10a4ea44b3a1" defaultVariableName="diesel_transport" unitId="86b0e4a2-57e5-48b8-a43d-22c7f8490dca">
+    <name xml:lang="en">diesel consumption for transport operation</name>
+    <unitName xml:lang="en">l</unitName>
+  </parameter>
   <parameter id="85ba8e76-08a2-4d7d-b842-50c73a57c727" defaultVariableName="CP" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">computer printout</name>
     <unitName xml:lang="en">kg</unitName>
@@ -2542,6 +2648,15 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">irrigation water fracton to surface water</name>
     <unitName xml:lang="en">dimensionless</unitName>
     <comment xml:lang="en">The fraction of irrigation water emitted to surface water</comment>
+  </parameter>
+  <parameter id="e254925f-d06c-4a93-b0cf-9280c1f1d5f4" defaultVariableName="N_generic" unitId="18b6bdfc-1ccd-4a48-9080-0b26782e165c">
+    <name xml:lang="en">generic nitrogen</name>
+    <unitName xml:lang="en">kg N/ha</unitName>
+    <comment xml:lang="en">Amount of nitrogen from different sources of fertilisers</comment>
+  </parameter>
+  <parameter id="3ceb2fa6-d782-4b15-b977-97b90b3fd26d" defaultVariableName="copper_pipes" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">copper pipes</name>
+    <unitName xml:lang="en">kg</unitName>
   </parameter>
   <parameter id="594469a9-fc31-45e5-ae85-92803b613f66" defaultVariableName="T12_thc_50hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">total hydrocarbon emissions tier T1-T2 for hp &lt; 50</name>
@@ -2682,9 +2797,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">electrical efficiency</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
-  <parameter id="77986b23-b9d6-45cc-a8a0-858fec70da09">
-    <name xml:lang="en">emissions of carbon monoxide from diesel combustion in fishing vessels</name>
-  </parameter>
   <parameter id="fbe77a5d-4947-4083-9d8e-426cd992bfbf" defaultVariableName="EF_PAH" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">emission factor polycyclic aromatic hydrocarbon</name>
     <unitName xml:lang="en">dimensionless</unitName>
@@ -2698,9 +2810,13 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">kg of ingredient per head</comment>
   </parameter>
-  <parameter id="cdc901d5-5f73-4a2d-8fcd-f5ca302e308d" unitId="83ecd334-1b5b-4784-8938-6a0d0a9d8954">
-    <name xml:lang="en">emissions of nitrogen oxides from diesel combustion in fishing vessels</name>
-    <unitName xml:lang="en">kg/kg</unitName>
+  <parameter id="7ae0f470-bd62-4eef-a116-1e157ee5c757" defaultVariableName="production_HDR" unitId="46a269fc-4efb-4087-b5c1-9f4bc318275d">
+    <name xml:lang="en">production of electricity, Hot-Dry-Rock</name>
+    <unitName xml:lang="en">kWh/year</unitName>
+  </parameter>
+  <parameter id="171127a1-54f2-49de-b34f-f1028714ee43" defaultVariableName="woodchip" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">wood chip</name>
+    <unitName xml:lang="en">m3</unitName>
   </parameter>
   <parameter id="bf71328c-76c1-4e2a-87cd-a8f1718c8e53" defaultVariableName="share_flat_roof" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">share of flat roof installations</name>
@@ -2714,6 +2830,11 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">feed, per sow, methionine</name>
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">kg of ingredient per head</comment>
+  </parameter>
+  <parameter id="9ba4b675-3e3a-4729-b5ed-f8b3c944afee" defaultVariableName="ratio_PV" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">ratio of production volume, region Quebec vs Global</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">Production volume from Quebec region over World production volume</comment>
   </parameter>
   <parameter id="cb4518bf-cbba-4d5a-a0db-9b4d7fe3537a" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">average annual refrigerant leakage rate</name>
@@ -2759,6 +2880,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <unitName xml:lang="en">dimensionless</unitName>
     <comment xml:lang="en">Share of wood fuel of total wood harvest (referring to volume below bark); share_sawlogs + share_pulpwood + share_wood_fuel = 100%</comment>
   </parameter>
+  <parameter id="a43bedcb-c844-4067-8db8-61cb2ee2ec7c" defaultVariableName="N2O_N_2_N2O" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">Transformation factor from N2O as N to N2O</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
   <parameter id="cc5f39bc-c885-4307-82bb-4ce7dfa69a8a" defaultVariableName="THC" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">total hydrocarbon emissions</name>
     <unitName xml:lang="en">kg</unitName>
@@ -2792,15 +2917,14 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">global tap water yearly production volume</name>
     <unitName xml:lang="en">m3</unitName>
   </parameter>
+  <parameter id="7c29c280-60be-411f-92d9-e79c1fecbc6d" defaultVariableName="disinf_clo2" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">disinfectant ClO2</name>
+    <unitName xml:lang="en">kg</unitName>
+  </parameter>
   <parameter id="b52b8630-7fd0-432c-9d90-5458f09aadcd" defaultVariableName="butane_NL" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">butane from NL</name>
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">emissions calculated based on average losses and dutch gas composition, per m3 of natural gas.</comment>
-  </parameter>
-  <parameter id="0c653452-8c1e-4eab-afc8-8cf2bb1aa2ae" defaultVariableName="NH3_volatilised_sludge_application" unitId="b7023e0a-3baa-444e-9ecd-953b2bfce402">
-    <name xml:lang="en">ammonia volatilised after sludge application</name>
-    <unitName xml:lang="en">kg NH3-N</unitName>
-    <comment xml:lang="en">(kg NH3-N) NH3–N = TAN * (ER_TAN + c_app) * cx as found in the Agrammon model in Source: Nemecek, T., Schnetzer, J., 2011. Methods of assessment of direct field emissions for LCIs of agricultural production systems. Agroscope Reckenholz-Tänikon Research Station ART. 34 pages</comment>
   </parameter>
   <parameter id="3a75b0ee-15e1-4464-985c-40093565d8c2" defaultVariableName="ha2m2" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">hectare to m2</name>
@@ -2885,10 +3009,9 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">factorA_clay</name>
     <unitName xml:lang="en">kg/(m3/d)^2</unitName>
   </parameter>
-  <parameter id="9e304951-6b7a-4323-bfef-f754756d6f5a" defaultVariableName="acephate" unitId="1eb913ab-3676-4615-bb13-2bcfc37e5e85">
-    <name xml:lang="en">acephate</name>
-    <unitName xml:lang="en">kg/ha.yr</unitName>
-    <comment xml:lang="en">Application of acephate in kilogram per hectare per year</comment>
+  <parameter id="2fb34c7a-9c21-4802-95df-f71866f6fb5f" defaultVariableName="T01_thc_50hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
+    <name xml:lang="en">total hydrocarbon emissions tier T0-T1 for hp &lt; 50</name>
+    <unitName xml:lang="en">kg/hp*h</unitName>
   </parameter>
   <parameter id="e597b825-ea67-44f8-bcef-442c554a4809" defaultVariableName="T3_kW" unitId="7de7e78f-ccf0-46b4-a549-20b04f4b1421">
     <name xml:lang="en">power tier T3</name>
@@ -2896,6 +3019,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   </parameter>
   <parameter id="446ae9b0-2463-4f51-823d-fc519b0b0f66" defaultVariableName="T2" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">fraction tier T2</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
+  <parameter id="8cb535f8-22ba-4a3f-aaeb-20baa3df469d" defaultVariableName="pre_harvest_burning" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">pre-harvest burning</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="02af30ed-a52e-4b80-9fa9-3c5dfc562445" defaultVariableName="H2O_to_C3H5NO" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
@@ -2919,10 +3046,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <comment xml:lang="en">The annual yield is corrected with a correction factor of 0.92 according to [ Jungbluth N., Stucki M., and Frischknecht R. (2009) Photovoltaics. In Dones, R. (Ed.) et al., Sachbilanzen von Energiesystemen: Grundlagen für den ökologischen Vergleich von Energiesystemen und den Einbezug von Energiesystemen in Oekobilanzen für die Schweiz. ecoinvent report No. 6-XII, Swiss Centre for Life Cycle Inventories, Dübendorf, CH, 2009.]
 </comment>
   </parameter>
-  <parameter id="a97e94bc-7ee0-45bf-8b6f-2df6b8fb40db" defaultVariableName="T0_thc_11hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
-    <name xml:lang="en">total hydrocarbon emissions tier T0 for hp &lt; 11</name>
-    <unitName xml:lang="en">kg/hp*h</unitName>
-  </parameter>
   <parameter id="aceda431-9b5e-425c-a15a-931db9724bda" defaultVariableName="EOL_reforestation" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">fraction of peat bog reforested at closure</name>
     <unitName xml:lang="en">dimensionless</unitName>
@@ -2930,6 +3053,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="a6945c2e-ed43-4d98-b3f5-5e7756241695" unitId="3e2c67b8-bc67-42a5-bc81-00756f0e05bb">
     <name xml:lang="en">thickness of wooden floor</name>
     <unitName xml:lang="en">mm</unitName>
+  </parameter>
+  <parameter id="1055e048-dc76-4982-96f5-f5f5aefb2fee" defaultVariableName="Bldg_Piglet_N2O" unitId="9998c5fd-534a-4396-a438-1d28501c8564">
+    <name xml:lang="en">dinitrogen oxide emission from piglet building</name>
+    <unitName xml:lang="en">kg/(head.d)</unitName>
   </parameter>
   <parameter id="6521a8ff-96e6-4006-bc22-99a63fe9becb" defaultVariableName="T1_thc_750hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">total hydrocarbon emissions tier T1 for hp &lt; 750</name>
@@ -2939,9 +3066,18 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">emission factor ethylbenzol</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
+  <parameter id="208f0715-cac0-44c0-b258-fbf717a187bf" defaultVariableName="fraction_GW" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">fraction ground water</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
   <parameter id="468e8c84-cc29-4fe1-8a7a-1278d931b813" defaultVariableName="N2O_mineral_soil" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">N2O emissions from mineral soil</name>
     <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
+  <parameter id="0b8ec398-8ee5-4213-8719-f31029497870" defaultVariableName="Ser" unitId="1eb913ab-3676-4615-bb13-2bcfc37e5e85">
+    <name xml:lang="en">soil eroded</name>
+    <unitName xml:lang="en">kg/ha.yr</unitName>
+    <comment xml:lang="en">quantity of soil eroded (kg/(ha*yr)).</comment>
   </parameter>
   <parameter id="51e6ff71-93c4-4252-97ff-67918b970060" defaultVariableName="fraction_iw_to_air" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">irrigation water fraction to air</name>
@@ -3105,6 +3241,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="d262a2cd-afb0-49f9-b0e3-7c0c258335bf" unitId="77ae64fa-7e74-4252-9c3b-889c1cd20bfc">
     <name xml:lang="en">electricity wastewater treatment</name>
     <unitName xml:lang="en">kWh</unitName>
+  </parameter>
+  <parameter id="4b6a5f24-fc7f-47a2-a7a2-b8f4152a7e40" defaultVariableName="T3_PM10_750hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
+    <name xml:lang="en">particulates &lt;= 10 um emissions tier T3 for hp &lt; 750</name>
+    <unitName xml:lang="en">kg/hp*h</unitName>
   </parameter>
   <parameter id="dba53545-4e5f-4bce-82ce-39edc25a421d" defaultVariableName="no_of_m2_transformed_per_1kg_mined" unitId="1017f68a-f818-4f9d-a34d-a31e7386f628">
     <name xml:lang="en">no_of_m2_transformed_per_1kg_mined</name>
@@ -3295,10 +3435,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">Water included.</comment>
   </parameter>
-  <parameter id="cb5dd8c9-7320-4ec4-a44b-0c03d1aabacb" unitId="2cf92850-0f92-4004-9dba-a6ceb6a414c2">
-    <name xml:lang="en">post-occupation period, with gradual return to natural emission rates</name>
-    <unitName xml:lang="en">year</unitName>
-  </parameter>
   <parameter id="b33a364c-d5cd-4f45-9a81-4e0bd28c1bf3" defaultVariableName="SL_Vol_Pig_yr" unitId="6c73afda-7131-4e3c-93f4-b3fa847f3571">
     <name xml:lang="en">slurry volume production rate for pig</name>
     <unitName xml:lang="en">m3/head/yr</unitName>
@@ -3311,9 +3447,9 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">lifetime of coal terminal, south africa</name>
     <unitName xml:lang="en">year</unitName>
   </parameter>
-  <parameter id="171127a1-54f2-49de-b34f-f1028714ee43" defaultVariableName="woodchip" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
-    <name xml:lang="en">wood chip</name>
-    <unitName xml:lang="en">m3</unitName>
+  <parameter id="6a8bb6bf-103b-42c6-8ec7-6b400f5ec733" defaultVariableName="CO2rate_pre_occupation" unitId="1eb913ab-3676-4615-bb13-2bcfc37e5e85">
+    <name xml:lang="en">carbon dioxide uptake rate from undisturbed peatlands</name>
+    <unitName xml:lang="en">kg/ha.yr</unitName>
   </parameter>
   <parameter id="45863ea4-65b1-4329-a07c-9d0182974ba9" defaultVariableName="EF_formaldehyde_gas">
     <name xml:lang="en">emission factor formaldehyde from gas</name>
@@ -3331,6 +3467,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="de4100a3-8a15-4414-a98d-6239d646de04" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">number of diggers</name>
     <unitName xml:lang="en">unit</unitName>
+  </parameter>
+  <parameter id="ed90ef6e-ea94-430f-babc-fda986659bee" defaultVariableName="nitrogen_Ncr" unitId="18b6bdfc-1ccd-4a48-9080-0b26782e165c">
+    <name xml:lang="en">nitrogen crop residues</name>
+    <unitName xml:lang="en">kg N/ha</unitName>
   </parameter>
   <parameter id="79c5d029-b7a5-48bf-8b8e-050aa294af29" defaultVariableName="Feed_Piglet_Threonine" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">feed, per piglet, threonine</name>
@@ -3375,18 +3515,25 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">fraction, water to groundwater</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
+  <parameter id="28f516eb-18e7-4aac-9098-cd6eb88219ee" defaultVariableName="water_wax" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">water wax treatment</name>
+    <unitName xml:lang="en">m3</unitName>
+  </parameter>
   <parameter id="3008d76c-a2ab-427f-9e20-3d89075b3ee9" defaultVariableName="annualFuelConsumptionm3" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">annual fuel consumption in m3</name>
     <unitName xml:lang="en">m3</unitName>
+  </parameter>
+  <parameter id="cdc901d5-5f73-4a2d-8fcd-f5ca302e308d" unitId="83ecd334-1b5b-4784-8938-6a0d0a9d8954">
+    <name xml:lang="en">emissions of nitrogen oxides from diesel combustion in fishing vessels</name>
+    <unitName xml:lang="en">kg/kg</unitName>
   </parameter>
   <parameter id="cc25d217-967d-493c-9c50-06d5ce816fde" defaultVariableName="EF_C6H61" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">emission factor benzene</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
-  <parameter id="1827f822-2dcb-4c5a-add2-b19bcd0d997d" defaultVariableName="annual_eu_car_km" unitId="ae252091-811b-461b-8e89-8f3075639eb1">
-    <name xml:lang="en">annual european passenger car km</name>
-    <unitName xml:lang="en">km</unitName>
-    <comment xml:lang="en">Annual total passenger car vehicle km, taken from TREMOVE model 2.7b (2009)</comment>
+  <parameter id="f110ff79-1fcc-4387-917f-45c05a55773e" defaultVariableName="yield" unitId="09e8c86e-1d3a-430e-aad0-fa8cc5e15b66">
+    <name xml:lang="en">yield, hardwood, m3</name>
+    <unitName xml:lang="en">m³/ha</unitName>
   </parameter>
   <parameter id="bc4c7110-6dcd-4bdb-9edf-6031f76cd95a" defaultVariableName="efficiency_countra" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">efficiency of pressure water reactor, country</name>
@@ -3421,10 +3568,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="5407a42f-e3d5-40ff-b485-fc6f185e6d06" defaultVariableName="Annual_pig_rotation" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">annual pig rotation</name>
     <unitName xml:lang="en">unit</unitName>
-  </parameter>
-  <parameter id="602a23e7-489b-43b2-a99a-ee1db5016660" defaultVariableName="surface_area" unitId="1017f68a-f818-4f9d-a34d-a31e7386f628">
-    <name xml:lang="en">surface area</name>
-    <unitName xml:lang="en">m2</unitName>
   </parameter>
   <parameter id="408009d2-a4e7-4990-9866-a257fd0c9c15" defaultVariableName="soda_original" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">original soda input</name>
@@ -3511,6 +3654,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">battery mass</name>
     <unitName xml:lang="en">kg</unitName>
   </parameter>
+  <parameter id="f160fae5-6222-4b22-8b34-d8ecc85c09e6" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">fraction of 45MPa concrete to overall concrete production</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
   <parameter id="6470c60d-d14a-4ee4-b721-23bdf78c25ed" defaultVariableName="methane_fossil_DE" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">methane fossil from DE</name>
     <unitName xml:lang="en">kg</unitName>
@@ -3537,9 +3684,8 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">emission factor PM</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
-  <parameter id="f5b851be-b663-4c11-93fe-707fe48afc35" defaultVariableName="EF_SO21" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">emission factor sulfur dioxide</name>
-    <unitName xml:lang="en">dimensionless</unitName>
+  <parameter id="77986b23-b9d6-45cc-a8a0-858fec70da09">
+    <name xml:lang="en">emissions of carbon monoxide from diesel combustion in fishing vessels</name>
   </parameter>
   <parameter id="e341989c-e400-4b69-9ac1-b27ed6110055" defaultVariableName="acet" unitId="c182d036-038d-4c66-86ba-280c8a624ddf">
     <name xml:lang="en">emission of acetaldehyde</name>
@@ -3554,10 +3700,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">kg of ingredient per head</comment>
   </parameter>
-  <parameter id="fcea1e27-5bfe-4151-90e2-97bf12bc14c1" defaultVariableName="benzene" unitId="c182d036-038d-4c66-86ba-280c8a624ddf">
-    <name xml:lang="en">emission of benzene</name>
-    <unitName xml:lang="en">kg/MJ</unitName>
-  </parameter>
   <parameter id="43f578be-b9a9-474b-8c88-5d9a5585a2b8" defaultVariableName="BTU_to_gasoline" unitId="86b0e4a2-57e5-48b8-a43d-22c7f8490dca">
     <name xml:lang="en">btu_to_gasoline</name>
     <unitName xml:lang="en">l</unitName>
@@ -3566,14 +3708,13 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">below ground biomass growth</name>
     <unitName xml:lang="en">kg/ha</unitName>
   </parameter>
-  <parameter id="a43bedcb-c844-4067-8db8-61cb2ee2ec7c" defaultVariableName="N2O_N_2_N2O" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">Transformation factor from N2O as N to N2O</name>
-    <unitName xml:lang="en">dimensionless</unitName>
+  <parameter id="50b63602-a154-41ef-9012-1bb511b0e97b" defaultVariableName="T1_PM10_100hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
+    <name xml:lang="en">particulates &lt;= 10 um emissions tier T1 for hp &lt; 100</name>
+    <unitName xml:lang="en">kg/hp*h</unitName>
   </parameter>
-  <parameter id="9ba4b675-3e3a-4729-b5ed-f8b3c944afee" defaultVariableName="ratio_PV" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">ratio of production volume, region Quebec vs Global</name>
+  <parameter id="3adf9c1e-1c9f-4b4b-a618-e64586e1aa97" defaultVariableName="global_scaling_factor" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">european to global total vkm scaling factor</name>
     <unitName xml:lang="en">dimensionless</unitName>
-    <comment xml:lang="en">Production volume from Quebec region over World production volume</comment>
   </parameter>
   <parameter id="c17d7224-f2c0-4432-a42f-34814572b267" defaultVariableName="v_mass_without_battery" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">vehicle mass without battery</name>
@@ -3607,6 +3748,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <unitName xml:lang="en">dimensionless</unitName>
     <comment xml:lang="en">Share of bundles of total wood fuel harvested (referring consistently to volume under bark or volume over bark for all types of wood fuel); share_bundles + share_cleft_timber+share_chips = 100% wood fuel</comment>
   </parameter>
+  <parameter id="7521dd5d-d709-4a92-a796-73a9b8074fdc" defaultVariableName="Delta_SOC_a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">Gain/Loss in soil organic carbon associated with crop cultivation: arable land</name>
+    <unitName xml:lang="en">kg</unitName>
+  </parameter>
   <parameter id="07b56029-6886-4199-9827-2d8c518d205a" defaultVariableName="Na2SO4_to_SiO2" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">sodium sulfate-to-silica chemical reaction molar ratio</name>
     <unitName xml:lang="en">dimensionless</unitName>
@@ -3614,10 +3759,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="1798980a-f06c-4e91-a79b-c7af63a54356" defaultVariableName="kWh_process" unitId="77ae64fa-7e74-4252-9c3b-889c1cd20bfc">
     <name xml:lang="en">electricity process and auxiliairies</name>
     <unitName xml:lang="en">kWh</unitName>
-  </parameter>
-  <parameter id="5011d7d7-0847-4d5d-b317-ee5dddc3ae82" defaultVariableName="WConsumption_EP_HC_once_through_andCP_CS" unitId="d8c254d2-9ad0-4e1f-a220-58d1db66c21c">
-    <name xml:lang="en">water consumption, electricity production from hard coal, once-through and cooli</name>
-    <unitName xml:lang="en">m3/kWh</unitName>
   </parameter>
   <parameter id="acb3e0b1-9294-4c25-8162-0e6dc89b0d5e" defaultVariableName="EOL_Berry" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">fraction of peat bog to berry cultivation at closure</name>
@@ -3650,6 +3791,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="3f4d89fc-56e8-44e3-8de9-f961e847a524" defaultVariableName="pv_3sri_sSi_pmr">
     <name xml:lang="en">Share 3kWp slanted-roof installation, single-Si, panel, mounted, on roof</name>
   </parameter>
+  <parameter id="c7944cfa-83c1-4bac-97c8-b492e9740366" defaultVariableName="Cr_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">chromium content</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
   <parameter id="4ffa5171-8fca-4dfd-874e-b54bec3d8d65" defaultVariableName="totalProduction" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">total production</name>
     <unitName xml:lang="en">m3</unitName>
@@ -3681,9 +3826,9 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">butan-1,4-diol, molecular weight</name>
     <unitName xml:lang="en">g/mol</unitName>
   </parameter>
-  <parameter id="c7944cfa-83c1-4bac-97c8-b492e9740366" defaultVariableName="Cr_content" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">chromium content</name>
-    <unitName xml:lang="en">dimensionless</unitName>
+  <parameter id="60961d25-cf02-4513-a485-e76acfad2305" defaultVariableName="losses" unitId="22dd5d20-97ab-471f-aa89-fdb38e46f802">
+    <name xml:lang="en">losses during supply</name>
+    <unitName xml:lang="en">% (obsolete)</unitName>
   </parameter>
   <parameter id="deb38262-68f2-4e32-b675-89498dc6af5d" defaultVariableName="thiram" unitId="1eb913ab-3676-4615-bb13-2bcfc37e5e85">
     <name xml:lang="en">thiram</name>
@@ -3710,6 +3855,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">phosphate lost to river per hectare</name>
     <unitName xml:lang="en">kg PO4/ha</unitName>
     <comment xml:lang="en">kg PO4 loss per hectare calculated with the ODEP model. Source: Michaud, A.R., M. Giroux, I. Beaudin, J. Desjardins, G. Gagné, M. Duchemin, J. Deslandes, C. Landry, P. Beaudet et J. Lagacé. 2009. ODEP; un outil de diagnostic des exportations de phosphore. Projet« Gestion du risque associé aux facteurs source et transport du phosphore des sols cultivés au Québec », réalisé dans le cadre de l’Initiative d’appui aux conseillers agricoles (PIACA-204). Institut de recherche et de développement en agroenvironnement inc. (IRDA) et Centre de référence en agriculture et agroalimentaire du Québec (CRAAQ), Québec, Canada. Version Octobre 2009 pour ODEP 1.1, 106 p.</comment>
+  </parameter>
+  <parameter id="133828e3-67ca-41a8-9fba-f7d47f87fb58" defaultVariableName="Nfertiliser" unitId="18b6bdfc-1ccd-4a48-9080-0b26782e165c">
+    <name xml:lang="en">nitrogen fertiliser</name>
+    <unitName xml:lang="en">kg N/ha</unitName>
   </parameter>
   <parameter id="dddb9a75-5a70-46d3-abba-7617b5d41aff" defaultVariableName="PV_01">
     <name xml:lang="en">production volume country 01</name>
@@ -3787,6 +3936,11 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="26590917-8349-424a-871b-1d8bbf72a0ab" defaultVariableName="pv_3sri_aSi_pmr">
     <name xml:lang="en">Share 3kWp slanted-roof installation, a-Si, panel, mounted, on roof</name>
   </parameter>
+  <parameter id="851543a1-8d99-432a-a7ba-4b837fa82b10" defaultVariableName="N_ex" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">nitrogen in manure on pasture</name>
+    <unitName xml:lang="en">kg</unitName>
+    <comment xml:lang="en">Manure deposited on pasture, as N, per year and kg of product.</comment>
+  </parameter>
   <parameter id="745ea648-da98-4982-b184-4599729afe7c" defaultVariableName="ventedSour" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">quantity of vented sour gas</name>
     <unitName xml:lang="en">m3</unitName>
@@ -3855,6 +4009,9 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">Share on agriculture</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
+  <parameter id="93d1d4cb-0170-439e-86a3-e7d6781f92db" defaultVariableName="EF_CH4_cattle_slurryDM">
+    <name xml:lang="en">emission factor CH4 cattle slurry dry mass</name>
+  </parameter>
   <parameter id="540ed7db-fb44-4ccc-81fa-b405cecb2fb0" defaultVariableName="density_natural_gas_liquids" unitId="b06bab82-f0e8-426d-849a-ebdb5b553519">
     <name xml:lang="en">density_natural_gas_liquids</name>
     <unitName xml:lang="en">kg/l</unitName>
@@ -3870,6 +4027,11 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="99ebb985-328e-434b-9ad6-55198cfc61d0" defaultVariableName="diesel_port" unitId="86b0e4a2-57e5-48b8-a43d-22c7f8490dca">
     <name xml:lang="en">diesel consumption for port operations</name>
     <unitName xml:lang="en">l</unitName>
+  </parameter>
+  <parameter id="9e304951-6b7a-4323-bfef-f754756d6f5a" defaultVariableName="acephate" unitId="1eb913ab-3676-4615-bb13-2bcfc37e5e85">
+    <name xml:lang="en">acephate</name>
+    <unitName xml:lang="en">kg/ha.yr</unitName>
+    <comment xml:lang="en">Application of acephate in kilogram per hectare per year</comment>
   </parameter>
   <parameter id="3b846818-25e3-4d7d-b124-59a4321629e3" defaultVariableName="EF_CO21" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">emission factor CO2 (biomass burning)</name>
@@ -3891,10 +4053,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">clinker fraction</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
-  <parameter id="6a8bb6bf-103b-42c6-8ec7-6b400f5ec733" defaultVariableName="CO2rate_pre_occupation" unitId="1eb913ab-3676-4615-bb13-2bcfc37e5e85">
-    <name xml:lang="en">carbon dioxide uptake rate from undisturbed peatlands</name>
-    <unitName xml:lang="en">kg/ha.yr</unitName>
-  </parameter>
   <parameter id="3c1f525e-4d1e-4952-b34d-79b5a1c819dc" defaultVariableName="share_slab_sawdust" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">share of slab and sawdust</name>
     <unitName xml:lang="en">dimensionless</unitName>
@@ -3911,6 +4069,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="eca6e6db-52ed-48bb-8cd0-ebbac94e4d71" unitId="2cf92850-0f92-4004-9dba-a6ceb6a414c2">
     <name xml:lang="en">active restoration period (dry)</name>
     <unitName xml:lang="en">year</unitName>
+  </parameter>
+  <parameter id="43e52bbb-daa5-4daf-9a09-b63e7bdd3ab8" defaultVariableName="liming" unitId="395f1718-3067-449c-ad6a-b96e876eebd4">
+    <name xml:lang="en">total liming</name>
+    <unitName xml:lang="en">kg/ha</unitName>
   </parameter>
   <parameter id="3ffaf239-5d77-497d-8291-16c61a35fe6f" defaultVariableName="T01_thc_11hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">total hydrocarbon emissions tier T0-T1 for hp &lt; 11</name>
@@ -3929,6 +4091,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">sodium silicate-to-silica chemical reaction molar ratio</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
+  <parameter id="e63913c3-4741-4b1d-a4bf-fbb9e0d6a0d8" defaultVariableName="SH_AGB_B" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">share of above ground biomass which is burned</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
   <parameter id="58911159-0e64-4470-8945-837c81f828f3" unitId="83ecd334-1b5b-4784-8938-6a0d0a9d8954">
     <name xml:lang="en">emissions of selenium from diesel combustion in fishing vessels</name>
     <unitName xml:lang="en">kg/kg</unitName>
@@ -3945,6 +4111,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="a2345d77-18db-4932-9f13-391fc629e077" defaultVariableName="T1_thc_100hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">total hydrocarbon emissions tier T1 for hp &lt; 100</name>
     <unitName xml:lang="en">kg/hp*h</unitName>
+  </parameter>
+  <parameter id="530067b0-7ef4-40e3-be02-d57e895c709f" defaultVariableName="erosivity_factor_R" unitId="0914dcce-dd7a-4dd0-9367-2c3c84c6d8a2">
+    <name xml:lang="en">erosivity factor</name>
+    <unitName xml:lang="en">MJ*mm/(ha*h*yr)</unitName>
   </parameter>
   <parameter id="5fe0ebf6-6ef1-4c48-a347-e8d12e8f09c9" defaultVariableName="lifetime" unitId="2cf92850-0f92-4004-9dba-a6ceb6a414c2">
     <name xml:lang="en">lifetime of facility</name>
@@ -4004,9 +4174,9 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">rotation period</name>
     <unitName xml:lang="en">year</unitName>
   </parameter>
-  <parameter id="1055e048-dc76-4982-96f5-f5f5aefb2fee" defaultVariableName="Bldg_Piglet_N2O" unitId="9998c5fd-534a-4396-a438-1d28501c8564">
-    <name xml:lang="en">dinitrogen oxide emission from piglet building</name>
-    <unitName xml:lang="en">kg/(head.d)</unitName>
+  <parameter id="ae1b19c9-c220-4faa-9050-668e99bfbed7" defaultVariableName="yield" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">chemical reaction yield</name>
+    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="360dad25-b627-4ee9-9223-039557f7b09c" defaultVariableName="T4A_thc_50hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">total hydrocarbon emissions tier T4A for hp &lt; 50</name>
@@ -4054,10 +4224,6 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">fraction_03</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
-  <parameter id="3adf9c1e-1c9f-4b4b-a618-e64586e1aa97" defaultVariableName="global_scaling_factor" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">european to global total vkm scaling factor</name>
-    <unitName xml:lang="en">dimensionless</unitName>
-  </parameter>
   <parameter id="39d87901-14d4-49f6-90ec-4e992c07cbd6" defaultVariableName="fraction_el">
     <name xml:lang="en">fraction of electricity pumps</name>
   </parameter>
@@ -4091,6 +4257,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">Suspended solid emissions to water</comment>
   </parameter>
+  <parameter id="17acdeb4-d3fc-4f45-b7aa-f9ece373c93c" defaultVariableName="propane_use" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">propane use in forklift</name>
+    <unitName xml:lang="en">kg</unitName>
+  </parameter>
   <parameter id="895de59e-e2a3-4cfa-bd49-009a8458fdc3" defaultVariableName="CO2_fire" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">CO2 emissions fire</name>
     <unitName xml:lang="en">kg</unitName>
@@ -4107,6 +4277,10 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">feed, per pig, whey</name>
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">kg of ingredient per head</comment>
+  </parameter>
+  <parameter id="3a862b86-bf08-4c8b-959a-ba61acf5e046" defaultVariableName="water_heat_t" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">water heat treatment</name>
+    <unitName xml:lang="en">m3</unitName>
   </parameter>
   <parameter id="7d46a6f2-4f6a-414a-8e1c-92e9a7709d26" defaultVariableName="Ca_NO3_2_65p" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">calcium nitrate solution 65%</name>
@@ -4154,8 +4328,9 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
     <name xml:lang="en">Wind load hours</name>
     <unitName xml:lang="en">hour</unitName>
   </parameter>
-  <parameter id="76e36c44-5ac3-413a-9277-fb83c70cb547" defaultVariableName="fraction_diesel">
-    <name xml:lang="en">fraction of diesel pumps</name>
+  <parameter id="602a23e7-489b-43b2-a99a-ee1db5016660" defaultVariableName="surface_area" unitId="1017f68a-f818-4f9d-a34d-a31e7386f628">
+    <name xml:lang="en">surface area</name>
+    <unitName xml:lang="en">m2</unitName>
   </parameter>
   <parameter id="62accb2a-b66c-4d7d-a1d1-6dcab4ac72cf" defaultVariableName="alum_ceramic" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">alumina component in ceramic</name>
@@ -4181,6 +4356,11 @@ This fraction is determined by the mineralisation rate, which is 1.6% here and i
   <parameter id="278ff7b5-5f1f-4127-9f43-ba3ecb9eb382" defaultVariableName="Sh_peat" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">Share on peat land</name>
     <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
+  <parameter id="312e7fd7-0ce3-45e3-bd81-f1cead6901c0" defaultVariableName="PressV_fglass" unitId="06477fb5-7177-491d-8383-aa6c81614c5c">
+    <name xml:lang="en">pressure vessel, glass fibre mass per module</name>
+    <unitName xml:lang="en">kg/unit</unitName>
+    <comment xml:lang="en">Kilogramme per module unit</comment>
   </parameter>
   <parameter id="4473767a-6e40-46f1-ad92-42ef91a669c9">
     <name xml:lang="en">fraction, water, ultrapure, to air</name>
@@ -4352,12 +4532,18 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">factorA_fg_reinfplast</name>
     <unitName xml:lang="en">kg/(m3/d)^2</unitName>
   </parameter>
+  <parameter id="b192a2fc-d30c-47c3-88ab-6ae9a80aabfa" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">fraction of 40MPa concrete to overall concrete production</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+  </parameter>
+  <parameter id="fb5c42f0-8423-4e33-b60a-20ec8c36423a" defaultVariableName="N_urea_feed" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">urea, as N, as feed</name>
+    <unitName xml:lang="en">kg</unitName>
+    <comment xml:lang="en">Urea for animal feed.</comment>
+  </parameter>
   <parameter id="fcca1b0b-8a07-4347-b0ae-35f1df3442f4" defaultVariableName="mineral_oil" unitId="86b0e4a2-57e5-48b8-a43d-22c7f8490dca">
     <name xml:lang="en">mineral oil, amount</name>
     <unitName xml:lang="en">l</unitName>
-  </parameter>
-  <parameter id="93d1d4cb-0170-439e-86a3-e7d6781f92db" defaultVariableName="EF_CH4_cattle_slurryDM">
-    <name xml:lang="en">emission factor CH4 cattle slurry dry mass</name>
   </parameter>
   <parameter id="1b6af626-e3c3-4896-a161-6a73a7851489" defaultVariableName="P2O5_fertilising_rate" unitId="9584395d-794c-4a4f-8035-4e136007e763">
     <name xml:lang="en">phosphorus fertilising rate</name>
@@ -4399,6 +4585,10 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">total hydrocarbon emissions tier T2 for hp &lt; 11</name>
     <unitName xml:lang="en">kg/hp*h</unitName>
   </parameter>
+  <parameter id="80789075-3886-4512-9907-7029958e559f" defaultVariableName="planting_density" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
+    <name xml:lang="en">planting density</name>
+    <unitName xml:lang="en">unit</unitName>
+  </parameter>
   <parameter id="d7dbd3b6-8452-4e66-ad65-07385fa8ec53" defaultVariableName="panel_area_CIS" unitId="40065b9e-8171-4fe1-a37a-9e8ba4980ab7">
     <name xml:lang="en">Panel area for one 3 kWp unit, CIS</name>
     <unitName xml:lang="en">m2/unit</unitName>
@@ -4414,9 +4604,17 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">content of propylene glycol in antifreeze</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
+  <parameter id="b1e1809e-8f97-4e6d-884f-ce4b980d0686" unitId="83ecd334-1b5b-4784-8938-6a0d0a9d8954">
+    <name xml:lang="en">emissions of zinc from diesel combustion in fishing vessels</name>
+    <unitName xml:lang="en">kg/kg</unitName>
+  </parameter>
   <parameter id="5c4a72f4-1b9e-4ccc-a148-b0c0b9a8a515" defaultVariableName="tellnes_mine_area_yearly_growth" unitId="2707f8e2-f546-43ca-b0af-850d438b5dda">
     <name xml:lang="en">tellnes_mine_area_yearly_growth</name>
     <unitName xml:lang="en">m2/year</unitName>
+  </parameter>
+  <parameter id="105c05ef-43b5-4e25-841e-82ea64ec039b" defaultVariableName="factor_Fr">
+    <name xml:lang="en">enrichment factor P</name>
+    <comment xml:lang="en">enrichment factor for phosphorus</comment>
   </parameter>
   <parameter id="d90662b8-d121-4d37-960a-8341500005a5" defaultVariableName="share_CH4_glycerine">
     <name xml:lang="en">share of methane in biogas from glycerine</name>
@@ -4426,9 +4624,9 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <unitName xml:lang="en">kg/(head.d)</unitName>
     <comment xml:lang="en">CO2 from animal respiration (96%) and decomposition of dejection (4%)</comment>
   </parameter>
-  <parameter id="133828e3-67ca-41a8-9fba-f7d47f87fb58" defaultVariableName="Nfertiliser" unitId="18b6bdfc-1ccd-4a48-9080-0b26782e165c">
-    <name xml:lang="en">nitrogen fertiliser</name>
-    <unitName xml:lang="en">kg N/ha</unitName>
+  <parameter id="0ec37efe-31c2-4410-94ba-37f5bee7adcf" defaultVariableName="T1_PM10_300hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
+    <name xml:lang="en">particulates &lt;= 10 um emissions tier T1 for hp &lt; 300</name>
+    <unitName xml:lang="en">kg/hp*h</unitName>
   </parameter>
   <parameter id="436e37d8-3a83-4127-83f7-ab99c68019d4" defaultVariableName="alkaline_cleaning_electricity" unitId="77ae64fa-7e74-4252-9c3b-889c1cd20bfc">
     <name xml:lang="en">alkaline cleaning electricity</name>
@@ -4530,9 +4728,9 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">kg of ingredient per head</comment>
   </parameter>
-  <parameter id="208f0715-cac0-44c0-b258-fbf717a187bf" defaultVariableName="fraction_GW" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">fraction ground water</name>
-    <unitName xml:lang="en">dimensionless</unitName>
+  <parameter id="3c5ef223-6b20-440b-9e10-a35e4f868f15" defaultVariableName="MWL" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">manifold white ledger waste paper</name>
+    <unitName xml:lang="en">kg</unitName>
   </parameter>
   <parameter id="2e034f72-6d59-4131-b5df-a71ae2a79591" defaultVariableName="water_withdrawal" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">total water withdrawal</name>
@@ -4554,9 +4752,9 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">speed, average, transoceanic ship, freight</name>
     <unitName xml:lang="en">km/hour</unitName>
   </parameter>
-  <parameter id="3c5ef223-6b20-440b-9e10-a35e4f868f15" defaultVariableName="MWL" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
-    <name xml:lang="en">manifold white ledger waste paper</name>
-    <unitName xml:lang="en">kg</unitName>
+  <parameter id="d2f6dbff-4208-46d2-9dc2-e9e63cd0cb1d" defaultVariableName="Al_OH_3_to_NaAlO2" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">aluminium hydroxide-to-sodium aluminate chemical reaction molar ratio</name>
+    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="e8ed15c0-e8dd-4a42-ba21-5ebcc7bd4381" defaultVariableName="T0_PM10_100php" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">particulates &lt;= 10 um emissions tier T0 for hp &gt;= 100</name>
@@ -4583,9 +4781,15 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">Transformation to</name>
     <unitName xml:lang="en">m2</unitName>
   </parameter>
-  <parameter id="c80112c6-201c-4cc4-845a-5bca285daac6" defaultVariableName="validation_non_positive">
-    <name xml:lang="en">Validation: Value must be non-positive</name>
-    <comment xml:lang="en">Upon submit, validates that the amount calculated in the mathematical relation of this parameter is non-positive; i.e. 0 or less. Results can be seen along with other validation results at "Modelling and Administrative".</comment>
+  <parameter id="876eab4e-687b-4259-a6ed-acf31fbc7853" defaultVariableName="slope_factor_LS" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">slope factor</name>
+    <unitName xml:lang="en">dimensionless</unitName>
+    <comment xml:lang="en">According to Ontario Ministry of Agriculture and Food (http://www.omafra.gov.on.ca/english/engineer/facts/12-051.htm):
+LS = [0.065 + 0.0456 (slope) + 0.006541 (slope)2](slope length ÷ constant)NN
+Where:
+slope = slope steepness in %
+slope length = length of slope in m (ft)
+constant = 22.1 metric (72.5 Imperial)</comment>
   </parameter>
   <parameter id="84ea9e7c-6845-4b9b-88ab-bdcb336a314f" defaultVariableName="beverage" unitId="86b0e4a2-57e5-48b8-a43d-22c7f8490dca">
     <name xml:lang="en">soybeverage</name>
@@ -4740,9 +4944,9 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <unitName xml:lang="en">dimensionless</unitName>
     <comment xml:lang="en">The fraction of irrigation water emitted to ground water</comment>
   </parameter>
-  <parameter id="80789075-3886-4512-9907-7029958e559f" defaultVariableName="planting_density" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
-    <name xml:lang="en">planting density</name>
-    <unitName xml:lang="en">unit</unitName>
+  <parameter id="0960b6bf-01f1-49a0-b855-3177fc7c275f" defaultVariableName="NOx_LPG_to_natural_gas" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">nitrogen oxides emissions from liquified petroleum gas compared to natural gas</name>
+    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="c730ac9d-e37e-4fd9-a5d2-7ad3eecff6aa" defaultVariableName="steam" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">mass steam</name>
@@ -4821,14 +5025,17 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
   <parameter id="6ec3b0eb-aaee-4226-80d5-d72be0d573ec" defaultVariableName="fraction_computer_desktop_home_use">
     <name xml:lang="en">fraction of computers desktop sold for home use</name>
   </parameter>
-  <parameter id="7521dd5d-d709-4a92-a796-73a9b8074fdc" defaultVariableName="Delta_SOC_a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
-    <name xml:lang="en">Gain/Loss in soil organic carbon associated with crop cultivation: arable land</name>
-    <unitName xml:lang="en">kg</unitName>
+  <parameter id="5011d7d7-0847-4d5d-b317-ee5dddc3ae82" defaultVariableName="WConsumption_EP_HC_once_through_andCP_CS" unitId="d8c254d2-9ad0-4e1f-a220-58d1db66c21c">
+    <name xml:lang="en">water consumption, electricity production from hard coal, once-through and cooli</name>
+    <unitName xml:lang="en">m3/kWh</unitName>
   </parameter>
-  <parameter id="72cb0620-4ec3-4347-b560-9ff4d63ec050" defaultVariableName="waste_dust_collector" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
-    <name xml:lang="en">waste dust collector</name>
-    <unitName xml:lang="en">kg</unitName>
-    <comment xml:lang="en"></comment>
+  <parameter id="a97e94bc-7ee0-45bf-8b6f-2df6b8fb40db" defaultVariableName="T0_thc_11hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
+    <name xml:lang="en">total hydrocarbon emissions tier T0 for hp &lt; 11</name>
+    <unitName xml:lang="en">kg/hp*h</unitName>
+  </parameter>
+  <parameter id="cfde0175-5eed-4a12-b46b-fd6c933e0df6" defaultVariableName="poultry_manure" unitId="395f1718-3067-449c-ad6a-b96e876eebd4">
+    <name xml:lang="en">poultry manure field application</name>
+    <unitName xml:lang="en">kg/ha</unitName>
   </parameter>
   <parameter id="f6c2feff-4cea-4f23-8048-b6ce4d9e62d7" defaultVariableName="H2SO4_to_SiO2" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">sulfuric acid-to-silica chemical reaction molar ratio</name>
@@ -4842,8 +5049,8 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">factorA_excavation</name>
     <unitName xml:lang="en">kg/(m3/d)^2</unitName>
   </parameter>
-  <parameter id="0960b6bf-01f1-49a0-b855-3177fc7c275f" defaultVariableName="NOx_LPG_to_natural_gas" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">nitrogen oxides emissions from liquified petroleum gas compared to natural gas</name>
+  <parameter id="9f5b3983-1c4c-42aa-9a8b-e661f81bd714" defaultVariableName="moisture_sawlogs" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">moisture content sawlogs and veneer logs</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="24ee851f-a160-4ef8-8dea-e9c8536fc173" defaultVariableName="bark" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
@@ -4862,6 +5069,11 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
   <parameter id="81f8bf42-3b77-4377-ae7d-00f1f394eb44" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">north america production volume in cubic meter</name>
     <unitName xml:lang="en">m3</unitName>
+  </parameter>
+  <parameter id="d921d0df-1a27-40cb-b260-69cd61f4fd60" defaultVariableName="N_urea_fert" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">urea, as N, as fertilizer</name>
+    <unitName xml:lang="en">kg</unitName>
+    <comment xml:lang="en">Urea as fertilizer. </comment>
   </parameter>
   <parameter id="db87b822-4523-4005-863f-7075b5b12d00" defaultVariableName="natural_gas_density" unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839">
     <name xml:lang="en">density, natural gas</name>
@@ -4905,6 +5117,10 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">water withdrawal, per cubic meter of concrete</name>
     <unitName xml:lang="en">kg/m3</unitName>
   </parameter>
+  <parameter id="3e338628-2f25-4de0-95cf-aaa5090efd7d" defaultVariableName="operation_hours_day" unitId="e32b56ef-fa80-4487-9796-f3c1476c27b3">
+    <name xml:lang="en">plant, operation hours</name>
+    <unitName xml:lang="en">hour</unitName>
+  </parameter>
   <parameter id="58760f02-3076-4135-aaa2-72f535ca5aa6" defaultVariableName="K_to_K2O" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">transformation factor from K to K2O</name>
     <unitName xml:lang="en">dimensionless</unitName>
@@ -4916,6 +5132,11 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
   <parameter id="77be32b1-5b30-4315-b33e-e30f65e434af" defaultVariableName="G_AGB" unitId="395f1718-3067-449c-ad6a-b96e876eebd4">
     <name xml:lang="en">above ground biomass growth</name>
     <unitName xml:lang="en">kg/ha</unitName>
+  </parameter>
+  <parameter id="74c3b5f8-1f6a-4452-b731-86a2382ddd5b" defaultVariableName="Phosphorus_Pcr" unitId="83ecd334-1b5b-4784-8938-6a0d0a9d8954">
+    <name xml:lang="en">Phosphorus content</name>
+    <unitName xml:lang="en">kg/kg</unitName>
+    <comment xml:lang="en">P content in the top soil</comment>
   </parameter>
   <parameter id="f49b8bcf-cb50-45a5-850f-aca4044a9f86" defaultVariableName="lambda_cyhalothrin" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">lambda-cyhalothrin</name>
@@ -4929,6 +5150,10 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">transformation factor from NO3 as N to NO3</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
+  <parameter id="eadf10c6-2275-49ec-a2f5-d7e0b12c1dbb" defaultVariableName="processing_rate" unitId="b3e99054-2903-4ba7-8798-f69fdbf2c053">
+    <name xml:lang="en">plant, processing rate</name>
+    <unitName xml:lang="en">t/day</unitName>
+  </parameter>
   <parameter id="03db3ca1-a0c7-4100-991f-c093eaca2525" defaultVariableName="woodchip_LHV" unitId="9d26a1d3-0c5c-4bb9-98b1-3125e247bc21">
     <name xml:lang="en">wood chip LHV</name>
     <unitName xml:lang="en">MJ/m3</unitName>
@@ -4937,8 +5162,9 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">share of sawdust</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
-  <parameter id="7f62f607-ec74-4e62-8edd-ca63d7032ee9" defaultVariableName="yield">
-    <name xml:lang="en">yield</name>
+  <parameter id="04665577-e54a-49ca-87ce-1cf74ff5b49f" defaultVariableName="yield_ha" unitId="2d4eeca7-fd7a-46b7-adfe-5c09a06ec5dd">
+    <name xml:lang="en">plants per hectare</name>
+    <unitName xml:lang="en">unit/ha</unitName>
   </parameter>
   <parameter id="3d6baddd-beb4-4970-b6f4-3ed292d1ea27" defaultVariableName="Feed_Piglet_Sodium_chloride" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">feed, per piglet, sodium chloride</name>
@@ -5053,9 +5279,14 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
   <parameter id="148c8010-cc60-48cd-9b40-fc7278e377f7">
     <name xml:lang="en">fraction, tap water, to air</name>
   </parameter>
-  <parameter id="d2f6dbff-4208-46d2-9dc2-e9e63cd0cb1d" defaultVariableName="Al_OH_3_to_NaAlO2" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">aluminium hydroxide-to-sodium aluminate chemical reaction molar ratio</name>
-    <unitName xml:lang="en">dimensionless</unitName>
+  <parameter id="b9e419e6-7848-4fb4-9f69-675c3aa94467" defaultVariableName="compost" unitId="395f1718-3067-449c-ad6a-b96e876eebd4">
+    <name xml:lang="en">compost field application</name>
+    <unitName xml:lang="en">kg/ha</unitName>
+  </parameter>
+  <parameter id="0c653452-8c1e-4eab-afc8-8cf2bb1aa2ae" defaultVariableName="NH3_volatilised_sludge_application" unitId="b7023e0a-3baa-444e-9ecd-953b2bfce402">
+    <name xml:lang="en">ammonia volatilised after sludge application</name>
+    <unitName xml:lang="en">kg NH3-N</unitName>
+    <comment xml:lang="en">(kg NH3-N) NH3–N = TAN * (ER_TAN + c_app) * cx as found in the Agrammon model in Source: Nemecek, T., Schnetzer, J., 2011. Methods of assessment of direct field emissions for LCIs of agricultural production systems. Agroscope Reckenholz-Tänikon Research Station ART. 34 pages</comment>
   </parameter>
   <parameter id="af16d758-87e1-4036-8bb1-7355dc6adb8b" defaultVariableName="no_days_computer_desktop_home_use">
     <name xml:lang="en">number of days in a year computer desktop home use</name>
@@ -5091,10 +5322,6 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">electricity, Kroll process</name>
     <unitName xml:lang="en">kWh</unitName>
   </parameter>
-  <parameter id="7ae0f470-bd62-4eef-a116-1e157ee5c757" defaultVariableName="production_HDR" unitId="46a269fc-4efb-4087-b5c1-9f4bc318275d">
-    <name xml:lang="en">production of electricity, Hot-Dry-Rock</name>
-    <unitName xml:lang="en">kWh/year</unitName>
-  </parameter>
   <parameter id="4a01e8ac-d8f2-4cd3-b987-d15792bbd558" defaultVariableName="alu_loss" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">pure aluminium loss rate</name>
     <unitName xml:lang="en">dimensionless</unitName>
@@ -5107,16 +5334,18 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">scrap silver production volume</name>
     <unitName xml:lang="en">kg</unitName>
   </parameter>
-  <parameter id="bd1feb17-059f-4945-ba4b-f75a9b570759" defaultVariableName="C_conversion_biowaste">
-    <name xml:lang="en">carbon conversion efficiency of biowaste in digester</name>
+  <parameter id="cb5dd8c9-7320-4ec4-a44b-0c03d1aabacb" unitId="2cf92850-0f92-4004-9dba-a6ceb6a414c2">
+    <name xml:lang="en">post-occupation period, with gradual return to natural emission rates</name>
+    <unitName xml:lang="en">year</unitName>
   </parameter>
   <parameter id="89aa81e1-255d-4b32-a4e7-5457b8337bdd" defaultVariableName="WWithdrawal_EP_oil_onceT_andCP_CS" unitId="d8c254d2-9ad0-4e1f-a220-58d1db66c21c">
     <name xml:lang="en">water withdrawal, electricity production from oil, once-T and coolingP CS</name>
     <unitName xml:lang="en">m3/kWh</unitName>
   </parameter>
-  <parameter id="8a1957f7-66e9-4fd9-9815-faf070548777" defaultVariableName="T4N_thc_100hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
-    <name xml:lang="en">total hydrocarbon emissions tier T4N for hp &lt; 100</name>
-    <unitName xml:lang="en">kg/hp*h</unitName>
+  <parameter id="abe3e104-cb2e-40ba-891e-f27270f80013" defaultVariableName="water_for_steam" unitId="83ecd334-1b5b-4784-8938-6a0d0a9d8954">
+    <name xml:lang="en">water for steam</name>
+    <unitName xml:lang="en">kg/kg</unitName>
+    <comment xml:lang="en">kg of water for production of 1 kg of steam</comment>
   </parameter>
   <parameter id="841e84b1-603f-4a03-909f-2e6bf8703174" defaultVariableName="T12_PM10_25hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">particulates &lt;= 10 um emissions tier T1-T2 for hp &lt; 50</name>
@@ -5196,10 +5425,6 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">enthalpy</name>
     <unitName xml:lang="en">kJ/kg</unitName>
   </parameter>
-  <parameter id="8511df4d-feb5-4f8a-8912-73009f5efe87" defaultVariableName="share_extensive" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">share of wood chips cogeneration with extensive emissions control</name>
-    <unitName xml:lang="en">dimensionless</unitName>
-  </parameter>
   <parameter id="3f73ee93-332e-4d73-a829-91ae97ea71e7" unitId="83ecd334-1b5b-4784-8938-6a0d0a9d8954">
     <name xml:lang="en">emissions of particulate matter &lt;10</name>
     <unitName xml:lang="en">kg/kg</unitName>
@@ -5273,6 +5498,9 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">gain/loss of soil organic carbon associated with crop cultivation: forest</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
+  <parameter id="bd1feb17-059f-4945-ba4b-f75a9b570759" defaultVariableName="C_conversion_biowaste">
+    <name xml:lang="en">carbon conversion efficiency of biowaste in digester</name>
+  </parameter>
   <parameter id="a4089e4b-92fb-4cfa-9d90-0cc2e2885229" defaultVariableName="UOP" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">unsorted office paper</name>
     <unitName xml:lang="en">kg</unitName>
@@ -5306,10 +5534,6 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
   <parameter id="b6a07122-42c2-4bb1-ad6d-a808222fd9f7" defaultVariableName="AG_B" unitId="395f1718-3067-449c-ad6a-b96e876eebd4">
     <name xml:lang="en">above ground biomass, dm</name>
     <unitName xml:lang="en">kg/ha</unitName>
-  </parameter>
-  <parameter id="ae1b19c9-c220-4faa-9050-668e99bfbed7" defaultVariableName="yield" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
-    <name xml:lang="en">chemical reaction yield</name>
-    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="8c115681-09f0-4c95-a054-5554b14f2f0f" defaultVariableName="WWithdrawal_EP_geotherm_onceT_andCP_CS" unitId="d8c254d2-9ad0-4e1f-a220-58d1db66c21c">
     <name xml:lang="en">water withdrawal, electricity production, geothermal, once-T and coolingP CS</name>
@@ -5375,9 +5599,9 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">average permeate flux</name>
     <unitName xml:lang="en">l/(h.m2)</unitName>
   </parameter>
-  <parameter id="b1e1809e-8f97-4e6d-884f-ce4b980d0686" unitId="83ecd334-1b5b-4784-8938-6a0d0a9d8954">
-    <name xml:lang="en">emissions of zinc from diesel combustion in fishing vessels</name>
-    <unitName xml:lang="en">kg/kg</unitName>
+  <parameter id="07826f2d-a7de-4df1-bd76-7f6d6ef564c1" defaultVariableName="straw_per_ha" unitId="395f1718-3067-449c-ad6a-b96e876eebd4">
+    <name xml:lang="en">straw for dry restoration</name>
+    <unitName xml:lang="en">kg/ha</unitName>
   </parameter>
   <parameter id="7fbf324d-4847-4f6f-bf4f-1437a261101b" defaultVariableName="T1_PM10_600hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
     <name xml:lang="en">particulates &lt;= 10 um emissions tier T1 for hp &lt; 600</name>
@@ -5407,9 +5631,18 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">share of alpine reservoir hydropower plants</name>
     <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
+  <parameter id="1092ba2a-865d-4b8f-9a0d-fda13574a189" defaultVariableName="Ncr" unitId="18b6bdfc-1ccd-4a48-9080-0b26782e165c">
+    <name xml:lang="en">nitrogen in crop residues</name>
+    <unitName xml:lang="en">kg N/ha</unitName>
+    <comment xml:lang="en">nitrogen contained in the crop residues (kg N/ha)</comment>
+  </parameter>
   <parameter id="48f5887e-a37b-4716-89f1-491dfe477d85" defaultVariableName="sand_per_m2" unitId="b9c5482c-c0d1-4012-b7ef-84a758d7ad03">
     <name xml:lang="en">sand, per surface of road</name>
     <unitName xml:lang="en">kg/m2</unitName>
+  </parameter>
+  <parameter id="d66018a4-50ef-4046-81c6-ee54ba05cd34" defaultVariableName="water_wash" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">water for washing</name>
+    <unitName xml:lang="en">m3</unitName>
   </parameter>
   <parameter id="a2d56af5-e35a-44fc-88f9-2e6d5f62cea2" defaultVariableName="reinf_steel" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">reinforcing steel in concrete</name>
@@ -5455,8 +5688,16 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <unitName xml:lang="en">dimensionless</unitName>
     <comment xml:lang="en">(-) Personal communication with a specialized agrologist in pulp and paper sludge stating that 4,5 tons of sludge (50% dry matter content) equals 1 ton of lime (CaCO3). Therefore, a sludge with a 26% dry matter content needs 8,65 tons to substitute 1 ton of lime (CaCO3). </comment>
   </parameter>
+  <parameter id="18e8becc-cbf2-4975-9648-9d5ce07e1c48" unitId="83ecd334-1b5b-4784-8938-6a0d0a9d8954">
+    <name xml:lang="en">sugarcane straw</name>
+    <unitName xml:lang="en">kg/kg</unitName>
+  </parameter>
   <parameter id="1b891be9-0e7f-4c9a-91c5-9243b6de40be" defaultVariableName="share_CH4_oil">
     <name xml:lang="en">share of methane in biogas from used vegetable oil</name>
+  </parameter>
+  <parameter id="b0c31824-969f-4684-b780-dfbf2df5ea9b" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">fraction of 30MPa concrete to overall concrete produced</name>
+    <unitName xml:lang="en">dimensionless</unitName>
   </parameter>
   <parameter id="6bddc06a-3855-49c3-96ee-7c53a5f0f950" defaultVariableName="T2_kW" unitId="7de7e78f-ccf0-46b4-a549-20b04f4b1421">
     <name xml:lang="en">power tier T2</name>
@@ -5474,6 +5715,10 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">lifetime of machine, productive machine hours</name>
     <unitName xml:lang="en">hour</unitName>
   </parameter>
+  <parameter id="c38cdfab-5c8d-496b-b09e-2bed3f2d3580" defaultVariableName="yield_kg_ha" unitId="395f1718-3067-449c-ad6a-b96e876eebd4">
+    <name xml:lang="en">yield kgha</name>
+    <unitName xml:lang="en">kg/ha</unitName>
+  </parameter>
   <parameter id="6a72a9f9-472f-46bf-9c98-02fddaeb3597" unitId="577e242a-461f-44a7-922c-d8e1c3d2bf45">
     <name xml:lang="en">efficiency (obsolete)</name>
     <unitName xml:lang="en">dimensionless</unitName>
@@ -5490,6 +5735,10 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
   <parameter id="294559b5-828b-4cb8-95b5-7cea66fd200a" unitId="c182d036-038d-4c66-86ba-280c8a624ddf">
     <name xml:lang="en">emission of Particulates &gt;2.5 to &lt;10</name>
     <unitName xml:lang="en">kg/MJ</unitName>
+  </parameter>
+  <parameter id="4630dc76-1951-484a-be60-7044b27242a7" defaultVariableName="vinasse" unitId="395f1718-3067-449c-ad6a-b96e876eebd4">
+    <name xml:lang="en">vinasse field application</name>
+    <unitName xml:lang="en">kg/ha</unitName>
   </parameter>
   <parameter id="51324476-d8b4-4102-9033-0ec0b3d6db0c" defaultVariableName="CO2_acc" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">CO2 accumulated in growth of AGB and BGB</name>
@@ -5540,9 +5789,9 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
   <parameter id="fbed663d-4a47-4fa6-9f9f-826bdf514179" defaultVariableName="no_hours_computer_desktop_AM_office_use">
     <name xml:lang="en">number of hours in a day when computer (desktop) is in active mode - office use</name>
   </parameter>
-  <parameter id="4b6a5f24-fc7f-47a2-a7a2-b8f4152a7e40" defaultVariableName="T3_PM10_750hp" unitId="fc6f97ae-a16f-434c-8092-aa060b808818">
-    <name xml:lang="en">particulates &lt;= 10 um emissions tier T3 for hp &lt; 750</name>
-    <unitName xml:lang="en">kg/hp*h</unitName>
+  <parameter id="e3498025-25b1-442b-a74e-a9290811a780" defaultVariableName="mine_lifespan" unitId="2cf92850-0f92-4004-9dba-a6ceb6a414c2">
+    <name xml:lang="en">life of a mine site</name>
+    <unitName xml:lang="en">year</unitName>
   </parameter>
   <parameter id="7ed40d4c-f898-4716-bb0b-e123c388d9bd" defaultVariableName="recovery_speed" unitId="a309a95f-0ed9-4672-8749-2dc7a190c82c">
     <name xml:lang="en">recovery speed</name>
@@ -5612,6 +5861,10 @@ Maibach et al. (1999) Ökoinventar Transporte: Grundlagen für den ökologischen
     <name xml:lang="en">carbaryl</name>
     <unitName xml:lang="en">kg</unitName>
     <comment xml:lang="en">Quantity of pesticide applied (kg/kg maize)</comment>
+  </parameter>
+  <parameter id="339f7212-2302-43ab-b317-0b661bafc57b" defaultVariableName="deterg_na_s" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">detergent Na alkyl s</name>
+    <unitName xml:lang="en">kg</unitName>
   </parameter>
   <parameter id="91e8fd85-e645-4719-9cf9-3362e72bb424" defaultVariableName="Feed_Pig_Choline_chloride" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">feed, per pig, choline chloride</name>

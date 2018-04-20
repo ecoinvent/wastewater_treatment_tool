@@ -5,7 +5,7 @@ Software distributed under the License is distributed on an "AS IS" basis, WITHO
 The Original Code consists of the EcoSpold data format and EcoSpold Access.
 The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
 -->
-<validElementaryExchanges majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="39459" xmlns="http://www.EcoInvent.org/EcoSpold02">
+<validElementaryExchanges majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="39483" xmlns="http://www.EcoInvent.org/EcoSpold02">
   <elementaryExchange id="38a622c6-f086-4763-a952-7c6b3b1c42ba" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="000110-63-4">
     <name xml:lang="en">1,4-Butanediol</name>
     <unitName xml:lang="en">kg</unitName>
@@ -60580,5 +60580,224 @@ Peruvian hake (Merluccius gayi peruanus): TL = 4.4 ± 0.6 (Froese and Pauly 2014
       <comment xml:lang="en">water content on a wet matter basis</comment></property>
     <property propertyId="e1d2c19b-3a97-4f52-a83f-fe88400452c2" amount="1" isDefiningValue="false" />
     <productInformation />
+  </elementaryExchange>
+  <elementaryExchange id="2f033407-6060-4e1e-868c-9f362d10fdb2" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">Titanium, in ground</name>
+    <unitName xml:lang="en">kg</unitName>
+    <compartment subcompartmentId="6a098164-9f04-4f65-8104-ffab7f2677f3">
+      <compartment xml:lang="en">natural resource</compartment>
+      <subcompartment xml:lang="en">in ground</subcompartment>
+    </compartment>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="e9fa11a1-1011-421d-aa34-0544d767a632" amount="1" isDefiningValue="false">
+      <comment xml:lang="en">titanium content on a dry matter basis</comment></property>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <productInformation />
+  </elementaryExchange>
+  <elementaryExchange id="cd2932c5-a486-4bf1-99b8-815d8a7ce11a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">Zirconium, in ground</name>
+    <unitName xml:lang="en">kg</unitName>
+    <compartment subcompartmentId="6a098164-9f04-4f65-8104-ffab7f2677f3">
+      <compartment xml:lang="en">natural resource</compartment>
+      <subcompartment xml:lang="en">in ground</subcompartment>
+    </compartment>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <property propertyId="da9aed81-4e0a-4a15-9d5e-27020d826a01" amount="1" isDefiningValue="false">
+      <comment xml:lang="en">zirconium content on a dry matter basis</comment></property>
+    <productInformation />
+  </elementaryExchange>
+  <elementaryExchange id="d13b2665-505d-49e2-8edd-dc966b0342af" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" defaultVariableName="Pt_in_ground">
+    <name xml:lang="en">Platinum, in ground</name>
+    <unitName xml:lang="en">kg</unitName>
+    <compartment subcompartmentId="6a098164-9f04-4f65-8104-ffab7f2677f3">
+      <compartment xml:lang="en">natural resource</compartment>
+      <subcompartment xml:lang="en">in ground</subcompartment>
+    </compartment>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <property propertyId="832bb926-0c7d-4b16-bf36-fc69665afe8b" amount="1" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <productInformation />
+  </elementaryExchange>
+  <elementaryExchange id="edc69c63-a776-4dbf-acbf-e0368914980a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" defaultVariableName="Pd_in_ground">
+    <name xml:lang="en">Palladium, in ground</name>
+    <unitName xml:lang="en">kg</unitName>
+    <compartment subcompartmentId="6a098164-9f04-4f65-8104-ffab7f2677f3">
+      <compartment xml:lang="en">natural resource</compartment>
+      <subcompartment xml:lang="en">in ground</subcompartment>
+    </compartment>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="999af43a-1a83-4231-ba3c-600b1941b3a0" amount="1" isDefiningValue="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <productInformation />
+  </elementaryExchange>
+  <elementaryExchange id="4803f22f-6950-489b-914d-fa953a8081f6" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" defaultVariableName="Rh_in_ground">
+    <name xml:lang="en">Rhodium, in ground</name>
+    <unitName xml:lang="en">kg</unitName>
+    <compartment subcompartmentId="6a098164-9f04-4f65-8104-ffab7f2677f3">
+      <compartment xml:lang="en">natural resource</compartment>
+      <subcompartment xml:lang="en">in ground</subcompartment>
+    </compartment>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="92dbd49f-8cf0-4510-b9c0-6b90443b328e" amount="1" isDefiningValue="false" />
+    <productInformation />
+  </elementaryExchange>
+  <elementaryExchange id="974213ef-1ba0-40e5-bc7b-52ef099e9e09" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" defaultVariableName="Ni_in_groud">
+    <name xml:lang="en">Nickel, in ground</name>
+    <unitName xml:lang="en">kg</unitName>
+    <compartment subcompartmentId="6a098164-9f04-4f65-8104-ffab7f2677f3">
+      <compartment xml:lang="en">natural resource</compartment>
+      <subcompartment xml:lang="en">in ground</subcompartment>
+    </compartment>
+    <property propertyId="f767b36f-62bf-4458-b694-ecbefd2ab970" amount="1" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <productInformation />
+  </elementaryExchange>
+  <elementaryExchange id="d080e6a4-42c6-484e-b5d7-d74693aec7d9" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="007440-57-5">
+    <name xml:lang="en">Gold, in ground</name>
+    <unitName xml:lang="en">kg</unitName>
+    <compartment subcompartmentId="6a098164-9f04-4f65-8104-ffab7f2677f3">
+      <compartment xml:lang="en">natural resource</compartment>
+      <subcompartment xml:lang="en">in ground</subcompartment>
+    </compartment>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="ee301bc4-052a-40c2-a5d7-76fa6e429aa5" amount="1" isDefiningValue="false">
+      <comment xml:lang="en">gold content on a dry matter basis</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <productInformation />
+  </elementaryExchange>
+  <elementaryExchange id="a9ac40a0-9bea-4c48-afa7-66aa6eb90624" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" defaultVariableName="Cu_in_ground">
+    <name xml:lang="en">Copper, in ground</name>
+    <unitName xml:lang="en">kg</unitName>
+    <compartment subcompartmentId="6a098164-9f04-4f65-8104-ffab7f2677f3">
+      <compartment xml:lang="en">natural resource</compartment>
+      <subcompartment xml:lang="en">in ground</subcompartment>
+    </compartment>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="0132d97c-5f19-4397-9197-59ab801b10cf" amount="1" isDefiningValue="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <productInformation />
+  </elementaryExchange>
+  <elementaryExchange id="51377cff-3c04-5717-8961-6819901a3e90" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="007440-05-3">
+    <name xml:lang="en">Palladium</name>
+    <unitName xml:lang="en">kg</unitName>
+    <compartment subcompartmentId="7011f0aa-f5f9-4901-8c10-884ad8296812">
+      <compartment xml:lang="en">air</compartment>
+      <subcompartment xml:lang="en">unspecified</subcompartment>
+    </compartment>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+  </elementaryExchange>
+  <elementaryExchange id="7c651713-83f5-56e1-a67f-37b828684f3d" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="007440-16-6">
+    <name xml:lang="en">Rhodium</name>
+    <unitName xml:lang="en">kg</unitName>
+    <compartment subcompartmentId="7011f0aa-f5f9-4901-8c10-884ad8296812">
+      <compartment xml:lang="en">air</compartment>
+      <subcompartment xml:lang="en">unspecified</subcompartment>
+    </compartment>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+  </elementaryExchange>
+  <elementaryExchange id="c6379349-6cf0-54c9-8bfe-2ec812501fda" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="013494-80-9">
+    <name xml:lang="en">Tellurium</name>
+    <unitName xml:lang="en">kg</unitName>
+    <compartment subcompartmentId="7011f0aa-f5f9-4901-8c10-884ad8296812">
+      <compartment xml:lang="en">air</compartment>
+      <subcompartment xml:lang="en">unspecified</subcompartment>
+    </compartment>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+  </elementaryExchange>
+  <elementaryExchange id="a86c6e85-0545-5f37-bed8-354f2ba0dde4" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="000098-01-1">
+    <name xml:lang="en">Furfural</name>
+    <unitName xml:lang="en">kg</unitName>
+    <compartment subcompartmentId="7011f0aa-f5f9-4901-8c10-884ad8296812">
+      <compartment xml:lang="en">air</compartment>
+      <subcompartment xml:lang="en">unspecified</subcompartment>
+    </compartment>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0.625" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
   </elementaryExchange>
 </validElementaryExchanges>

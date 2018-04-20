@@ -5,7 +5,7 @@ Software distributed under the License is distributed on an "AS IS" basis, WITHO
 The Original Code consists of the EcoSpold data format and EcoSpold Access.
 The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
 -->
-<validSources majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="1874" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+<validSources majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="1927" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
   <contextName xml:lang="en">ecoinvent</contextName>
   <source id="f84b18ff-db91-450b-9856-770451cecf8e" sourceType="0" year="2012" firstAuthor="FAO" title="FAOSTAT statistics for chicken meat production" />
   <source id="0cedf330-9460-459c-bd98-3d99906ff8d1" sourceType="0" year="2013" firstAuthor="Central Electricity Authority" title="Annual Report 2012-13" shortName="CEA" pageNumbers="" placeOfPublications="New Delhi, India">
@@ -31,24 +31,27 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <comment xml:lang="en">EVS-20. Nov 15-19, 2003</comment>
   </source>
   <source id="f7a09488-e65b-4c46-90cd-c75be221c8ac" sourceType="0" year="2004" firstAuthor="Mahmoud, M.H.H. " additionalAuthors="Afifi, A.A.I., Ibrahim, I.A." title="Reductive leaching of ilmenite ore in hydrochloric acid for preparation of synthetic rutile" pageNumbers="99-109" journal="Hydrometallurgy" issueNo="73" />
-  <source id="c938cb59-31ed-400e-a108-0900ff9941e1" sourceType="0" year="2016" firstAuthor="DIPP" title="DIPP Annual Report 2015-16" publisher="" journal="">
-    <comment xml:lang="en">Goverment of India, Ministry of Commerce and Industry, Department of Industrial Policy and Promotion</comment>
+  <source id="d4a26eda-3bec-4108-a16e-feda10bdeb81" sourceType="0" year="2006" firstAuthor="Marceau" title="Life Cycle Inventory of Portland Cement Manufacture" pageNumbers="68" publisher="Portland Cement Association">
+    <comment xml:lang="en">Link: http://www.cement.org/bookstore/profile.asp?printpage=true&amp;store=&amp;id=11004, Accessed: 2011-07-21</comment>
   </source>
   <source id="62507f5e-59c9-4d01-804d-1c6817b5a16e" sourceType="3" year="2014" firstAuthor="Objectifs Info Arbo" title="Guide de protection fruitière intégrée" pageNumbers="60-65" placeOfPublications="FR" publisher="Objectifs info Arbo" />
   <source id="479c16ea-6eb7-4463-ad21-14314d73d49d" sourceType="3" year="2003" firstAuthor="BFE" title="Gesamte Erzeugung und Abgabe Elektrischer Enegie in der Schweiz" namesOfEditors="Bundesamt für Energie" publisher="Bundesamt für Energie" />
   <source id="e26cc0a3-1469-47dd-afba-a35ed0c1ffab" sourceType="3" year="2007" volumeNo="6" firstAuthor="Dones R." additionalAuthors="Bauer C., Bolliger R., Burger B., Faist Emmenegger M., Frischknecht R., Heck T., Jungbluth N., Röder A." title="Sachbilanzen von Energiesystemen" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
-    <comment>EcoSpold01Number=6</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=6</comment>
   </source>
   <source id="b6900cb3-eadd-40e2-916d-22f5ec381cf9" sourceType="0" year="2001" firstAuthor="Emsley, J." title="Nature's Building Blocks" placeOfPublications="Oxford, Great Britain" publisher="Oxford University Press" />
   <source id="3f81d932-6544-4dc1-a9d7-794c70cd96d9" sourceType="3" year="2007" volumeNo="20" firstAuthor="Primas A." title="Life Cycle Inventories of new CHP systems" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf and Zurich, CH" publisher="Swiss Centre for LCI, B&amp;H AG">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=47</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
+  <source id="e588524e-cd8b-4467-b1ec-edbb4614d046" sourceType="0" year="2013" firstAuthor="Christian Leroy ; Djibril René" additionalAuthors="" title="Environmental Profile Report of the European Aluminium Industry">
+    <comment xml:lang="en">http://www.alueurope.eu/wp-content/uploads/2011/10/Environmental-Profile-Report-for-the-European-Aluminium-Industry-April-2013.pdf</comment>
   </source>
   <source id="af4822be-f918-443b-ac0b-4b2d2dad73a5" sourceType="6" year="1993" firstAuthor="Rohner sen." title="personal written communication, Mr. Rohner sen., Grundag AG" placeOfPublications="Gossau" />
   <source id="ddc49440-d8e2-4309-a7df-387982ea2337" sourceType="3" year="2007" volumeNo="17" firstAuthor="Jungbluth N." additionalAuthors="Chudacoff M., Dauriat A., Dinkel F., Doka G., Faist Emmenegger M., Gnansounou E., Kljun N., Spielmann M., Stettler C., Sutter J." title="Life Cycle Inventories of Bioenergy" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Duebendorf and Uster, CH" publisher="Swiss Centre for LCI, ESU">
-    <comment>EcoSpold01Number=40</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=40</comment>
   </source>
   <source id="edab8915-28f4-4f9b-8283-88abfca4034d" sourceType="3" year="2011" firstAuthor="Environment Canada" title="2011 Municipal Water Use Report – Municipal Water Use 2009" shortName="">
     <comment xml:lang="en">http://www.ec.gc.ca/doc/publications/eau-water/COM1454/survey5-eng.htm Accessed online on January 7, 2014</comment>
@@ -64,6 +67,7 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <source id="1277d809-3b11-469c-b6a1-1a734ac49e3a" sourceType="1" year="2008" volumeNo="14" firstAuthor="Panichelli L." additionalAuthors="Dauriat A., Gnansounou E" title="Life cycle assessment of soybean-based biodiesel in Argentina for export." pageNumbers="144-159" journal="International Journal of Life Cycle Asse" issueNo="2" />
   <source id="11f1267e-887e-4fb5-9f58-89e711af5c7b" sourceType="1" year="2000" volumeNo="183" firstAuthor="Beuch S." additionalAuthors="Boelcke B., Belau L." title="Effect of the organic residues of Miscanthus x giganteus on the soil organic matter level of arable soils" pageNumbers="111-119" journal="J. Agronomy &amp; Crop Science" issueNo="" />
   <source id="b394b7b2-2818-48ea-9fad-acbcfc0838ab" sourceType="0" year="1995" firstAuthor="Hirsinger F." title="A Life-Cycle Inventory for the Production of Detergent-grade Alcohols" />
+  <source id="37ff017d-48aa-4a57-8531-e19df077cc08" sourceType="0" year="2014" volumeNo="92" firstAuthor="Guttikunda, S. K." additionalAuthors="Jawahar, P." title="Atmospheric emissions and pollution from the coal-fired thermal power plants in India" pageNumbers="449-460" namesOfEditors="" journal="Atmospheric Environment" />
   <source id="e5c28d59-2abe-4005-ad85-433ffc9ca8e6" sourceType="3" year="2014" firstAuthor="Itten, R." additionalAuthors="Frischknecht, R., Stucki, M." title="Life Cycle Inventories of Electricity Mixes and Grid, Version 1.3" placeOfPublications=" retrieved from: www.lc-inventories.ch" publisher="treeze Ltd., Uster, Switzerland" />
   <source id="ff2fd963-35a3-4128-9509-67d480184086" sourceType="0" year="2009" firstAuthor="Stats SA" title="Census of commercial agriculture 2007. ">
     <comment xml:lang="en">Available at: http://www.statssa.gov.za/publications/Report-11-02-01/Report-11-02-012007.pdf
@@ -74,10 +78,6 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <comment xml:lang="en">Bachelor thesis supervised by Prof. Markus Vaihiniger, Dr. Thomas Nemecek and Kurt Schnebli.</comment>
   </source>
   <source id="67a03f63-1776-4739-a723-89cb8d711b68" sourceType="0" year="2009" firstAuthor="Ashland Composite Polymers" title="Biobased resin production data" />
-  <source id="2349c548-1d2c-46fd-bbad-b93abc019d7d" sourceType="3" year="2007" volumeNo="11" firstAuthor="Hischier R." title="Life Cycle Inventories of Packaging and Graphical Paper" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
-    <comment xml:lang="en">CD-ROM</comment>
-    <comment>EcoSpold01Number=11</comment>
-  </source>
   <source id="cace6b4f-cd31-4881-b9c3-84225488687b" sourceType="1" year="2007" volumeNo="94" firstAuthor="Kar G." additionalAuthors="Kumar A." title="Effects of irrigation and straw mulch on water use and tuber yield of potato in eastern India." pageNumbers="109-116" journal="Agricultural Water Management" />
   <source id="0bd25d7c-562c-46b8-ac6a-eb42b602ef1f" sourceType="0" year="2011" firstAuthor="Agroscope" title="Feedstuff compositions">
     <comment xml:lang="en">URL  http://www.feed-alp.admin.ch</comment>
@@ -86,6 +86,7 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <comment xml:lang="en">Rapport pour la Fédération des Producteurs de Porc du Québec (FPPQ). Available at: http://www.calculateurcarboneeteau.leseleveursdeporcsduquebec.com/userfiles/files/pdf/fr/rapport.pdf</comment>
   </source>
   <source id="cb1b0d0f-2070-483f-8178-14557ee504fb" sourceType="0" year="2013" firstAuthor="US Geological Survey" title="Minerals Commodity Summaries - Magnesium Metal" />
+  <source id="101cfd86-7dd0-4d94-9766-71babcdcaaaa" sourceType="3" year="2018" firstAuthor="Fehrenbach, H." additionalAuthors="Liebich, A., Abdalla, N., Biemann, K., Fröhlich, K., Simon, B." title="Life Cycle Inventories of Petroleum Refinery Operation" placeOfPublications="www.ecoinvent.org" />
   <source id="e3d0b4f1-9df3-4889-8469-a83bc1c96a1b" sourceType="5" year="2014" firstAuthor="T. Nussbaumer" title="expert judgement by Thomas Nussbaumer, Verenum, Switzerland">
     <comment xml:lang="en">information received on 11th of January 2014</comment>
   </source>
@@ -97,13 +98,12 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <comment xml:lang="en">http://www.lca-net.com/files/icmm.pdf</comment>
   </source>
   <source id="0c05b7f8-eaf4-4c61-883f-cd43bd0428ea" sourceType="2" year="2000" volumeNo="11" firstAuthor="Bundesamt für Statistik (BfS)" title=" Verkehr und Nachrichtenwesen" titleOfAnthology="Schweizerische Verkehrsstatistik 1996/2000" placeOfPublications="Bern" />
+  <source id="1d85a9ad-57ab-4831-95a0-eea888785546" sourceType="0" year="2013" volumeNo="43" firstAuthor="du Toit C.J.L." additionalAuthors="Meissner H.H, van Niekerk W.A." title="Direct Methane and Nitrous Oxide Emissions of South African Dairy and Beef Cattle" shortName="Du Toit 2013" pageNumbers="20-3393" journal="South African Journal of Animal Science" />
   <source id="fb5dbd0f-bb14-41ce-aefb-06ffc9938145" sourceType="3" year="2017" firstAuthor="Silva, F. B." additionalAuthors="Oliveira, L. A., Passuello, A. C. B., Moraga, G. L., Silva, V. G., Silva, M. G., Saade, M. R. M., Gmünder, S., Myers, N. " title="Life Cycle Inventories of cement and concrete production in Latin America" />
-  <source id="e68a0a63-9710-48f1-ae7d-a1fc1c81104a" sourceType="0" year="1999" volumeNo="7" firstAuthor="Hilbrans H." additionalAuthors="Hinrichs W." title="Stoffmengenflüsse und Energiebedarf bei der Gewinnung ausgewählter mineralischer Rohstoffe; Teilstudie Nickel" titleOfAnthology="Geologisches Jahrbuch" placeOfPublications="Hannover" publisher="BGR">
-    <comment xml:lang="en">Volume: Sonderhefte SH 7
-
-BGR = Bundesanstalt für Geowissenschaften und Rohstoffe</comment>
+  <source id="15545992-02bc-4f48-97c0-356c5557a119" sourceType="0" year="2016" firstAuthor="IBGE" title="Produção da Extração Vegetal e da Silvicultura - PEVS" shortName="IBGE PEVS" publisher="IBGE">
+    <comment xml:lang="en">https://sidra.ibge.gov.br/pesquisa/pevs/quadros/brasil/2016</comment>
   </source>
-  <source id="b4b5a55c-0c39-44c8-829d-fd8f262bd322" sourceType="0" year="1992" firstAuthor="Hjalmarsson A.-K." title="Interactions in emissions control for coal-fired plants" placeOfPublications="IEA Coal Research" />
+  <source id="80bc8416-99a3-4d52-b13e-f78d6328c5fc" sourceType="0" year="2005" volumeNo="34" firstAuthor="Cleary, J." title="Greenhouse Gas Emissions form Canadian Peat Extraction" pageNumbers="456-461" journal="Journal of the Human Environment" issueNo="6" />
   <source id="57630bec-0de6-4c04-89ef-c2c3c8acd636" sourceType="0" year="1996" volumeNo="1" firstAuthor="Frühwald A." additionalAuthors="Wegener G., Scharai-Rad M., Zimmer B. and Hasch J." title="Grundlagen für Ökoprofile und Ökobilanzen in der Forst- und Holzwirtschaft  " titleOfAnthology="" placeOfPublications="Ordinariat für Holztechnologie, University of Hamburg; Institut für Holzforschung, University of Munich" publisher="" />
   <source id="39c5189b-180d-4de2-b7be-afd0ab15191e" sourceType="0" year="1995" firstAuthor="Franke M." title="A Life-Cycle Inventory for the Production of Petrochemical Intermediates in Europe" />
   <source id="0fc7064d-18cf-409b-8cd5-f54a8c1577a7" sourceType="0" year="2008" firstAuthor="Schnoor, J.L." title="Water Implications of Biofuels Production in the United States" pageNumbers="87" publisher="U.S. National Academy of Sciences">
@@ -145,7 +145,7 @@ environment/reports/index.html
 Data available online : 1994 - 2011</comment>
   </source>
   <source id="a514c6ec-b2f4-4d3d-a2f3-4a6d915251a2" sourceType="0" year="2002" firstAuthor="Jungbluth N." additionalAuthors="Frischknecht R., Faist M." title="Ökobilanz für die Stromerzeugung aus Holzbrennstoffen und Altholz. In Auftrag des BfE und in Zusammenarbeit mit Holzenergie Schweiz." placeOfPublications="Uster, Switzerland" />
-  <source id="d8be1cfa-4e29-4cf8-a235-a9e8e86d85d2" sourceType="0" year="2003" firstAuthor="Frischknecht R." additionalAuthors="Faist Emmenegger M. " title="Strommix und Stromnetz" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen: Grundlagen für den ökologischen Vergleich von Energiesystemen und den Einbezug von Energiesystemen in Ökobilanzen in der Schweiz. Schlussbericht ecoinvent 2000 No. 6" placeOfPublications="Villigen, Dübendorf, www.ecoinvent.ch" />
+  <source id="44b6ae0d-0cbc-4c0d-98a6-2c3573e76176" sourceType="0" year="2003" firstAuthor="Placer Dome Inc." title="Annual report 2002." placeOfPublications="Vancouver" publisher="Placer Dome Inc." />
   <source id="bf56f344-c9dd-4178-b7f6-731f97817766" sourceType="0" year="2002" firstAuthor="BAZL/BFS" title="Schweizerische Zivilluftfahrt." placeOfPublications="Neuchatel" publisher="Bundesamt für Zivilluftfahrt" />
   <source id="10823b1b-443d-4e8a-9ce2-a7bfebfe1828" sourceType="0" year="2001" volumeNo="1" firstAuthor="IPPC" title="Reference Document on Best Available Techniques in the Non Ferrous Metals Industries" placeOfPublications="" publisher="European Commission">
     <comment xml:lang="en">Retrieved from: http://www.jrc.es/pub/english.cgi/0/
@@ -197,10 +197,10 @@ Online-Version under: http://www.engineeringvillage2.org/controller/servlet/Open
   <source id="674ac8cf-71c4-461c-b0b2-dd3e1c850688" sourceType="0" year="2003" firstAuthor="EEA" title="Primary Zinc Production (B335-1)" titleOfAnthology="EMEP / CORINAIR Emission Inventory Guidebook." publisher="European Enviornmental Agency">
     <comment xml:lang="en">Online-Version under: http://reports.eea.eu.int/technical_report_2001_3/en/en/tab_content_RLR.</comment>
   </source>
-  <source id="a01d88f7-2148-4dfb-ad99-e4d992757c1c" sourceType="0" year="2012" firstAuthor="Mongabay" title="Primary forest cover" placeOfPublications="http://rainforests.mongabay.com/primary_total.html" journal="" />
+  <source id="db79c41c-bd90-497a-8735-91bd97c6911c" sourceType="0" year="2017" firstAuthor="Harshita Soni" title="Soni H., 2017, Life Cycle Inventories of Iron and Steel Production in India, www.ecoinvent.org" />
   <source id="dce1702f-2722-4f8d-aaa2-c40e62927fe3" sourceType="0" year="1995" firstAuthor="Postlethwaite D." title="A Life-Cycle Inventory for the Production of Soap in Europe" />
-  <source id="9d79491f-949b-407b-937a-5206cdb8b1e9" sourceType="0" year="2005" firstAuthor="NREL - National Renewable Energy Laborat" title="Automotive painting, electrocoating, per m2" pageNumbers="5" publisher="NREL - National Renewable Energy Laborat">
-    <comment xml:lang="en">Link: http://www.nrel.gov/lci/database/default.asp, Accessed: 2011-07-28</comment>
+  <source id="66acfe64-d15b-4555-8fab-89aaf4f8b7c6" sourceType="0" year="2007" firstAuthor="Keystone Environmental LTD." title="Environmental Assessment document sulphur forming, handling and storage facility, Ridley Island" shortName="Project No. 8738" placeOfPublications="Burnaby, BC">
+    <comment xml:lang="en">http://www.rti.ca/pdf/report_sulphur.pdf</comment>
   </source>
   <source id="62f41cac-c620-4a3b-98f0-7f009c28ebcf" sourceType="0" year="2015" firstAuthor="Global Methane Initiative" title="Coal Mine Methane Country Profile: Chapter 2">
     <comment xml:lang="en">Link: https://www.globalmethane.org/documents/toolsres_coal_overview_ch2.pdf</comment>
@@ -219,7 +219,9 @@ Online-Version under: http://www.engineeringvillage2.org/controller/servlet/Open
     <comment xml:lang="en">report prepared by the company SQM for the Gobierno de Chile, comision regional del medio ambiente, la Region de Antofagasta</comment>
   </source>
   <source id="72aa6ee7-65c8-44b8-b769-426c0680d104" sourceType="0" year="1997" firstAuthor="Döpelheuer A." title="Berechnung der Produkte unvollständiger Verbrennung aus Luftfahrttriebwerken" />
-  <source id="3ccfe25d-7aa9-4d88-aba9-b65ed8523c9f" sourceType="3" year="2008" firstAuthor="GEXSI" title="Global Market Study on Jatropha" shortName="GEXSI" placeOfPublications="London/Berlin" publisher="World Wide Fund for Nature" />
+  <source id="ac1dec0b-b1b3-4884-b72d-777d4a48bfcd" sourceType="1" year="2017" firstAuthor="Novaes R." title="Estimating 20-year land-use change and derived CO2 emissions associated with crops, pasture and forestry in Brazil and each of its 27 states" journal="Global Change Biology">
+    <comment xml:lang="en">https://doi.org/10.1111/gcb.13708</comment>
+  </source>
   <source id="fbe7ca17-2f7d-42d6-8c83-b112b9c3a586" sourceType="0" year="2012" firstAuthor="UN" title="FAOSTAT">
     <comment xml:lang="en">accessed on 3.6.2014; annual world production according to http://faostat3.fao.org/faostat-gateway/go/to/download/F/FO/E</comment>
   </source>
@@ -233,9 +235,13 @@ Online-Version under: http://www.engineeringvillage2.org/controller/servlet/Open
   <source id="51373d98-c439-4330-90fc-7dab18e0f7ae" sourceType="0" year="2011" firstAuthor="Josée Landry" additionalAuthors="Line Rochefort" title="Le drainage des tourbières: impacts et techniques de remouillage" pageNumbers="53" namesOfEditors="Groupe de recherche en écologie des tourbières" placeOfPublications="Québec, Canada" publisher="">
     <comment xml:lang="en">Report from Department of Phytologie, University Laval, Quebec.</comment>
   </source>
+  <source id="f9d4eb08-2fd5-4549-85d0-4b089b64c9a3" sourceType="2" year="1998" firstAuthor="Moore, P.A et al" title="Poultry Manure Managemen" pageNumbers=" 60-77" namesOfEditors="RJ Wright et al. (eds.)" titleOfAnthology=" Agricultural uses of municipal, animal and insdustrial byproducts." publisher="US. Dept. Agr. Conservation Res. Rpt. 44">
+    <comment xml:lang="en">URL: http://www.agriculture.state.pa.us/portal/server.pt/gateway/PTARGS_0_2_24476_10297_0_43/agwebsite/Files/General/sccfiles/odormanagement/D6._Poultry_Manure_Mgmnt.pdf
+</comment>
+  </source>
   <source id="d692d147-9e66-4884-8e26-0a8f6a2afbde" sourceType="3" year="2007" volumeNo="6" firstAuthor="Heck, T." title="Wärme-Kraft-Kopplung" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=22</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="cd5598ae-47ad-4bf5-b043-4f4ade617a04" sourceType="0" year="1993" firstAuthor="United Nations Scientific Committee on t" title="Report to the General Assembly, with scientific annexes." shortName="UNSCEAR" placeOfPublications="New York" publisher="United Nations sales publication E.94.IX" />
   <source id="4627cdea-f4f3-4816-b0af-dbc78a9a6c12" sourceType="0" year="2005" firstAuthor="Newmont" title="Minera Yanacocha, Peru- Now &amp; Beyond 2005: Sustainability Report." publisher="Newmont">
@@ -263,7 +269,8 @@ index.asp
   <source id="775b8c75-90ca-4bf7-a950-bab00be1fd4e" sourceType="0" year="2011" firstAuthor="Ashland Inc." title="Product stewardship summary: heptane">
     <comment xml:lang="en">http://www.ashland.com/Ashland/Static/Documents/Investor%20and%20Corp/rc%20heptane.pdf</comment>
   </source>
-  <source id="5f71094e-30e6-40bf-ab94-d5a5d4702f0d" sourceType="0" year="2010" firstAuthor="U.S. Geological Survey" title="Mineral Commodity Summaries 2010" pageNumbers="193" titleOfAnthology="Mineral Commodity Summaries" publisher="U.S. Geological Survey" />
+  <source id="346c1435-4aab-4691-8689-b2451167b563" sourceType="0" year="1995" firstAuthor="Larrahondo JE." title="Calidad de la Caña de Azúcar" shortName="Cenicaña" namesOfEditors="Cassalett D., Torres A., Isaacs E." titleOfAnthology="El cultivo de la caña en la zona azucarera de Colombia" placeOfPublications="Cali, Colombia" publisher="Cenicaña" />
+  <source id="a3bb0772-b896-4ed8-8ab7-986f6ca69218" sourceType="0" year="2010" firstAuthor="European Commission" title="Reference Document on Best Available Techniques in the Cement, Lime and Magnesium Oxide Manufacturing Industries" placeOfPublications="http://eippcb.jrc.es/reference/BREF/clm_bref_0510.pdf" publisher="EIPPCB" />
   <source id="2a2cdcb1-5824-43e2-8949-c8d862b1aa9f" sourceType="2" year="1997" volumeNo="6" firstAuthor="Brocksiepe H.-G" title="Charcoal" pageNumbers=" 157ff" namesOfEditors="Arpe et al." titleOfAnthology="Ullmann's encyclopedia of industrial chemistry" journal="" issueNo="5" />
   <source id="72d94b02-26d4-4105-9175-f46e8089c024" sourceType="0" year="2005" firstAuthor="Gwalior" title="Gwalior Chemical Industries Limited: Draft Red Herring Prospectus" placeOfPublications="Mumbai, India">
     <comment xml:lang="en">Online version under:  http://www.myiris.com/</comment>
@@ -291,7 +298,9 @@ index.asp
   <source id="97084e22-23bf-4ef6-abc2-3722c72c302c" sourceType="0" year="2015" firstAuthor="USDA" title="Mineral fertilizers used for orange cultivation in Florida and California. Reference years: 2009 (Florida) and 2003 (California)" placeOfPublications="USA">
     <comment xml:lang="en">entry.comment</comment>
   </source>
-  <source id="8fea5a56-1350-4f8f-a445-985843e3029d" sourceType="5" year="2009" firstAuthor="Krueger L." title="Personal communication L.Krueger, 27.10.2009" publisher="First Solar" />
+  <source id="9d79491f-949b-407b-937a-5206cdb8b1e9" sourceType="0" year="2005" firstAuthor="NREL - National Renewable Energy Laborat" title="Automotive painting, electrocoating, per m2" pageNumbers="5" publisher="NREL - National Renewable Energy Laborat">
+    <comment xml:lang="en">Link: http://www.nrel.gov/lci/database/default.asp, Accessed: 2011-07-28</comment>
+  </source>
   <source id="2874e548-6595-49e5-aabd-112eaa5061fa" sourceType="3" year="2011" firstAuthor="CORBANA S.A." title="Implementacion de Buenas Practicas Agricolas para reducir el Escurrimiento de Plaguicidas en el Cultivo de Banano de la Region Caribe Costarricense" placeOfPublications="Costa Rica" publisher="Corporacion Bananera Nacional CORBANA S.">
     <comment xml:lang="en">entry.comment</comment>
   </source>
@@ -323,6 +332,7 @@ URL: http://www.strawboilers.com/
   <source id="d4bbe83b-e966-42c3-957e-122904c83551" sourceType="3" year="2008" firstAuthor="Michaud, A.R." additionalAuthors="M. Giroux, I. Beaudin, J. Desjardins, G. Gagné, M. Duchemin, J. Deslandes, C. Landry, P. Beaudet and J. Lagacé" title="ODEP: un Outil de Diagnostic des Exportations de Phosphore" shortName="Michaud et al. 2008" placeOfPublications="Québec, Canada" publisher="IRDA/CRAAQ">
     <comment xml:lang="en">http://www.irda.qc.ca/fr/ODEP</comment>
   </source>
+  <source id="13aca231-18e9-45c0-ac68-19d94826a2a4" sourceType="3" year="2018" firstAuthor="Mireille Faist Emmenegger (Quantis) " additionalAuthors="Dr. Sanjeevan Bajaj (FICCI), Archana Datta (FICCI), Madhuri Nigam (FICCI), Prof. Dr. Mohammed Mosharraf Hossain (IFESCU), Muhammed Noor Hossain (IFESCU) " title="Life Cycle Inventories of textile products in India and Bangladesh." />
   <source id="5e6d8831-1e98-48c0-a77f-4c3fae1d423f" sourceType="3" year="2010" firstAuthor="IREQ" title="MATTEUS+, Tome 2 : Statistiques et propriétés physiques" shortName="IREQ" pageNumbers="86" placeOfPublications="Shawinigan, Québec" publisher=" Institut de recherche d'Hydro-Québec" />
   <source id="b0dbd5e6-fec9-4d5a-ae1a-cb5e690da781" sourceType="3" year="2014" firstAuthor="Atlantic Consulting" title="An LPG automobile for ecoinvent">
     <comment xml:lang="en">Regulated emissions and fuel consumption, derived from the KBA database</comment>
@@ -334,16 +344,22 @@ URL: http://www.strawboilers.com/
   <source id="101cfd86-7dd0-4d94-9766-71babcdc6732" sourceType="0" year="2003" volumeNo="5" firstAuthor="Ahmadi A." additionalAuthors="Williamson B. H., Theis T. L. and Powers S. E." title=" Life-cycle inventory of toner produced for xerographic processes." pageNumbers="573-582" placeOfPublications="http://dx.doi.org/10.1016/S095" journal="Journal of Cleaner Production" issueNo="11" />
   <source id="f2b8a3d1-3d7d-4478-a877-6a512c093107" sourceType="0" year="2009" firstAuthor="FEFCO" additionalAuthors="Cepi container board" title="European database for corrugated board life cycle studies" />
   <source id="db0a8c48-d29f-44f0-ba53-7e83bd69f6d9" sourceType="6" year="2017" firstAuthor="Duarte, J." title="Report generated upon the request n˚910.179/2017 for sand production in Rio Grande do Sul state. " publisher="National Department of Mineral Extractio" />
+  <source id="3c0d1070-ceaf-4e7a-a730-fffa25eccb1a" sourceType="0" year="2009" firstAuthor="Athena Sustainable Materials Institute" title="A Cradle-to-Gate Life Cycle Assessment of Canadian Medium Density Fibreboard (MDF)" pageNumbers="95" publisher="Athena Sustainable Materials Institute">
+    <comment xml:lang="en">Link: http://www.athenasmi.ca/publications/docs/CIPEC_Canadian_MDF_LCA_final_report.pdf, Accessed: 2011-08-11</comment>
+  </source>
   <source id="4c7123d8-108e-4179-8d54-f7cadf740bc3" sourceType="0" year="2015" firstAuthor="FAO" title="FertiStat - Fertilizer Use Statistics." placeOfPublications="Rome, IT">
     <comment xml:lang="en">entry.comment</comment>
   </source>
   <source id="a9e6f12e-0e48-425f-a846-0849e278526b" sourceType="1" year="2014" volumeNo="134" firstAuthor="Pérez-Pastor A." additionalAuthors="Ruiz-Sánchez M C, Domingo R" title=" Effects of timing and intensity of deficit irrigation on vegetative and fruit growth of apricot trees." pageNumbers="110-118" journal="Agricultural Water Management" issueNo="1" />
   <source id="de01d300-2b05-42f1-8710-7d0c59d308c2" sourceType="1" year="2013" firstAuthor="Tromborg, Erik" additionalAuthors="Ranta, Tapio; Schweinle, Jörg; Solberg, Birger; Skjevrak, Geir; Tiffany, Douglas G." title="Economic sustainability for wood pellets production -  A comparative study between Finland, Germany, Norway, Sweden and the US" journal="Biomass and Bioenergy" issueNo="Article in press" />
+  <source id="e32559d5-c25f-4f84-b292-d950d2ebed0f" sourceType="0" year="2002" volumeNo="1" firstAuthor="ICL/SHR Timber Research" title="LCA for acetylated wood; final report 2: light duty piling in fresh water use " namesOfEditors="Den Haag, Ministry of Housing, Spatial Planning and Environment (VROM)." publisher="">
+    <comment xml:lang="en">ICL = Imperical College Londong</comment>
+  </source>
   <source id="8dcb3055-562a-46dd-86ff-0a691a119f4a" sourceType="3" year="2007" volumeNo="6" firstAuthor="Bolliger, R." additionalAuthors="Bauer, Ch." title="Wasserkraft" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
     <comment>EcoSpold01Number=17</comment>
     <comment xml:lang="en">CD-ROM</comment>
   </source>
-  <source id="25bfa7f4-c8c3-47cc-813b-9f0da8e2a2db" sourceType="0" year="1989" volumeNo="2" firstAuthor="Chauvel, A." additionalAuthors="Lefebvre, G." title="Petrochemical Processes: Major oxygenated, chlorinated and nitrated derivatives" placeOfPublications="Paris" publisher="Institut francais du pètrole publication" />
+  <source id="74d9ce24-1999-403e-b0b8-9ee5a4f1d03f" sourceType="3" year="2004" firstAuthor="EU" title="RICHTLINIE 2004/26/EG DES EUROPÄISCHEN PARLAMENTS UND DES RATES zur Änderung der Richtlinie 97/68/EG zur Angleichung der Rechtsvorschriften der Mitgliedstaaten über Maßnahmen zur Bekämpfung der Emission von gasförmigen Schadstoffen und luftverunreinigende" />
   <source id="c4d83bce-4f08-4806-b6fe-9196e57303af" sourceType="0" year="1991" firstAuthor="Schlösser N." title="Oral communication, Rheinbraun AG" placeOfPublications="Köln" />
   <source id="c16e01f3-c108-45cb-9d5c-91097a0e1820" sourceType="3" year="2011" firstAuthor="Duncan R.A." additionalAuthors="Verdegaal P.S., Holtz B.A., Doll D.A., Klonsky K.A., De Moura R.L." title="Sample Costs to Establish an Orchard and Produce Almonds: San Joaquin Valley North Micro Sprinkler Irrigation." placeOfPublications="Davis, California, USA" publisher="University of California ">
     <comment xml:lang="en">entry.comment</comment>
@@ -380,6 +396,7 @@ iaea.org/MTCD/publications/PDF/te_1428_web.pdf (17. April 2010)</comment>
   <source id="9943703c-76c5-4fa1-b4d9-8e6f8b5fb346" sourceType="0" year="2007" firstAuthor="Marwic, G." title="Water requirements for sheep and cattle" pageNumbers="4" publisher="New South Wales Department of Primary In">
     <comment xml:lang="en">Link: http://www.livestock-emergency.net/userfiles/file/water-supply/Marwick-2007.pdf, Accessed: 2011-07-12</comment>
   </source>
+  <source id="83cd96cb-1fcf-4237-b431-01867ed28006" sourceType="1" year="2002" volumeNo="15" firstAuthor="Raymenta GE." additionalAuthors="Jeffreya AJ., Barry GA." title="Heavy Metals in Australian Sugarcane" shortName="HM sugarcane" publisher="Taylor &amp; Francis" journal="Communications in Soil Science and Plant" issueNo="33" />
   <source id="cf3d75c7-abdd-4c4e-af5f-cec0bd3e908d" sourceType="1" year="2005" firstAuthor="Bayer" additionalAuthors="Heuer, Karl, Finkel" title="Economical and ecological comparison of granular activated carbonn (GAC) adsorber refill strategies" pageNumbers="1719-1728" journal="Water research" issueNo="39" />
   <source id="8261117a-29de-4c62-850b-64f7c9bcb421" sourceType="0" year="2003" firstAuthor="Doka G." title="Life Cycle Inventories of Waste Treatment Services. Final report ecoinvent 2000 No 13." placeOfPublications="St. Gallen, Duebendorf, CH, retrieved from: www.ecoinvent.ch." publisher="Swiss Centre for Life Cycle Inventories" />
   <source id="a0fa874b-fdc8-4066-9030-6c4e73bc2073" sourceType="0" year="1991" firstAuthor="FMC corporation" title="PH adjustment / acid neutralization" placeOfPublications="Wyoming">
@@ -451,8 +468,8 @@ Uranium-Mining.pdf (25 June 2007)</comment>
   </source>
   <source id="a86194cf-227b-4336-a0cc-c49b178f8e57" sourceType="6" year="2015" firstAuthor="Binaya Kumar Parida." title="Personal written communication, Binaya Kumar Parida., Yara" />
   <source id="7ca68eeb-e04e-4042-bee1-f682021a60db" sourceType="3" year="2007" volumeNo="12" firstAuthor="Zah R." additionalAuthors="Hischier R." title="Life Cycle Inventories of Detergents" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
-    <comment>EcoSpold01Number=12</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=12</comment>
   </source>
   <source id="000bd176-862c-4d15-b260-a81a0ee2ff21" sourceType="0" year="2012" firstAuthor="KWS" title="Vinasse – ein interessantes Nebenprodukt!">
     <comment xml:lang="en">http://www.kws.de/aw/archivierte_Reste/zuckerruebe/bioethanol/Themen_Bioethanol/~ckdc/Vinasse_8211_ein_interessantes_Nebenprodukt</comment>
@@ -478,6 +495,9 @@ http://www.lcafood.dk/processes/energyconversion/heatandpowerfromstraw.htm</comm
   </source>
   <source id="b3ea2231-4be4-4367-b6c0-140fb02fa803" sourceType="3" year="2006" firstAuthor="Pacca S." additionalAuthors="Sivaraman D., Keoleian G. A." title="Life Cycle Assessment of the 33 kW Photovoltaic System on the Dana Building at the University of Michigan: Thin Film Laminates, Multi-crystalline Modules, and Balance of System Components " placeOfPublications="University of Michigan" />
   <source id="e297d3d2-9e5e-468a-8f47-83e92aa0aa23" sourceType="0" year="2000" firstAuthor="Behr A." title="Life Cycle Inventories of Chemicals" />
+  <source id="9a9c34c8-54f3-41e0-88ba-f2bf794098b7" sourceType="5" year="2011" firstAuthor="Attika Feuer AG" title="Oral communication company Attika Feuer AG">
+    <comment xml:lang="en">Qualified estimations from a technician</comment>
+  </source>
   <source id="bf5fbf98-d6b9-43a7-9160-fb278ffb99ce" sourceType="0" year="2017" firstAuthor="Russo Valentina" additionalAuthors="Lorren de Kock, Karen Muir, Philippa Notten, Ilhaam Patel, Matthias Stucki, Eddie Vienings, Harro von Blottnitz and Sarah Wettstein" title="Life Cycle Inventories of South African agricultural products for the SRI project">
     <comment xml:lang="en">This is the Technical Report of the dataset, which complements the information contained in the dataset itself.</comment>
   </source>
@@ -506,9 +526,12 @@ http://www.lcafood.dk/processes/energyconversion/heatandpowerfromstraw.htm</comm
   <source id="37d10007-7e85-4af6-a353-c5495d5f348d" sourceType="1" year="2009" volumeNo="30" firstAuthor="Orosz F." additionalAuthors="Jakab S., Losak T., Slezak K." title="Effects of fertilizer application to sweet corn (Zea mays.) grown on sandy soil" pageNumbers="933-938" journal="Journal of Environmental Biology" issueNo="6" />
   <source id="6906b0dc-0f06-42e6-b166-91b453a376cb" sourceType="0" year="2005" firstAuthor="Jemai" title="Ecoleaf Product Environmental Aspects Declaration - Ink Jet Printer." />
   <source id="54601b36-3cd0-4a10-9193-6aa1c243a8ac" sourceType="3" year="2005" volumeNo="58" firstAuthor="Nemecek T." additionalAuthors="Huguenin-Elie O., Dubois D., Gaillard G." title="Ökobilanzierung von Anbausystemen im schweizerischen Acker- und Futterbau" pageNumbers="155 p." placeOfPublications="Zürich, Switzerland" journal="Schriftenreihe der FAL" />
-  <source id="d384ad15-baf3-40d7-a685-94ab7ea7875d" sourceType="5" year="2017" firstAuthor="Manuel Lascarro" title="Meeting with ASOCRETO" />
+  <source id="c938cb59-31ed-400e-a108-0900ff9941e1" sourceType="0" year="2016" firstAuthor="DIPP" title="DIPP Annual Report 2015-16" publisher="" journal="">
+    <comment xml:lang="en">Goverment of India, Ministry of Commerce and Industry, Department of Industrial Policy and Promotion</comment>
+  </source>
   <source id="7aaaeadb-dacb-41f5-9e4e-a07c35ded800" sourceType="3" year="2015" firstAuthor="Faist Emmenegger, Mireille" additionalAuthors="Del Duce, Andrea; Zah, Rainer" title="Update and extension of the inventory data for energy gases" />
   <source id="5c53f84c-b07a-4942-8757-c372e67ace7a" sourceType="0" year="2013" firstAuthor="Kim, D." additionalAuthors="Thoma, G.; Nutter, D.; Milani, F.; Ulrich, R.; Norris, G." title="Life cycle assessment of cheese and whey production in the USA" journal="International Journal of LCA" />
+  <source id="bfdcb5eb-32bf-4a98-9fa0-8f1fbbcbf756" sourceType="0" year="1987" firstAuthor="Hövelmann A." title="Neue Entsorgungsprobleme kohlegefeuerter Kraftwerke. Jül-2172" placeOfPublications="KVA, Jülich" />
   <source id="6bc81919-af08-4592-b6df-bdb56ab52f80" sourceType="0" year="2000" volumeNo="9" firstAuthor="Naini, Abbas" title="natural gas liquids from production to consumption in Alberta - An overview of process engineering" publisher="Energy Studies Review" issueNo="1">
     <comment xml:lang="en">http://digitalcommons.mcmaster.ca/cgi/viewcontent.cgi?article=1200&amp;context=esr</comment>
   </source>
@@ -536,8 +559,8 @@ http://www.lcafood.dk/processes/energyconversion/heatandpowerfromstraw.htm</comm
     <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="c583918a-4966-49b7-a312-132553b5fabd" sourceType="4" year="2000" volumeNo="10" firstAuthor="Althaus H.-J." additionalAuthors="Blaser S., Classen M., Jungbluth N." title="Life Cycle Inventories of Metals" namesOfEditors="0" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, EMPA-DU">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=141</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="f8e6dbae-8cd0-4658-bc63-fe74c335ddb1" sourceType="2" year="2003" volumeNo="7" firstAuthor="Kellenberger D." additionalAuthors="Althaus H.-J. and Jungbluth N." title="Life Cycle Inventories of Building Products." titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Duebendorf" publisher="Swiss Centre for Life Cycle Inventories" />
   <source id="8163c6be-2fe6-43a5-b3ef-ba5a33f132f0" sourceType="0" year="2003" firstAuthor="Xiao X." additionalAuthors="Songwen X., Xueyi G., Kelong H., Ryoichi Y." title="LCA Case Study of Zinc Hydro and Pyro-Metallurgical Process in China." pageNumbers="1 - 5" journal="International Journal for LCA">
@@ -567,21 +590,17 @@ ISBN: 978-1-59726-998-8</comment>
     <comment xml:lang="en">Online-Version under: http://www.mrw.interscience.wiley.com/emrw/9783527306732/home</comment>
   </source>
   <source id="3f299beb-437a-49b9-805c-a31a28e8f1a3" sourceType="0" year="1995" firstAuthor="Weibel T. and Stritz A." title="Ökoinventare und Wirkungsbilanzen von Baumaterialien; Grundlagen für den ökologischen Vergleich von Hochbaukonstruktionen." titleOfAnthology="SU-Reihe Nr. 1/95. Laboratorium für Energiesysteme, Eidg. " placeOfPublications="Technische Hochschule (ETH), Zürich." />
-  <source id="9dc401b6-e63f-441a-9077-f317a3068730" sourceType="4" year="2004" volumeNo="12" firstAuthor="Zah R." additionalAuthors="Hischier R." title="Life Cycle Inventories of Detergents" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, EMPA-SG">
-    <comment xml:lang="en">CD-ROM</comment>
-    <comment>EcoSpold01Number=164</comment>
+  <source id="5898a0f6-556c-44d3-9bb7-33c7c1344650" sourceType="1" year="1958" volumeNo="10" firstAuthor="Schnitter G" title="Herstellung, Transport und Einbringen von Beton auf grossen Baustellen" pageNumbers="277-284" journal="Wasser‑ und Energiewirtschaft" issueNo="50">
+    <comment xml:lang="en"></comment>
   </source>
   <source id="a322345f-19b9-446f-84c9-8c9df9ac02df" sourceType="0" year="2011" volumeNo="0" firstAuthor="Franov, E." additionalAuthors="Hauser, A., Kägi, T." title="Ökobilanz verschiedener grafischer Papiere, 2011 (confidential report on behalf of FOEN)" />
   <source id="02dd8677-1c8a-4c67-8f56-284d220f7052" sourceType="0" year="2007" firstAuthor="US Geological Survey" title="Iron and steel scrap">
     <comment xml:lang="en">URL  http://minerals.usgs.gov/minerals/pubs/commodity/iron_&amp;_steel_scrap/fescrmcs07.pdf</comment>
   </source>
   <source id="bfefafeb-7f34-429a-8cc1-35ec96891c6b" sourceType="5" year="2012" firstAuthor="Nägele H.J." title="oral communication, State Institute of Agricultural Engineering and Bioenergy" />
-  <source id="e8d3d2e4-bb00-4aed-afd8-93a376991431" sourceType="0" year="2001" firstAuthor="Sorensen H. C." additionalAuthors="Hansen J." title="Experience form the establishment of Middelgrunden 40 MW offshore wind farm" placeOfPublications="SPOK Aps (former EMU), Denmark" />
   <source id="6217324e-142f-490d-a094-1bc76345315e" sourceType="1" year="2017" firstAuthor="Santa-María, Germán." additionalAuthors="Naranjo, Carlos A." title="Electricity generation and distribution Colombia. In Electricity generation and distribution, ecoinvent association, Zürich, Switzerland" />
   <source id="d121dfe7-c42d-410a-a137-6fd4e1fc6785" sourceType="1" year="2012" volumeNo="63" firstAuthor="Brock P." additionalAuthors="Madden P., Schwenke G., Herridge D." title="Greenhouse gas emissions profile for 1 tone of wheat produced in Central Zone (East) New South Wales: a life cycle assessment approach." pageNumbers="319-329" journal="Crop &amp; Pasture Science" />
-  <source id="6b15003e-4841-4829-b470-2d7ba58c8c8f" sourceType="2" year="2005" firstAuthor="Daintith, J." title="The Facts On File Dictionary of Chemistry" placeOfPublications="USA" publisher="Market House Books Ltd">
-    <comment xml:lang="en">ISBN 0-8160-5649-8</comment>
-  </source>
+  <source id="50f5e14e-0a82-43db-a911-3658080667c8" sourceType="1" year="2014" firstAuthor="Angel Avadí" additionalAuthors="Pierre Fréon, Isabel Quispe" title="Environmental assessment of Peruvian anchoveta food products: is less refined better?" journal="Int J Life Cycle Assess" />
   <source id="41ddbdca-1f23-4000-9f50-5c9cc49cbdca" sourceType="1" year="2012" volumeNo="17" firstAuthor="Torellas M." additionalAuthors="Antoen A., Loepez J.C., Baeza E.J., Peerez Parra J., Munnoz P., Montero J.I." title="LCA of a tomato crop in a multi-tunnel greenhouse in Almeria." pageNumbers="863–875" journal="The International Journal of Life Cycle " />
   <source id="5833faf2-b290-4870-9763-fea6bba0e121" sourceType="0" year="2014" firstAuthor="Grain SA" title="Operational planning of white maize grain production in the production year 2011/2012 in Eastern Highveld, South Africa" />
   <source id="cc5c90cc-4b1a-49af-99d7-3470e20de9e7" sourceType="3" year="2011" firstAuthor="Hydro Quebec" title="Rapport sur le développement durable 2010" pageNumbers="45" />
@@ -596,8 +615,8 @@ onDeLEauParLesMunicipalitesStatistiquesDe2006.pdf  (Page consulted on 26 October
   <source id="aaeedc23-c31d-41d5-81bb-54fe44fe8cc0" sourceType="0" year="1990" firstAuthor="Bialonski W." title="Spezifischer Energieeinsatz im Verkehr – Ermittlung und Vergleich der spezifischen Energieverbräuche." placeOfPublications="Bonn" publisher="Auftrag des Bundesministers für Verkehr " journal="" issueNo="Forschungsbericht FE Nr. 90 247/88" />
   <source id="e463fea8-fcdf-4eab-af6e-58326007199b" sourceType="0" year="2012" volumeNo="17" firstAuthor="Wernet, Gregor" additionalAuthors="Hellweg, Stefanie; Hungerbuhler, Konrad" title="A tiered approach to estimate inventory data and impacts" pageNumbers="720-728" journal="Int J LCA" />
   <source id="084f5bbe-752b-4a7a-b9d8-9135b15ffa00" sourceType="3" year="2007" volumeNo="8" firstAuthor="Althaus H.-J." additionalAuthors="Chudacoff M., Hischier R., Jungbluth N., Osses M., Primas A." title="Life Cycle Inventories of Chemicals" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=8</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="e101bd37-f67e-49a4-97de-d5f5fc28927f" sourceType="0" year="1995" firstAuthor="Berdowski, J." title="CEPMEIP database.">
     <comment xml:lang="en">Online version: http://www.air.sk/tno/cepmeip/</comment>
@@ -659,17 +678,19 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
   <source id="5bad2c37-96c1-45dd-85f2-abfa11d16aaf" sourceType="3" year="2015" firstAuthor="Doka G." title="Life cycle inventories of municipal waste incineration with residual landfill + FLUWA filter ash treatment" placeOfPublications="Zürich, CH. http://www.doka.ch/ecoinventMSWIupdateLCI2015.pdf" />
   <source id="1621c4cd-9bf9-4f20-8105-4015e0efe4ae" sourceType="0" year="2005" volumeNo="1" firstAuthor="ITT" title="Material Specification &quot;D Subminiature Solder Termination&quot;" placeOfPublications="ITT Interconnect Solution Inc., White Plains (New York, United States of America)" />
   <source id="90f4ca85-4302-48d5-a47c-ef0ce6e544b1" sourceType="1" year="2009" volumeNo="14" firstAuthor="Coltro, L." additionalAuthors="Mourad, A. L., Kletecke, R. M., Mendonça, T. A., &amp; Germer, S. P. M." title="Assessing the environmental profile of orange production in Brazil." pageNumbers="656–664" journal="The International Journal of Life Cycle " issueNo="7" />
+  <source id="06b2731c-d26e-4eb9-964f-68527977f579" sourceType="1" year="2013" volumeNo="7" firstAuthor="Pantal N." additionalAuthors="Rajput T.B.S." title=" Effect of deficient irrigation on crop growth, yield and quality of onion in subsurface drip irrigation." pageNumbers="417-436" journal="International Journal of Plant Productio" issueNo="3" />
   <source id="b7bc0038-1ea2-4287-b3cc-8566d117037b" sourceType="0" year="2017" firstAuthor="Russo, V" additionalAuthors="de Kock, L.; Muir, K.; Notten, P.; Patel, I.; Stucki, M.; Vienings, E.; von Blottnitz, H.; Wettstein, S." title="Life cycle inventories of South African agricultural products" />
   <source id="30bb8d08-f1fb-479c-bd06-8f0ee6762cd7" sourceType="0" year="2002" firstAuthor="Martens P. N." additionalAuthors="Ruhrberg M., Mistry M." title="Flächeninanspruchnahme des Kupfererzberbaus" pageNumbers="287 - 293" titleOfAnthology="" journal="Erzmetall" issueNo="55" />
   <source id="12737577-2433-423c-b232-6413431a3cf7" sourceType="4" year="2004" volumeNo="6" firstAuthor="Heck, T." title="Wärme-Kraft-Kopplung" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent 2000" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=167</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="a29e7322-e9f0-49fc-9fd4-627d4d493c3d" sourceType="2" year="2009" volumeNo="7" firstAuthor="Lange L." additionalAuthors="Triebel W." title="Sulfides, Polysulfides, and Sulfanes" namesOfEditors=" Fiedler E., Grossmann G., Kersebohm D., Weiss G., Witte C." titleOfAnthology="Ullmann's Encyclopedia of Industrial Chemistry" placeOfPublications=" New York. Online-Version under: DOI: 10.1002/14356007.a25_443" publisher=" Wiley InterScience">
     <comment xml:lang="en">Article Online Posting Date: June 15, 2000. </comment>
   </source>
   <source id="4a6d2a7f-33a7-4c61-b5f4-343a8494f287" sourceType="3" year="2010" firstAuthor="Bauer, C." additionalAuthors="Simons, A" title="Ökobilanz der Elektromobilität: Analyse des e-Twingos der EKZ" placeOfPublications="Villigen, CH" publisher="Paul Scherrer Institute" />
   <source id="509d793d-3375-4836-ad65-fc9de691209d" sourceType="0" year="2001" volumeNo="22" firstAuthor="Alistair I. Miller " title="Heavy Water: A Manufacturers’ Guide for the Hydrogen Century" pageNumbers="14" journal="Canadian Nuclear Society Bulletin" issueNo="1" />
+  <source id="34006e50-1eb8-4ddc-a4b0-f7297a5d0d96" sourceType="6" year="2015" firstAuthor="Gustavo Elias" title="Personal written communication, Gustavo Elias, Yara" />
   <source id="720a9b95-181e-4ebc-b15b-39e1c1da3eed" sourceType="3" year="2011" firstAuthor="BP" title="BP Statistical Review of World Energy June 2011">
     <comment xml:lang="en">http://www.bp.com/statisticalreview</comment>
   </source>
@@ -703,8 +724,8 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
   </source>
   <source id="cb079d22-389a-43c5-bc48-57c226902cf2" sourceType="0" year="2003" volumeNo="1" firstAuthor="IPCC" title="Good practice guidance for land use, land-use change and forestry " namesOfEditors="Institute for Global Environ-mental Strategies (IGES)" placeOfPublications="Hayama" />
   <source id="a315323c-2291-41dc-b873-a220d9ec52cf" sourceType="4" year="2007" volumeNo="2" firstAuthor="Frischknecht R." additionalAuthors="Althaus H.-J., Doka, G., Dones, R., Hellweg, S., Hischier, R., Jungbluth N., &#xD;&#xA;Nemecek, T., Rebitzer, G., Spielmann, M.&#xD;&#xA;" title="Code of Practice" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI">
-    <comment>EcoSpold01Number=133</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=133</comment>
   </source>
   <source id="9273754a-dd63-45af-afa4-6ae33fb0c92f" sourceType="0" year="2006" firstAuthor="Vetter, H." additionalAuthors="Burger, S." title="Energetische Optimierung der Klärschlammaufbereitung, im Auftrag des Bundesamtes für Energie, Bern" />
   <source id="3a1e4e80-a233-486c-b3aa-e54920d1b241" sourceType="6" year="2013" firstAuthor="Martínez-Blanco J." title="Personal communication, Ms Julia Martinez-Blanco, Institute de Ciència i Tecnologia Ambiental - Universitat Autònoma de Barcelona" placeOfPublications="Barcelona, ES" />
@@ -713,8 +734,8 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
   </source>
   <source id="1d8082de-9faa-453f-9493-07e373a5796f" sourceType="5" year="2001" firstAuthor="Hasler" title="Oral communication, Tiba AG" placeOfPublications="Bubendorf, Switzerland" />
   <source id="ba72c1a9-c9d4-42d7-baf5-7711792cfc54" sourceType="3" year="2010" volumeNo="16" firstAuthor="Hischier, R." additionalAuthors="Althaus H.-J., Bauer, Chr., Büsser S., Doka, G., Frischknecht R., Kleijer A., Leuenberger M., Nemecek, T., Simons A." title="Documentation of changes implemented in ecoinvent Data v2.2" titleOfAnthology="Final report ecoinvent data v2.2" placeOfPublications="Dübendorf. CH" publisher="Swiss Centre for LCI">
-    <comment>EcoSpold01Number=52</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=52</comment>
   </source>
   <source id="1b6b0555-d877-4dcc-b89c-6c80622e3135" sourceType="0" year="1987" firstAuthor="Ruhrkohle" title="Ruhrkohlen Handbuch" namesOfEditors="" placeOfPublications="Essen" publisher="Glückauf GmbH" />
   <source id="68f914a6-2ebe-4be5-916b-68cbb589c764" sourceType="3" year="2010" firstAuthor="Canadian International Grains Institute " title="Soybean: Feed industry Guide" pageNumbers="48" />
@@ -738,12 +759,12 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
   <source id="33dbec66-8ae7-4b23-8cd7-f8b2c785e870" sourceType="0" year="2001" volumeNo="1" firstAuthor="NPI" title="Emission Estimation Technique Manual for Mining" titleOfAnthology="National Pollution Inventory" publisher="Environment Australia">
     <comment xml:lang="en">Online version under: http://www.npi.gov.au/. </comment>
   </source>
-  <source id="2fd205c9-d79e-45ac-a44f-0ff825376c16" sourceType="0" year="2017" firstAuthor="Confronting Climate Change" title="Primary data of citrus commodity 2011 - 2017 [raw data]. ">
-    <comment xml:lang="en">Available: Confronting Climate Change database [2017]</comment>
-  </source>
   <source id="f3f35b86-1f0e-45f8-9de1-c8d48962c8ff" sourceType="0" year="1997" firstAuthor="Wellbeloved D. B." additionalAuthors="Craven P. M., Waudby J. W." title="Manganese and Manganese Alloys" titleOfAnthology="Ullmann's encyclopedia of industrial chemistry" placeOfPublications="London" publisher="Wiley &amp; Sons" />
   <source id="f21d92ea-c249-44ba-af29-3f0122cc08c3" sourceType="3" year="2010" firstAuthor="IEA/OECD" title="Energy Statistics of OECD Countries 2010" publisher="International Energy Agency, Paris Cedex" />
   <source id="629e4b8a-a750-4562-a935-fcceec021b74" sourceType="3" year="2013" firstAuthor="Koch and Salou" title="AGRIBALYSE®: METHODOLOGY Version 1.1" publisher="ADEME" />
+  <source id="d6edf803-0671-43b4-884a-d027bec4d41e" sourceType="0" year="2010" firstAuthor="Gary Theodosiou" title="Cement and Concrete Institute Concrete Industry Greenhouse Gas Emissions">
+    <comment xml:lang="en">InEnergy Report for Cement and Concrete Institute South Africa </comment>
+  </source>
   <source id="58b4c7a7-f193-4390-a6c5-d528df4a557d" sourceType="0" year="1983" firstAuthor="U.S. Department of Energy" title="Energy Technonolgy Characterizations Handbook; Environmental Pollution and Control Factors" shortName="DOE" placeOfPublications="Washington D.C." />
   <source id="9805bf86-8766-411f-b71c-7af6be04becd" sourceType="3" year="2009" firstAuthor="Werner F." title="Ökologische Bilanzierung von Eisenbahnschwellen; Vergleich von Schwellen aus Buchenholz, Eichenholz, Beton und Stahl" placeOfPublications="Bingen" publisher="Studiengesellschaft Holzschwellenoberbau" />
   <source id="f4bf6abf-de42-404a-9ee6-c327c72b1a59" sourceType="0" year="2007" firstAuthor="Jongschaap REE" additionalAuthors="Corré WJ, Bindraban PS, Brandenburg WA" title="Claims and Facts on Jatropha curcas L." shortName="WUR" placeOfPublications="Wageningen" publisher="Plant Research International BV" />
@@ -773,8 +794,8 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
     <comment xml:lang="en">NEA report Nr. 5291, OECD Nuclear Energy Agency and International Atomic Energy Agency IAEA, Paris 2004.</comment>
   </source>
   <source id="a3e674f9-5fa4-4734-87bc-58bdc35fb86e" sourceType="4" year="2007" volumeNo="1" firstAuthor="Frischknecht R." additionalAuthors="Althaus H.-J., Doka, G., Dones, R., Hellweg, S., Hischier, R., Jungbluth N., Nemecek, T., Rebitzer, G., Spielmann, M." title="Overview and Methodology" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=132</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="8006c4d6-b78e-40d6-81de-c54072b19c1b" sourceType="3" year="2011" firstAuthor="U.S. Geological Survey (USGS)" title="2011 Minerals Yearbook. Peat [advance release]" pageNumbers="p.54.7">
     <comment xml:lang="en">http://minerals.usgs.gov/minerals/pubs/commodity/peat/myb1-2011-peat.pdf</comment>
@@ -798,6 +819,11 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
   <source id="6464035d-4866-499b-bdb7-52232f4bf0a3" sourceType="0" year="2006" firstAuthor="Fisher K." additionalAuthors="Wallén E., Laenen P. P., Collins M." title="Battery Waste Management Life Cycle Assessment." publisher="ERM Ltd.">
     <comment xml:lang="en">ERM Ltd. = Environmental Resources Management ERM, Ltd.</comment>
   </source>
+  <source id="3e927093-53a7-440c-b2ff-13f8bc60c89a" sourceType="0" year="2006" firstAuthor="Barrick " title="Environment: Performance Tables">
+    <comment xml:lang="en">Retrieved from http://www.barrick.
+com/Default.aspx?SectionID=8906c4bd-4ee4-4f15-bf1b-565e357c01e1&amp;
+LanguageId=1</comment>
+  </source>
   <source id="1f82310b-5ee1-4078-a06e-04f978b87c93" sourceType="1" year="2017" volumeNo="145" firstAuthor="Pierre Fréon" additionalAuthors="Hermine Durand, Angel Avadí, Sayda Huaranca" title="Life cycle assessment of three Peruvian fishmeal plants: Toward a cleaner production" pageNumbers="50-63" journal="Journal of Cleaner Production" />
   <source id="437aa48c-016b-44f6-af42-a4a30ac1000b" sourceType="3" year="2010" firstAuthor="Luske, B." title="Comprehensive Carbon Footprint Assessment Dole Bananas" placeOfPublications="Waddinxveen, NL" publisher="Soil &amp; More International">
     <comment xml:lang="en">entry.comment</comment>
@@ -808,6 +834,7 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
   </source>
   <source id="7e48c33a-08a7-433d-9387-5e00f7bc171f" sourceType="3" year="2008" firstAuthor="OECD/IEA" title="Power grid mix statistics 2008" placeOfPublications="Paris Cedex (FR)" publisher="International Energy Agency (IEA)" />
   <source id="798fb9d4-3a8f-4203-b717-7a36f7210383" sourceType="0" year="2009" firstAuthor="Faist Emmenegger M." additionalAuthors="Reinhard J., Zah R., Ziep T., Weichbrodt R., Wohlgemuth V., Roches A., Freiermuth Knuchel R, Gaillard G." title="Sustainability Quick Check for Biofuels - Background report." shortName="SQCB" placeOfPublications="Dübendorf" />
+  <source id="a01d88f7-2148-4dfb-ad99-e4d992757c1c" sourceType="0" year="2012" firstAuthor="Mongabay" title="Primary forest cover" placeOfPublications="http://rainforests.mongabay.com/primary_total.html" journal="" />
   <source id="55b8a2ad-75e6-4ef8-83e1-3ce76899f59a" sourceType="0" year="1998" firstAuthor="Sheenhan, J." title="An Overview of Biodiesel and Petroleum Diesel Life Cycles" pageNumbers="60" publisher="NREL - National Renewable Energy Laborat">
     <comment xml:lang="en">Link: http://www.nrel.gov/vehiclesandfuels/npbf/pdfs/24772.pdf, Accessed: 2011-07-11</comment>
   </source>
@@ -816,8 +843,8 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
     <comment xml:lang="en">Personal comunication with a specialized technician during wood furnaces exposition (Forlener 2011 - Biella ITALY)</comment>
   </source>
   <source id="b24a057f-8078-4724-b9ee-87d9e5dbba0c" sourceType="1" year="2014" volumeNo="19" firstAuthor="Muñoz I." additionalAuthors="Flury K., Jungbluth N., Rigarlsford G.,Milà i Canals L., King H. " title=" Life cycle assessment of bio-based ethanol produced from different agricultural feedstocks. " pageNumbers="109-119" journal="International Journal of Life Cycle Asse" issueNo="1" />
-  <source id="72ea6fe3-0a3f-4bf0-9bbc-eb4a5391d7f5" sourceType="0" year="2005" firstAuthor="Gaz Métro" title="Le bulletin bleu" publisher="" issueNo="January 2005">
-    <comment xml:lang="en">http://www.gazmetro.com/Data/Media/1663_bulletin%20restau%20final.pdf</comment>
+  <source id="6c79213b-e5ea-4d79-a956-98f871e18580" sourceType="0" year="2010" firstAuthor="Siebert, S." additionalAuthors="Döll, P." title="Quantifying blue and green virtual water contents in global cro production as well as potential production losses without irrigation" pageNumbers="198-217" journal="Journal of Hydrology">
+    <comment xml:lang="en" />
   </source>
   <source id="e3cc84fe-34fa-43f5-8ff0-ada3adf71680" sourceType="6" year="2017" firstAuthor="Human, L." title="Personal communication">
     <comment xml:lang="en">Core Fruit, South Africa</comment>
@@ -840,6 +867,7 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
   <source id="bbb8609d-3830-4bdc-bb5a-5ed368ffb9ef" sourceType="3" year="2010" firstAuthor="Health Canada" title="Canadian Nutrient File">
     <comment xml:lang="en">http://www.hc-sc.gc.ca/fn-an/nutrition/fiche-nutri-data/index-eng.php</comment>
   </source>
+  <source id="d66408fa-ce9f-4415-af48-44ad18424451" sourceType="2" year="2017" firstAuthor="Maristela Gomes da Silva" additionalAuthors="Arnaldo Forti Battagin and Vanessa Gomes" title="Cimento Portland com adições minerais" shortName="" namesOfEditors="Geraldo Cechella Isaia" />
   <source id="a88a1886-56c8-4262-8d40-c896507791c1" sourceType="2" year="2006" firstAuthor="EMEP/CORINAIR" title="Road Transport." namesOfEditors="Ed. Agency E. E." titleOfAnthology="EMEP/CORINAIR Emission Inventory Guidebook - 2005" placeOfPublications="Copenhagen" publisher="European Environment Agency" />
   <source id="065c297e-b663-4e89-a9c6-1c6f99f31c09" sourceType="6" year="2011" firstAuthor="G&amp;M E-Filter GMBH company" title="Personal written communication company G&amp;M E-Filter GMBH" placeOfPublications="http://www.gmefilter.ch/2011D.">
     <comment xml:lang="en">Based on information online (weight) and specific details given from the contacted company</comment>
@@ -861,13 +889,11 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
     <comment xml:lang="en">DOI: 10.1002/cphc.200700002</comment>
   </source>
   <source id="8fb1d738-1ebf-4915-90fa-66fdd98c47f3" sourceType="0" year="2006" firstAuthor="Chipanski, E. R." title="Proposição para a melhoria do desempenho ambiental da indústria de aglomerado no Brasil" placeOfPublications="Federal University of Paraná" publisher="Federal University of Paraná" journal="Dissertation" />
-  <source id="371f629d-b941-4ffa-acd5-26ff92f156f2" sourceType="0" year="2014" firstAuthor="Carrier" title="Operations and service for 69RG15 Generator Set Units" placeOfPublications="USA">
-    <comment xml:lang="en">http://dms.hvacpartners.com//docs/2000/Public/04/T-361.pdf</comment>
-  </source>
   <source id="a6635acc-a03f-49d4-8ab3-3ba180407f1d" sourceType="1" year="2014" firstAuthor="Raboni, Massimo" additionalAuthors="Urbini, Giordano " title="Production and use of biogas in Europe: a survey of current status and perspectives" journal="Revista Ambiente &amp; Água" />
   <source id="0163159a-2219-4b29-8537-4f3eb19ba551" sourceType="0" year="2002" firstAuthor="Anonymous" title=" Pflanzenschutzmittel 2002 - Produktindex - Detail." />
   <source id="6f3b1613-d0a4-4553-8109-7bc2b4f2cae9" sourceType="3" year="2000" firstAuthor="MAN Nutzfahrzeuge AG" title="Umwelterklärung 1999." placeOfPublications="München" publisher="MAN Nutzfahrzeuge AG" />
   <source id="6a45dd32-387e-4934-97f1-58eefdd0142b" sourceType="0" year="2013" firstAuthor="Associação Brasileira de Cimento Portlan" additionalAuthors="Eliana Taniguti" title="Panorama e tendência técnico-mercadológicas do setor de concreto" />
+  <source id="a5a555d3-dc74-4627-ae10-f10145a40cf1" sourceType="1" year="2015" firstAuthor="Angel Avadí" additionalAuthors="Nathan Pelletier, Joël Aubin, Stéphane Ralite, Jesús Núñez, Pierre Fréon" title="Comparative environmental performance of artisanal and commercial feed use in Peruvian freshwater aquaculture" journal="Aquaculture" />
   <source id="8bcd837d-410d-48f9-aa9b-58985c168689" sourceType="3" year="2004" firstAuthor="Macedo I.d.C." additionalAuthors="Lima Verde Leal M., Azvedo Ramos da Silva J." title="Assessment of greenhouse gas emissions in the production and use of fuel ethanlo in Brazil" placeOfPublications="Sao Paulo" publisher="">
     <comment xml:lang="en">Government of the State of Sao Paulo - Secretariat of the Environment</comment>
   </source>
@@ -881,10 +907,11 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
   <source id="64ebef2b-92f1-4037-9045-947d080a179c" sourceType="2" year="2004" volumeNo="7" firstAuthor="Baudis, U" additionalAuthors="Fichte, R" title="Boron and Boron Alloys" namesOfEditors="Fiedler E., Grossmann G., Kersebohm D., Weiss G. and Witte C" titleOfAnthology="s Encyclopedia of Industrial Chemistry, Seventh Edition" placeOfPublications="New York" publisher="Wiley InterScience">
     <comment xml:lang="en">Online-Version under: http://www.mrw.interscience.wiley.com/emrw/9783527306732/home</comment>
   </source>
+  <source id="942ce218-e90c-4bd8-94dc-e21b484d8c7f" sourceType="1" year="2017" firstAuthor="Novaes R." title="Estimating 20-year land use change and derived CO2 emissions associated to crops, pasture and forestry in Brazil and each of its 27 states" pageNumbers="1-13" journal="Global Change Biology" />
   <source id="c75c410a-02d4-44fb-9520-8ace1255ca44" sourceType="0" year="2006" firstAuthor="SCEES - AGRESTE" title="Enquête sur les pratiques culturales 2006" placeOfPublications="Castanet Tolosan, FR" />
   <source id="dc136f52-c274-4578-a31c-a7e6070d3f38" sourceType="3" year="2009" volumeNo="16" firstAuthor="Hischier, R." additionalAuthors="Althaus H.-J., Bauer, Chr., Doka, G., Frischknecht R., Jungbluth N., Margni M., Nemecek, T., Simons A., Spielmann M." title="Documentation of changes implemented in ecoinvent Data v2.1" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf. CH" publisher="Swiss Centre for LCI">
-    <comment>EcoSpold01Number=45</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=45</comment>
   </source>
   <source id="e432757d-a118-48f5-937d-689ee2de35cf" sourceType="1" year="2013" firstAuthor="Diogo Aparecido Lopes Silva" title="Life Cycle Assessment of medium density particleboard (MDP) production in Brazil" pageNumbers="10" placeOfPublications="http://link.springer.com/article/10.1007%2Fs11367-013-0583-3" journal="Int J Life Cycle Assess" />
   <source id="5cd15d7a-5618-4c06-9ff2-2cc08cbd7be6" sourceType="0" year="1996" volumeNo="1" firstAuthor="Bergmair J" title="Gesamtenergieaufwand bei der Herstellung von Hackgut bzw. Pellets" namesOfEditors="" placeOfPublications="Forschungsinstitut für alternative Energienutzung, TU Graz" publisher="" />
@@ -911,6 +938,9 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
   </source>
   <source id="d6054282-bc09-4dfb-a7dd-66f453380f18" sourceType="3" year="2015" firstAuthor="Andrea Del Duce" additionalAuthors="Rainer Zah" title="Identifizierung der Datengrundlage und Rahmenbedingungen für die Anwendung der MinöStV bei Holzgassystemen: Schlussbericht" />
   <source id="9efa9f5c-2eaf-4c73-bd97-488bce18f775" sourceType="0" year="2011" firstAuthor="Schmidt, J.H., Reinhard, J., Weideam B.P" title="Modelling of indirect land use changes in LCA" />
+  <source id="3f8fc193-68c4-405a-b11c-af359133d0be" sourceType="3" year="2013" firstAuthor="Energrow" title="Energrow system">
+    <comment xml:lang="en">[online]</comment>
+  </source>
   <source id="4e561b53-5aed-4d33-a92a-93c3aa1007b6" sourceType="0" year="2003" firstAuthor="OECD SIDS" title="Ammonium chloride" placeOfPublications="Arona" publisher="UNEP publications">
     <comment xml:lang="en">http://www.chem.unep.ch/irptc/sids/oecdsids/12125029.pdf</comment>
   </source>
@@ -970,10 +1000,8 @@ http://calculatelca.com/wp-content/themes/athena/images/LCA%20Reports/Cement_And
   <source id="c1d7762a-08cd-40b3-aea5-3a25d7b55489" sourceType="0" year="2004" firstAuthor="van Hoek T." title="Thiocyanates, Inorganic" namesOfEditors="Fiedler E., Grossmann G., Kersebohm D., Weiss G. and Witte C." titleOfAnthology="Ullmann's Encyclopedia of Industrial Chemistry, Seventh Edition" placeOfPublications="New York" publisher="Wiley InterScience" issueNo="7 th Electronic Release Edition">
     <comment xml:lang="en">Online-Version under: http://www.mrw.interscience.wiley.com/emrw/9783527306732/home</comment>
   </source>
-  <source id="3e927093-53a7-440c-b2ff-13f8bc60c89a" sourceType="0" year="2006" firstAuthor="Barrick " title="Environment: Performance Tables">
-    <comment xml:lang="en">Retrieved from http://www.barrick.
-com/Default.aspx?SectionID=8906c4bd-4ee4-4f15-bf1b-565e357c01e1&amp;
-LanguageId=1</comment>
+  <source id="371f629d-b941-4ffa-acd5-26ff92f156f2" sourceType="0" year="2014" firstAuthor="Carrier" title="Operations and service for 69RG15 Generator Set Units" placeOfPublications="USA">
+    <comment xml:lang="en">http://dms.hvacpartners.com//docs/2000/Public/04/T-361.pdf</comment>
   </source>
   <source id="fe734947-4f33-4088-981f-2b46cd6007c7" sourceType="3" year="2003" firstAuthor="Chataignere A." additionalAuthors="Le Boulch D." title="Wind Turbine Systems. Final report ECLIPSE" placeOfPublications="Clamart Cedex, France" publisher="EDF R&amp;D" />
   <source id="10f16bc1-ffb7-4137-bab6-2e45324f7d36" sourceType="3" year="2009" firstAuthor="US Department of Energy" title="Modern Shale Gas. Development in the United States: A Primer" pageNumbers="62f" placeOfPublications="Office of Fossil Energy. National Energy Technology Laboratory" publisher="US Department of Energy" />
@@ -989,14 +1017,18 @@ stage1/seccopper.pdf. Date of last revision: 22.08.2002.
 </comment>
   </source>
   <source id="55576846-57cb-4ef7-9ec5-e791d4da8bdb" sourceType="1" year="2002" volumeNo="36" firstAuthor="Magnusson R." additionalAuthors="Nillson C., Andersson B." title="Emissions of aldehydes and ketones from a two-stroke engine using ethanol and ethanol-blended gasoline as fuel" pageNumbers="1656 ff." journal="Environmental Science and Technology" issueNo="8" />
-  <source id="34006e50-1eb8-4ddc-a4b0-f7297a5d0d96" sourceType="6" year="2015" firstAuthor="Gustavo Elias" title="Personal written communication, Gustavo Elias, Yara" />
+  <source id="d384ad15-baf3-40d7-a685-94ab7ea7875d" sourceType="5" year="2017" firstAuthor="Manuel Lascarro" title="Meeting with ASOCRETO" />
+  <source id="84c525d4-f130-4d9b-a80e-e5fba723de7b" sourceType="0" year="2012" firstAuthor="CUE" title="Evaluación del ciclo de vida de la cadena de producción de biocombustibles en Colombia. Capitulo II: Estudio ACV – Impacto Ambiental">
+    <comment xml:lang="en">https://www.minminas.gov.co/documents/10180/488888/Capitulo_2_ACV_final.pdf/1b6d5aec-702c-40b5-ac0a-eb4a564dd72e</comment>
+  </source>
   <source id="370c481f-be0f-4ee7-bbf5-b2277254b014" sourceType="0" year="2002" firstAuthor="Linden D." additionalAuthors="Magnusen D." title="Protable sealed Nickel-Metal hydride batteries." namesOfEditors="Linden D. and Reddy T. B." titleOfAnthology="Handbook of Batteries" placeOfPublications="New York, Chicago, San Francisco, Lisbon, London, Madrid, Mexico City, Milan, New Delhi, San Juan, Seoul, Singapore, Sydney, Toronto" publisher="McGraw-Hill Companies, Inc." />
-  <source id="5cc8f46b-643e-4e12-a863-f850fb3356a3" sourceType="0" year="2003" firstAuthor="HERA" title="Human &amp; Environmental Risk Assessment on ingredients of European household cleaning products: Sodium Tripolyphosphate (STPP)." />
+  <source id="2a5496eb-ee8a-46cb-9ff8-eb1c0d92c5c2" sourceType="0" year="1993" firstAuthor="Baumann T." additionalAuthors="Ménard M." title="Der kumulierte Energieaufwand - Methode und Resultate der Input-Output-Analyse. Diplomarbeit am Laboratorium für Energiesysteme." placeOfPublications="ETH Zürich" />
   <source id="93b94e91-bc98-4801-8584-f68373b1aaf4" sourceType="3" year="2005" firstAuthor="FAO" title="Fertilizer use by crop in Indonesia." placeOfPublications="Rome, IT" publisher="FAO" />
   <source id="a2a9106f-3abe-4a67-aec3-ff0402bb5d3b" sourceType="0" year="2000" firstAuthor="European Commission" title="Reference Document on Best Available Techniques in the Glass Manufacturing Industry" />
   <source id="5c53e0dd-8c63-4547-9020-6740a4d0e29b" sourceType="0" year="1998" firstAuthor="Anonymous" title="Pollution Prevention and Abatement Handbook." publisher="The World Bank Group">
     <comment xml:lang="en">Online-Version under: http://lnweb18.worldbank.org/essd/ essdext.nsf/51ByDocName/PollutionPreventionandAbatementHandbook.</comment>
   </source>
+  <source id="5f71094e-30e6-40bf-ab94-d5a5d4702f0d" sourceType="0" year="2010" firstAuthor="U.S. Geological Survey" title="Mineral Commodity Summaries 2010" pageNumbers="193" titleOfAnthology="Mineral Commodity Summaries" publisher="U.S. Geological Survey" />
   <source id="8a291aac-0eeb-44dd-a2b6-92f9e2e42fc0" sourceType="3" year="2014" firstAuthor="Singh S." additionalAuthors="Thirumalaisamy P.P., Harish G., Ram D., Sushil S. N., Sinha A. K., Asre R., Kapoor K.S., Satyagopal K., Jeyakumar P., Birah A., Sharma O.P., Bhagat S., Verma P.V., Kumar S., Chattopadhyay C., Yadav M.S." title=" Integrated Pest Management Package for Groundnut. " placeOfPublications="Faridabad, Haryana, IN." publisher="National Centre for Integrated Pest Mana" />
   <source id="1923dd31-8bbe-4235-8b67-46b5366a32e9" sourceType="0" year="2002" firstAuthor="Wiegmann K." title="Anbau und Verarbeitung von Baumwolle - Dokumentation der GEMIS Daten." publisher="Öko-Institut e.V." />
   <source id="47ca215d-43ab-4a75-8ceb-75aa816ca436" sourceType="0" year="2000" firstAuthor="IPCC" title="Reference Document on the application of Best Available Techniques to Industrial Cooling Systems. Integrated Pollution Prevention and Control (IPPC)" placeOfPublications="Seville, Spain">
@@ -1010,9 +1042,6 @@ stage1/seccopper.pdf. Date of last revision: 22.08.2002.
   </source>
   <source id="3d934df4-e0ae-4c56-a7c6-361307b41eaa" sourceType="6" year="2002" firstAuthor="J. Christen" title="VSTB" shortName="Christen" placeOfPublications="Alberswil, Switzerland.">
     <comment xml:lang="en"></comment>
-  </source>
-  <source id="66acfe64-d15b-4555-8fab-89aaf4f8b7c6" sourceType="0" year="2007" firstAuthor="Keystone Environmental LTD." title="Environmental Assessment document sulphur forming, handling and storage facility, Ridley Island" shortName="Project No. 8738" placeOfPublications="Burnaby, BC">
-    <comment xml:lang="en">http://www.rti.ca/pdf/report_sulphur.pdf</comment>
   </source>
   <source id="179e6d63-af80-4842-a4f3-2516fef3afd4" sourceType="0" year="2017" firstAuthor="SNSF" title="Feedbase">
     <comment xml:lang="en">https://www.feedbase.ch/</comment>
@@ -1079,15 +1108,21 @@ Online-Version under: http://www.azdeq.gov/download/38400tsd.pdf.</comment>
     <comment xml:lang="en">Download of February 13</comment>
   </source>
   <source id="50a3f558-e3b2-457a-9765-0da60dafead3" sourceType="3" year="2006" firstAuthor="Philp B.       " title="South Africa Citrus Industries - Findings and observations." placeOfPublications="ZAF" publisher="Government of South Africa" />
+  <source id="72ea6fe3-0a3f-4bf0-9bbc-eb4a5391d7f5" sourceType="0" year="2005" firstAuthor="Gaz Métro" title="Le bulletin bleu" publisher="" issueNo="January 2005">
+    <comment xml:lang="en">http://www.gazmetro.com/Data/Media/1663_bulletin%20restau%20final.pdf</comment>
+  </source>
   <source id="e3fa93c3-f4f4-4405-ad80-d7dd2f5112a9" sourceType="0" year="2002" firstAuthor="APME" additionalAuthors="Boustead, Ian" title="Eco-Profiles of the European Plastics Industry, Polyvinyl Chloride" />
+  <source id="15e7a82f-a722-4661-b723-3609eecd3fab" sourceType="3" year="2006" volumeNo="1" firstAuthor="Venkel" title="Material Composition - MLCCs" placeOfPublications="http://www.venkel.com/FinalPDFs/Matl_composition.pdf">
+    <comment xml:lang="en">Download of December 12</comment>
+  </source>
   <source id="909f3c80-1895-4078-b5f9-ec4ce1a80310" sourceType="0" year="1988" volumeNo="4730075" firstAuthor="Green, M." title="Chemical process involving ethers and amines">
     <comment xml:lang="en">United States Patent 4730075. Online-Version under: http://www.freepatentsonline.com/4730075.html</comment>
   </source>
   <source id="94c5467f-35c4-42a5-aa75-438922f9cc3d" sourceType="1" year="2003" volumeNo="8" firstAuthor="von Rozycki C." additionalAuthors="Koeser H. and Schwarz H." title="Ecology Profile of the German High-speed Rail Passenger Transport System, ICE" journal="International Journal of Life Cycle Asse" issueNo="2" />
   <source id="749626b2-06d1-4cf4-b539-53e8abc11c06" sourceType="0" year="2006" firstAuthor="EPCOS" title="Electronic Parts and Components. Product Survey 2007" placeOfPublications="München (Germany)" publisher="EPCOS AG - Corporate Centre" />
   <source id="5583d413-a865-43b8-a942-f933adf57c74" sourceType="3" year="2007" volumeNo="6" firstAuthor="Frischknecht, R." additionalAuthors="M., Tuchschmid, Faist Emmenegger, M., Bauer, C., Dones, R." title="Strommix und Stromnetz" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
-    <comment>EcoSpold01Number=21</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=21</comment>
   </source>
   <source id="f3b03e39-f885-4487-9cb8-8c280cbe8b2e" sourceType="0" year="2006" firstAuthor="DeMarco, Anthony " title="Demand for platinum jewelry fell in 2005; Palladium is white hot in China" publisher="JCK Magazine">
     <comment xml:lang="en">http://www.jckonline.com/2006/05/15/demand-platinum-jewelry-fell-2005-palladium-white-hot-china</comment>
@@ -1111,16 +1146,17 @@ Online-Version under: http://www.azdeq.gov/download/38400tsd.pdf.</comment>
   <source id="1862771d-6c8b-4d8d-bea0-f73019d5ae13" sourceType="5" year="2011" firstAuthor="Heiztechnik GmbH" title="Oral communication ETA Heiztechnik GmbH">
     <comment xml:lang="en">Personal communication and data provided by technician during wood boilers expositions (Forlener2011 - Biella IT)</comment>
   </source>
-  <source id="6c79213b-e5ea-4d79-a956-98f871e18580" sourceType="0" year="2010" firstAuthor="Siebert, S." additionalAuthors="Döll, P." title="Quantifying blue and green virtual water contents in global cro production as well as potential production losses without irrigation" pageNumbers="198-217" journal="Journal of Hydrology">
-    <comment xml:lang="en" />
-  </source>
+  <source id="c934ca00-fc32-4ceb-ab0e-460d9979f902" sourceType="0" year="2000" firstAuthor="Starzner S. and Wurmer-Weiss P. " title="ECOBIS 2000, ökologisches Baustoffinformationssystem." />
   <source id="2992775a-311c-420a-b98d-f38c81caa676" sourceType="2" year="2004" volumeNo="7" firstAuthor="Zapp, K." additionalAuthors="Wostbrock, K., Schäfer, M., Sato, K., Seiter, H., Zwick, W., Creutziger, R., Leiter, H." title="Ammonium Compounds" namesOfEditors="Fiedler E., Grossmann G., Kersebohm D., Weiss G. and Witte C." titleOfAnthology="Ullmann's Encyclopedia of Industrial Chemistry, Seventh Edition," placeOfPublications="New York" publisher="Wiley InterScience">
     <comment xml:lang="en">Online-Version under: http://www.mrw.interscience.wiley.com/emrw/9783527306732/home</comment>
   </source>
   <source id="5d162798-2238-4ac5-8c2e-77a947ccb95c" sourceType="0" year="2017" firstAuthor="P V Kiran Ananth" additionalAuthors="K Muralikrishanan, Parag Mundada" title="Life Cycle Inventories of Cement and concrete production in India" />
   <source id="bb285179-a6d0-45e2-861c-bc66aa1365f9" sourceType="3" year="2001" firstAuthor="Döpelheuer A." title="Quantities, characteristics and reduction potentialsof aircraft engine emissions." />
   <source id="07ab992d-47f6-4164-b7b2-c722e52d351b" sourceType="1" year="2015" firstAuthor="Quantis" additionalAuthors="Dauriat et al." title="WBSCD-CSI tool for EPDs of concrete and cement: LCA core model and database report" />
-  <source id="bfdcb5eb-32bf-4a98-9fa0-8f1fbbcbf756" sourceType="0" year="1987" firstAuthor="Hövelmann A." title="Neue Entsorgungsprobleme kohlegefeuerter Kraftwerke. Jül-2172" placeOfPublications="KVA, Jülich" />
+  <source id="cd73ee50-4adb-4603-814e-12d397871d53" sourceType="3" year="2009" volumeNo="10" firstAuthor="Classen M." additionalAuthors="Althaus H.-J., Blaser S., Doka G., Jungbluth N., Tuchschmid M." title="Life Cycle Inventories of Metals" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment>EcoSpold01Number=10</comment>
+    <comment xml:lang="en">CD-ROM</comment>
+  </source>
   <source id="aee8fdb9-be60-4d90-ab13-94b6a63b0867" sourceType="0" year="1999" volumeNo="1" firstAuthor="Borken J." additionalAuthors="Patyk A. and Reinhardt G. A." title="Basisdaten für ökologische Bilanzierungen: Einsatz von Nutzfahrzeugen in Transport, Landwirtschaft und Bergbau." placeOfPublications="Vieweg, Braunschweig/Wiesbaden" />
   <source id="e1e9933b-1e80-4b3f-aef5-80c18dce6620" sourceType="0" year="2006" firstAuthor="Boliden" title="Sustainability Report 2005." placeOfPublications="Stockholm" publisher="Boliden AB">
     <comment xml:lang="en">Online-Version under: http://www.boliden.se/.</comment>
@@ -1136,7 +1172,9 @@ Online-Version under: http://www.azdeq.gov/download/38400tsd.pdf.</comment>
   <source id="cc728cd2-39ed-492d-8ff6-69ae6035e833" sourceType="0" year="2003" firstAuthor="Baier U." additionalAuthors="Delavy P." title="Bioenergie, Protein &amp; Fasern aus Gras.  Monitoring des Biogasprozesses." placeOfPublications="Bern" publisher=" Bundesamt für Energie" />
   <source id="f538046b-be02-4ca1-a4c2-f422b5313f8b" sourceType="5" year="1993" firstAuthor="Felix Mutter" title="Fachverband der schweizerischen Lack-, Farben- und Druckfarben-Industrie" />
   <source id="3a05cef8-9c3d-4e1f-96c5-f74dac74af69" sourceType="0" year="1999" volumeNo="4" firstAuthor="Werner F." title="Nachhaltigkeit im Holzbau " pageNumbers="30-32" journal="Schweizer Ingenieur und Architekt" issueNo="117" />
-  <source id="0829bc9a-ad35-4b20-9cc8-9952e0b0a83b" sourceType="0" year="2003" firstAuthor="Frischknecht R." title="Strommix." placeOfPublications="Duebendorf, CH" publisher="Paul Scherrer Institut Villigen" journal="Sachbilanzen von Energiesystemen" issueNo="No. 6" />
+  <source id="6b15003e-4841-4829-b470-2d7ba58c8c8f" sourceType="2" year="2005" firstAuthor="Daintith, J." title="The Facts On File Dictionary of Chemistry" placeOfPublications="USA" publisher="Market House Books Ltd">
+    <comment xml:lang="en">ISBN 0-8160-5649-8</comment>
+  </source>
   <source id="451928d6-8703-40e1-915f-4e51ae0f003f" sourceType="3" year="2001" firstAuthor="Cederberg C." additionalAuthors="Darelius K." title="Livscykelanalys (LCA) av griskött" placeOfPublications="Halland (Sweden)" publisher="Naturresursforum. Landstinget Halland" />
   <source id="e46ef348-1028-4641-83db-dd118ea2dca2" sourceType="1" year="2007" volumeNo="53" firstAuthor="Jirsousek R." additionalAuthors="Klvac R., Skoupy A." title="Productivity and costs of the mechanised cut-to-length wood harvesting system in clear-felling operations" journal="Journal of Forest Science" issueNo="10" />
   <source id="12021ece-ae5f-49a1-aa24-ddf4bf1ca0ef" sourceType="0" year="2010" firstAuthor="Hapag-Lloyd" title="Container specification">
@@ -1159,27 +1197,23 @@ Online-Version under: http://www.azdeq.gov/download/38400tsd.pdf.</comment>
     <comment xml:lang="en">Online-Version under: http://www.iied.org/mmsd/mmsd_pdfs/ayres_lca_ main.pdf.</comment>
   </source>
   <source id="2c4135b1-c43f-4912-a362-a354c78d0dac" sourceType="4" year="2008" volumeNo="3" firstAuthor="Hischier, R." additionalAuthors="Weidema B., Althaus H.-J., Doka, G., Dones, R., Frischknecht R., Hellweg S., Humbert S., Jungbluth N., Margni M., Nemecek, T., Simons A., Spielmann M." title="Implementation of Life Cycle Impact Assessment Methods" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=208</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="00b6abcf-38eb-474d-b3b4-527a82aaf838" sourceType="1" year="2014" firstAuthor="Pierre Fréon" additionalAuthors="Angel Avadí, Rosa Amelia Vinatea Chavez, Federico Iriarte Ahón" title="Life cycle assessment of the Peruvian industrial anchoveta fleet: boundary setting in life cycle inventory analyses of complex and plural means of production" journal="Int J Life Cycle Assess" />
-  <source id="5898a0f6-556c-44d3-9bb7-33c7c1344650" sourceType="1" year="1958" volumeNo="10" firstAuthor="Schnitter G" title="Herstellung, Transport und Einbringen von Beton auf grossen Baustellen" pageNumbers="277-284" journal="Wasser‑ und Energiewirtschaft" issueNo="50">
-    <comment xml:lang="en"></comment>
-  </source>
+  <source id="c113c244-30a0-4fd4-a2a7-73346272bb90" sourceType="0" year="2017" firstAuthor="Folegatti Matsuura, M." title="Life Cycle Inventories of Sugarcane Production in Brazil" />
   <source id="4f44ed4f-30c7-4fff-be4d-d8b601488f0f" sourceType="0" year="2004" firstAuthor="Boessinger M." additionalAuthors="Buchmann M., Künzler R., Keller L., Schüpbach H., Sutter F., Todt W., Wagner M." title="Deckungsbeiträge. Ausgabe 2004" placeOfPublications="Lindau (Switzerland)" publisher="">
     <comment xml:lang="en">LBL = Landwirtschaftliche Beratungszentrale Lindau</comment>
   </source>
   <source id="3c5297c2-cc60-4436-8b69-1c20a04ff677" sourceType="1" year="2010" volumeNo="102" firstAuthor="Zheljazkov V.D." additionalAuthors="Cantrell C.L., Astatkie T., Ebelhar M.W." title="Peppermint Productivity and Oil composition as a Function of Nitrogen, Growth Stage, and Harvest Time." pageNumbers="124-128" journal="Agronomy Journal" issueNo="1" />
   <source id="0af2dcab-c6c3-4477-a91b-f5a6a6f7e6c5" sourceType="3" year="2000" firstAuthor="Künniger T." additionalAuthors="Richter K." title="Ökobilanzen von Konstruktionen im Garten- und Landschaftsbau" placeOfPublications="Duebendorf" publisher="Empa Duebendorf" />
   <source id="63d0b29d-3ab4-4b29-ae9d-c473a7e67a2c" sourceType="0" year="1993" firstAuthor="Elsener J." additionalAuthors="Strub P." title="Material und Energiebilanz für den Güterverkehr - Teil Infrastruktur und Fahrzeugpark" namesOfEditors="ETH-Semesterarbeit" placeOfPublications="Zürich" publisher="ETH Zürich" />
-  <source id="e588524e-cd8b-4467-b1ec-edbb4614d046" sourceType="0" year="2013" firstAuthor="Christian Leroy ; Djibril René" additionalAuthors="" title="Environmental Profile Report of the European Aluminium Industry">
-    <comment xml:lang="en">http://www.alueurope.eu/wp-content/uploads/2011/10/Environmental-Profile-Report-for-the-European-Aluminium-Industry-April-2013.pdf</comment>
-  </source>
+  <source id="dd75f041-d46e-4571-95eb-bf93a95f00bc" sourceType="3" year="2002" firstAuthor="MAN Nutzfahrzeuge AG" title="Umwelterklärung 2002" placeOfPublications="München" publisher="MAN Nutzfahrzeuge AG" />
   <source id="2e0b7630-9b4e-4161-bff2-481b2477599c" sourceType="4" year="2004" volumeNo="3" firstAuthor="Frischknecht R." additionalAuthors="Jungbluth N., Althaus H.-J., Doka, G., Dones, R., Hellweg S., Hischier R., &#xD;&#xA;Humbert S., Margni M., Nemecek, T., Spielmann M." title="Implementation of Life Cycle Impact Assessment Methods" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI" issueNo="0">
-    <comment>EcoSpold01Number=158</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=158</comment>
   </source>
-  <source id="2942a02e-99d0-4a08-a192-e8a376f6c99f" sourceType="0" year="2005" firstAuthor="Socolof M. L." additionalAuthors="Overly J. G. and Geibig J. R." title="Environmental life-cycle impacts of CRT and LCD desktop computer displays" pageNumbers="1281-1294" journal="Journal of Cleaner Production" issueNo="13" />
+  <source id="f633047b-0f76-4937-8b71-a416a162a475" sourceType="2" year="2003" firstAuthor="Corley R." additionalAuthors="Tinker P. (Eds)" title="The oil palm" titleOfAnthology="World Agricultural Series" placeOfPublications="Oxford" publisher="Blackwell Science" />
   <source id="b25df3c9-c854-4ea5-986e-ec0335e6abb3" sourceType="0" year="2005" firstAuthor="Placer Dome Inc." title="Sustainability - environmental charts 2004" publisher="Placer Dome Inc.">
     <comment xml:lang="en">Retrieved from http://www.placerdome.com/sustainability/
 performance/environment.htm
@@ -1191,12 +1225,11 @@ performance/environment.htm
   </source>
   <source id="5548d1a6-07d6-4195-8b07-21fb8b168d6c" sourceType="6" year="2015" firstAuthor="Fiorenzo Pasquali " title="Expert estimation by Fiorenzo Pasquali" />
   <source id="d3e5c893-3ce4-4de9-8720-05e921441d39" sourceType="1" year="2010" volumeNo="21" firstAuthor="Magnusson R." additionalAuthors="Nilsson C, Andersson K., Andersson B., Gieling R., Wiberg K., Östman C., Rannug U." title="Determination of chemical composition and mutagenicity in particles from chainsaw exhaust; experimental set-up, stability and results from two different fuels" pageNumbers="819-829" journal="Environmental Technology" issueNo="7" />
-  <source id="f9d4eb08-2fd5-4549-85d0-4b089b64c9a3" sourceType="2" year="1998" firstAuthor="Moore, P.A et al" title="Poultry Manure Managemen" pageNumbers=" 60-77" namesOfEditors="RJ Wright et al. (eds.)" titleOfAnthology=" Agricultural uses of municipal, animal and insdustrial byproducts." publisher="US. Dept. Agr. Conservation Res. Rpt. 44">
-    <comment xml:lang="en">URL: http://www.agriculture.state.pa.us/portal/server.pt/gateway/PTARGS_0_2_24476_10297_0_43/agwebsite/Files/General/sccfiles/odormanagement/D6._Poultry_Manure_Mgmnt.pdf
-</comment>
-  </source>
+  <source id="2fa75163-6535-47d1-96cd-910bc77034f9" sourceType="3" year="2003" firstAuthor="CETESB" title="Norma Técnica P4.263 - Procedimento para utilização de resíduos em fornos de produção de clínquer" />
   <source id="54d6c786-ed71-4f6b-8152-5632d2718272" sourceType="0" year="2015" firstAuthor="Wolkem consultancy services" title="Environmental Impact Assesment and Environmental Management Plan for Bhadwasi Gypsum mine" />
-  <source id="37ff017d-48aa-4a57-8531-e19df077cc08" sourceType="0" year="2014" volumeNo="92" firstAuthor="Guttikunda, S. K." additionalAuthors="Jawahar, P." title="Atmospheric emissions and pollution from the coal-fired thermal power plants in India" pageNumbers="449-460" namesOfEditors="" journal="Atmospheric Environment" />
+  <source id="bf53fc6b-a6fd-458e-8ce5-ad10f06cc9a6" sourceType="0" year="2017" firstAuthor="Associação Brasileira das Industrias de " title="ABIOVE">
+    <comment xml:lang="en">Available at: http://www.abiove.org.br/site/index.php?page=estatistica&amp;area=NC0yLTE=</comment>
+  </source>
   <source id="8ff5f20a-adfe-4f4e-88f5-65638514aa07" sourceType="3" year="1997" firstAuthor="Knechtle N." title="Materialprofile von Holzerntesystemen - Analyse ausgewählter Beispiele als Grundlage für ein forsttechnisches Ökoinventar. Diplomarbeit am Departement für Wald- und Holzforschung" placeOfPublications="Zurich" publisher="ETH Zurich" />
   <source id="20f8cc8b-70df-46a0-a45a-80685f67ac63" sourceType="3" year="2009" firstAuthor="REWE" title="Fallstudie 'Best Alliance' Früherdbeeren der REWE group - Fallstudie im Rahmen des PCF (Product Carbon Footprint) Pilotprojekts Deutschland" />
   <source id="799e0f67-6dca-4546-bde2-cdb121e5fc5c" sourceType="5" year="2011" firstAuthor="RIKA innovative Ofentechnik GmbH" title="Oral communication RIKA Ofentechnik GmbH">
@@ -1210,6 +1243,7 @@ performance/environment.htm
   <source id="263ec8ca-faa3-427c-94b8-97bb34aeb682" sourceType="3" year="2013" firstAuthor="Plate, T., " title="Tofu's carbon footprint">
     <comment xml:lang="en">[online] http://tofuscarbonfootprint.weebly.com/the-tofu-factory.html </comment>
   </source>
+  <source id="46ff18f9-8a80-42d6-9546-1941396ca4cc" sourceType="0" year="2013" firstAuthor="The concrete institute Sout Africa" title="Fundamentals of Concrete" pageNumbers="308" namesOfEditors="Gill Owens " publisher="The Concrete Institute SA" />
   <source id="47afb1d3-de41-4acf-8ca9-e951d0388c36" sourceType="3" year="2013" firstAuthor="Weidema B P" additionalAuthors="Bauer C, Hischier R, Mutel C, Nemecek T, Reinhard J, Vadenbo C O, Wernet G" title="Data quality guideline for the ecoinvent database version 3" placeOfPublications="St. Gallen" publisher="ecoinvent" />
   <source id="f81e86e7-b4fa-474f-9d00-68547c46d8bb" sourceType="3" year="2009" firstAuthor="Terres Inovia" title="Enquêtes sur les pratiques culturales du tournesol (2006 et 2009)" placeOfPublications="Paris, FR" publisher="Terres Inovia" />
   <source id="e4ae642d-4e20-4b4f-8014-187984cdc9fa" sourceType="6" year="2012" firstAuthor="Leuenberger H." title="Personal written communication. Mr. H. Leuenberger, Holzimprägnierwerk.,Waldkirch." />
@@ -1245,7 +1279,9 @@ performance/environment.htm
   <source id="22365552-4867-4520-aa3c-ac486fe67eb4" sourceType="0" year="2007" firstAuthor="EPCOS" title="Environmental Report - Factsheet" placeOfPublications="München (Germany)" publisher="EPCOS AG - Corporate Centre">
     <comment xml:lang="en">Download of March 12 from www.epcos.com/web/generator/Web/Sections/Environment/FactSheet/Page,locale=en.html</comment>
   </source>
+  <source id="80819f4f-9e82-4851-8bcc-c90ce3a6b2c5" sourceType="0" year="2010" firstAuthor="Asocaña" title="Informe Anual 2009 - 2010" shortName="Asocaña" placeOfPublications="Cali, Colombia" />
   <source id="d5519be0-113e-48d5-9fe1-535db8746d6d" sourceType="0" year="2008" firstAuthor="GEXSI" title="Global Market Study on Jatropha: Final Report " shortName="GEXSI" placeOfPublications="Berlin/London" />
+  <source id="28b42651-a39b-4b32-a8c4-cbc3fa47c23d" sourceType="0" year="2015" firstAuthor="Laura Golsteijn" title="A compilation of life cycle studies for six household detergent product categories in Europe: the basis for product‑specific A.I.S.E. Charter Advanced Sustainability Profiles" />
   <source id="3ad736a6-fa20-41c1-9bda-16994c7a75ab" sourceType="0" year="2011" firstAuthor="E.J. M.M. Arets" additionalAuthors="P.J. van der Meer, C.C. Verwer, G.M. Hengeveld, G.W. tolkamp, G.J. Nabuurs, M. van Oorschot" title="Global Wood Production" placeOfPublications="http://edepot.wur.nl/196265" publisher="Alterra Wageningen UR" />
   <source id="358b77f5-a305-4afc-b530-f36d8ef9fd48" sourceType="1" year="2013" volumeNo="130" firstAuthor="Liu Y." additionalAuthors="Gao M.,  Wu W., Tanveer S.K., Wen X., Liao Y." title="The effects of conservation tillage practices on the soil water-holding capacity of a non-irrigated apple orchard in the Loess Plateau, China" pageNumbers="7-12" journal="Soil &amp; Tillage Research" />
   <source id="f4029743-fb67-4133-b922-ddd5be515f6a" sourceType="1" year="2007" volumeNo="89" firstAuthor="Kumar S." additionalAuthors=" Imtiyaz M., Kumar A., Singh R" title="Response of onion (Allium cepa L.) to different levels of irrigation water." pageNumbers="161-166" journal="Agricultural water management" />
@@ -1280,9 +1316,6 @@ performance/environment.htm
   <source id="23af7e07-c6a6-475c-b923-a11b676eea30" sourceType="0" year="2007" firstAuthor="Wildes, S.G." title="Solvents: a market opportunity study" publisher="Omni Tech International, LTD ">
     <comment xml:lang="en">http://soynewuses.org/wp-content/uploads/pdf/final_SolventsMarketStudy.pdf</comment>
   </source>
-  <source id="d4a26eda-3bec-4108-a16e-feda10bdeb81" sourceType="0" year="2006" firstAuthor="Marceau" title="Life Cycle Inventory of Portland Cement Manufacture" pageNumbers="68" publisher="Portland Cement Association">
-    <comment xml:lang="en">Link: http://www.cement.org/bookstore/profile.asp?printpage=true&amp;store=&amp;id=11004, Accessed: 2011-07-21</comment>
-  </source>
   <source id="376de205-9f88-4d6c-b5b7-d1d74eab70d1" sourceType="0" year="2013" firstAuthor="Alex Primas" title="Schweizerische Holzenergiestatistik" />
   <source id="be4aaeca-06eb-48c7-9e93-a9d84494c91d" sourceType="3" year="2010" firstAuthor="Alvarez, R." additionalAuthors="Weilenmann, M." title="Tracing of Road Traffic Emissions: Natural Gas Vehicles Euro-4 and Euro-5 Standard Program" placeOfPublications="Dübendorf, CH" publisher="EMPA" />
   <source id="2c671555-4325-47fc-84a0-15e31170ef64" sourceType="0" year="2006" firstAuthor="Metcall LLC" title="Product Info: Methanol">
@@ -1309,17 +1342,17 @@ BGR = Bundesanstalt für Geowissenschaften und Rohstoffe</comment>
   </source>
   <source id="67007129-23d4-45a3-b48c-64e1d0218c0b" sourceType="0" year="2012" firstAuthor="Miguel Brandâo" additionalAuthors="Lorenc Mila i Canals" title="Global characterisation factors to assess land use impacts on biotic production" journal="IJLCA" />
   <source id="6497c1d6-7f3c-476b-b395-0451042640e4" sourceType="1" year="2006" volumeNo="47" firstAuthor="Gündogmus E." title="Energy use on organic farming: A comparative analysis on organic versus conventional apricot production on small holdings in Turkey." pageNumbers=" 3351-3359" journal="Energy Conversion and Management" issueNo="18-19" />
-  <source id="2a5496eb-ee8a-46cb-9ff8-eb1c0d92c5c2" sourceType="0" year="1993" firstAuthor="Baumann T." additionalAuthors="Ménard M." title="Der kumulierte Energieaufwand - Methode und Resultate der Input-Output-Analyse. Diplomarbeit am Laboratorium für Energiesysteme." placeOfPublications="ETH Zürich" />
+  <source id="2b5a943f-9f37-4d56-8b45-e3feb03ea491" sourceType="0" year="1987" volumeNo="2" firstAuthor="Walski, T. M." additionalAuthors="Brill, E. D., Gessler, J., Goulter, I. C., Jeppson, R. M., Lansey, K., Han-Lin Lee, Liebman, J. C., Mays, L., Morgan, D. R., and Ormsbee, L." title="Battle of the network models:epilogue. Journal of Water Resources Planning and Management" pageNumbers="191-203" journal="Jrnl of Water Res. Plan. &amp; Management" issueNo="113">
+    <comment xml:lang="en">First publication on Anytown network benchmarking model. Available on line: http://emps.exeter.ac.uk/engineering/research/cws/resources/benchmarks/expansion/anytown.html</comment>
+  </source>
   <source id="5f97bb23-5083-4b36-bb12-1f37080a97c6" sourceType="4" year="2004" volumeNo="7" firstAuthor="Kellenberger D." additionalAuthors="Althaus H.-J., Jungbluth N., Künniger T." title="Life Cycle Inventories of Building Products" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, EMPA-DU">
-    <comment>EcoSpold01Number=160</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=160</comment>
   </source>
   <source id="115b157d-3885-498b-b6a3-5c6d19b8085e" sourceType="3" year="2002" firstAuthor="EPA" title="Clean Alternative Fuels">
     <comment xml:lang="en">www.epa.gov</comment>
   </source>
-  <source id="c2ea4715-4e93-466a-9ef5-fe3551881124" sourceType="0" year="1998" volumeNo="3" firstAuthor="Shafer A." title="The global demand for motorized mobility" pageNumbers="455–477" namesOfEditors="Elsevier" titleOfAnthology="Transportation Research Part A: Policy and Practice" issueNo="6">
-    <comment xml:lang="en">Link: http://www.sciencedirect.com/science/article/pii/S0965856498000044</comment>
-  </source>
+  <source id="25bfa7f4-c8c3-47cc-813b-9f0da8e2a2db" sourceType="0" year="1989" volumeNo="2" firstAuthor="Chauvel, A." additionalAuthors="Lefebvre, G." title="Petrochemical Processes: Major oxygenated, chlorinated and nitrated derivatives" placeOfPublications="Paris" publisher="Institut francais du pètrole publication" />
   <source id="a9e6fe76-5b16-4f57-8892-e5881b81122f" sourceType="0" year="2006" firstAuthor="US government" title="U.S. Geological Survey, Mineral Commodity Summaries">
     <comment xml:lang="en">URL: http://minerals.usgs.gov/minerals/pubs/commodity/sulfur/sulfumcs06.pdf</comment>
   </source>
@@ -1365,20 +1398,22 @@ BGR = Bundesanstalt für Geowissenschaften und Rohstoffe</comment>
     <comment xml:lang="en">Filled technical questionnaire where the company described the composition if its production factory, machineries capacities, brands of devices, weights, energy consumed annually, production and other useful details for buiding up the dataset. </comment>
   </source>
   <source id="96c7ea0d-ec72-4444-8629-d148a1bc6f24" sourceType="4" year="2008" volumeNo="10" firstAuthor="Classen M." additionalAuthors="Althaus H.-J., Blaser S., Doka G., Jungbluth N., Tuchschmid M." title="Life Cycle Inventories of Metals" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL" issueNo="0">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=209</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="100232b3-33e1-4f8c-95bc-c2a55b5da4d1" sourceType="0" year="2011" firstAuthor="Gschösser F." additionalAuthors="Bösch M., Et al. " title="Erarbeitung von Ökobilanz-Sachbilanzdaten zur Zement- und Betonherstellung in der Schweiz" />
   <source id="c469e33f-3409-412b-bcc5-5f5cadc0dd26" sourceType="0" year="2002" firstAuthor="UFA" title="UFA Bauinfo" shortName="UFA" titleOfAnthology="Biblis">
     <comment xml:lang="en">Stand August 2002. Retrieved on June 7, 2002 from http://www.ufa.ch/Biblis/BaudokuUFA.asp.</comment>
   </source>
-  <source id="74d9ce24-1999-403e-b0b8-9ee5a4f1d03f" sourceType="3" year="2004" firstAuthor="EU" title="RICHTLINIE 2004/26/EG DES EUROPÄISCHEN PARLAMENTS UND DES RATES zur Änderung der Richtlinie 97/68/EG zur Angleichung der Rechtsvorschriften der Mitgliedstaaten über Maßnahmen zur Bekämpfung der Emission von gasförmigen Schadstoffen und luftverunreinigende" />
+  <source id="8139a1aa-a24e-485c-a758-4fe962cb87d1" sourceType="0" year="2003" firstAuthor="Milà i Canals L." title="Contributions to LCA Methodology for Agricultural Systems. Site-dependency and soil degradation impact assessment" placeOfPublications="Barcelona">
+    <comment xml:lang="en">http://www.tdx.cat/handle/10803/3155</comment>
+  </source>
   <source id="9bd4932b-3bdb-482a-8f12-5f72f669851b" sourceType="0" year="2010" firstAuthor="Ullmann Encyclopedia" title="Sodium Chloride">
     <comment xml:lang="en">URL: http://onlinelibrary.wiley.com/doi/10.1002/14356007.a24_317.pub4/pdf</comment>
   </source>
   <source id="fa7e7476-cacf-4e0a-9ab9-010908819320" sourceType="4" year="2007" volumeNo="6" firstAuthor="Dones, R." title="Kernenergie" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
-    <comment>EcoSpold01Number=150</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=150</comment>
   </source>
   <source id="868afe44-3185-4cd2-b66e-c2b0b59a4683" sourceType="1" year="2004" volumeNo="31" firstAuthor="Pandey N.K." additionalAuthors="Kumar N.R., Dahiya P.S., Srinivas K." title="Economic analysis of potato cultivation in Shimla district (HP)." pageNumbers="171-175" journal="Potato Journal" issueNo="03-04" />
   <source id="adc664cd-69b7-4206-85d8-33e837166593" sourceType="3" year="2011" firstAuthor="RIKA Ofentechnik GmbH" title="Stove Manual RIKA Ofentechnik GmbH" placeOfPublications="http://downloads.networx.at/www.rika.at/synchronize/manuals/pellet/de/Como.pdf">
@@ -1399,6 +1434,7 @@ BGR = Bundesanstalt für Geowissenschaften und Rohstoffe</comment>
   <source id="83142245-c3a2-4426-bcf1-2261ffb02b0a" sourceType="3" year="2015" firstAuthor="S Hirchberg, S Wiemer, P Burgherr" title="Energy from the earth- Deep Geothermal as a Resource for the future" shortName="TA-Swiss Energy from the earth" placeOfPublications="Switzerland" publisher="vdf Hochschulverlag AG an der ETH Zürich">
     <comment xml:lang="en">The different scientific institutes like PSI, ETH, ZHAW, DIALOGIK/University of Stuttgart,  represented by the authors cooperated as competence centers in the present TA-SWISS study energy to contribute their expert knowledge on deep geothermal energy. The authors, and thus their institutions, cooperated as scientific advisors to work out the recommendations. The study and its recommendations are the common product of all the authors and groups, but they do not necessarily represent the official positions of their individual institutions.</comment>
   </source>
+  <source id="295d6935-3448-476d-bccd-19d3cbe04ca5" sourceType="0" year="2018" firstAuthor="Jade Müller Carneiro" additionalAuthors="Maria Clea Brito de Figueiredo" title="Life cycle inventories of mango production in Brazil" />
   <source id="26e206e7-4b78-433a-b17d-2f599bad4d3e" sourceType="0" year="2006" firstAuthor="Boliden" title="Environmental Facts 2006 - statistics from 2005, Mines: Aitik, Boliden, Gar-penberg, Tara." publisher="Boliden Ltd">
     <comment xml:lang="en">Online-Version under: http://www.
 boliden.se/.</comment>
@@ -1428,6 +1464,9 @@ boliden.se/.</comment>
   </source>
   <source id="9fa96b0b-8bed-4e43-a7f4-e192446181f9" sourceType="3" year="2015" firstAuthor="Quantis" title="Analyse de Cycle de Vie des procédés d’extrusion et de thermoformage des emballages plastiques" />
   <source id="6524203c-3701-485f-8fda-57ef782f170f" sourceType="3" year="2013" firstAuthor="SNIC" title="Relatório Anual 2013" />
+  <source id="8a58bae8-5a14-48e4-86d7-8f6e6baa7999" sourceType="0" year="2009" firstAuthor="Concrete Institute " title="Cement and Concrete Institute South Africa ">
+    <comment xml:lang="en">Yearly statistics published in the Concrete Institute of South Africa website: https://www.theconcreteinstitute.org.za/</comment>
+  </source>
   <source id="9f7566b1-5b32-4061-bbe9-ce72d404b213" sourceType="0" year="2000" firstAuthor="Williams, E." title="Global Production Chains and Sustainability: The case of high-purity silicon and its applications in IT and renewable energy" placeOfPublications="Tokyo, Japan" publisher="The United Nations University">
     <comment xml:lang="en">http://www.it-environment.org/publications/QITS%20report.pdf</comment>
   </source>
@@ -1490,9 +1529,7 @@ boliden.se/.</comment>
   <source id="7ca086df-d7c6-41ec-ac52-096d7d1384bd" sourceType="0" year="2012" firstAuthor="Jürgen, A." title="Perspectives of Ingot Casting and Forging Industry in Europe and Worldwide" placeOfPublications=" Intern. Conference on Ingot Casting, rolling and forging, 3-7 June, Aachen, Germany" publisher="Eurogress">
     <comment xml:lang="en">Consulted online, january 2014: http://www.icrf2012.com/files/1000_juergen_alex.pdf</comment>
   </source>
-  <source id="3f8fc193-68c4-405a-b11c-af359133d0be" sourceType="3" year="2013" firstAuthor="Energrow" title="Energrow system">
-    <comment xml:lang="en">[online]</comment>
-  </source>
+  <source id="f6b8d104-ac3d-474a-b26b-35ddd0491679" sourceType="0" year="2017" firstAuthor="Russo, V," additionalAuthors="de Kock, L.; Muir, K.; Notten, P.; Patel, I.; Stucki, M.; Vienings, E.; von Blottnitz, H.; Wettstein, S" title="Life cycle inventories of South African agricultural products" />
   <source id="8358a2ce-c42c-4b66-b7e4-abfa1111b0c1" sourceType="3" year="2013" firstAuthor="Doka G." title="Updates to Life Cycle Inventories of Municipal Waste Incineration" placeOfPublications="Zürich, CH" />
   <source id="54b4be32-8af8-42ce-8f13-23ed21b999bd" sourceType="0" year="1995" firstAuthor="Berdowski J." additionalAuthors="Visschedijk A., Creemers E., Pulles T., Pacyna J., Fudala J. and Querreveld D. " title="Co-ordinated European Programme on Particulate Matter Emission Inventories, Projections and Guidance (CEPMEIP)" pageNumbers="">
     <comment xml:lang="en">http://www.air.sk/tno/cepmeip/</comment>
@@ -1511,8 +1548,8 @@ boliden.se/.</comment>
   <source id="63ee3737-4a57-4bdb-9a33-c252fda27c6a" sourceType="6" year="2014" firstAuthor="Thomas Nussbaumer" title="Personal communication, T. Nussbaumer, Verenum, Switzerland" />
   <source id="cfb1db7d-4270-4531-b816-8e7fa44bf386" sourceType="0" year="1995" firstAuthor="Hirsinger F." title="A Life-Cycle Inventory for the Production of Alcohol Sulphates in Europe" />
   <source id="de5302ba-4f76-4eb9-9d1d-85af041e7775" sourceType="4" year="2003" volumeNo="4" firstAuthor="Hedemann J." additionalAuthors="König, U." title="Technical Documentation of the ecoinvent Database" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, IFU">
-    <comment>EcoSpold01Number=135</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=135</comment>
   </source>
   <source id="a307668f-9c9a-4de7-a552-df8c079f4772" sourceType="0" year="2012" firstAuthor="SEMI" title="SEMI World Fab Forecast" shortName="SEMI" placeOfPublications="http://www.semi.org/en/node/40871" />
   <source id="d5fedc80-cc47-4a47-b567-bee25f048f62" sourceType="1" year="1995" volumeNo="95" firstAuthor="Egger K.W." title="Methanemissionen der Schweiz und deren Klimawirksamkeit" shortName="Egger, K.W." pageNumbers="224-234" journal=" Gas - Wasser – Abwasser" issueNo="3" />
@@ -1540,8 +1577,8 @@ boliden.se/.</comment>
   <source id="e4421c5b-a051-473f-8e68-e4fc48535b63" sourceType="0" year="2017" firstAuthor="P V Kiran Ananth" title="Life Cycle Inventories of Coal mining in India" />
   <source id="0f4397e1-c28f-4409-8d96-94fa525d3747" sourceType="0" year="2012" volumeNo="28" firstAuthor="Torrellas, M." title="Efficient use of inputs in protected hoticulture" pageNumbers="45-55" journal="Journal of Cleaner Production" issueNo="" />
   <source id="a3ba5207-5834-4d67-b417-38951b3ead65" sourceType="4" year="2007" volumeNo="13" firstAuthor="Doka G." title="Life Cycle Inventories of Waste Treatment Services" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=144</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="1ffab619-42c6-443d-8aa3-a4e1c0f157cd" sourceType="0" year="1999" firstAuthor="EEA" title="Primary Copper Production (B336)." titleOfAnthology="EMEP / CORINAIR Emission Inventory Guidebook." publisher="European Enviornmental Agency" issueNo="3">
     <comment xml:lang="en">Online-Version under: http://reports.eea.eu.int/
@@ -1549,12 +1586,12 @@ technical_report_2001_3/en/en/tab_content_RLR.
 </comment>
   </source>
   <source id="2c6cfb9c-3375-4b33-b751-20d3ac0ea0c7" sourceType="4" year="2008" volumeNo="6" firstAuthor="Dones, R." additionalAuthors="Doka G." title="Kernenergie" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=211</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="e62ee33e-b5cd-48c5-9a09-7136d31416da" sourceType="3" year="2007" volumeNo="19" firstAuthor="Sutter, J." title="Life Cycle Inventories of Highly Pure Chemicals" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf and St. Gallen, CH" publisher="Swiss Centre for LCI, ETHZ">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=46</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="e8154023-482b-45d1-a532-1986ac485d19" sourceType="1" year="2014" volumeNo="73" firstAuthor="Manfredi M." additionalAuthors="Vignali G." title="Life cycle assessment of a packaged tomato puree: a comparison of environmental impacts produced by different life cycle phases." pageNumbers="275-284" journal="Journal of Cleaner Production" issueNo="275-284">
     <comment xml:lang="en">entry.comment</comment>
@@ -1566,9 +1603,8 @@ technical_report_2001_3/en/en/tab_content_RLR.
     <comment xml:lang="en">Retrieved 15.01.2003 from http://www.jrc.es/pub/english.cgi/0/733169.</comment>
   </source>
   <source id="dd545af2-e8ff-4566-914f-f07b5cec22ff" sourceType="0" year="2006" firstAuthor="PWPA " title="Paper supply" placeOfPublications="http://www.pppc.org/en/2_0/2_3.html" />
-  <source id="cd73ee50-4adb-4603-814e-12d397871d53" sourceType="3" year="2009" volumeNo="10" firstAuthor="Classen M." additionalAuthors="Althaus H.-J., Blaser S., Doka G., Jungbluth N., Tuchschmid M." title="Life Cycle Inventories of Metals" titleOfAnthology="Final report ecoinvent data v2.1" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
-    <comment>EcoSpold01Number=10</comment>
-    <comment xml:lang="en">CD-ROM</comment>
+  <source id="2fd205c9-d79e-45ac-a44f-0ff825376c16" sourceType="0" year="2017" firstAuthor="Confronting Climate Change" title="Primary data of citrus commodity 2011 - 2017 [raw data]. ">
+    <comment xml:lang="en">Available: Confronting Climate Change database [2017]</comment>
   </source>
   <source id="ddc1533e-ee69-43e6-9cc4-6ed8470fd8e9" sourceType="0" year="2006" firstAuthor="AT&amp;S AG " title="Environmental Report 2006" placeOfPublications=" www.ats.net" publisher="">
     <comment xml:lang="en">Austria Technologie &amp; Systemtechnik Aktiengesellschaft (AT&amp;S AG), Fehring, Leoben (Austria)</comment>
@@ -1577,8 +1613,8 @@ technical_report_2001_3/en/en/tab_content_RLR.
     <comment xml:lang="en">EPA/310-R-95-002 - U.S. Environmental Protection Agency, Washington D.C. (USA)</comment>
   </source>
   <source id="c81fcd1b-8cf4-4c89-a8b7-709742eb4aa4" sourceType="4" year="2007" volumeNo="5" firstAuthor="Dones R." additionalAuthors="Bauer C., Bolliger R., Burger B., Faist Emmenegger M., Frischknecht R., Heck T., Jungbluth N., Röder A." title="Life Cycle Inventories of Energy Systems: Results for Current Systems in Switzerland and other UCTE Countries" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=136</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="f6bc0bb2-ee4a-4847-bc92-242dca5f5a70" sourceType="3" year="2007" volumeNo="18" firstAuthor="Hischier R." additionalAuthors="Classen M., Lehmann M., Scharnhorst W." title="Life Cycle Inventories of Electric and Electronic Equipment - Production, Use &amp; Disposal" titleOfAnthology="Final report ecoinvent Data v2.0" placeOfPublications="Duebendorf and St. Gallen, CH" publisher="Swiss Centre for LCI, Empa - TSL">
     <comment>EcoSpold01Number=42</comment>
@@ -1587,8 +1623,8 @@ technical_report_2001_3/en/en/tab_content_RLR.
   <source id="19c4b0f3-9a4a-45ce-be67-58deabd890ba" sourceType="1" year="2000" volumeNo="148" firstAuthor="Clifton-Brown J.C." additionalAuthors="Lewandowski I." title="Overwintering problems of newly established Miscanthus plantations can be overcome by identifying genotypes with improved rhizome cold tolerance" pageNumbers="287-294" journal="New Phytologist" />
   <source id="16323dd8-5c7d-42e3-9b0d-8ead5d41004b" sourceType="1" year="2008" volumeNo="13" firstAuthor="Dalgaard R." additionalAuthors="Schmidt J., Halberg N., Christensen P., Thrane M., Pengue W. A." title="LCA of Soybean Meal" pageNumbers="240-254" journal="International Journal of Life Cycle Asse" issueNo="3" />
   <source id="2ac3f88a-3339-4e8a-b1d4-37d758debf68" sourceType="4" year="2004" volumeNo="6" firstAuthor="Dones R." additionalAuthors="Bauer C., Bolliger R., Burger B., Faist Emmenegger M., Frischknecht R., Heck T., Jungbluth N., Röder A." title="Sachbilanzen von Energiesystemen" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
-    <comment>EcoSpold01Number=159</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=159</comment>
   </source>
   <source id="76773548-cbc5-42a8-8091-eff919726d68" sourceType="2" year="2009" firstAuthor="Ntziachristos, L." additionalAuthors="Samaras, Z., Kouridis, C., Hassel, D., McCrae, I., Hickman, J., Zierock, K-H., Keller, M., Andre, M., Gorissen, N., Boulter, P., Joumard, R., Rijkeboer, R., Geivanidis, S., Hausberger, S." title="EMEP EEA emission inventory guidebook 2009: exhaust emissions from road transport" placeOfPublications="Copenhagen" publisher="European Environment Agency" journal="" />
   <source id="a1e723a7-4ec3-404b-8eb0-a47b81bf4552" sourceType="0" year="2001" firstAuthor="Anonymous" title="Emissions-Messung Kalkfabrik Netstal." placeOfPublications="Technische Forschung und Beratung für Zement und Beton, Brugg." publisher="" />
@@ -1598,9 +1634,10 @@ technical_report_2001_3/en/en/tab_content_RLR.
     <comment xml:lang="en">http://www.iea.org/statistics/statisticssearch/report/?year=2013&amp;country=INDIA&amp;product=RenewablesandWaste</comment>
   </source>
   <source id="6d4b1ce1-7b56-44a8-b709-12a514ac4654" sourceType="4" year="2004" volumeNo="6" firstAuthor="Röder, A." additionalAuthors="Ch. Bauer, R. Dones" title="Kohle" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent 2000" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=168</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
+  <source id="1bb426ce-1dc7-4082-8ead-a9696c898815" sourceType="2" year="2016" firstAuthor="Otávio Cavalett" additionalAuthors="Chagas, M.F., Magalhães, P.S.G., Carvalho, J.L.N. Cardoso, T.F., Franco, HC.J., Braunbeck, O.A., Bonomi, A." title="The Agricultural Produciton Model" shortName="Cavalett, O." pageNumbers="13-52" namesOfEditors="Bonomi, A., Cavalett, O., Pereira da Cunha, M., Lima, M.A.P." titleOfAnthology="Virtual Biorefinery: An Optimization Strategy for Renewable Carbon Valorization" placeOfPublications="" publisher="Springer International Publishing." journal="" />
   <source id="84d75da4-d902-4558-8a57-112e033248ae" sourceType="0" year="2002" firstAuthor="Ostermayer A." title="Ökobilanz für DL-Methionin in der Geflügelmast. Endbericht im Auftrag der Degussa AG" namesOfEditors="Institut für Energie- und Umweltforschung Heidelberg" placeOfPublications="Heidelberg" publisher="" />
   <source id="3974c97f-03dd-4513-a91b-cca903aad47f" sourceType="1" year="1993" firstAuthor="Stiller H." title="Material consumption in transport infrastructure." titleOfAnthology="" journal="Fresenius Environmental Bulletin 2." issueNo="pp. 467-472" />
   <source id="a5a46f3d-8a43-433f-9c7b-527d2b33ae3f" sourceType="0" year="2015" firstAuthor="distancefromto" title="Distance from to" />
@@ -1632,6 +1669,7 @@ see http://www.sidra.ibge.gov.br</comment>
   </source>
   <source id="87e74701-b68c-4ea0-a189-de2640a95c6b" sourceType="3" year="2007" firstAuthor="Spielmann, M." additionalAuthors="Barreto L., Erni V., Frutig F., Thees O." title="Life cycle assessment of energy wood chip supply chains" publisher="unpublished" />
   <source id="3393b074-3f1a-4234-8e3b-b8fb3d51e578" sourceType="2" year="2009" firstAuthor="Ntziachristos, L." additionalAuthors="Boulter, P" title="EMEP/EEA air pollutant emissions inventory guidebook 2009: Road vehicle tyre and brake wear; Road surface wear. Copenhagen, European Environment Agency." shortName="Emissions inventory guidebook" placeOfPublications="Copenhagen" publisher="European Environment Agency" />
+  <source id="673b77b0-fea3-43e6-9782-fcf52d072a9c" sourceType="2" year="2016" firstAuthor="Cavalett O." title="The Agricultural Produciton Model" shortName="Cavalett O." titleOfAnthology="Virtual Biorefinery: An Optimization Strategy for Renewable Carbon Valorization" publisher="Springer International Publishing" />
   <source id="840e3288-07a1-41c5-acaa-a833c2c2440a" sourceType="0" year="1980" firstAuthor="Palz, W" additionalAuthors="Chartier, P" title="Energy from biomass in Europe." namesOfEditors="Palz, W and Chartier, P (eds.)" placeOfPublications="London." publisher="Applied Science Publishers Ltd., " />
   <source id="b05e3c16-0ede-4dcd-acb8-217240d0815b" sourceType="0" year="2005" firstAuthor="INECE" title="Chemical manufacturing">
     <comment xml:lang="en">International Network for Environmental Compliance and Enforcement   http://inece.org/mmcourse/MMINTRO.html</comment>
@@ -1652,6 +1690,7 @@ see http://www.sidra.ibge.gov.br</comment>
   <source id="5282c62d-0184-4d08-93f9-95d7417fb201" sourceType="0" year="2009" firstAuthor="FEFCO - European Federation of Corrugate" title="European Database for Corrugated Board Life Cycle Studies" pageNumbers="38" publisher="FEFCO - European Federation of Corrugate">
     <comment xml:lang="en">Link: http://www.fefco.org/fileadmin/fefco_files/Publications/Other_Publications/2009_LCA_report_Fefco.pdf, Accessed: 2011-08-11</comment>
   </source>
+  <source id="b4b5a55c-0c39-44c8-829d-fd8f262bd322" sourceType="0" year="1992" firstAuthor="Hjalmarsson A.-K." title="Interactions in emissions control for coal-fired plants" placeOfPublications="IEA Coal Research" />
   <source id="68c0418e-f700-4242-a974-cfd51b9a8c77" sourceType="0" year="2000" firstAuthor="Stoye D." title="Solvents. In Ullmann's Encyclopedia of Industral Chemistry" placeOfPublications="New York" publisher="Wiley InterScience">
     <comment xml:lang="en">URL www.mrw.interscience.wiley.com/ueic/ull_search_fs.html</comment>
   </source>
@@ -1673,14 +1712,18 @@ see http://www.sidra.ibge.gov.br</comment>
     <comment xml:lang="en" />
   </source>
   <source id="15229d9c-1cd2-4bdb-86a6-9c3514d62ac5" sourceType="3" year="2007" volumeNo="15" firstAuthor="Nemecek, T." additionalAuthors="Kägi, T., Blaser, S." title="Life Cycle Inventories of Agricultural Production Systems" titleOfAnthology="Ecoinvent report version 2.0" placeOfPublications="Duebendorf and Zurich, CH" publisher="Swiss Centre for LCI, ART">
-    <comment>EcoSpold01Number=15</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=15</comment>
   </source>
   <source id="9f763153-5eb7-4aba-bdb5-977b7121c628" sourceType="6" year="2015" firstAuthor="FNC" title="Personal written communication, National Federation of Coffee Growers of Colombia (FNC)" placeOfPublications="Colombia" />
   <source id="915880c4-c7b8-44fb-ba1c-023d8e486c08" sourceType="0" year="2010" firstAuthor="Ressources naturelles Québec" title="Report on Mineral Activities in Québec 2009" placeOfPublications="http://www.mrn.gouv.qc.ca/english/mines/publications/publications-reports-2009.jsp">
     <comment xml:lang="en">Chapitre 6</comment>
   </source>
   <source id="3b16b58e-5347-4e0a-82f8-13244e170441" sourceType="0" year="2004" volumeNo="5" firstAuthor="van Zant" title="Microchip Fabrication. 5th edition." placeOfPublications="USA, New York" publisher="McGraw-Hill Companies" />
+  <source id="9dc401b6-e63f-441a-9077-f317a3068730" sourceType="4" year="2004" volumeNo="12" firstAuthor="Zah R." additionalAuthors="Hischier R." title="Life Cycle Inventories of Detergents" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, EMPA-SG">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=164</comment>
+  </source>
   <source id="f61f7ba3-ac93-4667-9b53-d879bdf0dead" sourceType="0" year="2016" firstAuthor="Global Energy Observatory" title="Hydroelectric power plants" shortName="GEO">
     <comment xml:lang="en">http://globalenergyobservatory.org/list.php?db=PowerPlants&amp;type=Hydro</comment>
   </source>
@@ -1709,12 +1752,13 @@ see http://www.sidra.ibge.gov.br</comment>
   <source id="826eff44-b43a-4da4-a3fa-1911bda247d3" sourceType="3" year="2011" firstAuthor="Attika Feuer AG" title="Stove manual Attika Feuer AG">
     <comment xml:lang="en">Brochure and manual available online with data for installation and mainteinance of the device.</comment>
   </source>
+  <source id="e1cd68f4-50bf-40df-9abe-9895a1e1b570" sourceType="0" year="2012" firstAuthor="potassium nitrate association" title="Global potassium fertiliser consumption">
+    <comment xml:lang="en">Table 1:  http://www.kno3.org/en/about-potassium-nitrate/global-potassium-fertiliser-consumption</comment>
+  </source>
   <source id="6f188887-6212-4d29-ae69-24f04b593544" sourceType="3" year="2008" volumeNo="65" firstAuthor="Fridolin Krausmann" additionalAuthors="Karl-Heinz Erb, Simone Gingrich, Christian Lauk, Helmut Haberl" title="Global patterns of socioeconomic biomass flows in the year 2000" pageNumbers="471-487" journal="Ecological Economics" />
   <source id="c6724927-0c67-4751-a0b1-63dcd427d61e" sourceType="0" year="1999" firstAuthor="Brunner M." additionalAuthors="Gorhan L." title="Geothermie - Die umweltschonende Energie" placeOfPublications="http://www.geothermal-energy.ch/downloads/umweltsch-dt.PDF" />
   <source id="7f9ae063-f6e5-4a86-bce7-f376da32e853" sourceType="0" year="2002" firstAuthor="Theriault M." additionalAuthors="Rahn A." title="New Avenues for Wave Soldering and Lead-Free Conversion" pageNumbers="34-36" journal="Circuits Assembly" />
-  <source id="2b5a943f-9f37-4d56-8b45-e3feb03ea491" sourceType="0" year="1987" volumeNo="2" firstAuthor="Walski, T. M." additionalAuthors="Brill, E. D., Gessler, J., Goulter, I. C., Jeppson, R. M., Lansey, K., Han-Lin Lee, Liebman, J. C., Mays, L., Morgan, D. R., and Ormsbee, L." title="Battle of the network models:epilogue. Journal of Water Resources Planning and Management" pageNumbers="191-203" journal="Jrnl of Water Res. Plan. &amp; Management" issueNo="113">
-    <comment xml:lang="en">First publication on Anytown network benchmarking model. Available on line: http://emps.exeter.ac.uk/engineering/research/cws/resources/benchmarks/expansion/anytown.html</comment>
-  </source>
+  <source id="4fc15161-2749-4875-a53d-a8043280590f" sourceType="0" year="2016" firstAuthor="WBCSD" title="Cement Industry Energy and CO2 Performance - Getting the numbers right (GNR)" />
   <source id="4108ef64-e838-4b75-90c7-1579b689944b" sourceType="0" year="2014" firstAuthor="Maersk Container Industry" title="Star Cool - energy efficient reefer machine">
     <comment xml:lang="en">http://ipaper.ipapercms.dk/MCI/Brochures/StarCool/, accessed 20141022</comment>
   </source>
@@ -1767,6 +1811,9 @@ see http://www.sidra.ibge.gov.br</comment>
   <source id="b543282b-df5d-4165-97c7-93e53ca6ea9f" sourceType="1" year="2005" volumeNo="4" firstAuthor="Sanjuan, N." additionalAuthors="Ubeda, L., Clemente, G., Mulet, A., &amp; Girona, F." title="LCA of integrated orange production in the Comunidad Valenciana (Spain)  " pageNumbers="163" journal="International Journal of Agricultural Re" issueNo="2">
     <comment xml:lang="en">entry.comment</comment>
   </source>
+  <source id="5635979f-fa6c-4d35-b839-e7e9c001b796" sourceType="0" year="2017" firstAuthor="Companhia Nacional de Abastecimento" title="Perfil do setor do açúcar e do etanol no Brasil" shortName="CONAB">
+    <comment xml:lang="en">Available in &lt;http:\\www.conab.gov.br&gt;</comment>
+  </source>
   <source id="3dffe0d9-4dc5-45f2-b457-f5a46d111690" sourceType="0" year="1990" firstAuthor="Cho, CY" additionalAuthors="Kaushik SJ" title="Nutritional Energetics in Fish: Energy and protein utilization in rainbow trout (Salmo gairdneri)" pageNumbers="132.172" journal="World Review of Nutrition and Dietetics" issueNo="61" />
   <source id="f1ced0d7-4104-488c-bf60-9b513e4672c1" sourceType="0" year="2011" volumeNo="36" firstAuthor="Chikkatur, A.P." additionalAuthors="Chaudhary, A., Sagar, A.D" title="Coal power impacts, technology, and policy: connecting the dots" placeOfPublications="" journal="Annual Rev. Environ. Resour." />
   <source id="12eab2cc-31bd-4604-b2ff-1dcea8b93889" sourceType="3" year="2006" firstAuthor="de Wild-Scholten M. J." additionalAuthors="Alsema E. A., ter Horst E. W., Bächler M. and Fthenakis V." title="A cost and environmental impact comparison of grid-connected rooftop and ground based PV systems" placeOfPublications="In proceedings from: 21th European Photovoltaic Solar Energy Conference, Dresden DE, 4.-8.9.2006" />
@@ -1791,15 +1838,15 @@ see http://www.sidra.ibge.gov.br</comment>
   </source>
   <source id="4677eb4b-3c9d-4a3d-a9f2-7992b3fad3d3" sourceType="0" year="2005" firstAuthor="Williams E. D." title="Computer Behaviour Survey in Japan" />
   <source id="28aa361d-e15e-4008-a8c8-76b287f7a630" sourceType="4" year="2004" volumeNo="15" firstAuthor="Nemecek, T." additionalAuthors="Heil A., Huguenin, O., Meier, S., Erzinger S., Blaser S., Dux. D., Zimmermann A.," title="Life Cycle Inventories of Agricultural Production Systems" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, FAL &amp; FAT" issueNo="0">
-    <comment>EcoSpold01Number=166</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=166</comment>
   </source>
   <source id="468f11b9-db2b-4650-9018-e84cb30cd0ed" sourceType="0" year="2011" firstAuthor="European Comission, Climate Action" title="Fluorinated Greenhouse Gases in the European Union,Factsheet">
     <comment xml:lang="en">URL:  http://ec.europa.eu/clima/policies/f-gas/docs/statistical_factsheet_2011_en.pdf</comment>
   </source>
   <source id="2cadc5f7-3eab-49e9-ab74-5f2fb1627c8a" sourceType="0" year="2017" firstAuthor="Charikinya Edson" additionalAuthors="Broadhurst Jennifer, Dlamini Reuben, Goga Taahira, Harding Kevin, Russo Valentina, Viljoen David, von Blottnitz Harro" title="Primary production of preciuos and scarce metals, South Africa for the SRI Project" titleOfAnthology="SRI Project" />
-  <source id="3c0d1070-ceaf-4e7a-a730-fffa25eccb1a" sourceType="0" year="2009" firstAuthor="Athena Sustainable Materials Institute" title="A Cradle-to-Gate Life Cycle Assessment of Canadian Medium Density Fibreboard (MDF)" pageNumbers="95" publisher="Athena Sustainable Materials Institute">
-    <comment xml:lang="en">Link: http://www.athenasmi.ca/publications/docs/CIPEC_Canadian_MDF_LCA_final_report.pdf, Accessed: 2011-08-11</comment>
+  <source id="66c07081-f214-4235-9697-10796a47400c" sourceType="0" year="2016" firstAuthor="Arafat Ara" title="Jute spinning sector sees robust growth" placeOfPublications="Dhaka" journal="The Financial Express">
+    <comment xml:lang="en">http://www.thefinancialexpress-bd.com/2016/12/02/55106/Jute-spinning-sector-sees-robust-growth/print</comment>
   </source>
   <source id="0b546fd6-c03a-4af0-95bb-38405cc22a62" sourceType="0" year="2015" firstAuthor="EPRI" title="Power Generation Technology Data for Integrated Resource Plan of South Africa" shortName="EPRI (2015)" placeOfPublications="Palo Alto, CA" />
   <source id="f816fdd3-6033-449b-937b-d8de44d687a5" sourceType="3" year="2011" volumeNo="0" firstAuthor="Dauriat A." additionalAuthors="Gaillard G., Alig M, Scharfy D, Membrez Y, Bachmann N, Steiner R" title="Analyse de cycle de vie de la production centralisée et decentralisée de biogaz en exploitations agricoles">
@@ -1807,8 +1854,8 @@ see http://www.sidra.ibge.gov.br</comment>
   </source>
   <source id="bd0c5180-4503-4171-8e7b-1d406cc424f1" sourceType="2" year="2010" firstAuthor="CRAAQ" title="Guide de référence en fertilisation, 2e édition (Reference guide on fertilization)" shortName="CRAAQ" pageNumbers="473" namesOfEditors="Centre de référence en agriculture et agroalimentaire du Québec" placeOfPublications="Sainte-Foy, Québec, Canada" publisher="" />
   <source id="ed5cbc24-7e01-455f-adb0-fddaab3e7de1" sourceType="6" year="2002" firstAuthor="Th. Häusermann" title="VGS" shortName="Häusermann" placeOfPublications="Seengen, Switzerland." />
-  <source id="9a9c34c8-54f3-41e0-88ba-f2bf794098b7" sourceType="5" year="2011" firstAuthor="Attika Feuer AG" title="Oral communication company Attika Feuer AG">
-    <comment xml:lang="en">Qualified estimations from a technician</comment>
+  <source id="53fd8905-3e58-4941-8039-e32e7f274763" sourceType="0" year="2016" firstAuthor="Bangladesh Bureau of Statistics (BBS)" title="Yearbook of Agricultural Statistics-2015" placeOfPublications="Dhaka" publisher="Statistics and Informatics Division" journal="Ministry of Planning, Bangladesh Govt.">
+    <comment xml:lang="en">http://bbs.portal.gov.bd/sites/default/files/files/bbs.portal.gov.bd/page/1b1eb817_9325_4354_a756_3d18412203e2/Yearbook-2015.pdf</comment>
   </source>
   <source id="6d21771c-e6be-4d25-887f-1c5e9ff70c1f" sourceType="0" year="2012" firstAuthor="Eurostat and Cefic Chemdata Internationa" title="EU chemicals industry fuel and power consumption has falles by 27 percent since 1990">
     <comment xml:lang="en">URL  http://www.cefic.org/Global/Facts-and-figures-images/Graphs%202011/FF2011_OnePager_and_Graphs/32.GraphsText%2032.pdf</comment>
@@ -1818,6 +1865,8 @@ see http://www.sidra.ibge.gov.br</comment>
   <source id="3c782ab2-6c33-4d77-92f3-a9ac845db2c1" sourceType="0" year="2003" firstAuthor="SCA - Slag Cement Association" title="LCI Inventory of slag cement manufacturing process" pageNumbers="13" publisher="SCA - Slag Cement Association">
     <comment xml:lang="en">Link: http://www.slagcement.org/download/123800_U128801__188627/Slag%20Cement%20LCI%20Letter%20Report%20August%2011%202003.pdf, Accessed: 2011-08-24</comment>
   </source>
+  <source id="3ccfe25d-7aa9-4d88-aba9-b65ed8523c9f" sourceType="3" year="2008" firstAuthor="GEXSI" title="Global Market Study on Jatropha" shortName="GEXSI" placeOfPublications="London/Berlin" publisher="World Wide Fund for Nature" />
+  <source id="a981619a-c3d1-427f-bc64-e5c609da8a4f" sourceType="3" year="2016" firstAuthor="SNIC" title="Produção nacional de cimento por regiões e estados 2016" />
   <source id="ea40794c-3310-4d04-9ee3-a0bb2c786e36" sourceType="3" year="2013" firstAuthor="RECYC-QUÉBEC" title="Bilan de la gestion des matières résiduelles au Québec 2010-2011">
     <comment xml:lang="en">http://www.recyc-quebec.gouv.qc.ca/Upload/Publications/Bilan_2010_2011_GMR_Final.pdf</comment>
   </source>
@@ -1837,7 +1886,10 @@ see http://www.sidra.ibge.gov.br</comment>
     <comment xml:lang="en">entry.comment</comment>
   </source>
   <source id="b9eb5402-e6f8-472a-9edf-863bfd2b05e7" sourceType="6" year="2015" firstAuthor="INCAPER, PROCAFE and Nestlé Brasil" title="Personal written communication, Ms. Namy Espinoza Orias, Nestlé." placeOfPublications="Brazil" />
-  <source id="72ecc9d9-90bb-4403-956c-7cf52db4c084" sourceType="0" year="2006" firstAuthor="dos Santos M. A." additionalAuthors="Rosa L. P., Sikar B., Sikar E., dos Santos E. O. " title="Gross greenhouse gas fluxes from hydro-power reservoir compared to thermo-power plants" pageNumbers="481-488" journal="Energy Policy" issueNo="34" />
+  <source id="2349c548-1d2c-46fd-bbad-b93abc019d7d" sourceType="3" year="2007" volumeNo="11" firstAuthor="Hischier R." title="Life Cycle Inventories of Packaging and Graphical Paper" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, Empa - TSL">
+    <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=11</comment>
+  </source>
   <source id="06b0f4c3-9aa2-476c-962f-2802ca206ab0" sourceType="3" year="2011" firstAuthor="Fröling Gmbh" title="Fröling Turbomat 320/500 furnace manual" placeOfPublications="http://www.froeling.com/images/stories/pdf/prospekte/en/p0330009_prospekt%20turbomat_en_mail.pdf">
     <comment xml:lang="en">Furnace manual available for installation. Additional information were aquired by telephone call to the company Froeling.(September 2011)</comment>
   </source>
@@ -1857,6 +1909,9 @@ see http://www.sidra.ibge.gov.br</comment>
     <comment xml:lang="en">3rd Edition</comment>
   </source>
   <source id="a2fb47dc-6d78-42e4-9e5d-4c2c43afc592" sourceType="0" year="1949" firstAuthor="Baumann J." title="Kraftwerk Rupperswil‑Auenstein" shortName="Baumann, J." placeOfPublications="Rupperswil" publisher="Kraftwerk Rupperswil‑Auenstein AG" />
+  <source id="2d295b63-a762-4328-a0dc-02cd6ebf0eb0" sourceType="0" year="2010" firstAuthor="GREET" title="Greenhouse Gases, Regulated Emissions, and Energy Use in Transportation Model" shortName="" />
+  <source id="faaed2c6-a652-4cd8-bafc-9ef9cd79f2db" sourceType="0" year="2016" firstAuthor="Companhia Nacional de Abastecimento" title="Acompanhamento da safra de grãos brasileira" shortName="CONAB" />
+  <source id="d8be1cfa-4e29-4cf8-a235-a9e8e86d85d2" sourceType="0" year="2003" firstAuthor="Frischknecht R." additionalAuthors="Faist Emmenegger M. " title="Strommix und Stromnetz" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen: Grundlagen für den ökologischen Vergleich von Energiesystemen und den Einbezug von Energiesystemen in Ökobilanzen in der Schweiz. Schlussbericht ecoinvent 2000 No. 6" placeOfPublications="Villigen, Dübendorf, www.ecoinvent.ch" />
   <source id="d1ed5447-e29d-4ee5-8935-d1558f7b8bbe" sourceType="3" year="2011" firstAuthor="Kaufmann, Urs" additionalAuthors="Dr. Eicher+Pauli AG" title="Thermische Stromproduktion inklusive Wärmekraftkopplung (WKK) in der Schweiz" publisher="Bundesamt für Energie BFE, 3003 Bern, CH" />
   <source id="a397c7b7-3582-4a37-a8da-4f948cdff9d2" sourceType="5" year="2011" firstAuthor="Palazzetti srl" title="Personal communication from a production company">
     <comment xml:lang="en">Personal communication from cited production company, verified with others producers.</comment>
@@ -1871,7 +1926,7 @@ see http://www.sidra.ibge.gov.br</comment>
   <source id="49495a47-e3cd-4142-97fb-20bb1ce62698" sourceType="3" year="2006" volumeNo="1" firstAuthor="ZVEI" title="Umbrella Specs." placeOfPublications="http://www.zvei.org/index.php?id=1158">
     <comment xml:lang="en">December 21</comment>
   </source>
-  <source id="f633047b-0f76-4937-8b71-a416a162a475" sourceType="2" year="2003" firstAuthor="Corley R." additionalAuthors="Tinker P. (Eds)" title="The oil palm" titleOfAnthology="World Agricultural Series" placeOfPublications="Oxford" publisher="Blackwell Science" />
+  <source id="726d8e60-9729-4055-a60e-0093d2b9f02a" sourceType="2" year="2003" firstAuthor="Milà i Canals, L." title="Contributions to LCA Methodology for Agricultural Systems. Site-dependency and soil degradation impact assessment" placeOfPublications="Barcelona" />
   <source id="8682b67a-eaf9-4b8a-b4c5-fd057405fa7f" sourceType="3" year="2007" volumeNo="6" firstAuthor="Jungbluth, N." title="Sonnenkollektor-Anlagen" namesOfEditors="Dones R." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent data v2.0" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
     <comment>EcoSpold01Number=25</comment>
     <comment xml:lang="en">CD-ROM</comment>
@@ -1900,6 +1955,11 @@ see http://www.sidra.ibge.gov.br</comment>
   <source id="19bdc9a9-9662-4582-82c7-1bc8ed097f89" sourceType="0" year="2004" firstAuthor="Perfect Print Sweden AB" title="Envionmental Product Declaration of Perfect Print Toner Cartridges." placeOfPublications="http://www.environdec.com/">
     <comment xml:lang="en">Pre-certified environmental product declaration Reg.nr: S-EP-00065 as pdf-File</comment>
   </source>
+  <source id="e68a0a63-9710-48f1-ae7d-a1fc1c81104a" sourceType="0" year="1999" volumeNo="7" firstAuthor="Hilbrans H." additionalAuthors="Hinrichs W." title="Stoffmengenflüsse und Energiebedarf bei der Gewinnung ausgewählter mineralischer Rohstoffe; Teilstudie Nickel" titleOfAnthology="Geologisches Jahrbuch" placeOfPublications="Hannover" publisher="BGR">
+    <comment xml:lang="en">Volume: Sonderhefte SH 7
+
+BGR = Bundesanstalt für Geowissenschaften und Rohstoffe</comment>
+  </source>
   <source id="45611215-94a6-4069-b973-1b71693b4e02" sourceType="3" year="2007" volumeNo="0" firstAuthor="International Aluminium Institute" title="Life Cycle Inventory of Aluminium: Inventory Data for the Primary Aluminium Industry - 2005 Update" shortName="IAI 2005" pageNumbers="42">
     <comment xml:lang="en">Although 2005 update is the main source of data, the dataset has been augmented with other sources, notably:</comment>
   </source>
@@ -1922,21 +1982,24 @@ see http://www.sidra.ibge.gov.br</comment>
   <source id="52f86c00-bcad-4d8d-8d5b-c93a1bc6c5ff" sourceType="3" year="2003" firstAuthor="Noel, W" title="Formulación y elaboración de dietas para peces y crustáceos. " publisher="Universidad Nacional Jorge Basadre">
     <comment xml:lang="en">Tacna, Peru</comment>
   </source>
-  <source id="06b2731c-d26e-4eb9-964f-68527977f579" sourceType="1" year="2013" volumeNo="7" firstAuthor="Pantal N." additionalAuthors="Rajput T.B.S." title=" Effect of deficient irrigation on crop growth, yield and quality of onion in subsurface drip irrigation." pageNumbers="417-436" journal="International Journal of Plant Productio" issueNo="3" />
+  <source id="5bd1585d-e4c6-4273-a94b-84f2645dcca5" sourceType="0" year="2017" firstAuthor="UNFCCC" title="National Inventory Sumbission 2017: common reporting format (CRF) files for Annex I countries. ">
+    <comment xml:lang="en">Accessible online at https://unfccc.int/process/transparency-and-reporting/reporting-and-review-under-the-convention/greenhouse-gas-inventories/submissions-of-annual-greenhouse-gas-inventories-for-2017, last accessed 21.12.2017</comment>
+  </source>
   <source id="3e9c8205-7f78-4f85-8f27-212ba15c5b18" sourceType="6" year="2014" firstAuthor="Thomas Nussbaumer" title="personal communication">
     <comment xml:lang="en">T. Nussbaumer is "the" Swiss wood energy expert with his own consultancy company Verenum and a chair at the university of Lucern, Switzerland.</comment>
   </source>
   <source id="8d245422-bbfd-48f0-a73b-3b133e00d88d" sourceType="3" year="2012" firstAuthor="University of Arkansas" title="Sustainability National Scan-level Life Cycle Assessment for Production of US Peanut Butter." placeOfPublications="Fayetteville, Arkansas,  USA" publisher="University of Arkansas" />
   <source id="48b75688-aebf-4e17-8365-277c7b8f0e14" sourceType="0" year="2015" firstAuthor="Statistics Canada" title="Table 303-0064 Lumber production, shipments and stocks, by Canada and provinces" />
+  <source id="8fea5a56-1350-4f8f-a445-985843e3029d" sourceType="5" year="2009" firstAuthor="Krueger L." title="Personal communication L.Krueger, 27.10.2009" publisher="First Solar" />
   <source id="6436df3a-67a6-431e-81bd-35bf10055336" sourceType="0" year="1997" volumeNo="1" firstAuthor="Routschka G. and Granitzki K.-E." title="Refractory ceramics. " titleOfAnthology="Ullmann's encyclopedia of industrial chemistry (ed. Anonymous). 5th edition on CD-ROM Edition." placeOfPublications="London." publisher="Wiley &amp; Sons" />
   <source id="e561f959-b36c-46a0-bfdf-d5a9bf3a180a" sourceType="3" year="2013" firstAuthor="Hydro-Québec" title="Rapport annuel 2012" pageNumbers="122" publisher="Hydro-Québec " />
   <source id="7ddae914-c576-49bc-9441-a51f03425011" sourceType="4" year="2003" volumeNo="3" firstAuthor="Frischknecht R." additionalAuthors="Althaus H.-J., Doka, G., Dones, R., Hellweg, S., Hischier, R., Jungbluth N., &#xD;&#xA;Nemecek, T., Pennington, D.W., Spielmann, M." title="Implementation of Life Cycle Impact Assessment Methods" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI">
-    <comment>EcoSpold01Number=134</comment>
     <comment xml:lang="en">CD-ROM</comment>
+    <comment>EcoSpold01Number=134</comment>
   </source>
   <source id="e463a011-56bd-42c6-8ec3-29e43b76660c" sourceType="0" year="1989" firstAuthor="Umweltbundesamt Berlin" title="Luftreinhaltung'88; Tendenzen-Probleme-Lösungen." shortName="UBA" placeOfPublications="Berlin" />
-  <source id="e32559d5-c25f-4f84-b292-d950d2ebed0f" sourceType="0" year="2002" volumeNo="1" firstAuthor="ICL/SHR Timber Research" title="LCA for acetylated wood; final report 2: light duty piling in fresh water use " namesOfEditors="Den Haag, Ministry of Housing, Spatial Planning and Environment (VROM)." publisher="">
-    <comment xml:lang="en">ICL = Imperical College Londong</comment>
+  <source id="1d0a2819-5152-4651-9d15-58ed1094a03c" sourceType="0" year="2006" firstAuthor="Brazilian Forestry Society - SBS" title="Fatos e números do Brasil florestal" shortName="SBS">
+    <comment xml:lang="en">http://www.ipef.br/estatisticas/relatorios/SBS-2005.pdf</comment>
   </source>
   <source id="478aa8b3-4c08-4f16-b2f5-25ab14dfd8d5" sourceType="0" year="1960 " firstAuthor="Gernes D.C." title="Patent US 3 061 411" publisher="Kaiser Aluminium and Chem. Corp.," />
   <source id="f8e2a75c-3523-4574-bcc6-b3142637caa9" sourceType="3" year="2012" firstAuthor="Salome Schori" additionalAuthors="Rolf Frischknecht" title="Life Cycle Inventory of Natural Gas" shortName="Schori 2012" />
@@ -1978,9 +2041,7 @@ see http://www.sidra.ibge.gov.br</comment>
   <source id="c987337a-3bbc-41d6-9f72-46ddd6b20537" sourceType="0" year="1999" firstAuthor="Frischknecht R." title="Umweltrelevanz natürlicher Kältemittel: Ökobilanzen von Wärmepumpen und Kälteanlagen" placeOfPublications="Bern, http://www.waermepumpe.ch/" publisher="Bundesamt für Energie" />
   <source id="6f7fb0e8-d260-449a-8d6f-3cf73d701912" sourceType="0" year="2012" firstAuthor="Ullmann 's Encyclopedia" title="Calcium Chloride" />
   <source id="cfeb8e8f-4860-47fb-acdd-91fe2aa96c99" sourceType="1" year="1991" volumeNo="4" firstAuthor="Lehmann J." additionalAuthors="Briner H.U., Rosenberg E." title="Zwischenkulturen - was können sie und was können sie nicht?" pageNumbers="151-158" journal="Landwirtschaft Schweiz" issueNo="4" />
-  <source id="e1cd68f4-50bf-40df-9abe-9895a1e1b570" sourceType="0" year="2012" firstAuthor="potassium nitrate association" title="Global potassium fertiliser consumption">
-    <comment xml:lang="en">Table 1:  http://www.kno3.org/en/about-potassium-nitrate/global-potassium-fertiliser-consumption</comment>
-  </source>
+  <source id="72ecc9d9-90bb-4403-956c-7cf52db4c084" sourceType="0" year="2006" firstAuthor="dos Santos M. A." additionalAuthors="Rosa L. P., Sikar B., Sikar E., dos Santos E. O. " title="Gross greenhouse gas fluxes from hydro-power reservoir compared to thermo-power plants" pageNumbers="481-488" journal="Energy Policy" issueNo="34" />
   <source id="8234b596-aff6-423d-8a5f-3a9c1fe6fa9d" sourceType="1" year="1999" volumeNo="4" firstAuthor="Moizudding, S., " additionalAuthors="Johnson, L.D., Wilson, L.A., " title="Rapid Method for Determining Optimum Coagulant Concentration in Tofu Manufacture" journal="Journal of food science" issueNo="64" />
   <source id="19e9a427-2bd4-48a8-84b4-35ed5e1800fe" sourceType="0" year="2015" firstAuthor="Central Statistics Office" title="Energy Statistics" shortName="CSO 2015" pageNumbers="75" publisher="Government of India">
     <comment xml:lang="en">http://www.indiaenvironmentportal.org.in/files/file/Energy_stats_2015_0.pdf</comment>
@@ -2029,10 +2090,10 @@ and Production. Wiley Series in Crop Sciences. Wiley, New York 2000</comment>
   <source id="2e42e465-4eb5-446e-85e6-6b7d82ed5b6c" sourceType="2" year="2000" firstAuthor="Dorland C." additionalAuthors="Olsthoorn A. A." title="Inland shipping emission factors. " titleOfAnthology="Report for ExternE Core/Transport task 5.3" placeOfPublications="Amsterdam" />
   <source id="c97698dd-296a-4415-bd00-8164d236c858" sourceType="0" year="1997" volumeNo="5" firstAuthor="Nimz H." additionalAuthors="Schmitt U., Schwab E., Wittmann O. and Wolf F." title="Wood" namesOfEditors="Anonymous" titleOfAnthology="Ullmann's encyclopedia of industrial chemistry" placeOfPublications=" London" publisher=" Wiley &amp; Sons" />
   <source id="eb8c59a8-bb5b-4d53-b888-e1cc0743671f" sourceType="4" year="2007" volumeNo="3" firstAuthor="Frischknecht R." additionalAuthors="Jungbluth N., Althaus H.-J., Doka, G., Dones, R., Hellweg S., Hischier R., Humbert S., Margni M., Nemecek, T., Spielmann M." title="Implementation of Life Cycle Impact Assessment Methods" titleOfAnthology="Final report ecoinvent data v2.0" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=201</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
-  <source id="a3bb0772-b896-4ed8-8ab7-986f6ca69218" sourceType="0" year="2010" firstAuthor="European Commission" title="Reference Document on Best Available Techniques in the Cement, Lime and Magnesium Oxide Manufacturing Industries" placeOfPublications="http://eippcb.jrc.es/reference/BREF/clm_bref_0510.pdf" publisher="EIPPCB" />
+  <source id="e8d3d2e4-bb00-4aed-afd8-93a376991431" sourceType="0" year="2001" firstAuthor="Sorensen H. C." additionalAuthors="Hansen J." title="Experience form the establishment of Middelgrunden 40 MW offshore wind farm" placeOfPublications="SPOK Aps (former EMU), Denmark" />
   <source id="06499756-368f-427d-ad7e-734a7cd8d7bc" sourceType="6" year="2012" firstAuthor="Uhlemann T." title="Personal written communication, Mr. T. Uhlemann, ANEST IWATA Deutschland GmbH " />
   <source id="1376b82f-00f8-4f7d-846e-e3239d65118e" sourceType="3" year="2009" volumeNo="6" firstAuthor="Dones, R." additionalAuthors="Doka G." title="Kernenergie" namesOfEditors="Bauer C." titleOfAnthology="Sachbilanzen von Energiesystemen. Final report No. 6 ecoinvent v2.1" placeOfPublications="Dübendorf and Villigen, CH" publisher="Swiss Centre for LCI, PSI">
     <comment>EcoSpold01Number=19</comment>
@@ -2056,8 +2117,12 @@ and Production. Wiley Series in Crop Sciences. Wiley, New York 2000</comment>
   <source id="dfbb3b30-7f8f-4409-9fa8-d4a8989b091e" sourceType="0" year="2006" firstAuthor="US geological survey" title="2005 minerals yearbook, soda ash" placeOfPublications="USA">
     <comment xml:lang="en">URL: http://minerals.usgs.gov/minerals/pubs/commodity/soda_ash/soda_myb05.pdf</comment>
   </source>
+  <source id="c2ea4715-4e93-466a-9ef5-fe3551881124" sourceType="0" year="1998" volumeNo="3" firstAuthor="Shafer A." title="The global demand for motorized mobility" pageNumbers="455–477" namesOfEditors="Elsevier" titleOfAnthology="Transportation Research Part A: Policy and Practice" issueNo="6">
+    <comment xml:lang="en">Link: http://www.sciencedirect.com/science/article/pii/S0965856498000044</comment>
+  </source>
   <source id="362201e8-6a94-4fb8-9fe0-d4e06d29e542" sourceType="1" year="2003" volumeNo="2" firstAuthor="Paice, M.G." additionalAuthors="Kovacs, T. &amp; Bergeron, J." title="Current status of the pure oxygen activated sludge process in Canadian mills. " pageNumbers="17-22" publisher="" journal="Tappi journal" issueNo="(11)" />
   <source id="444d9779-01e8-45bf-ae6f-171b6c118b0c" sourceType="3" year="2010" firstAuthor="Blaise Parent" title="Ressources et industries forestieres. Protrait statistique" placeOfPublications="Canada" publisher="MRNF" />
+  <source id="5aae546f-b00b-471a-9373-8e28db4e456d" sourceType="3" year="2004" firstAuthor="Entwicklungsbank" title="Peru: Drinking water supply/Sanitation Trujillo" pageNumbers="4" />
   <source id="a8664cca-1528-4895-9a17-2be20c6b1a80" sourceType="3" year="2012" firstAuthor="Blanke M." additionalAuthors="Schaefer F." title="Supplementary Requirements for Horticultural Products: Carbon Footprint of Pumpkin and Asparagus." placeOfPublications="St Malo, Bretagne, FR" publisher="INRES - Horticultural Science 8th Int. L" journal="8th Int. LCA (Foods) congress" />
   <source id="ebab5c9c-8f0e-4f0a-be38-53a29c23b1c7" sourceType="0" year="1983" volumeNo="12" firstAuthor="Ramdahl, T. et al." title="Chemical and biological characterization of emissions from a cereal straw burning furnace" pageNumbers="23-34" placeOfPublications="Great Britain" journal="Chemosphere" />
   <source id="a538f321-09ca-48e2-85f6-53ad61251ea0" sourceType="0" year="2002" firstAuthor="Thebeeapelo, John Khaile" title="THE INVESTIGATION OF THE HYDROLYSIS REACTION OF m-PHENYLENE-DIAMINE TO RESORCINOL">
@@ -2068,6 +2133,7 @@ and Production. Wiley Series in Crop Sciences. Wiley, New York 2000</comment>
   </source>
   <source id="9febc6be-9e98-48df-8e13-9b138fe73072" sourceType="0" year="2012" firstAuthor="Burri R." title="Burri R., personal written communication, Forest Economy Switzerland (WVS)" />
   <source id="a8435a94-d930-49b8-833c-c0d8864957c6" sourceType="3" year="2011" firstAuthor="Camposano, E." additionalAuthors="Galecio, F., Vergara, V., Pinila, F." title="Evaluación de dos estándares de proteína y energía digestable en una dieta ára juveniles de Tilapia Roja. Bajo dos sistemas de crianza" placeOfPublications="Lima, Peru" publisher="Univeridad Nacional Agraria La Molina" />
+  <source id="5cc8f46b-643e-4e12-a863-f850fb3356a3" sourceType="0" year="2003" firstAuthor="HERA" title="Human &amp; Environmental Risk Assessment on ingredients of European household cleaning products: Sodium Tripolyphosphate (STPP)." />
   <source id="09ac2b35-9c03-46ca-b251-6409640a0e9e" sourceType="3" year="2008" firstAuthor="Seyed Jazayeri" additionalAuthors="Paul Kralovic, Afshin Honarvar, Abbas Naini, Jon Rozhon, Rami Shabaneh, Thorn Walden" title="Analyse du cycle de vie comparative pour la production d’électricité de base en Ontario" publisher="Canadian Energy Research Institute">
     <comment xml:lang="en">http://www.cna.ca/french/pdf/studies/ceri/CERI-ComparativeLCA.pdf</comment>
   </source>
@@ -2089,14 +2155,12 @@ and Production. Wiley Series in Crop Sciences. Wiley, New York 2000</comment>
     <comment xml:lang="en">National statistics of the National Department of Mineral Production</comment>
   </source>
   <source id="f5bb9e64-3a4c-41fa-9dbf-dc0d37c5979a" sourceType="2" year="1998" volumeNo="16" firstAuthor="Cornelissen R. L. and Hirs G. G." title="Exergy analysis of cryogenic air separation" pageNumbers="1821-1826" titleOfAnthology="Energy Conversion and Management" issueNo="39" />
-  <source id="dd75f041-d46e-4571-95eb-bf93a95f00bc" sourceType="3" year="2002" firstAuthor="MAN Nutzfahrzeuge AG" title="Umwelterklärung 2002" placeOfPublications="München" publisher="MAN Nutzfahrzeuge AG" />
+  <source id="4257391c-27da-4b71-9794-04fa178b996b" sourceType="0" year="1982" firstAuthor="Wood, K." title="A review of some factors and problems in the manufacture, sales and utilisation of milled, granulated blast furnace slag" placeOfPublications="South Africa" />
   <source id="7123b1dd-6e76-4a1c-ba39-97468272eb36" sourceType="0" year="2014" firstAuthor="OECD" title=" IEA Electricity Information Statistics: OECD - Electricity and heat generation">
     <comment xml:lang="en">OECD iLibrary. Online database. DOI : 10.1787/elect-data-en </comment>
   </source>
   <source id="cace9d07-4f80-48bc-9870-478fbbab3830" sourceType="0" year="2010" firstAuthor="H.-J. Althaus" additionalAuthors="M. Gauch" title="Vergleichende Oekobilanz individueller Mobilität: Elektromobilität versus konventionelle Mobilität mit Bio- und fossilen Treibstoffen" />
-  <source id="15e7a82f-a722-4661-b723-3609eecd3fab" sourceType="3" year="2006" volumeNo="1" firstAuthor="Venkel" title="Material Composition - MLCCs" placeOfPublications="http://www.venkel.com/FinalPDFs/Matl_composition.pdf">
-    <comment xml:lang="en">Download of December 12</comment>
-  </source>
+  <source id="4e215b13-a8ea-423d-a967-418ea13b7f0f" sourceType="0" year="2016" firstAuthor="BBS" additionalAuthors="Bangladesh Bureau of Statistics (BBS)" title="Yearbook of Agricultural Statistics-2016" />
   <source id="831d9de2-9f81-4f1a-9718-d73cb3dea9ce" sourceType="0" year="2004" firstAuthor="First Environment " title="LaserJet Cartridge Environmental Comparison: A Life Cycle Study of the HP 96A Print Cartridge vs. its Remanufactured Counterpart in Germany" placeOfPublications="mailto:LaserJetLCA@hp.com">
     <comment xml:lang="en">Project No. HPCKA002 Boonton, NJ</comment>
   </source>
@@ -2127,10 +2191,11 @@ and Production. Wiley Series in Crop Sciences. Wiley, New York 2000</comment>
   <source id="4d5b6d8e-a62b-4747-9984-bc47f30fd1ed" sourceType="3" year="1999" firstAuthor="U.S. Environmental Protection Agency" title="Wood preserving" shortName="U.S. EPA" titleOfAnthology="AP 42, Chapter 10: wood products industry. 5th edition, volume 1" publisher="U.S. Environmental Protection Agency" />
   <source id="24f52afa-0312-40a2-ae1b-6b1ac570b66e" sourceType="0" year="2011" firstAuthor="F. Habermacher" title="Modeling material inventories and environmental impacts of electric passenger cars" />
   <source id="d79fbceb-713a-4283-8f5a-9edbdc6ac0ad" sourceType="1" year="2003" volumeNo="37" firstAuthor="Fedorenko V. I." title="Ultrapure water production using continuous electrodeionisation" journal="Pharmaceutical Chemistry Journal" issueNo="3" />
-  <source id="44b6ae0d-0cbc-4c0d-98a6-2c3573e76176" sourceType="0" year="2003" firstAuthor="Placer Dome Inc." title="Annual report 2002." placeOfPublications="Vancouver" publisher="Placer Dome Inc." />
-  <source id="80bc8416-99a3-4d52-b13e-f78d6328c5fc" sourceType="0" year="2005" volumeNo="34" firstAuthor="Cleary, J." title="Greenhouse Gas Emissions form Canadian Peat Extraction" pageNumbers="456-461" journal="Journal of the Human Environment" issueNo="6" />
+  <source id="ca07f858-2ba6-449e-bf59-78527731b09b" sourceType="3" year="2018" firstAuthor="Avadí, A." additionalAuthors="Vázquez-Rowe, I., Henriksson, P." title="Wild capture and aquaculture" publisher="ecoinvent" />
+  <source id="0829bc9a-ad35-4b20-9cc8-9952e0b0a83b" sourceType="0" year="2003" firstAuthor="Frischknecht R." title="Strommix." placeOfPublications="Duebendorf, CH" publisher="Paul Scherrer Institut Villigen" journal="Sachbilanzen von Energiesystemen" issueNo="No. 6" />
   <source id="ba8128e0-b3c3-4e4c-9449-66f0b64bf7a8" sourceType="1" year="2006" firstAuthor="Visser M." title="An overview of the history and current operational facilities of Samancor Chrome" pageNumbers="285-296" journal="Southern African Pyrometallurgy" />
   <source id="003dd437-0a36-49f8-b258-8203635a6794" sourceType="3" year="2002" firstAuthor="Häring M." title="Das schweizerische Deep Heat Mining Project" namesOfEditors="Kaltschmitt M. and Schröder G." titleOfAnthology="Tagungsband zur Fachtagung &quot;Geothermische Stromerzeugung - eine Investition in die Zukunft" placeOfPublications="Berlin" publisher="Bundesministerium BMU" />
+  <source id="aaf344a9-9cb7-4b25-991f-008839ad529f" sourceType="0" year="2017" firstAuthor="The Fibre Year Consulting" title="The Fibre Year 2017" shortName="TFY" />
   <source id="ff899685-9e2e-4f98-8b82-fe7e4a4c58be" sourceType="2" year="2004" firstAuthor="US EPA" title="Emission factor documentation for AP-42 - section 11.19.2 - Crushed stone processing and pulverized mineral processing">
     <comment xml:lang="en">Available at: &lt;https://www3.epa.gov/ttn/chief/ap42/ch11/index.html&gt;</comment>
   </source>
@@ -2162,8 +2227,8 @@ and Production. Wiley Series in Crop Sciences. Wiley, New York 2000</comment>
   <source id="b0c02acf-7f55-4f8a-92d1-7ee4b66f4ad9" sourceType="0" year="2007" volumeNo="1" firstAuthor="Hobbs L." title="KnowledgeQuest - Resistors. Resistors and their uses." placeOfPublications="www.ipass.net/teara/resistor-frm.html" />
   <source id="1607c0cb-e2b2-49ed-8152-fdec8f238900" sourceType="0" year="1997" volumeNo="1" firstAuthor="Hillier W" title="Creosote treated distribution poles case study" />
   <source id="357c8fac-ccb5-427b-87ec-47d6beae4b9d" sourceType="4" year="2004" volumeNo="11" firstAuthor="Hischier R." title="Life Cycle Inventories of Packaging and Graphical Paper" titleOfAnthology="Final report ecoinvent 2000" placeOfPublications="Dübendorf, CH" publisher="Swiss Centre for LCI, EMPA-SG">
-    <comment xml:lang="en">CD-ROM</comment>
     <comment>EcoSpold01Number=163</comment>
+    <comment xml:lang="en">CD-ROM</comment>
   </source>
   <source id="e85d7afc-cf2d-4188-94aa-d3986722e8c7" sourceType="0" year="2006" firstAuthor="Boliden" title="Environmental Health &amp; Safety 2006 - Statistics from 2005: Rönnskär." publisher="Boliden Ltd">
     <comment xml:lang="en">Online-Version under: http://www.boliden.se/.</comment>
@@ -2190,9 +2255,9 @@ and Production. Wiley Series in Crop Sciences. Wiley, New York 2000</comment>
   <source id="c0fd9dc3-1ac2-4d88-8e5a-72340b8ce875" sourceType="0" year="2006" firstAuthor="IFA" title="World Fertilizer Use Manual">
     <comment xml:lang="en">Retrieved May 16, 2006 from http://www.fertilizer.org/ifa.</comment>
   </source>
+  <source id="2942a02e-99d0-4a08-a192-e8a376f6c99f" sourceType="0" year="2005" firstAuthor="Socolof M. L." additionalAuthors="Overly J. G. and Geibig J. R." title="Environmental life-cycle impacts of CRT and LCD desktop computer displays" pageNumbers="1281-1294" journal="Journal of Cleaner Production" issueNo="13" />
   <source id="b67682a8-1832-4c85-8024-6586709971d3" sourceType="3" year="2012" firstAuthor="Gervais Parent " additionalAuthors="Étienne Boulay; Claude Fortin" title="Ressources et industries forestières - Portrait statistique - Édition 2012" namesOfEditors="Ministère des Ressources naturelles et de la Faune du québec" />
   <source id="cf6c2352-38d1-4f5a-822e-1938ec305214" sourceType="3" year="2000" firstAuthor="Dauriat A." title="Penetration potentialities of new ethanol production routes from lignocellulosic biomass" placeOfPublications="Lausanne" publisher="EPFL Lausanne" />
-  <source id="c934ca00-fc32-4ceb-ab0e-460d9979f902" sourceType="0" year="2000" firstAuthor="Starzner S. and Wurmer-Weiss P. " title="ECOBIS 2000, ökologisches Baustoffinformationssystem." />
   <source id="34802849-447d-4de5-8872-c7cf9dbbc30f" sourceType="3" year="2000" firstAuthor="BUWAL" title="Informationen zur Entsorgung von Altreifen." publisher="BUWAL" />
   <source id="5991e791-b680-4094-98c8-ea85959652eb" sourceType="0" year="2007" firstAuthor="Schmidt, J.H." title="Life cycle assessment for rapeseed oil and palm oil" pageNumbers="276" publisher="Aalborg University">
     <comment xml:lang="en">Link: http://vbn.aau.dk/files/10388016/inventory_report, Accessed: 2011-07-18</comment>

@@ -5,31 +5,30 @@ import pprint
 from wastewater_treatment_tool.pycode import DirectDischarge_ecoSpold
 from wastewater_treatment_tool.pycode.defaults import *
 
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 
-#print python version before local imports
-print("Running Python",sys.version.split(' ')[0],'\n')
+# print python version before local imports
+print("Running Python", sys.version.split(' ')[0], '\n')
 
-#folder with python packages
+# folder with python packages
 sys.path.append("../../../opt/python3/")
-#set root_dir #TODO Lluis
+# set root_dir #TODO Lluis you need to set the root dir
 os.chdir('..')
 root_dir = os.getcwd()
-
 
 '''
  Receive a json string from stdin
 '''
-#debug: print input string
-#print('input string: ',sys.argv[1].encode('ascii','ignore').decode('ascii'))
+# debug: print input string
+# print('input string: ',sys.argv[1].encode('ascii','ignore').decode('ascii'))
 
-#parse json
+# parse json
 received_json = json.loads(sys.argv[1])
-#print('parsed JSON object: ',json.dumps(received_json, indent=4, sort_keys=True))
+# print('parsed JSON object: ',json.dumps(received_json, indent=4, sort_keys=True))
 
 '''
- Untreated fraction dataset creation
-'''
+ Untreated fraction dataset creation NO LONGER NEEDED, I now deal with the json output directly
+
 untreated_fraction = received_json['untreated_fraction']
 CSO_particulate    = {'f65558fb-61a1-4e48-b4f2-60d62f14b085': received_json['CSO_particulate']['value'] / 100}
 CSO_soluble      = {'f65558fb-61a1-4e48-b4f2-60d62f14b085': received_json['CSO_soluble']['value'] / 100}
@@ -46,8 +45,8 @@ for i in received_json['WW_properties']:
   if 'ecoinvent_id' in i: WW_properties.update({i['ecoinvent_id'] : i['value'] })
 
 
-# TODO - get these arguments from tool
-"""'''
+# TODO - get these arguments from tool NO LONGER NEEDED, I now deal with the json output directly 
+
 
 WWTP_influent_properties = { } #properties after CSO
 tool_use_type      = 'average'
@@ -100,16 +99,25 @@ inputs = {
   "NaHCO3":                    NaHCO3,
 }
 
-'''
+
 pretty printer (debug)
 '''
-pp=pprint.PrettyPrinter(indent=2)
+pp = pprint.PrettyPrinter(indent=2)
 pp.pprint(inputs)
 
+# TODO replace false by False
 
-untreated = DirectDischarge_ecoSpold(root_dir, **args)
-treated = WWT_ecoSpold(root_dir, **args)
-result = {
-        'untreated': DirectDischarge_ecoSpold.generate_ecoSpold2(),
-        'treated': WWT_ecoSpold.generate_ecoSpold2(),
-    }
+args = {k: v for d in received_json.values() for k, v in d.items()}
+
+result = {}
+if args['untreated_fraction'] != 0:
+    untreated = DirectDischarge_ecoSpold(root_dir, **args)
+    result['untreated'] = DirectDischarge_ecoSpold.generate_ecoSpold2()
+else:
+    result['untreated'] = "No direct discharge ecoSpold"
+
+if args['untreated_fraction'] != 1:
+    treated = WWT_ecoSpold(root_dir, **args)
+    result['treated']: WWT_ecoSpold.generate_ecoSpold2()
+else
+    result['treated'] = "No direct discharge ecoSpold"

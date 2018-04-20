@@ -5,7 +5,7 @@ Software distributed under the License is distributed on an "AS IS" basis, WITHO
 The Original Code consists of the EcoSpold data format and EcoSpold Access.
 The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
 -->
-<validProperties majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="2499" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+<validProperties majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="2501" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
   <contextName xml:lang="en">ecoinvent</contextName>
   <property id="cc822f1f-6251-4250-b2be-21fa2f03eef6" defaultVariableName="amount1" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">amount 1 of flow in kg</name>
@@ -361,9 +361,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <name xml:lang="en">EcoSpold01Allocation_other_127</name>
     <comment xml:lang="en">other allocation 127 used in EcoSpold01 datasets</comment>
   </property>
-  <property id="83c8941a-5d08-467a-a7d3-cdad847e1229">
-    <name xml:lang="en">EcoSpold01Allocation_other_72</name>
-    <comment xml:lang="en">other allocation 72 used in EcoSpold01 datasets</comment>
+  <property id="41a012c8-bcde-4563-9ba1-a7ca1823d4b7" unitId="cacb6d36-694d-4e4f-9e79-6c9c73146839">
+    <name xml:lang="en">basic density</name>
+    <unitName xml:lang="en">kg/m3</unitName>
   </property>
   <property id="114d7baf-042e-43b3-9838-f92d4ddb4e69">
     <name xml:lang="en">EcoSpold01Allocation_other_74</name>
@@ -3800,6 +3800,10 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <name xml:lang="en">mass concentration, dissolved ammonia NH4 as N</name>
     <unitName xml:lang="en">kg/m3</unitName>
     <comment xml:lang="en">Mass concentration of dissolved ammonia NH4 (CAS 007664-41-7) as N. Note that dissolved and particulate N are optional yet desirable specifications of total nitrogen.</comment>
+  </property>
+  <property id="83c8941a-5d08-467a-a7d3-cdad847e1229">
+    <name xml:lang="en">EcoSpold01Allocation_other_72</name>
+    <comment xml:lang="en">other allocation 72 used in EcoSpold01 datasets</comment>
   </property>
   <property id="44bdf1b0-a30e-4c71-a14c-6f370e55ba5b" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">fibre content</name>

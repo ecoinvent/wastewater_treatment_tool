@@ -3,39 +3,8 @@ to properties that are useful for ecoSpold generation.
 """
 
 from pycode.spold_utils import get_prop_name, get_prop_unit, get_prop_comment
-from pycode.defaults import no_uncertainty
+from pycode.defaults import no_uncertainty, metals, non_metals
 
-metals = [
-    'Al',
-    'Cd',
-    'Co',
-    'Cr',
-    'Cu',
-    'Fe',
-    'Hg',
-    'Mn',
-    'Mo',
-    'Ni',
-    'Pb',
-    'Sn',
-    'Zn', ]
-
-non_metals = [
-    'As',
-    'Ca',
-    'Cl',
-    'F',
-    'K',
-    'Mg',
-    'Na',
-    'Si',
-    'BOD',
-    'PO4',
-    'NH4',
-    'TP',
-    'TKN',
-    'COD',
-]
 
 def calculate_dry_mass_of_ww(prop_dicts, COD_TOC_ratio):
     """ Returns a list of dictionaries ready to be processed by generate_reference_exchange"""
@@ -70,7 +39,7 @@ def calculate_dry_mass_of_ww(prop_dicts, COD_TOC_ratio):
     mass_conversions_for_dry_mass = {
         'TP': (31 + 4 * 16) / 31,
         'TKN': 18 / 14,
-        'COD': (1 / COD_TOC_ratio) * 180 / (6 * 12)  # based on glucose
+        'COD': (1 / COD_TOC_ratio['value']) * 180 / (6 * 12)  # based on glucose
     }
 
     dry_mass = 0
@@ -141,11 +110,11 @@ def mass_properties(prop_dicts, COD_TOC_ratio):
     ]
 
 def carbon_properties(COD, COD_TOC_ratio, fraction_C_fossil):
-    C = COD / COD_TOC_ratio
+    C = COD / COD_TOC_ratio['value']
     return [
         {
             'name': 'carbon content, fossil',
-            'amount': C * fraction_C_fossil,
+            'amount': C * fraction_C_fossil['value'],
             'comment': "Based on an estimated COD to TOC conversion factor of {} and a fraction of " \
                        "C that is fossil as {}.".format(COD_TOC_ratio, fraction_C_fossil),
             'uncertainty': {
@@ -158,7 +127,7 @@ def carbon_properties(COD, COD_TOC_ratio, fraction_C_fossil):
         },
         {
             'name': 'carbon content, non-fossil',
-            'amount': C * (1 - fraction_C_fossil),
+            'amount': C * (1 - fraction_C_fossil['value']),
             'comment': "Based on an estimated COD to TOC conversion factor of {} and a fraction of " \
                        "C that is fossil as {}.".format(COD_TOC_ratio, fraction_C_fossil),
             'unit': 'dimensionless',
@@ -172,11 +141,43 @@ def carbon_properties(COD, COD_TOC_ratio, fraction_C_fossil):
         }
     ]
 
+def add_DOC_TOC(COD, VSS, COD_TOC_ratio):
+    TOC = COD / COD_TOC_ratio['value']
+    DOC = TOC - VSS * 0.5
+    return [
+        {
+            'name': 'mass concentration, TOC',
+            'amount': TOC,
+            'comment': "estimated from the COD to TOC_ratio ({}).".format(
+                COD_TOC_ratio
+            ),
+            'uncertainty': {
+                'variance': 0,
+                'pedigreeMatrix': [4, 5, 5, 5, 5],
+                'comment': "Uncertainty associated with the COD to TOC ratio, VSS amount and COD amount."
+            },
+            'unit': 'kg/m3',
+        },
+        {
+            'name': 'mass concentration, DOC',
+            'amount': DOC,
+            'comment': "DOC is calculated as Total Organic Carbon (TOC) - Particulate Organics (PO). " \
+                       "DOC is estimated from the COD to TOC_ratio ({}). " \
+                       "PO is estimated using a C to Volatile Suspended Solids (VSS) ratio of 0.5 gC/gVSS. " \
+                       "VSS is estimated as {}.".format(COD_TOC_ratio, VSS),
+            'uncertainty': {
+                'variance': 0,
+                'pedigreeMatrix': [4, 5, 5, 5, 5],
+                'comment': "Uncertainty associated with the COD to TOC ratio"
+            },
+            'unit': 'kg/m3',
+        }
+    ]
 
 def non_obligatory_properties(prop_dicts, MD):
     non_obligatory_props = []
     for prop_dict in prop_dicts:
-        if "ecoinvent_id" in prop_dict:
+        if "ecoinvent_id" in prop_dict and prop_dict["ecoinvent_id"] is not False:
             prop = {}
             prop['name'] = get_prop_name(MD, prop_dict["ecoinvent_id"])
             prop['amount'] = prop_dict["value"]
@@ -203,9 +204,11 @@ def non_obligatory_properties(prop_dicts, MD):
 def all_ww_props(prop_dicts, COD_TOC_ratio, fraction_C_fossil, MD):
     mass_props = mass_properties(prop_dicts, COD_TOC_ratio)
     COD = [prop_dict['value'] for prop_dict in prop_dicts if prop_dict['id']=='COD'][0]
+    VSS = [prop_dict['value'] for prop_dict in prop_dicts if prop_dict['id'] == 'VSS'][0]
     C_props = carbon_properties(COD, COD_TOC_ratio, fraction_C_fossil)
+    DOC_TOC = add_DOC_TOC(COD, VSS, COD_TOC_ratio)
     others = non_obligatory_properties(prop_dicts, MD)
-    return [*mass_props, *C_props, *others]
+    return [*mass_props, *C_props, *DOC_TOC, *others]
 
 
 

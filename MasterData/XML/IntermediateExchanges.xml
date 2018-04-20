@@ -5,7 +5,7 @@ Software distributed under the License is distributed on an "AS IS" basis, WITHO
 The Original Code consists of the EcoSpold data format and EcoSpold Access.
 The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
 -->
-<validIntermediateExchanges majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="26637" xmlns="http://www.EcoInvent.org/EcoSpold02">
+<validIntermediateExchanges majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="26833" xmlns="http://www.EcoInvent.org/EcoSpold02">
   <intermediateExchange id="42761d87-05d9-4877-b21e-001ecf0c747d" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">trawler maintenance, steel</name>
     <unitName xml:lang="en">kg</unitName>
@@ -930,6 +930,31 @@ Inert gas for discharge lamps, such as argon, neon, krypton, xenon or their mixt
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="5f4dc8fc-6797-4455-b1a3-040b3beaefc1" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">fish curing, small fish</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="a3496ac0-9fdf-446b-8c24-72e874e87218">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">21242: Fish, otherwise prepared or preserved</classificationValue>
+    </classification>
+    <comment xml:lang="en">Includes all activities related to the curing process, excludes the provision of raw material (fish)</comment>
+    <productInformation>
+      <text xml:lang="en" index="1">Fish salted-cured, and then canned in chromium steel or aluminium cans, or packaged in glass containers or plastic barrels. The curing process involves fish processing, salting, maturing, esterilisation and filling of containers, and sealing of containers.</text>
+      <text xml:lang="en" index="3">Properties of cured small fish (anchovies):
+Wet mass: 0.89951
+Dry mass: 0.68300
+Water in wet mass: 0.21651
+Water content: 0.317
+Carbon content (fossil): 0
+Carbon content (non-fossil): 0.476
+Fat (kg): 0.04
+Protein (kg): 0.3
+Ash (kg): 0.02
+Energy value (MJ/kg): 6.5
+</text>
+      <imageUrl index="2">https://db3.ecoinvent.org/images/2fcc5cc0-d2a3-4b53-88f7-feb3d379f456</imageUrl>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="5f76b417-1046-4e6b-9c68-04206209253a" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">wastewater from glass production</name>
     <unitName xml:lang="en">m3</unitName>
@@ -1016,6 +1041,19 @@ Inert gas for discharge lamps, such as argon, neon, krypton, xenon or their mixt
     <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+  </intermediateExchange>
+  <intermediateExchange id="2f618520-1bd4-440c-84cd-045335db2e6c" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">tillage, harrowing, by offset disk harrow</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">This tillage operation is mainly performed to break up the surface of the soil and to incorporate the limestone and gypsum.  The operation time is  1.38 hours per ha and the diesel fuel consumption is 26.04 L diesel per hour of effective operation.
+</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="e4c082c9-dec1-41d1-8fca-0457c8f630e7" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">jatropha seed</name>
@@ -1853,6 +1891,26 @@ Williams, C.B. (2005). J. Anim. Sci. 83(6):1262-1266.</comment></property>
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="c4e028dc-33a3-4fb1-b0d7-08d0d1242d71" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">fibre and fabric waste, polyester</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="8241ee8c-d9aa-48ae-b5d5-5f446b764fc0">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">39216: Waste of man-made fibres</classificationValue>
+    </classification>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0.585840437101837" isDefiningValue="false">
+      <comment xml:lang="en">0.585840437101837 for polyester resin production, unsaturated. 
+
+(C8H6O2, C8H16O4, C5H12O2,C4H2O3)n was used as a representative formula for unsaturated polyester resin. This formula corresponds to the M390B Unsaturated Polyester Resin (National Industrial Chemicals Notification and Assessment Scheme, full public report, 1994).
+</comment></property>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <productInformation>
+      <text xml:lang="en" index="1">This waste corresponds to the waste by-product of polyester textile industry. It is further used (recycled) in the production of inferior quality textile products such as: rugs and carpets and lower quality fabrics.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="a2432f6a-e9c4-45b8-a9d9-090b3fa3fd4c" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">maintenance, intermodal shipping container, 40-foot</name>
     <unitName xml:lang="en">unit</unitName>
@@ -2047,6 +2105,16 @@ Williams, C.B. (2005). J. Anim. Sci. 83(6):1262-1266.</comment></property>
     <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+  </intermediateExchange>
+  <intermediateExchange id="fc22c44f-f565-487a-a6ae-09b6e18a0e1c" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">trout feed, 42% protein</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="29800a64-6f56-4060-a072-c905cf470b90">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">2331: Preparations used in animal feeding</classificationValue>
+    </classification>
+    <comment xml:lang="en">Trout feed, 42% protein</comment>
+    <productInformation />
   </intermediateExchange>
   <intermediateExchange id="3d0fe4e0-eac9-4704-b3fd-09b8594d0fbe" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">chemical factory, organics</name>
@@ -2974,6 +3042,11 @@ Estimation of the concentrate caracterisation taken from the Environmental Impac
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="bef3be43-1038-4afc-9879-0f1d647c77f4" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">finishing, fabric</name>
+    <unitName xml:lang="en">kg</unitName>
+    <productInformation />
+  </intermediateExchange>
   <intermediateExchange id="4f37e12c-0980-4d0f-bd36-0f24516c9d89" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">sawnwood, hardwood, dried (u=20%), planed</name>
     <unitName xml:lang="en">m3</unitName>
@@ -3604,6 +3677,19 @@ Solventis, n.d. Butyl Di Glycol Acetate. Retrieved from: http://www.solventis.ne
       <classificationValue xml:lang="en">65131: Transport services via pipeline of petroleum and natural gas</classificationValue>
     </classification>
   </intermediateExchange>
+  <intermediateExchange id="edcaa476-a810-42b5-bbf4-1220d8658c4a" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">tillage, harrowing, by offset leveling disc harrow</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">This operation is performed during soil preparation phase. Its objective is to smooth up the surface of the soil for planting. The operation time is  0.6 hours per ha and the diesel fuel consumption is 14.79 L diesel per hour of effective operation.
+</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="2b1da5c4-4ee4-4054-b66b-123aa9ca1ddd" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">ventilation system, decentralized, 6 x 120 m3/h, polyethylene ducts</name>
     <unitName xml:lang="en">unit</unitName>
@@ -3627,6 +3713,19 @@ Solventis, n.d. Butyl Di Glycol Acetate. Retrieved from: http://www.solventis.ne
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">49913: Motorcycles and cycles fitted with an auxiliary motor, other than those with reciprocating internal combustion[…]</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="f054b1e6-24cd-4d22-a001-1271cfa17a83" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">limestone and gypsum application, by spreader</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">The application of limestone is performed by a spreader implement during pre-planting phase for a soil adequation. The operation time is 0.46 hours per ha and the diesel fuel consumption is 7.9 L diesel per hour of effective operation.
+</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="bb14c937-fb75-430a-bb90-128536904e85" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="123-91-1">
     <name xml:lang="en">dioxane</name>
@@ -3983,6 +4082,19 @@ Formula: SiC8H20O4</comment>
       <classificationValue xml:lang="en">6511: Road transport services of freight</classificationValue>
     </classification>
   </intermediateExchange>
+  <intermediateExchange id="abf37a77-c385-41b8-b983-13d4c0fdfe52" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">furrow covering, sugarcane</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">This exchange represents the furrow closing operation. The operation time is 1.67  hours per ha and the diesel fuel consumption is 11.54 L diesel per hour of effective operation.
+</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="9b1c31ff-2e61-4e5f-957c-1452378729ad" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">carton board box production, with gravure printing</name>
     <unitName xml:lang="en">kg</unitName>
@@ -4058,8 +4170,8 @@ Formula: SiC8H20O4</comment>
       </uncertainty></property>
     <property propertyId="93bfda45-49f5-44bd-beb0-91b38dde4035" amount="48000" isDefiningValue="false" sourceId="95289a3a-dc6e-464c-8a2d-42f637da285b" />
     <productInformation>
-      <imageUrl index="2">https://db3.ecoinvent.org/images/8cad9f9c-247d-4fa1-b620-1253df4039ab</imageUrl>
       <text xml:lang="en" index="1">Steel trawler (Peru)</text>
+      <imageUrl index="2">https://db3.ecoinvent.org/images/8cad9f9c-247d-4fa1-b620-1253df4039ab</imageUrl>
     </productInformation>
   </intermediateExchange>
   <intermediateExchange id="f6503135-81f4-4291-a643-14f92f05797a" unitId="e32b56ef-fa80-4487-9796-f3c1476c27b3">
@@ -4888,6 +5000,19 @@ service</comment>
     <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0.0638297872340425" />
     <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.574" />
   </intermediateExchange>
+  <intermediateExchange id="172454af-4293-48f8-92d7-183f06d86fa9" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">flax fibre</name>
+    <unitName xml:lang="en">kg</unitName>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" variableName="DM" amount="0.97" isDefiningValue="false">
+      <comment xml:lang="en">It is assumed that dry matter content is 97%</comment></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.4526" isDefiningValue="false">
+      <comment xml:lang="en">"Carbon content on a dry mass basis. All carbon is assumed to be biogenic due to the nature of the product. Carbon content of Flax fiber is 0.4526 kg of non-fossil carbon per kg of dry mass of flax fiber. Value is calculated based on the the composition of flax which is 92% cellulose and 4% Lignin. Composition of Flax fibers accessed on 10/11/2017 on: http://textilefashionstudy.com/chemical-composition-of-flax-fiber-linen-fiber-composition/ 
+"</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" variableName="WWM" amount="0.03" isDefiningValue="false">
+      <comment xml:lang="en">Based on dry mass assumtion, balance is considered to be the water in wet mass</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" variableName="WM" amount="1" isDefiningValue="false" mathematicalRelation="DM+ WWM" isCalculatedAmount="true" />
+    <productInformation />
+  </intermediateExchange>
   <intermediateExchange id="7d2df8fd-e2c2-4b3a-9ecd-184b9276962f" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">fava bean, feed, Swiss integrated production</name>
     <unitName xml:lang="en">kg</unitName>
@@ -5111,6 +5236,19 @@ service</comment>
     <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0.176470588235294" />
     <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.15" />
   </intermediateExchange>
+  <intermediateExchange id="09d47825-c403-465a-9ef0-1925e3599298" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">harvesting, sugarcane</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">This exchange represents the mechanized sugarcane harvesting operation in one hectare (ha). The operation time is  2.8 hours per ha and the diesel fuel consumption is 49.4 L diesel per hour of effective operation.
+</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="8d7c013a-5aca-44d7-8fc4-193844d2953a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">waste packaging paper</name>
     <unitName xml:lang="en">kg</unitName>
@@ -5152,6 +5290,30 @@ service</comment>
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">53261: Mining constructions</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="ad840fa5-bcf8-4309-bbd9-1949e4f090ff" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="000124-38-9">
+    <name xml:lang="en">cement, limestone 6-20%</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="ff592c08-adac-4b6c-b1da-69839f05c992">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">37440: Portland cement, aluminous cement, slag cement and similar hydraulic cements, except in the form of clinkers</classificationValue>
+    </classification>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false">
+      <uncertainty>
+        <lognormal meanValue="1" mu="0" variance="0" varianceWithPedigreeUncertainty="0.21" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" />
+    <property propertyId="38f94dd1-d5aa-41b8-b182-c0c42985d9dc" amount="0" isDefiningValue="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false">
+      <uncertainty>
+        <lognormal meanValue="1" mu="0" variance="0" varianceWithPedigreeUncertainty="0.21" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <productInformation />
   </intermediateExchange>
   <intermediateExchange id="bb73c354-cfef-4666-8d3d-195a5b7e5436" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">magnetite</name>
@@ -6399,6 +6561,17 @@ The Ready Mixed Concrete will be immediately transported to specified constructi
     <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0.713938242885701">
       <comment xml:lang="en">Calculated based on molecular structure. See tab "chemicals".</comment></property>
   </intermediateExchange>
+  <intermediateExchange id="5012b3d2-72fb-40ca-ae1f-1f471bc3b36a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">batch dyeing, fabric</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="5478b3fb-8d75-4eb5-8d91-d659a01f600e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">97150: Dyeing and colouring services</classificationValue>
+    </classification>
+    <productInformation>
+      <text xml:lang="en" index="1">Batch dyed refers to dyed fabric of any type that is dyed in a batch process. In batch processes, textile substrates can be easily dyed at any stage of their assembly into the desired textile product. This includes fiber, yarn, fabric or garment.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="3473bca6-5172-44d2-bda1-1f681e891ca8" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">roundwood, eucalyptus ssp. from sustainable forest management, under bark</name>
     <unitName xml:lang="en">m3</unitName>
@@ -6888,6 +7061,28 @@ The Ready Mixed Concrete will be immediately transported to specified constructi
     <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.159" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="6c8d3210-303e-4897-b8c0-2258cb6552f2" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">yarn, cotton</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="ea175061-076f-4328-bb0b-8425579771a3">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">26360: Cotton yarn (other than sewing thread), containing 85% or more by weight of cotton</classificationValue>
+    </classification>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.46" isDefiningValue="true">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="true" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="true">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0.063829787" isDefiningValue="true">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.06" isDefiningValue="true">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0.94" isDefiningValue="true" />
+    <productInformation>
+      <text xml:lang="en" index="1">Cotton yarn (other than sewing thread), containing
+85% or more by weight of cotton.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="1692f537-b2ad-4143-bea3-226fc2fe9cf5" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">wind turbine, 2MW, onshore</name>
     <unitName xml:lang="en">unit</unitName>
@@ -6900,6 +7095,17 @@ The Ready Mixed Concrete will be immediately transported to specified constructi
       <classificationValue xml:lang="en">53262: Power plants</classificationValue>
     </classification>
     <property propertyId="964f8b50-ce16-4364-835a-a3db5fb760b0" />
+  </intermediateExchange>
+  <intermediateExchange id="0cc1fded-a4e2-4c97-8fef-227c2475f7f7" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">bleaching, fabric</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="57858a7b-26aa-40c7-ac7f-36b806822c27">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">88213: Textile finishing services</classificationValue>
+    </classification>
+    <productInformation>
+      <text xml:lang="en" index="1">Bleached fabric has improved whiteness, removed natural coloration and remaining trace impurities from the cotton; the degree of bleaching necessary is determined by the required whiteness and absorbency. Cotton being a vegetable fibre will be bleached using an oxidizing agent, such as dilute sodium hypochlorite or dilute hydrogen peroxide.</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="20fb957d-e0aa-4ff7-9ac0-228e17b4a36a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">captan</name>
@@ -8460,10 +8666,10 @@ Reference(s):  Boullard, O., Leblanc, H. and Besson, B. 2000. Salicylic Acid. Ul
       </uncertainty></property>
     <property propertyId="93bfda45-49f5-44bd-beb0-91b38dde4035" amount="56000" isDefiningValue="false" sourceId="95289a3a-dc6e-464c-8a2d-42f637da285b" />
     <productInformation>
-      <text xml:lang="en" index="3">Steel purse seiner (targetting tuna, Ecuador)</text>
-      <imageUrl index="2">https://db3.ecoinvent.org/images/53c9a1bf-164a-4740-97f8-053393ce26a6</imageUrl>
       <text xml:lang="en" index="1">Steel purse seiner (targetting anchoveta, Peru)</text>
       <imageUrl index="4">https://db3.ecoinvent.org/images/4b1a9c05-d090-4954-90c5-18979c2654d0</imageUrl>
+      <text xml:lang="en" index="3">Steel purse seiner (targetting tuna, Ecuador)</text>
+      <imageUrl index="2">https://db3.ecoinvent.org/images/53c9a1bf-164a-4740-97f8-053393ce26a6</imageUrl>
     </productInformation>
   </intermediateExchange>
   <intermediateExchange id="b254bbdf-fb2b-4878-aec9-2a7820f3f32e" unitId="980b811e-3905-4797-82a5-173f5568bc7e">
@@ -8985,6 +9191,23 @@ Reference(s):  Boullard, O., Leblanc, H. and Besson, B. 2000. Salicylic Acid. Ul
     <property propertyId="964f8b50-ce16-4364-835a-a3db5fb760b0" amount="20" isDefiningValue="false" />
     <property propertyId="93bfda45-49f5-44bd-beb0-91b38dde4035" amount="80000" isDefiningValue="false" />
   </intermediateExchange>
+  <intermediateExchange id="f0b6b3de-c6b8-469e-b168-2d09909d44d6" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">filter cake, from sugarcane juice filtration</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="70793a29-bdd5-4764-adb7-8a4eeb01692f">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">39149: Beet-pulp and other waste of sugar manufacture</classificationValue>
+    </classification>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0.35" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.65" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.6514" isDefiningValue="false" mathematicalRelation="" isCalculatedAmount="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="1.85714285714286" isDefiningValue="false" isCalculatedAmount="false" />
+    <productInformation>
+      <text xml:lang="en" index="1">This exchange represents the filter cake production from the sedimentation and filtration stage of the sugarcane juice, in the sugarcane processing phase.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="d91d02b8-f42f-5810-9c24-2d0c89d33f95" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">sodium cumenesulphonate</name>
     <unitName xml:lang="en">kg</unitName>
@@ -9432,6 +9655,24 @@ OECD. 2007. SIDS Initial Assessment Report For SIAM 25. Alkyl Sulfates, Alkane S
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="69b3d58f-ddde-59c4-a78d-2ededd641aab" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">land tenure, arable land, measured as carbon net primary productivity, forest, intensive</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="39b0f0ab-1a2f-401b-9f4d-6e39400760a4">
+      <classificationSystem xml:lang="en">By-product classification</classificationSystem>
+      <classificationValue xml:lang="en">allocatable product</classificationValue>
+    </classification>
+    <classification classificationId="01bf1d04-21b2-46f5-b720-e7232c040c2b">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">7: Financial and related services; real estate services; and rental and leasing services</classificationValue>
+    </classification>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="0" />
+  </intermediateExchange>
   <intermediateExchange id="fb4bb128-084e-4da3-8227-2ef8ad95da13" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">alkyd paint, white, without solvent, in 60% solution state</name>
     <unitName xml:lang="en">kg</unitName>
@@ -9638,6 +9879,17 @@ Anneken et al. (2006) Fatty Acids. Ullmann's Encyclopedia of Industrial Chemistr
       <comment xml:lang="en">Monomer is vynyl chloride, C2H3Cl (ecoinvent v2.2 report 11_II). MW=62 g/mol</comment></property>
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+  </intermediateExchange>
+  <intermediateExchange id="a0c0022d-148f-44b4-a351-3039cfb9e61c" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">short fibres, silk</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="81529e94-d8d6-41fc-948f-1141c960c7ca">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">39211: Silk waste</classificationValue>
+    </classification>
+    <productInformation>
+      <text xml:lang="en" index="1">Silk waste refers to lower quality silk that is produced from the production of silk. It is not a waste with the strict definition and is still used to produce a lower quality textile.</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="1e16715e-6aa4-4649-92bd-304400d6c246" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">stretch blow moulding</name>
@@ -10606,6 +10858,32 @@ Anneken et al. (2006) Fatty Acids. Ullmann's Encyclopedia of Industrial Chemistr
     <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.0521348001618123" />
     <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.8883" />
   </intermediateExchange>
+  <intermediateExchange id="5bfb6885-a0a0-4f4c-921a-34db393e8dcb" unitId="86b0e4a2-57e5-48b8-a43d-22c7f8490dca" defaultVariableName="clean">
+    <name xml:lang="en">cleaning consumables, without water, in 13.6% solution state</name>
+    <unitName xml:lang="en">l</unitName>
+    <classification classificationId="97b8d3d4-58ed-4a4a-aebe-16c41b254f09">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">353: Soap, cleaning preparations, perfumes and toilet preparations</classificationValue>
+    </classification>
+    <classification classificationId="97b8d3d4-58ed-4a4a-aebe-16c41b254f09">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">353: Soap, cleaning preparations, perfumes and toilet preparations</classificationValue>
+    </classification>
+    <comment xml:lang="en">This activity aims at representing the production of an average kg of cleaning product (expressed as 100% active substance). To do so, the life cycle inventory data of five product categories retrieved from Golsteijn et al (2015) have been averaged. The products are manual dishwashing detergents, window glass trigger spray cleaners, bathroom trigger spray cleaners, acid toilet cleaners and bleach toilet cleaners. The major active component in manual dishwashing detergents is a surfactant mix, which contributes to food residue removal. Other components of detergents may include solubility enhancers, preservatives, perfumes, dyes and opacifiers. Based on the average calculated from literature Golsteijn et al (2015), the recommended solution state is 13.6%, when using this product  the appropriate amount of water should be added.  The values for heat, electricity, water and infrastructure are based on ecoinvent chemicals model. The model is calculated based on literature data published by the industry. This value is a 5-year average of data (2011 - 2015) published by the Gendorf factory (Gendorf, 2016, Umwelterklärung, www.gendorf.de), (Gendorf, 2015, Umwelterklärung, www.gendorf.de),  (Gendorf, 2014, Umwelterklärung, www.gendorf.de).</comment>
+    <synonym xml:lang="en">cleaning product</synonym>
+    <synonym xml:lang="en">cleaning agent</synonym>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0.20371" isDefiningValue="false">
+      <comment xml:lang="en">Calculated value. Carbon content is calculated based on the carbon content of the inputs to the activity.</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.19953" isDefiningValue="false">
+      <comment xml:lang="en">Calculated value. Carbon content is calculated based on the carbon content of the inputs to the activity.</comment></property>
+    <productInformation>
+      <text xml:lang="en" index="1">This product represents the production of an average kg of cleaning consumables (expressed as 100% active substance). To do so, five product categories retrieved from Golsteijn et al (2015) have been averaged. The products are manual dishwashing detergents, window glass trigger spray cleaners, bathroom trigger spray cleaners, acid toilet cleaners and bleach toilet cleaners. The major active component in manual dishwashing detergents is a surfactant mix, which contributes to food residue removal. Other components of detergents may include solubility enhancers, preservatives, perfumes, dyes and opacifiers. Based on the average calculated from literature Golsteijn et al (2015), the recommended solution state is 13.6%, when using this product the appropriate amount of water should be added.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="014b2a3a-5685-44b8-89b7-34fb4a8d387c" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">gas motor, mini CHP plant</name>
     <unitName xml:lang="en">unit</unitName>
@@ -10648,6 +10926,19 @@ Anneken et al. (2006) Fatty Acids. Ullmann's Encyclopedia of Industrial Chemistr
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="292153e9-57a9-4b9e-a025-3558981d0ddd" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">field leveling, sugarcane</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">This operation performs leveling of the post-planting soil between the lines, as well as in the groove of the plant, preparing the area for sugarcane mechanized harvesting.  The operation time is  2.08  hours per ha and the diesel fuel consumption is 9.62 L diesel per hour of effective operation.
+</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="039d3944-e16b-4baf-8153-35752757a05d" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="000110-54-3">
     <name xml:lang="en">hexane</name>
@@ -11070,6 +11361,45 @@ Anneken et al. (2006) Fatty Acids. Ullmann's Encyclopedia of Industrial Chemistr
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1">
       <comment xml:lang="en">All data are referred to 1 kg acrylic dispersion 100%. (ecoinvent v2.2 report 8_part II-90)</comment></property>
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+  </intermediateExchange>
+  <intermediateExchange id="c388d470-e83c-4f6f-93ec-3861dd53db5b" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" defaultVariableName="PGM_concentrate">
+    <name xml:lang="en">platinum group metal concentrate</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="10fb73e3-41e2-4ee8-b737-e53d5094b8b5">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">4133: Platinum, unwrought or in semi-manufactured forms, or in powder form</classificationValue>
+    </classification>
+    <property propertyId="66e996b5-5f7b-449f-8893-0b787af21d7e" amount="0.0007" isDefiningValue="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <property propertyId="92dbd49f-8cf0-4510-b9c0-6b90443b328e" amount="1.17E-05" isDefiningValue="false">
+      <comment xml:lang="en">rhodium content (as percentage) on a dry matter basis</comment></property>
+    <property propertyId="ee301bc4-052a-40c2-a5d7-76fa6e429aa5" amount="3.63E-06" isDefiningValue="false">
+      <comment xml:lang="en">gold content (as percentage) on a dry matter basis</comment></property>
+    <property propertyId="f9da385d-5b1b-4548-826c-0bf5892a9fd9" amount="0.0275" isDefiningValue="false" />
+    <property propertyId="e9688cbc-7400-457a-a936-5ab123ea326c" amount="0.027" isDefiningValue="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="0132d97c-5f19-4397-9197-59ab801b10cf" amount="0.0323" isDefiningValue="false">
+      <comment xml:lang="en">copper content (as percentage) on a dry matter basis</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="d8364dfc-5753-4585-bf50-4d42b126f72d" amount="0.19" isDefiningValue="false" />
+    <property propertyId="f6c7ebbb-902a-412f-a55b-0743aea00238" amount="0.0655" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <property propertyId="e1d2c19b-3a97-4f52-a83f-fe88400452c2" amount="0.016" isDefiningValue="false" />
+    <property propertyId="f767b36f-62bf-4458-b694-ecbefd2ab970" amount="0.0141" isDefiningValue="false">
+      <comment xml:lang="en">nickel content (as percentage) on a dry matter basis</comment></property>
+    <property propertyId="2bc683e4-3780-4f00-8c1d-fd53e05cfde7" amount="0.195" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <property propertyId="999af43a-1a83-4231-ba3c-600b1941b3a0" amount="5.18E-05" isDefiningValue="false">
+      <comment xml:lang="en">palladium content (as percentage) on a dry matter basis</comment></property>
+    <property propertyId="dd7e15dc-c438-43f7-9c0d-d0a627163cf1" amount="0.432" isDefiningValue="false" />
+    <property propertyId="832bb926-0c7d-4b16-bf36-fc69665afe8b" amount="8.75E-05" isDefiningValue="false">
+      <comment xml:lang="en">platinum content (as percentage) on a dry matter basis</comment></property>
+    <productInformation />
   </intermediateExchange>
   <intermediateExchange id="406c9ce9-fa6f-47b7-8659-386f0a54f2a8" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
     <name xml:lang="en">tillage, harrowing, by rotary harrow</name>
@@ -13633,6 +13963,37 @@ Maul et al.1993. PROCESS FOR THE PREPARATION OF TRIS(2,4-DITERT-BUTYLPHENYL) PHO
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="bd6aab7d-fe7d-4396-b209-448ffb557a61" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">fish residues</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="57435eb0-eba5-406a-8b01-0e81a751bf46">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">21221: Fish fillets and fish meat (whether or not minced), fresh or chilled</classificationValue>
+    </classification>
+    <comment xml:lang="en">Residues from fish processing, raw or cooked</comment>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0.241111111" isDefiningValue="false" isCalculatedAmount="false">
+      <comment xml:lang="en">Average of 49 fish species, http://www.fao.org/wairdocs/tan/x5916e/x5916e01.htm</comment></property>
+    <property propertyId="8cd87c78-b43c-41be-9dfa-6dcc15bcb3c9" variableName="protein" amount="0.18" isDefiningValue="false">
+      <comment xml:lang="en">Average of 49 fish species, http://www.fao.org/wairdocs/tan/x5916e/x5916e01.htm</comment></property>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0.758888889" isDefiningValue="false" isCalculatedAmount="false">
+      <comment xml:lang="en">Average of 49 fish species, http://www.fao.org/wairdocs/tan/x5916e/x5916e01.htm</comment></property>
+    <property propertyId="42cc9ae9-84ac-432b-b166-51a2f7cc9d93" variableName="fat" amount="0.061" isDefiningValue="false">
+      <comment xml:lang="en">Average of 49 fish species, http://www.fao.org/wairdocs/tan/x5916e/x5916e01.htm</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="0.424087654" isDefiningValue="false" isCalculatedAmount="false">
+      <comment xml:lang="en">Average of 49 fish species, http://www.fao.org/wairdocs/tan/x5916e/x5916e01.htm</comment></property>
+    <property propertyId="6bc8ac5e-cc4c-45fb-93dc-53c0e45091df" amount="4.01" isDefiningValue="false">
+      <comment xml:lang="en">Average of 49 fish species, http://www.fao.org/wairdocs/tan/x5916e/x5916e01.htm</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.182976543" isDefiningValue="false" isCalculatedAmount="false">
+      <comment xml:lang="en">Average of 49 fish species, http://www.fao.org/wairdocs/tan/x5916e/x5916e01.htm</comment></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.47385" isDefiningValue="false" mathematicalRelation="(1-protein-fat-ash)*0.444+protein*0.535+fat*0.774" isCalculatedAmount="true">
+      <comment xml:lang="en">Calculated from C_content = polysaccharids*0.444+protein*0.535+lipids*0.774 and polysaccharids = 1-(protein+lipids+ash)</comment></property>
+    <property propertyId="7c33fa83-dbc9-43c3-85c2-a5bdb058c37d" variableName="ash" amount="0.015" isDefiningValue="false">
+      <comment xml:lang="en">Ash content of fish is between 1-2% of the edible portion, http://www.fao.org/wairdocs/tan/x5916e/x5916e01.htm</comment></property>
+    <productInformation>
+      <imageUrl index="2">https://db3.ecoinvent.org/images/b800b8a0-d213-4acb-905f-92ae0760f9bb</imageUrl>
+      <text xml:lang="en" index="1">Fish residues from fish processing industry</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="d7f544d6-c372-4fc3-81ae-44aa3614c9fc" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">straw</name>
     <unitName xml:lang="en">kg</unitName>
@@ -13853,6 +14214,27 @@ Maul et al.1993. PROCESS FOR THE PREPARATION OF TRIS(2,4-DITERT-BUTYLPHENYL) PHO
     <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+  </intermediateExchange>
+  <intermediateExchange id="d899ab8e-58d3-47fa-bf64-45989f7da5be" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">hydrogen, gaseous</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="272d5bdf-66a0-4932-9688-eff2dccbc6a5">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">34210: Hydrogen, nitrogen, oxygen, carbon dioxide and rare gases; inorganic oxygen compounds of non-metals n.e.c.</classificationValue>
+    </classification>
+    <classification classificationId="39b0f0ab-1a2f-401b-9f4d-6e39400760a4">
+      <classificationSystem xml:lang="en">By-product classification</classificationSystem>
+      <classificationValue xml:lang="en">allocatable product</classificationValue>
+    </classification>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+    <productInformation>
+      <text xml:lang="en" index="1">pure hydrogen in gaseous state</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="6854fd9d-b189-4677-b55f-45c52bec224e" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">catalytic converter, selective catalytic reduction, 200 litre</name>
@@ -14179,6 +14561,45 @@ Maul et al.1993. PROCESS FOR THE PREPARATION OF TRIS(2,4-DITERT-BUTYLPHENYL) PHO
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="033be19b-ca83-4d9e-8dd6-476ef15203cd" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="144-55-8" defaultVariableName="NaHCO3">
+    <name xml:lang="en">sodium bicarbonate</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="91643564-ad26-413c-bf7b-9516459291d1">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">3423: Chemical elements n.e.c.; inorganic acids; inorganic oxygen compounds of boron, silicon and carbon; halogen or […]</classificationValue>
+    </classification>
+    <classification classificationId="91643564-ad26-413c-bf7b-9516459291d1">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">3423: Chemical elements n.e.c.; inorganic acids; inorganic oxygen compounds of boron, silicon and carbon; halogen or […]</classificationValue>
+    </classification>
+    <classification classificationId="91643564-ad26-413c-bf7b-9516459291d1">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">3423: Chemical elements n.e.c.; inorganic acids; inorganic oxygen compounds of boron, silicon and carbon; halogen or […]</classificationValue>
+    </classification>
+    <classification classificationId="91643564-ad26-413c-bf7b-9516459291d1">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">3423: Chemical elements n.e.c.; inorganic acids; inorganic oxygen compounds of boron, silicon and carbon; halogen or […]</classificationValue>
+    </classification>
+    <classification classificationId="91643564-ad26-413c-bf7b-9516459291d1">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">3423: Chemical elements n.e.c.; inorganic acids; inorganic oxygen compounds of boron, silicon and carbon; halogen or […]</classificationValue>
+    </classification>
+    <synonym xml:lang="en">Baking Soda</synonym>
+    <synonym xml:lang="en">Hydrogen Carbonate, Sodium</synonym>
+    <synonym xml:lang="en">Bicarbonate, Sodium</synonym>
+    <synonym xml:lang="en">Sodium Hydrogen Carbonate</synonym>
+    <synonym xml:lang="en">Carbonic Acid Monosodium Salt</synonym>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.012011" isDefiningValue="false">
+      <comment xml:lang="en">Calculated based on the chemical formula NaHCO3.</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <productInformation>
+      <text xml:lang="en" index="1">Sodium bicarbonate in an inorganic chemical with formula NaHCO3. It is mainly produced as a by-product of the Solvay process or as a result of Trona ore mining. Sodium bicarbonate is used in a number of industries, it is used in cooking, commonly reffered to as baking soda, as a neutralising agent and in the medical industry. </text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="71833dc2-6443-43d7-a992-4773f52f9afe" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">kraft paper, bleached</name>
     <unitName xml:lang="en">kg</unitName>
@@ -14271,6 +14692,19 @@ Typical pollutant loads of wastewater from blast furnace slag granulation (TO BE
     <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0.0270740389920822">
       <comment xml:lang="en">TOC =0.01216 kg/m3 (Tab A.20, ecoinvent v2.2 report 13_I). TOC was considered as Total Carbon.</comment></property>
     <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
+  </intermediateExchange>
+  <intermediateExchange id="ccfff1e0-6deb-4aef-a0df-47be0bdc0176" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">tillage, subsoiling, by subsoiler plow</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">This exchange represents the subsoiling operation in one hectare (ha). It is performed to break up a compacted soil in order to increase soil aeration. The operation time is about 1.19 hours per ha and the diesel fuel consumption is 26.04 L diesel per hour of effective operation.
+</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="e6f8dc95-a570-4a09-91cf-47c046e669e9" unitId="ae252091-811b-461b-8e89-8f3075639eb1">
     <name xml:lang="en">transport, passenger car, small size, diesel, EURO 5</name>
@@ -14694,6 +15128,16 @@ Roose, P. et al. (2015) Amines, Aliphatic. In Ullmann's Encyclopedia of Industri
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="7f31e37f-f021-4ad2-891e-495a5b3b70b3" unitId="f2aaa4ba-fb58-49a7-a552-e7f64366f379">
+    <name xml:lang="en">floating collar cage</name>
+    <unitName xml:lang="en">m</unitName>
+    <classification classificationId="3cb7f7b0-ce81-45a2-ac58-0cb103aca716">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">3845: Fishing rods and other line fishing tackle; fish landing nets, butterfly nets and similar nets; decoy "birds" a[…]</classificationValue>
+    </classification>
+    <comment xml:lang="en">Floating collar net cage for lake and marine aquaculture</comment>
+    <productInformation />
+  </intermediateExchange>
   <intermediateExchange id="0df59074-806a-4246-aed7-4962db009117" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">magnesium-alloy, AZ91</name>
     <unitName xml:lang="en">kg</unitName>
@@ -15033,6 +15477,30 @@ Roose, P. et al. (2015) Amines, Aliphatic. In Ullmann's Encyclopedia of Industri
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="06d2feef-655c-472f-a9a2-4b40d49e253a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="000124-38-9">
+    <name xml:lang="en">cement, blast furnace slag 21-35%</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="ff592c08-adac-4b6c-b1da-69839f05c992">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">37440: Portland cement, aluminous cement, slag cement and similar hydraulic cements, except in the form of clinkers</classificationValue>
+    </classification>
+    <property propertyId="38f94dd1-d5aa-41b8-b182-c0c42985d9dc" amount="0" isDefiningValue="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false">
+      <uncertainty>
+        <lognormal meanValue="1" mu="0" variance="0" varianceWithPedigreeUncertainty="0.21" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false">
+      <uncertainty>
+        <lognormal meanValue="1" mu="0" variance="0" varianceWithPedigreeUncertainty="0.21" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <productInformation />
+  </intermediateExchange>
   <intermediateExchange id="dffd820b-dbdb-499c-a9b5-4b70c53063b5" unitId="e32b56ef-fa80-4487-9796-f3c1476c27b3">
     <name xml:lang="en">operation, internet access equipment, label-certified electricity</name>
     <unitName xml:lang="en">hour</unitName>
@@ -15142,9 +15610,9 @@ Roose, P. et al. (2015) Amines, Aliphatic. In Ullmann's Encyclopedia of Industri
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="2438" isDefiningValue="false" />
     <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
     <productInformation>
-      <text xml:lang="en" index="1">A concrete slab is a common structural element of modern buildings. Horizontal slabs of steel reinforced concrete, typically between 4 and 20 inches (100 and 500 millimeters) thick, are most often used to construct floors and ceilings, while thinner slabs are also used for exterior paving.</text>
       <text xml:lang="en" index="2">In many domestic and industrial buildings a thick concrete slab, supported on foundations or directly on the subsoil, is used to construct the ground floor of a building. These can either be "ground-bearing" or "suspended" slabs. For Double-storey or Multi-storey buildings, the use of a few common types of concrete suspended slabs are used. In high rise buildings and skyscrapers, thinner, pre-cast concrete slabs are slung between the steel frames to form the floors and ceilings on each level. Cast in-Situ slabs which used in high rise buildings and huge shopping complexes as well as houses. These in-situ slabs are cast on site using shutters and reinforced steel.</text>
       <text xml:lang="en" index="3">On the technical drawings, reinforced concrete slabs are often abbreviated to "r.c.c.slab" or simply "r.c." Technical drawings are often created by structural Engineers who use software such as AutoCad or Revit structure</text>
+      <text xml:lang="en" index="1">A concrete slab is a common structural element of modern buildings. Horizontal slabs of steel reinforced concrete, typically between 4 and 20 inches (100 and 500 millimeters) thick, are most often used to construct floors and ceilings, while thinner slabs are also used for exterior paving.</text>
     </productInformation>
   </intermediateExchange>
   <intermediateExchange id="70caf413-93ee-4843-90ba-4c2f76373d04" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="7782-41-4">
@@ -15194,6 +15662,26 @@ Roose, P. et al. (2015) Amines, Aliphatic. In Ullmann's Encyclopedia of Industri
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">17100: Electrical energy</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="bbe8bc6e-c638-4b6a-9cb7-4c5baae9f32d" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" defaultVariableName="mango">
+    <name xml:lang="en">mango</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="7a07f63d-7184-473d-8304-50197707d46d">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">0131: Tropical and subtropical fruits</classificationValue>
+    </classification>
+    <synonym xml:lang="en">Mangifera indica</synonym>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0.2" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="4" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.8" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" variableName="REF_PROD_C_content_non_fossil" amount="0" isDefiningValue="false" isCalculatedAmount="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <productInformation>
+      <text xml:lang="en" index="3">Mango (Mangifera indica) is a tropical fruit cultivated mainly in South america and Asia. </text>
+      <imageUrl index="2">https://db3.ecoinvent.org/images/307e037f-2c21-4648-88b1-7ffcda0b898b</imageUrl>
+      <imageUrl index="1">https://db3.ecoinvent.org/images/f6eb3067-9e1f-43b9-a9a3-a8ac03957d91</imageUrl>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="ccee034c-8b6c-40d6-ac36-4c70c4623efa" unitId="f2aaa4ba-fb58-49a7-a552-e7f64366f379">
     <name xml:lang="en">ventilation duct, steel, 100x50 mm</name>
@@ -16580,6 +17068,20 @@ Reference: http://www.fao.org/forestry/17111/en</comment></property>
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="2031e628-f866-412c-84bb-539a81b0c19d" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">jute plant, harvested</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="50dbcf68-6be3-4df5-995e-45b793cafeb4">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">01922: Jute, kenaf, and other textile bast fibres, raw or retted, except flax, true hemp and ramie</classificationValue>
+    </classification>
+    <comment xml:lang="en">The output of the jute cultivation activity. Mature jute plant s harvested. Jute is generally harvested when the plants are at early pod stage. The harvest index remains more or less constant over 60–105 day period following sowing. However, it reaches its peak during 110-120 day period following sowing. 
+The plants are usually cut close to the ground by hand. A curved, sickle type knife is used to cut the plants. The plants are then sorted out according to height and diameter. The assorted plants are tied into bundles. Each bundle weighs 8-10 kg. The bundles are kept standing in the field for 3–4 days for defoliation.</comment>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="true" />
+    <productInformation>
+      <text xml:lang="en" index="1">This is the harvested mature jute plant before the retting process. Farmers usually cut mature jute plants and keep as a bundle. The bundle then goes into retting process in order to extract jute fibre.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="50674001-117e-4885-a8cd-53e485eaca3f" unitId="8266bd67-ebd3-4d31-b972-eee3cf0da36f">
     <name xml:lang="en">used railway track</name>
     <unitName xml:lang="en">m*year</unitName>
@@ -16801,6 +17303,37 @@ Reference: http://www.fao.org/forestry/17111/en</comment></property>
     <property propertyId="f74d688f-15db-411c-af4e-5110e136ec21" amount="724" isDefiningValue="false" />
     <property propertyId="f6e8dc68-9e1a-498e-a384-f731aa70ba37" amount="357" isDefiningValue="false" />
     <property propertyId="4188c979-9024-41a0-9d68-94b267a06469" amount="997" isDefiningValue="false" />
+    <productInformation />
+  </intermediateExchange>
+  <intermediateExchange id="c8e90fe9-16f0-4235-b0ad-551813787ae8" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">sugarcane loading, by loader</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">This operation only occurs when the sugarcane is manually harvested. The operation time is 3.88 hours per ha and the diesel fuel consumption is 9.62 L diesel per hour of effective operation.
+</text>
+    </productInformation>
+  </intermediateExchange>
+  <intermediateExchange id="8d625863-c5b3-4d35-9881-551a40be00cd" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">sulfidic tailing, off-site, high gold content</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="b2be76f4-ea96-4fe3-97e8-dcccfc9572d8">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">39331: Waste and scrap of gold or of metal clad with gold</classificationValue>
+    </classification>
+    <comment xml:lang="en">This represents the gold wastes whose gold content makes it feasible  to be further processed to recover gold from old mine dupms at a recovery rate that varies depending on the material being treated</comment>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <property propertyId="ee301bc4-052a-40c2-a5d7-76fa6e429aa5" amount="0.0406685714285714" isDefiningValue="false" mathematicalRelation="0.028468/dry_mass_ST" isCalculatedAmount="true">
+      <comment xml:lang="en">grade of gold in the sulfidic tailing, off-site, high gold content is 0.028468 gr/tonne; the results has been adjusted on a dry mass basis </comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.3" isDefiningValue="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" variableName="dry_mass_ST" amount="0.7" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0.42857" isDefiningValue="false" />
     <productInformation />
   </intermediateExchange>
   <intermediateExchange id="58b3db4e-19b8-43f2-8545-55229a5ee6e4" unitId="f2aaa4ba-fb58-49a7-a552-e7f64366f379">
@@ -18228,6 +18761,30 @@ Harreus, A.L. et al. 2011. 2-Pyrrolidone. In Ullmann's Encyclopedia of Industria
       <classificationValue xml:lang="en">53262: Power plants</classificationValue>
     </classification>
   </intermediateExchange>
+  <intermediateExchange id="090718e7-9829-4f9e-a3d8-5d8cc9dcb92c" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="000124-38-9">
+    <name xml:lang="en">cement, blastfurnace slag 6-20%</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="ff592c08-adac-4b6c-b1da-69839f05c992">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">37440: Portland cement, aluminous cement, slag cement and similar hydraulic cements, except in the form of clinkers</classificationValue>
+    </classification>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false">
+      <uncertainty>
+        <lognormal meanValue="1" mu="0" variance="0" varianceWithPedigreeUncertainty="0.21" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <property propertyId="38f94dd1-d5aa-41b8-b182-c0c42985d9dc" amount="0" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false">
+      <uncertainty>
+        <lognormal meanValue="1" mu="0" variance="0" varianceWithPedigreeUncertainty="0.21" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <productInformation />
+  </intermediateExchange>
   <intermediateExchange id="8b2dfb58-660d-44eb-b83f-5d9e28e467db" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">protein feed, 100% crude</name>
     <unitName xml:lang="en">kg</unitName>
@@ -18384,6 +18941,29 @@ Harreus, A.L. et al. 2011. 2-Pyrrolidone. In Ullmann's Encyclopedia of Industria
       <comment xml:lang="en">Industry value; Arcelor Mittal, chemical composition of blast furnace slag (http://www.cst.com.br/english/products/co_products/catalog_products/blast_slag/blast_slag.asp, accessed: 20121003).</comment></property>
     <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
     <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
+  </intermediateExchange>
+  <intermediateExchange id="5d15df3e-fa54-45d5-85c6-5e3f5b89b20e" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">zinc scrap, post-consumer</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="8aa3c94b-ddfe-46c0-afb3-ea5206043999">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">39365: Waste and scrap of zinc</classificationValue>
+    </classification>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" isCalculatedAmount="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <property propertyId="33f96fe7-39da-47ca-837f-f2c311681d1b" amount="1" isDefiningValue="false">
+      <comment xml:lang="en">zinc content on a dry matter basis</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" isCalculatedAmount="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <productInformation>
+      <text xml:lang="en" index="1">This product refers to an output of zinc-rich solid from incineration plants thats that employ the FLUWA treatment. The product is derived from the treatment of fly ash.  </text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="79f07b64-f223-4ada-bd60-5e524c9c9a5a" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">wastewater from liquid crystal display production</name>
@@ -20126,8 +20706,8 @@ Reference(s): Koenig, G., Lohmar, E., Rupprich, N., Lison, M. and Gnass, A. 2012
     <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.457294" isDefiningValue="false" mathematicalRelation="(1-protein-fat-ash)*0.444+protein*0.535+fat*0.774" isCalculatedAmount="true">
       <comment xml:lang="en">Calculated from C_content = polysaccharids*0.444+protein*0.535+lipids*0.774 and polysaccharids = 1-(protein+lipids+ash)</comment></property>
     <productInformation>
-      <text xml:lang="en" index="1">Fresh South Pacific hake (Merluccius gayi)</text>
       <imageUrl index="2">https://db3.ecoinvent.org/images/05da9c9c-c5c9-47a9-8cd1-5bbe119543e7</imageUrl>
+      <text xml:lang="en" index="1">Fresh South Pacific hake (Merluccius gayi)</text>
     </productInformation>
   </intermediateExchange>
   <intermediateExchange id="8795dc98-b6c7-4f09-be36-66739ea84900" unitId="2f4daad7-5331-4f14-930c-d8bca924557d">
@@ -20186,6 +20766,18 @@ Reference(s): Koenig, G., Lohmar, E., Rupprich, N., Lison, M. and Gnass, A. 2012
     <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.4" isDefiningValue="false">
       <comment xml:lang="en">water content on a wet matter basis</comment></property>
     <productInformation />
+  </intermediateExchange>
+  <intermediateExchange id="85086b85-ef0a-55c6-be1f-66e45e7aeaaa" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">land use change, pasture, man made</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39b0f0ab-1a2f-401b-9f4d-6e39400760a4">
+      <classificationSystem xml:lang="en">By-product classification</classificationSystem>
+      <classificationValue xml:lang="en">allocatable product</classificationValue>
+    </classification>
+    <classification classificationId="01bf1d04-21b2-46f5-b720-e7232c040c2b">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">7: Financial and related services; real estate services; and rental and leasing services</classificationValue>
+    </classification>
   </intermediateExchange>
   <intermediateExchange id="5b3e03a6-ee21-4e24-94ab-66ff0212746e" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">kenaf fibre</name>
@@ -20720,6 +21312,35 @@ Reference(s): Koenig, G., Lohmar, E., Rupprich, N., Lison, M. and Gnass, A. 2012
       <comment xml:lang="en">Inventoried waste contains 100% dross, aluminium electrolysis</comment></property>
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="7dea0df1-ecc7-464f-9e3c-698f0a782311" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">flax husks</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="fedb5ced-540a-430f-b4d3-5ce1be20d00c">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">01919: Forage products, n.e.c.</classificationValue>
+    </classification>
+    <synonym xml:lang="en">flax crop by-product</synonym>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" variableName="flax_husks_input_C_content_non_fossil" amount="0.475" isDefiningValue="false">
+      <comment xml:lang="en">Biogenic carbon content on a dry mass basis (47.5% DM) derived from FAOSTAT.
+Reference: http://www.fao.org/forestry/17111/en"</comment></property>
+    <property propertyId="6bc8ac5e-cc4c-45fb-93dc-53c0e45091df" variableName="flax_husks_input_gross_E_feed_per_kg_DM" amount="19.5" isDefiningValue="false">
+      <comment xml:lang="en">Gross energy content (19.5 MJ/kg DM) for flax straw and flax crop by-products. Reference: Feedipedia - Animal Feed Resources Information System. Accessed online at: https://www.feedipedia.org/content/about-feedipedia on 23/03/2018.</comment></property>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" variableName="flax_husks_input_C_content_fossil" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">Carbon content fossil is considered zero in all agricultural products and by-products.</comment></property>
+    <property propertyId="8cd87c78-b43c-41be-9dfa-6dcc15bcb3c9" variableName="flax_husks_input_protein_feed_per_kg_DM" amount="5.3" isDefiningValue="false">
+      <comment xml:lang="en">Crude protein content (5.3 MJ/kg DM) for flax straw and flax crop by-products. Reference: Feedipedia - Animal Feed Resources Information System. Accessed online at: https://www.feedipedia.org/content/about-feedipedia on 23/03/2018.</comment></property>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" variableName="flax_husks_input_water_content" amount="0.102535832414553" isDefiningValue="false" isCalculatedAmount="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" variableName="flax_husks_input_WWM" amount="0.093" isDefiningValue="false" isCalculatedAmount="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" variableName="flax_husks_input_DM" amount="0.907" isDefiningValue="false" isCalculatedAmount="false">
+      <comment xml:lang="en">Dry matter content (90.7% wet weight) for flax straw and flax crop by-products. Reference: Feedipedia - Animal Feed Resources Information System. Accessed online at: https://www.feedipedia.org/content/about-feedipedia on 23/03/2018.</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" variableName="flax_husks_input_WM" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <productInformation>
+      <text xml:lang="en" index="1">Flax husks are a by-product of the flax fibre production.  Husks are the non-fibrous part of the stems and they are produced after removing the fibres. It is primarily used in the animal feed market. 
+</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="0baac448-32a1-4b9f-afec-69a9b9b203ac" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">waste paper, sorted</name>
     <unitName xml:lang="en">kg</unitName>
@@ -20806,6 +21427,27 @@ Reference(s): Koenig, G., Lohmar, E., Rupprich, N., Lison, M. and Gnass, A. 2012
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">65221: Inland water transport services of freight by refrigerator vessels</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="07f702da-9f08-4082-85ea-6a3586caddd2" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">C3 hydrocarbon mixture</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="39b0f0ab-1a2f-401b-9f4d-6e39400760a4">
+      <classificationSystem xml:lang="en">By-product classification</classificationSystem>
+      <classificationValue xml:lang="en">allocatable product</classificationValue>
+    </classification>
+    <classification classificationId="0f4a753f-8fe2-4126-8a4c-6a91e7d71820">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">3342: Ethylene, propylene, butylene, butadiene and other petroleum gases or gaseous hydrocarbons, except natural gas</classificationValue>
+    </classification>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.84" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
+    <productInformation>
+      <text xml:lang="en" index="1">Gaseous mixture of C3-hydrocarbons, yielded from petroleum refinery operation, assumed to consists of 68% propene (also known as propylene or methyl ethylene) and 32% propane.</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="ca28222f-2bef-4c4f-b966-6a3e8932fa46" unitId="eb955b7c-7bed-401f-9c76-5db716ca3640">
     <name xml:lang="en">greenhouse, glass walls and roof</name>
@@ -20894,6 +21536,30 @@ Reference(s): Koenig, G., Lohmar, E., Rupprich, N., Lison, M. and Gnass, A. 2012
       <classificationValue xml:lang="en">34250: Salts of oxometallic or peroxometallic acids; colloidal precious metals and compounds thereof; inorganic and o[…]</classificationValue>
     </classification>
   </intermediateExchange>
+  <intermediateExchange id="0fa023d0-d729-4ef3-bb1b-6ac5cef7b81d" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="000124-38-9">
+    <name xml:lang="en">cement, blast furnace slag 36-65%</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="ff592c08-adac-4b6c-b1da-69839f05c992">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">37440: Portland cement, aluminous cement, slag cement and similar hydraulic cements, except in the form of clinkers</classificationValue>
+    </classification>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false">
+      <uncertainty>
+        <lognormal meanValue="1" mu="0" variance="0" varianceWithPedigreeUncertainty="0.21" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false">
+      <uncertainty>
+        <lognormal meanValue="1" mu="0" variance="0" varianceWithPedigreeUncertainty="0.21" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <property propertyId="38f94dd1-d5aa-41b8-b182-c0c42985d9dc" amount="0" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" />
+    <productInformation />
+  </intermediateExchange>
   <intermediateExchange id="fa11f755-b0fc-4b50-b3cc-6acde5908f28" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">adhesive, for metal</name>
     <unitName xml:lang="en">kg</unitName>
@@ -20956,6 +21622,27 @@ Reference(s): Koenig, G., Lohmar, E., Rupprich, N., Lison, M. and Gnass, A. 2012
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">54730: Painting services</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="06eb6d76-0ac1-5ba6-aa9b-6b0228e0dd96" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">base oil</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="47ffdbe6-56cf-4160-bce7-76f47f61c49d">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">3338: Lubricants</classificationValue>
+    </classification>
+    <classification classificationId="39b0f0ab-1a2f-401b-9f4d-6e39400760a4">
+      <classificationSystem xml:lang="en">By-product classification</classificationSystem>
+      <classificationValue xml:lang="en">allocatable product</classificationValue>
+    </classification>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0.92" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
+    <productInformation>
+      <text xml:lang="en" index="1">Base oil is a basis component for different petroleum products, mainly lubricants due to its technical features (e.g. viscosity index). Often, additional additives are added like PAO (synthetic lubricants). </text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="e6db6324-2df1-4563-b99d-6b051aca5201" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">stone wool factory</name>
@@ -21881,6 +22568,29 @@ Reference(s): Koenig, G., Lohmar, E., Rupprich, N., Lison, M. and Gnass, A. 2012
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1">
       <comment xml:lang="en">assumed same as sodium hydroxide</comment></property>
   </intermediateExchange>
+  <intermediateExchange id="45cb59e4-59af-4fbd-a6fe-70019f450213" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">fish canning, large fish</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="4f8d4056-5b19-46a1-9b26-1a792f15770b">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">212: Prepared and preserved fish, crustaceans, molluscs and other aquatic invertebrates</classificationValue>
+    </classification>
+    <comment xml:lang="en">Includes all activities related to the canning process, excludes the provision of raw material (fish)</comment>
+    <productInformation>
+      <text xml:lang="en" index="1">Large fish (e.g. tuna) canned in chromium steel or aluminium cans. The canning process involves fish processing, esterilisation and filling of cans, cooking and sealing of cans.</text>
+      <text xml:lang="en" index="2">Properties of canned tuna:
+Wet mass: 1
+Dry mass: 0.67568
+Water in wet mass: 0.32432
+Water content: 0.48000
+Carbon content (fossil): 0
+Carbon content (non-fossil): 0.549
+Fat (kg): 0.277
+Protein (kg): 0.233
+Ash (kg): 1.7
+Energy value (MJ/kg): 14.482</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="6c50f204-1e98-422e-b20c-70088087f505" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">manure, liquid, swine</name>
     <unitName xml:lang="en">kg</unitName>
@@ -22619,6 +23329,11 @@ Reference(s): Koenig, G., Lohmar, E., Rupprich, N., Lison, M. and Gnass, A. 2012
       </uncertainty>
       <comment xml:lang="en">Literature value. Estimated lifetime for lagoon facility as reported by Godin (2012). </comment></property>
   </intermediateExchange>
+  <intermediateExchange id="2158c948-5317-40d4-9803-73a47fbcad35" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">cocoons</name>
+    <unitName xml:lang="en">kg</unitName>
+    <productInformation />
+  </intermediateExchange>
   <intermediateExchange id="9485f4e8-b73b-47cd-b262-73a4f37a922e" unitId="1017f68a-f818-4f9d-a34d-a31e7386f628">
     <name xml:lang="en">selective coat, copper sheet, black chrome</name>
     <unitName xml:lang="en">m2</unitName>
@@ -22703,6 +23418,19 @@ Kenny, M. and Oates, T. 2007. Lime and Limestone. In Ullmann's Encyclopedia of I
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">49941: Parts and accessories of motorcycles and side-cars</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="b9c8013b-204a-42f9-b73c-7400452fed97" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">sugarcane vinasse application, by wheel reel irrigation</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">This operation represents the sugarcane vinasse application in one hectare (ha). This operation, besides providing water and nutrients, is seen as a soil fertility recovery strategy. The operation time is  0.23  hours per ha.
+</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="7f4879a4-7028-47c6-935a-744c3cffd8f1" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">concrete, sole plate and foundation</name>
@@ -24466,6 +25194,18 @@ Pham, H.Q. and Marks, M.J. 2005. Epoxy Resins. In Ullmann's Encyclopedia of Indu
       <classificationValue xml:lang="en">39990: Other wastes n.e.c.</classificationValue>
     </classification>
   </intermediateExchange>
+  <intermediateExchange id="75edc073-be76-5bc1-82a1-7be1ce500aaa" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">land use change, forest, intensive</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39b0f0ab-1a2f-401b-9f4d-6e39400760a4">
+      <classificationSystem xml:lang="en">By-product classification</classificationSystem>
+      <classificationValue xml:lang="en">allocatable product</classificationValue>
+    </classification>
+    <classification classificationId="01bf1d04-21b2-46f5-b720-e7232c040c2b">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">7: Financial and related services; real estate services; and rental and leasing services</classificationValue>
+    </classification>
+  </intermediateExchange>
   <intermediateExchange id="e7c72290-eba0-41ef-933d-7bf8583f1da7" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">used internal combustion engine, from passenger car</name>
     <unitName xml:lang="en">kg</unitName>
@@ -24624,6 +25364,30 @@ For MgSiO3, CAS-number = 63210-56-0</comment>
     <synonym xml:lang="en">soaprock</synonym>
     <synonym xml:lang="en">soap stone</synonym>
     <synonym xml:lang="en">magnesium dioxido(oxo)silane</synonym>
+  </intermediateExchange>
+  <intermediateExchange id="a5a519f2-dd62-4359-a04e-7c7f80ff1a49" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">textile, silk</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="336222f4-dd01-4a34-8fe3-6c3b960d2e07">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">26510: Woven fabrics of silk or of silk waste</classificationValue>
+    </classification>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" variableName="WWM" amount="0.03" isDefiningValue="false">
+      <comment xml:lang="en">Based on dry mass assumtion, balance is considered to be the water in wet mass</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" mathematicalRelation="DM+ WWM" isCalculatedAmount="true" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" variableName="DM" amount="0.97" isDefiningValue="false">
+      <comment xml:lang="en">Dry matter content is assumed as 97%</comment></property>
+    <property propertyId="dbf41b1b-c7b8-4d5e-b39c-f858eb868df5" amount="0.31" isDefiningValue="false">
+      <comment xml:lang="en">Proxy based on Sericin Biochemistry</comment></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.3769" isDefiningValue="false">
+      <comment xml:lang="en">"Carbon content on a dry mass basis. All carbon is assumed to be biogenic due to the nature of the product. Carbon content of cotton is 0.44 kg of non-fossil carbon per kg of dry mass of cotton. Value is calculated based on the the composition of silk which is 64% cellulose. The data uses composition of silk fibers accessed on 10/11/2017 on: http://textilefashionstudy.com/chemical-composition-of-silk-fiber-silk-natural-fiber/</comment></property>
+    <property propertyId="f53a5dbc-3bd3-4570-adff-b00790ea3ffc" amount="0.16" isDefiningValue="false">
+      <comment xml:lang="en">Proxy based on Sericin Biochemistry</comment></property>
+    <property propertyId="2d23d1bb-e137-4ade-83fc-fbd0421e6cd5" amount="0.6" isDefiningValue="false">
+      <comment xml:lang="en">Proxy based on Sericin Biochemistry</comment></property>
+    <productInformation>
+      <text xml:lang="en" index="1">Product refers to premium grade quality of silk. This textile is produced by respective premium grade quality silk yarn.</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="cca72f1b-007e-445f-8403-7c87ed6b5d62" unitId="1017f68a-f818-4f9d-a34d-a31e7386f628">
     <name xml:lang="en">flat plate solar collector, Cu absorber</name>
@@ -25078,6 +25842,17 @@ For MgSiO3, CAS-number = 63210-56-0</comment>
   <intermediateExchange id="bf9b1c2e-5c19-4abc-b638-7e628316f2c7" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">concrete, 45MPa</name>
     <unitName xml:lang="en">m3</unitName>
+    <property propertyId="4188c979-9024-41a0-9d68-94b267a06469" variableName="gravel" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">Calculated value. From primary data callection</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" variableName="ref_WM" amount="0" isDefiningValue="false" mathematicalRelation="ref_WWM+ref_DM" isCalculatedAmount="true">
+      <comment xml:lang="en">Considering that part of the water will evaporate during curing.</comment></property>
+    <property propertyId="f74d688f-15db-411c-af4e-5110e136ec21" variableName="sand" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">Calculated value. From primary data callection</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" variableName="ref_WWM" amount="0" isDefiningValue="false" mathematicalRelation="batch_water" isCalculatedAmount="true">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" variableName="ref_DM" amount="0" isDefiningValue="false" mathematicalRelation="sand+gravel+cement" isCalculatedAmount="true" />
+    <property propertyId="f6e8dc68-9e1a-498e-a384-f731aa70ba37" variableName="cement" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">Calculated value. From primary data callection</comment></property>
     <productInformation />
   </intermediateExchange>
   <intermediateExchange id="c918095d-30ff-4e4c-9243-7e69ee090cf3" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
@@ -25965,6 +26740,17 @@ technology with low VOC-use</comment>
       <classificationValue xml:lang="en">39: Wastes or scraps</classificationValue>
     </classification>
   </intermediateExchange>
+  <intermediateExchange id="6f657e93-5771-4da9-8e8b-830d0abddafa" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">rug</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="b387ee16-c73f-4331-9111-95329293013b">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">27230: Carpets and other textile floor coverings, tufted</classificationValue>
+    </classification>
+    <productInformation>
+      <text xml:lang="en" index="1">Rug is a product of inferior quality compared to a carpet. It is produced from waste synthetic yarn and waste synthetic textiles from the textile industry.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="2f59d2ff-3591-4993-b5c3-8311033b6773" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">glider, for electric scooter</name>
     <unitName xml:lang="en">kg</unitName>
@@ -25976,6 +26762,27 @@ technology with low VOC-use</comment>
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">49941: Parts and accessories of motorcycles and side-cars</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="68982c18-158b-4166-a54a-8321bfb0cc24" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">petroleum slack wax</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="6ea174ab-1622-4074-9089-e0beea7956d0">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">33500: Petroleum jelly; paraffin wax, micro- crystalline petroleum wax, slack wax, ozokerite, lignite wax, peat wax, […]</classificationValue>
+    </classification>
+    <classification classificationId="39b0f0ab-1a2f-401b-9f4d-6e39400760a4">
+      <classificationSystem xml:lang="en">By-product classification</classificationSystem>
+      <classificationValue xml:lang="en">allocatable product</classificationValue>
+    </classification>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.85" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+    <productInformation>
+      <text xml:lang="en" index="1">Slack wax (petroleum) consists of a mixture of oil and wax, and is commonly used as a precursor for scale wax and paraffin wax.</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="b80eb2d5-1256-41bb-a61d-83252d0dfd4d" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">diesel, low-sulfur</name>
@@ -26743,6 +27550,30 @@ Reference: http://www.fao.org/forestry/17111/en</comment></property>
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="20992">
       <comment xml:lang="en">Obtained from the addition of the weights of the components of the train.</comment></property>
   </intermediateExchange>
+  <intermediateExchange id="e966c047-14ea-461a-b109-869188de323e" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="000124-38-9">
+    <name xml:lang="en">cement, portland fly ash cement 21-35%</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="ff592c08-adac-4b6c-b1da-69839f05c992">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">37440: Portland cement, aluminous cement, slag cement and similar hydraulic cements, except in the form of clinkers</classificationValue>
+    </classification>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false">
+      <uncertainty>
+        <lognormal meanValue="1" mu="0" variance="0" varianceWithPedigreeUncertainty="0.21" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false">
+      <uncertainty>
+        <lognormal meanValue="1" mu="0" variance="0" varianceWithPedigreeUncertainty="0.21" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" />
+    <property propertyId="38f94dd1-d5aa-41b8-b182-c0c42985d9dc" amount="0" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <productInformation />
+  </intermediateExchange>
   <intermediateExchange id="10d4f2e3-6343-4ea1-a721-86c89858e646" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">waste plastic plaster</name>
     <unitName xml:lang="en">kg</unitName>
@@ -27158,6 +27989,18 @@ Reference: http://www.fao.org/forestry/17111/en</comment></property>
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">431: Engines and turbines and parts thereof</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="bf319565-54d1-4ff2-aff4-8926a4af138a" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">fertilising, by stool splitter, sugarcane</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">This exchange represents the boiler ashes application operation  in one hectare (ha). The application is done in the furrow by a stool splitter aiming soil fertilization. The operation time is  2.8 hours per ha and the diesel fuel consumption is 13.54 L diesel per hour of effective operation.</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="510a8fef-7075-4da2-9984-8936ba08c89f" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">protein pea, Swiss integrated production</name>
@@ -28458,6 +29301,25 @@ References: Bettermann, G., Krause, W., Riess, G. and Hofmann, T. 2000. Phosphor
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="2fca690e-d8ae-4b9b-8c48-8f658b6e7268" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">polyester fibre</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="96bc6ba6-17f1-4dc6-818b-5c9753e894f8">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">35510: Synthetic filament tow and staple fibres, not carded or combed</classificationValue>
+    </classification>
+    <property propertyId="38f94dd1-d5aa-41b8-b182-c0c42985d9dc" amount="2.188" isDefiningValue="false">
+      <comment xml:lang="en">Calculated value based on data from United Nations Commodity Trade Statistics Database (comtrade.un.org). UN comtrade category:  550951. Year 2016. Using exchange rate of 1EURO = 1.209 USD. Average of price of import into 4 main markets (US, JP, IN and CN).</comment></property>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0.625" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <productInformation>
+      <text xml:lang="en" index="1">Polyester fibre is a synthetic fibre that is extensively used in the textile industry. Polyethylene terephthalate is the most common polyester.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="e6f2d687-e015-44e2-ad5f-8f6b02481ab1" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="1344-09-8">
     <name xml:lang="en">sodium silicate, without water, in 48% solution state</name>
     <unitName xml:lang="en">kg</unitName>
@@ -28569,6 +29431,29 @@ References: Bettermann, G., Krause, W., Riess, G. and Hofmann, T. 2000. Phosphor
       <comment xml:lang="en">water content on a dry matter basis</comment></property>
     <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false">
       <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+  </intermediateExchange>
+  <intermediateExchange id="aa2a40b9-2752-4ecb-a5ed-901f0aa19797" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="7440-57-5">
+    <name xml:lang="en">gold, unrefined</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="58ffa870-767d-4a3d-b194-be8772e5295f">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">4132: Gold (including gold plated with platinum), unwrought or in semi-manufactured forms, or in powder form</classificationValue>
+    </classification>
+    <comment xml:lang="en">Unrefined gold (85% pure); synonims are gold dore, crude gold. Dore refers to an unrefined (therefore impure) alloy of gold with variable quantities of silver and smaller quantities of base metals, which is produced at a mine berfore passing on to a refinery for upgrading toLondon Good Delivery Standard.</comment>
+    <synonym xml:lang="en">gold dore, crude gold</synonym>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="ee301bc4-052a-40c2-a5d7-76fa6e429aa5" amount="0.85" isDefiningValue="false">
+      <comment xml:lang="en">gold content on a dry matter basis</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <productInformation />
   </intermediateExchange>
   <intermediateExchange id="4ec33358-7145-4997-b07c-90254af81601" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="007439-90-9">
     <name xml:lang="en">krypton, gaseous</name>
@@ -28810,6 +29695,28 @@ References: Bettermann, G., Krause, W., Riess, G. and Hofmann, T. 2000. Phosphor
     <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
     <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0.117492127111366" />
     <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.002" />
+  </intermediateExchange>
+  <intermediateExchange id="cf048faf-1e94-4788-a4cb-90c7074295e3" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
+    <name xml:lang="en">fish freezing plant</name>
+    <unitName xml:lang="en">unit</unitName>
+    <classification classificationId="cd744d31-6a3b-48fc-9399-afdd06504c85">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">8812: Fish processing services</classificationValue>
+    </classification>
+    <comment xml:lang="en">One unit of plant represents the installed capacity required to process 1 t of raw material</comment>
+    <property propertyId="964f8b50-ce16-4364-835a-a3db5fb760b0" variableName="lifetime" amount="30" isDefiningValue="false" sourceId="50f5e14e-0a82-43db-a911-3658080667c8">
+      <uncertainty>
+        <triangular minValue="27" mostLikelyValue="30" maxValue="33" />
+        <pedigreeMatrix reliability="4" completeness="4" temporalCorrelation="1" geographicalCorrelation="1" furtherTechnologyCorrelation="1" />
+      </uncertainty></property>
+    <property propertyId="6b2e1ace-3d42-4536-aed5-866ac1281364" variableName="capacity" amount="25932" isDefiningValue="false" sourceId="50f5e14e-0a82-43db-a911-3658080667c8">
+      <uncertainty>
+        <triangular minValue="720" mostLikelyValue="25932" maxValue="266400" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <productInformation>
+      <text xml:lang="en" index="1">Fish freezing plants include a floor area for fish processing, and industrial systems such as air compression, pumps and cold (chillers, blast cold chambers, tunnels, etc).</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="841043ee-70f6-4d8c-9fc9-90d118954821" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">hard coal coke factory</name>
@@ -29145,6 +30052,19 @@ References: Bettermann, G., Krause, W., Riess, G. and Hofmann, T. 2000. Phosphor
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="832fb0de-b129-4dfe-97d8-92206a61068c" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">bleaching and dyeing, yarn</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="588cd1d8-b858-4996-8832-5e40583db62a">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">9715: Dyeing and colouring services</classificationValue>
+    </classification>
+    <productInformation>
+      <text xml:lang="en" index="1">Bleached yarn has improved whiteness, removed natural coloration and remaining trace impurities from the cotton; the degree of bleaching necessary is determined by the required whiteness and absorbency. Cotton being a vegetable fibre will be bleached using an oxidizing agent, such as dilute sodium hypochlorite or dilute hydrogen.
+
+Dyeing refers to 40/2 CW count greige yarn to the dye shade 18-309.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="7fd72cae-76cf-47b1-b0f7-92341b46ef7e" unitId="2f4daad7-5331-4f14-930c-d8bca924557d">
     <name xml:lang="en">transport, freight, lorry with refrigeration machine, 7.5-16 ton, EURO3, carbon dioxide, liquid refrigerant, cooling</name>
     <unitName xml:lang="en">metric ton*km</unitName>
@@ -29345,8 +30265,8 @@ This dataset and the emission factors within it relate to 1kg of brake wear. In 
     <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.481541" isDefiningValue="false" mathematicalRelation="(1-anch_protein-anch_fat-anch_ash)*0.444+anch_protein*0.535+anch_fat*0.774" isCalculatedAmount="true">
       <comment xml:lang="en">Calculated from C_content = polysaccharids*0.444+protein*0.535+lipids*0.774 and polysaccharids = 1-(protein+lipids+ash)</comment></property>
     <productInformation>
-      <imageUrl index="2">https://db3.ecoinvent.org/images/579f3822-5ac3-4f90-a8ea-c9398f66363a</imageUrl>
       <text xml:lang="en" index="1">Fresh Peruvian anchovy (Engraulis ringens)</text>
+      <imageUrl index="2">https://db3.ecoinvent.org/images/579f3822-5ac3-4f90-a8ea-c9398f66363a</imageUrl>
     </productInformation>
   </intermediateExchange>
   <intermediateExchange id="c6a438b2-2b0f-43db-aadf-9310938597db" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
@@ -30642,6 +31562,48 @@ Thiemann, M., Scheibler, E. and Wiegand, K. W. 2000. Nitric Acid, Nitrous Acid, 
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="2dcfa182-da2f-594b-b0fd-9944a5ed7213" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">wastewater from textile production</name>
+    <unitName xml:lang="en">m3</unitName>
+    <classification classificationId="ee3238ec-ca7a-4ddc-af1b-e7c35957b9b6">
+      <classificationSystem xml:lang="en">By-product classification</classificationSystem>
+      <classificationValue xml:lang="en">Waste</classificationValue>
+    </classification>
+    <classification classificationId="439c9891-5c98-4664-bbef-01753519dae0">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">94110: Sewerage and sewage treatment services</classificationValue>
+    </classification>
+    <property propertyId="3f469e9e-267a-4100-9f43-4297441dc726" amount="0.501" />
+    <property propertyId="abc78955-bd5f-4b1a-9607-0448dd75ebf2" amount="6.9E-06" />
+    <property propertyId="c0447419-7139-44fe-a855-ea71e2b78585" amount="7.6E-05" />
+    <property propertyId="dd13a45c-ddd8-414d-821f-dfe31c7d2868" amount="0.495" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.216883116883117">
+      <comment xml:lang="en">COD is 7.79e-4 kg/kg (Tab 12.11, ecoinvent v2.2 report 18_III). COD was converted to TOC, using conversion factors in Tab 4.10 (ecoinvent v2.2 report 13_IV). TOC was considered as Total Carbon.</comment></property>
+    <property propertyId="d26c0a60-86aa-41c8-80ee-3acabc4a5095" amount="0.003219" />
+    <property propertyId="77154d2e-4b05-48f2-a89a-789acd170497" amount="0.0007758" />
+    <property propertyId="ebf21bca-b7cf-45d0-9d82-bfb80519a970" amount="0.0005904" />
+    <property propertyId="1111ac7e-20df-4ab4-9e02-57821894372c" amount="3E-07" />
+    <property propertyId="8d27623b-147c-44e8-93cc-2183eac22991" amount="4.4E-05" />
+    <property propertyId="71bc04b9-abfe-4f30-ab8f-ba654c7ad296" amount="6.43E-05" />
+    <property propertyId="2f7030b9-bafc-4b43-8504-deb8b5044130" amount="5E-06" />
+    <property propertyId="b321f120-4db7-4e7c-a196-82a231023052" amount="3.1E-06" />
+    <property propertyId="bca4bb32-f701-46bb-ba1e-bad477c19f7f" amount="1.5E-05" />
+    <property propertyId="d574cc22-07f2-4202-b564-1116ab197692" amount="3.99E-05" />
+    <property propertyId="dcdc6c7b-0b72-4174-bc90-f51ed66426d5" amount="5.61E-05" />
+    <property propertyId="33976f6b-2575-4410-8f60-d421bdf3e554" amount="7.6E-06" />
+    <property propertyId="8b49eeb7-9caf-4101-b516-eb0aef30d530" amount="0.01647" />
+    <property propertyId="6cc518c8-4769-40df-b2cf-03f9fe00b759" amount="0.0001075" />
+    <property propertyId="e7451d8a-77af-44e0-86cf-ccd17ac84509" amount="0.0001091" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1000" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="999.761526883117" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="4192.34478061999" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0.238473116883117">
+      <comment xml:lang="en">Calculated by adding carbon content, non-fossil with all elemental mass concentrations present in the wastewater before tretament.</comment></property>
+    <productInformation>
+      <text xml:lang="en" index="1">This wastewater is produced from textile mills. It represents an average wastewater produced from various processes involded in the textile industry such as bleaching and dying. Composition is meant to describe the profile of the wastewater before any type of treatment.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="a6ec2991-f0f9-42fe-b71c-995e50838b9b" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">glass wool mat</name>
     <unitName xml:lang="en">kg</unitName>
@@ -31183,6 +32145,15 @@ Thiemann, M., Scheibler, E. and Wiegand, K. W. 2000. Nitric Acid, Nitrous Acid, 
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0.03" />
     <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
     <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
+  </intermediateExchange>
+  <intermediateExchange id="44a35b54-ed4d-4e04-b822-9bc4b7e75952" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">textile, non woven polypropylene</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="28562e2a-4098-4a06-8b6d-8cc4ebf809a5">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">26710: Woven fabrics of man-made filament yarn, obtained from high tenacity yarn of nylon or other polyamides, of pol[…]</classificationValue>
+    </classification>
+    <productInformation />
   </intermediateExchange>
   <intermediateExchange id="6d153080-c3aa-473e-8c78-9bd46e07ee4e" unitId="77ae64fa-7e74-4252-9c3b-889c1cd20bfc">
     <name xml:lang="en">electricity, high voltage, for Swiss Federal Railways</name>
@@ -32404,6 +33375,24 @@ This unit process refers to the unit of active membrane surface for reverse osmo
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="5060225e-6ea5-4842-90d0-a1971c92dfc5" unitId="5b972631-34e3-4db7-a615-f6931770a0cb" defaultVariableName="seedling_mango">
+    <name xml:lang="en">mango seedling</name>
+    <unitName xml:lang="en">unit</unitName>
+    <classification classificationId="0c96d290-b57f-4b6a-8fb6-cb7d4bea733f">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">8611: Support and operation services to crop production</classificationValue>
+    </classification>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0.04" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="0.13" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.09" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" variableName="REF_PRODUCT_C_content_non_fossil" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">biogene carbon content on a dry matter basis</comment></property>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="2.25" isDefiningValue="false" isCalculatedAmount="false" />
+    <productInformation>
+      <text xml:lang="en" index="1">Mango seedlings are cultivated in nurseries to then being transplanted to the field for formation of orchard.</text>
+      <imageUrl index="2">https://db3.ecoinvent.org/images/4792ae3c-881a-4be5-9ed8-fc9598d594d7</imageUrl>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="ae87300c-3f69-41bc-b6ff-a1b8cb755b11" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">impact extrusion of steel, cold, initial surface treatment</name>
     <unitName xml:lang="en">kg</unitName>
@@ -33008,6 +33997,26 @@ This unit process refers to the unit of active membrane surface for reverse osmo
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0.999" />
   </intermediateExchange>
+  <intermediateExchange id="aea832ee-4616-4207-b7cd-a4fe0a9ad641" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">titania slag, 85% titanium dioxide</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="0ff66513-6abd-45d9-9efc-906a8c304bdf">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">41601: Tungsten, molybdenum, tantalum, magnesium, cobalt, cadmium, titanium, zirconium, beryllium, gallium, hafnium, […]</classificationValue>
+    </classification>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <property propertyId="e9fa11a1-1011-421d-aa34-0544d767a632" amount="0.51" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <productInformation>
+      <text xml:lang="en" index="2">Titanium dioxide is beneficiated by end-users to provide brilliance and opacity to products such as paints, plastics or paper.  Manufacturers mainly use rutile in welding rod fluxes	as	it	stabilises	the	arc	and	protects	the	molten metal from oxidation - forming a superior welding joint. In its titanium metal form, it is used extensively in the aerospace and aviation industries because of its lightness, strength and corrosion – and heat-resistance. These properties also make it ideal	for	use	in	artificial	hip	joints,	pacemakers	and	spectacle frames.
+</text>
+      <text xml:lang="en" index="1">Titania slag, which comes from ilmenite, contains up to 85 per cent titanium dioxide, while rutile contains up to 94 per cent titanium dioxide. The largest application of titanium dioxide is as a white pigment representing between 95 and 98 per cent of worldwide TiO2 consumption. The remaining uses are as a flux for electric welding rods and in certain metallurgical and electronic applications. </text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="42d2fd94-f9c8-4903-ac72-a4fe5af22233" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">wastewater from PV cell production</name>
     <unitName xml:lang="en">m3</unitName>
@@ -33242,6 +34251,16 @@ This unit process refers to the unit of active membrane surface for reverse osmo
       <comment xml:lang="en">water mass/dry mass</comment></property>
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+  </intermediateExchange>
+  <intermediateExchange id="7ecf7b27-7c72-4e75-8978-a61b11509eee" unitId="f2aaa4ba-fb58-49a7-a552-e7f64366f379">
+    <name xml:lang="en">floating hexagonal metal cage</name>
+    <unitName xml:lang="en">m</unitName>
+    <classification classificationId="3cb7f7b0-ce81-45a2-ac58-0cb103aca716">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">3845: Fishing rods and other line fishing tackle; fish landing nets, butterfly nets and similar nets; decoy "birds" a[…]</classificationValue>
+    </classification>
+    <comment xml:lang="en">Floating hexagonal metal cage for lake and river aquaculture</comment>
+    <productInformation />
   </intermediateExchange>
   <intermediateExchange id="137e2c15-2e4a-4bf4-a1e4-a630a87b2cb7" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
     <name xml:lang="en">sawnwood, beam, hardwood, raw, dried (u=20%)</name>
@@ -33901,6 +34920,28 @@ This unit process refers to the unit of active membrane surface for reverse osmo
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="d30ad511-0d19-4eae-8981-a8d11b965625" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
+    <name xml:lang="en">fish curing plant</name>
+    <unitName xml:lang="en">unit</unitName>
+    <classification classificationId="cd744d31-6a3b-48fc-9399-afdd06504c85">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">8812: Fish processing services</classificationValue>
+    </classification>
+    <comment xml:lang="en">One unit of plant represents the installed capacity required to process 1 t of raw material</comment>
+    <property propertyId="964f8b50-ce16-4364-835a-a3db5fb760b0" variableName="lifetime" amount="30" isDefiningValue="false" sourceId="50f5e14e-0a82-43db-a911-3658080667c8">
+      <uncertainty>
+        <triangular minValue="27" mostLikelyValue="30" maxValue="33" />
+        <pedigreeMatrix reliability="4" completeness="4" temporalCorrelation="1" geographicalCorrelation="1" furtherTechnologyCorrelation="1" />
+      </uncertainty></property>
+    <property propertyId="6b2e1ace-3d42-4536-aed5-866ac1281364" variableName="capacity" amount="1909" isDefiningValue="false" sourceId="50f5e14e-0a82-43db-a911-3658080667c8">
+      <uncertainty>
+        <triangular minValue="28" mostLikelyValue="1909" maxValue="11832" />
+        <pedigreeMatrix reliability="2" completeness="2" temporalCorrelation="1" geographicalCorrelation="1" furtherTechnologyCorrelation="1" />
+      </uncertainty></property>
+    <productInformation>
+      <text xml:lang="en" index="1">Fish curing plants include a floor area for fish processing, equipment for canning and sterilisation, fillet maturing areas, and industrial systems such as boilers, pumps, climatisation and air compression.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="94559e76-8b49-4844-ad81-a90c6ff55e19" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">cadmium sludge from zinc electrolysis stockpiling</name>
     <unitName xml:lang="en">kg</unitName>
@@ -34480,6 +35521,150 @@ References: Fiege, H., Voges, H.-W., Hamamoto, T., Umemura, S., Iwata, T., Miki,
     <synonym xml:lang="en">WTE</synonym>
     <synonym xml:lang="en">waste-to-energy</synonym>
   </intermediateExchange>
+  <intermediateExchange id="8f102ac5-ccae-4018-9a67-abfa113aa2b9" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">waste yarn and waste textile</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="04733a43-68da-4887-9057-c8d9da785b20">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">39214: Cotton waste, except garnetted stock</classificationValue>
+    </classification>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0.021273119070233" isCalculatedAmount="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0.97917" isCalculatedAmount="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.44455" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isCalculatedAmount="false" />
+    <property propertyId="dbf41b1b-c7b8-4d5e-b39c-f858eb868df5" amount="0.4933" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.02083" isCalculatedAmount="false" />
+    <property propertyId="2d23d1bb-e137-4ade-83fc-fbd0421e6cd5" amount="0.06215" />
+    <productInformation>
+      <text xml:lang="en" index="1">Waste yarn and waste textile refer to the byproducts of yarn and textile (or fabric) production. It refers to a mix composition from natural fibres.</text>
+    </productInformation>
+  </intermediateExchange>
+  <intermediateExchange id="633abfc6-0553-458f-b3cb-abfa114505ae" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">waste, pneumatic tyres</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="4d6d3ee7-1b14-4ea1-a35b-392998272c34">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">39260: Used pneumatic tyres of rubber</classificationValue>
+    </classification>
+    <property propertyId="d61b8768-8ef6-4a99-ae16-9e51f24ad5b5" amount="31.99">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="2bc683e4-3780-4f00-8c1d-fd53e05cfde7" amount="0.0012053">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="2d23d1bb-e137-4ade-83fc-fbd0421e6cd5" amount="0.06503">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="48c987bb-3144-4872-b5c7-b1389c40be25" amount="31.99">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="f6c7ebbb-902a-412f-a55b-0743aea00238" amount="0.014856">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="f9da385d-5b1b-4548-826c-0bf5892a9fd9" amount="0.0017939">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+    <property propertyId="d8364dfc-5753-4585-bf50-4d42b126f72d" amount="0.12219">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+    <property propertyId="dd7e15dc-c438-43f7-9c0d-d0a627163cf1" amount="0.011773">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="dbf41b1b-c7b8-4d5e-b39c-f858eb868df5" amount="0.030272">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="33f96fe7-39da-47ca-837f-f2c311681d1b" amount="0.016538">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="f53a5dbc-3bd3-4570-adff-b00790ea3ffc" amount="0.0047651">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.21947">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0.51211">
+      <comment xml:lang="en">Value is a weighted average from ELTs from cars and trucks. More information are found in the product information of the waste.</comment></property>
+    <productInformation>
+      <imageUrl index="2">https://db3.ecoinvent.org/images/0737c04f-5a87-42c0-a031-15ea227e6270</imageUrl>
+      <text xml:lang="en" index="1">End of Life Tyres (ELTs) waste contains 88.5% ELTs (burnable part); 11.5% Iron in ELTs. The waste composition is calculated as a weighted average as it is shown in the picture.</text>
+    </productInformation>
+  </intermediateExchange>
+  <intermediateExchange id="16a8785b-286a-4084-811e-abfa119e7ceb" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">waste, electrical and electronic cables</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="9f56efac-5ec3-4a0f-a505-78dd6324fdc9">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">39361: Waste and scrap of copper</classificationValue>
+    </classification>
+    <property propertyId="dbf41b1b-c7b8-4d5e-b39c-f858eb868df5" amount="0.0088261">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="48c987bb-3144-4872-b5c7-b1389c40be25" amount="10.456" />
+    <property propertyId="d61b8768-8ef6-4a99-ae16-9e51f24ad5b5" amount="10.537" />
+    <property propertyId="4054bfa7-dfcb-452e-b1dd-810b9e981506" amount="1.2625E-05">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="f6c7ebbb-902a-412f-a55b-0743aea00238" amount="0.00031721">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="6b90d16b-f20b-4b53-abc2-763f9455dc05" amount="1.9759E-05">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="f53a5dbc-3bd3-4570-adff-b00790ea3ffc" amount="0.0004205">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="e5507d89-78ad-4746-900c-b9afa5a62ea6" amount="6.7172E-06">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="2bc683e4-3780-4f00-8c1d-fd53e05cfde7" amount="2.4825E-05">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="ad7781c7-5dc2-4421-b182-e1fd4cef7fa5" amount="4.7232E-06">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="0132d97c-5f19-4397-9197-59ab801b10cf" amount="0.63013">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="e1d2c19b-3a97-4f52-a83f-fe88400452c2" amount="1.235E-05">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="1f3c2d02-f345-4df9-ba6a-88cdeaa67923" amount="5.6175E-06">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="2d23d1bb-e137-4ade-83fc-fbd0421e6cd5" amount="0.028387">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="2a256b0b-6003-4669-a3c1-1d3eba2de45e" amount="2.3157E-07">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="30f0aa15-2d50-4f09-af94-683b6dd68adc" amount="7.2166E-07">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="66e996b5-5f7b-449f-8893-0b787af21d7e" amount="8.6026E-06">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="66d4c921-658a-4ba0-b190-c6e09e57d74a" amount="0.12003">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="1dcfb203-7830-40b2-878d-13fc02a74051" amount="7.8064E-05">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="f767b36f-62bf-4458-b694-ecbefd2ab970" amount="5.5935E-06">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0.20867">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="f9da385d-5b1b-4548-826c-0bf5892a9fd9" amount="0.00030727">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.00097812" />
+    <property propertyId="bf4d71d9-4301-4939-8a9d-36d8811b7db0" amount="1.8991E-07">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0.99902" />
+    <property propertyId="8aedc313-f49b-42cd-8d54-fc877ec03017" amount="1.1381E-05">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="33f96fe7-39da-47ca-837f-f2c311681d1b" amount="5.5662E-05">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0.00097908">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="608190bf-8f74-4f8e-8544-f25377accf4d" amount="1.5193E-07">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="995265a2-f2cb-4c12-a961-766eb34392b9" amount="3.3614E-05">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="e9fa11a1-1011-421d-aa34-0544d767a632" amount="0.00037982">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="e9688cbc-7400-457a-a936-5ab123ea326c" amount="7.5964E-05">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+    <property propertyId="d8551abf-da96-4429-846b-0973136b7d48" amount="9.9162E-05">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="d8364dfc-5753-4585-bf50-4d42b126f72d" amount="0.0011732">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="7e83fd10-c04d-4a80-8df2-a8bbcc268c4a" amount="7.9763E-07">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="d3c0b420-1906-478c-8812-acfe6bf40c2e" amount="0.00055663">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <property propertyId="dba83ee6-9127-4c81-86c9-15e29987dcdf" amount="0.00033841">
+      <comment xml:lang="en">Value is calculated based on the waste composition of this waste. More information are found in the product information of the waste.</comment></property>
+    <productInformation>
+      <text xml:lang="en" index="2">Reference: Amoyaw-Osei, Y &amp; Agyekum, O.O. &amp; Pwamang, John &amp; Thiébaud (-Müller), Esther &amp; Fasko, R &amp; Schluep, Mathias. (2011). Ghana e-waste country assessment. SBC e-waste Africa project.
+Doka G. (2009) Life Cycle Inventories of Waste Treatment Services. ecoinvent report
+No. 13. Swiss Centre for Life Cycle Inventories, St. Gallen</text>
+      <text xml:lang="en" index="1">The composition of waste electrical and electronic cables (62% copper and 38% "wire insulation for copper cables") is documented in literature. The fraction "wire insulation for copper cables" is composed by 66.3% PVC, 31.2% PE and Cu 2.5%.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="45fbbc41-7ae9-46cc-bb31-abfa11e69de0" unitId="980b811e-3905-4797-82a5-173f5568bc7e" defaultVariableName="E_th_prod_MSWI">
     <name xml:lang="en">heat, for reuse in municipal waste incineration only</name>
     <unitName xml:lang="en">MJ</unitName>
@@ -34561,6 +35746,19 @@ References: Fiege, H., Voges, H.-W., Hamamoto, T., Umemura, S., Iwata, T., Miki,
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">53269: Other constructions for manufacturing</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="1a496c03-c02a-485a-af78-ac6564bf51cd" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">planting, sugarcane</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">The mechanized planting is performed with billet cane. Activity comprises the furrow oppening, billets and fertiliser applicatin, and furrow closing. The operation time is 1.21 hours per ha and the diesel fuel consumption is 19.53 L diesel per hour of effective operation.
+</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="71ea78cc-59a2-469a-bf4e-ac659ca0b32c" unitId="2f4daad7-5331-4f14-930c-d8bca924557d">
     <name xml:lang="en">transport, freight, inland waterways, barge with reefer, freezing</name>
@@ -34952,6 +36150,28 @@ service</comment>
       <classificationValue xml:lang="en">87360: Installation services of electrical machinery and apparatus n.e.c.</classificationValue>
     </classification>
   </intermediateExchange>
+  <intermediateExchange id="96cc310d-77ba-4e30-841d-aeb885fe27fb" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">reeled raw silk hank</name>
+    <unitName xml:lang="en">kg</unitName>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" variableName="DM" amount="0.97" isDefiningValue="false">
+      <comment xml:lang="en">It is assumed that dry matter content is 97%</comment></property>
+    <property propertyId="2d23d1bb-e137-4ade-83fc-fbd0421e6cd5" amount="0.6" isDefiningValue="false">
+      <comment xml:lang="en">Proxy based on Sericin Biochemistry</comment></property>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" variableName="WWM" amount="0.03" isDefiningValue="false">
+      <comment xml:lang="en">Based on dry mass assumtion, balance is considered to be the water in wet mass</comment></property>
+    <property propertyId="f53a5dbc-3bd3-4570-adff-b00790ea3ffc" amount="0.16" isDefiningValue="false">
+      <comment xml:lang="en">Proxy based on Sericin Biochemistry</comment></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.3769" isDefiningValue="false">
+      <comment xml:lang="en">"Carbon content on a dry mass basis. All carbon is assumed to be biogenic due to the nature of the product. Carbon content of cotton is 0.44 kg of non-fossil carbon per kg of dry mass of cotton. Value is calculated based on the the composition of silk which is 64% cellulose. The data uses composition of silk fibers accessed on 10/11/2017 on: http://textilefashionstudy.com/chemical-composition-of-silk-fiber-silk-natural-fiber/
+
+"</comment></property>
+    <property propertyId="dbf41b1b-c7b8-4d5e-b39c-f858eb868df5" amount="0.31" isDefiningValue="false">
+      <comment xml:lang="en">Proxy based on Sericin Biochemistry</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" mathematicalRelation="DM+ WWM" isCalculatedAmount="true" />
+    <productInformation>
+      <text xml:lang="en" index="1">Raw silk hank is a coiled or wrapped unit of yarn or twine (as opposed to both other objects like thread or rope as well as other forms such as in a ball, cone, bobbin, spool, etc). This is often the best form for use with hand looms, compared to the cone form needed for power looms. </text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="390cc455-876e-4209-839b-aefa402b6f74" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">fishmeal plant</name>
     <unitName xml:lang="en">unit</unitName>
@@ -35025,6 +36245,29 @@ service</comment>
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">53269: Other constructions for manufacturing</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="3d7cbbb1-cb35-4406-af7c-afd4cf2afe6a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">fish freezing, small fish</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="d4b8d00b-4951-4af2-ba87-2db30185c12e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">21222: Fish fillets, frozen</classificationValue>
+    </classification>
+    <comment xml:lang="en">Includes all activities related to the freezing process, excludes the provision of raw material (fish)</comment>
+    <productInformation>
+      <text xml:lang="en" index="1">Fish frozen. The freezing process involves fish processing, rinsing, sometimes adding water, and freezing in cold tunnels or blast chambers.</text>
+      <text xml:lang="en" index="2">Properties of frozen small fish (Average of 26 fish species, http://www.fao.org/wairdocs/tan/x5916e/x5916e01.htm, plus 10% of glazing):
+Wet mass: 1
+Dry mass: 0.52338
+Water in wet mass: 0.47662
+Water content: 0.91067
+Carbon content (fossil): 0
+Carbon content (non-fossil): 0.436
+Fat (kg): 0.061
+Protein (kg): 0.18
+Ash (kg): 0.015
+Energy value (MJ/kg): 4.01</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="aef8dfb0-f2a7-4ce6-9559-afe913243fc3" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="99439-28-8">
     <name xml:lang="en">activated silica</name>
@@ -35959,6 +37202,17 @@ mix of hay grass like thimothy and leguminous like alfalfa and clover cultivated
     <property propertyId="6bc8ac5e-cc4c-45fb-93dc-53c0e45091df" variableName="REF_PRODUCT_energy_content" amount="19" isDefiningValue="false" />
     <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" variableName="REF_PRODUCT_C_content_fossil" amount="0" isDefiningValue="false" />
   </intermediateExchange>
+  <intermediateExchange id="9c7b5686-2bf5-406d-ba68-b536c61ecba6" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">seed-cotton</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="71184766-841d-459e-80fb-6ffebbf3a926">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">01921: Cotton, whether or not ginned</classificationValue>
+    </classification>
+    <productInformation>
+      <text xml:lang="en" index="1"></text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="53c35893-3698-4819-8994-b5484cf379b3" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">alkyd resin, long oil, without solvent, in 70% white spirit solution state</name>
     <unitName xml:lang="en">kg</unitName>
@@ -36378,6 +37632,15 @@ mix of hay grass like thimothy and leguminous like alfalfa and clover cultivated
     <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.0925589836661" />
     <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" />
     <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0.102" />
+  </intermediateExchange>
+  <intermediateExchange id="6a777473-3331-460c-9e23-b6f6154aed65" unitId="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">wastewater, bleaching and dyeing</name>
+    <unitName xml:lang="en">m3</unitName>
+    <classification classificationId="34f49fca-a18e-48df-a635-ee7e24ef6dbb">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">39920: Sewage sludge</classificationValue>
+    </classification>
+    <productInformation />
   </intermediateExchange>
   <intermediateExchange id="1f9d8150-57b5-4e5f-a9bf-b71cbb1be302" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">flyash brick</name>
@@ -37736,6 +38999,11 @@ Reference: https://ndb.nal.usda.gov/ndb/foods/show/2359?fgcd=&amp;manu=&amp;lfac
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">43420: Industrial or laboratory furnaces and ovens, except non-electric bakery ovens; other industrial or laboratory […]</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="89b2490c-d8f3-44e5-99b4-bd45e946cea4" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">kenaf plant, harvested</name>
+    <unitName xml:lang="en">kg</unitName>
+    <productInformation />
   </intermediateExchange>
   <intermediateExchange id="65e289a5-e378-41e7-9a41-bd51db029439" unitId="ae252091-811b-461b-8e89-8f3075639eb1">
     <name xml:lang="en">transport, passenger car, small size, diesel, EURO 3</name>
@@ -39243,6 +40511,17 @@ Reference: https://ndb.nal.usda.gov/ndb/foods/show/3620?fgcd=&amp;manu=&amp;lfac
     <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+  </intermediateExchange>
+  <intermediateExchange id="fcd190cf-a6eb-435f-b0c2-c48c0bad9e64" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">waste yarn and textile</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="04733a43-68da-4887-9057-c8d9da785b20">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">39214: Cotton waste, except garnetted stock</classificationValue>
+    </classification>
+    <productInformation>
+      <text xml:lang="en" index="1">Waste yarn and waste textile refer to the byproducts of yarn and textile (or fabric) production. It refers to a mix composition from natural fibres.</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="4d8591e3-c13b-4364-8fd9-c48c3996588a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="1762-95-4">
     <name xml:lang="en">ammonium thiocyanate</name>
@@ -40859,6 +42138,24 @@ Reference(s):  NTP (National Toxicology Program). 2016. Report on Carcinogens, F
 </text>
     </productInformation>
   </intermediateExchange>
+  <intermediateExchange id="8931016e-3e07-5c9a-91a6-cd85b90a2aaa" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">land tenure, arable land, measured as carbon net primary productivity, pasture, man made</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="01bf1d04-21b2-46f5-b720-e7232c040c2b">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">7: Financial and related services; real estate services; and rental and leasing services</classificationValue>
+    </classification>
+    <classification classificationId="39b0f0ab-1a2f-401b-9f4d-6e39400760a4">
+      <classificationSystem xml:lang="en">By-product classification</classificationSystem>
+      <classificationValue xml:lang="en">allocatable product</classificationValue>
+    </classification>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="0" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
+  </intermediateExchange>
   <intermediateExchange id="40521328-bdae-4fc3-9034-cd8bea5c7fa2" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">printed wiring board, through-hole mounted, unspecified, Pb containing</name>
     <unitName xml:lang="en">kg</unitName>
@@ -41460,6 +42757,10 @@ Reference(s): RÖMPP online. 2014. Natriumhydrogensulfat. Retrieved online from:
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="a769b2aa-bc38-5d86-b813-d0d1d9e3666c" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">cotton seed, organic</name>
+    <unitName xml:lang="en">kg</unitName>
+  </intermediateExchange>
   <intermediateExchange id="e12623c0-bab9-4ed6-81f6-d0dbb086040a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="75-01-4">
     <name xml:lang="en">vinyl chloride</name>
     <unitName xml:lang="en">kg</unitName>
@@ -42032,6 +43333,23 @@ Mix ratio is the volumetric mixing ratio of cement and aggregates. Mix Ratio var
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
   </intermediateExchange>
+  <intermediateExchange id="e87c04dc-0656-434a-8cbf-d4588950e227" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
+    <name xml:lang="en">mine infrastructure, treatment of sulfidic tailing, off-site, high gold content</name>
+    <unitName xml:lang="en">unit</unitName>
+    <classification classificationId="9f7d276f-df51-43f4-9b78-55990fa5c61c">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">5326: Mines and industrial plants</classificationValue>
+    </classification>
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <property propertyId="38583c32-c20b-4553-9152-b14b0bee1e61" amount="0" isDefiningValue="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <property propertyId="964f8b50-ce16-4364-835a-a3db5fb760b0" variableName="lifetime_Surf_ZA" amount="50" isDefiningValue="false" />
+    <productInformation />
+  </intermediateExchange>
   <intermediateExchange id="0e3da9a5-fcfd-4bff-82d6-d45e8b7add39" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">aluminium hydroxide factory</name>
     <unitName xml:lang="en">unit</unitName>
@@ -42055,6 +43373,26 @@ Mix ratio is the volumetric mixing ratio of cement and aggregates. Mix Ratio var
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">49129: Other parts and accessories n.e.c. of motor vehicles (including brakes, gear boxes, axles, road wheels, suspen[…]</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="450c5264-9840-472f-bf39-d4823f2262b5" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" defaultVariableName="cement">
+    <name xml:lang="en">cement, alternative constituents 45%</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="89103a98-d0a3-4f4e-88b9-a798b6ac978c">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">374: Plaster, lime and cement</classificationValue>
+    </classification>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">fossil carbon content on a dry matter basis</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" isCalculatedAmount="false">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" isCalculatedAmount="false">
+      <comment xml:lang="en">water content on a dry matter basis</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <productInformation>
+      <text xml:lang="en" index="1">The performance requirements of the cement type "general use" is specified in the technical norm NTC 121 (Icontec, 2014), which is based on the standard specification for hydraulic cement (ASTM, 1998). The cement contains typiclly about 45% of additions (crushed limestone, slags and fly ashes).</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="d446ae6b-d959-46d3-9aed-d49975de7750" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">manganese dioxide</name>
@@ -42389,6 +43727,15 @@ OECD SIDS 2006. SIDS Initial Assessment Report For SIAM 22 Paris, France, 18-21 
     <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.563278663818071" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="26.22" />
   </intermediateExchange>
+  <intermediateExchange id="328db9f7-c0d6-4598-b071-d67dd31974f8" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">textile, non woven polyester</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="28562e2a-4098-4a06-8b6d-8cc4ebf809a5">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">26710: Woven fabrics of man-made filament yarn, obtained from high tenacity yarn of nylon or other polyamides, of pol[…]</classificationValue>
+    </classification>
+    <productInformation />
+  </intermediateExchange>
   <intermediateExchange id="66f18588-4db0-4060-89cc-d6841a0b5dac" unitId="1017f68a-f818-4f9d-a34d-a31e7386f628">
     <name xml:lang="en">photovoltaic module, building-integrated, for slanted-roof installation</name>
     <unitName xml:lang="en">m2</unitName>
@@ -42643,6 +43990,30 @@ This product represents average, unspecified cable.</comment>
     <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+  </intermediateExchange>
+  <intermediateExchange id="ab52c803-9bcb-4066-9629-d7919d0eb609" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">yarn, silk from long fibres</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="bef8f206-b7fb-458a-b3a1-1c5c885b3988">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">26110: Raw silk (not thrown)</classificationValue>
+    </classification>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" variableName="DM" amount="0.97" isDefiningValue="false">
+      <comment xml:lang="en">Dry matter content is assumed as 97%</comment></property>
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" mathematicalRelation="DM+ WWM" isCalculatedAmount="true" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" variableName="WWM" amount="0.03" isDefiningValue="false">
+      <comment xml:lang="en">Based on dry mass assumtion, balance is considered to be the water in wet mass</comment></property>
+    <property propertyId="f53a5dbc-3bd3-4570-adff-b00790ea3ffc" amount="0.165" isDefiningValue="false">
+      <comment xml:lang="en">Source: https://www.hindawi.com/journals/bmri/2016/8175701/</comment></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0.465" isDefiningValue="false">
+      <comment xml:lang="en">"Carbon content on a dry mass basis. All carbon is assumed to be biogenic due to the nature of the product. Carbon content of cotton is 0.44 kg of non-fossil carbon per kg of dry mass of cotton. Value is calculated based on the the composition of silk which is 64% cellulose. The data uses composition of silk fibers accessed on 10/11/2017 on: http://textilefashionstudy.com/chemical-composition-of-silk-fiber-silk-natural-fiber/</comment></property>
+    <property propertyId="2d23d1bb-e137-4ade-83fc-fbd0421e6cd5" amount="0.06" isDefiningValue="false">
+      <comment xml:lang="en">Source: https://www.hindawi.com/journals/bmri/2016/8175701/</comment></property>
+    <property propertyId="dbf41b1b-c7b8-4d5e-b39c-f858eb868df5" amount="0.31" isDefiningValue="false">
+      <comment xml:lang="en">Source: https://www.hindawi.com/journals/bmri/2016/8175701/</comment></property>
+    <productInformation>
+      <text xml:lang="en" index="1">Product refers to premium grade quality silk.</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="d2392ff7-520d-42d6-8444-d792ffea296e" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">wind turbine network connection, 2MW, onshore</name>
@@ -43198,6 +44569,32 @@ The operation time is 0.21 h/ha and fuel consumption 18 liters per hour.</text>
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">53262: Power plants</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="144f9ab3-ef81-42e7-bc3f-da3cee55aafc" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="000124-38-9">
+    <name xml:lang="en">cement, portland fly ash cement 6-20%</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="ff592c08-adac-4b6c-b1da-69839f05c992">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">37440: Portland cement, aluminous cement, slag cement and similar hydraulic cements, except in the form of clinkers</classificationValue>
+    </classification>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" mathematicalRelation="" isCalculatedAmount="false">
+      <uncertainty>
+        <lognormal meanValue="1" mu="0" variance="0" varianceWithPedigreeUncertainty="0.21" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" />
+    <property propertyId="38f94dd1-d5aa-41b8-b182-c0c42985d9dc" amount="0" isDefiningValue="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false">
+      <uncertainty>
+        <lognormal meanValue="1" mu="0" variance="0" varianceWithPedigreeUncertainty="0.21" />
+        <pedigreeMatrix reliability="5" completeness="5" temporalCorrelation="5" geographicalCorrelation="5" furtherTechnologyCorrelation="5" />
+      </uncertainty></property>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <productInformation>
+      <text xml:lang="en" index="1">Portland cement slag </text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="761145b7-3abe-48a5-a426-da5da6c36674" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="10043-01-3">
     <name xml:lang="en">aluminium sulfate, powder</name>
@@ -44885,6 +46282,23 @@ produced from tops and branches from forest harvesing operations with an energy 
       <classificationValue xml:lang="en">88731: Metal treatment and coating services</classificationValue>
     </classification>
   </intermediateExchange>
+  <intermediateExchange id="591df94b-3795-407c-946b-e26d6cb9d865" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" defaultVariableName="cement">
+    <name xml:lang="en">cement, pozzolana 36-55%</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="89103a98-d0a3-4f4e-88b9-a798b6ac978c">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">374: Plaster, lime and cement</classificationValue>
+    </classification>
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" isDefiningValue="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0" isDefiningValue="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" isDefiningValue="false" isCalculatedAmount="false" />
+    <productInformation>
+      <text xml:lang="en" index="1">The cement type IP according to standard NTP-334.090 / ASTM C595 with a compostition of 4% Gypsum of clinker mass and pozzolana.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="a1f426d3-41a4-48d7-acc9-e275965ee44a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="25154-01-2">
     <name xml:lang="en">polysulfone</name>
     <unitName xml:lang="en">kg</unitName>
@@ -44920,6 +46334,19 @@ produced from tops and branches from forest harvesing operations with an energy 
     <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+  </intermediateExchange>
+  <intermediateExchange id="f76cdd78-e05a-48ac-a7c3-e29abca59fa9" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">furrowing, sugarcane</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">This exchange represents the furrow opening operation in one hectare (ha). The operation time is 1.59 hours per ha and the diesel fuel consumption is 13.56 L diesel per hour of effective operation.
+</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="1c48620b-9172-5e85-90ae-e2a0b73dbf6f" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">mulberry leaves</name>
@@ -44958,6 +46385,30 @@ produced from tops and branches from forest harvesing operations with an energy 
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1000" />
     <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
     <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0.641966104340221" />
+  </intermediateExchange>
+  <intermediateExchange id="a8c7249e-9a1a-44b3-b603-e2e2268d56f6" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">fish canning, small fish</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="4f8d4056-5b19-46a1-9b26-1a792f15770b">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">212: Prepared and preserved fish, crustaceans, molluscs and other aquatic invertebrates</classificationValue>
+    </classification>
+    <comment xml:lang="en">Includes all activities related to the canning process, excludes the provision of raw material (fish)</comment>
+    <productInformation>
+      <text xml:lang="en" index="3">Properties of canned small fish (average sardine and anchovies):
+Wet mass: 1
+Dry mass: 0.63292
+Water in wet mass: 0.36708
+Water content: 0.58445
+Carbon content (fossil): 0
+Carbon content (non-fossil): 0.48018
+Fat (kg): 0.09725
+Protein (kg): 0.21080
+Ash (kg): 3.4
+Energy value (MJ/kg): 7.32020</text>
+      <text xml:lang="en" index="1">Small fish (e.g. sardines, anchovies) canned in chromium steel or aluminium cans. The canning process involves fish processing, esterilisation and filling of cans, cooking and sealing of cans.</text>
+      <imageUrl index="2">https://db3.ecoinvent.org/images/d53265c8-76b8-4fc3-9c57-1b91dda3a629</imageUrl>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="dae62135-2e34-4b47-bed2-e2ea1e137cd8" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" casNumber="7647-14-5">
     <name xml:lang="en">sodium chloride, brine solution</name>
@@ -45507,6 +46958,27 @@ Reference: Parchem fine &amp; specialty chemical, 2012, PARCHEM IS A LEADING SUP
     <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+  </intermediateExchange>
+  <intermediateExchange id="3d487da6-6c72-5e31-bdf6-e4ec12cafac3" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">reformate</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="39b0f0ab-1a2f-401b-9f4d-6e39400760a4">
+      <classificationSystem xml:lang="en">By-product classification</classificationSystem>
+      <classificationValue xml:lang="en">allocatable product</classificationValue>
+    </classification>
+    <classification classificationId="6bad86d2-9c33-442b-8367-bf1684a461c0">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">3339: Other petroleum oils n.e.c.</classificationValue>
+    </classification>
+    <property propertyId="c74c3729-e577-4081-b572-a283d2561a75" amount="0.9" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+    <property propertyId="6393c14b-db78-445d-a47b-c0cb866a1b25" amount="0" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0" />
+    <productInformation>
+      <text xml:lang="en" index="1">Reformate (gasoline) is the main output of a (catalytic) reforming process and an educt for either petrochemicals   or gasoline with a high octane rating (95-100). It is a mixture of different products (e.g. toluol , cyclohexane or methylcyclohexane) and has an average of 30-50% paraffines, 45-60% aromates, 0-2% olefines, 0-3% naphthenes. </text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="3ae326bd-fb3a-432b-91f7-e50b0ca22d12" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">mine infrastructure, open cast, ilmenite from hard-rock ore</name>
@@ -46891,6 +48363,16 @@ barley grain processed primarily for animal feed</comment>
       <classificationValue xml:lang="en">43913: Refrigerating and freezing equipment and heat pumps, except household type equipment</classificationValue>
     </classification>
   </intermediateExchange>
+  <intermediateExchange id="8349c9d1-7a60-46f6-98d8-ec0f48ae5310" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">trout, from aquaculture</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="70a65e1a-af20-4fc7-a053-2bed96efe808">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">04222: Farmed salmonidae, live, fresh or chilled</classificationValue>
+    </classification>
+    <comment xml:lang="en">Cultured trout</comment>
+    <productInformation />
+  </intermediateExchange>
   <intermediateExchange id="298f3d35-7fe8-47be-9677-ec12e23eafa8" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">non-sulfidic tailing, off-site</name>
     <unitName xml:lang="en">kg</unitName>
@@ -47408,6 +48890,9 @@ Source: “Goat manure and coconut farm by-products. Recommended Organic fertili
       <comment xml:lang="en">Calculated value, Weighted average from 19 concrete mix designs.
 </comment></property>
     <property propertyId="f74d688f-15db-411c-af4e-5110e136ec21" variableName="sand" amount="0" isDefiningValue="false" />
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" variableName="ref_WWM" amount="0" isDefiningValue="false" mathematicalRelation="batch_water" isCalculatedAmount="true">
+      <comment xml:lang="en">water content on a wet matter basis</comment></property>
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" variableName="ref_DM" amount="0" isDefiningValue="false" mathematicalRelation="sand+gravel+cement" isCalculatedAmount="true" />
     <productInformation />
   </intermediateExchange>
   <intermediateExchange id="1a088221-61a8-48d3-acb5-ef1fa5ddcfe8" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
@@ -47428,6 +48913,19 @@ Source: “Goat manure and coconut farm by-products. Recommended Organic fertili
         <comment xml:lang="en"></comment>
       </uncertainty>
       <comment xml:lang="en">LIterature value. Based on reali lifetime. The plant started its operation in 1982 and ended in 2012.</comment></property>
+  </intermediateExchange>
+  <intermediateExchange id="3e803adf-71e1-4bf6-b16b-ef6b9189edbb" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">sugarcane transfer, by dump cart</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <comment xml:lang="en"></comment>
+    <productInformation>
+      <text xml:lang="en" index="1">This operation is carried out together with the mechanized harvesting, once the harvested sugarcane is placed in the dump cart. The operation time is 6.60 hours per ha and the diesel fuel consumption is 10.65 L diesel per hour of effective operation.
+</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="10d65b66-177a-4c93-a984-ef986f6a8fe4" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">melamine formaldehyde resin</name>
@@ -47629,6 +49127,22 @@ Source: “Goat manure and coconut farm by-products. Recommended Organic fertili
       <classificationSystem xml:lang="en">CPC</classificationSystem>
       <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
     </classification>
+  </intermediateExchange>
+  <intermediateExchange id="ad203eea-c27a-4232-94aa-f0a5418de3a5" unitId="487df68b-4994-4027-8fdc-a4dc298257b7" defaultVariableName="mango_conditioned">
+    <name xml:lang="en">mango, conditioned</name>
+    <unitName xml:lang="en">kg</unitName>
+    <classification classificationId="cbf9b263-1377-4f5a-b2d4-7c07b3ebfed3">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86111: Post-harvest crop services</classificationValue>
+    </classification>
+    <property propertyId="6d9e1462-80e3-4f10-b3f4-71febd6f1168" amount="0.8" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="4" isDefiningValue="false" isCalculatedAmount="false" />
+    <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="0.2" isDefiningValue="false" isCalculatedAmount="false" />
+    <productInformation>
+      <text xml:lang="en" index="1">Refers to the product from postharvest treatments of mango (washes and phytosanitary treatments)</text>
+      <imageUrl index="2">https://db3.ecoinvent.org/images/158c794b-71ed-48d1-a97b-f7733062c55d</imageUrl>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="5fb6a985-faa0-44cc-b183-f0b549833357" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">waste wire plastic</name>
@@ -48810,6 +50324,28 @@ Bakeri, GH. and Rahimnejad, M. 2013.  KINETICS STUDY OF HYDRAZODICARBONAMIDE SYN
       <classificationValue xml:lang="en">88731: Metal treatment and coating services</classificationValue>
     </classification>
   </intermediateExchange>
+  <intermediateExchange id="8cc14249-6937-4cdf-9ab2-f838e03bb786" unitId="5b972631-34e3-4db7-a615-f6931770a0cb">
+    <name xml:lang="en">fish canning plant</name>
+    <unitName xml:lang="en">unit</unitName>
+    <classification classificationId="cd744d31-6a3b-48fc-9399-afdd06504c85">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">8812: Fish processing services</classificationValue>
+    </classification>
+    <comment xml:lang="en">One unit of plant represents the installed capacity required to process 1 t of raw material</comment>
+    <property propertyId="964f8b50-ce16-4364-835a-a3db5fb760b0" variableName="lifetime" amount="40" isDefiningValue="false" sourceId="50f5e14e-0a82-43db-a911-3658080667c8">
+      <uncertainty>
+        <triangular minValue="36" mostLikelyValue="40" maxValue="44" />
+        <pedigreeMatrix reliability="4" completeness="4" temporalCorrelation="1" geographicalCorrelation="1" furtherTechnologyCorrelation="1" />
+      </uncertainty></property>
+    <property propertyId="6b2e1ace-3d42-4536-aed5-866ac1281364" variableName="capacity" amount="7673" isDefiningValue="false" sourceId="50f5e14e-0a82-43db-a911-3658080667c8">
+      <uncertainty>
+        <triangular minValue="461" mostLikelyValue="7673" maxValue="61000" />
+        <pedigreeMatrix reliability="1" completeness="2" temporalCorrelation="1" geographicalCorrelation="1" furtherTechnologyCorrelation="1" />
+      </uncertainty></property>
+    <productInformation>
+      <text xml:lang="en" index="1">Fish canning plants include a floor area for fish processing, equipment for canning and cooking, and industrial systems such as boilers, pumps and air compression.</text>
+    </productInformation>
+  </intermediateExchange>
   <intermediateExchange id="e0a4840d-f0ec-42d1-9ec1-f85528f9cd06" unitId="f2aaa4ba-fb58-49a7-a552-e7f64366f379">
     <name xml:lang="en">deep well, for geothermal power, onshore, 6000m</name>
     <unitName xml:lang="en">m</unitName>
@@ -48897,6 +50433,8 @@ kg dry mass, including bark</comment>
       <comment xml:lang="en">gross (upper) heating (calorific) value</comment></property>
     <property propertyId="48c987bb-3144-4872-b5c7-b1389c40be25" amount="14.46" isDefiningValue="false">
       <comment xml:lang="en">net (lower) heating (calorific) value</comment></property>
+    <property propertyId="41a012c8-bcde-4563-9ba1-a7ca1823d4b7" variableName="density" amount="0" isDefiningValue="false">
+      <comment xml:lang="en">Assumed the average wood density found in the literature. </comment></property>
   </intermediateExchange>
   <intermediateExchange id="3b6460f4-647a-483b-b67f-f912bef7e6fc" unitId="1017f68a-f818-4f9d-a34d-a31e7386f628">
     <name xml:lang="en">photovoltaic laminate, single-Si wafer</name>
@@ -49227,6 +50765,18 @@ kg of Fat and Protein Corrected Milk. FPCM is 4.0% fat and 3.3% true protein con
     <property propertyId="a9358458-9724-4f03-b622-106eda248916" amount="0" />
     <property propertyId="67f102e2-9cb6-4d20-aa16-bf74d8a03326" amount="1" />
     <property propertyId="3a0af1d6-04c3-41c6-a3da-92c4f61e0eaa" amount="1" />
+  </intermediateExchange>
+  <intermediateExchange id="54186f39-acc2-4c84-95e7-fbb067bde4cd" unitId="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">fertilising, by rig fertiliser, sugarcane</name>
+    <unitName xml:lang="en">ha</unitName>
+    <classification classificationId="39afb89e-b8b3-4a64-ae59-adc9ad3bdb4e">
+      <classificationSystem xml:lang="en">CPC</classificationSystem>
+      <classificationValue xml:lang="en">86119: Other support services to crop production</classificationValue>
+    </classification>
+    <productInformation>
+      <text xml:lang="en" index="1">This operation is related to one hectare of the cultural treatments used for the sugarcane culture. The operation time is 2.08  hours per ha and the diesel fuel consumption is 12.33 L diesel per hour of effective operation.
+</text>
+    </productInformation>
   </intermediateExchange>
   <intermediateExchange id="cc755744-10f3-4cf9-8d17-fbf308dd5c5a" unitId="487df68b-4994-4027-8fdc-a4dc298257b7">
     <name xml:lang="en">aluminium scrap, post-consumer</name>

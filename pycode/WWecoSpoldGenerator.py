@@ -25,9 +25,12 @@ class WWecoSpoldGenerator(object):
         for k, v in kwargs.items():
             setattr(self, k, v)        
         assert self.tool_use_type in ('average', 'specific'), "tool_use_type should be average or specific"
-        check_for_missing_args(specific_required_args[self.tool_use_type], kwargs)
         self.dataset = create_empty_dataset()
         self.MD = load_MD(self.root_dir)
+        self.geography = self.MD['Geographies'][self.MD['Geographies']['shortname']==self.geography].index[0]
+        infra_df = pd.read_excel(os.path.join(self.root_dir, 'resources', 'wwtp_classes.xlsx'), index_col=0)
+        infra_df.fillna(0, inplace=True)
+        self.infra_dict = infra_df.to_dict(orient='index')
         self.get_infrastructure_class_mix()
 
     def generate_ecoSpold2(self, name=None):
@@ -244,7 +247,11 @@ class WWecoSpoldGenerator(object):
             if self.tool_use_type == "average":
                 return "treatment of wastewater{}, average treatment".format(activity_name_name)
             else:
-                return "treatment of wastewater{}, {}, {}".format(activity_name_name, self.technology, self.capacity)
+                return "treatment of wastewater{}, {}, {} PE".format(
+                    activity_name_name,
+                    self.technologies_averaged[0]['technology_level_1'],
+                    self.technologies_averaged[0]['capacity'],
+                )
 
     def generate_activityNameId(self):
         ''' Return activityNameId from MD or create one.'''
@@ -268,12 +275,20 @@ class WWecoSpoldGenerator(object):
                     )
 
     def generate_geography(self):
-        self.dataset.update(
-            {
-                'geography': self.geography,
-                'geographyId': self.MD['Geographies'].loc[self.geography, 'id']
-            }
-        )
+        try:
+            self.dataset.update(
+                {
+                    'geography': self.geography,
+                    'geographyId': self.MD['Geographies'].loc[self.geography, 'id']
+                }
+            )
+        except KeyError:
+            self.dataset.update(
+                {
+                    'geography': self.geography,
+                    'geographyId': self.MD['Geographies'].loc[self.geography, 'id']
+                }
+            )
 
     def generate_time_period(self, timePeriodStart, timePeriodEnd):
         self.timePeriodStart = timePeriodStart
@@ -366,22 +381,24 @@ class WWecoSpoldGenerator(object):
 
     def get_infrastructure_class_mix(self):
         if self.tool_use_type == 'specific':
-            self.infrastructure_mix = {self.capacity:100}
+            self.infrastructure_mix = {self.technologies_averaged[0]['class']:100}
         else:
             self.infrastructure_mix = defaultdict(float)
             for d in self.technologies_averaged.values():
-                self.infrastructure_mix[d['capacity']]+=d['fraction']
+                self.infrastructure_mix[d['class']]+=d['fraction']
 
     def add_sewer_exchanges(self):
         sewer_name_mapping = {
-            'Class 1 (over 100,000 per-capita equivalents)': 'sewer grid, 4.7E10l/year, 583 km',
-            'Class 2 (50,000 to 100,000 per-capita equivalents)': 'sewer grid, 1.1E10l/year, 242 km',
-            'class 3': 'sewer grid, 5E9l/year, 110 km',
-            'class 4': 'sewer grid, 1E9l/year, 30 km',
-            'class 5': 'sewer grid, 1.6E8l/year, 6 km',
+            'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 'sewer grid, 4.7E10l/year, 583 km',
+            'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 'sewer grid, 1.1E10l/year, 242 km',
+            'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE':'sewer grid, 5E9l/year, 110 km',
+            'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE':'sewer grid, 5E9l/year, 110 km',
+            'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE':'sewer grid, 1E9l/year, 30 km',
+            'wastewater treatment facility, capacity class 5, less than 2,000 PE':'sewer grid, 1.6E8l/year, 6 km',
         }
+
         sewer_amounts = {
-            k: infrastructure_dict['km_sewer_per_m3'][k] * self.infrastructure_mix[k]
+            k: self.infra_dict['km_sewer_per_m3'][k] * self.infrastructure_mix[k]
             for k in self.infrastructure_mix.keys()
         }
         for sewer_item in sewer_amounts:
@@ -404,7 +421,7 @@ class WWecoSpoldGenerator(object):
 
     def add_WWTP_exchanges(self):
         infrastructure_amounts = {
-            k: 1 / infrastructure_dict['m3_over_life_WWTP'][k]
+            k: 1 / self.infra_dict['m3_over_life_WWTP'][k]
             for k in self.infrastructure_mix.keys()
         }
         for wwtp in infrastructure_amounts.keys():
@@ -412,17 +429,62 @@ class WWecoSpoldGenerator(object):
             infra.update(
                 {
                     'group': 'FromTechnosphere',
-                    'name': infrastructure_dict['name'][wwtp],
+                    'name': self.infra_dict['new_name_exc'][wwtp],
                     'unitName': 'km',
                     'amount': infrastructure_amounts[wwtp],
                     'comment': "Rough estimate based on Spanish data for one WWTP of this class." \
                                "The expected lifetime is 30 years." \
                                "The conversion from PE to m3 treated is based on observed values " \
-                               "({} m3/year / PE).".format(infrastructure_dict['sample_m3_per_year_WWTP'][wwtp] \
-                                                             / infrastructure_dict['sample_cap_WWTP'][wwtp])
+                               "({} m3/year / PE).".format(self.infra_dict['sample_m3_per_year_WWTP'][wwtp] \
+                                                             / self.infra_dict['sample_cap_WWTP'][wwtp])
                 }
             )
             self.append_exchange(infra, [], default_infrastructure_uncertainty)
+
+    def add_DOC_TOC_exchanges(self, COD, VSS):
+        TOC = COD / self.COD_TOC_ratio['value']
+        DOC = TOC - VSS * 0.5
+        TOC_id = 'f65558fb-61a1-4e48-b4f2-60d62f14b085'
+        DOC_id = '960c0f37-f34c-4fc1-b77c-22d8b35fd8d5'
+        TOC_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == TOC_id]
+        DOC_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == DOC_id]
+        TOC_ef = create_empty_exchange()
+        TOC_ef.update(
+            {
+                'group': 'ToEnvironment',
+                'name': TOC_sel.index[0][0],
+                'compartment': TOC_sel.index[0][1],
+                'subcompartment': TOC_sel.index[0][2],
+                'unitName': 'kg',
+                'amount': TOC,
+                'comment': "estimated from the COD to TOC_ratio ({}).".format(
+                    COD_TOC_ratio
+                )
+            }
+        )
+        DOC_ef = create_empty_exchange()
+        DOC_ef.update(
+            {
+                'group': 'ToEnvironment',
+                'name': DOC_sel.index[0][0],
+                'compartment': DOC_sel.index[0][1],
+                'subcompartment': DOC_sel.index[0][2],
+                'unitName': 'kg',
+                'amount': DOC,
+                'comment': "DOC is calculated as Total Organic Carbon (TOC) - Particulate Organics (PO). " \
+                           "DOC is estimated from the COD to TOC_ratio ({}). " \
+                           "PO is estimated using a C to Volatile Suspended Solids (VSS) ratio of 0.5 gC/gVSS. " \
+                           "VSS is estimated as {}.".format(self.COD_TOC_ratio, VSS)
+            }
+        )
+        DOC_TOC_incertainty = {
+            'variance': 0.04,
+            'pedigreeMatrix': [4, 5, 5, 5, 5],
+            'comment': "Uncertainty associated with the COD to TOC ratio, VSS amount and COD amount."
+        }
+        self.append_exchange(TOC_ef, [], DOC_TOC_incertainty)
+        self.append_exchange(DOC_ef, [], DOC_TOC_incertainty)
+        return None
 
     def add_sludge(self):
         pass
@@ -470,45 +532,109 @@ class WWecoSpoldGenerator(object):
 
         Because of this problem, CSO emissions should ideally be placed in another dataset (market, treatment DS)"""
 
+        ef_ignores = [
+            'TKN_discharged_kgd', #CSO
+            'TP_discharged_kgd', #CSO
+            'TKN',#"untreated_as_emissions"
+            'TP', #"untreated_as_emissions"
+        ]
+
         efs = []
         for direct_discharge in self.untreated_as_emissions:
-            ef_id = direct_discharge['ecoinvent_id']
-            CSO_amount = [cso_amount['value'] for cso_amount in self.CSO_amounts if cso_amount['ecoinvent_id']==ef_id][0]
-            scaled_CSO_amount = CSO_amount*(1-self.untreated_fraction)/(self.untreated_fraction)
-            total_emission = scaled_CSO_amount + direct_discharge['value']
-            fraction_CSO = scaled_CSO_amount/total_emission
-            sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id']==ef_id]
-            ef = create_empty_exchange()
-            ef.update(
-                {
-                    'group': 'ToEnvironment',
-                    'name': sel.index[0][0],
-                    'compartment': sel.index[0][1],
-                    'subcompartment': sel.index[0][2],
-                    'unitName': 'kg',
-                    'amount': total_emission,
-                }
-            )
-            if fraction_CSO != 0:
-                ef.update(
-                    {
-                        'comment': "Based on direct release to environment of wastewater " \
-                                 "discharged to sewers not connected to wastewater treatment plants {:.4}% " \
-                                 "and compounds lost due to combined sewer overflow {:.4}%".format(
-                            (1 - fraction_CSO)*100, fraction_CSO*100
-                        )
-                    }
-                )
+            tool_id, ef_id = direct_discharge['id'], direct_discharge['ecoinvent_id']
+            if tool_id in ef_ignores:
+                pass
             else:
+                CSO_amount = [cso_amount['value'] for cso_amount in self.CSO_amounts if cso_amount['ecoinvent_id']==ef_id][0]
+                scaled_CSO_amount = CSO_amount*(1-self.untreated_fraction)/(self.untreated_fraction)
+                total_emission = scaled_CSO_amount + direct_discharge['value']
+                fraction_CSO = scaled_CSO_amount/total_emission
+                if tool_id == 'NH4':
+                    total_emission = total_emission * 18 / 14
+                if tool_id == 'PO4':
+                    total_emission = total_emission * (31 + 4 * 16) / 31
+                sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id']==ef_id]
+                ef = create_empty_exchange()
                 ef.update(
                     {
-                        comment: "Based on direct release to environment of wastewater " \
-                                 "discharged to sewers not connected to wastewater treatment plants"
+                        'group': 'ToEnvironment',
+                        'name': sel.index[0][0],
+                        'compartment': sel.index[0][1],
+                        'subcompartment': sel.index[0][2],
+                        'unitName': 'kg',
+                        'amount': total_emission,
                     }
                 )
-            uncertainty = self.direct_emission_uncertainty(
-                ef_id, direct_discharge['value'], scaled_CSO_amount, basic_pollutants)
-            efs.append([ef, [], uncertainty])
+                if fraction_CSO != 0:
+                    ef.update(
+                        {
+                            'comment': "Based on direct release to environment of wastewater " \
+                                     "discharged to sewers not connected to wastewater treatment plants ({:.4}%) " \
+                                     "and compounds lost due to combined sewer overflow ({:.4}%)".format(
+                                (1 - fraction_CSO)*100, fraction_CSO*100
+                            )
+                        }
+                    )
+                else:
+                    ef.update(
+                        {
+                            comment: "Based on direct release to environment of wastewater " \
+                                     "discharged to sewers not connected to wastewater treatment plants"
+                        }
+                    )
+                uncertainty = self.direct_emission_uncertainty(
+                    ef_id, direct_discharge['value'], scaled_CSO_amount, basic_pollutants)
+                efs.append([ef, [], uncertainty])
+        COD_EF = [ef[0]['amount'] for ef in efs if ef[0]['name']=='COD, Chemical Oxygen Demand'][0]
+        print("COD_EF: ", COD_EF)
+        COD_influent = [d['value'] for d in self.WW_properties if d['id']=='COD'][0]
+        print("COD_influent: ", COD_influent)
+        VSS_influent = [d['value'] for d in self.WW_properties if d['id']=='VSS'][0]
+        print("VSS_influent: ", VSS_influent)
+        VSS_EF = VSS_influent/COD_influent * COD_EF
+        TOC = COD_EF / self.COD_TOC_ratio['value']
+        DOC = TOC - VSS_EF * 0.5
+        TOC_id = 'f65558fb-61a1-4e48-b4f2-60d62f14b085'
+        DOC_id = '960c0f37-f34c-4fc1-b77c-22d8b35fd8d5'
+        TOC_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == TOC_id]
+        DOC_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == DOC_id]
+        TOC_ef = create_empty_exchange()
+        TOC_ef.update(
+            {
+                'group': 'ToEnvironment',
+                'name': TOC_sel.index[0][0],
+                'compartment': TOC_sel.index[0][1],
+                'subcompartment': TOC_sel.index[0][2],
+                'unitName': 'kg',
+                'amount': TOC,
+                'comment': "estimated from the COD to TOC_ratio ({}).".format(
+                    self.COD_TOC_ratio
+                )
+            }
+        )
+        DOC_ef = create_empty_exchange()
+        DOC_ef.update(
+            {
+                'group': 'ToEnvironment',
+                'name': DOC_sel.index[0][0],
+                'compartment': DOC_sel.index[0][1],
+                'subcompartment': DOC_sel.index[0][2],
+                'unitName': 'kg',
+                'amount': DOC,
+                'comment': "DOC is calculated as Total Organic Carbon (TOC) - Particulate Organics (PO). " \
+                           "DOC is estimated from the COD to TOC_ratio ({}). " \
+                           "PO is estimated using a C to Volatile Suspended Solids (VSS) ratio of 0.5 gC/gVSS. " \
+                           "VSS is estimated from VSS/DOC ratio in raw effluent {}.".format(
+                    self.COD_TOC_ratio, VSS_influent/COD_influent)
+            }
+        )
+        DOC_TOC_incertainty = {
+            'variance': 0.04,
+            'pedigreeMatrix': [4, 5, 5, 5, 5],
+            'comment': "Uncertainty associated with the COD to TOC ratio, VSS amount and COD amount."
+        }
+        self.append_exchange(TOC_ef, [], DOC_TOC_incertainty)
+        self.append_exchange(DOC_ef, [], DOC_TOC_incertainty)
         return efs
 
     def direct_emission_uncertainty(self, pollutant_name,
@@ -558,6 +684,189 @@ class WWecoSpoldGenerator(object):
                         scaled_CSO_amounts / (scaled_CSO_amounts + untreated_release)
                     )
                 }
+    def add_1m3_water(self):
+        sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == 'db4566b1-bd88-427d-92da-2d25879063b9']
+        ef = create_empty_exchange()
+        ef.update(
+            {
+                'group': 'ToEnvironment',
+                'name': sel.index[0][0],
+                'compartment': sel.index[0][1],
+                'subcompartment': sel.index[0][2],
+                'unitName': 'm3',
+                'amount': 1,
+            }
+        )
+        self.append_exchange(ef, [], no_uncertainty)
+
+    def add_WWTP_water_emissions(self):
+        for WWTP_ef in self.WWTP_emissions_water:
+            if WWTP_ef['id'] == "NOx_effluent_water":
+                ecoinvent_id = "13331e67-6006-48c4-bdb4-340c12010036"
+            else:
+                ecoinvent_id = WWTP_ef['ecoinvent_id']
+            if 'ecoinvent_id' is not None:
+                if WWTP_ef['id'] == "COD_effluent_water":
+                    COD_EF= WWTP_ef['value']
+                sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == ecoinvent_id]
+                ef = create_empty_exchange()
+                ef.update(
+                    {
+                        'group': 'ToEnvironment',
+                        'name': sel.index[0][0],
+                        'compartment': sel.index[0][1],
+                        'subcompartment': sel.index[0][2],
+                        'unitName': 'kg',
+                        'amount': WWTP_ef['value'],
+                    }
+                )
+                stripped_id = WWTP_ef['id'][0:-15]
+                print(WWTP_ef['id'])
+                print(stripped_id)
+                if stripped_id in metals:
+                    uncertainty = {
+                        'variance': 0.65,
+                        'pedigreeMatrix': [3, 5, 1, 5, 4],
+                        'comment': "Default basic uncertainty for metals to water."
+                    }
+                elif stripped_id in non_metals:
+                    uncertainty = {
+                        'variance': 0.04,
+                        'pedigreeMatrix': [3, 5, 1, 5, 4],
+                        'comment': "Default basic uncertainty for emissions to water."
+                    }
+                else:
+                    print("No uncertainty for {}".format(WWTP_ef['id']))
+                    uncertainty = no_uncertainty
+                self.append_exchange(ef, [], uncertainty)
+        COD_influent = [d['value'] for d in self.WW_properties if d['id']=='COD'][0]
+        VSS_influent = [d['value'] for d in self.WW_properties if d['id']=='VSS'][0]
+        BOD_influent = [d['value'] for d in self.WW_properties if d['id'] == 'BOD'][0]
+        VSS_EF = VSS_influent/COD_influent * COD_EF
+        BOD_EF = BOD_influent/COD_influent * COD_EF
+        TOC = COD_EF / self.COD_TOC_ratio['value']
+        DOC = TOC - VSS_EF * 0.5
+        TOC_id = 'f65558fb-61a1-4e48-b4f2-60d62f14b085'
+        DOC_id = '960c0f37-f34c-4fc1-b77c-22d8b35fd8d5'
+        BOD_id = '70d467b6-115e-43c5-add2-441de9411348'
+        TOC_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == TOC_id]
+        DOC_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == DOC_id]
+        BOD_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == BOD_id]
+        TOC_ef = create_empty_exchange()
+        TOC_ef.update(
+            {
+                'group': 'ToEnvironment',
+                'name': TOC_sel.index[0][0],
+                'compartment': TOC_sel.index[0][1],
+                'subcompartment': TOC_sel.index[0][2],
+                'unitName': 'kg',
+                'amount': TOC,
+                'comment': "estimated from the COD to TOC_ratio ({}).".format(
+                    self.COD_TOC_ratio
+                )
+            }
+        )
+        DOC_ef = create_empty_exchange()
+        DOC_ef.update(
+            {
+                'group': 'ToEnvironment',
+                'name': DOC_sel.index[0][0],
+                'compartment': DOC_sel.index[0][1],
+                'subcompartment': DOC_sel.index[0][2],
+                'unitName': 'kg',
+                'amount': DOC,
+                'comment': "DOC is calculated as Total Organic Carbon (TOC) - Particulate Organics (PO). " \
+                           "DOC is estimated from the COD to TOC_ratio ({}). " \
+                           "PO is estimated using a C to Volatile Suspended Solids (VSS) ratio of 0.5 gC/gVSS. " \
+                           "VSS is estimated from VSS/DOC ratio in raw effluent {}.".format(
+                    self.COD_TOC_ratio, VSS_influent/COD_influent)
+            }
+        )
+        BOD_ef = create_empty_exchange()
+        BOD_ef.update(
+            {
+                'group': 'ToEnvironment',
+                'name': BOD_sel.index[0][0],
+                'compartment': BOD_sel.index[0][1],
+                'subcompartment': BOD_sel.index[0][2],
+                'unitName': 'kg',
+                'amount': BOD_EF,
+                'comment': "Crude assumption based on ratio of COD/BOD in raw wastewater "\
+                "and the amount of COD in effluent."
+            }
+        )
+        DOC_TOC_incertainty = {
+            'variance': 0.04,
+            'pedigreeMatrix': [4, 5, 5, 5, 5],
+            'comment': "Uncertainty associated with the COD to TOC ratio, VSS amount and COD amount."
+        }
+        self.append_exchange(TOC_ef, [], DOC_TOC_incertainty)
+        self.append_exchange(DOC_ef, [], DOC_TOC_incertainty)
+        self.append_exchange(BOD_ef, [], no_uncertainty)
+
+    def WWTP_air_emissions(self):
+        N2O_dict = [ef for ef in self.WWTP_emissions_air if ef['id']=="N2O_effluent_air"][0]
+        N2O = create_empty_exchange()
+        N2O_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == N2O_dict['ecoinvent_id']]
+        N2O.update(
+            {
+                'group': 'ToEnvironment',
+                'name': N2O_sel.index[0][0],
+                'compartment': N2O_sel.index[0][1],
+                'subcompartment': N2O_sel.index[0][2],
+                'unitName': 'kg',
+                'amount': N2O_dict['value'],
+                'comment': ""
+            }
+        )
+        N2O_uncertainty = {
+            'variance': 0.12,
+            'pedigreeMatrix': [4, 5, 5, 5, 5],
+            'comment': ""
+        }
+        self.append_exchange(N2O, [], N2O_uncertainty)
+
+        CO2_dict = [ef for ef in self.WWTP_emissions_air if ef['id']=='CO2_effluent_air'][0]
+        CO2_fossil_amount = CO2_dict['value'] * self.fraction_C_fossil['value']
+        CO2_non_fossil_amount = CO2_dict['value'] * (1-self.fraction_C_fossil['value'])
+        CO2_fossil_id = 'f9749677-9c9f-4678-ab55-c607dfdc2cb9'
+        CO2_non_fossil_id = '73ed05cc-9727-4abf-9516-4b5c0fe54a16'
+        CO2_fossil = create_empty_exchange()
+        CO2_fossil_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == CO2_fossil_id]
+        CO2_fossil.update(
+            {
+                'group': 'ToEnvironment',
+                'name': CO2_fossil_sel.index[0][0],
+                'compartment': CO2_fossil_sel.index[0][1],
+                'subcompartment': CO2_fossil_sel.index[0][2],
+                'unitName': 'kg',
+                'amount': CO2_fossil_amount,
+                'comment': ""
+            }
+        )
+        CO2_uncertainty = {
+            'variance': 0.0006,
+            'pedigreeMatrix': [4, 5, 5, 5, 5],
+            'comment': ""
+        }
+        self.append_exchange(CO2_fossil, [], CO2_uncertainty)
+        CO2_non_fossil = create_empty_exchange()
+        CO2_non_fossil_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == CO2_non_fossil_id]
+        CO2_non_fossil.update(
+            {
+                'group': 'ToEnvironment',
+                'name': CO2_non_fossil_sel.index[0][0],
+                'compartment': CO2_non_fossil_sel.index[0][1],
+                'subcompartment': CO2_non_fossil_sel.index[0][2],
+                'unitName': 'kg',
+                'amount': CO2_non_fossil_amount,
+                'comment': ""
+            }
+        )
+
+        self.append_exchange(CO2_non_fossil, [], CO2_uncertainty)
+
+
 class WWT_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to WWT dataset""" 
     def __init__(self, root_dir, **kwargs):
@@ -580,9 +889,10 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
         else:
             self.tech_description = [
                 default_tech_description_specific.format(
-                    self.technology_level_1,
-                    decode_tech_bitstring(self.technology_level_2),
-                    self.capacity
+                    self.technologies_averaged[0]['technology_level_1'],
+                    decode_tech_bitstring(self.technologies_averaged[0]['technology_level_2']),
+                    "Capacity: {} PE".format(self.technologies_averaged[0]['capacity']),
+                    self.technologies_averaged[0]['class'],
                 ),
         ]
         self.generate_comment('technologyComment', self.tech_description)
@@ -626,7 +936,7 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
                         self.activity_name,
                     ),
                     treat_general_comment_final_note.format(
-                        self.URL,
+                        self.url,
                     )
                 ]
 
@@ -647,7 +957,7 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
         ref_exc_dict = {
             'data': {'comment': ref_exchange_comment_treat, },
             'PV': {
-                'amount': self.PV * (1 - self.untreated_fraction),
+                'amount': self.PV['value'] * (1 - self.untreated_fraction),
                 'uncertainty': default_PV_uncertainty_treat,
                 'comment': generate_default_PV_comment_treated(self.PV,
                                                                self.untreated_fraction
@@ -669,56 +979,60 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
                     'group': 'FromTechnosphere',
                     'name': 'electricity, low voltage',
                     'unitName': 'kWh',
-                    'amount': self.electricity,
+                    'amount': self.electricity['value'],
                     'comment': default_electricity_comment,
                 }
             )
             self.append_exchange(electricity, [], default_electricity_uncertainty)
 
-        if hasattr(self, 'FeCl3') and self.FeCl3 != 0:
+        if 'FeCl3' in self.chemicals and self.chemicals['FeCl3'] != 0:
             FeCl3 = create_empty_exchange()
             FeCl3.update(
                 {
                     'group': 'FromTechnosphere',
                     'name': 'iron (III) chloride',
                     'unitName': 'kg',
-                    'amount': self.FeCl3,
+                    'amount': self.chemicals['FeCl3']['value'],
                     'comment': "Used for chemical precipitation of P",
                 }
             )
             self.append_exchange(FeCl3, [], default_FeCl3_uncertainty)
 
-        if hasattr(self, 'acrylamide') and self.acrylamide != 0:
+        if 'acrylamide' in self.chemicals and self.chemicals['acrylamide'] != 0:
             acrylamide = create_empty_exchange()
             acrylamide.update(
                 {
                     'group': 'FromTechnosphere',
                     'name': 'polyacrylamide',
                     'unitName': 'kg',
-                    'amount': self.acrylamide,
+                    'amount': self.chemicals['acrylamide']['value'],
                     'comment': "Polyelectrolyte for thickening",
                 }
             )
             self.append_exchange(acrylamide, [], default_acrylamide_uncertainty)
 
-        if hasattr(self, 'NaHCO3') and self.NaHCO3 != 0:
+        if 'NaHCO3' in self.chemicals and self.chemicals['NaHCO3']['value']!=0:
             NaHCO3 = create_empty_exchange()
             NaHCO3.update(
                 {
                     'group': 'FromTechnosphere',
                     'name': 'sodium bicarbonate',
                     'unitName': 'kg',
-                    'amount': self.NaHCO3,
+                    'amount': self.chemicals['NaHCO3']['value'],
                     'comment': "Used to maintain alkalinity for nitrification."\
-                    "Calculated based on alkalinity consumed during nitrification, and"\
-                    "an assumed residual alkalinity requirement (70 g CaCO3/m3).",
+                        "Calculated based on alkalinity consumed during nitrification, and"\
+                        "an assumed residual alkalinity requirement (70 g CaCO3/m3).",
                 }
             )
-            self.append_exchange(NaHCO3, [], default_NaHCO3_uncertainty)
+            self.append_exchange(NaHCO3, [], default_acrylamide_uncertainty)
 
         self.add_sewer_exchanges()
         self.add_WWTP_exchanges()
         self.add_sludge()
+        self.add_1m3_water()
+        self.add_WWTP_water_emissions()
+        self.WWTP_air_emissions()
+
         # TODO Add grit
 
 class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
@@ -757,7 +1071,7 @@ class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
         ref_exc_dict = {
             'data': {'comment': ref_exchange_comment_untreated,},
             'PV':{
-              'amount': self.PV * self.untreated_fraction,
+              'amount': self.PV['value'] * self.untreated_fraction,
               'uncertainty': default_PV_uncertainty_untreated,
               'comment': generate_default_PV_comment_untreated(self.PV, self.untreated_fraction),
                 },
@@ -769,5 +1083,6 @@ class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
 
         for ef in total_untreated_release_data:
             self.append_exchange(ef[0], ef[1], ef[2])
+        self.add_1m3_water()
         self.add_sewer_exchanges()
 

@@ -5,7 +5,7 @@ Software distributed under the License is distributed on an "AS IS" basis, WITHO
 The Original Code consists of the EcoSpold data format and EcoSpold Access.
 The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
 -->
-<validPersons majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="1127" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+<validPersons majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="1155" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
   <contextName xml:lang="en">ecoinvent</contextName>
   <person id="8d3d328e-d82f-4246-ab1d-6dd28b3f46c8" name="Charlotte Petiot" address="France" email="charlotte.petiot@biois.com" companyId="dc1bfe46-07ee-4da0-8360-77c1a9fd10f8">
     <companyName xml:lang="en">Bio Intelligence Service</companyName>
@@ -22,8 +22,8 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="f26a24c3-ce55-4662-9720-be53c4cd3fc6" name="Rosina Lohmeyer" address="Sven Hultins Gata 8, 41296 Göteborg, Sweden" telephone="" telefax="" email="rosina@student.chalmers.se" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
     <companyName xml:lang="en">NOENTRY</companyName>
   </person>
-  <person id="6eee06de-ed9b-45f3-b4f0-6b7f9a89a093" name="Matthias Stucki" address="Grüental, 8820 Wädenswil, Switzerland" telephone="+41 58 934 57 19" telefax="" email="matthias.stucki@zhaw.ch" companyId="68a518b1-d870-46e4-8f0b-46e67c9d1152">
-    <companyName xml:lang="en">ZHAW</companyName>
+  <person id="3f229bba-9b55-490c-b0c3-92121ff1b8cb" name="Geneviève Martineau" address="C.P.6079, succ. Centre-ville, H3C 3A7 Montreal, Qc, Canada" telephone="514-340-4711#3346" telefax="" email="genevieve.martineau@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
+    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
   </person>
   <person id="ad744c36-f552-4b78-b856-8a30ff944b7f" name="Cristian Emhart" address="Avenida Parque Antonio Rabat 6165, Vitacura, 7660118 Santiago, Chile" telephone="+56222400614" telefax="" email="cristian.emhart@fch.cl" companyId="c9655dad-e540-470e-9a84-067d4dd83785">
     <companyName xml:lang="en">Fundación Chile</companyName>
@@ -36,6 +36,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   </person>
   <person id="2e525e29-8843-4e0d-b6c1-54b5035ee7a0" name="Michele Bounous" address="" telephone="" telefax="" email="michele.bounous@gmail.com" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
     <companyName xml:lang="en">ecoinvent Centre</companyName>
+  </person>
+  <person id="bce42dbf-7ee6-4482-a3fd-d41b7fc9b1bc" name="Martin Lehmann" address="Switzerland" telephone="" telefax="" email="martin.lehmann@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
+    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
   </person>
   <person id="1e846792-317a-499e-bb40-6dbcc4966fe0" name="Asher Kiperstok" address="Escola Politécnica da UFBa TECLIM (DEA, 4º andar) Rua Aristides Novis,02 - Federação., 40210-630 Salvador, Bahia, Brazil" telephone="+55 71 3283-9892" telefax="+55 71 3283-9798" email="asher@ufba.br" companyId="ee0f093b-8180-4cae-a509-1aee524e3d30">
     <companyName xml:lang="en">Federal University of Bahia</companyName>
@@ -58,8 +61,8 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="d94fc0f8-968e-4190-9583-0f73a91b1a28" name="Andrew Simons" address="OVGA, 5232 Villigen PSI" telephone="0041 56 310 2007" telefax="0041 56 310 2199" email="psi@ecoinvent.org" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
     <companyName xml:lang="en">Paul Scherrer Institute</companyName>
   </person>
-  <person id="4f804c15-2e22-48b9-bf4d-0ed70c67c8bb" name="Nicolas Denz" address="" telephone="" telefax="" email="n.denz@ifu.com" companyId="0dafd880-5a70-4f92-b4d5-8eedc73cf898">
-    <companyName xml:lang="en">Institut für Umweltinformatik</companyName>
+  <person id="e2d6e90a-4ffa-41d1-b2b5-65d68bd67955" name="Etienne LEES-PERASSO" address="170 rue de Chatagnon ZI Centr'Alp, 38340 Moirans, France" telephone="33 04 76 07 36 43" telefax="33 04 76 37 44 30" email="etienne.lees-perasso@fr.bureauveritas.com" companyId="46709dbd-8366-4af1-bbc8-4743ff47572d">
+    <companyName xml:lang="en">Bureau Veritas CODDE</companyName>
   </person>
   <person id="39dcadb1-48b6-433a-b123-36a3028dfa51" name="Park Sur" address="suBest Lab. 2F Structural Laboratory B/D, Hanyang University, KS009 Ansan, Korea, Republic of" telephone="" telefax="" email="sincalyp@hanyang.ac.kr" companyId="a4be09c6-43c2-428d-913e-44e5c5d69d05">
     <companyName xml:lang="en">Hanyang Univ. suBest Lab.</companyName>
@@ -78,9 +81,6 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   </person>
   <person id="d3586b9d-cb02-4270-9b3a-94694bc592fe" name="Anette Köhler (obsolete)" address="ETH Hönggerberg, HIL, 8093 Zuerich" telephone="0041 44 633 49 92" telefax="0041 44 633 10 61" email="eth.esd@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
     <companyName xml:lang="en">NOENTRY</companyName>
-  </person>
-  <person id="a0bf18d2-648a-40fa-8d8b-118676df1e35" name="Sébastien Humbert" address="Switzerland" telephone="" telefax="" email="sebastien.humbert@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
-    <companyName xml:lang="en">Quantis</companyName>
   </person>
   <person id="54d72f10-4731-483e-b175-550700c41302" name="Ettore Settanni" address="Italy" email="ettoresettanni@hotmail.com" companyId="9eb9641e-0c3f-4f6c-89b0-13bcfade0f14">
     <companyName xml:lang="en">University of Bari</companyName>
@@ -118,8 +118,11 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="75d9b93b-fe90-47c2-b337-aa8848c78bdb" name="Alex Primas" address="Basler und Hofmann AG, 8032 Zuerich" telephone="0041 44 387 11 22" telefax="0041 44 387 11 00" email="alex.primas@bhz.ch" companyId="e85a173e-4484-4a65-b5f1-d4c1edbbfc4a">
     <companyName xml:lang="en">Basler und Hofmann</companyName>
   </person>
-  <person id="bce42dbf-7ee6-4482-a3fd-d41b7fc9b1bc" name="Martin Lehmann" address="Switzerland" telephone="" telefax="" email="martin.lehmann@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
-    <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
+  <person id="28a981b7-f331-4ae8-b76b-1f20e68ee737" name="Cirilo" address="Teodoro de Beaurepaire, 04279030 São Paulo, Brazil" telephone="" telefax="" email="fabio.cirilo@basf.com" companyId="d150e0aa-cd0e-4e9b-81c0-c7368517534a">
+    <companyName xml:lang="en">Fundação Espaço Eco</companyName>
+  </person>
+  <person id="8d9ec4d2-bb82-4e33-b3b7-3b8da648908c" name="Vincent Rossi" address="Quantis sarl, EPFL, PSE-A, 1015 Lausanne" telephone="0041 21 550 02 43" telefax="0041 91 968 10 93" email="vincent.rossi@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
   </person>
   <person id="f86c02d3-2c12-4c25-ad03-33af05bcfe63" name="Tereza Levova" address="Technoparkstr. 1, 8005  Zurich, Switzerland" telephone="" telefax="" email="levova@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
     <companyName xml:lang="en">ecoinvent Centre</companyName>
@@ -151,9 +154,6 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="b0246ba6-3b1d-4dc2-b66a-cccbd1b004f6" name="Zuhlke Engineering" address="Wiesenstrasse 10a, CH-8952 Schlieren" telephone="+41 44 733 6796" telefax="" email="mbs@zuhlke.com" companyId="e7864012-d383-4169-a50d-285ca9160670">
     <companyName xml:lang="en">Zuhlke Engineering</companyName>
   </person>
-  <person id="224b9ce2-d95d-415f-aebf-fe6534baba97" name="Stefan Erzinger" address="Tänikon, 8356 Ettenhausen" telephone="0041 44 377 71 54" telefax="0041 44 377 72 01" email="art@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
-    <companyName xml:lang="en">NOENTRY</companyName>
-  </person>
   <person id="6a323da3-c12a-4bb6-8f08-34b50bd1d25f" name="Fernanda Silva" address="Av. Prof. Almeida Prado 532, 05508901 São Paulo, Brazil" telephone="+551137674981" telefax="[null]" email="fbsilva@ipt.br" companyId="d3a7b63c-8b8a-45bd-b499-8f886154b29f">
     <companyName xml:lang="en">Institute for Technological Research</companyName>
   </person>
@@ -166,14 +166,17 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="544e59e5-2463-4b74-9f92-b329d23dc27b" name="Jerome Payet" address="Switzerland" telephone="" telefax="" email="jerome.payet@epfl.ch" companyId="950fd121-d3a7-40dd-8f18-84c4f7e5cf71">
     <companyName xml:lang="en">Ecole Polytechnique Federale de Lausanne</companyName>
   </person>
-  <person id="a7b17163-0c31-4d85-ac46-29ff63f44bbd" name="Sebastiano Meier" address="Reckenholzstr.191, 8046 Zürich" telephone="0041 44 377 71 54" telefax="0041 44 377 72 01" email="art@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
-    <companyName xml:lang="en">NOENTRY</companyName>
-  </person>
   <person id="a4e8c21b-214b-4d1d-8e0d-f0c46c11eaaf" name="Fredy Dinkel" address="Carbotech, Eulerstrasse 68, 4051 Basel" telephone="0041 61 206 95 22" telefax="0041 61 206 95 26" email="f.dinkel@carbotech.ch" companyId="10aa5c2c-bf78-4737-b9a5-e9f3ad530b74">
     <companyName xml:lang="en">Carbotech AG</companyName>
   </person>
+  <person id="39d3970f-c9df-41d7-8738-3d0d6b1bf7c7" name="Jens Borken-Kleefeld" address="Austria" telephone="" telefax="" email="borken@iiasa.ac.at" companyId="5c2c844e-8a68-425d-b6aa-052564660e7c">
+    <companyName xml:lang="en">International Institute for Applied Systems Analysis</companyName>
+  </person>
   <person id="6c6190ab-0686-4b8d-af88-185d7efe3147" name="Luíza Santana Franca" address="Horácio Macedo, 2030 - 101 - University City, 21941-450 Rio de Janeiro, Brazil" telephone="+5521998063252" telefax="" email="luizasfranca@poli.ufrj.br" companyId="7518ecb8-47ee-423c-84b7-327e40ab0a5b">
     <companyName xml:lang="en">UFRJ</companyName>
+  </person>
+  <person id="7c4ed8aa-65b1-4541-a80a-978da1185973" name="Madhuri Nigam " address="House No 1189, Sector 4 Urabn Estate, Gurugram, India" telephone="91 9811455857" email="madhurinigam@gmail.com" companyId="233bf93e-d2e4-4cc6-91a0-70cceeea0f9a">
+    <companyName xml:lang="en">Lady Irwin College</companyName>
   </person>
   <person id="17d57aa1-b0c1-4ed8-979e-75ad2db0c629" name="Frank Wellenreuther" address="Wilckensstr. 3" telephone="+496221476744" telefax="+496221476719" email="frank.wellenreuther@ifeu.de" companyId="55302d03-856a-4b9d-bf3c-e63fa7211160">
     <companyName xml:lang="en">IFEU GmbH</companyName>
@@ -247,8 +250,11 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="aee89a09-42c7-4b39-b9c1-f6470ba9e789" name="Julian Schnetzer" address="" telephone="" telefax="" email="julian.schnetzer@art.admin.ch" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
     <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
   </person>
-  <person id="3f229bba-9b55-490c-b0c3-92121ff1b8cb" name="Geneviève Martineau" address="C.P.6079, succ. Centre-ville, H3C 3A7 Montreal, Qc, Canada" telephone="514-340-4711#3346" telefax="" email="genevieve.martineau@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
-    <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
+  <person id="33f27fe1-e837-4e4c-9ff3-3243d0da0982" name="Mateus Ferreira Chagas" address="R. Giuseppe Máximo Scolfaro, 10000 - Bosque das Palmeiras, Campinas, São Paulo - Brazil, CEP 13083-100" telephone="+55 (19) 3512-1010" email="mateus.chagas@bioetanol.org,br" companyId="5ed298df-cc67-4c27-b77c-d5b26ca0b7bf">
+    <companyName xml:lang="en">Laboratório Nacional de Ciência e Tecnologia do Bioetanol</companyName>
+  </person>
+  <person id="686a5435-f4a4-44f2-b938-a25700d0086d" name="Marilia Folegatti" address="Rodovia SP-340, Km 127,5, Tanquinho Velho, CP 69, CEP: 13820-000, Jaguariuna, SP" telephone="+55 (19) 3311-2731" email="marilia.folegatti@embrapa.br" companyId="76e3c5a9-b90d-4175-a46f-7436823b06f1">
+    <companyName xml:lang="en">Embrapa - Meio Ambiente</companyName>
   </person>
   <person id="ac27db9e-1020-4a92-a17f-af65ac76a284" name="ecoinvent ecoinvent" address="strasse, 6666 Mariehamn, Åland Islands" telephone="" telefax="" email="tereza.levova@empa.ch" companyId="b068dca8-6e73-4b8b-a66e-871f77b0c6ab">
     <companyName xml:lang="en">dummy</companyName>
@@ -267,6 +273,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   </person>
   <person id="2c7f180e-9527-43f0-8969-94bb38a7091c" name="Timothy Grant" address="Australia, 3000 Melbourne, Australia" telephone="+61408104977" telefax="" email="Tim@lifecycles.com.au" companyId="91ba92dd-3c30-4ac7-a831-d52b6b6fbc0b">
     <companyName xml:lang="en">Life Cycle Strategies</companyName>
+  </person>
+  <person id="4f804c15-2e22-48b9-bf4d-0ed70c67c8bb" name="Nicolas Denz" address="" telephone="" telefax="" email="n.denz@ifu.com" companyId="0dafd880-5a70-4f92-b4d5-8eedc73cf898">
+    <companyName xml:lang="en">Institut für Umweltinformatik</companyName>
   </person>
   <person id="547e34ec-4633-4302-8394-cbc2f234764c" name="Alba Canovas" address="" telephone="" telefax="" email="alba.canovas@estudiant.upc.edu" companyId="75e8d59a-919a-4339-ab04-b1d35fd617a7">
     <companyName xml:lang="en">Universitat Politècnica de Catalunya</companyName>
@@ -317,8 +326,8 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="49452253-b703-478f-9110-a8dbdbe03a74" name="Kenza Benabderrazik" address="1, rue du Vuache, CP 2091, 1211 Genève, Switzerland" telephone="" telefax="" email="kenza.benabderrazik@sofiesonline.com" companyId="f458382e-3cf7-4bef-9b68-ff5cfde9289d">
     <companyName xml:lang="en">Sofies</companyName>
   </person>
-  <person id="e049b5f5-4742-4486-add7-d5fc2bf19c4d" name="Louis Brimacombe" address="4 Harrison Lane, S10 4PA Sheffield, United Kingdom" telephone="" telefax="" email="louis.brimacombe@gmail.com" companyId="18060291-7bdd-4a1e-84ff-c108e164818e">
-    <companyName xml:lang="en"></companyName>
+  <person id="a7b17163-0c31-4d85-ac46-29ff63f44bbd" name="Sebastiano Meier" address="Reckenholzstr.191, 8046 Zürich" telephone="0041 44 377 71 54" telefax="0041 44 377 72 01" email="art@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
   </person>
   <person id="cb4a3f95-41a1-4c51-a35e-f863c4e469c9" name="Konrad Schleiss" address="Weinbergstr. 46, 2540 Grenchen" telephone="+41 32 653 29 20" telefax="+41 32 653 29 22" email="k.schleiss@bluewin.ch" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
     <companyName xml:lang="en">NOENTRY</companyName>
@@ -344,14 +353,17 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="e36cf256-faeb-47ab-89e8-998e46b849b7" name="Cecile Guignard" address="Parc scientifique EPFL, Bat D, 1015 Lausanne, Switzerland" telephone="" telefax="" email="cecile.guignard@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
     <companyName xml:lang="en">Quantis</companyName>
   </person>
-  <person id="79574269-fb4b-4b1e-b64c-d86e30829015" name="Niels Jungbluth" address="Margrit-Rainer-Strasse 11c, 8050 Zürich, Switzerland" telephone="+41 44 940 61 32" telefax="+41 44 940 67 94" email="jungbluth@esu-services.ch" companyId="47b248b7-d191-4e53-921b-8bfb4692ebef">
-    <companyName xml:lang="en">ESU-services</companyName>
+  <person id="a0bf18d2-648a-40fa-8d8b-118676df1e35" name="Sébastien Humbert" address="Switzerland" telephone="" telefax="" email="sebastien.humbert@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
+    <companyName xml:lang="en">Quantis</companyName>
   </person>
   <person id="6e93b935-74dd-4cb6-b503-d424a411aff3" name="Kuch" address="185 avenue Charles de Gaulle, 92200 Neuilly-sur-Seine, France" telephone="" telefax="" email="pkuch@bio.deloitte.fr" companyId="dc1bfe46-07ee-4da0-8360-77c1a9fd10f8">
     <companyName xml:lang="en">Bio Intelligence Service</companyName>
   </person>
   <person id="725942b9-cd77-4359-a564-8500b92d9dc4" name="Mireille Faist Emmenegger" address="Reitergasse 11, 8004 Zürich, Switzerland" telephone="" telefax="" email="Mireille.Faist@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
     <companyName xml:lang="en">Quantis</companyName>
+  </person>
+  <person id="8618b3ee-873c-4b72-846b-1c8c99943aee" name="Otávio Cavalett" address="R. Giuseppe Máximo Scolfaro, 10000 - Bosque das Palmeiras, Campinas, São Paulo - Brazil, CEP 13083-100" telephone="+55 (19) 3512-1010" email="otavio.cavalett@bioetanol.org.br" companyId="5ed298df-cc67-4c27-b77c-d5b26ca0b7bf">
+    <companyName xml:lang="en">Laboratório Nacional de Ciência e Tecnologia do Bioetanol</companyName>
   </person>
   <person id="57378f6b-a790-4b8d-a730-80f891d77e94" name="Marisa Vieira" address="The Netherlands" email="vieira@pre.nl" companyId="d62f5701-e740-47ef-b76d-c92ffa2e8745">
     <companyName xml:lang="en">PRé Consultants</companyName>
@@ -377,14 +389,17 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="571d9e03-6533-4bb7-bc19-724bd850f44f" name="Sybille Büsser" address="Margrit-Rainer-Str. 11c, 8050 Zurich, Switzerland" telephone="0041 44 940 61 35" telefax="0041 44 940 61 94" email="buesser@esu-services.ch" companyId="47b248b7-d191-4e53-921b-8bfb4692ebef">
     <companyName xml:lang="en">ESU-services</companyName>
   </person>
-  <person id="8d9ec4d2-bb82-4e33-b3b7-3b8da648908c" name="Vincent Rossi" address="Quantis sarl, EPFL, PSE-A, 1015 Lausanne" telephone="0041 21 550 02 43" telefax="0041 91 968 10 93" email="vincent.rossi@quantis-intl.com" companyId="55b1528c-1301-456c-b851-24125d2f47c1">
-    <companyName xml:lang="en">Quantis</companyName>
+  <person id="9013addf-28b9-4afa-996a-4ab3dda2f3a7" name="Eduardo Toshio Sugawara" address="Estrada Ribeirão do Soldado, 230, São Bernardo do Campo." telephone="+551123493044" email="eduardo.toshio@basf.com" companyId="d150e0aa-cd0e-4e9b-81c0-c7368517534a">
+    <companyName xml:lang="en">Fundação Espaço Eco</companyName>
   </person>
   <person id="9eb39d77-e323-44b0-a04a-8eaf132b7c04" name="Eylem Kilic" address="Turkey" email="eylemkilic@gmail.com" companyId="e55639d9-7d5e-4b22-a7a1-559d33a513c1">
     <companyName xml:lang="en">Usak University</companyName>
   </person>
   <person id="2fc189a4-d150-4611-a61e-3e8dde5f0bb8" name="Viviane Barros" address="Rua Mauro Freire nº 200 apt 1901, 60834-030 Fortaleza, Brazil" telephone="55 85 88793512" telefax="" email="vivianebarros1@hotmail.com" companyId="b253062c-19e5-412b-be98-75a2f0f78b98">
     <companyName xml:lang="en">Embrapa - Agroindustria Tropical</companyName>
+  </person>
+  <person id="12b95c41-ed64-41a6-8cda-a7a801120280" name="Ricardo Pazianotto" address="Rodovia SP-340, Km 127,5, Tanquinho Velho, CP 69, CEP: 13820-000, Jaguariuna, SP" telephone="+55 (19) 3311-2794" email="ricardo.pazianotto@embrapa.br" companyId="76e3c5a9-b90d-4175-a46f-7436823b06f1">
+    <companyName xml:lang="en">Embrapa - Meio Ambiente</companyName>
   </person>
   <person id="a0c29817-13fa-4a48-a605-db1af635fbfe" name="David  Porras" address="Sant Antoni Maria Claret, 08025 barcelona, Spain" telephone="" telefax="" email="david.porras@gencat.cat" companyId="66cbabb6-1f6b-4506-b2b6-ba01e3309e11">
     <companyName xml:lang="en">Centre de la Propietat Forestal de Catalunya </companyName>
@@ -481,6 +496,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="cbe02a0d-9502-44f6-a266-a83100ce794e" name="Axel Liebich" address="Wilckensstr. 3" telephone="4906221476729" email="axel.liebich@ifeu.de" companyId="55302d03-856a-4b9d-bf3c-e63fa7211160">
     <companyName xml:lang="en">IFEU GmbH</companyName>
   </person>
+  <person id="42f20e28-d592-4bad-8c24-a2580048dacc" name="Ana Donke" address="Rua Lucinda Ferreira, 98, Vila Firmiano Pinto, CEP 04125-150, Sao Paulo, SP" telephone="+55(11)985707056" email="ana.donke@usp.br" companyId="0d50c8bf-2d81-4f34-9703-0f60c3e9e693">
+    <companyName xml:lang="en">Universidade de São Paulo</companyName>
+  </person>
   <person id="37cc4296-1529-4587-9d00-4107455be7d7" name="François Saunier" address="CIRAIG, CP 6079, succ. centre ville, H3C3A7 Montréal, Canada" telephone="+1 514 340 4711 #4273" telefax="" email="francois.saunier@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
     <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
   </person>
@@ -514,7 +532,7 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="a19d680f-2f3a-4389-bdb8-d00dcf690f74" name="Marcela Valles Lange" address="Rua Ângelo Dallarmi, 350, 82015750 Curitiba, Brazil" telephone="" telefax="" email="marcela_lange@yahoo.com.br" companyId="4efaf62a-9844-4edd-803c-2bd2a4ad78c1">
     <companyName xml:lang="en">Universidade Tecnológica Federal do Paraná</companyName>
   </person>
-  <person id="b77154e9-578d-458d-b577-bf75ae26696f" name="Arthur Braunschweig" address="Switzerland" email="abraunschweig@e2mc.com" companyId="f1423bcc-aa33-4f34-8bb6-f7c6bdfaf261">
+  <person id="b77154e9-578d-458d-b577-bf75ae26696f" name="Arthur Braunschweig" address="Switzerland, Switzerland" telephone="" telefax="" email="abraunschweig@e2mc.com" companyId="f1423bcc-aa33-4f34-8bb6-f7c6bdfaf261">
     <companyName xml:lang="en">E2 Management Consulting AG</companyName>
   </person>
   <person id="1ef173e3-4c48-4135-b20e-b46c13cb169d" name="Michael Lettenmeier" address="Germany" email="michael.lettenmeier@wupperinst.org" companyId="d5024fa4-604b-4afc-a8ba-73becb08392f">
@@ -525,6 +543,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   </person>
   <person id="45c451d7-4616-4650-8ade-ef251a378ef4" name="Adrien Beton" address="France, France" telephone="" telefax="" email="adrien.beton@weave-air.eu" companyId="dc1bfe46-07ee-4da0-8360-77c1a9fd10f8">
     <companyName xml:lang="en">Bio Intelligence Service</companyName>
+  </person>
+  <person id="227117a7-4335-43cd-b22d-7fd3461f4a92" name="Martin Kilga" address="Switzerland, Switzerland" telephone="" telefax="" email="martin.kilga@sinum.com" companyId="55f06a13-f32a-4a71-a512-acd6f5b54aa1">
+    <companyName xml:lang="en">Sinum AG</companyName>
   </person>
   <person id="b6f1b07e-821b-446d-8200-6c6de4e90403" name="Maria Enroth" address="Sweden" email="maria.enroth@msgab.se" companyId="e4db2e0c-d8cc-4452-a252-408939ee4135">
     <companyName xml:lang="en">MSG Management System Group AB</companyName>
@@ -627,8 +648,8 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="2416d4b6-cdf2-4d8e-ab65-6527b06d319a" name="Antonio C.I. Pizzigallo" address="Italy" email="pizzigallo@unisi.it" companyId="40d1707f-1333-4a10-86e4-557ac6aacaef">
     <companyName xml:lang="en">Università degli Studi di Siena</companyName>
   </person>
-  <person id="39d3970f-c9df-41d7-8738-3d0d6b1bf7c7" name="Jens Borken-Kleefeld" address="Austria" telephone="" telefax="" email="borken@iiasa.ac.at" companyId="5c2c844e-8a68-425d-b6aa-052564660e7c">
-    <companyName xml:lang="en">International Institute for Applied Systems Analysis</companyName>
+  <person id="27d0c610-bd9a-4cb3-9489-b163f991b69e" name="workshop_participant" address="Technoparkstrasse 1, 8005 Zurich, Switzerland" telephone="" telefax="" email="support@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
   </person>
   <person id="1feb3028-8f86-49ba-96c9-6eec3ffc4229" name="Gabrielle van Durme" address="C.P. 6079, succ. Centre-Ville, H3C 3A7 Montreal, Canada" telephone="" telefax="" email="gabrielle.van-durme@polymtl.ca" companyId="8b05ba4e-0fdc-46b7-94d7-90a747d02d13">
     <companyName xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</companyName>
@@ -660,8 +681,8 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="2f75b50e-66d1-4869-9423-a2ec934570be" name="Aurélie Wilfart" address="France" email="Aurelie.Wilfart@rennes.inra.fr" companyId="6e5ab197-fef5-4a0a-a50c-5fe9d49e2cf4">
     <companyName xml:lang="en">INRA</companyName>
   </person>
-  <person id="227117a7-4335-43cd-b22d-7fd3461f4a92" name="Martin Kilga" address="Switzerland, Switzerland" telephone="" telefax="" email="martin.kilga@sinum.com" companyId="55f06a13-f32a-4a71-a512-acd6f5b54aa1">
-    <companyName xml:lang="en">Sinum AG</companyName>
+  <person id="4d8cbfdb-e994-4e32-b3eb-652f9cdc8b89" name="Mohammad Mosharraf Hossain, PhD" address="Institute of Forestry and Environmental Sciences, University of Chittagong, Chittagong 4331, Bangladesh" email="mosharraf@ifescu.ac.bd" companyId="10007ede-ba83-468f-bf8a-e5bce32c91a9">
+    <companyName xml:lang="en">Institute of Forestry and Environmental Sciecnes, University of Chittagong</companyName>
   </person>
   <person id="a0d9a8b9-af8c-4e82-9c18-5d1d92c82338" name="Matthias Stucki (obsolete but e-mail OK)" address="" telephone="" telefax="" email="matthias.stucki@esu-services.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
     <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
@@ -671,6 +692,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   </person>
   <person id="1b7d18d1-9d1a-4fbd-a965-89e0f2a8e8cd" name="Georg Geissler" address="ETH Hönggerberg, HCI, 8093 Zuerich" telephone="0041 44 632 09 75" telefax="0041 44 632 11 89" email="eth.s-u@ecoinvent.org" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
     <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="7418f45d-28aa-4080-a813-e4d599fc8f2d" name="Gregor Wernet" address="1, 1 1, Switzerland" telephone="" telefax="" email="gregor.wernet@empa.ch" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
+    <companyName xml:lang="en">ecoinvent Centre</companyName>
   </person>
   <person id="61cb2b57-0a48-4ec8-9bfe-5f5d28a8fa9f" name="Ana Passuello" address="Oswaldo Aranha 99 - 3 andar, 90035190 Porto Alegre, Brazil" telephone="+55 51 3308-3353" telefax="" email="anapaula.k@ufrgs.br" companyId="a8a9e6f2-ffc0-4fdf-9e70-b547be2966e0">
     <companyName xml:lang="en">Universidade Federal do Rio Grande do Sul</companyName>
@@ -711,6 +735,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="bba830ea-698b-4ee2-9e36-a2ecf6eafd6f" name="Filippo Sessa" email="sessa@studiolce.it" companyId="382ac484-3b32-4741-9d38-e906c971545b">
     <companyName xml:lang="en">Life Cycle Engineering</companyName>
   </person>
+  <person id="fd227c6e-b605-44db-8caa-45a1e1f8d26b" name="Henrique Rogerio Antunes de Souza Junior" email="henrique.junior@posgrad.ufsc.br" companyId="d5b5e931-caaa-41de-9f0c-7d5e893b2e7d">
+    <companyName xml:lang="en">Universidade Federal de Santa Catarina</companyName>
+  </person>
   <person id="62bc659d-bd54-40ef-b53b-53401a6591fd" name="Hisko Baas" address="" telephone="+41 58 468 75 74" telefax="" email="hisko.baas@agroscope.admin.ch" companyId="a08786a2-8cb8-46a4-a5e3-3abcae759d1c">
     <companyName xml:lang="en">Forschungsanstalt Agroscope Reckenholz-Tänikon ART</companyName>
   </person>
@@ -730,6 +757,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <companyName xml:lang="en">Paul Scherrer Institute</companyName>
   </person>
   <person id="c4597934-ecac-422c-b431-382e85fdcb83" name="[System]" email="support@ecoinvent.org" />
+  <person id="e049b5f5-4742-4486-add7-d5fc2bf19c4d" name="Louis Brimacombe" address="4 Harrison Lane, S10 4PA Sheffield, United Kingdom" telephone="" telefax="" email="louis.brimacombe@gmail.com" companyId="18060291-7bdd-4a1e-84ff-c108e164818e">
+    <companyName xml:lang="en"></companyName>
+  </person>
   <person id="925f1d55-562e-4c1b-898f-28c334016c72" name="Silvio Blaser" address="Reckenholzstr.191, 8046 Zürich" telephone="0041 44 377 75 73" telefax="0041 44 377 72 01" email="art@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
     <companyName xml:lang="en">NOENTRY</companyName>
   </person>
@@ -738,6 +768,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   </person>
   <person id="f2f7629c-bae5-4362-bdd1-7b8747c10b8f" name="Harshita Soni" address="CII - Green Business Centre, Hyderabad" telephone="91-040-4418-5149" email="harshita.soni@cii.in" companyId="67aaeed4-6ef3-4766-b360-38fe7080d6eb">
     <companyName xml:lang="en">CII Green Business Centre</companyName>
+  </person>
+  <person id="79574269-fb4b-4b1e-b64c-d86e30829015" name="Niels Jungbluth" address="Margrit-Rainer-Strasse 11c, 8050 Zürich, Switzerland" telephone="+41 44 940 61 32" telefax="+41 44 940 67 94" email="jungbluth@esu-services.ch" companyId="47b248b7-d191-4e53-921b-8bfb4692ebef">
+    <companyName xml:lang="en">ESU-services</companyName>
   </person>
   <person id="19b1e9a7-7870-4b27-b9d5-e25e074f378e" name="P V Kiran Ananth" address="CII Sohrabji Godrej Green Business Centre, Hyderabad - 500084 " email="kiran.ananth@cii.in" companyId="67aaeed4-6ef3-4766-b360-38fe7080d6eb">
     <companyName xml:lang="en">CII Green Business Centre</companyName>
@@ -803,8 +836,11 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="33c7a67b-390d-4590-9beb-0f61ed24407e" name="Mateus Chagas" address="Rua Guigeppe Máximo Scolfaro, 10.000, 13083-970 Campinas, Brazil" telephone="+55 19 3517 5031" telefax="" email="mateusvarginha@gmail.com" companyId="b4ca531a-4036-4ee4-ab73-b30e52a55960">
     <companyName xml:lang="en">Brazilian Center of Research in Energy and Materials</companyName>
   </person>
-  <person id="e2d6e90a-4ffa-41d1-b2b5-65d68bd67955" name="Etienne LEES-PERASSO" address="170 rue de Chatagnon ZI Centr'Alp, 38340 Moirans, France" telephone="33 04 76 07 36 43" telefax="33 04 76 37 44 30" email="etienne.lees-perasso@fr.bureauveritas.com" companyId="46709dbd-8366-4af1-bbc8-4743ff47572d">
-    <companyName xml:lang="en">Bureau Veritas CODDE</companyName>
+  <person id="224b9ce2-d95d-415f-aebf-fe6534baba97" name="Stefan Erzinger" address="Tänikon, 8356 Ettenhausen" telephone="0041 44 377 71 54" telefax="0041 44 377 72 01" email="art@ecoinvent.org" companyId="ad0ed468-cb7d-4f22-b60c-f97a33a2f5b5">
+    <companyName xml:lang="en">NOENTRY</companyName>
+  </person>
+  <person id="28f608ef-9ac6-4db4-8447-a4360122dfd5" name="Renan Novaes" address="Rodovia SP-340, Km 127,5, Tanquinho Velho, CP 69, CEP: 13820-000, Jaguariuna, SP" telephone="+55 (19) 3311-2793" email="renan.milagres@embrapa.br" companyId="76e3c5a9-b90d-4175-a46f-7436823b06f1">
+    <companyName xml:lang="en">Embrapa - Meio Ambiente</companyName>
   </person>
   <person id="b78864b1-71cc-438c-adb0-eefb01e45c87" name="Florian Gschösser" address="Wolfgang-Pauli-Strasse 15, HIL F 27.3, 8093 Zurich, Switzerland" telephone="" telefax="" email="gschoesser@ibi.baug.ethz.ch" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
     <companyName xml:lang="en">ETH Zürich</companyName>
@@ -817,6 +853,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   </person>
   <person id="59b8233f-9241-4154-b55f-b9e818857d3d" name="Carine Grossrieder" address="E1-Høgskoleringen 5, 7491 Trondheim, Norway" telephone="0047.735.98.955" telefax="" email="carine.grossrieder@ntnu.no" companyId="3586fcf5-3eae-4a35-a395-92099f50ce3a">
     <companyName xml:lang="en">Norwegian University of Science and Technology</companyName>
+  </person>
+  <person id="f4599209-b29c-4527-80ab-5ee47643870c" name="[Deleted]P V Kiran Ananth" address="CII Godrej Green Business Centre, Survey No 64, Kothaguda Post, Near Hitech City" telephone="+91 40 44185152" email="kiran.ananth@cii.in" companyId="90e9fdba-7932-4f43-ad64-e6fefbf92e53">
+    <companyName xml:lang="en">Confederation of Indian Industry</companyName>
   </person>
   <person id="a025a249-57de-4c05-b865-c5133f7a943d" name="Maria Hecher" address="., . ., Switzerland" telephone="" telefax="„Disabled/Christian Bauer/11/09/14“ " email="maria.hecher@psi.ch" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
     <companyName xml:lang="en">Paul Scherrer Institute</companyName>
@@ -869,9 +908,6 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="f2bb9b6d-0f7b-47dc-ac26-8bda20f91ff3" name="Christian Bauer" address="Switzerland, 5232 Villigen, Switzerland" telephone="" telefax="" email="christian.bauer@psi.ch" companyId="e22989d2-b4c7-4bec-bedf-fe1990cb64d4">
     <companyName xml:lang="en">Paul Scherrer Institute</companyName>
   </person>
-  <person id="28a981b7-f331-4ae8-b76b-1f20e68ee737" name="Cirilo" address="Teodoro de Beaurepaire, 04279030 São Paulo, Brazil" telephone="" telefax="" email="fabio.cirilo@basf.com" companyId="d150e0aa-cd0e-4e9b-81c0-c7368517534a">
-    <companyName xml:lang="en">Fundação Espaço Eco</companyName>
-  </person>
   <person id="0223069a-b3cb-475c-84a2-2e0a9eaaeb07" name="Alba Canovas Creus" address="" telephone="" telefax="" email="alba.canovas@empa.ch" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
     <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
   </person>
@@ -904,9 +940,6 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   </person>
   <person id="b4ec49df-e656-49e0-aa03-b672213f0cf6" name="Chris Goemans" address="119 Ross Avenue, K1Y 0N6 Ottawa, Canada" telephone="1-613-729-9996" telefax="1-613-729-9997" email="chris.goemans@athenasmi.org" companyId="12b0857b-7a23-418d-960b-3c0bfffc11d7">
     <companyName xml:lang="en">Athena Sustainable Materials Institute</companyName>
-  </person>
-  <person id="27d0c610-bd9a-4cb3-9489-b163f991b69e" name="workshop_participant" address="Technoparkstrasse 1, 8005 Zurich, Switzerland" telephone="" telefax="" email="support@ecoinvent.org" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
-    <companyName xml:lang="en">ecoinvent Centre</companyName>
   </person>
   <person id="b1044326-7336-48b3-a7aa-73b2bced8a95" name="Anne Landfield Greig" email="anne@fourelementsllc.com" companyId="54b5cd68-ce23-4c09-8fa2-a7922f348785">
     <companyName xml:lang="en">Four Elements Consulting, LLC</companyName>
@@ -989,9 +1022,7 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="b4acbc68-0edc-47c7-8ada-6520926d28d5" name="Philippe Stolz" address="Kanzleistrasse 4, 8610 Uster" telephone="0041 44 940 61 93" telefax="0041 44 544 57 94" email="stolz@treeze.ch" companyId="4cc03c52-145e-403d-aa84-22d6cb5e15e4">
     <companyName xml:lang="en">treeze</companyName>
   </person>
-  <person id="7418f45d-28aa-4080-a813-e4d599fc8f2d" name="Gregor Wernet" address="1, 1 1, Switzerland" telephone="" telefax="" email="gregor.wernet@empa.ch" companyId="bbf9cfb4-e253-4419-9d84-f206a3b64de7">
-    <companyName xml:lang="en">ecoinvent Centre</companyName>
-  </person>
+  <person id="5bdbeafc-6967-463f-8372-ad771a5e7aa4" name="Sanjay Jain" email="sanjumad1@gmail.com" />
   <person id="7e22251a-fc46-4607-b32a-59b86ccd9577" name="Helen Ann Hamilton" address="" telephone="" telefax="" email="helen.hamilton62@gmail.com" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
     <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
   </person>
@@ -1022,8 +1053,14 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <person id="210ee764-ea57-478e-a0f7-9dab5bb4f767" name="Fabienne Habermacher" email="fabienne@empa" companyId="6d8e2e43-8463-4d80-95e8-803c2005f0fa">
     <companyName xml:lang="en">Eidgenössische Materialprüf- und -forschungsanstalt</companyName>
   </person>
+  <person id="6eee06de-ed9b-45f3-b4f0-6b7f9a89a093" name="Matthias Stucki" address="Grüental, 8820 Wädenswil, Switzerland" telephone="+41 58 934 57 19" telefax="" email="matthias.stucki@zhaw.ch" companyId="68a518b1-d870-46e4-8f0b-46e67c9d1152">
+    <companyName xml:lang="en">ZHAW</companyName>
+  </person>
   <person id="8bbb08d2-d40a-4a8f-beca-838e21ea3dca" name="Niko Heeren" address="Schafmattstr. 6, 8093 Zürich, Switzerland" telephone="044 633 49 92" telefax="" email="nheeren@ethz.ch" companyId="21aed770-3078-4da8-940f-a3b04a3c68d2">
     <companyName xml:lang="en">ETH Zürich</companyName>
+  </person>
+  <person id="e0ca43a5-95d4-495a-9572-ec01a52ef062" name="Mateus Chagas" address="Rua Giuseppe Máximo Scolfaro, 10.000,  Guará, Campinas, Sao Paulo, Brazil, Postal Code 13083-100" telephone="+55 19 3517 5031" email="mateus.chagas@ctbe.cnpem.br" companyId="5ed298df-cc67-4c27-b77c-d5b26ca0b7bf">
+    <companyName xml:lang="en">Laboratório Nacional de Ciência e Tecnologia do Bioetanol</companyName>
   </person>
   <person id="146b9724-969b-4397-91f1-fe8d49a47559" name="Jade Müller Carneiro" email="jademullerc@gmail.com" companyId="b253062c-19e5-412b-be98-75a2f0f78b98">
     <companyName xml:lang="en">Embrapa - Agroindustria Tropical</companyName>

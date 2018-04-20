@@ -5,17 +5,17 @@ from copy import copy
 from .utils import *
 
 
-def load_MD(root_dir):
+def load_MD(root_dir, make_excel=False):
     '''Load pickled master data dictionary MD.
     
     Dictionary `MD` keys=names of the master data files and
     values=pandas dataframes with all elements and attributes.'''
     
     MD_pkl_dir = os.path.join(root_dir, 'MasterData')
-    update_MD_if_needed(root_dir)
+    update_MD_if_needed(root_dir, make_excel)
     return pkl_load(MD_pkl_dir, 'MD')
     
-def update_MD_if_needed(root_dir):
+def update_MD_if_needed(root_dir, make_excel):
     '''Generate a dictionary `MD` with keys=names of the master data files and
        values=pandas dataframes with all elements and attributes
        Will only generate `MD` if such a dictionary does not already exist
@@ -37,17 +37,18 @@ def update_MD_if_needed(root_dir):
         update = True
     else:
         t_pkl = os.path.getmtime(existing_MD)
-        print(t_pkl)
-        print(os.path.getmtime(existing_MD))
-        print(t_MD > t_pkl)
         update = t_MD > t_pkl
     if update:
         assert MD_fields_xls, "MD.pkl file outdated, pass argument MD_fields_xls to regenerate"
         print("Master data pkl being updated")
+        if make_excel:
+            MD_xls_dump_dir = MD_xls_dump_dir
+        else:
+            MD_xls_dump_dir = None
         MD = build_MD(MD_xml_dir,
                       MD_fields_xls,
                       pickle_dump_dir=MD_pkl_dir,
-                      MD_xls_dump_dir=MD_xls_dump_dir
+                      MD_xls_dump_dir=MD_xls_dump_dir,
                       )
     return None
 

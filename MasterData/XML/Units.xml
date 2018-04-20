@@ -5,7 +5,7 @@ Software distributed under the License is distributed on an "AS IS" basis, WITHO
 The Original Code consists of the EcoSpold data format and EcoSpold Access.
 The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
 -->
-<validUnits majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="674" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+<validUnits majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="689" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
   <contextName xml:lang="en">ecoinvent</contextName>
   <unit id="c182d036-038d-4c66-86ba-280c8a624ddf">
     <name xml:lang="en">kg/MJ</name>
@@ -51,9 +51,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <name xml:lang="en">USD(2011)</name>
     <comment xml:lang="en"></comment>
   </unit>
-  <unit id="afc016fa-b880-482a-8a6c-2cd02dc6dd81">
-    <name xml:lang="en">m3/PMH</name>
-    <comment xml:lang="en">PMH: productive machine hour (maschine working hours including breaks up to 15 minutes)</comment>
+  <unit id="11910f25-70a2-4150-a6a8-37e481c22e12">
+    <name xml:lang="en">month</name>
+    <comment xml:lang="en"></comment>
   </unit>
   <unit id="06d259de-3175-4ac3-b56d-d810242614f1">
     <name xml:lang="en">l/kg</name>
@@ -175,10 +175,6 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <name xml:lang="en">kg/(m2*year)</name>
     <comment xml:lang="en"></comment>
   </unit>
-  <unit id="08bd0c61-0b9a-4280-bc25-3444d52c15bf">
-    <name xml:lang="en">km*year</name>
-    <comment xml:lang="en">kilometre-year</comment>
-  </unit>
   <unit id="f4ade0ac-636a-41bb-b1d9-17e78a67fa07">
     <name xml:lang="en">MJ/kcal</name>
     <comment xml:lang="en"></comment>
@@ -287,6 +283,10 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <name xml:lang="en">kg/seedling</name>
     <comment xml:lang="en"></comment>
   </unit>
+  <unit id="afc016fa-b880-482a-8a6c-2cd02dc6dd81">
+    <name xml:lang="en">m3/PMH</name>
+    <comment xml:lang="en">PMH: productive machine hour (maschine working hours including breaks up to 15 minutes)</comment>
+  </unit>
   <unit id="c9d0bbb9-6a03-44c6-ada6-cd6d3b4cedd2">
     <name xml:lang="en">kg NO3-N/ha.year</name>
     <comment xml:lang="en"></comment>
@@ -343,9 +343,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <name xml:lang="en">kg/(head.d)</name>
     <comment xml:lang="en">kg per head of animal per day</comment>
   </unit>
-  <unit id="2a448677-87c7-4ccf-953a-8d71c73a4c04">
-    <name xml:lang="en">kg/GJ</name>
-    <comment xml:lang="en">kilogram per Giga Joule</comment>
+  <unit id="08bd0c61-0b9a-4280-bc25-3444d52c15bf">
+    <name xml:lang="en">km*year</name>
+    <comment xml:lang="en">kilometre-year</comment>
   </unit>
   <unit id="41b2b2e3-338f-4b5f-be29-4f501bb4cf83">
     <name xml:lang="en">kcal/kWh</name>
@@ -390,9 +390,21 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
     <name xml:lang="en">MJ/kg</name>
     <comment xml:lang="en">Mega Joule per kilogram</comment>
   </unit>
+  <unit id="e3e78ccf-8743-4939-8c33-25d4ee488cd1">
+    <name xml:lang="en">t*h/(MJ*mm)</name>
+    <comment xml:lang="en">ton*hours/MJmm</comment>
+  </unit>
+  <unit id="b3e99054-2903-4ba7-8798-f69fdbf2c053">
+    <name xml:lang="en">t/day</name>
+    <comment xml:lang="en"></comment>
+  </unit>
   <unit id="5b972631-34e3-4db7-a615-f6931770a0cb">
     <name xml:lang="en">unit</name>
     <comment xml:lang="en">unit, piece, number</comment>
+  </unit>
+  <unit id="2d4eeca7-fd7a-46b7-adfe-5c09a06ec5dd">
+    <name xml:lang="en">unit/ha</name>
+    <comment xml:lang="en">Productivity of seedlings per hectare</comment>
   </unit>
   <unit id="bdecebdd-6895-4807-9e65-6bfbd2067deb">
     <name xml:lang="en">CHF2011</name>
@@ -417,6 +429,10 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <unit id="2707f8e2-f546-43ca-b0af-850d438b5dda">
     <name xml:lang="en">m2/year</name>
     <comment xml:lang="en">square metre per year</comment>
+  </unit>
+  <unit id="2a448677-87c7-4ccf-953a-8d71c73a4c04">
+    <name xml:lang="en">kg/GJ</name>
+    <comment xml:lang="en">kilogram per Giga Joule</comment>
   </unit>
   <unit id="9584395d-794c-4a4f-8035-4e136007e763">
     <name xml:lang="en">kg P2O5/ha</name>
@@ -461,6 +477,10 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <unit id="1eb913ab-3676-4615-bb13-2bcfc37e5e85">
     <name xml:lang="en">kg/ha.yr</name>
     <comment xml:lang="en">kilogram per hectare per year</comment>
+  </unit>
+  <unit id="0914dcce-dd7a-4dd0-9367-2c3c84c6d8a2">
+    <name xml:lang="en">MJ*mm/(ha*h*yr)</name>
+    <comment xml:lang="en"></comment>
   </unit>
   <unit id="a3a82f71-552b-4552-82eb-f241e722696f">
     <name xml:lang="en">kg/year</name>

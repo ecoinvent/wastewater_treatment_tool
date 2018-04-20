@@ -5,7 +5,7 @@ Software distributed under the License is distributed on an "AS IS" basis, WITHO
 The Original Code consists of the EcoSpold data format and EcoSpold Access.
 The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
 -->
-<validCompanies majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="404" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+<validCompanies majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="413" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
   <contextName xml:lang="en">ecoinvent</contextName>
   <company id="21911f8c-77c0-449d-9651-7e4d4935f871" code="UTSYDNE">
     <name xml:lang="en">University of Technology Sydney</name>
@@ -84,8 +84,8 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   <company id="a32b9141-2845-4069-9715-ad2921b366f7" code="MINESPT">
     <name xml:lang="en">Mines ParisTech</name>
   </company>
-  <company id="40d1707f-1333-4a10-86e4-557ac6aacaef" code="USSIENA">
-    <name xml:lang="en">Università degli Studi di Siena</name>
+  <company id="d5b5e931-caaa-41de-9f0c-7d5e893b2e7d" code="UFSC" website="http://ufsc.br/">
+    <name xml:lang="en">Universidade Federal de Santa Catarina</name>
   </company>
   <company id="10112009-bd5e-47e4-afb3-a568462ed08a" code="U+E">
     <name xml:lang="en">Werner Umwelt &amp; Entwicklung</name>
@@ -119,6 +119,9 @@ The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre
   </company>
   <company id="f3ed705a-eb4a-47d3-a982-e0259d8e55e9" code="oeko" website="http://www.oeko.de">
     <name xml:lang="en">Öko-Institut e. V.</name>
+  </company>
+  <company id="8ac2dbe0-5308-43f0-8ed8-eafe78776b13" code="1502" website="http://www.pucp.edu.pe/">
+    <name xml:lang="en">Pontificia Universidad Católica del Perú</name>
   </company>
   <company id="c9fb9106-e13c-4752-a7d5-da14c764ba8f" code="2BCA">
     <name xml:lang="en">2B Consulenza Ambientale</name>
@@ -163,9 +166,6 @@ http://noriegec.cpgec.ufrgs.br/norie
   </company>
   <company id="d62f5701-e740-47ef-b76d-c92ffa2e8745" code="PRE">
     <name xml:lang="en">PRé Consultants</name>
-  </company>
-  <company id="ed5db395-96fe-4f6e-8a29-e961e94c8fa3" code="Nankai">
-    <name xml:lang="en">Nankai University</name>
   </company>
   <company id="8b5d0b44-0b93-4882-a511-3717c8c5bb6f" code="CIRAD">
     <name xml:lang="en">Centre de coopération Internationale en Recherche Agronomique pour le Développement</name>
@@ -242,8 +242,8 @@ http://noriegec.cpgec.ufrgs.br/norie
     <name xml:lang="en">Sichuan University</name>
     <comment xml:lang="en"></comment>
   </company>
-  <company id="8ac2dbe0-5308-43f0-8ed8-eafe78776b13" code="1502" website="http://www.pucp.edu.pe/">
-    <name xml:lang="en">Pontificia Universidad Católica del Perú</name>
+  <company id="ed5db395-96fe-4f6e-8a29-e961e94c8fa3" code="Nankai">
+    <name xml:lang="en">Nankai University</name>
   </company>
   <company id="55b1528c-1301-456c-b851-24125d2f47c1" code="QUANTIS">
     <name xml:lang="en">Quantis</name>
@@ -292,6 +292,9 @@ The European Aluminium Association (EAA) was founded in 1981 and represents the 
   <company id="553ab078-fe09-415f-93fe-752ae2a4fafe" code="VTT">
     <name xml:lang="en">VTT Technical Research Centre</name>
   </company>
+  <company id="40d1707f-1333-4a10-86e4-557ac6aacaef" code="USSIENA">
+    <name xml:lang="en">Università degli Studi di Siena</name>
+  </company>
   <company id="a4be09c6-43c2-428d-913e-44e5c5d69d05" code="HYU" website="http://subest.hanyang.ac.kr">
     <name xml:lang="en">Hanyang Univ. suBest Lab.</name>
     <comment xml:lang="en"></comment>
@@ -329,6 +332,9 @@ The European Aluminium Association (EAA) was founded in 1981 and represents the 
   <company id="8b05ba4e-0fdc-46b7-94d7-90a747d02d13" code="CIRAIG">
     <name xml:lang="en">CIRAIG, Ecole Polytechnique Montreal</name>
   </company>
+  <company id="233bf93e-d2e4-4cc6-91a0-70cceeea0f9a" code="LIC01" website="www.ladyirwin.edu.in/">
+    <name xml:lang="en">Lady Irwin College</name>
+  </company>
   <company id="d02341df-4e92-458a-ae91-c41240da0004" code="INTEP">
     <name xml:lang="en">Intep Integrale Planung GmbH</name>
   </company>
@@ -341,6 +347,10 @@ The European Aluminium Association (EAA) was founded in 1981 and represents the 
   </company>
   <company id="cfdf340c-2e6c-4ba7-a8f5-b9e599aad975" code="UU">
     <name xml:lang="en">Utrecht University</name>
+  </company>
+  <company id="5ed298df-cc67-4c27-b77c-d5b26ca0b7bf" code="CTBE" website="http://ctbe.cnpem.br/en/">
+    <name xml:lang="en">Laboratório Nacional de Ciência e Tecnologia do Bioetanol</name>
+    <comment xml:lang="en">Brazilian Bioethanol Science and Technology Laboratory</comment>
   </company>
   <company id="7233e523-7005-43e5-afcb-ea507b8cca18" code="JHTI">
     <name xml:lang="en">Johann Heinrich von Thünen Institut</name>
@@ -369,6 +379,9 @@ The European Aluminium Association (EAA) was founded in 1981 and represents the 
   <company id="f458382e-3cf7-4bef-9b68-ff5cfde9289d" code="Sofies" website="sofiesonline.com">
     <name xml:lang="en">Sofies</name>
     <comment xml:lang="en"></comment>
+  </company>
+  <company id="10007ede-ba83-468f-bf8a-e5bce32c91a9" code="IFESCU" website="www.ifescu.ac.bd">
+    <name xml:lang="en">Institute of Forestry and Environmental Sciecnes, University of Chittagong</name>
   </company>
   <company id="3586fcf5-3eae-4a35-a395-92099f50ce3a" code="NTNU" website="www.ntnu.no">
     <name xml:lang="en">Norwegian University of Science and Technology</name>
