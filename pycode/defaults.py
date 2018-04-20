@@ -183,11 +183,12 @@ default_activity_ends_treatment = "This activity ends " \
 def technology_mix_constructor(technologies_averaged):
     """ Generate string representing technology mix from a technology mix dict"""
     tech_mix = "Averaged technologies:"
-    for tech in technologies_averaged.values():
-        tech_mix += "\n\tShare: {:.0f}%; \n\t\t{}; \n\t\tCapacity: {} PE;"\
+    for tech in technologies_averaged:
+        tech_mix += "\n\tShare: {:.0f}%; \n\t\t{}; \n\t\t{}; \n\t\tCapacity: {} PE;"\
                     "\n\t\tCapacity class: {} PE; \n\t\tLocation: {}".format(
             tech['fraction'] * 100,
-            decode_tech_bitstring(tech['technology_str'])[0:-1],
+            tech['technology_level_1'],
+            decode_tech_bitstring(tech['technology_level_2'])[0:-1],
             tech['capacity'],
             tech['class'],
             tech['location']

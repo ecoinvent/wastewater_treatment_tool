@@ -384,7 +384,7 @@ class WWecoSpoldGenerator(object):
             self.infrastructure_mix = {self.technologies_averaged[0]['class']:100}
         else:
             self.infrastructure_mix = defaultdict(float)
-            for d in self.technologies_averaged.values():
+            for d in self.technologies_averaged:
                 self.infrastructure_mix[d['class']]+=d['fraction']
 
     def add_sewer_exchanges(self):
@@ -545,7 +545,10 @@ class WWecoSpoldGenerator(object):
             if tool_id in ef_ignores:
                 pass
             else:
-                CSO_amount = [cso_amount['value'] for cso_amount in self.CSO_amounts if cso_amount['ecoinvent_id']==ef_id][0]
+                if self.CSO_particulate['value'] + self.CSO_soluble['value'] == 0:
+                    CSO_amount = 0
+                else:
+                    CSO_amount = [cso_amount['value'] for cso_amount in self.CSO_amounts if cso_amount['ecoinvent_id']==ef_id][0]
                 scaled_CSO_amount = CSO_amount*(1-self.untreated_fraction)/(self.untreated_fraction)
                 total_emission = scaled_CSO_amount + direct_discharge['value']
                 fraction_CSO = scaled_CSO_amount/total_emission
@@ -578,7 +581,7 @@ class WWecoSpoldGenerator(object):
                 else:
                     ef.update(
                         {
-                            comment: "Based on direct release to environment of wastewater " \
+                            'comment': "Based on direct release to environment of wastewater " \
                                      "discharged to sewers not connected to wastewater treatment plants"
                         }
                     )
@@ -586,11 +589,8 @@ class WWecoSpoldGenerator(object):
                     ef_id, direct_discharge['value'], scaled_CSO_amount, basic_pollutants)
                 efs.append([ef, [], uncertainty])
         COD_EF = [ef[0]['amount'] for ef in efs if ef[0]['name']=='COD, Chemical Oxygen Demand'][0]
-        print("COD_EF: ", COD_EF)
         COD_influent = [d['value'] for d in self.WW_properties if d['id']=='COD'][0]
-        print("COD_influent: ", COD_influent)
         VSS_influent = [d['value'] for d in self.WW_properties if d['id']=='VSS'][0]
-        print("VSS_influent: ", VSS_influent)
         VSS_EF = VSS_influent/COD_influent * COD_EF
         TOC = COD_EF / self.COD_TOC_ratio['value']
         DOC = TOC - VSS_EF * 0.5
@@ -721,8 +721,6 @@ class WWecoSpoldGenerator(object):
                     }
                 )
                 stripped_id = WWTP_ef['id'][0:-15]
-                print(WWTP_ef['id'])
-                print(stripped_id)
                 if stripped_id in metals:
                     uncertainty = {
                         'variance': 0.65,
@@ -926,7 +924,7 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
                         len(self.technologies_averaged)
                     ),
                     treat_general_comment_final_note.format(
-                        self.URL,
+                        self.url,
                     ),
                 ]
             else:
