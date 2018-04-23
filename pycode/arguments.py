@@ -16,7 +16,32 @@ THe arguments are listed here. Some are detailed below in the section
 ###########Required args####################
 ############################################
 
-always_required_arguments = [
+
+new_args = [
+    'activity_name',
+    'geography',
+    'untreated_fraction',
+    'tool_use_type',
+    'PV',
+    'CSO_particulate',
+    'CSO_soluble',
+    'fraction_C_fossil',
+    'url',
+    'technologies_averaged',
+    'WW_properties',
+    'chemicals',
+    'electricity',
+    'CSO_amounts',
+    'WWTP_influent_properties',
+    'WWTP_emissions_water',
+    'WWTP_emissions_air',
+    'WWTP_emissions_sludge',
+    'sludge_properties',
+    'untreated_as_emissions',
+    'COD_TOC_ratio'
+]
+
+old_always_required_arguments = [
     "tool_use_type", # "average" or "specific". 
     "untreated_fraction", #float, [0, 1]
     "untreated_as_emissions", # Same as CSO, with 100% for both particulates and dissolved
@@ -41,8 +66,46 @@ always_required_arguments = [
     "COD_TOC_ratio"
 ]
 
+always_required_arguments = [
+    'activity_name',
+    'geography',
+    'untreated_fraction',
+    'tool_use_type',
+    'PV',
+    'CSO_particulate',
+    'CSO_soluble',
+    'fraction_C_fossil',
+    'url',
+    'technologies_averaged',
+    'WW_properties',
+    'chemicals',
+    'electricity',
+    'CSO_amounts',
+    'WWTP_influent_properties',
+    'WWTP_emissions_water',
+    'WWTP_emissions_air',
+    'WWTP_emissions_sludge',
+    'sludge_properties',
+    'untreated_as_emissions',
+    'COD_TOC_ratio',
+]
 
-# args depending on whether we have a specific or average "tool_use_type"
+in_old_not_in_new = [
+    'sludge_amount',
+    'sludge_water_content',
+    'FeCl3',
+    'acrylamide',
+    'NaHCO3',
+    'COD_TOC_ratio'
+]
+in_new_not_in_old = [
+    'url',
+    'technologies_averaged',
+    'chemicals',
+    'carbon_content',
+    'WWTP_emissions_sludge'
+]
+
 specific_required_args = {
     'specific': [
         "technology_level_1", # str, ["aerobic, intensive", "aerobic, extensive", "anaerobic"]
@@ -53,6 +116,7 @@ specific_required_args = {
         "technologies_averaged", # list of dicts {fraction:float[0,1], technology_str:bit_string, capacity:string, location:location}
     ]
 }
+
 
 ############################################
 #Some details on more complicated arguments#
