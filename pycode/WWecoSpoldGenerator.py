@@ -803,66 +803,71 @@ class WWecoSpoldGenerator(object):
         self.append_exchange(BOD_ef, [], no_uncertainty)
 
     def WWTP_air_emissions(self):
-        N2O_dict = [ef for ef in self.WWTP_emissions_air if ef['id']=="N2O_effluent_air"][0]
-        N2O = create_empty_exchange()
-        N2O_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == N2O_dict['ecoinvent_id']]
-        N2O.update(
-            {
-                'group': 'ToEnvironment',
-                'name': N2O_sel.index[0][0],
-                'compartment': N2O_sel.index[0][1],
-                'subcompartment': N2O_sel.index[0][2],
-                'unitName': 'kg',
-                'amount': N2O_dict['value'],
+        try:
+            N2O_dict = [ef for ef in self.WWTP_emissions_air if ef['id']=="N2O_effluent_air"][0]
+            N2O = create_empty_exchange()
+            N2O_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == N2O_dict['ecoinvent_id']]
+            N2O.update(
+                {
+                    'group': 'ToEnvironment',
+                    'name': N2O_sel.index[0][0],
+                    'compartment': N2O_sel.index[0][1],
+                    'subcompartment': N2O_sel.index[0][2],
+                    'unitName': 'kg',
+                    'amount': N2O_dict['value'],
+                    'comment': ""
+                }
+            )
+            N2O_uncertainty = {
+                'variance': 0.12,
+                'pedigreeMatrix': [4, 5, 5, 5, 5],
                 'comment': ""
             }
-        )
-        N2O_uncertainty = {
-            'variance': 0.12,
-            'pedigreeMatrix': [4, 5, 5, 5, 5],
-            'comment': ""
-        }
-        self.append_exchange(N2O, [], N2O_uncertainty)
+            self.append_exchange(N2O, [], N2O_uncertainty)
+        except: #No such flux
+            pass
 
-        CO2_dict = [ef for ef in self.WWTP_emissions_air if ef['id']=='CO2_effluent_air'][0]
-        CO2_fossil_amount = CO2_dict['value'] * self.fraction_C_fossil['value']
-        CO2_non_fossil_amount = CO2_dict['value'] * (1-self.fraction_C_fossil['value'])
-        CO2_fossil_id = 'f9749677-9c9f-4678-ab55-c607dfdc2cb9'
-        CO2_non_fossil_id = '73ed05cc-9727-4abf-9516-4b5c0fe54a16'
-        CO2_fossil = create_empty_exchange()
-        CO2_fossil_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == CO2_fossil_id]
-        CO2_fossil.update(
-            {
-                'group': 'ToEnvironment',
-                'name': CO2_fossil_sel.index[0][0],
-                'compartment': CO2_fossil_sel.index[0][1],
-                'subcompartment': CO2_fossil_sel.index[0][2],
-                'unitName': 'kg',
-                'amount': CO2_fossil_amount,
+        try:
+            CO2_dict = [ef for ef in self.WWTP_emissions_air if ef['id']=='CO2_effluent_air'][0]
+            CO2_fossil_amount = CO2_dict['value'] * self.fraction_C_fossil['value']
+            CO2_non_fossil_amount = CO2_dict['value'] * (1-self.fraction_C_fossil['value'])
+            CO2_fossil_id = 'f9749677-9c9f-4678-ab55-c607dfdc2cb9'
+            CO2_non_fossil_id = '73ed05cc-9727-4abf-9516-4b5c0fe54a16'
+            CO2_fossil = create_empty_exchange()
+            CO2_fossil_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == CO2_fossil_id]
+            CO2_fossil.update(
+                {
+                    'group': 'ToEnvironment',
+                    'name': CO2_fossil_sel.index[0][0],
+                    'compartment': CO2_fossil_sel.index[0][1],
+                    'subcompartment': CO2_fossil_sel.index[0][2],
+                    'unitName': 'kg',
+                    'amount': CO2_fossil_amount,
+                    'comment': ""
+                }
+            )
+            CO2_uncertainty = {
+                'variance': 0.0006,
+                'pedigreeMatrix': [4, 5, 5, 5, 5],
                 'comment': ""
             }
-        )
-        CO2_uncertainty = {
-            'variance': 0.0006,
-            'pedigreeMatrix': [4, 5, 5, 5, 5],
-            'comment': ""
-        }
-        self.append_exchange(CO2_fossil, [], CO2_uncertainty)
-        CO2_non_fossil = create_empty_exchange()
-        CO2_non_fossil_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == CO2_non_fossil_id]
-        CO2_non_fossil.update(
-            {
-                'group': 'ToEnvironment',
-                'name': CO2_non_fossil_sel.index[0][0],
-                'compartment': CO2_non_fossil_sel.index[0][1],
-                'subcompartment': CO2_non_fossil_sel.index[0][2],
-                'unitName': 'kg',
-                'amount': CO2_non_fossil_amount,
-                'comment': ""
-            }
-        )
-
-        self.append_exchange(CO2_non_fossil, [], CO2_uncertainty)
+            self.append_exchange(CO2_fossil, [], CO2_uncertainty)
+            CO2_non_fossil = create_empty_exchange()
+            CO2_non_fossil_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == CO2_non_fossil_id]
+            CO2_non_fossil.update(
+                {
+                    'group': 'ToEnvironment',
+                    'name': CO2_non_fossil_sel.index[0][0],
+                    'compartment': CO2_non_fossil_sel.index[0][1],
+                    'subcompartment': CO2_non_fossil_sel.index[0][2],
+                    'unitName': 'kg',
+                    'amount': CO2_non_fossil_amount,
+                    'comment': ""
+                }
+            )
+            self.append_exchange(CO2_non_fossil, [], CO2_uncertainty)
+        except:
+            pass
 
 
 class WWT_ecoSpold(WWecoSpoldGenerator):
