@@ -28,9 +28,7 @@ class WWecoSpoldGenerator(object):
         self.dataset = create_empty_dataset()
         self.MD = load_MD(self.root_dir)
         self.geography = self.MD['Geographies'][self.MD['Geographies']['shortname']==self.geography].index[0]
-        infra_df = pd.read_excel(os.path.join(self.root_dir, 'resources', 'wwtp_classes.xlsx'), index_col=0)
-        infra_df.fillna(0, inplace=True)
-        self.infra_dict = infra_df.to_dict(orient='index')
+        self.infra_dict = infra_dict
         self.get_infrastructure_class_mix()
 
     def generate_ecoSpold2(self, name=None):

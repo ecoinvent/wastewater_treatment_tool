@@ -401,3 +401,256 @@ sludge_uncertainty = {
     'pedigreeMatrix': [3, 5, 1, 5, 4],
     'comment': "Default pedigree scores for technosphere exchanges calculated with the ecoinvent wastewater tool"
 }
+
+infra_dict = {
+    'Lifetime_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Lifetime of the WWTP (years)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 30,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 30,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 30,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 30,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 30,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 30
+    },
+    'corresp_ecoinvent_class': {
+        'Category': 'WWTP',
+        'Description': 'Name of the existing intermediate exchange in ecoinvent',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 'wastewater treatment facility, capacity 1.6E8l/year',
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 'wastewater treatment facility, capacity 4.7E10l/year',
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 'wastewater treatment facility, capacity 1.1E10l/year',
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 'wastewater treatment facility, capacity 5E9l/year',
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 'wastewater treatment facility, capacity 5E9l/year',
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 'wastewater treatment facility, capacity 1E9l/year'
+    },
+    'diff_PE_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Difference between our median and Doka (PE) ((ours-Doka)/ours)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 0,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': -0.166125,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 0.05156,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 0.2895714285714286,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': -0.6576666666666666,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 0.11316666666666667
+    },
+    'diff_km_sewer_per_m3': {
+        'Category': 'Sewers',
+        'Description': 'Difference between our value and Doka (PE) ((ours-Doka)/ours)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 0,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 0.5029429999999999,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 0.49411000000000005,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 0.25665142857142853,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 0.5483125,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 0.5482324561403509
+    },
+    'diff_m3_over_life_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Difference between our value and Doka (m3/lifetime) ((ours-Doka)/ours)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 0,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': -1.346772104607721,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': -0.8746074363992172,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 0.04438165905631659,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': -2.6695744292237444,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': -0.9631817351598173
+    },
+    'diff_m3_per_year_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Difference between our value and Doka (m3/year) ((ours-Doka)/ours)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 0,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': -1.346772104607721,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': -0.8746074363992172,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 0.04438165905631659,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': -2.6695744292237444,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': -0.9631817351598173
+    },
+    'doka_m3_per_year_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Doka yearly capacity (m3/year)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 162812,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 47111450,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 14368866,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 5022730,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 5022730,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 1074842
+    },
+    'km_sewer_per_m3': {
+        'Category': 'Sewers',
+        'Description': 'kilometer sewers per m3 over lifetime (km/m3)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 3.762e-07,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 2.4906600249066003e-07,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 3.326810176125245e-07,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 2.9299847792998476e-07,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 4.821917808219178e-07,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 6.246575342465754e-07
+    },
+    'km_sewer_per_m3_doka': {
+        'Category': 'Sewers',
+        'Description': 'kilometer sewers per m3 over lifetime, Doka 2009 (km/m3)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 3.762e-07,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 1.238e-07,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 1.683e-07,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 2.178e-07,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 2.178e-07,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 2.822e-07
+    },
+    'lifetime_sewer': {
+        'Category': 'Sewers',
+        'Description': 'Lifetime of sewer system (years)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 100,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 100,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 100,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 100,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 100,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 100
+    },
+    'm3_over_life_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'm3 treated over lifetime of WWTP',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 4884360,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 602250000,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 229950000,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 157680000,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 41062500,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 16425000
+    },
+    'm3_over_life_WWTP_Doka': {
+        'Category': 'WWTP',
+        'Description': 'm3 treated over lifetime of WWTP, Doka 2009',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 4884360,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 1413343500,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 431065980,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 150681900,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 150681900,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 32245260
+    },
+    'm3_over_life_sewers': {
+        'Category': 'Sewers',
+        'Description': 'Total m3 ww transported by sewer gid over lifetime',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 0,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 2007500000,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 766500000,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 525600000,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 136875000,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 54750000
+    },
+    'm_sewers_per_capita': {
+        'Category': 'Sewers',
+        'Description': 'Meters per capita of sewers, Doka 2009',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 7.6,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 2.5,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 3.4,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 4.4,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 4.4,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 5.7
+    },
+    'new_name_act': {
+        'Category': 'WWTP',
+        'Description': 'Proposed name of the activity',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 'wastewater treatment facility, capacity 1.6E8l/year',
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 'wastewater treatment facility construction, capacity class 1, greater than 100,000 PE',
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 'wastewater treatment facility construction, capacity class 2, between 50,000 and 100,000 PE',
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 'wastewater treatment facility construction, capacity class 3a, between 20,000 and 50,000 PE',
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 'wastewater treatment facility construction, capacity class 3b, between 10,000 and 20,000 PE',
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 'wastewater treatment facility construction, capacity class 4, between 2,000 and 10,000 PE'
+    },
+    'new_name_exc': {
+        'Category': 'WWTP',
+        'Description': 'Proposed name of the intermediate exchange',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 'wastewater treatment facility construction, capacity 1.6E8l/year',
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 'wastewater treatment facility, capacity class 1, greater than 100,000 PE',
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE',
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE',
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE',
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE'
+    },
+    'nom_cap_Doka_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Nominal capacity range in Doka (PE)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 806,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 233225,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 71133,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 24865,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 24865,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 5321
+    },
+    'nom_cap_max_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Nominal capacity range maximum (PE)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 2000,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': '+',
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 100000,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 50000,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 20000,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 2000
+    },
+    'nom_cap_median_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Nominal capacity median (PE)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 1015,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 200000,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 75000,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 35000,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 15000,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 6000
+    },
+    'nom_cap_min_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Nominal capacity range minimum (PE)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 30,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 100000,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 50000,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 20000,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 10000,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 10000
+    },
+    'sample_cap_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Sample capacity (PE)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 0,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 206250,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 105000,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 44153,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 18750,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 8750
+    },
+    'sample_m3_per_d_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Daily capacity\xa0 (m3/d)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 0,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 55000,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 21000,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 14400,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 3750,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 1500
+    },
+    'sample_m3_per_year_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Annula capacity\xa0 (m3/year)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 0,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 20075000,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 7665000,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 5256000,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 1368750,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 547500
+    },
+    'sample_name_WWTP': {
+        'Category': 'WWTP',
+        'Description': 'Sample WWTP name',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 0,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 'Girona',
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': "L'Escala",
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 'Manlleu',
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 'Balaguer',
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 'Navàs'
+    },
+    'sewer_length': {
+        'Category': 'Sewers',
+        'Description': 'Sewer grid length, calculated (km)',
+        'wastewater treatment facility construction, capacity 1.6E8l/year': 7.6,
+        'wastewater treatment facility, capacity class 1, greater than 100,000 PE': 500,
+        'wastewater treatment facility, capacity class 2, between 50,000 and 100,000 PE': 255,
+        'wastewater treatment facility, capacity class 3a, between 20,000 and 50,000 PE': 154,
+        'wastewater treatment facility, capacity class 3b, between 10,000 and 20,000 PE': 66,
+        'wastewater treatment facility, capacity class 4, between 2,000 and 10,000 PE': 34.2
+    }
+}
