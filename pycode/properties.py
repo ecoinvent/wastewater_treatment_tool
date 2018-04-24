@@ -208,7 +208,12 @@ def all_ww_props(prop_dicts, COD_TOC_ratio, fraction_C_fossil, MD):
     C_props = carbon_properties(COD, COD_TOC_ratio, fraction_C_fossil)
     DOC_TOC = add_DOC_TOC(COD, VSS, COD_TOC_ratio)
     others = non_obligatory_properties(prop_dicts, MD)
-    return [*mass_props, *C_props, *DOC_TOC, *others]
+    all_mass_props = [prop for prop in mass_props]
+    all_C_props = [prop for prop in C_props]
+    all_DOC_TOC_props = [prop for prop in DOC_TOC]
+    all_others_props = [prop for prop in others]
+
+    return all_mass_props + all_C_props + all_DOC_TOC_props + all_others_props
 
 
 
