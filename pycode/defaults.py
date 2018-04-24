@@ -162,7 +162,8 @@ non_metals = [
     'TP',
     'TKN',
     'COD',
-    'TSS'
+    'TSS',
+    'NOx'
 ]
 
 default_sewer_uncertainty = {
