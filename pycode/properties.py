@@ -9,32 +9,7 @@ from pycode.defaults import no_uncertainty, metals, non_metals
 def calculate_dry_mass_of_ww(prop_dicts, COD_TOC_ratio):
     """ Returns a list of dictionaries ready to be processed by generate_reference_exchange"""
 
-    consider_as_are = {
-        'Al': 'mass concentration, aluminium',
-        'As': 'mass concentration, arsenic',
-        'Ca': 'mass concentration, calcium',
-        'Cd': 'mass concentration, cadmium',
-        'Cl': 'mass concentration, chlorine',
-        'Co': 'mass concentration, cobalt',
-        'Cr': 'mass concentration, chromium',
-        'Cu': 'mass concentration, copper',
-        'F': 'mass concentration, fluorine',
-        'Fe': 'mass concentration, iron',
-        'Hg': 'mass concentration, mercury',
-        'K': 'mass concentration, potassium',
-        'Mg': 'mass concentration, magnesium',
-        'Mn': 'mass concentration, manganese',
-        'Mo': 'mass concentration, molybdenum',
-        'Na': 'mass concentration, sodium',
-        'Ni': 'mass concentration, nickel',
-        'Pb': 'mass concentration, lead',
-        'Si': 'mass concentration, silicon',
-        'Sn': 'mass concentration, tin',
-        'Zn': 'mass concentration, zinc',
-        'BOD': 'BOD5, mass per volume',
-    }
-
-    mass_ignores = ['PO4', 'NH4']
+    mass_ignores = ['PO4', 'NH4', 'BOD']
 
     mass_conversions_for_dry_mass = {
         'TP': (31 + 4 * 16) / 31,
@@ -56,58 +31,82 @@ def calculate_dry_mass_of_ww(prop_dicts, COD_TOC_ratio):
 
 def mass_properties(prop_dicts, COD_TOC_ratio):
     dry_mass = calculate_dry_mass_of_ww(prop_dicts, COD_TOC_ratio)
-    wet_mass = 1000 + dry_mass
-    dry_mass_comment = "The dry mass is estimated making a number of assumptions." \
-                       "(1) Chemical oxygen demand is first converted to Total Organic Carbon (reported) as C " \
-                       "based on a COD/TOC ratio of {}, and then converted to a total mass assuming all the carbon " \
-                       "assuming all the carbon is in glucose (C6H12O6). (2) All Nitrogen in TKN is converted to total mass " \
-                       "using the simplification that it is all present as ammonia. (3) All Phosphorous in TP is converted " \
-                       "to mass assuming it is present as PO4-".format(COD_TOC_ratio)
-    return [
-        {
-            'name': 'dry mass',
-            'amount': dry_mass,
-            'comment': dry_mass_comment,
-            'unit': 'kg',
-            'uncertainty': {
-                'variance': 0,
-                'pedigreeMatrix': [4, 1, 1, 1, 1],
-                'comment': "Pedigree scores associated with conversion of COD, TKN and TP to molar masses. " \
-                           "Uncertainty does not account for uncertainty of the actual wastewater composition."
-            },
+    if dry_mass > 0:
+        dry_mass_comment = "The dry mass is estimated making a number of assumptions." \
+                           "(1) Chemical oxygen demand is first converted to Total Organic Carbon (reported) as C " \
+                           "based on a COD/TOC ratio of {}, and then converted to a total mass assuming all the carbon " \
+                           "assuming all the carbon is in glucose (C6H12O6). (2) All Nitrogen in TKN is converted to total mass " \
+                           "using the simplification that it is all present as ammonia. (3) All Phosphorous in TP is converted " \
+                           "to mass assuming it is present as PO4-".format(COD_TOC_ratio)
+        return [
+            {
+                'name': 'dry mass',
+                'amount': dry_mass,
+                'comment': dry_mass_comment,
+                'unit': 'kg',
+                'uncertainty': {
+                    'variance': 0,
+                    'pedigreeMatrix': [4, 1, 1, 1, 1],
+                    'comment': "Pedigree scores associated with conversion of COD, TKN and TP to molar masses. " \
+                               "Uncertainty does not account for uncertainty of the actual wastewater composition."
+                },
 
-        },
-        {
-            'name': 'wet mass',
-            'amount': 1000 + dry_mass,
-            'comment': "Based on the mass of 1m3 of water + mass of all constituents of wastewater. " \
-                       "Assumes the volume of constituents other than water is negligible.",
-            'uncertainty': {
-                'variance': 0,
-                'pedigreeMatrix': [1, 1, 1, 1, 1],
-                'comment': "Contribution to uncertainty of dry mass assumed negligible."
             },
-            'unit': 'kg'
-        },
-        {
-            'name': 'water in wet mass',
-            'amount': 1000,
-            'comment': "Based on the mass of 1m3 of water",
-            'uncertainty': no_uncertainty,
-            'unit': 'kg'
-        },
-        {
-            'name': 'water content',
-            'amount': 1000 / dry_mass,
-            'comment': "Based on the mass of 1m3 of water",
-            'unit': 'dimensionless',
-            'uncertainty': {
-                'variance': 0,
-                'pedigreeMatrix': [1, 1, 1, 1, 1],
-                'comment': "Contribution to uncertainty of dry mass assumed negligible."
-            }
-        },
-    ]
+            {
+                'name': 'wet mass',
+                'amount': 1000 + dry_mass,
+                'comment': "Based on the mass of 1m3 of water + mass of all constituents of wastewater. " \
+                           "Assumes the volume of constituents other than water is negligible.",
+                'uncertainty': {
+                    'variance': 0,
+                    'pedigreeMatrix': [1, 1, 1, 1, 1],
+                    'comment': "Contribution to uncertainty of dry mass assumed negligible."
+                },
+                'unit': 'kg'
+            },
+            {
+                'name': 'water in wet mass',
+                'amount': 1000,
+                'comment': "Based on the mass of 1m3 of water",
+                'uncertainty': no_uncertainty,
+                'unit': 'kg'
+            },
+            {
+                'name': 'water content',
+                'amount': 1000 / dry_mass,
+                'comment': "Based on the mass of 1m3 of water",
+                'unit': 'dimensionless',
+                'uncertainty': {
+                    'variance': 0,
+                    'pedigreeMatrix': [1, 1, 1, 1, 1],
+                    'comment': "Contribution to uncertainty of dry mass assumed negligible."
+                }
+            },
+        ]
+    else:
+        return [
+            {
+                'name': 'dry mass',
+                'amount': 0,
+                'comment': "No dry mass: pure water",
+                'unit': 'kg',
+                'uncertainty': no_uncertainty,
+            },
+            {
+                'name': 'wet mass',
+                'amount': 1000,
+                'comment': "Based on the mass of 1m3 of water.",
+                'uncertainty': no_uncertainty,
+                'unit': 'kg'
+            },
+            {
+                'name': 'water in wet mass',
+                'amount': 1000,
+                'comment': "Based on the mass of 1m3 of water",
+                'uncertainty': no_uncertainty,
+                'unit': 'kg'
+            },
+        ]
 
 def carbon_properties(COD, COD_TOC_ratio, fraction_C_fossil):
     C = COD / COD_TOC_ratio['value']
