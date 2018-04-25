@@ -635,7 +635,7 @@ class WWecoSpoldGenerator(object):
             }
             self.append_exchange(TOC_ef, [], DOC_TOC_incertainty)
             self.append_exchange(DOC_ef, [], DOC_TOC_incertainty)
-            return efs
+        return efs
 
     def direct_emission_uncertainty(self, pollutant_name,
                                     untreated_release,
