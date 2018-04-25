@@ -67,18 +67,18 @@ def sludge_exc_calc(sludge_properties, activity_PV, name):
             comment_1 = "Sources of sludge: "
             for i in range(len(sources)):
                 comment_1 += "{}={:.3}%. ".format(sources[i], amounts[i] / amount * 100)
-            sludge = create_empty_exchange()
-            sludge.update(
-                {
-                    'group': 'ByProduct',
-                    'name': 'treatment of sludge, {}'.format(name),
-                    'unitName': 'kg',
-                    'amount': -amount,
-                    'comment': comment_0 + comment_1,
-                    'productionVolumeAmount': activity_PV['value'] * amount,
-                    'productionVolumeComment': "On a dry matter basis.",
-                }
-            )
+        sludge = create_empty_exchange()
+        sludge.update(
+            {
+                'group': 'ByProduct',
+                'name': 'treatment of sludge, {}'.format(name),
+                'unitName': 'kg',
+                'amount': -amount,
+                'comment': comment_0 + comment_1,
+                'productionVolumeAmount': activity_PV['value'] * amount,
+                'productionVolumeComment': "On a dry matter basis.",
+            }
+        )
         return sludge
     else:
         return "No sludge"
