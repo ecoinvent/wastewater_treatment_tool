@@ -369,7 +369,7 @@ default_electricity_comment = "Electricity consumption considers energy "\
     "and expert judgement."
 
 default_electricity_uncertainty = {
-    'variance': 0.0006,
+    'variance': 0.04,
     'pedigreeMatrix': [3, 5, 1, 5, 4],
     'comment': "Default pedigree scores for technosphere exchanges calculated with the ecoinvent wastewater tool"
 }

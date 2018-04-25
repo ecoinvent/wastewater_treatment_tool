@@ -12,6 +12,7 @@ from .arguments import *
 from .spold_utils import *
 #from .direct_emissions import total_untreated_release
 from .properties import all_ww_props
+from .sludge import return_sludge_exc_and_props
 
 
 class WWecoSpoldGenerator(object):
@@ -485,45 +486,33 @@ class WWecoSpoldGenerator(object):
         return None
 
     def add_sludge(self):
-        pass
-        """
-        settlers = []
-        if self.sludge_composition['PRIMARY']['AMOUNT'] != 0:
-            settles.append('primary')
-        if self.sludge_composition['SECONDARY']['AMOUNT'] != 0:
-            settles.append('secondary')
-        if self.sludge_composition['TERTIARY']['AMOUNT'] != 0:
-            settles.append('tertiary')
-
-        total_sludge = 100 #todo
-
-        sludge_comment = ""
-        if "primary" in settlers:
-            pass
-        if "secondary" in settlers:
-            pass
-        if "tertiary" in settlers:
-            pass
-
         if self.activity_name == "municipal average":
-            sludge_name = "sludge, from the treatment of average municipal wastewater"
+            source = ", municipal average"
         else:
-            sludge_name = "sludge, from the treatment of wastewater from {}".format(self.activity_name)
+            source = " {}".format(self.activity_name)
 
-        sludge = create_empty_exchange()
-        sludge.update(
-            {
-                'group': 'ByProduct',
-                'name': sludge_name,
-                'unitName': 'kg',
-                'amount': self.sludge_amount/(1-temp_sludge_water_content),
-                'comment': sludge_comment
-            }
+        if self.tool_use_type == "average":
+            name = "sludge from the treatment of wastewater{}, average treatment".format(source)
+        else:
+            name = "sludge from the treatment of wastewater{}, {}, {} PE".format(
+                source,
+                self.technologies_averaged[0]['technology_level_1'],
+                self.technologies_averaged[0]['capacity'],
+            )
+
+        sludge = return_sludge_exc_and_props(
+            self.sludge_properties,
+            self.WWTP_emissions_sludge,
+            self.PV,
+            name,
+            self.MD
         )
-        sludge_properties = get_sludge_properties(self.sludge_properties)
-        self.append_exchange(sludge, sludge_properties, sludge_uncertainty)
-        pass
-    """
+        self.append_exchange(
+            sludge['exc'],
+            sludge['properties'],
+            sludge['uncertainty'],
+            sludge['PV_uncertainty']
+        )
 
     def total_untreated_release(self):
         """ Sum direct discharge and CSO. WIll fail if untreated_fraction == 0!
@@ -1036,8 +1025,6 @@ class WWT_ecoSpold(WWecoSpoldGenerator):
         self.add_1m3_water()
         self.add_WWTP_water_emissions()
         self.WWTP_air_emissions()
-
-        # TODO Add grit
 
 class DirectDischarge_ecoSpold(WWecoSpoldGenerator):
     """WWecoSpoldGenerator specific to untreated fraction"""
