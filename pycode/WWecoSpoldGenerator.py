@@ -586,54 +586,56 @@ class WWecoSpoldGenerator(object):
                 uncertainty = self.direct_emission_uncertainty(
                     ef_id, direct_discharge['value'], scaled_CSO_amount, basic_pollutants)
                 efs.append([ef, [], uncertainty])
-        COD_EF = [ef[0]['amount'] for ef in efs if ef[0]['name']=='COD, Chemical Oxygen Demand'][0]
-        COD_influent = [d['value'] for d in self.WW_properties if d['id']=='COD'][0]
-        VSS_influent = [d['value'] for d in self.WW_properties if d['id']=='VSS'][0]
-        VSS_EF = VSS_influent/COD_influent * COD_EF
-        TOC = COD_EF / self.COD_TOC_ratio['value']
-        DOC = TOC - VSS_EF * 0.5
-        TOC_id = 'f65558fb-61a1-4e48-b4f2-60d62f14b085'
-        DOC_id = '960c0f37-f34c-4fc1-b77c-22d8b35fd8d5'
-        TOC_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == TOC_id]
-        DOC_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == DOC_id]
-        TOC_ef = create_empty_exchange()
-        TOC_ef.update(
-            {
-                'group': 'ToEnvironment',
-                'name': TOC_sel.index[0][0],
-                'compartment': TOC_sel.index[0][1],
-                'subcompartment': TOC_sel.index[0][2],
-                'unitName': 'kg',
-                'amount': TOC,
-                'comment': "estimated from the COD to TOC_ratio ({}).".format(
-                    self.COD_TOC_ratio
-                )
+        COD_EF = [ef[0]['amount'] for ef in efs if ef[0]['name']=='COD, Chemical Oxygen Demand']
+        if len(COD_EF)>0:
+            COD_EF = COD_EF[0]
+            COD_influent = [d['value'] for d in self.WW_properties if d['id']=='COD'][0]
+            VSS_influent = [d['value'] for d in self.WW_properties if d['id']=='VSS'][0]
+            VSS_EF = VSS_influent/COD_influent * COD_EF
+            TOC = COD_EF / self.COD_TOC_ratio['value']
+            DOC = TOC - VSS_EF * 0.5
+            TOC_id = 'f65558fb-61a1-4e48-b4f2-60d62f14b085'
+            DOC_id = '960c0f37-f34c-4fc1-b77c-22d8b35fd8d5'
+            TOC_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == TOC_id]
+            DOC_sel = self.MD['ElementaryExchanges'][self.MD['ElementaryExchanges']['id'] == DOC_id]
+            TOC_ef = create_empty_exchange()
+            TOC_ef.update(
+                {
+                    'group': 'ToEnvironment',
+                    'name': TOC_sel.index[0][0],
+                    'compartment': TOC_sel.index[0][1],
+                    'subcompartment': TOC_sel.index[0][2],
+                    'unitName': 'kg',
+                    'amount': TOC,
+                    'comment': "estimated from the COD to TOC_ratio ({}).".format(
+                        self.COD_TOC_ratio
+                    )
+                }
+            )
+            DOC_ef = create_empty_exchange()
+            DOC_ef.update(
+                {
+                    'group': 'ToEnvironment',
+                    'name': DOC_sel.index[0][0],
+                    'compartment': DOC_sel.index[0][1],
+                    'subcompartment': DOC_sel.index[0][2],
+                    'unitName': 'kg',
+                    'amount': DOC,
+                    'comment': "DOC is calculated as Total Organic Carbon (TOC) - Particulate Organics (PO). " \
+                               "DOC is estimated from the COD to TOC_ratio ({}). " \
+                               "PO is estimated using a C to Volatile Suspended Solids (VSS) ratio of 0.5 gC/gVSS. " \
+                               "VSS is estimated from VSS/DOC ratio in raw effluent {}.".format(
+                        self.COD_TOC_ratio, VSS_influent/COD_influent)
+                }
+            )
+            DOC_TOC_incertainty = {
+                'variance': 0.04,
+                'pedigreeMatrix': [4, 5, 5, 5, 5],
+                'comment': "Uncertainty associated with the COD to TOC ratio, VSS amount and COD amount."
             }
-        )
-        DOC_ef = create_empty_exchange()
-        DOC_ef.update(
-            {
-                'group': 'ToEnvironment',
-                'name': DOC_sel.index[0][0],
-                'compartment': DOC_sel.index[0][1],
-                'subcompartment': DOC_sel.index[0][2],
-                'unitName': 'kg',
-                'amount': DOC,
-                'comment': "DOC is calculated as Total Organic Carbon (TOC) - Particulate Organics (PO). " \
-                           "DOC is estimated from the COD to TOC_ratio ({}). " \
-                           "PO is estimated using a C to Volatile Suspended Solids (VSS) ratio of 0.5 gC/gVSS. " \
-                           "VSS is estimated from VSS/DOC ratio in raw effluent {}.".format(
-                    self.COD_TOC_ratio, VSS_influent/COD_influent)
-            }
-        )
-        DOC_TOC_incertainty = {
-            'variance': 0.04,
-            'pedigreeMatrix': [4, 5, 5, 5, 5],
-            'comment': "Uncertainty associated with the COD to TOC ratio, VSS amount and COD amount."
-        }
-        self.append_exchange(TOC_ef, [], DOC_TOC_incertainty)
-        self.append_exchange(DOC_ef, [], DOC_TOC_incertainty)
-        return efs
+            self.append_exchange(TOC_ef, [], DOC_TOC_incertainty)
+            self.append_exchange(DOC_ef, [], DOC_TOC_incertainty)
+            return efs
 
     def direct_emission_uncertainty(self, pollutant_name,
                                     untreated_release,
