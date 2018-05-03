@@ -71,7 +71,7 @@ def sludge_exc_calc(sludge_properties, activity_PV, name):
         sludge.update(
             {
                 'group': 'ByProduct',
-                'name': 'treatment of sludge, {}'.format(name),
+                'name': name,
                 'unitName': 'kg',
                 'amount': -amount,
                 'comment': comment_0 + comment_1,
