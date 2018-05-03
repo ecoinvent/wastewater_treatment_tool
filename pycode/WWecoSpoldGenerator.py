@@ -237,7 +237,7 @@ class WWecoSpoldGenerator(object):
         if self.activity_name == "municipal average":
             activity_name_name = ", municipal average"
         else:
-            activity_name_name = " {}".format(self.activity_name)
+            activity_name_name = " from {}".format(self.activity_name)
         
         if self.act_type == 'untreated discharge':
             return "direct discharge of wastewater{}".format(activity_name_name)
