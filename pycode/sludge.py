@@ -124,7 +124,7 @@ def sludge_mass_property_calcs(sludge_properties, amount):
     if total_water != 0:
         wet_mass = (amount + total_water) / amount
         water_in_wet_mass = total_water / amount
-        water_content = (total_water / (amount + total_water))/amount
+        water_content = total_water /amount
 
         return [
             {
