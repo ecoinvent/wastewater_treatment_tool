@@ -73,7 +73,7 @@ temp_loc='GLO'
 temp_obligatory_properties = [
     {
         'name':'carbon content, fossil',
-        'amount': 0.01, #TODO: calculate from WW properties!
+        'amount': 0.01,
         'unit': 'dimensionless',
         'comment': 'TODO_calcualte fraction Fossil',
         'uncertainty': {

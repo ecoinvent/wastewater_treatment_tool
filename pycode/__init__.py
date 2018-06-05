@@ -5,6 +5,7 @@ from .WWecoSpoldGenerator import DirectDischarge_ecoSpold, WWT_ecoSpold
 from .defaults import *
 from .placeholders import *
 from .spold_utils import *
+from .properties import *
 
 __all__ = [
     'load_MD',

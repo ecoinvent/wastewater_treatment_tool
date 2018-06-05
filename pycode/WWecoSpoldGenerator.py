@@ -10,7 +10,6 @@ from .defaults import *
 from .placeholders import *
 from .arguments import *
 from .spold_utils import *
-#from .direct_emissions import total_untreated_release
 from .properties import all_ww_props
 from .sludge import return_sludge_exc_and_props
 
