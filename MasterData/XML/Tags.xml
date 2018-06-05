@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The contents of this file are subject to the EcoSpold Public License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.ecoinvent.ch.
+Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.
+The Original Code consists of the EcoSpold data format and EcoSpold Access.
+The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
+-->
+<validTags majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="69" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <contextName xml:lang="en">ecoinvent</contextName>
+  <tag name="quality difference adjustment">
+    <comment xml:lang="en">dataset representing downstream changes due to quality differences in products on the same market</comment>
+  </tag>
+  <tag name="packaging" />
+  <tag name="treatment">
+    <comment xml:lang="en">used by ecoinvent2 dataset conversion</comment>
+  </tag>
+  <tag name="branded dataset without logo">
+    <comment xml:lang="en">dataset for a named brand or from a named enterprise, without logo</comment>
+  </tag>
+  <tag name="household activity">
+    <comment xml:lang="en">dataset representing an activity taking place in private households</comment>
+  </tag>
+  <tag name="template dataset">
+    <comment xml:lang="en">dataset specifically designed with a view to serve as a template for multiples specific instances of the activity</comment>
+  </tag>
+  <tag name="complementary product">
+    <comment xml:lang="en">product needed for the proper functioning of a main product, but not part of this product, e.g. packaging or maintenance</comment>
+  </tag>
+  <tag name="production mix">
+    <comment xml:lang="en">used by ecoinvent2 dataset conversion</comment>
+  </tag>
+  <tag name="branded dataset with logo">
+    <comment xml:lang="en">dataset for a named brand or from a named enterprise, with logo</comment>
+  </tag>
+  <tag name="operation">
+    <comment xml:lang="en">used by ecoinvent2 dataset conversion</comment>
+  </tag>
+  <tag name="NotForEcoinvent3_Y">
+    <comment xml:lang="en">used by ecoinvent2 dataset conversion</comment>
+  </tag>
+  <tag name="supply mix">
+    <comment xml:lang="en">used by ecoinvent2 dataset conversion</comment>
+  </tag>
+  <tag name="NotForEcoinvent3_O">
+    <comment xml:lang="en">used by ecoinvent2 dataset conversion</comment>
+  </tag>
+  <tag name="consumption adjustment">
+    <comment xml:lang="en">dataset representing a change in consumption as a result of market constraints</comment>
+  </tag>
+  <tag name="goods transport">
+    <comment xml:lang="en">dataset representing a goods transport activity</comment>
+  </tag>
+  <tag name="single enterprise data">
+    <comment xml:lang="en">dataset representing one single, anonymous enterprise</comment>
+  </tag>
+  <tag name="with true value">
+    <comment xml:lang="en">activities for which true value properties are defined (reserved; added by database)</comment>
+  </tag>
+</validTags>

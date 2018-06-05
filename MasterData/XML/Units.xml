@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The contents of this file are subject to the EcoSpold Public License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.ecoinvent.ch.
+Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.
+The Original Code consists of the EcoSpold data format and EcoSpold Access.
+The Original Code was created by the ecoinvent Centre, Switzerland (Swiss Centre for Life Cycle Inventories) and ifu Hamburg GmbH, Germany. Portions created by the ecoinvent Centre and ifu Hamburg GmbH are Copyright (C) ecoinvent Centre. All Rights Reserved.
+-->
+<validUnits majorRelease="3" minorRelease="0" majorRevision="0" minorRevision="689" contextId="de659012-50c4-4e96-b54a-fc781bf987ab" xmlns="http://www.EcoInvent.org/EcoSpold02">
+  <contextName xml:lang="en">ecoinvent</contextName>
+  <unit id="c182d036-038d-4c66-86ba-280c8a624ddf">
+    <name xml:lang="en">kg/MJ</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="1c978f18-15a0-4595-9835-123ef90c12bc">
+    <name xml:lang="en">kWh/kWp</name>
+    <comment xml:lang="en">yield in photovoltaics (output in kWh per year per nominal KW)</comment>
+  </unit>
+  <unit id="40065b9e-8171-4fe1-a37a-9e8ba4980ab7">
+    <name xml:lang="en">m2/unit</name>
+    <comment xml:lang="en">area per unit, e.g. panel area for a 3kWp photovoltaic unit</comment>
+  </unit>
+  <unit id="f271f103-ec6d-428b-bbc7-f0f2adf91d4f">
+    <name xml:lang="en">g/mol</name>
+    <comment xml:lang="en">gram per mole</comment>
+  </unit>
+  <unit id="a309a95f-0ed9-4672-8749-2dc7a190c82c">
+    <name xml:lang="en">kg/hour</name>
+    <comment xml:lang="en">kilogramme per hour</comment>
+  </unit>
+  <unit id="a5d2899a-ea3f-4810-a530-a26fff736aac">
+    <name xml:lang="en">s</name>
+    <comment xml:lang="en">second. Basic SI-unit for time. Used in combination with other units, e.g. kg/s for capacity.</comment>
+  </unit>
+  <unit id="35dc944d-443f-48a5-a2fd-e310c3e11cf5">
+    <name xml:lang="en">m2/kg</name>
+    <comment xml:lang="en">square metre per kilogram</comment>
+  </unit>
+  <unit id="8266bd67-ebd3-4d31-b972-eee3cf0da36f">
+    <name xml:lang="en">m*year</name>
+    <comment xml:lang="en">metre-year (used for roads, railway-track)</comment>
+  </unit>
+  <unit id="9f91c12e-2791-409c-a09c-9a45984cad91">
+    <name xml:lang="en">point score</name>
+    <comment xml:lang="en">used in some impact assessment methods</comment>
+  </unit>
+  <unit id="0e6f38bc-51be-4382-802d-1f389a88e589">
+    <name xml:lang="en">person*km</name>
+    <comment xml:lang="en">person-kilometre </comment>
+  </unit>
+  <unit id="be837659-25c6-43b4-a9b2-6a14caa3739f">
+    <name xml:lang="en">USD(2011)</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="11910f25-70a2-4150-a6a8-37e481c22e12">
+    <name xml:lang="en">month</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="06d259de-3175-4ac3-b56d-d810242614f1">
+    <name xml:lang="en">l/kg</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="4923348e-591b-4772-b224-d19df86f04c9">
+    <name xml:lang="en">kBq</name>
+    <comment xml:lang="en">kilo Becquerel</comment>
+  </unit>
+  <unit id="0762a8b8-f434-4c5c-807f-c9fb7a8e432b">
+    <name xml:lang="en">m2/m3</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="83ecd334-1b5b-4784-8938-6a0d0a9d8954">
+    <name xml:lang="en">kg/kg</name>
+    <comment xml:lang="en" />
+  </unit>
+  <unit id="bb1e9b49-4de7-477a-bebc-0e10b949f6d6">
+    <name xml:lang="en">d/year</name>
+    <comment xml:lang="en">days per years</comment>
+  </unit>
+  <unit id="fec81540-17e6-46f6-a076-c78fd13c1136">
+    <name xml:lang="en">kg TAN/kg TAN</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="11043416-55ef-4135-8435-5124dbe3fdc1">
+    <name xml:lang="en">kWp</name>
+    <comment xml:lang="en">kilo Watt peak. Nominal power of photovoltaic modules under Standard Test Conditions of 1000W/m2, 25°C cell temperature, and reference solar spectral irradiance at Air Mass 1.5 (AM1.5)</comment>
+  </unit>
+  <unit id="7de7e78f-ccf0-46b4-a549-20b04f4b1421">
+    <name xml:lang="en">kW</name>
+    <comment xml:lang="en">kiloWatt (capacity)</comment>
+  </unit>
+  <unit id="86b0e4a2-57e5-48b8-a43d-22c7f8490dca">
+    <name xml:lang="en">l</name>
+    <comment xml:lang="en">litre</comment>
+  </unit>
+  <unit id="1017f68a-f818-4f9d-a34d-a31e7386f628">
+    <name xml:lang="en">m2</name>
+    <comment xml:lang="en">square metre</comment>
+  </unit>
+  <unit id="2f4daad7-5331-4f14-930c-d8bca924557d">
+    <name xml:lang="en">metric ton*km</name>
+    <comment xml:lang="en">ton-kilometre (Mg*km)</comment>
+  </unit>
+  <unit id="33964fe2-6f44-4ed6-844d-b29dea69aad0">
+    <name xml:lang="en">km/hour</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="4bb29a33-6641-498f-8db7-28ff21dd2a1f">
+    <name xml:lang="en">unit/kWh</name>
+    <comment xml:lang="en">unit per kilo Watt hour (for units of infrastructure)</comment>
+  </unit>
+  <unit id="b7023e0a-3baa-444e-9ecd-953b2bfce402">
+    <name xml:lang="en">kg NH3-N</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="441ac753-ef74-4766-9bb6-750153f2be4b">
+    <name xml:lang="en">Eq</name>
+    <comment xml:lang="en">molar equivalent</comment>
+  </unit>
+  <unit id="07bb5e1b-e489-46b1-87c9-1b1ab47aa477">
+    <name xml:lang="en">kg P/ha.year</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="d8c254d2-9ad0-4e1f-a220-58d1db66c21c">
+    <name xml:lang="en">m3/kWh</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="f003f001-61c7-4713-9111-1516a6e6f772">
+    <name xml:lang="en">K</name>
+    <comment xml:lang="en">Kelvin. Basic SI-unit for temperature. Same magnitude as a degree on the Celcius scale.</comment>
+  </unit>
+  <unit id="01487f54-aed2-4e40-bfb9-758979136238">
+    <name xml:lang="en">kJ/kg</name>
+    <comment xml:lang="en">kilo Joules per kg</comment>
+  </unit>
+  <unit id="de5b3c87-0e35-4fb0-9765-4f3ba34c99e5">
+    <name xml:lang="en">m3</name>
+    <comment xml:lang="en">cubic metre; volume; for Natural gas, biogas, compogas, town gas: normal cubic metre = cubic metre of gas at 15°C; 101.325 kPa (ISO 13443)</comment>
+  </unit>
+  <unit id="b9c5482c-c0d1-4012-b7ef-84a758d7ad03">
+    <name xml:lang="en">kg/m2</name>
+    <comment xml:lang="en">kilogram per square metre</comment>
+  </unit>
+  <unit id="b06bab82-f0e8-426d-849a-ebdb5b553519">
+    <name xml:lang="en">kg/l</name>
+    <comment xml:lang="en">kilogram per litre</comment>
+  </unit>
+  <unit id="201adf23-de8c-4e1d-a658-01fd75ba872d">
+    <name xml:lang="en">l/(h.m2)</name>
+    <comment xml:lang="en">liters per square meter hour</comment>
+  </unit>
+  <unit id="980b811e-3905-4797-82a5-173f5568bc7e">
+    <name xml:lang="en">MJ</name>
+    <comment xml:lang="en">Mega Joule = 1000 J</comment>
+  </unit>
+  <unit id="eb955b7c-7bed-401f-9c76-5db716ca3640">
+    <name xml:lang="en">m2*year</name>
+    <comment xml:lang="en">square metre year</comment>
+  </unit>
+  <unit id="c1520f88-5ae0-4670-b39a-aff30e984b0b">
+    <name xml:lang="en">metric ton/(ha*year)</name>
+    <comment xml:lang="en">ton per hectare-year (Mg/ha/year)</comment>
+  </unit>
+  <unit id="cacb6d36-694d-4e4f-9e79-6c9c73146839">
+    <name xml:lang="en">kg/m3</name>
+    <comment xml:lang="en">kilogram per cubic metre; concentration or density</comment>
+  </unit>
+  <unit id="577e242a-461f-44a7-922c-d8e1c3d2bf45">
+    <name xml:lang="en">dimensionless</name>
+    <comment xml:lang="en">for use with counted items, ratios, boolean expressions, dummy variables</comment>
+  </unit>
+  <unit id="aa0d3bf3-b9d6-4ba2-b552-9e8d0ce52408">
+    <name xml:lang="en">kg/kWh</name>
+    <comment xml:lang="en">kilogram per kilo Watt hour</comment>
+  </unit>
+  <unit id="4292d301-1096-447a-988b-e67ab0f5f3e2">
+    <name xml:lang="en">kg/(m2*year)</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="f4ade0ac-636a-41bb-b1d9-17e78a67fa07">
+    <name xml:lang="en">MJ/kcal</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="86bbe475-8a8f-44d8-914c-e398787e7121">
+    <name xml:lang="en">ha</name>
+    <comment xml:lang="en">hectare (hecto-are) = 100 a = 10000 m2</comment>
+  </unit>
+  <unit id="fc6f97ae-a16f-434c-8092-aa060b808818">
+    <name xml:lang="en">kg/hp*h</name>
+    <comment xml:lang="en">kilogramme per horsepower hour</comment>
+  </unit>
+  <unit id="b61bad7c-10e1-4f69-88f6-440a063ece33">
+    <name xml:lang="en">kWh/s</name>
+    <comment xml:lang="en">kilo Watt hour per second</comment>
+  </unit>
+  <unit id="22897b16-0448-4453-abd2-2e320802d8a6">
+    <name xml:lang="en">TEU</name>
+    <comment xml:lang="en">twenty-foot equivalent is an inexact unit of cargo capacity</comment>
+  </unit>
+  <unit id="00694118-2311-4a99-ad03-3da29d531e33">
+    <name xml:lang="en">kg PO4/ha</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="e32b56ef-fa80-4487-9796-f3c1476c27b3">
+    <name xml:lang="en">hour</name>
+    <comment xml:lang="en">3600 second</comment>
+  </unit>
+  <unit id="5fe41b6f-009d-4aca-84d2-5886eef754c1">
+    <name xml:lang="en">m2/(m3/d)^2</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="54f32be9-4db9-4c17-9f63-8a712fca56f7">
+    <name xml:lang="en">hour/year</name>
+    <comment xml:lang="en">hour per year</comment>
+  </unit>
+  <unit id="18b6bdfc-1ccd-4a48-9080-0b26782e165c">
+    <name xml:lang="en">kg N/ha</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="02c7d6d0-cca5-4b23-a5b8-1b77f1d3ec83">
+    <name xml:lang="en">mm/year</name>
+    <comment xml:lang="en">millimetre per year</comment>
+  </unit>
+  <unit id="4b73f303-c44d-42fd-b949-1d47a6e89db0">
+    <name xml:lang="en">m3/ha/year</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="65876125-e153-4f27-9e2d-8d6edfde9ab6">
+    <name xml:lang="en">hour/ha</name>
+    <comment xml:lang="en">hours per hectare</comment>
+  </unit>
+  <unit id="8295e2d8-302e-48aa-94f2-a85bd7d3c825">
+    <name xml:lang="en">kg/(kg vehicle*km)</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="c26ec641-222e-42e5-b8f8-4d96ec8ea27e">
+    <name xml:lang="en">kg/m</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="487df68b-4994-4027-8fdc-a4dc298257b7">
+    <name xml:lang="en">kg</name>
+    <comment xml:lang="en">kilogram = 1000 gram. Basic SI-unit for mass.</comment>
+  </unit>
+  <unit id="c650c950-afd4-4c20-b7bb-f7d206f0f89e">
+    <name xml:lang="en">kg/kg vehicle</name>
+    <comment xml:lang="en">kilogram per kilogram vehicle weight</comment>
+  </unit>
+  <unit id="0ec6d69a-1235-49c5-9bb6-c5382c06222a">
+    <name xml:lang="en">kg N2O-N/kg NO3-N</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="8aa11f71-ec73-4b5e-9ad9-f3f617564da3">
+    <name xml:lang="en">units/m²</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="ae252091-811b-461b-8e89-8f3075639eb1">
+    <name xml:lang="en">km</name>
+    <comment xml:lang="en">kilometre = 1000 metre</comment>
+  </unit>
+  <unit id="07eff02f-075c-4dde-9b6d-348d534877d5">
+    <name xml:lang="en">metric ton*day</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="88c43a7b-68e4-450c-8f73-dd43cc7b98fb">
+    <name xml:lang="en">unit/MJ</name>
+    <comment xml:lang="en">unit per mega joule</comment>
+  </unit>
+  <unit id="81817114-a64e-4fdd-9c9d-0c9d58c2ee3d">
+    <name xml:lang="en">EUR2005basic</name>
+    <comment xml:lang="en">EUR2005 in basic prices (for product amounts in input-output data)</comment>
+  </unit>
+  <unit id="05af3809-c874-4611-a6e9-6c296385ec5d">
+    <name xml:lang="en">day</name>
+    <comment xml:lang="en">24 hours</comment>
+  </unit>
+  <unit id="77ae64fa-7e74-4252-9c3b-889c1cd20bfc">
+    <name xml:lang="en">kWh</name>
+    <comment xml:lang="en">kilo Watt hour</comment>
+  </unit>
+  <unit id="c4d1b1ec-1ddb-4800-87db-ffbfbb29d94f">
+    <name xml:lang="en">BTU/kg</name>
+    <comment xml:lang="en">British thermal unit per kilogram</comment>
+  </unit>
+  <unit id="f574e378-df7a-4550-a151-cc8089ffa190">
+    <name xml:lang="en">kg/seedling</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="afc016fa-b880-482a-8a6c-2cd02dc6dd81">
+    <name xml:lang="en">m3/PMH</name>
+    <comment xml:lang="en">PMH: productive machine hour (maschine working hours including breaks up to 15 minutes)</comment>
+  </unit>
+  <unit id="c9d0bbb9-6a03-44c6-ada6-cd6d3b4cedd2">
+    <name xml:lang="en">kg NO3-N/ha.year</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="56e0f502-7bef-4678-88a9-0cb2a8fa8e63">
+    <name xml:lang="en">l/m3</name>
+    <comment xml:lang="en">litre per cubic metre</comment>
+  </unit>
+  <unit id="395f1718-3067-449c-ad6a-b96e876eebd4">
+    <name xml:lang="en">kg/ha</name>
+    <comment xml:lang="en">kilogram per hectare</comment>
+  </unit>
+  <unit id="46a269fc-4efb-4087-b5c1-9f4bc318275d">
+    <name xml:lang="en">kWh/year</name>
+    <comment xml:lang="en">kilo Watt hour per year</comment>
+  </unit>
+  <unit id="6c73afda-7131-4e3c-93f4-b3fa847f3571">
+    <name xml:lang="en">m3/head/yr</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="34e7dd21-3518-40a5-8dbd-5e1bdf888620">
+    <name xml:lang="en">MJ/kWh</name>
+    <comment xml:lang="en">Mega Joule per kilo Watt hour</comment>
+  </unit>
+  <unit id="d88a3aae-805d-4ba4-ab0e-586ec008305c">
+    <name xml:lang="en">kg/(m3/d)^2</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="19bd155e-e756-40aa-a4ee-5d9288764462">
+    <name xml:lang="en">MJ/(m3/d)^2</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="83598ec6-74ed-4315-9ef4-52a0b8b35ad8">
+    <name xml:lang="en">hour/m3</name>
+    <comment xml:lang="en">hour per cubic meter</comment>
+  </unit>
+  <unit id="fc5f66f9-d510-4bdb-9ee2-ae54736546ca">
+    <name xml:lang="en">metric ton/ha</name>
+    <comment xml:lang="en">ton per hectare (Mg/ha)</comment>
+  </unit>
+  <unit id="f2aaa4ba-fb58-49a7-a552-e7f64366f379">
+    <name xml:lang="en">m</name>
+    <comment xml:lang="en">metre. Basic SI-unit for length.</comment>
+  </unit>
+  <unit id="848cdafe-0725-4376-b427-728171c79d40">
+    <name xml:lang="en">kWh/km</name>
+    <comment xml:lang="en">kilo Watt hour per kilometre</comment>
+  </unit>
+  <unit id="9dbdef14-e661-41e7-a878-e1f380b24d5a">
+    <name xml:lang="en">MW</name>
+    <comment xml:lang="en">Mega Watt</comment>
+  </unit>
+  <unit id="9998c5fd-534a-4396-a438-1d28501c8564">
+    <name xml:lang="en">kg/(head.d)</name>
+    <comment xml:lang="en">kg per head of animal per day</comment>
+  </unit>
+  <unit id="08bd0c61-0b9a-4280-bc25-3444d52c15bf">
+    <name xml:lang="en">km*year</name>
+    <comment xml:lang="en">kilometre-year</comment>
+  </unit>
+  <unit id="41b2b2e3-338f-4b5f-be29-4f501bb4cf83">
+    <name xml:lang="en">kcal/kWh</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="fdfdde25-dfee-4040-8d7c-30fdba3b6219">
+    <name xml:lang="en">m3/d</name>
+    <comment xml:lang="en">cubic meter per day</comment>
+  </unit>
+  <unit id="2cf92850-0f92-4004-9dba-a6ceb6a414c2">
+    <name xml:lang="en">year</name>
+  </unit>
+  <unit id="9d26a1d3-0c5c-4bb9-98b1-3125e247bc21">
+    <name xml:lang="en">MJ/m3</name>
+    <comment xml:lang="en">Mega Joule per cubic metre</comment>
+  </unit>
+  <unit id="9feb13c9-de9c-4c05-a345-3ad072aa06a9">
+    <name xml:lang="en">kW/TEU</name>
+    <comment xml:lang="en">TEU is an inexact unit of cargo capacity often used to describe the capacity of container ships and container terminals.</comment>
+  </unit>
+  <unit id="3ce424af-a3eb-4c16-9bc8-aa4443c94f50">
+    <name xml:lang="en">kg/s</name>
+    <comment xml:lang="en">kilogram per second</comment>
+  </unit>
+  <unit id="3e2c67b8-bc67-42a5-bc81-00756f0e05bb">
+    <name xml:lang="en">mm</name>
+    <comment xml:lang="en">millimetre</comment>
+  </unit>
+  <unit id="92e2242b-3241-44cd-907e-651d6e9ffc87">
+    <name xml:lang="en">m3/(m3/d)^2</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="a6e59a77-aaac-4e98-a248-dbe191507a78">
+    <name xml:lang="en">MJ/Nm3</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="be283e24-26b9-44df-9596-f1cb9db28a53">
+    <name xml:lang="en">kcal</name>
+    <comment xml:lang="en">kilo calorie</comment>
+  </unit>
+  <unit id="34e6691f-4a1b-4c2b-b239-c55b952f0bd3">
+    <name xml:lang="en">MJ/kg</name>
+    <comment xml:lang="en">Mega Joule per kilogram</comment>
+  </unit>
+  <unit id="e3e78ccf-8743-4939-8c33-25d4ee488cd1">
+    <name xml:lang="en">t*h/(MJ*mm)</name>
+    <comment xml:lang="en">ton*hours/MJmm</comment>
+  </unit>
+  <unit id="b3e99054-2903-4ba7-8798-f69fdbf2c053">
+    <name xml:lang="en">t/day</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="5b972631-34e3-4db7-a615-f6931770a0cb">
+    <name xml:lang="en">unit</name>
+    <comment xml:lang="en">unit, piece, number</comment>
+  </unit>
+  <unit id="2d4eeca7-fd7a-46b7-adfe-5c09a06ec5dd">
+    <name xml:lang="en">unit/ha</name>
+    <comment xml:lang="en">Productivity of seedlings per hectare</comment>
+  </unit>
+  <unit id="bdecebdd-6895-4807-9e65-6bfbd2067deb">
+    <name xml:lang="en">CHF2011</name>
+    <comment xml:lang="en">price in Swiss Francs, 2011</comment>
+  </unit>
+  <unit id="40245049-eafc-4ff4-a45f-f06a5af0d39a">
+    <name xml:lang="en">kg NOx/kg N2O</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="3eafae69-f48c-4d62-a3c3-ec9d6f0e0f6b">
+    <name xml:lang="en">kg N2O-N/kg NH3-N</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="8eb185f8-2c71-455b-ae6a-da6afba9e10d">
+    <name xml:lang="en">m2*K/W</name>
+    <comment xml:lang="en">square metre*Kelvin per Watt (Thermal insulance. Used for R value of insulation materials. The inverse of the heat transfer coefficient (U) given in J/s*m2*K)</comment>
+  </unit>
+  <unit id="241450a3-3497-4648-8c68-e44d04f64ac7">
+    <name xml:lang="en">kg*day</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="2707f8e2-f546-43ca-b0af-850d438b5dda">
+    <name xml:lang="en">m2/year</name>
+    <comment xml:lang="en">square metre per year</comment>
+  </unit>
+  <unit id="2a448677-87c7-4ccf-953a-8d71c73a4c04">
+    <name xml:lang="en">kg/GJ</name>
+    <comment xml:lang="en">kilogram per Giga Joule</comment>
+  </unit>
+  <unit id="9584395d-794c-4a4f-8035-4e136007e763">
+    <name xml:lang="en">kg P2O5/ha</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="06477fb5-7177-491d-8383-aa6c81614c5c">
+    <name xml:lang="en">kg/unit</name>
+    <comment xml:lang="en">kilogram per unit</comment>
+  </unit>
+  <unit id="22dd5d20-97ab-471f-aa89-fdb38e46f802">
+    <name xml:lang="en">% (obsolete)</name>
+    <comment xml:lang="en">percentage (obsolete: Please use fractions instead, e.g. 0.01 for 1%)</comment>
+  </unit>
+  <unit id="a25a4cee-1cc6-4046-bf44-eaf5d424930b">
+    <name xml:lang="en">PMH/m3</name>
+    <comment xml:lang="en">PMH: productive machine hour = machine working hour including breaks up to 15 minutes</comment>
+  </unit>
+  <unit id="c1b47c9a-650a-4bf8-bcbc-ed02e7698fe2">
+    <name xml:lang="en">l/m2</name>
+    <comment xml:lang="en">litre per square metre</comment>
+  </unit>
+  <unit id="7b75baf0-cbee-45e6-bf66-af119da06553">
+    <name xml:lang="en">EUR2005</name>
+    <comment xml:lang="en">Euro currency unit at mid-year 2005</comment>
+  </unit>
+  <unit id="edf5a356-5140-45b0-bb6c-28fe105b821d">
+    <name xml:lang="en">OLD_MJ/kg</name>
+    <comment xml:lang="en">MJ/kg of dry mass (DM)</comment>
+  </unit>
+  <unit id="481b9712-c417-44f1-bfba-38d58088173c">
+    <name xml:lang="en">m3*year</name>
+    <comment xml:lang="en">cubic metre year</comment>
+  </unit>
+  <unit id="15a259d2-4417-45e8-9f67-7459326c5eb2">
+    <name xml:lang="en">m3/kg</name>
+    <comment xml:lang="en">cubic metre per kilogram</comment>
+  </unit>
+  <unit id="bc240401-c632-4b0f-9fc3-945610d47fc5">
+    <name xml:lang="en">l/hour</name>
+    <comment xml:lang="en">litre per hour</comment>
+  </unit>
+  <unit id="1eb913ab-3676-4615-bb13-2bcfc37e5e85">
+    <name xml:lang="en">kg/ha.yr</name>
+    <comment xml:lang="en">kilogram per hectare per year</comment>
+  </unit>
+  <unit id="0914dcce-dd7a-4dd0-9367-2c3c84c6d8a2">
+    <name xml:lang="en">MJ*mm/(ha*h*yr)</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="a3a82f71-552b-4552-82eb-f241e722696f">
+    <name xml:lang="en">kg/year</name>
+    <comment xml:lang="en">kilogram per year</comment>
+  </unit>
+  <unit id="8ee4b882-0429-47dc-883c-3961cef82e85">
+    <name xml:lang="en">m2/ha</name>
+    <comment xml:lang="en">e.g. for area of forest roads per hectare</comment>
+  </unit>
+  <unit id="e8c40f52-acaa-4d9a-b203-ea07693e3b01">
+    <name xml:lang="en">kg N2O-N/kg N</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+  <unit id="09e8c86e-1d3a-430e-aad0-fa8cc5e15b66">
+    <name xml:lang="en">m³/ha</name>
+    <comment xml:lang="en"></comment>
+  </unit>
+</validUnits>
